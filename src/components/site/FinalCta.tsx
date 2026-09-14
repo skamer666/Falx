@@ -3,11 +3,18 @@ import { Container, GhostButtonLight, PrimaryButton } from "./ui";
 
 export default function FinalCta() {
   return (
-    <section id="demarrer" className="relative overflow-hidden bg-encre py-28 md:py-40">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-72 w-[520px] -translate-x-1/2 rounded-full bg-sapin-light/20 blur-[120px]"
-      />
+    <section id="demarrer" className="relative isolate overflow-hidden bg-encre py-28 md:py-40">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
+      >
+        <source src="/media/transitions/degrade.mp4" type="video/mp4" />
+      </video>
+      <div aria-hidden className="absolute inset-0 bg-encre/40" />
       <Container className="relative text-center">
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-sapin-pale/80">
