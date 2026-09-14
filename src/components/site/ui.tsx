@@ -50,7 +50,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full bg-sapin px-6 py-3 text-sm font-medium text-papier transition-all duration-300 hover:bg-sapin-light hover:shadow-[0_8px_30px_-8px_rgba(15,61,46,0.55)] ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-sapin px-6 py-3 text-sm font-medium text-papier transition-all duration-300 hover:bg-sapin-light hover:shadow-[0_8px_30px_-8px_rgba(15,61,46,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier ${className}`}
     >
       {children}
     </Link>
@@ -69,7 +69,7 @@ export function GhostButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3 text-sm font-medium text-ink underline decoration-ink/25 underline-offset-4 transition-colors duration-300 hover:decoration-ink/70 ${className}`}
+      className={`inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3 text-sm font-medium text-ink underline decoration-ink/25 underline-offset-4 transition-colors duration-300 hover:decoration-ink/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier ${className}`}
     >
       {children}
     </Link>
@@ -88,7 +88,7 @@ export function GhostButtonLight({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center gap-1.5 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-papier transition-colors duration-300 hover:border-white/45 hover:bg-white/5 ${className}`}
+      className={`inline-flex items-center justify-center gap-1.5 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-papier transition-colors duration-300 hover:border-white/45 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-papier focus-visible:ring-offset-2 focus-visible:ring-offset-encre ${className}`}
     >
       {children}
     </Link>

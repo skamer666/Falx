@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 import { Container } from "./ui";
 
 const COLUMNS = [
@@ -31,8 +32,8 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_2fr]">
           <div>
-            <Link href="#" className="font-serif-display text-xl text-ink">
-              Falx
+            <Link href="#" aria-label="Falx — accueil">
+              <Logo />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               L&rsquo;infrastructure juridique de la Suisse qui entreprend.
