@@ -55,7 +55,7 @@ export default function HowItWorks() {
                     <source src={item.video} type="video/mp4" />
                   </video>
                 </div>
-                <span className="font-serif-display mt-5 block text-3xl text-sapin">
+                <span className="font-display mt-5 block text-3xl text-sapin">
                   {item.step}
                 </span>
                 <h3 className="mt-4 text-base font-medium text-ink">

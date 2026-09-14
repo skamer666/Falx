@@ -29,9 +29,9 @@ export default function Hero() {
         <div className="max-w-3xl">
           <Kicker tone="light">Juristes suisses</Kicker>
 
-          <h1 className="font-serif-display mt-7 text-[2.75rem] leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
+          <h1 className="font-display mt-7 text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
             L&rsquo;infrastructure juridique de la Suisse qui{" "}
-            <em className="italic">entreprend</em>.
+            <span className="text-sapin-pale">entreprend</span>.
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ivory-muted md:text-xl">

@@ -6,7 +6,7 @@ export function FalxGlyph({ className = "" }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`font-serif-display leading-none text-papier ${className}`}
+      className={`font-display leading-none text-papier ${className}`}
     >
       F
     </span>
@@ -26,7 +26,7 @@ export default function Logo({
         <FalxGlyph className="text-lg" />
       </span>
       {wordmark ? (
-        <span className="font-serif-display text-xl tracking-tight text-ink">
+        <span className="font-display text-xl tracking-tight text-ink">
           Falx
         </span>
       ) : null}

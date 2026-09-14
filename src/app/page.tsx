@@ -3,6 +3,7 @@ import Hero from "@/components/site/Hero";
 import TrustBar from "@/components/site/TrustBar";
 import Problem from "@/components/site/Problem";
 import Pillars from "@/components/site/Pillars";
+import Showcase from "@/components/site/Showcase";
 import HowItWorks from "@/components/site/HowItWorks";
 import Security from "@/components/site/Security";
 import Testimonials from "@/components/site/Testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
         <TrustBar />
         <Problem />
         <Pillars />
+        <Showcase />
         <HowItWorks />
         <Security />
         <Testimonials />

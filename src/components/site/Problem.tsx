@@ -35,7 +35,7 @@ export default function Problem() {
           {POINTS.map((point, index) => (
             <Reveal key={point.figure} delay={index * 100}>
               <div>
-                <p className="font-serif-display text-5xl text-sapin md:text-6xl">
+                <p className="font-display text-5xl text-sapin md:text-6xl">
                   {point.figure}
                 </p>
                 <p className="mt-3 text-sm font-medium uppercase tracking-[0.12em] text-ink-muted">

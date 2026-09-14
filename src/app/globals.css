@@ -28,7 +28,7 @@
   --color-ink: var(--color-ink);
   --color-ink-muted: var(--color-ink-muted);
   --color-ivory-muted: var(--color-ivory-muted);
-  --font-serif: var(--font-fraunces);
+  --font-display: var(--font-gabarito);
   --font-sans: var(--font-inter);
 }
 
@@ -42,9 +42,9 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-.font-serif-display {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-optical-sizing: auto;
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .reveal {

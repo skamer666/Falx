@@ -20,7 +20,7 @@ export default function FinalCta() {
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-sapin-pale/80">
             Falx
           </p>
-          <h2 className="font-serif-display mx-auto mt-6 max-w-2xl text-3xl leading-[1.2] text-papier md:text-4xl">
+          <h2 className="font-display mx-auto mt-6 max-w-2xl text-3xl leading-[1.2] text-papier md:text-4xl">
             L&rsquo;entrepreneuriat suisse mérite une infrastructure juridique
             à la hauteur de son ambition.
           </h2>

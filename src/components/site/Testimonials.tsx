@@ -48,7 +48,7 @@ export default function Testimonials() {
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sapin-pale text-xs font-medium text-sapin">
                     {item.canton}
                   </span>
-                  <blockquote className="font-serif-display mt-5 text-lg italic leading-snug text-ink">
+                  <blockquote className="font-display mt-5 text-lg italic leading-snug text-ink">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
                 </div>

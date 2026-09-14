@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Gabarito, Inter } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const gabarito = Gabarito({
+  variable: "--font-gabarito",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -48,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${gabarito.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-papier text-ink">
         {children}

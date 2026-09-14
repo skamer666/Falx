@@ -38,10 +38,10 @@ export default function Pillars() {
           {PILLARS.map((pillar, index) => (
             <Reveal key={pillar.number} delay={index * 100}>
               <div className="grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[80px_1fr_1.1fr] md:gap-10">
-                <span className="font-serif-display text-lg text-ink-muted">
+                <span className="font-display text-lg text-ink-muted">
                   {pillar.number}
                 </span>
-                <h3 className="font-serif-display text-2xl text-ink md:text-3xl">
+                <h3 className="font-display text-2xl text-ink md:text-3xl">
                   {pillar.title}
                 </h3>
                 <div>

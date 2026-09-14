@@ -75,7 +75,7 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 <p className="mt-4">
-                  <span className="font-serif-display text-3xl">
+                  <span className="font-display text-3xl">
                     {plan.price}
                   </span>
                   {plan.unit ? (
