@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
-import { Container, PrimaryButton } from "./ui";
+import { PrimaryButton } from "./ui";
 
 const LINKS = [
   { href: "#produits", label: "Produits" },
@@ -12,8 +12,8 @@ const LINKS = [
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-ligne/70 bg-papier/85 backdrop-blur-md relative">
-      <Container className="flex h-[72px] items-center justify-between">
+    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6">
+      <div className="relative flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-ligne/60 bg-papier/90 px-5 shadow-[0_12px_36px_-16px_rgba(11,15,20,0.25)] backdrop-blur-md md:px-7">
         <Link
           href="#"
           aria-label="Falx, accueil"
@@ -48,7 +48,7 @@ export default function Nav() {
           </div>
           <MobileNav />
         </div>
-      </Container>
+      </div>
     </header>
   );
 }

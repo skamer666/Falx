@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, Kicker, PrimaryButton } from "./ui";
 
@@ -5,31 +6,31 @@ export default function Hero() {
   return (
     <>
       <section className="relative isolate overflow-hidden bg-encre">
+        <Image
+          src="/images/hero-alps.jpg"
+          alt="Sommets des Alpes suisses au lever du jour, au-dessus d'une mer de nuages"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_70%]"
+        />
+        <div aria-hidden className="absolute inset-0 bg-sapin/45 mix-blend-multiply" />
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-sapin-light/25 blur-[140px]"
+          className="absolute inset-0 bg-gradient-to-r from-encre via-encre/75 to-encre/25"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute right-[-12%] top-1/4 h-72 w-72 rounded-full bg-sapin/20 blur-[110px]"
+          className="absolute inset-0 bg-gradient-to-t from-encre via-encre/10 to-transparent"
         />
 
-        <svg
-          aria-hidden
-          viewBox="0 0 1440 200"
-          preserveAspectRatio="none"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 w-full text-white/[0.04] md:h-56"
-          fill="currentColor"
-        >
-          <path d="M0 200V120L180 40L360 110L520 20L700 100L900 30L1080 105L1260 45L1440 120V200H0Z" />
-        </svg>
-
-        <Container className="relative pb-28 pt-20 md:pb-40 md:pt-28">
+        <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">
           <div className="max-w-3xl">
             <Kicker tone="light">Legaltech suisse</Kicker>
 
             <h1 className="font-serif-display mt-7 text-[2.75rem] leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
-              L&rsquo;infrastructure juridique de la Suisse qui entreprend.
+              L&rsquo;infrastructure juridique de la Suisse qui{" "}
+              <em className="italic">entreprend</em>.
             </h1>
 
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-ivory-muted md:text-xl">
