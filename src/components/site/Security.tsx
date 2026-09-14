@@ -22,7 +22,7 @@ const GUARANTEES = [
 
 export default function Security() {
   return (
-    <section id="securite" className="bg-encre py-24 md:py-32">
+    <section id="securite" className="bg-encre py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading

@@ -5,7 +5,7 @@ const PILLARS = [
   {
     number: "01",
     title: "Création de Sàrl",
-    text: "Statuts, capital social, procès-verbal de fondation et réquisition au registre du commerce — générés et prêts à authentifier.",
+    text: "Statuts, capital social, procès-verbal de fondation et réquisition au registre du commerce, générés et prêts à authentifier.",
     tags: ["Statuts", "Registre du commerce", "Capital social"],
   },
   {
@@ -24,7 +24,7 @@ const PILLARS = [
 
 export default function Pillars() {
   return (
-    <section id="produits" className="py-24 md:py-32">
+    <section id="produits" className="py-28 md:py-44">
       <Container>
         <Reveal>
           <SectionHeading
@@ -34,28 +34,30 @@ export default function Pillars() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-20 divide-y divide-ligne">
           {PILLARS.map((pillar, index) => (
             <Reveal key={pillar.number} delay={index * 100}>
-              <div className="group h-full rounded-2xl border border-ligne bg-papier p-8 transition-all duration-300 hover:-translate-y-1 hover:border-sapin/30 hover:shadow-[0_24px_50px_-30px_rgba(15,61,46,0.35)]">
-                <span className="font-serif-display text-sm text-ink-muted">
+              <div className="grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[80px_1fr_1.1fr] md:gap-10">
+                <span className="font-serif-display text-lg text-ink-muted">
                   {pillar.number}
                 </span>
-                <h3 className="font-serif-display mt-4 text-2xl text-ink">
+                <h3 className="font-serif-display text-2xl text-ink md:text-3xl">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-                  {pillar.text}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {pillar.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-sapin-pale px-3 py-1 text-xs font-medium text-sapin"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div>
+                  <p className="max-w-md text-base leading-relaxed text-ink-muted">
+                    {pillar.text}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {pillar.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-sapin-pale px-3 py-1 text-xs font-medium text-sapin"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Reveal>

@@ -16,7 +16,7 @@ export default function Nav() {
       <Container className="flex h-[72px] items-center justify-between">
         <Link
           href="#"
-          aria-label="Falx — accueil"
+          aria-label="Falx, accueil"
           className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier"
         >
           <Logo />

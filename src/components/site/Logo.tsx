@@ -1,5 +1,5 @@
 /**
- * Placeholder temporaire (option "initiale encadrée") — à remplacer par le
+ * Placeholder temporaire (option "initiale encadrée"), à remplacer par le
  * logo définitif une fois dessiné.
  */
 export function FalxGlyph({ className = "" }: { className?: string }) {

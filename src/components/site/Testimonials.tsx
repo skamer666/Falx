@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 import { Container, SectionHeading } from "./ui";
 
 /**
- * Témoignages d'exemple — à remplacer par de véritables retours clients
+ * Témoignages d'exemple, à remplacer par de véritables retours clients
  * (avec autorisation explicite) avant la mise en ligne.
  */
 const QUOTES = [
@@ -31,7 +31,7 @@ const QUOTES = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading

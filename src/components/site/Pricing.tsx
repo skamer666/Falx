@@ -47,7 +47,7 @@ const PLANS = [
 
 export default function Pricing() {
   return (
-    <section id="tarifs" className="py-24 md:py-32">
+    <section id="tarifs" className="py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading

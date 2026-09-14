@@ -26,7 +26,7 @@ const QUESTIONS = [
 
 export default function Faq() {
   return (
-    <section className="bg-papier-dim/60 py-24 md:py-32">
+    <section className="bg-papier-dim/60 py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading kicker="Questions fréquentes" title="Tout ce qu'il faut savoir avant de commencer." />

@@ -21,7 +21,7 @@ const POINTS = [
 
 export default function Problem() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-28 md:py-44">
       <Container>
         <Reveal>
           <SectionHeading
@@ -31,17 +31,17 @@ export default function Problem() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-ligne bg-ligne md:grid-cols-3">
+        <div className="mt-20 grid gap-x-10 gap-y-16 md:grid-cols-3">
           {POINTS.map((point, index) => (
             <Reveal key={point.figure} delay={index * 100}>
-              <div className="h-full bg-papier p-8">
-                <p className="font-serif-display text-4xl text-sapin">
+              <div>
+                <p className="font-serif-display text-5xl text-sapin md:text-6xl">
                   {point.figure}
                 </p>
-                <p className="mt-1 text-sm font-medium uppercase tracking-[0.12em] text-ink-muted">
+                <p className="mt-3 text-sm font-medium uppercase tracking-[0.12em] text-ink-muted">
                   {point.label}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-ink-muted">
+                <p className="mt-4 max-w-xs text-base leading-relaxed text-ink-muted">
                   {point.text}
                 </p>
               </div>

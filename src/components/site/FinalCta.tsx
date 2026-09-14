@@ -3,7 +3,7 @@ import { Container, GhostButtonLight, PrimaryButton } from "./ui";
 
 export default function FinalCta() {
   return (
-    <section id="demarrer" className="relative overflow-hidden bg-encre py-24 md:py-32">
+    <section id="demarrer" className="relative overflow-hidden bg-encre py-28 md:py-40">
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-72 w-[520px] -translate-x-1/2 rounded-full bg-sapin-light/20 blur-[120px]"

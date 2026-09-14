@@ -2,7 +2,7 @@ import { Container, GhostButton, Kicker, PrimaryButton } from "./ui";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-16 md:pb-28 md:pt-24">
+    <section className="relative overflow-hidden pb-24 pt-20 md:pb-32 md:pt-28">
       <Container>
         <div className="max-w-3xl">
           <Kicker>Legaltech suisse</Kicker>
@@ -13,7 +13,7 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted md:text-xl">
             Falx génère vos statuts de Sàrl, votre conformité LPD et vos
-            contrats PME en quelques minutes &mdash; avec la précision du
+            contrats PME en quelques minutes, avec la précision du
             droit suisse et la revue de juristes partenaires.
           </p>
 
@@ -43,7 +43,7 @@ export default function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
               </div>
               <span className="text-xs font-medium text-ivory-muted">
-                Génération &mdash; Statuts de Sàrl
+                Génération &middot; Statuts de Sàrl
               </span>
               <span className="rounded-full bg-sapin/25 px-2.5 py-1 text-[11px] font-medium text-sapin-pale">
                 Conforme CO
@@ -65,7 +65,7 @@ export default function Hero() {
                     Capital social
                   </p>
                   <p className="mt-2 rounded-lg border border-encre-line bg-white/[0.03] px-3 py-2.5 text-sm text-papier">
-                    CHF 20&rsquo;000.&mdash;
+                    CHF 20&rsquo;000
                   </p>
                 </div>
                 <div>

@@ -5,7 +5,7 @@ const STEPS = [
   {
     step: "01",
     title: "Répondez à un questionnaire guidé",
-    text: "Quelques questions ciblées sur votre activité, votre canton et vos besoins — pas de jargon juridique.",
+    text: "Quelques questions ciblées sur votre activité, votre canton et vos besoins, sans jargon juridique.",
   },
   {
     step: "02",
@@ -26,7 +26,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section id="comment-ca-marche" className="bg-papier-dim/60 py-24 md:py-32">
+    <section id="comment-ca-marche" className="bg-papier-dim/60 py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading

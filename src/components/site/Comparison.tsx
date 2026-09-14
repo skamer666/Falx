@@ -51,7 +51,7 @@ function Mark({ level }: { level: Level }) {
 
 export default function Comparison() {
   return (
-    <section className="bg-papier-dim/60 py-24 md:py-32">
+    <section className="bg-papier-dim/60 py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading
