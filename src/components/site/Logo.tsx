@@ -1,11 +1,15 @@
-const GLYPH_PATH =
-  "M7 3.5H9.4V20.5H7V3.5ZM9.4 3.5H18L9.4 7.4V3.5ZM9.4 10.4H14.6L9.4 13.1V10.4Z";
-
+/**
+ * Placeholder temporaire (option "initiale encadrée") — à remplacer par le
+ * logo définitif une fois dessiné.
+ */
 export function FalxGlyph({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d={GLYPH_PATH} />
-    </svg>
+    <span
+      aria-hidden="true"
+      className={`font-serif-display leading-none text-papier ${className}`}
+    >
+      F
+    </span>
   );
 }
 
@@ -19,7 +23,7 @@ export default function Logo({
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] bg-encre">
-        <FalxGlyph className="h-4 w-4 text-papier" />
+        <FalxGlyph className="text-lg" />
       </span>
       {wordmark ? (
         <span className="font-serif-display text-xl tracking-tight text-ink">
