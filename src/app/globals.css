@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --color-papier: #faf9f5;
+  --color-papier-dim: #f1efe6;
+  --color-encre: #0b0f14;
+  --color-encre-soft: #121922;
+  --color-encre-line: rgba(255, 255, 255, 0.09);
+  --color-sapin: #0f3d2e;
+  --color-sapin-light: #1c5a44;
+  --color-sapin-pale: #e6ede8;
+  --color-ligne: #e3e0d5;
+  --color-ink: #14140f;
+  --color-ink-muted: #5c5b52;
+  --color-ivory-muted: rgba(250, 249, 245, 0.66);
+}
+
+@theme inline {
+  --color-papier: var(--color-papier);
+  --color-papier-dim: var(--color-papier-dim);
+  --color-encre: var(--color-encre);
+  --color-encre-soft: var(--color-encre-soft);
+  --color-encre-line: var(--color-encre-line);
+  --color-sapin: var(--color-sapin);
+  --color-sapin-light: var(--color-sapin-light);
+  --color-sapin-pale: var(--color-sapin-pale);
+  --color-ligne: var(--color-ligne);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ivory-muted: var(--color-ivory-muted);
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-papier);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
