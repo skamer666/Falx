@@ -18,7 +18,7 @@ const inter = Inter({
 
 const title = "Falx : L'infrastructure juridique de la Suisse qui entreprend";
 const description =
-  "Falx génère vos statuts de Sàrl, votre conformité LPD et vos contrats PME en quelques minutes, avec la rigueur du droit suisse et la revue de juristes partenaires.";
+  "Falx met des juristes suisses au service de vos statuts de Sàrl, de votre conformité LPD et de vos contrats PME, avec la rigueur du droit suisse à chaque étape.";
 
 export const viewport: Viewport = {
   themeColor: "#0b0f14",

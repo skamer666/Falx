@@ -37,7 +37,8 @@ export default function Footer() {
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               L&rsquo;infrastructure juridique de la Suisse qui entreprend.
-              Génération automatisée de documents, conforme au droit suisse.
+              Des juristes suisses au service de votre conformité et de vos
+              contrats.
             </p>
             <div className="mt-6 flex gap-4 text-sm text-ink-muted">
               <Link href="#" className="hover:text-ink">

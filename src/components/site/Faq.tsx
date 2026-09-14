@@ -3,12 +3,12 @@ import { Container, SectionHeading } from "./ui";
 
 const QUESTIONS = [
   {
-    q: "Les documents générés par Falx ont-ils une valeur juridique ?",
-    a: "Oui. Chaque document s'appuie sur le Code des obligations et les bases légales suisses pertinentes. Pour les actes soumis à authentification (comme les statuts de Sàrl), le document généré est prêt à être présenté devant notaire.",
+    q: "Les documents produits par Falx ont-ils une valeur juridique ?",
+    a: "Oui. Chaque document s'appuie sur le Code des obligations et les bases légales suisses pertinentes. Pour les actes soumis à authentification (comme les statuts de Sàrl), le document est prêt à être présenté devant notaire.",
   },
   {
     q: "Falx remplace-t-il un avocat ?",
-    a: "Falx automatise la production documentaire. Pour les situations complexes ou les documents nécessitant une revue approfondie, nos formules incluent l'intervention de juristes partenaires.",
+    a: "Nos juristes partenaires interviennent sur chaque dossier. Pour les situations complexes ou les documents nécessitant une revue approfondie, nos formules incluent un accompagnement plus poussé.",
   },
   {
     q: "Où sont hébergées mes données ?",
@@ -16,7 +16,7 @@ const QUESTIONS = [
   },
   {
     q: "Puis-je utiliser Falx pour une entreprise déjà existante ?",
-    a: "Oui. Au-delà de la création de Sàrl, Falx couvre la mise en conformité continue (nLPD) et la génération de contrats pour des entreprises déjà en activité.",
+    a: "Oui. Au-delà de la création de Sàrl, nos juristes vous accompagnent pour la mise en conformité continue (nLPD) et la rédaction de contrats pour des entreprises déjà en activité.",
   },
   {
     q: "Quelles langues sont supportées ?",

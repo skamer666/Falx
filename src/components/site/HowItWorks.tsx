@@ -10,8 +10,8 @@ const STEPS = [
   },
   {
     step: "02",
-    title: "Le moteur structure votre document",
-    text: "Falx applique les articles du Code des obligations et de la nLPD pertinents à votre situation.",
+    title: "Vos juristes structurent le dossier",
+    text: "Nos juristes appliquent les articles du Code des obligations et de la nLPD pertinents à votre situation.",
     video: "/media/icones/dossier.mp4",
   },
   {
@@ -43,7 +43,7 @@ export default function HowItWorks() {
           {STEPS.map((item, index) => (
             <Reveal key={item.step} delay={index * 100}>
               <div className="relative pl-0">
-                <div className="h-14 w-14 overflow-hidden rounded-xl bg-encre">
+                <div className="h-24 w-24 overflow-hidden rounded-2xl bg-encre md:h-28 md:w-28">
                   <video
                     autoPlay
                     muted
@@ -55,7 +55,7 @@ export default function HowItWorks() {
                     <source src={item.video} type="video/mp4" />
                   </video>
                 </div>
-                <span className="font-serif-display mt-4 block text-3xl text-sapin">
+                <span className="font-serif-display mt-5 block text-3xl text-sapin">
                   {item.step}
                 </span>
                 <h3 className="mt-4 text-base font-medium text-ink">

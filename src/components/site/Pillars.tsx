@@ -24,13 +24,13 @@ const PILLARS = [
 
 export default function Pillars() {
   return (
-    <section id="produits" className="py-28 md:py-44">
+    <section id="produits" className="py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading
-            kicker="Nos modules"
-            title="Un moteur juridique, pas un simple générateur de PDF."
-            description="Trois modules, une même exigence : la précision du droit suisse, automatisée de bout en bout."
+            kicker="Nos domaines d'expertise"
+            title="Des juristes suisses, pas un simple outil automatisé."
+            description="Trois domaines d'expertise couverts par notre équipe de juristes, avec la même exigence de précision à chaque dossier."
           />
         </Reveal>
 

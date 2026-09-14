@@ -22,7 +22,7 @@ const QUOTES = [
   },
   {
     quote:
-      "Les contrats générés sont d'une précision que je n'attendais pas d'un outil automatisé. La revue juridique fait toute la différence.",
+      "Les contrats sont d'une précision remarquable. On sent vraiment le travail des juristes derrière chaque document.",
     name: "Associé fondateur",
     role: "Agence de conseil",
     canton: "GE",

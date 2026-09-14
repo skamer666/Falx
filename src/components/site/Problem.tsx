@@ -21,7 +21,7 @@ const POINTS = [
 
 export default function Problem() {
   return (
-    <section className="py-28 md:py-44">
+    <section className="py-28 md:py-40">
       <Container>
         <Reveal>
           <SectionHeading
