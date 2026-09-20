@@ -11,8 +11,8 @@ const LINKS = [
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
-      <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
+    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6">
+      <div className="relative flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-border bg-surface/90 px-5 shadow-[0_12px_36px_-16px_rgba(0,0,0,0.6)] backdrop-blur-md md:px-7">
         <Link
           href="/"
           aria-label="Thrax Legal, accueil"

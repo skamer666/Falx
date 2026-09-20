@@ -42,7 +42,7 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="absolute inset-x-0 top-full border-b border-border bg-bg px-6 py-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]">
+        <div className="absolute inset-x-0 top-[calc(100%+12px)] rounded-3xl border border-border bg-surface px-6 py-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]">
           <nav className="flex flex-col gap-1">
             {LINKS.map((link) => (
               <Link
