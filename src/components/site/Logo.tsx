@@ -9,15 +9,13 @@ export default function Logo({
 }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-encre">
-        <Image
-          src="/logo/crest-dark.png"
-          alt="Falx"
-          fill
-          className="object-cover"
-          sizes="36px"
-        />
-      </span>
+      <Image
+        src="/logo/crest-light.png"
+        alt="Falx"
+        width={30}
+        height={40}
+        className="h-9 w-auto shrink-0"
+      />
       {wordmark ? (
         <span className="font-display text-xl tracking-tight text-ink">
           Falx
