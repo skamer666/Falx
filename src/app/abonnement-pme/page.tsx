@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -34,10 +35,15 @@ export default function AbonnementPmePage() {
       <Nav />
       <main className="bg-bg text-text">
         <section className="relative isolate overflow-hidden border-b border-border">
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_-10%,rgba(91,91,246,0.28),transparent)]"
+          <Image
+            src="/media/photos/hero-building.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-40"
           />
+          <div aria-hidden className="absolute inset-0 bg-bg/70" />
           <Container className="relative mx-auto max-w-3xl py-24 text-center md:py-32">
             <Reveal>
               <h1 className="text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-text sm:text-5xl md:text-6xl">
@@ -57,7 +63,7 @@ export default function AbonnementPmePage() {
           </Container>
         </section>
 
-        <section className="py-24 md:py-32">
+        <section className="theme-light bg-bg py-24 md:py-32">
           <Container>
             <Reveal>
               <StepList steps={INCLUDED_STEPS} />
@@ -65,13 +71,15 @@ export default function AbonnementPmePage() {
           </Container>
         </section>
 
-        <TrustBar
-          items={[
-            "Résiliable chaque mois, sans engagement de durée.",
-            "Un même interlocuteur suit votre dossier d'un mois à l'autre.",
-            "Conforme nLPD et Code des obligations suisse.",
-          ]}
-        />
+        <div className="theme-light bg-bg">
+          <TrustBar
+            items={[
+              "Résiliable chaque mois, sans engagement de durée.",
+              "Un même interlocuteur suit votre dossier d'un mois à l'autre.",
+              "Conforme nLPD et Code des obligations suisse.",
+            ]}
+          />
+        </div>
       </main>
       <Footer />
     </>

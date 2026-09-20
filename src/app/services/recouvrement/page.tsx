@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -16,8 +17,17 @@ export default function RecouvrementPage() {
     <>
       <Nav />
       <main className="bg-bg text-text">
-        <section className="border-b border-border">
-          <Container className="mx-auto max-w-3xl py-24 text-center md:py-32">
+        <section className="relative isolate overflow-hidden border-b border-border">
+          <Image
+            src="/media/photos/recouvrement.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-30 grayscale"
+          />
+          <div aria-hidden className="absolute inset-0 bg-bg/80" />
+          <Container className="relative mx-auto max-w-3xl py-24 text-center md:py-32">
             <Reveal>
               <h1 className="text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-text sm:text-5xl md:text-6xl">
                 Transformez vos factures impayées en liquidités.
@@ -36,7 +46,7 @@ export default function RecouvrementPage() {
           </Container>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section className="theme-light bg-bg py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <DebtCalculator />
@@ -44,13 +54,15 @@ export default function RecouvrementPage() {
           </Container>
         </section>
 
-        <TrustBar
-          items={[
-            "L'inscription d'une poursuite est la pression psychologique la plus forte en Suisse pour obtenir un paiement à l'amiable.",
-            "Aucune commission si aucun montant n'est récupéré.",
-            "Conforme à la loi fédérale sur la poursuite pour dettes et la faillite (LP).",
-          ]}
-        />
+        <div className="theme-light bg-bg">
+          <TrustBar
+            items={[
+              "L'inscription d'une poursuite est la pression psychologique la plus forte en Suisse pour obtenir un paiement à l'amiable.",
+              "Aucune commission si aucun montant n'est récupéré.",
+              "Conforme à la loi fédérale sur la poursuite pour dettes et la faillite (LP).",
+            ]}
+          />
+        </div>
       </main>
       <Footer />
     </>

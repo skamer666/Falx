@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { CircleArrowLink, Container } from "./ui";
@@ -10,6 +11,7 @@ const SERVICES = [
       "Décryptage des formulations codées et mise en demeure prête à envoyer.",
     price: "149 CHF",
     href: "/services/certificat-travail",
+    image: "/media/photos/certificat-travail.jpg",
   },
   {
     number: "002",
@@ -18,6 +20,7 @@ const SERVICES = [
       "Poursuite officielle sans frais cachés, commission au succès.",
     price: "Dès 89 CHF",
     href: "/services/recouvrement",
+    image: "/media/photos/recouvrement.jpg",
   },
   {
     number: "003",
@@ -26,6 +29,7 @@ const SERVICES = [
       "Kit de contestation complet pour votre commission de conciliation.",
     price: "190 CHF",
     href: "/services/hausse-loyer",
+    image: "/media/photos/hausse-loyer.jpg",
   },
   {
     number: "004",
@@ -34,6 +38,7 @@ const SERVICES = [
       "Constitution clé en main avec pack de conformité nLPD inclus.",
     price: "Sur devis",
     href: "/services/creation-sarl",
+    image: "/media/photos/creation-sarl.jpg",
   },
 ];
 
@@ -58,7 +63,16 @@ export default function ServicesList() {
         <div className="mt-10 divide-y divide-border border-t border-border">
           {SERVICES.map((service, index) => (
             <Reveal key={service.number} delay={index * 60}>
-              <div className="grid gap-4 py-10 md:grid-cols-[80px_minmax(0,1fr)_minmax(0,1.3fr)] md:items-baseline md:gap-10 md:py-12">
+              <div className="grid gap-6 py-10 md:grid-cols-[180px_60px_minmax(0,1fr)_minmax(0,1.3fr)] md:items-center md:gap-8 md:py-12">
+                <div className="relative h-32 w-full overflow-hidden rounded-lg bg-surface md:h-24">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="180px"
+                    className="object-cover grayscale"
+                  />
+                </div>
                 <span className="text-sm font-medium text-text-muted">
                   {service.number}
                 </span>
@@ -70,7 +84,7 @@ export default function ServicesList() {
                     <p className="max-w-md text-base leading-relaxed text-text-muted">
                       {service.description}
                     </p>
-                    <p className="mt-2 text-sm font-medium text-accent">
+                    <p className="mt-2 text-sm font-medium text-text">
                       {service.price}
                     </p>
                   </div>
