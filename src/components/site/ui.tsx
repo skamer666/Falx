@@ -19,6 +19,41 @@ export function PrimaryButton({
   href,
   children,
   className = "",
+  type,
+  onClick,
+  disabled,
+}: {
+  href?: string;
+  children: ReactNode;
+  className?: string;
+  type?: "button" | "submit";
+  onClick?: () => void;
+  disabled?: boolean;
+}) {
+  const classes = `inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent ${className}`;
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <button
+      type={type ?? "button"}
+      onClick={onClick}
+      disabled={disabled}
+      className={classes}
+    >
+      {children}
+    </button>
+  );
+}
+
+export function GhostButton({
+  href,
+  children,
+  className = "",
 }: {
   href: string;
   children: ReactNode;
@@ -27,7 +62,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full bg-sapin px-6 py-3 text-sm font-medium text-papier transition-all duration-300 hover:bg-sapin-light hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier ${className}`}
+      className={`inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-sm font-medium text-text transition-colors duration-200 hover:border-white/20 hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${className}`}
     >
       {children}
     </Link>
@@ -37,26 +72,19 @@ export function PrimaryButton({
 export function CircleArrowLink({
   href,
   children,
-  tone = "light",
   className = "",
 }: {
   href: string;
   children?: ReactNode;
-  tone?: "light" | "dark";
   className?: string;
 }) {
-  const ring =
-    tone === "light"
-      ? "border-white/40 text-papier hover:border-white hover:bg-white/10"
-      : "border-ink/30 text-ink hover:border-ink hover:bg-ink/5";
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-3 focus-visible:outline-none ${className}`}
+      className={`group inline-flex items-center gap-3 text-sm font-medium text-text focus-visible:outline-none ${className}`}
     >
-      <span
-        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 ${ring}`}
-      >
+      {children}
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border transition-colors duration-200 group-hover:border-white/25 group-hover:bg-surface">
         <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4">
           <path
             d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12"
@@ -67,13 +95,77 @@ export function CircleArrowLink({
           />
         </svg>
       </span>
-      {children ? (
-        <span
-          className={`text-sm font-medium ${tone === "light" ? "text-papier" : "text-ink"}`}
-        >
-          {children}
-        </span>
-      ) : null}
     </Link>
+  );
+}
+
+export function PriceBadge({
+  amount,
+  label,
+  className = "",
+}: {
+  amount: string;
+  label: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`inline-flex items-center gap-3 rounded-full border border-border bg-surface px-5 py-2.5 ${className}`}
+    >
+      <span className="text-lg font-semibold tracking-tight text-text">
+        {amount}
+      </span>
+      <span className="h-4 w-px bg-border" aria-hidden />
+      <span className="text-sm text-text-muted">{label}</span>
+    </div>
+  );
+}
+
+export function TrustBar({
+  items,
+  className = "",
+}: {
+  items: string[];
+  className?: string;
+}) {
+  return (
+    <div className={`border-y border-border bg-surface/50 ${className}`}>
+      <Container className="flex flex-col gap-4 py-8 md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-x-10 md:gap-y-3">
+        {items.map((item) => (
+          <p
+            key={item}
+            className="max-w-sm text-sm leading-relaxed text-text-muted md:text-center"
+          >
+            {item}
+          </p>
+        ))}
+      </Container>
+    </div>
+  );
+}
+
+export function StepList({
+  steps,
+  className = "",
+}: {
+  steps: { title: string; description: string }[];
+  className?: string;
+}) {
+  return (
+    <div className={`grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3 ${className}`}>
+      {steps.map((step, index) => (
+        <div key={step.title} className="bg-bg p-8">
+          <span className="text-sm font-medium text-text-muted">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <h3 className="mt-4 text-lg font-semibold tracking-tight text-text">
+            {step.title}
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-text-muted">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
   );
 }

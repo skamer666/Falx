@@ -1,34 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --color-papier: #ffffff;
-  --color-papier-dim: #f0f0f0;
-  --color-encre: #0a0a0a;
-  --color-encre-soft: #171717;
-  --color-encre-line: rgba(255, 255, 255, 0.09);
-  --color-sapin: #1a1a1a;
-  --color-sapin-light: #3d3d3d;
-  --color-sapin-pale: #e5e5e5;
-  --color-ligne: #e0e0e0;
-  --color-ink: #111111;
-  --color-ink-muted: #6b6b6b;
-  --color-ivory-muted: rgba(255, 255, 255, 0.66);
+  --color-bg: #0a0a0b;
+  --color-surface: #131316;
+  --color-surface-hover: #1b1b1f;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f5f5f7;
+  --color-text-muted: #9a9aa2;
+  --color-accent: #5b5bf6;
+  --color-accent-hover: #4747e0;
+  --color-danger: #f2545b;
+  --color-danger-soft: rgba(242, 84, 91, 0.12);
+  --color-success: #3ecf8e;
+  --color-success-soft: rgba(62, 207, 142, 0.12);
 }
 
 @theme inline {
-  --color-papier: var(--color-papier);
-  --color-papier-dim: var(--color-papier-dim);
-  --color-encre: var(--color-encre);
-  --color-encre-soft: var(--color-encre-soft);
-  --color-encre-line: var(--color-encre-line);
-  --color-sapin: var(--color-sapin);
-  --color-sapin-light: var(--color-sapin-light);
-  --color-sapin-pale: var(--color-sapin-pale);
-  --color-ligne: var(--color-ligne);
-  --color-ink: var(--color-ink);
-  --color-ink-muted: var(--color-ink-muted);
-  --color-ivory-muted: var(--color-ivory-muted);
-  --font-display: var(--font-fraunces);
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-danger: var(--color-danger);
+  --color-danger-soft: var(--color-danger-soft);
+  --color-success: var(--color-success);
+  --color-success-soft: var(--color-success-soft);
   --font-sans: var(--font-inter);
 }
 
@@ -37,14 +36,9 @@ html {
 }
 
 body {
-  background: var(--color-papier);
-  color: var(--color-ink);
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-}
-
-.font-display {
-  font-family: var(--font-display), ui-serif, Georgia, serif;
-  letter-spacing: -0.01em;
 }
 
 .reveal {

@@ -1,8 +1,7 @@
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
-import Blocks from "@/components/site/Blocks";
-import Essential from "@/components/site/Essential";
-import FinalCta from "@/components/site/FinalCta";
+import HowItWorks from "@/components/site/HowItWorks";
+import B2BOffer from "@/components/site/B2BOffer";
 import Footer from "@/components/site/Footer";
 
 export default function Home() {
@@ -11,9 +10,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Blocks />
-        <Essential />
-        <FinalCta />
+        <HowItWorks />
+        <B2BOffer />
       </main>
       <Footer />
     </>

@@ -1,14 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,16 +8,16 @@ const inter = Inter({
   display: "swap",
 });
 
-const title = "Falx : L'infrastructure juridique de la Suisse qui entreprend";
+const title = "Thrax Legal : vos droits, exécutés en 24h à prix fixe";
 const description =
-  "Falx met des juristes suisses au service de vos statuts de Sàrl, de votre conformité LPD et de vos contrats PME, avec la rigueur du droit suisse à chaque étape.";
+  "Thrax Legal remplace les cabinets traditionnels, lents et opaques, par une infrastructure juridique structurée pour les PME et les particuliers suisses. Prix fixes, sans surprise.";
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#0a0a0b",
 };
 
 // À remplacer par le nom de domaine définitif avant la mise en production.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://falx.ch";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thraxlegal.ch";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,11 +38,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="fr"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-papier text-ink">
+    <html lang="fr" className={`${inter.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-bg text-text">
         {children}
       </body>
     </html>

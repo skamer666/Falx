@@ -4,19 +4,19 @@ import MobileNav from "./MobileNav";
 import { PrimaryButton } from "./ui";
 
 const LINKS = [
-  { href: "#produits", label: "Produits" },
-  { href: "#securite", label: "Sécurité" },
-  { href: "#tarifs", label: "Tarifs" },
+  { href: "/services", label: "Services" },
+  { href: "/abonnement-pme", label: "Abonnement PME" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
   return (
-    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6">
-      <div className="relative flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-ligne/60 bg-papier/90 px-5 shadow-[0_12px_36px_-16px_rgba(0,0,0,0.25)] backdrop-blur-md md:px-7">
+    <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
+      <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
         <Link
-          href="#"
-          aria-label="Falx, accueil"
-          className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier"
+          href="/"
+          aria-label="Thrax Legal, accueil"
+          className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         >
           <Logo />
         </Link>
@@ -26,7 +26,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-sm text-sm text-ink-muted transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier"
+              className="rounded-sm text-sm text-text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
             >
               {link.label}
             </Link>
@@ -34,15 +34,9 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="#connexion"
-            className="hidden rounded-sm text-sm font-medium text-ink-muted transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier sm:block"
-          >
-            Se connecter
-          </Link>
           <div className="hidden sm:block">
-            <PrimaryButton href="#demarrer" className="px-5 py-2.5">
-              Démarrer ma Sàrl
+            <PrimaryButton href="/abonnement-pme" className="px-5 py-2.5">
+              Découvrir l&rsquo;abonnement PME
             </PrimaryButton>
           </div>
           <MobileNav />

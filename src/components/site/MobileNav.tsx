@@ -5,9 +5,9 @@ import { useState } from "react";
 import { PrimaryButton } from "./ui";
 
 const LINKS = [
-  { href: "#produits", label: "Produits" },
-  { href: "#securite", label: "Sécurité" },
-  { href: "#tarifs", label: "Tarifs" },
+  { href: "/services", label: "Services" },
+  { href: "/abonnement-pme", label: "Abonnement PME" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function MobileNav() {
@@ -20,7 +20,7 @@ export default function MobileNav() {
         aria-expanded={open}
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-ligne text-ink"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-text"
       >
         <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4">
           {open ? (
@@ -42,28 +42,21 @@ export default function MobileNav() {
       </button>
 
       {open ? (
-        <div className="absolute inset-x-0 top-[calc(100%+12px)] rounded-3xl border border-ligne bg-papier px-6 py-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)]">
+        <div className="absolute inset-x-0 top-full border-b border-border bg-bg px-6 py-6 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]">
           <nav className="flex flex-col gap-1">
             {LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 text-base text-ink transition-colors hover:bg-papier-dim"
+                className="rounded-lg px-2 py-3 text-base text-text transition-colors hover:bg-surface"
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="#connexion"
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-2 py-3 text-base text-ink-muted transition-colors hover:bg-papier-dim"
-            >
-              Se connecter
-            </Link>
           </nav>
-          <PrimaryButton href="#demarrer" className="mt-4 w-full">
-            Démarrer ma Sàrl
+          <PrimaryButton href="/abonnement-pme" className="mt-4 w-full">
+            Découvrir l&rsquo;abonnement PME
           </PrimaryButton>
         </div>
       ) : null}

@@ -1,61 +1,33 @@
-import Image from "next/image";
-import { Container, PrimaryButton } from "./ui";
+import Reveal from "@/components/Reveal";
+import { Container, GhostButton, PrimaryButton } from "./ui";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-encre">
-      <Image
-        src="/media/textures/vagues-mono.jpg"
-        alt=""
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
+    <section className="relative isolate overflow-hidden border-b border-border">
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_-10%,rgba(91,91,246,0.28),transparent)]"
       />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
-      />
-
-      <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">
-        <div className="max-w-3xl">
-          <h1 className="font-display text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
-            L&rsquo;infrastructure juridique de la Suisse qui{" "}
-            <span className="text-sapin-pale">entreprend</span>.
+      <Container className="relative pb-20 pt-28 text-center md:pb-28 md:pt-36">
+        <Reveal>
+          <h1 className="mx-auto max-w-3xl text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-text sm:text-6xl md:text-7xl">
+            Vos droits, exécutés en 24h.{" "}
+            <span className="text-accent">Prix fixes</span>, sans surprise.
           </h1>
-
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-ivory-muted md:text-xl">
-            Falx met des juristes suisses au service de vos statuts de
-            Sàrl, de votre conformité LPD et de vos contrats PME, avec la
-            rigueur du droit suisse à chaque étape.
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
+            Thrax Legal remplace les cabinets traditionnels, lents et
+            opaques, par une infrastructure juridique structurée pour les
+            PME et les particuliers suisses.
           </p>
-
-          <form className="mt-10 flex max-w-lg flex-col gap-3 sm:flex-row sm:items-center">
-            <label htmlFor="hero-email" className="sr-only">
-              Adresse e-mail professionnelle
-            </label>
-            <input
-              id="hero-email"
-              type="email"
-              placeholder="Adresse e-mail professionnelle"
-              className="h-14 w-full rounded-full border border-white/15 bg-white/[0.04] px-6 text-sm text-papier placeholder:text-ivory-muted focus:border-sapin-light focus:outline-none"
-            />
-            <PrimaryButton
-              href="#demarrer"
-              className="h-14 shrink-0 px-7 text-sm"
-            >
-              Démarrer ma Sàrl
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <PrimaryButton href="/abonnement-pme">
+              Découvrir l&rsquo;abonnement PME
             </PrimaryButton>
-          </form>
-
-          <p className="mt-6 text-sm text-ivory-muted">
-            Données hébergées en Suisse &middot; Conforme nLPD
-          </p>
-        </div>
+            <GhostButton href="/services">
+              Voir nos services ponctuels
+            </GhostButton>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
