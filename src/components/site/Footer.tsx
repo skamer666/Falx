@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 import { Container } from "./ui";
 
 const MENU = [
@@ -28,7 +29,10 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.1fr_1fr_1.2fr]">
           <div>
-            <h2 className="text-2xl font-semibold leading-tight tracking-[-0.02em] text-text">
+            <Link href="/" aria-label="Thrax Legal, accueil">
+              <Logo />
+            </Link>
+            <h2 className="mt-6 text-2xl font-semibold leading-tight tracking-[-0.02em] text-text">
               Vos droits, exécutés à prix fixe.
             </h2>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-muted">

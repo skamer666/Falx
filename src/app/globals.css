@@ -52,6 +52,14 @@ body {
   --color-accent-hover: #333333;
 }
 
+.logo-crest {
+  filter: invert(1);
+}
+
+.theme-light .logo-crest {
+  filter: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
