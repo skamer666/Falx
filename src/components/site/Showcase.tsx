@@ -7,18 +7,21 @@ const PANELS = [
     title: "Votre société, posée sur des bases solides.",
     video: "/media/nouvelles/clip-02.mp4",
     href: "#produits",
+    objectPosition: "left center",
   },
   {
     eyebrow: "Falx · Conformité LPD",
     title: "La confiance de vos clients, protégée durablement.",
     video: "/media/nouvelles/clip-03.mp4",
     href: "#produits",
+    objectPosition: "left center",
   },
   {
     eyebrow: "Falx · Contrats PME",
     title: "Vos baux et contrats commerciaux, sécurisés dès la signature.",
     video: "/media/nouvelles/clip-04.mp4",
     href: "#produits",
+    objectPosition: "center",
   },
 ];
 
@@ -35,6 +38,7 @@ export default function Showcase() {
               playsInline
               aria-hidden="true"
               className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: panel.objectPosition }}
             >
               <source src={panel.video} type="video/mp4" />
             </video>
