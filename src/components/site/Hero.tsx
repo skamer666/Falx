@@ -13,6 +13,14 @@ export default function Hero() {
         className="object-cover"
         sizes="100vw"
       />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-r from-encre/85 via-encre/50 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-t from-encre/60 via-transparent to-transparent"
+      />
 
       <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">
         <div className="max-w-3xl">
