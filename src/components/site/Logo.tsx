@@ -1,17 +1,4 @@
-/**
- * Placeholder temporaire (option "initiale encadrée"), à remplacer par le
- * logo définitif une fois dessiné.
- */
-export function FalxGlyph({ className = "" }: { className?: string }) {
-  return (
-    <span
-      aria-hidden="true"
-      className={`font-display leading-none text-papier ${className}`}
-    >
-      F
-    </span>
-  );
-}
+import Image from "next/image";
 
 export default function Logo({
   wordmark = true,
@@ -22,8 +9,14 @@ export default function Logo({
 }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] bg-encre">
-        <FalxGlyph className="text-lg" />
+      <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-encre">
+        <Image
+          src="/logo/crest-dark.webp"
+          alt="Falx"
+          fill
+          className="object-cover"
+          sizes="36px"
+        />
       </span>
       {wordmark ? (
         <span className="font-display text-xl tracking-tight text-ink">
