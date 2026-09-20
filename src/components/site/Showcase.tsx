@@ -8,6 +8,7 @@ const PANELS = [
     video: "/media/nouvelles/clip-03.mp4",
     href: "#produits",
     objectPosition: "left center",
+    desktopAlign: "right" as const,
   },
   {
     eyebrow: "Falx · Création de Sàrl",
@@ -23,6 +24,7 @@ const PANELS = [
     video: "/media/nouvelles/clip-04.mp4",
     href: "#produits",
     objectPosition: "left center",
+    desktopAlign: "right" as const,
   },
 ];
 
@@ -51,14 +53,20 @@ export default function Showcase() {
               className="absolute inset-0 bg-gradient-to-t from-encre/85 via-encre/25 to-transparent"
             />
 
-            <Container className="relative pb-14 pt-24 md:pb-20">
-              <p className="text-sm font-medium text-ivory-muted">
-                {panel.eyebrow}
-              </p>
-              <h3 className="font-display mt-3 max-w-xl text-3xl leading-[1.1] text-papier md:text-5xl">
-                {panel.title}
-              </h3>
-              <CircleArrowLink href={panel.href} tone="light" className="mt-8" />
+            <Container
+              className={`relative pb-14 pt-24 md:pb-20 ${
+                panel.desktopAlign === "right" ? "md:flex md:justify-end" : ""
+              }`}
+            >
+              <div className={panel.desktopAlign === "right" ? "md:text-right" : ""}>
+                <p className="text-sm font-medium text-ivory-muted">
+                  {panel.eyebrow}
+                </p>
+                <h3 className="font-display mt-3 max-w-xl text-3xl leading-[1.1] text-papier md:text-5xl">
+                  {panel.title}
+                </h3>
+                <CircleArrowLink href={panel.href} tone="light" className="mt-8" />
+              </div>
             </Container>
           </div>
         </Reveal>
