@@ -20,13 +20,20 @@ const FAQ = [
 export default function HomeFaq() {
   return (
     <section className="theme-light bg-bg py-20">
-      <Container className="mx-auto max-w-2xl">
-        <Reveal>
-          <h2 className="text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
-            Questions fréquentes
-          </h2>
-          <FaqAccordion items={FAQ} className="mt-10" />
-        </Reveal>
+      <Container>
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          <Reveal>
+            <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+              Questions fréquentes
+            </p>
+            <h2 className="mt-4 text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[40px]">
+              Tout savoir sur Thrax Legal.
+            </h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <FaqAccordion items={FAQ} />
+          </Reveal>
+        </div>
       </Container>
     </section>
   );

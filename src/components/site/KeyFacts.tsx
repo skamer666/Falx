@@ -28,18 +28,20 @@ export default function KeyFacts() {
   return (
     <section className="theme-light border-y border-border bg-surface py-20">
       <Container>
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+        <div className="divide-y divide-border border-t border-border">
           {FACTS.map((fact, index) => (
             <Reveal key={fact.label} delay={index * 60}>
-              <p className="text-4xl font-semibold tracking-tight text-text">
-                {fact.value}
-              </p>
-              <p className="mt-2 text-sm font-medium text-text-muted">
-                {fact.label}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-text-muted">
-                {fact.description}
-              </p>
+              <div className="grid gap-2 py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.6fr)] md:items-baseline md:gap-10">
+                <p className="text-4xl font-semibold tracking-tight text-text">
+                  {fact.value}
+                </p>
+                <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                  {fact.label}
+                </p>
+                <p className="max-w-md text-sm leading-relaxed text-text-muted">
+                  {fact.description}
+                </p>
+              </div>
             </Reveal>
           ))}
         </div>

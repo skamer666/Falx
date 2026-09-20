@@ -15,7 +15,10 @@ export default function B2BOffer() {
         <Reveal>
           <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
             <div>
-              <h2 className="text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                Abonnement PME
+              </p>
+              <h2 className="mt-4 text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
                 Direction Juridique Externalisée
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-text-muted">

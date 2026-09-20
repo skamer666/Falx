@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { CircleArrowLink, Container } from "./ui";
 
@@ -41,19 +42,27 @@ export default function ServicesList() {
     <section id="services" className="theme-light bg-bg py-20">
       <Container>
         <Reveal>
-          <h2 className="mx-auto max-w-xl text-center text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
-            Des services juridiques à prix fixe.
-          </h2>
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <h2 className="max-w-xl text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
+              Des services juridiques à prix fixe.
+            </h2>
+            <Link
+              href="/services"
+              className="inline-block shrink-0 border-b border-border pb-1 text-sm font-medium text-text transition-colors hover:border-white/40"
+            >
+              Besoin d&rsquo;un conseil ? Contactez-nous ↗
+            </Link>
+          </div>
         </Reveal>
 
-        <div className="mt-14 divide-y divide-border border-t border-border">
+        <div className="mt-10 divide-y divide-border border-t border-border">
           {SERVICES.map((service, index) => (
             <Reveal key={service.number} delay={index * 60}>
               <div className="grid gap-4 py-10 md:grid-cols-[80px_minmax(0,1fr)_minmax(0,1.3fr)] md:items-baseline md:gap-10 md:py-12">
                 <span className="text-sm font-medium text-text-muted">
                   {service.number}
                 </span>
-                <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text md:text-[30px]">
+                <h3 className="text-[20px] font-semibold uppercase leading-[1.2] tracking-[-0.01em] text-text md:text-[24px]">
                   {service.title}
                 </h3>
                 <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-10">
