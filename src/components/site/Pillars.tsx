@@ -28,7 +28,7 @@ const PILLARS = [
 
 export default function Pillars() {
   return (
-    <section id="produits" className="py-28 md:py-40">
+    <section id="produits" className="pb-28 pt-16 md:pb-40 md:pt-20">
       <Container>
         <Reveal>
           <SectionHeading
@@ -38,40 +38,40 @@ export default function Pillars() {
           />
         </Reveal>
 
-        <div className="mt-20 divide-y divide-ligne">
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {PILLARS.map((pillar, index) => (
             <Reveal key={pillar.number} delay={index * 100}>
-              <div className="grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[80px_1fr_1.1fr_88px] md:items-start md:gap-10">
-                <span className="font-display text-lg text-ink-muted">
-                  {pillar.number}
-                </span>
-                <h3 className="font-display text-2xl text-ink md:text-3xl">
-                  {pillar.title}
-                </h3>
-                <div>
-                  <p className="max-w-md text-base leading-relaxed text-ink-muted">
-                    {pillar.text}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {pillar.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-sapin-pale px-3 py-1 text-xs font-medium text-sapin"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+              <div className="flex h-full flex-col rounded-2xl border border-ligne bg-papier p-8">
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-lg text-ink-muted">
+                    {pillar.number}
+                  </span>
+                  <div className="relative h-14 w-14 overflow-hidden rounded-xl">
+                    <Image
+                      src={pillar.image}
+                      alt=""
+                      fill
+                      quality={90}
+                      className="object-cover"
+                      sizes="56px"
+                    />
                   </div>
                 </div>
-                <div className="relative hidden h-[72px] w-[72px] overflow-hidden rounded-2xl md:block">
-                  <Image
-                    src={pillar.image}
-                    alt=""
-                    fill
-                    quality={90}
-                    className="object-cover"
-                    sizes="72px"
-                  />
+                <h3 className="font-display mt-6 text-2xl text-ink">
+                  {pillar.title}
+                </h3>
+                <p className="mt-3 flex-1 text-base leading-relaxed text-ink-muted">
+                  {pillar.text}
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {pillar.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-sapin-pale px-3 py-1 text-xs font-medium text-sapin"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </Reveal>
