@@ -6,7 +6,6 @@ import { PrimaryButton } from "./ui";
 
 const LINKS = [
   { href: "#produits", label: "Produits" },
-  { href: "#comment-ca-marche", label: "Comment ça marche" },
   { href: "#securite", label: "Sécurité" },
   { href: "#tarifs", label: "Tarifs" },
 ];

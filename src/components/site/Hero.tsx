@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Container, Kicker, PrimaryButton } from "./ui";
+import { Container, PrimaryButton } from "./ui";
 
 export default function Hero() {
   return (
@@ -24,9 +23,7 @@ export default function Hero() {
 
       <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">
         <div className="max-w-3xl">
-          <Kicker tone="light">Juristes suisses</Kicker>
-
-          <h1 className="font-display mt-7 text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
+          <h1 className="font-display text-[2.75rem] font-semibold leading-[1.04] tracking-[-0.02em] text-papier sm:text-6xl md:text-[5.25rem]">
             L&rsquo;infrastructure juridique de la Suisse qui{" "}
             <span className="text-sapin-pale">entreprend</span>.
           </h1>
@@ -55,17 +52,9 @@ export default function Hero() {
             </PrimaryButton>
           </form>
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link
-              href="#comment-ca-marche"
-              className="text-sm font-medium text-papier underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white/70"
-            >
-              Comment ça marche
-            </Link>
-            <p className="text-sm text-ivory-muted">
-              Données hébergées en Suisse &middot; Conforme nLPD
-            </p>
-          </div>
+          <p className="mt-6 text-sm text-ivory-muted">
+            Données hébergées en Suisse &middot; Conforme nLPD
+          </p>
         </div>
       </Container>
     </section>
