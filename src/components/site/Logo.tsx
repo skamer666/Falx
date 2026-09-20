@@ -11,7 +11,7 @@ export default function Logo({
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-encre">
         <Image
-          src="/logo/crest-dark.webp"
+          src="/logo/crest-dark.png"
           alt="Falx"
           fill
           className="object-cover"
