@@ -11,6 +11,7 @@ export default function FinalCta() {
         playsInline
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-60"
+        style={{ objectPosition: "left center" }}
       >
         <source src="/media/nouvelles/clip-06.mp4" type="video/mp4" />
       </video>

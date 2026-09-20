@@ -21,7 +21,7 @@ const PANELS = [
     title: "Vos baux et contrats commerciaux, sécurisés dès la signature.",
     video: "/media/nouvelles/clip-04.mp4",
     href: "#produits",
-    objectPosition: "center",
+    objectPosition: "left center",
   },
 ];
 
