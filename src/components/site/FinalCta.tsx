@@ -12,7 +12,7 @@ export default function FinalCta() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-60"
       >
-        <source src="/media/transitions/degrade.mp4" type="video/mp4" />
+        <source src="/media/nouvelles/clip-06.mp4" type="video/mp4" />
       </video>
       <div aria-hidden className="absolute inset-0 bg-encre/40" />
       <Container className="relative text-center">

@@ -9,11 +9,10 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/media/paysages/montagnes.jpeg"
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
       >
-        <source src="/media/paysages/montagnes.mp4" type="video/mp4" />
+        <source src="/media/nouvelles/clip-01.mp4" type="video/mp4" />
       </video>
       <div aria-hidden className="absolute inset-0 bg-sapin/45 mix-blend-multiply" />
       <div

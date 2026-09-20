@@ -28,11 +28,10 @@ export default function Security() {
         muted
         loop
         playsInline
-        poster="/media/paysages/architecture.jpeg"
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-40"
       >
-        <source src="/media/paysages/architecture.mp4" type="video/mp4" />
+        <source src="/media/nouvelles/clip-05.mp4" type="video/mp4" />
       </video>
       <div aria-hidden className="absolute inset-0 bg-encre/55" />
 

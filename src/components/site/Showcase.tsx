@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { CircleArrowLink, Container } from "./ui";
 
@@ -6,21 +5,19 @@ const PANELS = [
   {
     eyebrow: "Falx · Création de Sàrl",
     title: "Votre société, posée sur des bases solides.",
-    video: "/media/paysages/architecture.mp4",
-    poster: "/media/paysages/architecture.jpeg",
+    video: "/media/nouvelles/clip-02.mp4",
     href: "#produits",
   },
   {
     eyebrow: "Falx · Conformité LPD",
     title: "La confiance de vos clients, protégée durablement.",
-    video: "/media/paysages/lacs.mp4",
-    poster: "/media/paysages/lacs.jpeg",
+    video: "/media/nouvelles/clip-03.mp4",
     href: "#produits",
   },
   {
     eyebrow: "Falx · Contrats PME",
     title: "Vos baux et contrats commerciaux, sécurisés dès la signature.",
-    image: "/media/vivid/interior-scene.jpg",
+    video: "/media/nouvelles/clip-04.mp4",
     href: "#produits",
   },
 ];
@@ -31,27 +28,16 @@ export default function Showcase() {
       {PANELS.map((panel) => (
         <Reveal key={panel.eyebrow}>
           <div className="relative isolate flex min-h-[560px] items-end overflow-hidden md:min-h-[640px]">
-            {panel.video ? (
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster={panel.poster}
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover"
-              >
-                <source src={panel.video} type="video/mp4" />
-              </video>
-            ) : (
-              <Image
-                src={panel.image!}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="100vw"
-              />
-            )}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover"
+            >
+              <source src={panel.video} type="video/mp4" />
+            </video>
             <div
               aria-hidden
               className="absolute inset-0 bg-gradient-to-t from-encre/85 via-encre/25 to-transparent"
