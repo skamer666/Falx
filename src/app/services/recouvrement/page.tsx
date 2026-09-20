@@ -4,7 +4,13 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
-import { Container, PriceBadge, StepList, TrustBar } from "@/components/site/ui";
+import {
+  Container,
+  LawyerComparison,
+  PriceBadge,
+  StepList,
+  TrustBar,
+} from "@/components/site/ui";
 import DebtCalculator from "./components/DebtCalculator";
 
 export const metadata: Metadata = {
@@ -102,6 +108,23 @@ export default function RecouvrementPage() {
             ]}
           />
         </div>
+
+        <section className="theme-light bg-surface py-16 md:py-24">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Le prix d&rsquo;un avocat, sans l&rsquo;avocat
+              </h2>
+              <LawyerComparison
+                className="mt-8"
+                lawyerRange="300 à 1200 CHF"
+                lawyerNote="Pour une consultation et l'ouverture d'une poursuite, soit environ 1 à 2 heures facturées."
+                thraxPrice="89 CHF"
+                thraxNote="Forfait de dépôt fixe, puis 15% de commission uniquement sur les montants récupérés."
+              />
+            </Reveal>
+          </Container>
+        </section>
 
         <section className="theme-light bg-bg py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">

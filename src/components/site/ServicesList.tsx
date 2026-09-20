@@ -94,6 +94,12 @@ export default function ServicesList() {
             </Reveal>
           ))}
         </div>
+
+        <p className="mt-8 text-sm text-text-muted">
+          À titre de comparaison, un avocat facture en moyenne 250 à 600 CHF
+          de l&rsquo;heure en Suisse, soit 300 à 3&rsquo;000 CHF pour des
+          démarches équivalentes selon leur complexité.
+        </p>
       </Container>
     </section>
   );

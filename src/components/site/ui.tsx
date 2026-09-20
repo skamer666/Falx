@@ -144,6 +144,51 @@ export function TrustBar({
   );
 }
 
+export function LawyerComparison({
+  lawyerRange,
+  lawyerNote,
+  thraxPrice,
+  thraxNote,
+  className = "",
+}: {
+  lawyerRange: string;
+  lawyerNote: string;
+  thraxPrice: string;
+  thraxNote: string;
+  className?: string;
+}) {
+  return (
+    <div className={`grid gap-4 sm:grid-cols-2 ${className}`}>
+      <div className="rounded-2xl border border-border bg-surface p-6">
+        <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+          Avocat traditionnel
+        </p>
+        <p className="mt-3 text-2xl font-semibold tracking-tight text-text-muted">
+          {lawyerRange}
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-text-muted">
+          {lawyerNote}
+        </p>
+      </div>
+      <div className="rounded-2xl border border-text bg-surface p-6">
+        <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+          Thrax Legal
+        </p>
+        <p className="mt-3 text-2xl font-semibold tracking-tight text-text">
+          {thraxPrice}
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-text-muted">
+          {thraxNote}
+        </p>
+      </div>
+      <p className="sm:col-span-2 text-xs text-text-muted">
+        Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un
+        avocat en Suisse.
+      </p>
+    </div>
+  );
+}
+
 export function StepList({
   steps,
   className = "",

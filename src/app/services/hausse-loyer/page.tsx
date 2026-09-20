@@ -4,7 +4,13 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
-import { Container, PriceBadge, StepList, TrustBar } from "@/components/site/ui";
+import {
+  Container,
+  LawyerComparison,
+  PriceBadge,
+  StepList,
+  TrustBar,
+} from "@/components/site/ui";
 import RentCalculator from "./components/RentCalculator";
 
 export const metadata: Metadata = {
@@ -100,6 +106,23 @@ export default function HausseLoyerPage() {
             ]}
           />
         </div>
+
+        <section className="theme-light bg-surface py-16 md:py-24">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Le prix d&rsquo;un avocat, sans l&rsquo;avocat
+              </h2>
+              <LawyerComparison
+                className="mt-8"
+                lawyerRange="500 à 2400 CHF"
+                lawyerNote="Pour l'analyse du bail et la rédaction de la contestation, soit environ 2 à 4 heures facturées."
+                thraxPrice="129 CHF"
+                thraxNote="Kit de contestation complet, prêt à déposer, généré immédiatement."
+              />
+            </Reveal>
+          </Container>
+        </section>
 
         <section className="theme-light bg-bg py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">

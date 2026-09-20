@@ -4,7 +4,14 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
-import { Container, PriceBadge, PrimaryButton, StepList, TrustBar } from "@/components/site/ui";
+import {
+  Container,
+  LawyerComparison,
+  PriceBadge,
+  PrimaryButton,
+  StepList,
+  TrustBar,
+} from "@/components/site/ui";
 
 export const metadata: Metadata = {
   title: "Création de Sàrl clé en main dès 590 CHF | Thrax Legal",
@@ -97,6 +104,23 @@ export default function CreationSarlPage() {
             ]}
           />
         </div>
+
+        <section className="theme-light bg-surface py-16 md:py-24">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Le prix d&rsquo;un avocat, sans l&rsquo;avocat
+              </h2>
+              <LawyerComparison
+                className="mt-8"
+                lawyerRange="750 à 3000 CHF"
+                lawyerNote="Pour l'accompagnement juridique de la constitution, soit environ 3 à 5 heures facturées (hors frais de notaire et de registre)."
+                thraxPrice="Dès 590 CHF"
+                thraxNote="Forfait de service fixe, hors frais de registre, communiqué avant tout paiement."
+              />
+            </Reveal>
+          </Container>
+        </section>
 
         <section className="theme-light bg-bg py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">

@@ -3,7 +3,14 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { Container, PriceBadge, PrimaryButton, StepList, TrustBar } from "@/components/site/ui";
+import {
+  Container,
+  LawyerComparison,
+  PriceBadge,
+  PrimaryButton,
+  StepList,
+  TrustBar,
+} from "@/components/site/ui";
 
 export const metadata: Metadata = {
   title: "Direction Juridique Externalisée : abonnement PME | Thrax Legal",
@@ -67,6 +74,23 @@ export default function AbonnementPmePage() {
           <Container>
             <Reveal>
               <StepList steps={INCLUDED_STEPS} />
+            </Reveal>
+          </Container>
+        </section>
+
+        <section className="theme-light bg-surface py-24 md:py-32">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Le prix d&rsquo;un avocat, sans l&rsquo;avocat
+              </h2>
+              <LawyerComparison
+                className="mt-8"
+                lawyerRange="750 à 3000 CHF / mois"
+                lawyerNote="Pour un usage ponctuel équivalent (environ 3 à 5 heures facturées par mois selon les besoins)."
+                thraxPrice="Dès 490 CHF / mois"
+                thraxNote="Accès illimité aux contrats et mises en demeure, résiliable chaque mois."
+              />
             </Reveal>
           </Container>
         </section>
