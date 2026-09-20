@@ -8,7 +8,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         alt=""
         width={30}
         height={40}
-        className="logo-crest h-9 w-auto shrink-0"
+        className="h-9 w-auto shrink-0"
       />
       <span className="inline-flex items-baseline gap-1.5">
         <span className="text-lg font-semibold tracking-tight text-text">
