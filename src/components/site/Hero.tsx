@@ -1,27 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, Kicker, PrimaryButton } from "./ui";
 
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-encre">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
-      >
-        <source src="/media/nouvelles/clip-01.mp4" type="video/mp4" />
-      </video>
-      <div aria-hidden className="absolute inset-0 bg-sapin/45 mix-blend-multiply" />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-encre via-encre/75 to-encre/25"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-encre via-encre/10 to-transparent"
+      <Image
+        src="/media/textures/lin-sombre.jpeg"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
       />
 
       <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">
