@@ -15,6 +15,7 @@ const PANELS = [
     video: "/media/nouvelles/clip-02.mp4",
     href: "#produits",
     objectPosition: "left center",
+    mirror: true,
   },
   {
     eyebrow: "Falx · Contrats PME",
@@ -38,7 +39,10 @@ export default function Showcase() {
               playsInline
               aria-hidden="true"
               className="absolute inset-0 h-full w-full object-cover"
-              style={{ objectPosition: panel.objectPosition }}
+              style={{
+                objectPosition: panel.objectPosition,
+                transform: panel.mirror ? "scaleX(-1)" : undefined,
+              }}
             >
               <source src={panel.video} type="video/mp4" />
             </video>
