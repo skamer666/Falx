@@ -85,7 +85,7 @@ export default function CertificateAnalyzer() {
 
           <div className="mt-8">
             <PaywallCard
-              price="179 CHF"
+              price="99 CHF"
               checkoutHref="/checkout/certificat-travail"
               bullets={[
                 "Rapport détaillé, phrase par phrase",

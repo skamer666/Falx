@@ -16,7 +16,7 @@ const SERVICES = [
     title: "Certificat de travail",
     description:
       "Décryptage des formulations codées et mise en demeure prête à envoyer.",
-    price: "179 CHF",
+    price: "99 CHF",
     href: "/services/certificat-travail",
     image: "/media/photos/certificat-travail.jpg",
   },
@@ -32,7 +32,7 @@ const SERVICES = [
     title: "Contestation de hausse de loyer",
     description:
       "Kit de contestation complet pour votre commission de conciliation.",
-    price: "229 CHF",
+    price: "129 CHF",
     href: "/services/hausse-loyer",
     image: "/media/photos/hausse-loyer.jpg",
   },

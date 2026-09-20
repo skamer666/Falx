@@ -81,7 +81,7 @@ export default function CertificatTravailPage() {
                 candidature.
               </p>
               <PriceBadge
-                amount="179 CHF"
+                amount="99 CHF"
                 label="Rapport complet, paiement unique"
                 className="mt-8"
               />

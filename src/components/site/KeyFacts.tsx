@@ -13,7 +13,7 @@ const FACTS = [
     description: "Un délai contractuel annoncé à l'avance, pas une estimation.",
   },
   {
-    value: "89-229",
+    value: "89-129",
     label: "CHF par service",
     description: "Le prix affiché est le prix payé, sans facturation à l'heure.",
   },
