@@ -3,13 +3,47 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { Container, PriceBadge, PrimaryButton, TrustBar } from "@/components/site/ui";
+import FaqAccordion from "@/components/site/FaqAccordion";
+import { Container, PriceBadge, PrimaryButton, StepList, TrustBar } from "@/components/site/ui";
 
 export const metadata: Metadata = {
-  title: "Création de Sàrl clé en main | Thrax Legal",
+  title: "Création de Sàrl clé en main, prix fixe | Thrax Legal",
   description:
-    "Constitution de Sàrl clé en main avec pack de conformité nLPD inclus.",
+    "Constitution de Sàrl à prix fixe communiqué avant démarrage, avec pack de conformité nLPD inclus.",
 };
+
+const STEPS = [
+  {
+    title: "Devis gratuit",
+    description:
+      "Vous décrivez votre projet, le forfait fixe est communiqué avant tout engagement.",
+  },
+  {
+    title: "Constitution du dossier",
+    description:
+      "Statuts, capital social et réquisition au registre du commerce sont préparés pour vous.",
+  },
+  {
+    title: "Inscription et conformité",
+    description:
+      "Une fois inscrite, votre Sàrl reçoit son pack de conformité nLPD, prêt à l'emploi.",
+  },
+];
+
+const FAQ = [
+  {
+    q: "Le prix annoncé dans le devis peut-il changer en cours de route ?",
+    a: "Non. Le forfait fixe est communiqué avant démarrage et ne varie pas, sauf changement du périmètre demandé par vous.",
+  },
+  {
+    q: "Combien de temps prend la constitution d'une Sàrl ?",
+    a: "Le délai dépend principalement du registre du commerce cantonal. Le dossier est préparé et déposé dans les meilleurs délais dès réception des documents nécessaires.",
+  },
+  {
+    q: "Qu'est-ce que le pack de conformité nLPD inclus ?",
+    a: "Un registre de traitement des données et une politique de confidentialité type, adaptés à votre activité, prêts dès l'inscription de votre société.",
+  },
+];
 
 export default function CreationSarlPage() {
   return (
@@ -29,12 +63,13 @@ export default function CreationSarlPage() {
           <Container className="relative mx-auto max-w-3xl py-24 text-center md:py-32">
             <Reveal>
               <h1 className="text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-text sm:text-5xl md:text-6xl">
-                Votre Sàrl, constituée sans détour.
+                Créez votre Sàrl sans mauvaise surprise sur le prix.
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                 Statuts, capital social et réquisition au registre du
                 commerce, avec un pack de conformité nLPD inclus dès le
-                lancement.
+                lancement. Le forfait est fixé avant que vous ne payiez quoi
+                que ce soit.
               </p>
               <PriceBadge
                 amount="Sur devis"
@@ -43,9 +78,12 @@ export default function CreationSarlPage() {
               />
               <div className="mt-8">
                 <PrimaryButton href="/#contact">
-                  Demander un devis
+                  Demander un devis gratuit
                 </PrimaryButton>
               </div>
+              <p className="mt-4 text-sm text-text-muted">
+                Devis gratuit et sans engagement, réponse rapide.
+              </p>
             </Reveal>
           </Container>
         </section>
@@ -59,6 +97,28 @@ export default function CreationSarlPage() {
             ]}
           />
         </div>
+
+        <section className="theme-light bg-bg py-16 md:py-24">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Comment ça marche
+              </h2>
+              <StepList steps={STEPS} className="mt-8" />
+            </Reveal>
+          </Container>
+        </section>
+
+        <section className="theme-light bg-surface py-16 md:py-24">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Questions fréquentes
+              </h2>
+              <FaqAccordion items={FAQ} className="mt-8" />
+            </Reveal>
+          </Container>
+        </section>
       </main>
       <Footer />
     </>

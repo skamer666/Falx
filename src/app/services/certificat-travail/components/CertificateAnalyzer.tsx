@@ -44,7 +44,7 @@ export default function CertificateAnalyzer() {
         Lancer l&rsquo;analyse (Gratuit)
       </PrimaryButton>
       <p className="mt-3 text-xs text-text-muted">
-        Aucune donnée conservée après l&rsquo;analyse &mdash; conforme nLPD.
+        Aucune donnée conservée après l&rsquo;analyse, conforme nLPD.
       </p>
 
       {result ? (

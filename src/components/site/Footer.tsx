@@ -50,8 +50,8 @@ export default function Footer() {
             <p className="mt-8 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
               Horaires
             </p>
-            <p className="mt-4 text-sm text-text">Lundi — Vendredi</p>
-            <p className="text-sm text-text">09:00 — 18:00</p>
+            <p className="mt-4 text-sm text-text">Lundi à vendredi</p>
+            <p className="text-sm text-text">09:00 à 18:00</p>
           </div>
 
           <div>

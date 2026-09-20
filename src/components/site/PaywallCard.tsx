@@ -34,7 +34,8 @@ export default function PaywallCard({
         {ctaLabel}
       </PrimaryButton>
       <p className="mt-3 text-center text-xs text-text-muted">
-        Paiement sécurisé &middot; Livraison immédiate
+        Paiement sécurisé &middot; Livraison immédiate &middot; Remboursé sous
+        14 jours si besoin
       </p>
     </div>
   );
