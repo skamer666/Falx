@@ -42,7 +42,7 @@ export default function B2BOffer() {
             </div>
 
             <div className="rounded-2xl border border-border bg-bg p-10">
-              <PriceBadge amount="Dès 290 CHF" label="par mois" />
+              <PriceBadge amount="Dès 490 CHF" label="par mois" />
               <p className="mt-6 text-sm leading-relaxed text-text-muted">
                 Résiliable chaque mois. Un appel de cadrage de 20 minutes
                 suffit pour définir le périmètre adapté à votre activité.

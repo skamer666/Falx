@@ -71,7 +71,7 @@ export default function HausseLoyerPage() {
                 votre contestation officielle.
               </p>
               <PriceBadge
-                amount="190 CHF"
+                amount="229 CHF"
                 label="Kit de contestation, paiement unique"
                 className="mt-8"
               />

@@ -13,12 +13,12 @@ const FACTS = [
     description: "Un délai contractuel annoncé à l'avance, pas une estimation.",
   },
   {
-    value: "89-190",
+    value: "89-229",
     label: "CHF par service",
     description: "Le prix affiché est le prix payé, sans facturation à l'heure.",
   },
   {
-    value: "290",
+    value: "490",
     label: "CHF/mois dès",
     description: "Pour l'abonnement Direction Juridique Externalisée, résiliable chaque mois.",
   },

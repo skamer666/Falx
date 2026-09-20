@@ -120,7 +120,7 @@ export default function RentCalculator() {
 
           <div className="mt-8">
             <PaywallCard
-              price="190 CHF"
+              price="229 CHF"
               ctaLabel="Obtenir mon kit de contestation"
               checkoutHref="/checkout/hausse-loyer"
               bullets={[

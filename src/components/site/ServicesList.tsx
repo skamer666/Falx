@@ -9,7 +9,7 @@ const SERVICES = [
     title: "Certificat de travail",
     description:
       "Décryptage des formulations codées et mise en demeure prête à envoyer.",
-    price: "149 CHF",
+    price: "179 CHF",
     href: "/services/certificat-travail",
     image: "/media/photos/certificat-travail.jpg",
   },
@@ -27,7 +27,7 @@ const SERVICES = [
     title: "Contestation de hausse de loyer",
     description:
       "Kit de contestation complet pour votre commission de conciliation.",
-    price: "190 CHF",
+    price: "229 CHF",
     href: "/services/hausse-loyer",
     image: "/media/photos/hausse-loyer.jpg",
   },
@@ -36,7 +36,7 @@ const SERVICES = [
     title: "Création de Sàrl",
     description:
       "Constitution clé en main avec pack de conformité nLPD inclus.",
-    price: "Sur devis",
+    price: "Dès 590 CHF",
     href: "/services/creation-sarl",
     image: "/media/photos/creation-sarl.jpg",
   },

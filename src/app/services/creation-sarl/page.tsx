@@ -7,9 +7,9 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import { Container, PriceBadge, PrimaryButton, StepList, TrustBar } from "@/components/site/ui";
 
 export const metadata: Metadata = {
-  title: "Création de Sàrl clé en main, prix fixe | Thrax Legal",
+  title: "Création de Sàrl clé en main dès 590 CHF | Thrax Legal",
   description:
-    "Constitution de Sàrl à prix fixe communiqué avant démarrage, avec pack de conformité nLPD inclus.",
+    "Constitution de Sàrl à prix fixe dès 590 CHF, avec pack de conformité nLPD inclus.",
 };
 
 const STEPS = [
@@ -32,8 +32,8 @@ const STEPS = [
 
 const FAQ = [
   {
-    q: "Le prix annoncé dans le devis peut-il changer en cours de route ?",
-    a: "Non. Le forfait fixe est communiqué avant démarrage et ne varie pas, sauf changement du périmètre demandé par vous.",
+    q: "Pourquoi le prix est-il « dès 590 CHF » et non un montant fixe unique ?",
+    a: "590 CHF couvre une constitution standard à associé unique. Le devis gratuit confirme le prix exact selon votre situation (nombre d'associés, apports en nature), fixé avant tout paiement et ne variant plus ensuite.",
   },
   {
     q: "Combien de temps prend la constitution d'une Sàrl ?",
@@ -72,17 +72,17 @@ export default function CreationSarlPage() {
                 que ce soit.
               </p>
               <PriceBadge
-                amount="Sur devis"
-                label="Forfait fixe communiqué avant démarrage"
+                amount="Dès 590 CHF"
+                label="Forfait fixe, hors frais de registre"
                 className="mt-8"
               />
               <div className="mt-8">
                 <PrimaryButton href="/#contact">
-                  Demander un devis gratuit
+                  Demander mon devis gratuit
                 </PrimaryButton>
               </div>
               <p className="mt-4 text-sm text-text-muted">
-                Devis gratuit et sans engagement, réponse rapide.
+                Devis gratuit et sans engagement, prix fixé avant démarrage.
               </p>
             </Reveal>
           </Container>

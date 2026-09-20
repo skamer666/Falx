@@ -8,7 +8,7 @@ import { Container, PriceBadge, PrimaryButton, StepList, TrustBar } from "@/comp
 export const metadata: Metadata = {
   title: "Direction Juridique Externalisée : abonnement PME | Thrax Legal",
   description:
-    "Un interlocuteur juridique unique pour votre PME suisse, dès 290 CHF par mois.",
+    "Un interlocuteur juridique unique pour votre PME suisse, dès 490 CHF par mois.",
 };
 
 const INCLUDED_STEPS = [
@@ -53,7 +53,7 @@ export default function AbonnementPmePage() {
                 Un interlocuteur juridique unique pour votre PME, sans les
                 coûts d&rsquo;un poste interne.
               </p>
-              <PriceBadge amount="Dès 290 CHF" label="par mois" className="mt-8" />
+              <PriceBadge amount="Dès 490 CHF" label="par mois" className="mt-8" />
               <div className="mt-8">
                 <PrimaryButton href="/#contact">
                   Réserver un appel de cadrage

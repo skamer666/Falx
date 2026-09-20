@@ -11,4 +11,4 @@ export function estimateRecoveryOdds(
 }
 
 export const BASE_FEE_CHF = 89;
-export const SUCCESS_COMMISSION_PERCENT = 12;
+export const SUCCESS_COMMISSION_PERCENT = 15;
