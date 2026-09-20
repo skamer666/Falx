@@ -8,21 +8,21 @@ const PILLARS = [
     title: "Création de Sàrl",
     text: "Statuts, capital social, procès-verbal de fondation et réquisition au registre du commerce, générés et prêts à authentifier.",
     tags: ["Statuts", "Registre du commerce", "Capital social"],
-    image: "/media/vivid/wallet-cash.jpg",
+    image: "/media/vivid/icons/wallet-cash.jpg",
   },
   {
     number: "02",
     title: "Conformité LPD",
     text: "Registre des activités de traitement, politique de confidentialité et contrats de sous-traitance, alignés sur la nLPD.",
     tags: ["Registre de traitement", "Politique de confidentialité", "DPA"],
-    image: "/media/vivid/scroll-coins.jpg",
+    image: "/media/vivid/icons/scroll-coins.jpg",
   },
   {
     number: "03",
     title: "Contrats PME",
     text: "Contrats de travail, CGV, accords de confidentialité et baux commerciaux, adaptés à votre secteur et votre canton.",
     tags: ["Contrats de travail", "CGV", "NDA"],
-    image: "/media/vivid/card-scroll-coins.jpg",
+    image: "/media/vivid/icons/card-scroll-coins.jpg",
   },
 ];
 
@@ -68,6 +68,7 @@ export default function Pillars() {
                     src={pillar.image}
                     alt=""
                     fill
+                    quality={90}
                     className="object-cover"
                     sizes="72px"
                   />

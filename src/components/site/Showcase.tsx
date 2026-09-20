@@ -3,16 +3,16 @@ import { CircleArrowLink, Container } from "./ui";
 
 const PANELS = [
   {
-    eyebrow: "Falx · Création de Sàrl",
-    title: "Votre société, posée sur des bases solides.",
-    video: "/media/nouvelles/clip-02.mp4",
+    eyebrow: "Falx · Conformité LPD",
+    title: "La confiance de vos clients, protégée durablement.",
+    video: "/media/nouvelles/clip-03.mp4",
     href: "#produits",
     objectPosition: "left center",
   },
   {
-    eyebrow: "Falx · Conformité LPD",
-    title: "La confiance de vos clients, protégée durablement.",
-    video: "/media/nouvelles/clip-03.mp4",
+    eyebrow: "Falx · Création de Sàrl",
+    title: "Votre société, posée sur des bases solides.",
+    video: "/media/nouvelles/clip-02.mp4",
     href: "#produits",
     objectPosition: "left center",
   },

@@ -7,19 +7,19 @@ const POINTS = [
     figure: "CHF 300–500",
     label: "de l'heure",
     text: "Le tarif moyen d'un avocat traditionnel pour rédiger un contrat type ou constituer une société.",
-    image: "/media/vivid/cash-stack.jpg",
+    image: "/media/vivid/icons/cash-stack.jpg",
   },
   {
     figure: "2–4",
     label: "semaines",
     text: "Le délai habituel pour obtenir un simple contrat de travail ou des conditions générales sur mesure.",
-    image: "/media/vivid/scroll-coins.jpg",
+    image: "/media/vivid/icons/scroll-coins.jpg",
   },
   {
     figure: "1 sur 3",
     label: "PME suisses",
     text: "N'a toujours pas de registre de traitement conforme à la nouvelle Loi sur la protection des données.",
-    image: "/media/vivid/wallet-cash.jpg",
+    image: "/media/vivid/icons/wallet-cash.jpg",
   },
 ];
 
@@ -44,6 +44,7 @@ export default function Problem() {
                     src={point.image}
                     alt=""
                     fill
+                    quality={90}
                     className="object-cover"
                     sizes="64px"
                   />
