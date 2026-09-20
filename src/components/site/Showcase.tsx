@@ -7,16 +7,18 @@ const PANELS = [
     title: "Votre société, posée sur des bases solides.",
     video: "/media/nouvelles/clip-02.mp4",
     href: "#produits",
-    // Le sujet de la vidéo est à gauche du cadre : texte à droite.
+    // Le sujet de la vidéo est à gauche du cadre : texte à droite,
+    // et le cadrage suit le sujet pour ne pas le couper.
     align: "right" as const,
+    objectPosition: "left center",
   },
   {
     eyebrow: "Falx · Conformité LPD",
     title: "La confiance de vos clients, protégée durablement.",
     video: "/media/nouvelles/clip-03.mp4",
     href: "#produits",
-    // Le sujet de la vidéo est à gauche du cadre : texte à droite.
     align: "right" as const,
+    objectPosition: "left center",
   },
   {
     eyebrow: "Falx · Contrats PME",
@@ -24,6 +26,7 @@ const PANELS = [
     video: "/media/nouvelles/clip-04.mp4",
     href: "#produits",
     align: "left" as const,
+    objectPosition: "center",
   },
 ];
 
@@ -42,6 +45,7 @@ export default function Showcase() {
                 playsInline
                 aria-hidden="true"
                 className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: panel.objectPosition }}
               >
                 <source src={panel.video} type="video/mp4" />
               </video>
