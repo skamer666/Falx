@@ -2,6 +2,13 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { Container } from "./ui";
 
+const MENU = [
+  { number: "001", label: "Accueil", href: "/" },
+  { number: "002", label: "Services", href: "/services" },
+  { number: "003", label: "Abonnement PME", href: "/abonnement-pme" },
+  { number: "004", label: "Contact", href: "/#contact" },
+];
+
 const COLUMNS = [
   {
     title: "Services",
@@ -10,14 +17,6 @@ const COLUMNS = [
       { label: "Recouvrement", href: "/services/recouvrement" },
       { label: "Hausse de loyer", href: "/services/hausse-loyer" },
       { label: "Création de Sàrl", href: "/services/creation-sarl" },
-    ],
-  },
-  {
-    title: "Entreprise",
-    links: [
-      { label: "Abonnement PME", href: "/abonnement-pme" },
-      { label: "Tous les services", href: "/services" },
-      { label: "Contact", href: "/#contact" },
     ],
   },
   {
@@ -34,7 +33,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-bg">
       <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_2fr]">
+        <div className="grid gap-12 md:grid-cols-[1.2fr_1fr_2fr]">
           <div>
             <Link href="/" aria-label="Thrax Legal, accueil">
               <Logo />
@@ -45,7 +44,28 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+              Menu
+            </p>
+            <ul className="mt-4 space-y-3">
+              {MENU.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="flex items-baseline gap-3 text-sm text-text-muted transition-colors hover:text-text"
+                  >
+                    <span className="text-xs text-text-muted/60">
+                      {item.number}
+                    </span>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8">
             {COLUMNS.map((col) => (
               <div key={col.title}>
                 <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
