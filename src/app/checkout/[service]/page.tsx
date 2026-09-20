@@ -9,7 +9,7 @@ export default async function CheckoutPage({
     <main className="flex min-h-screen flex-col items-center justify-center bg-bg px-6 text-center text-text">
       <Container className="flex max-w-md flex-col items-center gap-4">
         <p className="text-sm text-text-muted">Service sélectionné</p>
-        <h1 className="text-2xl font-semibold tracking-tight text-text">
+        <h1 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
           {decodeURIComponent(service)}
         </h1>
         <p className="text-sm leading-relaxed text-text-muted">

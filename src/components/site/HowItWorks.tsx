@@ -21,10 +21,10 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-20">
       <Container>
         <Reveal>
-          <h2 className="mx-auto max-w-2xl text-center text-3xl font-semibold tracking-tight text-text md:text-4xl">
+          <h2 className="mx-auto max-w-2xl text-center text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
             Une autre manière de travailler avec un juriste.
           </h2>
           <StepList steps={STEPS} className="mt-14" />

@@ -49,7 +49,7 @@ export default function ServicesPage() {
         <section className="border-b border-border py-24 text-center md:py-32">
           <Container>
             <Reveal>
-              <h1 className="mx-auto max-w-2xl text-[2.25rem] font-semibold leading-[1.1] tracking-tight text-text sm:text-5xl">
+              <h1 className="mx-auto max-w-2xl text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-text sm:text-5xl">
                 Des services juridiques à prix fixe.
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
@@ -66,7 +66,7 @@ export default function ServicesPage() {
               {SERVICES.map((service) => (
                 <Reveal key={service.title}>
                   <div className="grid gap-4 py-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] md:items-baseline md:gap-16 md:py-12">
-                    <h2 className="text-2xl font-semibold tracking-tight text-text">
+                    <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                       {service.title}
                     </h2>
                     <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-10">

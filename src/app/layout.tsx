@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const schibstedGrotesk = Schibsted_Grotesk({
+  variable: "--font-schibsted",
   subsets: ["latin"],
   display: "swap",
 });
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${inter.variable} h-full antialiased`}>
+    <html lang="fr" className={`${schibstedGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-text">
         {children}
       </body>

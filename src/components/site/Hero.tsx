@@ -10,7 +10,7 @@ export default function Hero() {
       />
       <Container className="relative pb-20 pt-28 text-center md:pb-28 md:pt-36">
         <Reveal>
-          <h1 className="mx-auto max-w-3xl text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-text sm:text-6xl md:text-7xl">
+          <h1 className="mx-auto max-w-3xl text-[48px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[84px]">
             Vos droits, exécutés en 24h.{" "}
             <span className="text-accent">Prix fixes</span>, sans surprise.
           </h1>

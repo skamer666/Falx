@@ -19,10 +19,10 @@ const FAQ = [
 
 export default function HomeFaq() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-20">
       <Container className="mx-auto max-w-2xl">
         <Reveal>
-          <h2 className="text-3xl font-semibold tracking-tight text-text md:text-4xl">
+          <h2 className="text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
             Questions fréquentes
           </h2>
           <FaqAccordion items={FAQ} className="mt-10" />

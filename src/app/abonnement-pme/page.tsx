@@ -40,7 +40,7 @@ export default function AbonnementPmePage() {
           />
           <Container className="relative mx-auto max-w-3xl py-24 text-center md:py-32">
             <Reveal>
-              <h1 className="text-[2.25rem] font-semibold leading-[1.1] tracking-tight text-text sm:text-5xl md:text-6xl">
+              <h1 className="text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-text sm:text-5xl md:text-6xl">
                 Direction Juridique Externalisée
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">

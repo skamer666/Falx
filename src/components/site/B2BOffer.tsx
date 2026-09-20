@@ -10,12 +10,12 @@ const INCLUDED = [
 
 export default function B2BOffer() {
   return (
-    <section id="contact" className="border-t border-border bg-surface/30 py-24 md:py-32">
+    <section id="contact" className="border-t border-border bg-surface/30 py-20">
       <Container>
         <Reveal>
           <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
             <div>
-              <h2 className="text-3xl font-semibold tracking-tight text-text md:text-4xl">
+              <h2 className="text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
                 Direction Juridique Externalisée
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-text-muted">

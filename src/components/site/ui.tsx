@@ -9,7 +9,7 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-6xl px-6 md:px-10 ${className}`}>
+    <div className={`mx-auto w-full max-w-[1440px] px-6 md:px-9 ${className}`}>
       {children}
     </div>
   );
@@ -158,7 +158,7 @@ export function StepList({
           <span className="text-sm font-medium text-text-muted">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <h3 className="mt-4 text-lg font-semibold tracking-tight text-text">
+          <h3 className="mt-4 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
             {step.title}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-text-muted">

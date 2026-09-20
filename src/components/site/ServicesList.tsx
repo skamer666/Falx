@@ -38,10 +38,10 @@ const SERVICES = [
 
 export default function ServicesList() {
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="py-20">
       <Container>
         <Reveal>
-          <h2 className="mx-auto max-w-xl text-center text-3xl font-semibold tracking-tight text-text md:text-4xl">
+          <h2 className="mx-auto max-w-xl text-center text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
             Des services juridiques à prix fixe.
           </h2>
         </Reveal>
@@ -53,7 +53,7 @@ export default function ServicesList() {
                 <span className="text-sm font-medium text-text-muted">
                   {service.number}
                 </span>
-                <h3 className="text-2xl font-semibold tracking-tight text-text">
+                <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text md:text-[30px]">
                   {service.title}
                 </h3>
                 <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-10">
