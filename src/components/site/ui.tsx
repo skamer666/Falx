@@ -27,7 +27,7 @@ export function PrimaryButton({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-full bg-sapin px-6 py-3 text-sm font-medium text-papier transition-all duration-300 hover:bg-sapin-light hover:shadow-[0_8px_30px_-8px_rgba(15,61,46,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-sapin px-6 py-3 text-sm font-medium text-papier transition-all duration-300 hover:bg-sapin-light hover:shadow-[0_8px_30px_-8px_rgba(0,0,0,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sapin focus-visible:ring-offset-2 focus-visible:ring-offset-papier ${className}`}
     >
       {children}
     </Link>

@@ -12,7 +12,7 @@ const LINKS = [
 export default function Nav() {
   return (
     <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6">
-      <div className="relative flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-ligne/60 bg-papier/90 px-5 shadow-[0_12px_36px_-16px_rgba(11,15,20,0.25)] backdrop-blur-md md:px-7">
+      <div className="relative flex h-16 w-full max-w-6xl items-center justify-between rounded-full border border-ligne/60 bg-papier/90 px-5 shadow-[0_12px_36px_-16px_rgba(0,0,0,0.25)] backdrop-blur-md md:px-7">
         <Link
           href="#"
           aria-label="Falx, accueil"

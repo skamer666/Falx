@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-encre">
       <Image
-        src="/media/textures/volute.jpg"
+        src="/media/textures/vagues-mono.jpg"
         alt=""
         fill
         priority
@@ -14,11 +14,11 @@ export default function Hero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-encre/85 via-encre/50 to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-encre/60 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
       />
 
       <Container className="relative pb-28 pt-36 md:pb-40 md:pt-44">

@@ -20,7 +20,7 @@ const description =
   "Falx met des juristes suisses au service de vos statuts de Sàrl, de votre conformité LPD et de vos contrats PME, avec la rigueur du droit suisse à chaque étape.";
 
 export const viewport: Viewport = {
-  themeColor: "#0b0f14",
+  themeColor: "#0a0a0a",
 };
 
 // À remplacer par le nom de domaine définitif avant la mise en production.
