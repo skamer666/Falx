@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-encre">
       <Image
-        src="/media/textures/lin-sombre.jpeg"
+        src="/media/textures/volute.jpg"
         alt=""
         fill
         priority
