@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { Container, GhostButton, PrimaryButton, SectionHeading } from "./ui";
 
@@ -14,6 +15,7 @@ const PLANS = [
     ],
     cta: "Commencer",
     featured: false,
+    image: "/media/vivid/scroll-coins.jpg",
   },
   {
     name: "Business",
@@ -28,6 +30,7 @@ const PLANS = [
     ],
     cta: "Démarrer l'essai",
     featured: true,
+    image: "/media/vivid/cash-stack.jpg",
   },
   {
     name: "Sur-mesure",
@@ -42,6 +45,7 @@ const PLANS = [
     ],
     cta: "Parler à l'équipe",
     featured: false,
+    image: "/media/vivid/wallet-cash.jpg",
   },
 ];
 
@@ -61,72 +65,83 @@ export default function Pricing() {
           {PLANS.map((plan, index) => (
             <Reveal key={plan.name} delay={index * 100}>
               <div
-                className={`flex h-full flex-col rounded-2xl border p-8 ${
+                className={`flex h-full flex-col overflow-hidden rounded-2xl border ${
                   plan.featured
                     ? "border-sapin bg-encre text-papier shadow-[0_30px_60px_-30px_rgba(15,61,46,0.5)]"
                     : "border-ligne bg-papier"
                 }`}
               >
-                <h3
-                  className={`text-lg font-medium ${
-                    plan.featured ? "text-papier" : "text-ink"
-                  }`}
-                >
-                  {plan.name}
-                </h3>
-                <p className="mt-4">
-                  <span className="font-display text-3xl">
-                    {plan.price}
-                  </span>
-                  {plan.unit ? (
-                    <span
-                      className={`ml-2 text-sm ${
-                        plan.featured ? "text-ivory-muted" : "text-ink-muted"
-                      }`}
-                    >
-                      {plan.unit}
+                <div className="relative h-28 w-full">
+                  <Image
+                    src={plan.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-8">
+                  <h3
+                    className={`text-lg font-medium ${
+                      plan.featured ? "text-papier" : "text-ink"
+                    }`}
+                  >
+                    {plan.name}
+                  </h3>
+                  <p className="mt-4">
+                    <span className="font-display text-3xl">
+                      {plan.price}
                     </span>
-                  ) : null}
-                </p>
-                <p
-                  className={`mt-3 text-sm leading-relaxed ${
-                    plan.featured ? "text-ivory-muted" : "text-ink-muted"
-                  }`}
-                >
-                  {plan.description}
-                </p>
-
-                <ul className="mt-6 flex-1 space-y-3">
-                  {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex items-start gap-2.5 text-sm ${
-                        plan.featured ? "text-papier" : "text-ink"
-                      }`}
-                    >
+                    {plan.unit ? (
                       <span
-                        className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                          plan.featured ? "bg-sapin-pale" : "bg-sapin"
+                        className={`ml-2 text-sm ${
+                          plan.featured ? "text-ivory-muted" : "text-ink-muted"
                         }`}
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      >
+                        {plan.unit}
+                      </span>
+                    ) : null}
+                  </p>
+                  <p
+                    className={`mt-3 text-sm leading-relaxed ${
+                      plan.featured ? "text-ivory-muted" : "text-ink-muted"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
 
-                <div className="mt-8">
-                  {plan.featured ? (
-                    <PrimaryButton href="#demarrer" className="w-full">
-                      {plan.cta}
-                    </PrimaryButton>
-                  ) : (
-                    <GhostButton
-                      href="#demarrer"
-                      className="w-full border border-ligne no-underline hover:border-ink/40"
-                    >
-                      {plan.cta}
-                    </GhostButton>
-                  )}
+                  <ul className="mt-6 flex-1 space-y-3">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className={`flex items-start gap-2.5 text-sm ${
+                          plan.featured ? "text-papier" : "text-ink"
+                        }`}
+                      >
+                        <span
+                          className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                            plan.featured ? "bg-sapin-pale" : "bg-sapin"
+                          }`}
+                        />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-8">
+                    {plan.featured ? (
+                      <PrimaryButton href="#demarrer" className="w-full">
+                        {plan.cta}
+                      </PrimaryButton>
+                    ) : (
+                      <GhostButton
+                        href="#demarrer"
+                        className="w-full border border-ligne no-underline hover:border-ink/40"
+                      >
+                        {plan.cta}
+                      </GhostButton>
+                    )}
+                  </div>
                 </div>
               </div>
             </Reveal>

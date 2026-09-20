@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { Container, SectionHeading } from "./ui";
 
@@ -6,16 +7,19 @@ const POINTS = [
     figure: "CHF 300–500",
     label: "de l'heure",
     text: "Le tarif moyen d'un avocat traditionnel pour rédiger un contrat type ou constituer une société.",
+    image: "/media/vivid/cash-stack.jpg",
   },
   {
     figure: "2–4",
     label: "semaines",
     text: "Le délai habituel pour obtenir un simple contrat de travail ou des conditions générales sur mesure.",
+    image: "/media/vivid/scroll-coins.jpg",
   },
   {
     figure: "1 sur 3",
     label: "PME suisses",
     text: "N'a toujours pas de registre de traitement conforme à la nouvelle Loi sur la protection des données.",
+    image: "/media/vivid/wallet-cash.jpg",
   },
 ];
 
@@ -35,6 +39,15 @@ export default function Problem() {
           {POINTS.map((point, index) => (
             <Reveal key={point.figure} delay={index * 100}>
               <div>
+                <div className="relative mb-5 h-16 w-16 overflow-hidden rounded-2xl">
+                  <Image
+                    src={point.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
+                </div>
                 <p className="font-display text-5xl text-sapin md:text-6xl">
                   {point.figure}
                 </p>

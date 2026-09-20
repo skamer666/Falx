@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { CircleArrowLink, Container } from "./ui";
 
@@ -16,6 +17,12 @@ const PANELS = [
     poster: "/media/paysages/lacs.jpeg",
     href: "#produits",
   },
+  {
+    eyebrow: "Falx · Contrats PME",
+    title: "Vos baux et contrats commerciaux, sécurisés dès la signature.",
+    image: "/media/vivid/interior-scene.jpg",
+    href: "#produits",
+  },
 ];
 
 export default function Showcase() {
@@ -24,17 +31,27 @@ export default function Showcase() {
       {PANELS.map((panel) => (
         <Reveal key={panel.eyebrow}>
           <div className="relative isolate flex min-h-[560px] items-end overflow-hidden md:min-h-[640px]">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={panel.poster}
-              aria-hidden="true"
-              className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src={panel.video} type="video/mp4" />
-            </video>
+            {panel.video ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster={panel.poster}
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover"
+              >
+                <source src={panel.video} type="video/mp4" />
+              </video>
+            ) : (
+              <Image
+                src={panel.image!}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            )}
             <div
               aria-hidden
               className="absolute inset-0 bg-gradient-to-t from-encre/85 via-encre/25 to-transparent"

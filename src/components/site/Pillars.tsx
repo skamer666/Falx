@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { Container, SectionHeading } from "./ui";
 
@@ -7,18 +8,21 @@ const PILLARS = [
     title: "Création de Sàrl",
     text: "Statuts, capital social, procès-verbal de fondation et réquisition au registre du commerce, générés et prêts à authentifier.",
     tags: ["Statuts", "Registre du commerce", "Capital social"],
+    image: "/media/vivid/wallet-cash.jpg",
   },
   {
     number: "02",
     title: "Conformité LPD",
     text: "Registre des activités de traitement, politique de confidentialité et contrats de sous-traitance, alignés sur la nLPD.",
     tags: ["Registre de traitement", "Politique de confidentialité", "DPA"],
+    image: "/media/vivid/scroll-coins.jpg",
   },
   {
     number: "03",
     title: "Contrats PME",
     text: "Contrats de travail, CGV, accords de confidentialité et baux commerciaux, adaptés à votre secteur et votre canton.",
     tags: ["Contrats de travail", "CGV", "NDA"],
+    image: "/media/vivid/card-scroll-coins.jpg",
   },
 ];
 
@@ -37,7 +41,7 @@ export default function Pillars() {
         <div className="mt-20 divide-y divide-ligne">
           {PILLARS.map((pillar, index) => (
             <Reveal key={pillar.number} delay={index * 100}>
-              <div className="grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[80px_1fr_1.1fr] md:gap-10">
+              <div className="grid gap-4 py-10 first:pt-0 last:pb-0 md:grid-cols-[80px_1fr_1.1fr_88px] md:items-start md:gap-10">
                 <span className="font-display text-lg text-ink-muted">
                   {pillar.number}
                 </span>
@@ -58,6 +62,15 @@ export default function Pillars() {
                       </span>
                     ))}
                   </div>
+                </div>
+                <div className="relative hidden h-[72px] w-[72px] overflow-hidden rounded-2xl md:block">
+                  <Image
+                    src={pillar.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="72px"
+                  />
                 </div>
               </div>
             </Reveal>
