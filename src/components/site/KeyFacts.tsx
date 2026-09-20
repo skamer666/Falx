@@ -26,7 +26,7 @@ const FACTS = [
 
 export default function KeyFacts() {
   return (
-    <section className="border-y border-border bg-surface/30 py-20">
+    <section className="theme-light border-y border-border bg-surface py-20">
       <Container>
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           {FACTS.map((fact, index) => (

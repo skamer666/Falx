@@ -10,7 +10,7 @@ const INCLUDED = [
 
 export default function B2BOffer() {
   return (
-    <section id="contact" className="border-t border-border bg-surface/30 py-20">
+    <section id="contact" className="theme-light border-t border-border bg-surface py-20">
       <Container>
         <Reveal>
           <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
@@ -38,7 +38,7 @@ export default function B2BOffer() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-surface p-10">
+            <div className="rounded-2xl border border-border bg-bg p-10">
               <PriceBadge amount="Dès 290 CHF" label="par mois" />
               <p className="mt-6 text-sm leading-relaxed text-text-muted">
                 Résiliable chaque mois. Un appel de cadrage de 20 minutes

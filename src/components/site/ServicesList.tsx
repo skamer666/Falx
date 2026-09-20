@@ -38,7 +38,7 @@ const SERVICES = [
 
 export default function ServicesList() {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="theme-light bg-bg py-20">
       <Container>
         <Reveal>
           <h2 className="mx-auto max-w-xl text-center text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">

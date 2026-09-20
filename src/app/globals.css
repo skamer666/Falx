@@ -41,6 +41,17 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+.theme-light {
+  --color-bg: #fcfbf7;
+  --color-surface: #f0efe7;
+  --color-surface-hover: #e6e4d9;
+  --color-border: rgba(16, 16, 16, 0.1);
+  --color-text: #101010;
+  --color-text-muted: rgba(16, 16, 16, 0.62);
+  --color-accent: #4338ca;
+  --color-accent-hover: #372ea8;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);

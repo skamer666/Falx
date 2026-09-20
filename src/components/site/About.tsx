@@ -3,7 +3,7 @@ import { Container } from "./ui";
 
 export default function About() {
   return (
-    <section className="border-b border-border py-20">
+    <section className="theme-light border-b border-border bg-bg py-20">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

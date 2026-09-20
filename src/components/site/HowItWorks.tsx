@@ -21,7 +21,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20">
+    <section className="theme-light bg-bg py-20">
       <Container>
         <Reveal>
           <h2 className="mx-auto max-w-2xl text-center text-[30px] font-semibold leading-[1.1] tracking-[-0.02em] text-text md:text-[48px]">
