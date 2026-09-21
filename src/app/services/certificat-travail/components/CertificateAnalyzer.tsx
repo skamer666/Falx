@@ -62,15 +62,18 @@ export default function CertificateAnalyzer() {
   const [isExtractingPdf, setIsExtractingPdf] = useState(false);
   const [pdfNotice, setPdfNotice] = useState<string | null>(null);
   const [consentGiven, setConsentGiven] = useState(false);
+  const [isDraggingPdf, setIsDraggingPdf] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
   const currentWordCount = wordCount(text);
   const isTooShort = currentWordCount > 0 && currentWordCount < MIN_WORD_COUNT;
 
-  async function handlePdfUpload(event: React.ChangeEvent<HTMLInputElement>) {
-    const file = event.target.files?.[0];
-    event.target.value = "";
-    if (!file) return;
+  async function processPdfFile(file: File) {
+    if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) {
+      setPdfNotice("Seuls les fichiers PDF sont acceptés.");
+      return;
+    }
 
     if (file.size > 15 * 1024 * 1024) {
       setPdfNotice("Fichier trop volumineux (15 Mo max).");
@@ -101,6 +104,41 @@ export default function CertificateAnalyzer() {
     }
   }
 
+  async function handlePdfUpload(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    await processPdfFile(file);
+  }
+
+  function handleDragEnter(event: React.DragEvent<HTMLDivElement>) {
+    if (!event.dataTransfer.types.includes("Files")) return;
+    event.preventDefault();
+    dragCounter.current += 1;
+    setIsDraggingPdf(true);
+  }
+
+  function handleDragOver(event: React.DragEvent<HTMLDivElement>) {
+    if (!event.dataTransfer.types.includes("Files")) return;
+    event.preventDefault();
+  }
+
+  function handleDragLeave(event: React.DragEvent<HTMLDivElement>) {
+    if (!event.dataTransfer.types.includes("Files")) return;
+    event.preventDefault();
+    dragCounter.current = Math.max(0, dragCounter.current - 1);
+    if (dragCounter.current === 0) setIsDraggingPdf(false);
+  }
+
+  async function handleDrop(event: React.DragEvent<HTMLDivElement>) {
+    event.preventDefault();
+    dragCounter.current = 0;
+    setIsDraggingPdf(false);
+    const file = event.dataTransfer.files?.[0];
+    if (!file) return;
+    await processPdfFile(file);
+  }
+
   async function handleAnalyze() {
     setError(null);
     setResult(null);
@@ -127,21 +165,38 @@ export default function CertificateAnalyzer() {
   return (
     <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
       <label htmlFor="certificate-text" className="block text-sm font-medium text-text">
-        Collez le certificat de travail complet, ou importez le PDF.
+        Collez le certificat de travail complet, ou glissez-déposez le PDF.
       </label>
-      <textarea
-        id="certificate-text"
-        rows={8}
-        value={text}
-        onChange={(event) => {
-          setText(event.target.value);
-          setResult(null);
-          setError(null);
-          setPdfNotice(null);
-        }}
-        placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées..."
-        className="mt-3 w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
-      />
+      <div
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        className={`relative mt-3 rounded-lg transition-colors ${
+          isDraggingPdf ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""
+        }`}
+      >
+        <textarea
+          id="certificate-text"
+          rows={8}
+          value={text}
+          onChange={(event) => {
+            setText(event.target.value);
+            setResult(null);
+            setError(null);
+            setPdfNotice(null);
+          }}
+          placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées... (ou glissez-déposez un PDF ici)"
+          className="w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
+        />
+        {isDraggingPdf ? (
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-lg border-2 border-dashed border-accent bg-bg/90">
+            <span className="text-sm font-medium text-text">
+              Déposez le PDF ici
+            </span>
+          </div>
+        ) : null}
+      </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <input
@@ -161,7 +216,8 @@ export default function CertificateAnalyzer() {
           {isExtractingPdf ? "Lecture du PDF..." : "Importer un PDF"}
         </button>
         <span className="text-xs text-text-muted">
-          Le PDF est lu dans votre navigateur, jamais envoyé sur un serveur.
+          Glissez-déposez ou cliquez. Le PDF est lu dans votre navigateur,
+          jamais envoyé sur un serveur.
         </span>
       </div>
       {pdfNotice ? <p className="mt-2 text-xs text-text-muted">{pdfNotice}</p> : null}
