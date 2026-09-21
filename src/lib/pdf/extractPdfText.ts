@@ -28,9 +28,14 @@ function describePdfError(err: unknown): string {
 }
 
 export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
-  const pdfjsLib = await import("pdfjs-dist");
+  // Le build par défaut de pdfjs-dist cible les navigateurs evergreen très
+  // récents et échoue silencieusement sur certaines versions de Safari
+  // ("undefined is not a function"). Le build "legacy" cible une base de
+  // navigateurs plus large et est la version recommandée par pdfjs-dist
+  // pour un usage web grand public.
+  const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.mjs");
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/build/pdf.worker.mjs",
+    "pdfjs-dist/legacy/build/pdf.worker.mjs",
     import.meta.url,
   ).toString();
 
