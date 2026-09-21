@@ -5,15 +5,12 @@
 // rédigé et sourcé par nos soins (voir certificateJevAnalysis.ts) s'applique
 // à un texte donné : Jev ne rédige jamais lui-même de texte juridique.
 //
-// AVERTISSEMENT : le nom exact du header d'authentification et le schéma
-// JSON exact n'ont pas pu être confirmés auprès de la documentation
-// officielle (docs.typesafe.ai n'expose pas le détail via récupération
-// automatisée, et l'installation du skill Claude Code officiel a été
-// bloquée par le classificateur de sécurité). Le format ci-dessous est une
-// reconstruction à partir de guides tiers et doit être vérifié au premier
-// appel réel contre une clé API valide, puis ajusté si nécessaire.
+// Format vérifié par un appel réel contre l'API le 21.09.2026 : header
+// `Authorization: Bearer <clé>`, champ `model` obligatoire au niveau racine,
+// et un champ `type` obligatoire par question ("noul" | "choice" | "score").
 
 const JEV_ENDPOINT = "https://api.typesafe.ai/v1/systemone";
+const JEV_MODEL = "jev-latest";
 
 export type JevNoulQuestion = {
   type: "noul";
@@ -69,13 +66,14 @@ export async function callJev<TKeys extends string>(
   }
 
   const body = {
+    model: JEV_MODEL,
     state,
     questions: Object.fromEntries(
       Object.entries<JevQuestion>(questions).map(([key, q]) => {
         if (q.type === "noul") {
-          return [key, { instructions: q.instructions }];
+          return [key, { type: "noul", instructions: q.instructions }];
         }
-        return [key, { instructions: q.instructions, criteria: q.criteria }];
+        return [key, { type: q.type, instructions: q.instructions, criteria: q.criteria }];
       }),
     ),
   };
@@ -84,8 +82,6 @@ export async function callJev<TKeys extends string>(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // Hypothèse à vérifier : header Authorization Bearer. Si l'API
-      // attend un autre header (ex. X-API-Key), ajuster ici uniquement.
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify(body),
