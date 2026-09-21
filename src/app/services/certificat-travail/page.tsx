@@ -55,6 +55,10 @@ const FAQ = [
     a: "L'analyse gratuite vous le signale avant tout paiement. Vous ne payez que si vous décidez de commander le rapport détaillé et la mise en demeure.",
   },
   {
+    q: "Thrax Legal est-il un cabinet d'avocats ?",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. Le rapport et la mise en demeure sont des documents standardisés. Pour un litige complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+  },
+  {
     q: "Mes données sont-elles conservées ?",
     a: "Non. Le texte analysé n'est pas stocké après génération de votre rapport, conformément à la nLPD.",
   },

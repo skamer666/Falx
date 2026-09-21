@@ -50,6 +50,10 @@ const FAQ = [
     q: "Qu'est-ce que le pack de conformité nLPD inclus ?",
     a: "Un registre de traitement des données et une politique de confidentialité type, adaptés à votre activité, prêts dès l'inscription de votre société.",
   },
+  {
+    q: "Thrax Legal est-il un cabinet d'avocats ?",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. Nous préparons les documents standardisés nécessaires à la constitution. Pour une structure complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+  },
 ];
 
 export default function CreationSarlPage() {

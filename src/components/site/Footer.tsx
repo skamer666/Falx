@@ -81,9 +81,18 @@ export default function Footer() {
           </div>
         </div>
 
+        <p className="mt-16 max-w-2xl text-xs leading-relaxed text-text-muted">
+          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et ne
+          fournit pas de conseil juridique personnalisé. Nos services
+          consistent en la mise à disposition d&rsquo;outils et de documents
+          juridiques standardisés. Pour toute situation complexe ou
+          contentieuse, nous recommandons de consulter un avocat inscrit à
+          un registre cantonal suisse.
+        </p>
+
         <p
           aria-hidden
-          className="mt-16 select-none text-[16vw] font-semibold leading-none tracking-[-0.03em] text-text/90 md:text-[9rem]"
+          className="mt-8 select-none text-[16vw] font-semibold leading-none tracking-[-0.03em] text-text/90 md:text-[9rem]"
         >
           Thrax Legal
         </p>

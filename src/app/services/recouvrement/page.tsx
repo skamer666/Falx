@@ -50,6 +50,10 @@ const FAQ = [
     q: "Une créance ancienne peut-elle encore être recouvrée ?",
     a: "Cela dépend du délai de prescription applicable à votre créance. Plus une créance est ancienne, plus les chances de recouvrement diminuent : mieux vaut agir rapidement.",
   },
+  {
+    q: "Thrax Legal est-il un cabinet d'avocats ?",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. La réquisition de poursuite est un document standardisé. Pour un litige complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+  },
 ];
 
 export default function RecouvrementPage() {

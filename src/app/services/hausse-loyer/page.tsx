@@ -50,6 +50,10 @@ const FAQ = [
     q: "La régie peut-elle résilier mon bail parce que je conteste ?",
     a: "Non. Le droit suisse du bail protège le locataire contre une résiliation liée à l'exercice de bonne foi de ses droits.",
   },
+  {
+    q: "Thrax Legal est-il un cabinet d'avocats ?",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. Le kit de contestation est un document standardisé. Pour un litige complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+  },
 ];
 
 export default function HausseLoyerPage() {
