@@ -42,12 +42,15 @@ export function describeUnexpectedError(err: unknown): string {
     .join(" ");
 }
 
-// pdfjs-dist utilise Promise.withResolvers(), disponible seulement depuis
-// Safari 17.4 / iOS 17.4, sans le polyfiller (y compris dans son build
-// legacy). Sur un Safari plus ancien, l'import de pdfjs échoue avec
-// "undefined is not a function". Ce polyfill doit être installé avant le
-// chargement de pdfjs.
-function ensurePromiseWithResolvers(): void {
+// pdfjs-dist s'appuie sur deux API récentes sans jamais les polyfiller,
+// y compris dans son build "legacy" : Promise.withResolvers() (Safari 17.4+)
+// et l'itération asynchrone native d'un ReadableStream via `for await`
+// (Symbol.asyncIterator, Safari plus récent encore). Sur un Safari plus
+// ancien, l'appel échoue avec "undefined is not a function". Ces polyfills
+// doivent être installés avant le chargement de pdfjs, dans CHAQUE contexte
+// JS où pdfjs tourne : la page (ici) et le worker (voir
+// scripts/build-pdf-worker.mjs, qui applique le même correctif côté worker).
+function ensurePdfjsPolyfills(): void {
   const P = Promise as unknown as {
     withResolvers?: <T>() => {
       promise: Promise<T>;
@@ -55,20 +58,41 @@ function ensurePromiseWithResolvers(): void {
       reject: (reason?: unknown) => void;
     };
   };
-  if (typeof P.withResolvers === "function") return;
-  P.withResolvers = function withResolvers<T>() {
-    let resolve!: (value: T | PromiseLike<T>) => void;
-    let reject!: (reason?: unknown) => void;
-    const promise = new Promise<T>((res, rej) => {
-      resolve = res;
-      reject = rej;
-    });
-    return { promise, resolve, reject };
+  if (typeof P.withResolvers !== "function") {
+    P.withResolvers = function withResolvers<T>() {
+      let resolve!: (value: T | PromiseLike<T>) => void;
+      let reject!: (reason?: unknown) => void;
+      const promise = new Promise<T>((res, rej) => {
+        resolve = res;
+        reject = rej;
+      });
+      return { promise, resolve, reject };
+    };
+  }
+
+  const RS = (globalThis as { ReadableStream?: typeof ReadableStream }).ReadableStream;
+  const proto = RS?.prototype as unknown as {
+    [Symbol.asyncIterator]?: () => AsyncIterableIterator<unknown>;
+    getReader: ReadableStream["getReader"];
   };
+  if (proto && typeof proto[Symbol.asyncIterator] !== "function") {
+    proto[Symbol.asyncIterator] = async function* (this: ReadableStream) {
+      const reader = this.getReader();
+      try {
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) return;
+          yield value;
+        }
+      } finally {
+        reader.releaseLock();
+      }
+    };
+  }
 }
 
 export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
-  ensurePromiseWithResolvers();
+  ensurePdfjsPolyfills();
 
   // Le build par défaut de pdfjs-dist cible les navigateurs evergreen très
   // récents et échoue silencieusement sur certaines versions de Safari

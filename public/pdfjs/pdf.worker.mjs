@@ -1,4 +1,4 @@
-// Polyfill injecté par scripts/build-pdf-worker.mjs (voir ce fichier).
+// Polyfills injectés par scripts/build-pdf-worker.mjs (voir ce fichier).
 if (typeof Promise.withResolvers !== "function") {
   Promise.withResolvers = function withResolvers() {
     let resolve, reject;
@@ -7,6 +7,20 @@ if (typeof Promise.withResolvers !== "function") {
       reject = rej;
     });
     return { promise, resolve, reject };
+  };
+}
+if (typeof ReadableStream !== "undefined" && typeof ReadableStream.prototype[Symbol.asyncIterator] !== "function") {
+  ReadableStream.prototype[Symbol.asyncIterator] = async function* () {
+    const reader = this.getReader();
+    try {
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) return;
+        yield value;
+      }
+    } finally {
+      reader.releaseLock();
+    }
   };
 }
 /**
