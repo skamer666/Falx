@@ -28,7 +28,7 @@ const STEPS = [
   {
     title: "Recevez l'analyse",
     description:
-      "Les formulations codées sont détectées instantanément et expliquées une par une.",
+      "Les formulations à risque sont identifiées, sourcées et expliquées une par une.",
   },
   {
     title: "Agissez",
@@ -40,7 +40,7 @@ const STEPS = [
 const FAQ = [
   {
     q: "Pourquoi les certificats de travail utilisent-ils un langage codé ?",
-    a: "Une pratique répandue en ressources humaines consiste à formuler des évaluations en apparence neutres, voire positives, mais légalement défavorables. Le Tribunal fédéral interdit ces formulations ambiguës.",
+    a: "Une pratique répandue en ressources humaines consiste à formuler des évaluations en apparence neutres, voire positives, mais en réalité défavorables. Le droit suisse interdit les formulations ambiguës ou les sous-entendus dans un certificat de travail, mais la jurisprudence refuse de généraliser un « dictionnaire de codes » : chaque formulation s'apprécie dans le contexte de l'ensemble du document (art. 330a CO).",
   },
   {
     q: "Que se passe-t-il si mon employeur refuse de corriger le certificat ?",
@@ -85,10 +85,10 @@ export default function CertificatTravailPage() {
                 Votre employeur a-t-il ruiné votre CV en cachette ?
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
-                7 employeurs suisses sur 10 utilisent un langage RH
-                illégalement codé. Auditez gratuitement votre certificat de
-                travail en quelques secondes, avant votre prochaine
-                candidature.
+                Une formulation en apparence anodine dans un certificat de
+                travail a déjà fait l&rsquo;objet de dizaines de décisions de
+                justice en Suisse. Auditez gratuitement le vôtre en quelques
+                secondes, avant votre prochaine candidature.
               </p>
               <PriceBadge
                 amount="99 CHF"
@@ -114,7 +114,7 @@ export default function CertificatTravailPage() {
         <div className="theme-light bg-bg">
           <TrustBar
             items={[
-              "Le Tribunal fédéral interdit l'usage de formulations codées dans les certificats de travail.",
+              "Le droit suisse interdit les sous-entendus et les formulations ambiguës dans un certificat de travail (art. 330a CO).",
               "Procédure aux Prud'hommes gratuite en cas de refus de correction par l'employeur.",
               "Conforme nLPD, aucune donnée conservée après l'analyse.",
             ]}
