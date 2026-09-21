@@ -21,8 +21,8 @@ export default async function CheckoutPage({
           Retour aux services
         </GhostButton>
         <p className="mt-8 max-w-sm text-xs leading-relaxed text-text-muted">
-          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et ne
-          fournit pas de conseil juridique personnalisé.
+          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et
+          n&rsquo;assure pas la représentation devant les tribunaux.
         </p>
       </Container>
     </main>

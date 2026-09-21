@@ -82,12 +82,12 @@ export default function Footer() {
         </div>
 
         <p className="mt-16 max-w-2xl text-xs leading-relaxed text-text-muted">
-          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et ne
-          fournit pas de conseil juridique personnalisé. Nos services
-          consistent en la mise à disposition d&rsquo;outils et de documents
-          juridiques standardisés. Pour toute situation complexe ou
-          contentieuse, nous recommandons de consulter un avocat inscrit à
-          un registre cantonal suisse.
+          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats : nous ne
+          portons pas le titre d&rsquo;avocat et n&rsquo;assurons pas la
+          représentation devant les tribunaux, réservée aux avocats inscrits
+          à un registre cantonal suisse. Pour toute procédure contentieuse
+          nécessitant une représentation, nous vous orientons vers un
+          avocat.
         </p>
 
         <p

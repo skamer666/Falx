@@ -56,7 +56,7 @@ const FAQ = [
   },
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
-    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. Le rapport et la mise en demeure sont des documents standardisés. Pour un litige complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Si votre employeur refuse de corriger le certificat malgré la mise en demeure, un avocat pourra vous représenter devant le Tribunal des prud'hommes.",
   },
   {
     q: "Mes données sont-elles conservées ?",

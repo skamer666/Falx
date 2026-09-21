@@ -5,7 +5,7 @@ import { Container } from "./ui";
 const FAQ = [
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
-    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. Nous mettons à disposition des outils et documents juridiques standardisés. Pour toute situation complexe ou contentieuse, nous recommandons de consulter un avocat inscrit à un registre cantonal suisse.",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats : nous ne portons pas le titre d'avocat et n'assurons pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Nous vous fournissons en revanche des conseils et documents juridiques concrets pour agir vous-même. Pour une procédure nécessitant une représentation, nous vous orientons vers un avocat.",
   },
   {
     q: "Comment se déroule un service ponctuel ?",

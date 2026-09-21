@@ -183,8 +183,9 @@ export function LawyerComparison({
       </div>
       <p className="sm:col-span-2 text-xs text-text-muted">
         Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un
-        avocat en Suisse. Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats
-        et ne fournit pas de conseil juridique personnalisé.
+        avocat en Suisse. Thrax Legal n&rsquo;est pas un cabinet
+        d&rsquo;avocats et n&rsquo;assure pas la représentation devant les
+        tribunaux.
       </p>
     </div>
   );

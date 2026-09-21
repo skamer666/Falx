@@ -52,7 +52,7 @@ const FAQ = [
   },
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
-    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et ne fournit pas de conseil juridique personnalisé. La réquisition de poursuite est un document standardisé. Pour un litige complexe, consultez un avocat inscrit à un registre cantonal suisse.",
+    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Si la procédure évolue vers une mainlevée contestée ou un procès, un avocat pourra vous représenter.",
   },
 ];
 
