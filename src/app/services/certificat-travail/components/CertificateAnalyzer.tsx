@@ -243,27 +243,32 @@ export default function CertificateAnalyzer() {
         <p className="mt-2 text-center text-xs text-text-muted">{pdfNotice}</p>
       ) : null}
 
-      <p className="mt-2 text-xs text-text-muted">
-        Les tribunaux suisses interdisent d&rsquo;isoler une phrase de son
-        contexte : collez le certificat complet plutôt qu&rsquo;une phrase
-        unique pour une lecture fiable.
-      </p>
-
-      <label className="mt-4 flex items-start gap-2.5 text-xs text-text-muted">
-        <input
-          type="checkbox"
-          checked={consentGiven}
-          onChange={(event) => setConsentGiven(event.target.checked)}
-          className="mt-0.5 h-4 w-4 shrink-0 rounded border-border"
-        />
-        <span>
-          J&rsquo;accepte que le texte soumis soit transmis à notre
-          prestataire d&rsquo;analyse (États-Unis, clauses contractuelles
-          types reconnues) dans le seul but de générer ce résultat. Ce texte
-          n&rsquo;est ni utilisé pour entraîner leurs modèles, ni conservé
-          par Thrax Legal après l&rsquo;analyse.
-        </span>
-      </label>
+      <div className="mt-4">
+        <label className="flex items-start gap-2.5 text-xs text-text-muted">
+          <input
+            type="checkbox"
+            checked={consentGiven}
+            onChange={(event) => setConsentGiven(event.target.checked)}
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-border"
+          />
+          <span>
+            J&rsquo;accepte l&rsquo;envoi sécurisé du texte à notre
+            partenaire d&rsquo;analyse pour générer ce résultat.
+          </span>
+        </label>
+        <details className="mt-1.5 ml-6">
+          <summary className="cursor-pointer text-xs text-text-muted underline decoration-dotted">
+            Détails sur le traitement des données
+          </summary>
+          <p className="mt-1.5 max-w-md text-xs leading-relaxed text-text-muted">
+            Le texte est transmis à notre prestataire d&rsquo;analyse basé
+            aux États-Unis, dans le cadre de clauses contractuelles types
+            reconnues, uniquement pour générer ce résultat. Il n&rsquo;est ni
+            utilisé pour entraîner leurs modèles, ni conservé par Thrax Legal
+            après l&rsquo;analyse.
+          </p>
+        </details>
+      </div>
 
       <PrimaryButton
         type="button"

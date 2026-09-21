@@ -103,7 +103,18 @@ export default function CertificatTravailPage() {
           </Container>
         </section>
 
-        <section className="theme-light bg-bg py-16 md:py-24">
+        <section className="theme-light bg-bg py-16 md:py-20">
+          <Container className="mx-auto max-w-2xl">
+            <Reveal>
+              <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                Comment ça marche
+              </h2>
+              <StepList steps={STEPS} className="mt-8" />
+            </Reveal>
+          </Container>
+        </section>
+
+        <section className="theme-light bg-surface py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <CertificateAnalyzer />
@@ -121,7 +132,7 @@ export default function CertificatTravailPage() {
           />
         </div>
 
-        <section className="theme-light bg-surface py-16 md:py-24">
+        <section className="theme-light bg-bg py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
@@ -134,17 +145,6 @@ export default function CertificatTravailPage() {
                 thraxPrice="99 CHF"
                 thraxNote="Rapport détaillé et mise en demeure inclus, livrés immédiatement après paiement."
               />
-            </Reveal>
-          </Container>
-        </section>
-
-        <section className="theme-light bg-bg py-16 md:py-24">
-          <Container className="mx-auto max-w-2xl">
-            <Reveal>
-              <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                Comment ça marche
-              </h2>
-              <StepList steps={STEPS} className="mt-8" />
             </Reveal>
           </Container>
         </section>
