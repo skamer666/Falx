@@ -5,7 +5,6 @@ import { PrimaryButton } from "@/components/site/ui";
 import PaywallCard from "@/components/site/PaywallCard";
 import {
   analyzeCertificate,
-  getCertificateMyths,
   type CertificateAnalysis,
 } from "@/lib/legal/certificateCodes";
 
@@ -30,8 +29,6 @@ const TIER_STYLES: Record<CertificateAnalysis["explanations"][number]["tier"], s
   confirme: "bg-danger-soft text-danger",
   vigilance: "bg-accent/10 text-accent",
 };
-
-const MYTHS = getCertificateMyths();
 
 export default function CertificateAnalyzer() {
   const [text, setText] = useState("");
@@ -148,27 +145,6 @@ export default function CertificateAnalyzer() {
           )}
         </div>
       ) : null}
-
-      <div className="mt-10 border-t border-border pt-8">
-        <h3 className="text-sm font-semibold text-text">
-          Ce que la loi ne dit pas, contrairement aux idées reçues
-        </h3>
-        <ul className="mt-4 space-y-4">
-          {MYTHS.map((myth, index) => (
-            <li key={index} className="rounded-lg border border-border bg-bg p-4 text-sm">
-              <p className="text-text-muted">
-                <span className="font-medium text-text">Idée reçue : </span>
-                {myth.belief}
-              </p>
-              <p className="mt-2 text-text-muted">
-                <span className="font-medium text-text">En réalité : </span>
-                {myth.reality}
-              </p>
-              <p className="mt-2 text-xs text-text-muted">{myth.source}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }
