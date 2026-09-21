@@ -99,7 +99,10 @@ export default function CertificateAnalyzer() {
       );
     } catch (err) {
       console.error("PDF extraction failed:", err);
-      setPdfNotice("Impossible de lire ce fichier PDF. Collez le texte manuellement.");
+      const detail = err instanceof Error ? err.message : String(err);
+      setPdfNotice(
+        `Impossible de lire ce fichier PDF (${detail}). Collez le texte manuellement, ou signalez cette erreur.`,
+      );
     } finally {
       setIsExtractingPdf(false);
     }

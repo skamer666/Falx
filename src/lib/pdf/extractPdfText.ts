@@ -12,6 +12,21 @@ export type PdfExtractionResult = {
 
 const MAX_PAGES = 20;
 
+function describePdfError(err: unknown): string {
+  const name = err instanceof Error ? err.name : "";
+  const message = err instanceof Error ? err.message : String(err);
+  if (name === "PasswordException") {
+    return "Ce PDF est protégé par un mot de passe. Retirez la protection ou collez le texte manuellement.";
+  }
+  if (name === "InvalidPDFException") {
+    return `Fichier non reconnu comme un PDF valide (${message}).`;
+  }
+  if (name === "UnexpectedResponseException" || name === "ResponseException") {
+    return `Échec de chargement des ressources nécessaires à la lecture du PDF (${message}).`;
+  }
+  return `${name || "Erreur"} : ${message}`;
+}
+
 export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
   const pdfjsLib = await import("pdfjs-dist");
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -29,7 +44,13 @@ export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
     cMapPacked: true,
     standardFontDataUrl: "/pdfjs/standard_fonts/",
   });
-  const doc = await loadingTask.promise;
+
+  let doc;
+  try {
+    doc = await loadingTask.promise;
+  } catch (err) {
+    throw new Error(describePdfError(err));
+  }
 
   const pageCount = Math.min(doc.numPages, MAX_PAGES);
   const pageTexts: string[] = [];
