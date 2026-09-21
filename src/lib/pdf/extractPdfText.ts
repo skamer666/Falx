@@ -20,7 +20,15 @@ export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
   ).toString();
 
   const buffer = await file.arrayBuffer();
-  const loadingTask = pdfjsLib.getDocument({ data: buffer });
+  const loadingTask = pdfjsLib.getDocument({
+    data: buffer,
+    // Sans ces ressources, l'extraction échoue silencieusement (ou lève une
+    // erreur) sur de nombreux PDF réels : polices standards non intégrées,
+    // ou texte encodé via un CMap (fréquent avec les exports Word/Adobe).
+    cMapUrl: "/pdfjs/cmaps/",
+    cMapPacked: true,
+    standardFontDataUrl: "/pdfjs/standard_fonts/",
+  });
   const doc = await loadingTask.promise;
 
   const pageCount = Math.min(doc.numPages, MAX_PAGES);

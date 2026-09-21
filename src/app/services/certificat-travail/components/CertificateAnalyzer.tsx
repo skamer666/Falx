@@ -97,7 +97,8 @@ export default function CertificateAnalyzer() {
       setPdfNotice(
         `Texte extrait de ${pageCount} page${pageCount > 1 ? "s" : ""}. Le fichier n'a pas quitté votre navigateur, seul le texte ci-dessous sera envoyé pour analyse.`,
       );
-    } catch {
+    } catch (err) {
+      console.error("PDF extraction failed:", err);
       setPdfNotice("Impossible de lire ce fichier PDF. Collez le texte manuellement.");
     } finally {
       setIsExtractingPdf(false);
