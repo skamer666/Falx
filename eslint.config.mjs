@@ -14,6 +14,10 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Third-party Claude Code skill scripts, not project source.
     ".claude/**",
+    // vinext / Cloudflare Workers build output, not project source.
+    "dist/**",
+    ".vinext/**",
+    ".wrangler/**",
   ]),
 ]);
 
