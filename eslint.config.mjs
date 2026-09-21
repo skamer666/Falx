@@ -18,6 +18,8 @@ const eslintConfig = defineConfig([
     "dist/**",
     ".vinext/**",
     ".wrangler/**",
+    // Ressources pdfjs-dist copiées/générées, code tiers minifié.
+    "public/pdfjs/**",
   ]),
 ]);
 

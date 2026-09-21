@@ -27,17 +27,58 @@ function describePdfError(err: unknown): string {
   return `${name || "Erreur"} : ${message}`;
 }
 
+// Le diagnostic à distance de ce parcours s'est révélé difficile (échecs
+// propres à certains navigateurs) : on expose la première frame de la pile
+// pour identifier le fichier fautif sans accès à la console du visiteur.
+export function describeUnexpectedError(err: unknown): string {
+  const name = err instanceof Error ? err.name : "";
+  const message = err instanceof Error ? err.message : String(err);
+  const frame =
+    err instanceof Error && typeof err.stack === "string"
+      ? (err.stack.split("\n").find((line) => line.includes("/")) ?? "").trim().slice(0, 120)
+      : "";
+  return [name && `${name}:`, message, frame && `[${frame}]`]
+    .filter(Boolean)
+    .join(" ");
+}
+
+// pdfjs-dist utilise Promise.withResolvers(), disponible seulement depuis
+// Safari 17.4 / iOS 17.4, sans le polyfiller (y compris dans son build
+// legacy). Sur un Safari plus ancien, l'import de pdfjs échoue avec
+// "undefined is not a function". Ce polyfill doit être installé avant le
+// chargement de pdfjs.
+function ensurePromiseWithResolvers(): void {
+  const P = Promise as unknown as {
+    withResolvers?: <T>() => {
+      promise: Promise<T>;
+      resolve: (value: T | PromiseLike<T>) => void;
+      reject: (reason?: unknown) => void;
+    };
+  };
+  if (typeof P.withResolvers === "function") return;
+  P.withResolvers = function withResolvers<T>() {
+    let resolve!: (value: T | PromiseLike<T>) => void;
+    let reject!: (reason?: unknown) => void;
+    const promise = new Promise<T>((res, rej) => {
+      resolve = res;
+      reject = rej;
+    });
+    return { promise, resolve, reject };
+  };
+}
+
 export async function extractPdfText(file: File): Promise<PdfExtractionResult> {
+  ensurePromiseWithResolvers();
+
   // Le build par défaut de pdfjs-dist cible les navigateurs evergreen très
   // récents et échoue silencieusement sur certaines versions de Safari
   // ("undefined is not a function"). Le build "legacy" cible une base de
   // navigateurs plus large et est la version recommandée par pdfjs-dist
   // pour un usage web grand public.
   const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.mjs");
-  pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/legacy/build/pdf.worker.mjs",
-    import.meta.url,
-  ).toString();
+  // Worker servi depuis public/, généré par scripts/build-pdf-worker.mjs afin
+  // d'y injecter le polyfill (le worker est un contexte JS séparé).
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdfjs/pdf.worker.mjs";
 
   const buffer = await file.arrayBuffer();
   const loadingTask = pdfjsLib.getDocument({

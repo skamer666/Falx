@@ -99,9 +99,9 @@ export default function CertificateAnalyzer() {
       );
     } catch (err) {
       console.error("PDF extraction failed:", err);
-      const detail = err instanceof Error ? err.message : String(err);
+      const { describeUnexpectedError } = await import("@/lib/pdf/extractPdfText");
       setPdfNotice(
-        `Impossible de lire ce fichier PDF (${detail}). Collez le texte manuellement, ou signalez cette erreur.`,
+        `Impossible de lire ce fichier PDF (${describeUnexpectedError(err)}). Collez le texte manuellement, ou signalez cette erreur.`,
       );
     } finally {
       setIsExtractingPdf(false);
