@@ -165,62 +165,83 @@ export default function CertificateAnalyzer() {
   return (
     <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
       <label htmlFor="certificate-text" className="block text-sm font-medium text-text">
-        Collez le certificat de travail complet, ou glissez-déposez le PDF.
+        Collez le certificat de travail complet.
       </label>
+      <textarea
+        id="certificate-text"
+        rows={8}
+        value={text}
+        onChange={(event) => {
+          setText(event.target.value);
+          setResult(null);
+          setError(null);
+          setPdfNotice(null);
+        }}
+        placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées..."
+        className="mt-3 w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
+      />
+
+      <p className="mt-6 text-center text-xs uppercase tracking-wide text-text-muted">
+        ou
+      </p>
+
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="application/pdf"
+        onChange={handlePdfUpload}
+        className="hidden"
+        id="certificate-pdf"
+      />
       <div
         onDragEnter={handleDragEnter}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`relative mt-3 rounded-lg transition-colors ${
-          isDraggingPdf ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""
+        onClick={() => !isExtractingPdf && fileInputRef.current?.click()}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            fileInputRef.current?.click();
+          }
+        }}
+        aria-label="Importer un certificat au format PDF"
+        className={`mx-auto mt-3 flex aspect-square w-full max-w-[220px] cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed p-6 text-center transition-colors ${
+          isDraggingPdf
+            ? "border-accent bg-accent/5"
+            : "border-border bg-bg hover:border-accent/60"
         }`}
       >
-        <textarea
-          id="certificate-text"
-          rows={8}
-          value={text}
-          onChange={(event) => {
-            setText(event.target.value);
-            setResult(null);
-            setError(null);
-            setPdfNotice(null);
-          }}
-          placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées... (ou glissez-déposez un PDF ici)"
-          className="w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
-        />
-        {isDraggingPdf ? (
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-lg border-2 border-dashed border-accent bg-bg/90">
-            <span className="text-sm font-medium text-text">
-              Déposez le PDF ici
-            </span>
-          </div>
-        ) : null}
-      </div>
-
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="application/pdf"
-          onChange={handlePdfUpload}
-          className="hidden"
-          id="certificate-pdf"
-        />
-        <button
-          type="button"
-          onClick={() => fileInputRef.current?.click()}
-          disabled={isExtractingPdf}
-          className="rounded-full border border-border px-4 py-1.5 text-xs font-medium text-text hover:border-accent disabled:opacity-60"
+        <svg
+          aria-hidden
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          className="h-9 w-9 text-text-muted"
         >
-          {isExtractingPdf ? "Lecture du PDF..." : "Importer un PDF"}
-        </button>
+          <path d="M12 4v11m0-11 4 4m-4-4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <span className="text-sm font-medium text-text">
+          {isExtractingPdf
+            ? "Lecture du PDF..."
+            : isDraggingPdf
+              ? "Déposez le PDF ici"
+              : "Glissez un PDF ici"}
+        </span>
         <span className="text-xs text-text-muted">
-          Glissez-déposez ou cliquez. Le PDF est lu dans votre navigateur,
-          jamais envoyé sur un serveur.
+          ou cliquez pour parcourir
         </span>
       </div>
-      {pdfNotice ? <p className="mt-2 text-xs text-text-muted">{pdfNotice}</p> : null}
+      <p className="mt-3 text-center text-xs text-text-muted">
+        Le PDF est lu dans votre navigateur, jamais envoyé sur un serveur.
+      </p>
+      {pdfNotice ? (
+        <p className="mt-2 text-center text-xs text-text-muted">{pdfNotice}</p>
+      ) : null}
 
       <p className="mt-2 text-xs text-text-muted">
         Les tribunaux suisses interdisent d&rsquo;isoler une phrase de son
