@@ -7,7 +7,48 @@ import { JevApiError, JevConfigError } from "@/lib/legal/jev";
 const MIN_WORD_COUNT = 80;
 const MAX_CHAR_COUNT = 20000;
 
+// Anti-abus simple : chaque appel a un coût réel (API Jev). Pas de compte
+// requis pour l'outil gratuit, donc limitation par IP en mémoire plutôt
+// qu'un vrai compteur distribué (suffisant pour dissuader un abus grossier,
+// pas pour une garantie stricte multi-instance).
+const RATE_LIMIT_MAX_REQUESTS = 8;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const requestLog = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (requestLog.get(ip) ?? []).filter(
+    (t) => now - t < RATE_LIMIT_WINDOW_MS,
+  );
+  if (timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
+    requestLog.set(ip, timestamps);
+    return true;
+  }
+  timestamps.push(now);
+  requestLog.set(ip, timestamps);
+  return false;
+}
+
+function getClientIp(request: NextRequest): string {
+  return (
+    request.headers.get("cf-connecting-ip") ??
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    "unknown"
+  );
+}
+
 export async function POST(request: NextRequest) {
+  const clientIp = getClientIp(request);
+  if (isRateLimited(clientIp)) {
+    return NextResponse.json(
+      {
+        error:
+          "Trop de demandes d'analyse depuis cette connexion. Réessayez dans quelques minutes.",
+      },
+      { status: 429 },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();

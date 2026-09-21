@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { PrimaryButton } from "@/components/site/ui";
 import PaywallCard from "@/components/site/PaywallCard";
 import type { FlagTier } from "@/lib/legal/certificateCodes";
@@ -59,9 +59,47 @@ export default function CertificateAnalyzer() {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isExtractingPdf, setIsExtractingPdf] = useState(false);
+  const [pdfNotice, setPdfNotice] = useState<string | null>(null);
+  const [consentGiven, setConsentGiven] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const currentWordCount = wordCount(text);
   const isTooShort = currentWordCount > 0 && currentWordCount < MIN_WORD_COUNT;
+
+  async function handlePdfUpload(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    if (file.size > 15 * 1024 * 1024) {
+      setPdfNotice("Fichier trop volumineux (15 Mo max).");
+      return;
+    }
+
+    setPdfNotice(null);
+    setError(null);
+    setResult(null);
+    setIsExtractingPdf(true);
+    try {
+      const { extractPdfText } = await import("@/lib/pdf/extractPdfText");
+      const { text: extracted, pageCount } = await extractPdfText(file);
+      if (wordCount(extracted) < MIN_WORD_COUNT) {
+        setPdfNotice(
+          "Aucun texte exploitable trouvé dans ce PDF. S'il s'agit d'un document scanné (image), la reconnaissance de texte (OCR) n'est pas encore prise en charge : collez le texte manuellement.",
+        );
+        return;
+      }
+      setText(extracted);
+      setPdfNotice(
+        `Texte extrait de ${pageCount} page${pageCount > 1 ? "s" : ""}. Le fichier n'a pas quitté votre navigateur, seul le texte ci-dessous sera envoyé pour analyse.`,
+      );
+    } catch {
+      setPdfNotice("Impossible de lire ce fichier PDF. Collez le texte manuellement.");
+    } finally {
+      setIsExtractingPdf(false);
+    }
+  }
 
   async function handleAnalyze() {
     setError(null);
@@ -89,7 +127,7 @@ export default function CertificateAnalyzer() {
   return (
     <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
       <label htmlFor="certificate-text" className="block text-sm font-medium text-text">
-        Collez le certificat de travail complet ici.
+        Collez le certificat de travail complet, ou importez le PDF.
       </label>
       <textarea
         id="certificate-text"
@@ -99,27 +137,65 @@ export default function CertificateAnalyzer() {
           setText(event.target.value);
           setResult(null);
           setError(null);
+          setPdfNotice(null);
         }}
         placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées..."
         className="mt-3 w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
       />
+
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="application/pdf"
+          onChange={handlePdfUpload}
+          className="hidden"
+          id="certificate-pdf"
+        />
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={isExtractingPdf}
+          className="rounded-full border border-border px-4 py-1.5 text-xs font-medium text-text hover:border-accent disabled:opacity-60"
+        >
+          {isExtractingPdf ? "Lecture du PDF..." : "Importer un PDF"}
+        </button>
+        <span className="text-xs text-text-muted">
+          Le PDF est lu dans votre navigateur, jamais envoyé sur un serveur.
+        </span>
+      </div>
+      {pdfNotice ? <p className="mt-2 text-xs text-text-muted">{pdfNotice}</p> : null}
+
       <p className="mt-2 text-xs text-text-muted">
         Les tribunaux suisses interdisent d&rsquo;isoler une phrase de son
         contexte : collez le certificat complet plutôt qu&rsquo;une phrase
         unique pour une lecture fiable.
       </p>
 
+      <label className="mt-4 flex items-start gap-2.5 text-xs text-text-muted">
+        <input
+          type="checkbox"
+          checked={consentGiven}
+          onChange={(event) => setConsentGiven(event.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 rounded border-border"
+        />
+        <span>
+          J&rsquo;accepte que le texte soumis soit transmis à notre
+          prestataire d&rsquo;analyse (États-Unis, clauses contractuelles
+          types reconnues) dans le seul but de générer ce résultat. Ce texte
+          n&rsquo;est ni utilisé pour entraîner leurs modèles, ni conservé
+          par Thrax Legal après l&rsquo;analyse.
+        </span>
+      </label>
+
       <PrimaryButton
         type="button"
         onClick={handleAnalyze}
-        disabled={!text.trim() || isTooShort || isLoading}
+        disabled={!text.trim() || isTooShort || isLoading || !consentGiven}
         className="mt-4 w-full sm:w-auto"
       >
         {isLoading ? "Analyse en cours..." : "Lancer l’analyse (Gratuit)"}
       </PrimaryButton>
-      <p className="mt-3 text-xs text-text-muted">
-        Aucune donnée conservée après l&rsquo;analyse, conforme nLPD.
-      </p>
 
       {isTooShort ? (
         <p className="mt-4 rounded-lg border border-border bg-bg p-4 text-sm text-text-muted">

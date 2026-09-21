@@ -60,7 +60,7 @@ const FAQ = [
   },
   {
     q: "Mes données sont-elles conservées ?",
-    a: "Non. Le texte analysé n'est pas stocké après génération de votre rapport, conformément à la nLPD.",
+    a: "Thrax Legal ne stocke pas le texte de votre certificat après l'analyse. Il est transmis, avec votre consentement explicite, à notre prestataire d'analyse basé aux États-Unis dans le cadre de clauses contractuelles types reconnues, uniquement pour générer votre résultat, sans utilisation pour l'entraînement de leurs modèles.",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function CertificatTravailPage() {
             items={[
               "Le droit suisse interdit les sous-entendus et les formulations ambiguës dans un certificat de travail (art. 330a CO).",
               "Procédure aux Prud'hommes gratuite en cas de refus de correction par l'employeur.",
-              "Conforme nLPD, aucune donnée conservée après l'analyse.",
+              "Traitement conforme nLPD, avec votre consentement explicite avant tout envoi du texte.",
             ]}
           />
         </div>
