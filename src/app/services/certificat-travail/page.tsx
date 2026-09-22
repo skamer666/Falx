@@ -16,68 +16,66 @@ import {
 export const metadata: Metadata = {
   title: "Certificat de travail : analyse professionnelle | Thrax Legal",
   description:
-    "Faites analyser votre certificat de travail par notre équipe juridique et recevez un rapport complet et sourcé sous 2 jours ouvrables.",
+    "Faites vérifier votre certificat de travail par notre équipe juridique. Réponse claire sous 2 jours ouvrables.",
 };
 
 const STEPS = [
   {
     title: "Commandez",
     description:
-      "99 CHF, paiement unique. Mise en demeure prête à envoyer disponible en option (art. 330a CO).",
+      "99 CHF, un seul paiement. Lettre à votre employeur disponible en option.",
   },
   {
     title: "Envoyez votre certificat",
     description:
-      "Transmettez-nous le texte de votre certificat en toute sécurité après votre commande.",
+      "Après votre commande, envoyez-nous votre certificat en toute sécurité.",
   },
   {
     title: "Recevez votre rapport",
     description:
-      "Analyse complète du document par notre équipe juridique, avec sources, livrée sous 2 jours ouvrables.",
+      "Notre équipe juridique lit tout le document et vous répond sous 2 jours ouvrables.",
   },
 ];
 
 const EXAMPLES = [
   {
     phrase: "« … a entretenu des relations conformes à nos attentes … »",
-    translation:
-      "En langage clair : les relations avec les collègues ou la clientèle ont posé problème. Un certificat réellement positif dirait « a entretenu de bonnes relations » ou « d'excellentes relations ».",
+    translation: "Ça posait problème avec les collègues.",
   },
   {
     phrase: "« … a fait preuve de bonne volonté … »",
-    translation:
-      "En langage clair : l'intention y était, mais pas le résultat. Cette formulation évite d'affirmer que l'objectif a été atteint.",
+    translation: "Il a essayé, mais le résultat n'était pas là.",
   },
 ];
 
 const FAQ = [
   {
     q: "Pourquoi les certificats de travail utilisent-ils un langage codé ?",
-    a: "Une pratique répandue en ressources humaines consiste à formuler des évaluations en apparence neutres, voire positives, mais en réalité défavorables. Le droit suisse interdit les formulations ambiguës ou les sous-entendus dans un certificat de travail, mais la jurisprudence refuse de généraliser un « dictionnaire de codes » : chaque formulation s'apprécie dans le contexte de l'ensemble du document (art. 330a CO).",
+    a: "Beaucoup d'employeurs utilisent des phrases qui semblent positives, mais qui critiquent en réalité. La loi suisse interdit ça. Mais il n'existe pas de « dictionnaire » universel des codes : chaque phrase doit être lue avec le reste du certificat pour comprendre son vrai sens (art. 330a CO).",
   },
   {
     q: "Combien de temps faut-il pour recevoir mon rapport ?",
-    a: "Votre rapport est préparé par notre équipe juridique et livré sous 2 jours ouvrables après votre commande : ce délai correspond à une vraie relecture complète du document, pas à une génération automatique instantanée.",
+    a: "2 jours ouvrables après votre commande. Ce n'est pas un résultat automatique : une vraie personne lit tout votre certificat.",
   },
   {
     q: "Le paiement est-il sécurisé, et puis-je être remboursé ?",
-    a: "Le paiement est traité par un prestataire de paiement sécurisé. Si l'analyse reçue ne vous convient pas, vous êtes remboursé sur simple demande dans les 14 jours suivant la livraison, sans justification à apporter.",
+    a: "Oui, le paiement est sécurisé. Et si vous n'êtes pas satisfait, vous êtes remboursé, sans justification à apporter, dans les 14 jours suivant la livraison.",
   },
   {
     q: "Et si mon certificat ne contient finalement rien d'anormal ?",
-    a: "Vous recevez tout de même une relecture intégrale du document et une confirmation écrite et sourcée que celui-ci est conforme, à conserver pour votre dossier de candidature : ce n'est pas un échec de notre service, c'est le résultat de l'analyse.",
+    a: "Tant mieux ! Vous recevez quand même un document écrit qui confirme que tout est en ordre, à garder pour vos candidatures. Ce n'est pas un échec de notre service, c'est le résultat de l'analyse.",
   },
   {
     q: "Que se passe-t-il si mon employeur refuse de corriger le certificat ?",
-    a: "La procédure devant le Tribunal des prud'hommes est gratuite pour ce type de litige en Suisse.",
+    a: "Vous pouvez aller au Tribunal des prud'hommes. C'est gratuit pour ce type de litige en Suisse.",
   },
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
-    a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Si votre employeur refuse de corriger le certificat malgré la mise en demeure, un avocat pourra vous représenter devant le Tribunal des prud'hommes.",
+    a: "Non. Nous ne sommes pas un cabinet d'avocats et nous n'allons pas au tribunal à votre place : seul un avocat inscrit dans un canton suisse peut le faire. Si besoin, nous vous orientons vers un avocat pour vous représenter.",
   },
   {
     q: "Mes données sont-elles conservées ?",
-    a: "Thrax Legal ne stocke pas le texte de votre certificat après l'analyse. Il est transmis, avec votre consentement explicite, à notre prestataire d'analyse basé aux États-Unis dans le cadre de clauses contractuelles types reconnues, uniquement pour générer votre résultat, sans utilisation pour l'entraînement de leurs modèles.",
+    a: "Non, pas après l'analyse. Votre certificat est envoyé, avec votre accord, à un prestataire basé aux États-Unis, encadré par des clauses de protection reconnues, uniquement pour préparer votre rapport. Jamais pour entraîner leurs modèles.",
   },
 ];
 
@@ -102,17 +100,16 @@ export default function CertificatTravailPage() {
                 Votre employeur a-t-il ruiné votre CV en cachette ?
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
-                Une formulation en apparence anodine dans un certificat de
-                travail a déjà fait l&rsquo;objet de dizaines de décisions de
-                justice en Suisse. Faites analyser le vôtre par notre équipe
-                juridique avant votre prochaine candidature.
+                Une seule phrase peut suffire à ruiner votre certificat de
+                travail. Des tribunaux suisses l&rsquo;ont confirmé des
+                dizaines de fois. Faites vérifier le vôtre avant de postuler.
               </p>
               <PriceBadge
                 amount="99 CHF"
                 label="Rapport complet, paiement unique"
                 className="mt-8"
               />
-              <p className="mt-4 text-sm text-text-muted">
+              <p className="mt-4 text-base text-text-muted">
                 Livré sous 2 jours ouvrables. Remboursé sous 14 jours si
                 besoin.
               </p>
@@ -123,9 +120,9 @@ export default function CertificatTravailPage() {
         <div className="theme-light bg-bg">
           <TrustBar
             items={[
-              "Le droit suisse interdit les sous-entendus et les formulations ambiguës dans un certificat de travail (art. 330a CO).",
-              "Procédure aux Prud'hommes gratuite en cas de refus de correction par l'employeur.",
-              "Traitement conforme nLPD, avec votre consentement explicite avant tout envoi du texte.",
+              "La loi suisse interdit les certificats à double sens (art. 330a CO).",
+              "Si votre employeur refuse de corriger : la procédure au tribunal est gratuite.",
+              "Vos données sont protégées. Rien n'est envoyé sans votre accord.",
             ]}
           />
         </div>
@@ -145,41 +142,43 @@ export default function CertificatTravailPage() {
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                Deux traductions de langage codé
+                Ce que ces phrases veulent vraiment dire
               </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-text-muted">
-                Certaines formulations, en apparence neutres, ont un sens
-                bien précis en ressources humaines. En voici deux exemples,
-                traduits en langage clair.
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-text-muted">
+                Certaines phrases ont l&rsquo;air normales. En réalité, elles
+                veulent dire autre chose. Deux exemples :
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {EXAMPLES.map((example) => (
                   <div
                     key={example.phrase}
-                    className="rounded-2xl border border-border bg-surface p-6"
+                    className="rounded-2xl border border-border bg-surface p-6 md:p-7"
                   >
                     <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-                      Phrase codée
+                      Ce qui est écrit
                     </p>
-                    <p className="mt-3 text-base font-medium leading-snug text-text">
+                    <p className="mt-2 text-lg font-medium leading-snug text-text">
                       {example.phrase}
                     </p>
-                    <p className="mt-3 text-sm leading-relaxed text-text-muted">
+                    <p className="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                      Ce que ça veut dire
+                    </p>
+                    <p className="mt-2 text-2xl font-semibold leading-snug tracking-[-0.01em] text-text">
                       {example.translation}
                     </p>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 rounded-2xl border border-border bg-bg p-5">
-                <p className="text-sm leading-relaxed text-text-muted">
-                  <span className="font-medium text-text">Attention : </span>
-                  le Tribunal fédéral est clair, une formulation ne
-                  s&rsquo;apprécie jamais isolément, mais dans le contexte
-                  de l&rsquo;ensemble du certificat. C&rsquo;est précisément
-                  pour cela qu&rsquo;une lecture partielle ou automatisée
-                  passe à côté de l&rsquo;essentiel : notre équipe juridique
-                  lit votre certificat dans son intégralité avant de
-                  conclure.
+              <div className="mt-6 rounded-2xl border border-border bg-bg p-6">
+                <p className="text-lg font-semibold leading-snug text-text">
+                  Une seule phrase ne suffit jamais.
+                </p>
+                <p className="mt-2 text-base leading-relaxed text-text-muted">
+                  Le Tribunal fédéral est clair : un certificat de travail
+                  s&rsquo;analyse dans son ensemble, jamais phrase par
+                  phrase. C&rsquo;est pour ça qu&rsquo;une lecture complète
+                  change tout, et c&rsquo;est exactement ce que fait notre
+                  équipe juridique.
                 </p>
               </div>
             </Reveal>
@@ -195,20 +194,20 @@ export default function CertificatTravailPage() {
                 ctaLabel="Commander mon analyse"
                 deliveryNote="Livré sous 2 jours ouvrables"
                 bullets={[
-                  "Analyse complète du document par notre équipe juridique, phrase par phrase, avec sources",
-                  "Vérification de l'ensemble du certificat (formulations, omissions, cohérence)",
-                  "Texte de remplacement proposé pour chaque formulation problématique identifiée",
+                  "Notre équipe juridique lit tout votre certificat, phrase par phrase",
+                  "On vérifie chaque formulation, du début à la fin",
+                  "Pour chaque problème trouvé, on vous dit quoi écrire à la place",
                 ]}
               />
-              <div className="mt-3 rounded-2xl border border-dashed border-border p-4">
-                <p className="text-sm font-medium text-text">
-                  En option : mise en demeure prête à envoyer, 39 CHF
+              <div className="mt-3 rounded-2xl border border-dashed border-border p-5">
+                <p className="text-base font-semibold text-text">
+                  En option : une lettre prête à envoyer à votre employeur,
+                  39 CHF
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-text-muted">
-                  Lettre formelle rédigée selon l&rsquo;art. 330a CO,
-                  réclamant la correction du certificat à votre employeur.
-                  Ajoutable à la commande, ou après réception de votre
-                  rapport si vous préférez d&rsquo;abord voir le résultat.
+                <p className="mt-1.5 text-sm leading-relaxed text-text-muted">
+                  On rédige la lettre pour vous, vous n&rsquo;avez qu&rsquo;à
+                  l&rsquo;envoyer. Ajoutable maintenant, ou plus tard une
+                  fois votre rapport reçu.
                 </p>
               </div>
             </Reveal>
@@ -224,9 +223,9 @@ export default function CertificatTravailPage() {
               <LawyerComparison
                 className="mt-8"
                 lawyerRange="300 à 1200 CHF"
-                lawyerNote="Pour une consultation et la rédaction d'une mise en demeure, soit environ 1 à 2 heures facturées."
+                lawyerNote="Pour un rendez-vous et une lettre à votre employeur, environ 1 à 2 heures facturées."
                 thraxPrice="Dès 99 CHF"
-                thraxNote="Analyse complète par notre équipe juridique, livrée sous 2 jours ouvrables. Mise en demeure prête à envoyer disponible en option, 39 CHF."
+                thraxNote="Toute votre analyse en 2 jours ouvrables. Lettre à votre employeur en option, 39 CHF."
               />
             </Reveal>
           </Container>
