@@ -1,51 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { PrimaryButton } from "@/components/site/ui";
 import PaywallCard from "@/components/site/PaywallCard";
-import type { FlagTier } from "@/lib/legal/certificateCodes";
-
-type JevRiskItem = {
-  id: string;
-  explanation: string;
-  tier: FlagTier;
-  source: string;
-  probability: number;
-};
-
-type JevGlobalSignal = {
-  id: string;
-  label: string;
-  probability: number;
-};
-
-type AnalysisResult = {
-  riskLevel: "faible" | "modéré" | "élevé";
-  items: JevRiskItem[];
-  globalSignals: JevGlobalSignal[];
-};
-
-const RISK_STYLES: Record<AnalysisResult["riskLevel"], string> = {
-  faible: "border-success/30 bg-success-soft text-success",
-  modéré: "border-accent/30 bg-accent/10 text-accent",
-  élevé: "border-danger/30 bg-danger-soft text-danger",
-};
-
-const RISK_LABELS: Record<AnalysisResult["riskLevel"], string> = {
-  faible: "Aucun point de vigilance identifié",
-  modéré: "Point(s) de vigilance identifié(s) selon la doctrine",
-  élevé: "Formulation confirmée par la jurisprudence",
-};
-
-const TIER_LABELS: Record<FlagTier, string> = {
-  confirme: "Confirmé par la jurisprudence",
-  vigilance: "À surveiller selon la doctrine",
-};
-
-const TIER_STYLES: Record<FlagTier, string> = {
-  confirme: "bg-danger-soft text-danger",
-  vigilance: "bg-accent/10 text-accent",
-};
 
 const MIN_WORD_COUNT = 80;
 
@@ -56,9 +12,6 @@ function wordCount(value: string): number {
 
 export default function CertificateAnalyzer() {
   const [text, setText] = useState("");
-  const [result, setResult] = useState<AnalysisResult | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [isExtractingPdf, setIsExtractingPdf] = useState(false);
   const [pdfNotice, setPdfNotice] = useState<string | null>(null);
   const [consentGiven, setConsentGiven] = useState(false);
@@ -81,8 +34,6 @@ export default function CertificateAnalyzer() {
     }
 
     setPdfNotice(null);
-    setError(null);
-    setResult(null);
     setIsExtractingPdf(true);
     try {
       const { extractPdfText } = await import("@/lib/pdf/extractPdfText");
@@ -95,7 +46,7 @@ export default function CertificateAnalyzer() {
       }
       setText(extracted);
       setPdfNotice(
-        `Texte extrait de ${pageCount} page${pageCount > 1 ? "s" : ""}. Le fichier n'a pas quitté votre navigateur, seul le texte ci-dessous sera envoyé pour analyse.`,
+        `Texte extrait de ${pageCount} page${pageCount > 1 ? "s" : ""}. Le fichier n'a pas quitté votre navigateur.`,
       );
     } catch (err) {
       console.error("PDF extraction failed:", err);
@@ -143,28 +94,7 @@ export default function CertificateAnalyzer() {
     await processPdfFile(file);
   }
 
-  async function handleAnalyze() {
-    setError(null);
-    setResult(null);
-    setIsLoading(true);
-    try {
-      const response = await fetch("/api/certificate-analysis", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
-      const data = await response.json();
-      if (!response.ok) {
-        setError(data.error ?? "Une erreur est survenue.");
-        return;
-      }
-      setResult(data as AnalysisResult);
-    } catch {
-      setError("Impossible de contacter le service d'analyse. Réessayez dans un instant.");
-    } finally {
-      setIsLoading(false);
-    }
-  }
+  const canOrder = text.trim().length > 0 && !isTooShort && consentGiven;
 
   return (
     <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
@@ -177,8 +107,6 @@ export default function CertificateAnalyzer() {
         value={text}
         onChange={(event) => {
           setText(event.target.value);
-          setResult(null);
-          setError(null);
           setPdfNotice(null);
         }}
         placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées..."
@@ -257,7 +185,7 @@ export default function CertificateAnalyzer() {
           />
           <span>
             J&rsquo;accepte l&rsquo;envoi sécurisé du texte à notre
-            partenaire d&rsquo;analyse pour générer ce résultat.
+            partenaire d&rsquo;analyse une fois ma commande passée.
           </span>
         </label>
         <details className="mt-1.5 ml-6">
@@ -267,21 +195,12 @@ export default function CertificateAnalyzer() {
           <p className="mt-1.5 max-w-md text-xs leading-relaxed text-text-muted">
             Le texte est transmis à notre prestataire d&rsquo;analyse basé
             aux États-Unis, dans le cadre de clauses contractuelles types
-            reconnues, uniquement pour générer ce résultat. Il n&rsquo;est ni
-            utilisé pour entraîner leurs modèles, ni conservé par Thrax Legal
-            après l&rsquo;analyse.
+            reconnues, uniquement pour générer votre rapport. Il n&rsquo;est
+            ni utilisé pour entraîner leurs modèles, ni conservé par Thrax
+            Legal après l&rsquo;analyse.
           </p>
         </details>
       </div>
-
-      <PrimaryButton
-        type="button"
-        onClick={handleAnalyze}
-        disabled={!text.trim() || isTooShort || isLoading || !consentGiven}
-        className="mt-4 w-full sm:w-auto"
-      >
-        {isLoading ? "Analyse en cours..." : "Lancer l’analyse (Gratuit)"}
-      </PrimaryButton>
 
       {isTooShort ? (
         <p className="mt-4 rounded-lg border border-border bg-bg p-4 text-sm text-text-muted">
@@ -291,107 +210,36 @@ export default function CertificateAnalyzer() {
         </p>
       ) : null}
 
-      {error ? (
-        <p className="mt-4 rounded-lg border border-danger/30 bg-danger-soft p-4 text-sm text-danger">
-          {error}
-        </p>
-      ) : null}
-
-      {result ? (
-        <div className="mt-8 border-t border-border pt-8">
-          <div
-            className={`inline-flex items-center gap-3 rounded-full border px-5 py-2.5 ${RISK_STYLES[result.riskLevel]}`}
-          >
-            <span className="text-sm font-semibold tracking-tight sm:text-base">
-              {result.items.length === 0
-                ? RISK_LABELS.faible
-                : `${result.items.length} ${result.items.length <= 1 ? "point de vigilance identifié" : "points de vigilance identifiés"}`}
-            </span>
-          </div>
-
-          {result.items.length > 0 ? (
-            <div className="relative mt-6">
-              <ul className="space-y-3">
-                {result.items.map((item) => (
-                  <li key={item.id} className="rounded-lg border border-border bg-bg p-4 text-sm">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span
-                        className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ${TIER_STYLES[item.tier]}`}
-                      >
-                        {TIER_LABELS[item.tier]}
-                      </span>
-                      <span className="text-xs text-text-muted">{item.source}</span>
-                    </div>
-                    <p className="mt-3 select-none blur-[3px] text-text-muted">
-                      {item.explanation}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <p className="mt-6 text-sm leading-relaxed text-text-muted">
-              Aucune formulation à risque, confirmée par la jurisprudence ou
-              identifiée par la doctrine, détectée dans ce texte.
-              L&rsquo;absence de formulation isolée ne dispense pas
-              d&rsquo;une lecture de l&rsquo;ensemble du document :
-              c&rsquo;est ce que fait le rapport détaillé.
-            </p>
-          )}
-
-          {result.globalSignals.length > 0 ? (
-            <ul className="mt-4 space-y-2">
-              {result.globalSignals.map((signal) => (
-                <li
-                  key={signal.id}
-                  className="rounded-lg border border-accent/20 bg-accent/5 p-3 text-xs text-text-muted"
-                >
-                  {signal.label}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-
-          <div className="mt-8">
-            {result.items.length > 0 ? (
-              <>
-                <PaywallCard
-                  price="99 CHF"
-                  checkoutHref="/checkout/certificat-travail"
-                  ctaLabel="Commander l'analyse complète"
-                  deliveryNote="Livré sous 2 jours ouvrables"
-                  bullets={[
-                    "Analyse complète du document par nos soins, phrase par phrase, avec sources",
-                    "Texte de remplacement proposé pour chaque formulation problématique",
-                  ]}
-                />
-                <div className="mt-3 rounded-2xl border border-dashed border-border p-4">
-                  <p className="text-sm font-medium text-text">
-                    En option : mise en demeure prête à envoyer, 39 CHF
-                  </p>
-                  <p className="mt-1 text-xs leading-relaxed text-text-muted">
-                    Lettre formelle rédigée selon l&rsquo;art. 330a CO,
-                    réclamant la correction du certificat à votre employeur.
-                    Ajoutable à la commande de l&rsquo;analyse complète.
-                  </p>
-                </div>
-              </>
-            ) : (
-              <PaywallCard
-                price="99 CHF"
-                checkoutHref="/checkout/certificat-travail"
-                ctaLabel="Commander la vérification complète"
-                deliveryNote="Livré sous 2 jours ouvrables"
-                bullets={[
-                  "Relecture complète du document par nos soins, au-delà des formulations détectées automatiquement",
-                  "Vérification qu'aucune compétence attendue n'a été omise et que le document reste cohérent dans son ensemble",
-                  "Confirmation écrite et sourcée, à conserver pour votre dossier de candidature",
-                ]}
-              />
-            )}
-          </div>
+      <div className="mt-8 border-t border-border pt-8">
+        <PaywallCard
+          price="99 CHF"
+          checkoutHref="/checkout/certificat-travail"
+          ctaLabel="Commander mon analyse"
+          deliveryNote="Livré sous 2 jours ouvrables"
+          bullets={[
+            "Analyse complète du document par nos soins, phrase par phrase, avec sources",
+            "Vérification de l'ensemble du certificat (formulations, omissions, cohérence)",
+            "Texte de remplacement proposé pour chaque formulation problématique identifiée",
+          ]}
+        />
+        {!canOrder ? (
+          <p className="mt-2 text-center text-xs text-text-muted">
+            Collez le certificat complet et acceptez les conditions
+            ci-dessus pour commander.
+          </p>
+        ) : null}
+        <div className="mt-3 rounded-2xl border border-dashed border-border p-4">
+          <p className="text-sm font-medium text-text">
+            En option : mise en demeure prête à envoyer, 39 CHF
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-text-muted">
+            Lettre formelle rédigée selon l&rsquo;art. 330a CO, réclamant la
+            correction du certificat à votre employeur. Ajoutable à la
+            commande, ou après réception de votre rapport si vous préférez
+            d&rsquo;abord voir le résultat.
+          </p>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }

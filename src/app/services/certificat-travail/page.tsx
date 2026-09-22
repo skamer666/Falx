@@ -16,24 +16,24 @@ import CertificateAnalyzer from "./components/CertificateAnalyzer";
 export const metadata: Metadata = {
   title: "Certificat de travail : analyse professionnelle | Thrax Legal",
   description:
-    "Auditez votre certificat de travail gratuitement, puis recevez une analyse complète par nos soins sous 2 jours ouvrables.",
+    "Faites analyser votre certificat de travail par nos soins et recevez un rapport complet et sourcé sous 2 jours ouvrables.",
 };
 
 const STEPS = [
   {
-    title: "Collez le texte",
+    title: "Collez ou importez",
     description:
-      "Copiez le paragraphe d'évaluation de votre certificat dans l'outil d'analyse, gratuitement.",
+      "Copiez le texte de votre certificat, ou glissez directement le PDF : le texte est extrait dans votre navigateur.",
   },
   {
-    title: "Premier aperçu",
+    title: "Commandez",
     description:
-      "Les formulations à risque sont identifiées, sourcées et expliquées une par une, instantanément.",
+      "99 CHF, paiement unique. Mise en demeure prête à envoyer disponible en option (art. 330a CO).",
   },
   {
-    title: "Analyse complète",
+    title: "Recevez votre rapport",
     description:
-      "Sur commande, nous procédons à une analyse complète de votre document et vous livrons le résultat écrit sous 2 jours ouvrables, avec la mise en demeure en option si nécessaire.",
+      "Analyse complète du document par nos soins, avec sources, livrée sous 2 jours ouvrables.",
   },
 ];
 
@@ -48,11 +48,11 @@ const FAQ = [
   },
   {
     q: "Combien de temps faut-il pour recevoir mon rapport ?",
-    a: "L'analyse gratuite est instantanée. Le rapport complet, lui, est préparé par nos soins et livré sous 2 jours ouvrables : ce délai correspond à une vraie relecture du document dans son ensemble, pas seulement aux formulations déjà détectées automatiquement.",
+    a: "Votre rapport est préparé par nos soins et livré sous 2 jours ouvrables après votre commande : ce délai correspond à une vraie relecture complète du document, pas à une génération automatique instantanée.",
   },
   {
     q: "Et si mon certificat ne contient finalement rien d'anormal ?",
-    a: "L'analyse gratuite vous donne déjà un premier aperçu avant tout paiement. Si vous commandez malgré tout le rapport complet, vous recevez une relecture intégrale du document et une confirmation écrite et sourcée que celui-ci est conforme, à conserver pour votre dossier de candidature : ce n'est pas un échec de notre service, c'est le résultat de l'analyse.",
+    a: "Vous recevez tout de même une relecture intégrale du document et une confirmation écrite et sourcée que celui-ci est conforme, à conserver pour votre dossier de candidature : ce n'est pas un échec de notre service, c'est le résultat de l'analyse.",
   },
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
@@ -87,8 +87,8 @@ export default function CertificatTravailPage() {
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                 Une formulation en apparence anodine dans un certificat de
                 travail a déjà fait l&rsquo;objet de dizaines de décisions de
-                justice en Suisse. Auditez gratuitement le vôtre en quelques
-                secondes, avant votre prochaine candidature.
+                justice en Suisse. Faites analyser le vôtre par nos soins
+                avant votre prochaine candidature.
               </p>
               <PriceBadge
                 amount="99 CHF"
@@ -96,7 +96,7 @@ export default function CertificatTravailPage() {
                 className="mt-8"
               />
               <p className="mt-4 text-sm text-text-muted">
-                Analyse gratuite, sans engagement. Remboursé sous 14 jours si
+                Livré sous 2 jours ouvrables. Remboursé sous 14 jours si
                 besoin.
               </p>
             </Reveal>
