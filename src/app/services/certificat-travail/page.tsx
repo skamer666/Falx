@@ -33,7 +33,7 @@ const STEPS = [
   {
     title: "Analyse complète",
     description:
-      "Sur commande, nous procédons à une analyse complète de votre document et vous livrons le résultat écrit sous 2 jours ouvrables, avec la mise en demeure si nécessaire.",
+      "Sur commande, nous procédons à une analyse complète de votre document et vous livrons le résultat écrit sous 2 jours ouvrables, avec la mise en demeure en option si nécessaire.",
   },
 ];
 
@@ -142,8 +142,8 @@ export default function CertificatTravailPage() {
                 className="mt-8"
                 lawyerRange="300 à 1200 CHF"
                 lawyerNote="Pour une consultation et la rédaction d'une mise en demeure, soit environ 1 à 2 heures facturées."
-                thraxPrice="99 CHF"
-                thraxNote="Analyse complète par nos soins, mise en demeure incluse si nécessaire, livrée sous 2 jours ouvrables."
+                thraxPrice="Dès 99 CHF"
+                thraxNote="Analyse complète par nos soins, livrée sous 2 jours ouvrables. Mise en demeure prête à envoyer disponible en option, 39 CHF."
               />
             </Reveal>
           </Container>

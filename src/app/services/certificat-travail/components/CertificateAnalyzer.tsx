@@ -354,17 +354,28 @@ export default function CertificateAnalyzer() {
 
           <div className="mt-8">
             {result.items.length > 0 ? (
-              <PaywallCard
-                price="99 CHF"
-                checkoutHref="/checkout/certificat-travail"
-                ctaLabel="Commander l'analyse complète"
-                deliveryNote="Livré sous 2 jours ouvrables"
-                bullets={[
-                  "Analyse complète du document par nos soins, phrase par phrase, avec sources",
-                  "Texte de remplacement proposé pour chaque formulation problématique",
-                  "Mise en demeure formelle prête à envoyer (art. 330a CO)",
-                ]}
-              />
+              <>
+                <PaywallCard
+                  price="99 CHF"
+                  checkoutHref="/checkout/certificat-travail"
+                  ctaLabel="Commander l'analyse complète"
+                  deliveryNote="Livré sous 2 jours ouvrables"
+                  bullets={[
+                    "Analyse complète du document par nos soins, phrase par phrase, avec sources",
+                    "Texte de remplacement proposé pour chaque formulation problématique",
+                  ]}
+                />
+                <div className="mt-3 rounded-2xl border border-dashed border-border p-4">
+                  <p className="text-sm font-medium text-text">
+                    En option : mise en demeure prête à envoyer, 39 CHF
+                  </p>
+                  <p className="mt-1 text-xs leading-relaxed text-text-muted">
+                    Lettre formelle rédigée selon l&rsquo;art. 330a CO,
+                    réclamant la correction du certificat à votre employeur.
+                    Ajoutable à la commande de l&rsquo;analyse complète.
+                  </p>
+                </div>
+              </>
             ) : (
               <PaywallCard
                 price="99 CHF"
