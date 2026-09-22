@@ -6,12 +6,14 @@ export default function PaywallCard({
   checkoutHref,
   ctaLabel = "Débloquer le rapport complet",
   deliveryNote = "Livraison immédiate",
+  disabled = false,
 }: {
   price: string;
   bullets: string[];
   checkoutHref: string;
   ctaLabel?: string;
   deliveryNote?: string;
+  disabled?: boolean;
 }) {
   return (
     <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
@@ -32,7 +34,11 @@ export default function PaywallCard({
           </li>
         ))}
       </ul>
-      <PrimaryButton href={checkoutHref} className="mt-6 w-full">
+      <PrimaryButton
+        href={checkoutHref}
+        disabled={disabled}
+        className="mt-6 w-full"
+      >
         {ctaLabel}
       </PrimaryButton>
       <p className="mt-3 text-center text-xs text-text-muted">

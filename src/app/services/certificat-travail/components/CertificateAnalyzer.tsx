@@ -112,6 +112,13 @@ export default function CertificateAnalyzer() {
         placeholder="Exemple : Madame Dupont a travaillé au sein de notre entreprise du... Elle s'est efforcée de mener à bien les tâches qui lui ont été confiées..."
         className="mt-3 w-full rounded-lg border border-border bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted/60 focus:border-accent focus:outline-none"
       />
+      {isTooShort ? (
+        <p className="mt-2 text-xs text-text-muted">
+          Ce passage est trop court pour une lecture fiable. Collez le
+          certificat complet plutôt qu&rsquo;un extrait&nbsp;: la
+          jurisprudence l&rsquo;exige, et notre analyse aussi.
+        </p>
+      ) : null}
 
       <p className="mt-6 text-center text-xs uppercase tracking-wide text-text-muted">
         ou
@@ -202,22 +209,15 @@ export default function CertificateAnalyzer() {
         </details>
       </div>
 
-      {isTooShort ? (
-        <p className="mt-4 rounded-lg border border-border bg-bg p-4 text-sm text-text-muted">
-          Ce passage est trop court pour une lecture fiable. Collez le
-          certificat complet plutôt qu&rsquo;un extrait : la jurisprudence
-          l&rsquo;exige, et notre analyse aussi.
-        </p>
-      ) : null}
-
       <div className="mt-8 border-t border-border pt-8">
         <PaywallCard
           price="99 CHF"
           checkoutHref="/checkout/certificat-travail"
           ctaLabel="Commander mon analyse"
           deliveryNote="Livré sous 2 jours ouvrables"
+          disabled={!canOrder}
           bullets={[
-            "Analyse complète du document par nos soins, phrase par phrase, avec sources",
+            "Analyse complète du document par notre équipe juridique, phrase par phrase, avec sources",
             "Vérification de l'ensemble du certificat (formulations, omissions, cohérence)",
             "Texte de remplacement proposé pour chaque formulation problématique identifiée",
           ]}
@@ -225,7 +225,7 @@ export default function CertificateAnalyzer() {
         {!canOrder ? (
           <p className="mt-2 text-center text-xs text-text-muted">
             Collez le certificat complet et acceptez les conditions
-            ci-dessus pour commander.
+            ci-dessus pour activer la commande.
           </p>
         ) : null}
         <div className="mt-3 rounded-2xl border border-dashed border-border p-4">

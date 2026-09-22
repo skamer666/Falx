@@ -31,7 +31,7 @@ export function PrimaryButton({
   disabled?: boolean;
 }) {
   const classes = `inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-colors duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent ${className}`;
-  if (href) {
+  if (href && !disabled) {
     return (
       <Link href={href} className={classes}>
         {children}
@@ -43,6 +43,7 @@ export function PrimaryButton({
       type={type ?? "button"}
       onClick={onClick}
       disabled={disabled}
+      aria-disabled={disabled}
       className={classes}
     >
       {children}
