@@ -353,15 +353,31 @@ export default function CertificateAnalyzer() {
           ) : null}
 
           <div className="mt-8">
-            <PaywallCard
-              price="99 CHF"
-              checkoutHref="/checkout/certificat-travail"
-              bullets={[
-                "Rapport détaillé, phrase par phrase, avec sources",
-                "Texte de remplacement proposé",
-                "Mise en demeure formelle prête à envoyer (art. 330a CO)",
-              ]}
-            />
+            {result.items.length > 0 ? (
+              <PaywallCard
+                price="99 CHF"
+                checkoutHref="/checkout/certificat-travail"
+                ctaLabel="Commander l'analyse complète"
+                deliveryNote="Livré sous 2 jours ouvrables"
+                bullets={[
+                  "Analyse complète du document par nos soins, phrase par phrase, avec sources",
+                  "Texte de remplacement proposé pour chaque formulation problématique",
+                  "Mise en demeure formelle prête à envoyer (art. 330a CO)",
+                ]}
+              />
+            ) : (
+              <PaywallCard
+                price="99 CHF"
+                checkoutHref="/checkout/certificat-travail"
+                ctaLabel="Commander la vérification complète"
+                deliveryNote="Livré sous 2 jours ouvrables"
+                bullets={[
+                  "Relecture complète du document par nos soins, au-delà des formulations détectées automatiquement",
+                  "Vérification qu'aucune compétence attendue n'a été omise et que le document reste cohérent dans son ensemble",
+                  "Confirmation écrite et sourcée, à conserver pour votre dossier de candidature",
+                ]}
+              />
+            )}
           </div>
         </div>
       ) : null}

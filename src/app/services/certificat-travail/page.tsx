@@ -14,9 +14,9 @@ import {
 import CertificateAnalyzer from "./components/CertificateAnalyzer";
 
 export const metadata: Metadata = {
-  title: "Certificat de travail : décryptage des formulations codées | Thrax Legal",
+  title: "Certificat de travail : analyse professionnelle | Thrax Legal",
   description:
-    "Auditez votre certificat de travail en quelques secondes et obtenez votre mise en demeure prête à envoyer.",
+    "Auditez votre certificat de travail gratuitement, puis recevez une analyse complète par nos soins sous 2 jours ouvrables.",
 };
 
 const STEPS = [
@@ -26,14 +26,14 @@ const STEPS = [
       "Copiez le paragraphe d'évaluation de votre certificat dans l'outil d'analyse, gratuitement.",
   },
   {
-    title: "Recevez l'analyse",
+    title: "Premier aperçu",
     description:
-      "Les formulations à risque sont identifiées, sourcées et expliquées une par une.",
+      "Les formulations à risque sont identifiées, sourcées et expliquées une par une, instantanément.",
   },
   {
-    title: "Agissez",
+    title: "Analyse complète",
     description:
-      "Téléchargez votre mise en demeure prête à envoyer, rédigée selon l'art. 330a CO.",
+      "Sur commande, nous procédons à une analyse complète de votre document et vous livrons le résultat écrit sous 2 jours ouvrables, avec la mise en demeure si nécessaire.",
   },
 ];
 
@@ -48,11 +48,11 @@ const FAQ = [
   },
   {
     q: "Combien de temps faut-il pour recevoir mon rapport ?",
-    a: "Le rapport détaillé est généré immédiatement après le paiement, directement dans votre navigateur.",
+    a: "L'analyse gratuite est instantanée. Le rapport complet, lui, est préparé par nos soins et livré sous 2 jours ouvrables : ce délai correspond à une vraie relecture du document dans son ensemble, pas seulement aux formulations déjà détectées automatiquement.",
   },
   {
     q: "Et si mon certificat ne contient finalement rien d'anormal ?",
-    a: "L'analyse gratuite vous le signale avant tout paiement. Vous ne payez que si vous décidez de commander le rapport détaillé et la mise en demeure.",
+    a: "L'analyse gratuite vous donne déjà un premier aperçu avant tout paiement. Si vous commandez malgré tout le rapport complet, vous recevez une relecture intégrale du document et une confirmation écrite et sourcée que celui-ci est conforme, à conserver pour votre dossier de candidature : ce n'est pas un échec de notre service, c'est le résultat de l'analyse.",
   },
   {
     q: "Thrax Legal est-il un cabinet d'avocats ?",
@@ -143,7 +143,7 @@ export default function CertificatTravailPage() {
                 lawyerRange="300 à 1200 CHF"
                 lawyerNote="Pour une consultation et la rédaction d'une mise en demeure, soit environ 1 à 2 heures facturées."
                 thraxPrice="99 CHF"
-                thraxNote="Rapport détaillé et mise en demeure inclus, livrés immédiatement après paiement."
+                thraxNote="Analyse complète par nos soins, mise en demeure incluse si nécessaire, livrée sous 2 jours ouvrables."
               />
             </Reveal>
           </Container>
