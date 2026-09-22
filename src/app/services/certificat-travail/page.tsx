@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
+import PaywallCard from "@/components/site/PaywallCard";
 import {
   Container,
   LawyerComparison,
@@ -11,7 +12,6 @@ import {
   StepList,
   TrustBar,
 } from "@/components/site/ui";
-import CertificateAnalyzer from "./components/CertificateAnalyzer";
 
 export const metadata: Metadata = {
   title: "Certificat de travail : analyse professionnelle | Thrax Legal",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
 
 const STEPS = [
   {
-    title: "Collez ou importez",
-    description:
-      "Copiez le texte de votre certificat, ou glissez directement le PDF : le texte est extrait dans votre navigateur.",
-  },
-  {
     title: "Commandez",
     description:
       "99 CHF, paiement unique. Mise en demeure prête à envoyer disponible en option (art. 330a CO).",
+  },
+  {
+    title: "Envoyez votre certificat",
+    description:
+      "Transmettez-nous le texte de votre certificat en toute sécurité après votre commande.",
   },
   {
     title: "Recevez votre rapport",
@@ -192,7 +192,28 @@ export default function CertificatTravailPage() {
         <section className="theme-light bg-surface py-16 md:py-24">
           <Container className="mx-auto max-w-2xl">
             <Reveal>
-              <CertificateAnalyzer />
+              <PaywallCard
+                price="99 CHF"
+                checkoutHref="/checkout/certificat-travail"
+                ctaLabel="Commander mon analyse"
+                deliveryNote="Livré sous 2 jours ouvrables"
+                bullets={[
+                  "Analyse complète du document par notre équipe juridique, phrase par phrase, avec sources",
+                  "Vérification de l'ensemble du certificat (formulations, omissions, cohérence)",
+                  "Texte de remplacement proposé pour chaque formulation problématique identifiée",
+                ]}
+              />
+              <div className="mt-3 rounded-2xl border border-dashed border-border p-4">
+                <p className="text-sm font-medium text-text">
+                  En option : mise en demeure prête à envoyer, 39 CHF
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-text-muted">
+                  Lettre formelle rédigée selon l&rsquo;art. 330a CO,
+                  réclamant la correction du certificat à votre employeur.
+                  Ajoutable à la commande, ou après réception de votre
+                  rapport si vous préférez d&rsquo;abord voir le résultat.
+                </p>
+              </div>
             </Reveal>
           </Container>
         </section>
