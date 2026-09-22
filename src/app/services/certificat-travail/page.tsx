@@ -39,19 +39,14 @@ const STEPS = [
 
 const EXAMPLES = [
   {
-    tier: "Confirmé par la jurisprudence",
     phrase: "« … a entretenu des relations conformes à nos attentes … »",
-    explanation:
-      "Cette tournure a été jugée porteuse d'un sous-entendu défavorable et contraire au principe de bienveillance. La jurisprudence lui préfère « a entretenu de bonnes relations » ou « d'excellentes relations » si la qualité du travailleur le justifie.",
-    source: "Cour d'appel civile du Tribunal cantonal vaudois, HC/2014/8, consid. 5c",
+    translation:
+      "En langage clair : les relations avec les collègues ou la clientèle ont posé problème. Un certificat réellement positif dirait « a entretenu de bonnes relations » ou « d'excellentes relations ».",
   },
   {
-    tier: "Signalé par la doctrine",
     phrase: "« … a fait preuve de bonne volonté … »",
-    explanation:
-      "Formulation répertoriée par la doctrine comme mettant l'accent sur l'intention plutôt que sur le résultat obtenu, ce qui peut sous-entendre un rendement jugé insuffisant.",
-    source:
-      "GEISER/MÜLLER, Arbeitsrecht in der Schweiz, 3e éd. 2015, N 700 s., cités in Martin Antipas, Certificats de travail, Neuchâtel 2018",
+    translation:
+      "En langage clair : l'intention y était, mais pas le résultat. Cette formulation évite d'affirmer que l'objectif a été atteint.",
   },
 ];
 
@@ -150,13 +145,12 @@ export default function CertificatTravailPage() {
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                Deux exemples que nous recherchons
+                Deux traductions de langage codé
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-text-muted">
-                Deux formulations réellement vérifiées par notre méthode,
-                avec leur source. Nous distinguons ce qui est confirmé par
-                la jurisprudence de ce qui est signalé par la doctrine :
-                nous ne survendons pas un problème qui n&rsquo;existe pas.
+                Certaines formulations, en apparence neutres, ont un sens
+                bien précis en ressources humaines. En voici deux exemples,
+                traduits en langage clair.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {EXAMPLES.map((example) => (
@@ -165,26 +159,29 @@ export default function CertificatTravailPage() {
                     className="rounded-2xl border border-border bg-surface p-6"
                   >
                     <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-                      {example.tier}
+                      Phrase codée
                     </p>
                     <p className="mt-3 text-base font-medium leading-snug text-text">
                       {example.phrase}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-text-muted">
-                      {example.explanation}
-                    </p>
-                    <p className="mt-3 text-xs text-text-muted/70">
-                      {example.source}
+                      {example.translation}
                     </p>
                   </div>
                 ))}
               </div>
-              <p className="mt-6 text-sm text-text-muted">
-                Ce ne sont que deux exemples parmi ceux que nous vérifions
-                systématiquement. Votre rapport détaille chacune des
-                formulations identifiées dans votre certificat, avec sa
-                source.
-              </p>
+              <div className="mt-6 rounded-2xl border border-border bg-bg p-5">
+                <p className="text-sm leading-relaxed text-text-muted">
+                  <span className="font-medium text-text">Attention : </span>
+                  le Tribunal fédéral est clair, une formulation ne
+                  s&rsquo;apprécie jamais isolément, mais dans le contexte
+                  de l&rsquo;ensemble du certificat. C&rsquo;est précisément
+                  pour cela qu&rsquo;une lecture partielle ou automatisée
+                  passe à côté de l&rsquo;essentiel : notre équipe juridique
+                  lit votre certificat dans son intégralité avant de
+                  conclure.
+                </p>
+              </div>
             </Reveal>
           </Container>
         </section>
