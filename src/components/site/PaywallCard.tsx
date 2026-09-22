@@ -6,6 +6,7 @@ export default function PaywallCard({
   checkoutHref,
   ctaLabel = "Débloquer le rapport complet",
   deliveryNote = "Livraison immédiate",
+  guaranteeNote = "Remboursé sous 14 jours si besoin",
   disabled = false,
 }: {
   price: string;
@@ -13,6 +14,7 @@ export default function PaywallCard({
   checkoutHref: string;
   ctaLabel?: string;
   deliveryNote?: string;
+  guaranteeNote?: string;
   disabled?: boolean;
 }) {
   return (
@@ -42,8 +44,8 @@ export default function PaywallCard({
         {ctaLabel}
       </PrimaryButton>
       <p className="mt-3 text-center text-xs text-text-muted">
-        Paiement sécurisé &middot; {deliveryNote} &middot; Remboursé sous
-        14 jours si besoin
+        Paiement sécurisé &middot; {deliveryNote}
+        {guaranteeNote ? <> &middot; {guaranteeNote}</> : null}
       </p>
     </div>
   );
