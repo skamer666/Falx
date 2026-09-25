@@ -9,6 +9,7 @@ import { PrimaryButton } from "./ui";
 const LINKS = [
   { href: "/#offre", label: "Tarifs" },
   { href: "/suivi-conformite", label: "Suivi Conformité" },
+  { href: "/guide", label: "Guide" },
   { href: "/#contact", label: "FAQ" },
 ];
 

@@ -6,6 +6,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
 import PaywallCard from "@/components/site/PaywallCard";
+import JsonLd from "@/components/site/JsonLd";
 import {
   Container,
   LawyerComparison,
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
   title: "Suivi Conformité nLPD, 79 CHF/mois | Thrax Legal",
   description:
     "Gardez votre PME en conformité avec la nLPD dans le temps : mises à jour légales, revue annuelle du registre, questions illimitées. 79 CHF/mois, résiliable à tout moment.",
+  alternates: {
+    canonical: "/suivi-conformite",
+  },
 };
 
 const CHECKOUT_HREF = "/checkout/suivi-conformite";
@@ -64,9 +68,50 @@ const FAQ = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Suivi Conformité nLPD",
+  description:
+    "Abonnement mensuel de suivi de conformité nLPD : mises à jour légales, revue annuelle du registre des traitements, questions illimitées par email.",
+  brand: {
+    "@type": "Brand",
+    name: "Thrax Legal",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "79",
+    priceCurrency: "CHF",
+    availability: "https://schema.org/InStock",
+    url: CHECKOUT_HREF,
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "79",
+      priceCurrency: "CHF",
+      billingIncrement: 1,
+      unitCode: "MON",
+    },
+  },
+};
+
 export default function SuiviConformitePage() {
   return (
     <>
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={productJsonLd} />
       <Nav />
       <main className="bg-bg text-text">
         <section className="relative isolate overflow-hidden border-b border-border">

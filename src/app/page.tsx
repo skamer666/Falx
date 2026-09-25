@@ -7,6 +7,8 @@ import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
 import PaywallCard from "@/components/site/PaywallCard";
 import Autodiagnostic from "@/components/site/Autodiagnostic";
+import JsonLd from "@/components/site/JsonLd";
+import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import {
   Container,
   LawyerComparison,
@@ -20,6 +22,9 @@ export const metadata: Metadata = {
   title: "Conformité nLPD pour PME suisses, dès 590 CHF | Thrax Legal",
   description:
     "Mettez votre PME en conformité avec la nLPD révisée : registre des traitements, politique de confidentialité, contrats de sous-traitance. Prix fixe 590 CHF, sans avocat, sans rendez-vous, livré en 3 jours ouvrables.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const CHECKOUT_HREF = "/checkout/pack-conformite-nlpd";
@@ -96,6 +101,38 @@ const FAQ = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Pack Conformité nLPD",
+  description:
+    "Registre des traitements, politique de confidentialité, contrat de sous-traitance (DPA), procédure violation de données et checklist de mise en œuvre, pour la mise en conformité nLPD d'une PME suisse.",
+  brand: {
+    "@type": "Brand",
+    name: "Thrax Legal",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "590",
+    priceCurrency: "CHF",
+    availability: "https://schema.org/InStock",
+    url: `${CHECKOUT_HREF}`,
+  },
+};
+
 function DiagnosticCta({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-col items-center gap-3 text-center ${className}`}>
@@ -132,6 +169,8 @@ function StickyOrderBar() {
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqJsonLd} />
+      <JsonLd data={productJsonLd} />
       <div className="pb-24">
         <Nav />
         <main className="bg-bg text-text">
@@ -223,6 +262,38 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </Reveal>
+            </Container>
+          </section>
+
+          <section className="theme-light border-t border-border bg-bg py-16 md:py-20">
+            <Container className="mx-auto max-w-2xl">
+              <Reveal>
+                <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                  Pour aller plus loin
+                </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {GUIDE_ARTICLES.slice(0, 4).map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/guide/${item.slug}`}
+                      className="group rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-white/20"
+                    >
+                      <p className="text-sm font-semibold leading-snug text-text">
+                        {item.shortTitle}
+                      </p>
+                      <p className="mt-2 text-xs leading-relaxed text-text-muted">
+                        {item.description}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href="/guide"
+                  className="mt-6 inline-block text-sm font-medium text-text underline decoration-dotted underline-offset-4 hover:text-text-muted"
+                >
+                  Voir tout le guide nLPD ↗
+                </Link>
               </Reveal>
             </Container>
           </section>

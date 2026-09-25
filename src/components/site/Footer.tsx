@@ -6,7 +6,8 @@ const MENU = [
   { number: "001", label: "Accueil", href: "/" },
   { number: "002", label: "Diagnostic gratuit", href: "/#diagnostic" },
   { number: "003", label: "Suivi Conformité", href: "/suivi-conformite" },
-  { number: "004", label: "FAQ", href: "/#contact" },
+  { number: "004", label: "Guide", href: "/guide" },
+  { number: "005", label: "FAQ", href: "/#contact" },
 ];
 
 function ArrowIcon() {

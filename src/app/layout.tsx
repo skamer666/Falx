@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
+import JsonLd from "@/components/site/JsonLd";
 import "./globals.css";
 
 const schibstedGrotesk = Schibsted_Grotesk({
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
@@ -36,10 +40,28 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Thrax Legal",
+  url: siteUrl,
+  description,
+  areaServed: {
+    "@type": "Country",
+    name: "Switzerland",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "CH",
+  },
+  priceRange: "CHF 590 - CHF 79/mois",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${schibstedGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-text">
+        <JsonLd data={organizationJsonLd} />
         {children}
       </body>
     </html>
