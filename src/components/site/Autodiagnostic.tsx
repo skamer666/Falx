@@ -8,12 +8,20 @@ type FineType = "stationnement" | "vitesse" | "cff" | "autre";
 type YesNo = "oui" | "non";
 type Deadline = "moins10" | "entre10et30" | "plus30";
 type Reason = "oui" | "peutetre" | "non";
-type StepKey = "type" | "paid" | "deadline" | "reason";
+type VitesseEvidence = "radar_officiel" | "video_tiers" | "agent_terrain";
+type StationnementEvidence =
+  | "panneau_officiel"
+  | "marquage_seul"
+  | "aucune_signalisation"
+  | "inconnu";
+type Evidence = VitesseEvidence | StationnementEvidence;
+type StepKey = "type" | "paid" | "deadline" | "evidence" | "reason";
 
 type Answers = {
   type?: FineType;
   paid?: YesNo;
   deadline?: Deadline;
+  evidence?: Evidence;
   reason?: Reason;
 };
 
@@ -24,6 +32,10 @@ type Content = {
   paidOptions: { value: YesNo; label: string }[];
   deadlineQuestion: string;
   deadlineOptions: { value: Deadline; label: string }[];
+  evidenceQuestionVitesse: string;
+  evidenceOptionsVitesse: { value: VitesseEvidence; label: string }[];
+  evidenceQuestionStationnement: string;
+  evidenceOptionsStationnement: { value: StationnementEvidence; label: string }[];
   reasonQuestion: string;
   reasonOptions: { value: Reason; label: string }[];
   questionCounter: (current: number, total: number) => string;
@@ -62,6 +74,19 @@ const CONTENT: Record<Locale, Content> = {
       { value: "moins10", label: "Moins de 10 jours" },
       { value: "entre10et30", label: "Entre 10 et 30 jours" },
       { value: "plus30", label: "Plus de 30 jours" },
+    ],
+    evidenceQuestionVitesse: "Comment l'infraction a-t-elle été constatée ?",
+    evidenceOptionsVitesse: [
+      { value: "radar_officiel", label: "Par un radar ou un appareil de mesure officiel de la police" },
+      { value: "video_tiers", label: "Par une vidéo filmée par un autre usager de la route (dashcam, GoPro...)" },
+      { value: "agent_terrain", label: "Par un agent de police présent sur place" },
+    ],
+    evidenceQuestionStationnement: "Quelle signalisation existait sur la place de stationnement ?",
+    evidenceOptionsStationnement: [
+      { value: "panneau_officiel", label: "Un panneau officiel « interdiction de parquer » était visible" },
+      { value: "marquage_seul", label: "Seulement un marquage au sol ou un panneau « visiteurs », sans panneau officiel" },
+      { value: "aucune_signalisation", label: "Aucune signalisation visible" },
+      { value: "inconnu", label: "Je ne sais pas / je n'ai pas vérifié" },
     ],
     reasonQuestion: "Avez-vous un motif concret de contestation (signalisation, erreur, circonstance particulière) ?",
     reasonOptions: [
@@ -109,6 +134,19 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Zwischen 10 und 30 Tagen" },
       { value: "plus30", label: "Mehr als 30 Tage" },
     ],
+    evidenceQuestionVitesse: "Wie wurde die Widerhandlung festgestellt?",
+    evidenceOptionsVitesse: [
+      { value: "radar_officiel", label: "Durch ein offizielles Radar- oder Messgerät der Polizei" },
+      { value: "video_tiers", label: "Durch ein Video eines anderen Verkehrsteilnehmers (Dashcam, GoPro usw.)" },
+      { value: "agent_terrain", label: "Durch einen vor Ort anwesenden Polizeibeamten" },
+    ],
+    evidenceQuestionStationnement: "Welche Signalisation war auf dem Parkplatz vorhanden?",
+    evidenceOptionsStationnement: [
+      { value: "panneau_officiel", label: "Ein offizielles Signal «Parkverbot» war sichtbar" },
+      { value: "marquage_seul", label: "Nur eine Bodenmarkierung oder ein «Besucher»-Schild, ohne offizielles Signal" },
+      { value: "aucune_signalisation", label: "Keine sichtbare Signalisation" },
+      { value: "inconnu", label: "Ich weiss es nicht / habe es nicht geprüft" },
+    ],
     reasonQuestion: "Haben Sie einen konkreten Grund für eine Anfechtung (Signalisation, Fehler, besonderer Umstand)?",
     reasonOptions: [
       { value: "oui", label: "Ja, eindeutig" },
@@ -154,6 +192,19 @@ const CONTENT: Record<Locale, Content> = {
       { value: "moins10", label: "Less than 10 days" },
       { value: "entre10et30", label: "Between 10 and 30 days" },
       { value: "plus30", label: "More than 30 days" },
+    ],
+    evidenceQuestionVitesse: "How was the offence recorded?",
+    evidenceOptionsVitesse: [
+      { value: "radar_officiel", label: "By an official police radar or measuring device" },
+      { value: "video_tiers", label: "By a video filmed by another road user (dashcam, GoPro, etc.)" },
+      { value: "agent_terrain", label: "By a police officer present on site" },
+    ],
+    evidenceQuestionStationnement: "What signage was present on the parking spot?",
+    evidenceOptionsStationnement: [
+      { value: "panneau_officiel", label: "An official “no parking” sign was visible" },
+      { value: "marquage_seul", label: "Only ground markings or a “visitors” sign, with no official sign" },
+      { value: "aucune_signalisation", label: "No visible signage" },
+      { value: "inconnu", label: "I don't know / didn't check" },
     ],
     reasonQuestion: "Do you have a concrete reason to contest it (signage, error, particular circumstance)?",
     reasonOptions: [
@@ -201,6 +252,19 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Tra 10 e 30 giorni" },
       { value: "plus30", label: "Più di 30 giorni" },
     ],
+    evidenceQuestionVitesse: "Come è stata accertata l'infrazione?",
+    evidenceOptionsVitesse: [
+      { value: "radar_officiel", label: "Da un radar o apparecchio di misura ufficiale della polizia" },
+      { value: "video_tiers", label: "Da un video filmato da un altro utente della strada (dashcam, GoPro, ecc.)" },
+      { value: "agent_terrain", label: "Da un agente di polizia presente sul posto" },
+    ],
+    evidenceQuestionStationnement: "Quale segnaletica era presente sul posto auto?",
+    evidenceOptionsStationnement: [
+      { value: "panneau_officiel", label: "Era visibile un cartello ufficiale di «divieto di parcheggio»" },
+      { value: "marquage_seul", label: "Solo una segnaletica orizzontale o un cartello «visitatori», senza cartello ufficiale" },
+      { value: "aucune_signalisation", label: "Nessuna segnaletica visibile" },
+      { value: "inconnu", label: "Non lo so / non ho verificato" },
+    ],
     reasonQuestion: "Avete un motivo concreto di contestazione (segnaletica, errore, circostanza particolare)?",
     reasonOptions: [
       { value: "oui", label: "Sì, chiaramente" },
@@ -230,17 +294,33 @@ const CONTENT: Record<Locale, Content> = {
   },
 };
 
+function isStrongEvidence(evidence: Evidence | undefined): boolean {
+  return (
+    evidence === "video_tiers" ||
+    evidence === "marquage_seul" ||
+    evidence === "aucune_signalisation"
+  );
+}
+
 function computeVerdict(
   deadline: Deadline,
   reason: Reason,
+  evidence: Evidence | undefined,
 ): "good" | "uncertain" | "low" {
+  const strong = isStrongEvidence(evidence);
+  if (strong) return deadline === "plus30" ? "uncertain" : "good";
   if (reason === "non") return "low";
   if (deadline === "plus30") return "uncertain";
   if (reason === "oui") return "good";
   return "uncertain";
 }
 
-const STEP_ORDER: StepKey[] = ["type", "paid", "deadline", "reason"];
+function getStepOrder(type: FineType | undefined): StepKey[] {
+  const order: StepKey[] = ["type", "paid", "deadline"];
+  if (type === "vitesse" || type === "stationnement") order.push("evidence");
+  order.push("reason");
+  return order;
+}
 
 export default function Autodiagnostic({
   checkoutHref,
@@ -278,8 +358,9 @@ export default function Autodiagnostic({
     setAnswers({});
   }
 
+  const stepOrder = getStepOrder(answers.type);
   const isPaidStop = answers.paid === "oui";
-  const isDone = isPaidStop || STEP_ORDER.every((step) => answers[step] !== undefined);
+  const isDone = isPaidStop || stepOrder.every((step) => answers[step] !== undefined);
 
   if (isPaidStop) {
     return (
@@ -304,7 +385,7 @@ export default function Autodiagnostic({
   }
 
   if (isDone) {
-    const verdict = computeVerdict(answers.deadline!, answers.reason!);
+    const verdict = computeVerdict(answers.deadline!, answers.reason!, answers.evidence);
     const tone = verdict === "good" ? "success" : "danger";
     const label =
       verdict === "good"
@@ -351,8 +432,8 @@ export default function Autodiagnostic({
     );
   }
 
-  const currentStep = STEP_ORDER.find((step) => answers[step] === undefined)!;
-  const currentIndex = STEP_ORDER.indexOf(currentStep);
+  const currentStep = stepOrder.find((step) => answers[step] === undefined)!;
+  const currentIndex = stepOrder.indexOf(currentStep);
 
   const question =
     currentStep === "type"
@@ -361,22 +442,30 @@ export default function Autodiagnostic({
         ? content.paidQuestion
         : currentStep === "deadline"
           ? content.deadlineQuestion
-          : content.reasonQuestion;
+          : currentStep === "evidence"
+            ? answers.type === "vitesse"
+              ? content.evidenceQuestionVitesse
+              : content.evidenceQuestionStationnement
+            : content.reasonQuestion;
 
-  const options =
+  const options: { value: string; label: string }[] =
     currentStep === "type"
       ? content.typeOptions
       : currentStep === "paid"
         ? content.paidOptions
         : currentStep === "deadline"
           ? content.deadlineOptions
-          : content.reasonOptions;
+          : currentStep === "evidence"
+            ? answers.type === "vitesse"
+              ? content.evidenceOptionsVitesse
+              : content.evidenceOptionsStationnement
+            : content.reasonOptions;
 
   return (
     <div className={`rounded-2xl border border-border bg-surface p-6 md:p-8 ${className}`}>
       <div className="flex items-center justify-between gap-4">
         <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-          {content.questionCounter(currentIndex + 1, STEP_ORDER.length)}
+          {content.questionCounter(currentIndex + 1, stepOrder.length)}
         </p>
         {history.length > 0 ? (
           <button
@@ -392,7 +481,7 @@ export default function Autodiagnostic({
       <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-border">
         <div
           className="h-full rounded-full bg-accent transition-all duration-300"
-          style={{ width: `${(currentIndex / STEP_ORDER.length) * 100}%` }}
+          style={{ width: `${(currentIndex / stepOrder.length) * 100}%` }}
         />
       </div>
 

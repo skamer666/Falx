@@ -99,6 +99,28 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
     updatedAt: "2026-09-25",
   },
   {
+    slug: "vices-de-procedure-amende-suisse",
+    title: {
+      fr: "Vices de procédure : le motif de contestation le plus solide et le moins connu",
+      de: "Verfahrensmängel: der stärkste und am wenigsten bekannte Einspruchsgrund",
+      en: "Procedural defects: the strongest and least-known ground for contesting a fine",
+      it: "Vizi di procedura: il motivo di contestazione più solido e meno conosciuto",
+    },
+    shortTitle: {
+      fr: "Vices de procédure",
+      de: "Verfahrensmängel",
+      en: "Procedural defects",
+      it: "Vizi di procedura",
+    },
+    description: {
+      fr: "Certificat de vérification du radar, preuve vidéo d'un particulier, signalisation insuffisante : les failles techniques que la police doit démontrer, pas vous.",
+      de: "Radar-Eichzertifikat, Video eines Privaten, unzureichende Signalisation: die technischen Mängel, die die Polizei beweisen muss, nicht Sie.",
+      en: "Radar verification certificate, private video evidence, insufficient signage: the technical flaws the authority must prove, not you.",
+      it: "Certificato di verifica del radar, prova video di un privato, segnaletica insufficiente: le lacune tecniche che la polizia deve dimostrare, non voi.",
+    },
+    updatedAt: "2026-09-25",
+  },
+  {
     slug: "retrait-de-permis",
     title: {
       fr: "Retrait de permis en Suisse : ce qu'il faut savoir",
