@@ -73,6 +73,14 @@ function Fr({ locale }: { locale: Locale }) {
         l&rsquo;endroit concerné, pas sur une règle générale.
       </p>
 
+      <h2>Une précision importante</h2>
+      <p>
+        Ce guide présente des règles générales, pas un conseil juridique
+        personnalisé. Chaque dossier a ses particularités &mdash;
+        c&rsquo;est précisément ce que notre équipe vérifie avant de
+        préparer votre contestation.
+      </p>
+
       <p>
         Pour la procédure générale (délais, autorité compétente), consultez
         notre{" "}
@@ -136,6 +144,13 @@ function De({ locale }: { locale: Locale }) {
         stützen, nicht auf eine allgemeine Regel.
       </p>
 
+      <h2>Ein wichtiger Hinweis</h2>
+      <p>
+        Dieser Ratgeber stellt allgemeine Regeln dar, keine individuelle
+        Rechtsberatung. Jeder Fall hat seine Besonderheiten &mdash; genau
+        das prüft unser Team, bevor wir Ihre Einsprache vorbereiten.
+      </p>
+
       <p>
         Für das allgemeine Verfahren (Fristen, zuständige Behörde) siehe
         unseren{" "}
@@ -195,6 +210,13 @@ function En({ locale }: { locale: Locale }) {
         permits and enforcement hours. An effective objection needs to rely
         on the exact local regulation for that specific location, not a
         general rule.
+      </p>
+
+      <h2>An important note</h2>
+      <p>
+        This guide presents general rules, not individualized legal advice.
+        Every case has its own particulars &mdash; which is exactly what
+        our team checks before preparing your objection.
       </p>
 
       <p>
@@ -257,6 +279,14 @@ function It({ locale }: { locale: Locale }) {
         residenti e orari di controllo. Un&rsquo;opposizione efficace deve
         basarsi sul regolamento comunale esatto applicabile al luogo in
         questione, non su una regola generale.
+      </p>
+
+      <h2>Una precisazione importante</h2>
+      <p>
+        Questa guida presenta regole generali, non una consulenza legale
+        personalizzata. Ogni caso ha le proprie particolarità &mdash; è
+        esattamente ciò che il nostro team verifica prima di preparare la
+        vostra contestazione.
       </p>
 
       <p>

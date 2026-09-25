@@ -24,15 +24,24 @@ export async function generateMetadata({
 function Fr({ locale }: { locale: Locale }) {
   return (
     <>
-      <h2>Le principe : une nullité absolue, pas un simple vice réparable</h2>
+      <h2>Le principe : un motif réel, mais pas automatique</h2>
       <p>
         Le droit suisse garantit à toute personne qui ne comprend pas la
         langue de la procédure le droit de recevoir une traduction des actes
-        essentiels (art. 68 du Code de procédure pénale). Pour une
-        ordonnance pénale, le Tribunal fédéral a confirmé qu&rsquo;un défaut
-        de traduction constitue un <strong>motif de nullité absolue</strong>{" "}
-        &mdash; la sanction procédurale la plus forte qui existe, pas un
-        simple vice que l&rsquo;on peut corriger après coup.
+        essentiels (art. 68 du Code de procédure pénale). Le Tribunal
+        fédéral a confirmé que, pour une ordonnance pénale, le{" "}
+        <strong>dispositif</strong> et les <strong>voies de droit</strong>{" "}
+        doivent être traduits (ATF 145 IV 197).
+      </p>
+      <p>
+        Attention toutefois&nbsp;: dans cet arrêt de référence, le Tribunal
+        fédéral a <strong>refusé</strong> de prononcer la nullité absolue,
+        précisément parce que la personne concernée n&rsquo;avait entrepris
+        aucune démarche pour signaler qu&rsquo;elle ne comprenait pas la
+        langue et demander une traduction. La nullité absolue suppose un
+        vice &laquo;&nbsp;manifeste&nbsp;&raquo;&nbsp;: rester passif après
+        réception d&rsquo;un document incompréhensible affaiblit
+        sérieusement ce motif.
       </p>
 
       <h2>Ce qui doit être traduit</h2>
@@ -69,14 +78,15 @@ function Fr({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
-      <h2>Comment le faire valoir</h2>
+      <h2>Comment le faire valoir efficacement</h2>
       <p>
-        Si vous n&rsquo;avez reçu qu&rsquo;une version dans une langue que
-        vous ne comprenez pas, sans traduction du dispositif et des voies de
-        droit, c&rsquo;est un motif à soulever explicitement dans votre
-        opposition &mdash; y compris si le délai de 10 jours semble dépassé,
-        puisque la question se pose précisément de savoir si ce délai a
-        valablement commencé à courir sans notification compréhensible.
+        La leçon de la jurisprudence est claire&nbsp;: ne restez pas passif.
+        Signalez explicitement et par écrit, le plus tôt possible, que vous
+        ne comprenez pas la langue utilisée et demandez une traduction du
+        dispositif et des voies de droit &mdash; idéalement dans le même
+        courrier que votre opposition. C&rsquo;est cette démarche active qui
+        rend le vice &laquo;&nbsp;manifeste&nbsp;&raquo; et donne une vraie
+        portée à ce motif, y compris si le délai de 10 jours semble dépassé.
       </p>
 
       <h2>Une précision importante</h2>
@@ -106,15 +116,23 @@ function Fr({ locale }: { locale: Locale }) {
 function De({ locale }: { locale: Locale }) {
   return (
     <>
-      <h2>Der Grundsatz: absolute Nichtigkeit, kein blosser heilbarer Mangel</h2>
+      <h2>Der Grundsatz: ein echter, aber kein automatischer Grund</h2>
       <p>
         Das schweizerische Recht garantiert jeder Person, die die
         Verfahrenssprache nicht versteht, das Recht auf eine Übersetzung der
-        wesentlichen Verfahrensakte (Art. 68 StPO). Für einen Strafbefehl
-        hat das Bundesgericht bestätigt, dass eine fehlende Übersetzung
-        einen <strong>absoluten Nichtigkeitsgrund</strong> darstellt &mdash;
-        die stärkste Verfahrenssanktion, die es gibt, kein blosser
-        nachträglich heilbarer Mangel.
+        wesentlichen Verfahrensakte (Art. 68 StPO). Das Bundesgericht hat
+        bestätigt, dass bei einem Strafbefehl das <strong>Dispositiv</strong>{" "}
+        und die <strong>Rechtsmittelbelehrung</strong> übersetzt werden
+        müssen (BGE 145 IV 197).
+      </p>
+      <p>
+        Achtung: In diesem Leitentscheid hat das Bundesgericht die absolute
+        Nichtigkeit <strong>verweigert</strong>, gerade weil die betroffene
+        Person keinerlei Schritte unternommen hatte, um mitzuteilen, dass
+        sie die Sprache nicht verstehe, und eine Übersetzung zu verlangen.
+        Absolute Nichtigkeit setzt einen &laquo;&nbsp;offensichtlichen&nbsp;
+        &raquo; Mangel voraus&nbsp;: Passivität nach Erhalt eines
+        unverständlichen Dokuments schwächt diesen Grund erheblich.
       </p>
 
       <h2>Was übersetzt werden muss</h2>
@@ -152,15 +170,16 @@ function De({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
-      <h2>Wie Sie diesen Grund geltend machen</h2>
+      <h2>Wie Sie diesen Grund wirksam geltend machen</h2>
       <p>
-        Wenn Sie nur eine Version in einer Sprache erhalten haben, die Sie
-        nicht verstehen, ohne Übersetzung des Dispositivs und der
-        Rechtsmittelbelehrung, ist das ein Grund, den Sie ausdrücklich in
-        Ihrer Einsprache vorbringen sollten &mdash; auch wenn die
-        10-Tage-Frist bereits abgelaufen scheint, denn genau die Frage, ob
-        diese Frist ohne verständliche Zustellung gültig zu laufen begann,
-        steht dann im Raum.
+        Die Lehre aus der Rechtsprechung ist klar: Bleiben Sie nicht passiv.
+        Teilen Sie so früh wie möglich ausdrücklich und schriftlich mit,
+        dass Sie die verwendete Sprache nicht verstehen, und verlangen Sie
+        eine Übersetzung des Dispositivs und der Rechtsmittelbelehrung
+        &mdash; idealerweise im selben Schreiben wie Ihre Einsprache. Genau
+        dieser aktive Schritt macht den Mangel &laquo;&nbsp;offensichtlich&nbsp;
+        &raquo; und verleiht diesem Grund echtes Gewicht, auch wenn die
+        10-Tage-Frist bereits abgelaufen scheint.
       </p>
 
       <h2>Ein wichtiger Hinweis</h2>
@@ -191,15 +210,24 @@ function De({ locale }: { locale: Locale }) {
 function En({ locale }: { locale: Locale }) {
   return (
     <>
-      <h2>The principle: absolute nullity, not a mere curable defect</h2>
+      <h2>The principle: a real ground, but not an automatic one</h2>
       <p>
         Swiss law guarantees anyone who doesn&rsquo;t understand the
         language of the proceedings the right to a translation of the
-        essential procedural acts (art. 68 CrimPC). For a penal order, the
-        Federal Supreme Court has confirmed that a missing translation
-        constitutes a ground for <strong>absolute nullity</strong> &mdash;
-        the strongest procedural sanction that exists, not a defect that can
-        simply be fixed afterwards.
+        essential procedural acts (art. 68 CrimPC). The Federal Supreme
+        Court has confirmed that, for a penal order, the{" "}
+        <strong>operative part</strong> and the{" "}
+        <strong>right-of-appeal information</strong> must be translated
+        (BGE/ATF 145 IV 197).
+      </p>
+      <p>
+        A caveat, though: in that leading case, the Federal Supreme Court{" "}
+        <strong>refused</strong> to declare absolute nullity, precisely
+        because the person concerned had taken no steps at all to report
+        that they didn&rsquo;t understand the language and to request a
+        translation. Absolute nullity requires an &ldquo;obvious&rdquo;
+        defect: staying passive after receiving an incomprehensible
+        document seriously weakens this ground.
       </p>
 
       <h2>What must be translated</h2>
@@ -235,15 +263,16 @@ function En({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
-      <h2>How to raise it</h2>
+      <h2>How to raise it effectively</h2>
       <p>
-        If you only received a version in a language you don&rsquo;t
-        understand, with no translation of the operative part and
-        right-of-appeal information, that&rsquo;s a ground to raise
-        explicitly in your objection &mdash; even if the 10-day deadline
-        seems to have passed, since the very question is whether that
-        deadline validly started running without an understandable
-        notification.
+        The lesson from case law is clear: don&rsquo;t stay passive.
+        Explicitly state in writing, as early as possible, that you
+        don&rsquo;t understand the language used and request a translation
+        of the operative part and right-of-appeal information &mdash;
+        ideally in the same letter as your objection. It&rsquo;s this active
+        step that makes the defect &ldquo;obvious&rdquo; and gives this
+        ground real weight, even if the 10-day deadline seems to have
+        passed.
       </p>
 
       <h2>An important note</h2>
@@ -273,15 +302,24 @@ function En({ locale }: { locale: Locale }) {
 function It({ locale }: { locale: Locale }) {
   return (
     <>
-      <h2>Il principio: nullità assoluta, non un semplice vizio sanabile</h2>
+      <h2>Il principio: un motivo reale, ma non automatico</h2>
       <p>
         Il diritto svizzero garantisce a chiunque non comprenda la lingua
         della procedura il diritto di ricevere una traduzione degli atti
-        procedurali essenziali (art. 68 CPP). Per un decreto penale, il
-        Tribunale federale ha confermato che l&rsquo;assenza di traduzione
-        costituisce un motivo di <strong>nullità assoluta</strong> &mdash;
-        la sanzione procedurale più forte che esista, non un semplice vizio
-        sanabile a posteriori.
+        procedurali essenziali (art. 68 CPP). Il Tribunale federale ha
+        confermato che, per un decreto penale, il <strong>dispositivo</strong>{" "}
+        e le <strong>indicazioni sui mezzi di ricorso</strong> devono essere
+        tradotti (DTF 145 IV 197).
+      </p>
+      <p>
+        Attenzione però: in questa sentenza di riferimento, il Tribunale
+        federale ha <strong>rifiutato</strong> di dichiarare la nullità
+        assoluta, proprio perché la persona interessata non aveva
+        intrapreso alcun passo per segnalare di non comprendere la lingua e
+        chiedere una traduzione. La nullità assoluta presuppone un vizio
+        &laquo;&nbsp;manifesto&nbsp;&raquo;: rimanere passivi dopo aver
+        ricevuto un documento incomprensibile indebolisce seriamente questo
+        motivo.
       </p>
 
       <h2>Cosa deve essere tradotto</h2>
@@ -318,15 +356,16 @@ function It({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
-      <h2>Come farlo valere</h2>
+      <h2>Come farlo valere efficacemente</h2>
       <p>
-        Se avete ricevuto solo una versione in una lingua che non
-        comprendete, senza traduzione del dispositivo e delle indicazioni
-        sui mezzi di ricorso, questo è un motivo da far valere
-        esplicitamente nella vostra opposizione &mdash; anche se il termine
-        di 10 giorni sembra già scaduto, poiché è proprio la questione se
-        tale termine sia validamente iniziato a decorrere senza una notifica
-        comprensibile.
+        La lezione della giurisprudenza è chiara: non restate passivi.
+        Segnalate esplicitamente e per iscritto, il prima possibile, che non
+        comprendete la lingua utilizzata e chiedete una traduzione del
+        dispositivo e delle indicazioni sui mezzi di ricorso &mdash;
+        idealmente nella stessa lettera della vostra opposizione. È proprio
+        questo passo attivo che rende il vizio &laquo;&nbsp;manifesto&nbsp;
+        &raquo; e dà a questo motivo un peso reale, anche se il termine di
+        10 giorni sembra già scaduto.
       </p>
 
       <h2>Una precisazione importante</h2>

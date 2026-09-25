@@ -120,7 +120,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Ai-je de bonnes chances de gagner ?",
-        a: "Ça dépend entièrement de votre dossier. Une contestation sans motif concret (juste ne pas être d'accord) échoue presque toujours. Une erreur d'identification, un défaut de signalisation ou un vice de procédure a de vraies chances. Le diagnostic gratuit vous donne une évaluation honnête avant d'aller plus loin.",
+        a: "Ça dépend entièrement de votre dossier. Une contestation sans motif concret (juste ne pas être d'accord) échoue presque toujours. Une erreur d'identification, un défaut de signalisation ou un vice de procédure peut avoir de vraies chances. Le diagnostic gratuit vous donne une évaluation honnête avant d'aller plus loin.",
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
@@ -206,7 +206,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Habe ich gute Chancen zu gewinnen?",
-        a: "Das hängt ganz von Ihrem Fall ab. Eine Anfechtung ohne konkreten Grund (nur weil Sie nicht einverstanden sind) scheitert fast immer. Ein Identifikationsfehler, ein Signalisationsmangel oder ein Verfahrensfehler hat echte Chancen. Die kostenlose Diagnose gibt Ihnen eine ehrliche Einschätzung, bevor Sie weitergehen.",
+        a: "Das hängt ganz von Ihrem Fall ab. Eine Anfechtung ohne konkreten Grund (nur weil Sie nicht einverstanden sind) scheitert fast immer. Ein Identifikationsfehler, ein Signalisationsmangel oder ein Verfahrensfehler kann echte Chancen haben. Die kostenlose Diagnose gibt Ihnen eine ehrliche Einschätzung, bevor Sie weitergehen.",
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
@@ -292,7 +292,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Do I have good chances of winning?",
-        a: "It entirely depends on your case. An objection with no concrete ground (just disagreeing) almost always fails. An identification error, a signage defect, or a procedural flaw has real chances. The free diagnostic gives you an honest assessment before you go further.",
+        a: "It entirely depends on your case. An objection with no concrete ground (just disagreeing) almost always fails. An identification error, a signage defect, or a procedural flaw can have real chances. The free diagnostic gives you an honest assessment before you go further.",
       },
       {
         q: "Is Thrax Legal a law firm?",
@@ -378,7 +378,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Ho buone possibilità di vincere?",
-        a: "Dipende interamente dal vostro caso. Una contestazione senza motivo concreto (solo perché non siete d'accordo) fallisce quasi sempre. Un errore di identificazione, un difetto di segnaletica o un vizio di procedura ha reali possibilità. La diagnosi gratuita vi dà una valutazione onesta prima di andare oltre.",
+        a: "Dipende interamente dal vostro caso. Una contestazione senza motivo concreto (solo perché non siete d'accordo) fallisce quasi sempre. Un errore di identificazione, un difetto di segnaletica o un vizio di procedura può avere reali possibilità. La diagnosi gratuita vi dà una valutazione onesta prima di andare oltre.",
       },
       {
         q: "Thrax Legal è uno studio legale?",

@@ -102,6 +102,14 @@ function Fr({ locale }: { locale: Locale }) {
         CFF</Link> suivent des logiques un peu différentes, détaillées dans
         leurs guides dédiés.
       </p>
+
+      <h2>Une précision importante</h2>
+      <p>
+        Ce guide présente des règles générales, pas un conseil juridique
+        personnalisé. Chaque dossier a ses particularités &mdash;
+        c&rsquo;est précisément ce que notre équipe vérifie avant de
+        préparer votre opposition.
+      </p>
     </>
   );
 }
@@ -191,6 +199,13 @@ function De({ locale }: { locale: Locale }) {
         folgen etwas anderen Logiken, die in den jeweiligen Ratgebern
         erklärt werden.
       </p>
+
+      <h2>Ein wichtiger Hinweis</h2>
+      <p>
+        Dieser Ratgeber stellt allgemeine Regeln dar, keine individuelle
+        Rechtsberatung. Jeder Fall hat seine Besonderheiten &mdash; genau
+        das prüft unser Team, bevor wir Ihre Einsprache vorbereiten.
+      </p>
     </>
   );
 }
@@ -270,6 +285,13 @@ function En({ locale }: { locale: Locale }) {
           SBB/CFF fines
         </Link>{" "}
         follow slightly different logic, covered in their own guides.
+      </p>
+
+      <h2>An important note</h2>
+      <p>
+        This guide presents general rules, not individualized legal advice.
+        Every case has its own particulars &mdash; which is exactly what
+        our team checks before preparing your objection.
       </p>
     </>
   );
@@ -351,6 +373,14 @@ function It({ locale }: { locale: Locale }) {
         <Link href={`/${locale}/guide/amende-cff-sans-billet`}>multe
         FFS</Link> seguono logiche leggermente diverse, illustrate nelle
         rispettive guide.
+      </p>
+
+      <h2>Una precisazione importante</h2>
+      <p>
+        Questa guida presenta regole generali, non una consulenza legale
+        personalizzata. Ogni caso ha le proprie particolarità &mdash; è
+        esattamente ciò che il nostro team verifica prima di preparare la
+        vostra opposizione.
       </p>
     </>
   );

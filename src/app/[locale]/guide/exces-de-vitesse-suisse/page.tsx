@@ -81,6 +81,14 @@ function Fr({ locale }: { locale: Locale }) {
         &mdash; nous vous orientons dans ce cas plutôt que de vous vendre
         un service inadapté.
       </p>
+
+      <h2>Une précision importante</h2>
+      <p>
+        Ce guide présente des règles générales, pas un conseil juridique
+        personnalisé. Chaque dossier a ses particularités &mdash;
+        c&rsquo;est précisément ce que notre équipe vérifie avant de
+        préparer votre opposition.
+      </p>
     </>
   );
 }
@@ -146,6 +154,13 @@ function De({ locale }: { locale: Locale }) {
         Vorlage &mdash; in diesem Fall verweisen wir Sie weiter, statt Ihnen
         eine unpassende Leistung zu verkaufen.
       </p>
+
+      <h2>Ein wichtiger Hinweis</h2>
+      <p>
+        Dieser Ratgeber stellt allgemeine Regeln dar, keine individuelle
+        Rechtsberatung. Jeder Fall hat seine Besonderheiten &mdash; genau
+        das prüft unser Team, bevor wir Ihre Einsprache vorbereiten.
+      </p>
     </>
   );
 }
@@ -205,6 +220,13 @@ function En({ locale }: { locale: Locale }) {
         road traffic law is more appropriate than a simple letter template
         &mdash; in that case we refer you elsewhere rather than sell you a
         service that doesn&rsquo;t fit.
+      </p>
+
+      <h2>An important note</h2>
+      <p>
+        This guide presents general rules, not individualized legal advice.
+        Every case has its own particulars &mdash; which is exactly what
+        our team checks before preparing your objection.
       </p>
     </>
   );
@@ -267,6 +289,14 @@ function It({ locale }: { locale: Locale }) {
         in diritto della circolazione è più indicato di un semplice modello
         di lettera &mdash; in questo caso vi indirizziamo altrove piuttosto
         che vendervi un servizio inadatto.
+      </p>
+
+      <h2>Una precisazione importante</h2>
+      <p>
+        Questa guida presenta regole generali, non una consulenza legale
+        personalizzata. Ogni caso ha le proprie particolarità &mdash; è
+        esattamente ciò che il nostro team verifica prima di preparare la
+        vostra opposizione.
       </p>
     </>
   );

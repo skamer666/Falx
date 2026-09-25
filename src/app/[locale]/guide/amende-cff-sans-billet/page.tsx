@@ -76,6 +76,14 @@ function Fr({ locale }: { locale: Locale }) {
         Rassemblez vos preuves (captures d&rsquo;écran, horodatage,
         justificatif d&rsquo;achat) le jour même si possible.
       </p>
+
+      <h2>Une précision importante</h2>
+      <p>
+        Ce guide présente des règles générales, pas un conseil juridique
+        personnalisé. Chaque dossier a ses particularités &mdash;
+        c&rsquo;est précisément ce que notre équipe vérifie avant de
+        préparer votre réclamation.
+      </p>
     </>
   );
 }
@@ -135,6 +143,13 @@ function De({ locale }: { locale: Locale }) {
         (Screenshots, Zeitstempel, Kaufbeleg) wenn möglich noch am selben
         Tag.
       </p>
+
+      <h2>Ein wichtiger Hinweis</h2>
+      <p>
+        Dieser Ratgeber stellt allgemeine Regeln dar, keine individuelle
+        Rechtsberatung. Jeder Fall hat seine Besonderheiten &mdash; genau
+        das prüft unser Team, bevor wir Ihre Reklamation vorbereiten.
+      </p>
     </>
   );
 }
@@ -189,6 +204,13 @@ function En({ locale }: { locale: Locale }) {
         Transport companies often apply shorter complaint deadlines than a
         classic criminal fine. Gather your evidence (screenshots,
         timestamps, proof of purchase) the same day if possible.
+      </p>
+
+      <h2>An important note</h2>
+      <p>
+        This guide presents general rules, not individualized legal advice.
+        Every case has its own particulars &mdash; which is exactly what
+        our team checks before preparing your complaint.
       </p>
     </>
   );
@@ -248,6 +270,14 @@ function It({ locale }: { locale: Locale }) {
         brevi rispetto a una multa penale classica. Raccogliete le vostre
         prove (screenshot, orario, giustificativo d&rsquo;acquisto) lo
         stesso giorno se possibile.
+      </p>
+
+      <h2>Una precisazione importante</h2>
+      <p>
+        Questa guida presenta regole generali, non una consulenza legale
+        personalizzata. Ogni caso ha le proprie particolarità &mdash; è
+        esattamente ciò che il nostro team verifica prima di preparare il
+        vostro reclamo.
       </p>
     </>
   );

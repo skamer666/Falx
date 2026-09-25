@@ -72,6 +72,14 @@ function Fr({ locale }: { locale: Locale }) {
         &mdash; Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et
         n&rsquo;assure pas la représentation devant les tribunaux.
       </p>
+
+      <h2>Une précision importante</h2>
+      <p>
+        Ce guide présente des règles générales, pas un conseil juridique
+        personnalisé. Chaque dossier a ses particularités &mdash;
+        c&rsquo;est précisément ce que notre équipe vérifie avant de
+        préparer votre recours.
+      </p>
     </>
   );
 }
@@ -126,6 +134,13 @@ function De({ locale }: { locale: Locale }) {
         einen Anwalt &mdash; Thrax Legal ist keine Anwaltskanzlei und
         übernimmt keine Vertretung vor Gericht.
       </p>
+
+      <h2>Ein wichtiger Hinweis</h2>
+      <p>
+        Dieser Ratgeber stellt allgemeine Regeln dar, keine individuelle
+        Rechtsberatung. Jeder Fall hat seine Besonderheiten &mdash; genau
+        das prüft unser Team, bevor wir Ihre Beschwerde vorbereiten.
+      </p>
     </>
   );
 }
@@ -176,6 +191,13 @@ function En({ locale }: { locale: Locale }) {
         professional impact), we refer you to a lawyer specialised in road
         traffic law &mdash; Thrax Legal is not a law firm and does not
         represent clients before courts.
+      </p>
+
+      <h2>An important note</h2>
+      <p>
+        This guide presents general rules, not individualized legal advice.
+        Every case has its own particulars &mdash; which is exactly what
+        our team checks before preparing your appeal.
       </p>
     </>
   );
@@ -230,6 +252,14 @@ function It({ locale }: { locale: Locale }) {
         verso un avvocato specializzato in diritto della circolazione
         &mdash; Thrax Legal non è uno studio legale e non garantisce la
         rappresentanza davanti ai tribunali.
+      </p>
+
+      <h2>Una precisazione importante</h2>
+      <p>
+        Questa guida presenta regole generali, non una consulenza legale
+        personalizzata. Ogni caso ha le proprie particolarità &mdash; è
+        esattamente ciò che il nostro team verifica prima di preparare il
+        vostro ricorso.
       </p>
     </>
   );

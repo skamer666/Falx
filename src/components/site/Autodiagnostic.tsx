@@ -115,7 +115,7 @@ const CONTENT: Record<Locale, Content> = {
     freeTag: "Gratuit · 2 minutes · Résultat immédiat, sans email requis",
     paidResultTitle: "Amende déjà payée",
     paidResultBody:
-      "Payer une amende vaut acceptation définitive : il n'existe ensuite aucun recours pour revenir dessus. Ce dossier n'est malheureusement plus contestable.",
+      "Payer une amende vaut en principe acceptation définitive : dans l'immense majorité des cas, il n'existe ensuite aucun recours pour revenir dessus. Ce dossier n'est donc plus contestable via notre service — un cas réellement exceptionnel relève d'un avocat, pas d'un outil automatisé.",
     paidResultTip:
       "Pour la prochaine fois : ne payez jamais avant d'avoir vérifié vos options, même « pour être tranquille ».",
     restart: "Refaire le diagnostic",
@@ -128,7 +128,7 @@ const CONTENT: Record<Locale, Content> = {
     resultCaptionUncertain:
       "Certains éléments jouent en votre faveur, d'autres non. Un examen par notre équipe permettra d'y voir clair avant d'agir.",
     resultCaptionLow:
-      "Sur la base de vos réponses, les chances semblent limitées. Un examen gratuit par notre équipe peut néanmoins révéler un élément que le diagnostic ne capture pas.",
+      "Sur la base de vos réponses, les chances semblent limitées. Un diagnostic automatique ne capture pas toujours tout : notre équipe vérifie chaque dossier avant de préparer votre contestation, et vous n'êtes pas facturé si le dossier s'avère non contestable.",
     ctaLabel: "Commander mon Pack Contestation — 89 CHF",
   },
   de: {
@@ -184,7 +184,7 @@ const CONTENT: Record<Locale, Content> = {
     freeTag: "Kostenlos · 2 Minuten · Sofortiges Ergebnis, keine E-Mail nötig",
     paidResultTitle: "Busse bereits bezahlt",
     paidResultBody:
-      "Das Bezahlen einer Busse gilt als endgültige Anerkennung: Danach gibt es keinen Weg zurück. Dieser Fall ist leider nicht mehr anfechtbar.",
+      "Das Bezahlen einer Busse gilt in der Regel als endgültige Anerkennung: In den allermeisten Fällen gibt es danach keinen Weg zurück. Über unseren Dienst ist dieser Fall damit nicht mehr anfechtbar — ein wirklicher Ausnahmefall gehört in die Hände einer Anwältin oder eines Anwalts, nicht eines automatisierten Tools.",
     paidResultTip:
       "Für das nächste Mal: Zahlen Sie nie, bevor Sie Ihre Möglichkeiten geprüft haben — auch nicht « um Ruhe zu haben ».",
     restart: "Diagnose wiederholen",
@@ -197,7 +197,7 @@ const CONTENT: Record<Locale, Content> = {
     resultCaptionUncertain:
       "Einige Elemente sprechen für Sie, andere nicht. Eine Prüfung durch unser Team schafft Klarheit, bevor Sie handeln.",
     resultCaptionLow:
-      "Nach Ihren Angaben scheinen die Chancen begrenzt. Eine kostenlose Prüfung durch unser Team kann dennoch einen Punkt aufdecken, den die Diagnose nicht erfasst.",
+      "Nach Ihren Angaben scheinen die Chancen begrenzt. Eine automatische Diagnose erfasst nicht immer alles: Unser Team prüft jeden Fall, bevor wir Ihre Einsprache vorbereiten, und Ihnen wird nichts berechnet, wenn sich der Fall als nicht anfechtbar erweist.",
     ctaLabel: "Anfechtungspaket bestellen — CHF 89",
   },
   en: {
@@ -253,7 +253,7 @@ const CONTENT: Record<Locale, Content> = {
     freeTag: "Free · 2 minutes · Instant result, no email required",
     paidResultTitle: "Fine already paid",
     paidResultBody:
-      "Paying a fine counts as final acceptance: there is no way back afterwards. This case can unfortunately no longer be contested.",
+      "Paying a fine generally counts as final acceptance: in the vast majority of cases, there is no way back afterwards. This case can therefore no longer be contested through our service — a genuine exception is a matter for a lawyer, not an automated tool.",
     paidResultTip:
       "Next time: never pay before checking your options, even just “to be done with it”.",
     restart: "Retake the diagnostic",
@@ -266,7 +266,7 @@ const CONTENT: Record<Locale, Content> = {
     resultCaptionUncertain:
       "Some elements are in your favour, others aren't. A review by our team will clarify things before you act.",
     resultCaptionLow:
-      "Based on your answers, the chances look limited. A free review by our team may still reveal something the diagnostic doesn't capture.",
+      "Based on your answers, the chances look limited. An automated diagnostic doesn't always capture everything: our team checks every case before preparing your objection, and you won't be charged if the case turns out not to be contestable.",
     ctaLabel: "Order my Contestation Pack — CHF 89",
   },
   it: {
@@ -322,7 +322,7 @@ const CONTENT: Record<Locale, Content> = {
     freeTag: "Gratuito · 2 minuti · Risultato immediato, nessuna email richiesta",
     paidResultTitle: "Multa già pagata",
     paidResultBody:
-      "Pagare una multa equivale a un'accettazione definitiva: non esiste poi alcun ricorso possibile. Questo caso purtroppo non è più contestabile.",
+      "Pagare una multa equivale di norma a un'accettazione definitiva: nella stragrande maggioranza dei casi non esiste poi alcun ricorso possibile. Questo caso non è quindi più contestabile tramite il nostro servizio — un'eccezione reale è compito di un avvocato, non di uno strumento automatizzato.",
     paidResultTip:
       "Per la prossima volta: non pagate mai prima di aver verificato le vostre opzioni, nemmeno «per tranquillità».",
     restart: "Rifare la diagnosi",
@@ -335,7 +335,7 @@ const CONTENT: Record<Locale, Content> = {
     resultCaptionUncertain:
       "Alcuni elementi giocano a vostro favore, altri no. Un esame da parte del nostro team farà chiarezza prima di agire.",
     resultCaptionLow:
-      "In base alle vostre risposte, le possibilità sembrano limitate. Un esame gratuito da parte del nostro team può comunque rivelare un elemento che la diagnosi non coglie.",
+      "In base alle vostre risposte, le possibilità sembrano limitate. Una diagnosi automatica non coglie sempre tutto: il nostro team verifica ogni caso prima di preparare la vostra contestazione, e non vi verrà addebitato nulla se il caso risulta non contestabile.",
     ctaLabel: "Ordinare il mio Pack Contestazione — CHF 89",
   },
 };
@@ -355,8 +355,16 @@ function computeVerdict(
   language: YesNo | undefined,
   vehicleOwnership: YesNo | undefined,
 ): "good" | "uncertain" | "low" {
-  const strong = isStrongEvidence(evidence) || language === "non" || vehicleOwnership === "oui";
+  const strong = isStrongEvidence(evidence) || vehicleOwnership === "oui";
   if (strong) return deadline === "plus30" ? "uncertain" : "good";
+  // Le défaut de traduction est un motif réel mais pas automatique (ATF 145 IV 197 :
+  // la nullité absolue suppose une démarche active du prévenu, pas seulement la passivité).
+  // On l'empêche donc de retomber à "faible" sans pour autant garantir "bonnes chances".
+  if (language === "non") {
+    if (deadline === "plus30") return "uncertain";
+    if (reason === "oui") return "good";
+    return "uncertain";
+  }
   if (reason === "non") return "low";
   if (deadline === "plus30") return "uncertain";
   if (reason === "oui") return "good";
