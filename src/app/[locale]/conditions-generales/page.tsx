@@ -157,6 +157,16 @@ function Fr() {
         le client, sauf faute intentionnelle ou négligence grave.
       </p>
       <p>
+        Les informations générales sur le droit suisse figurant sur ce site
+        (guide, foire aux questions, références légales ou
+        jurisprudentielles) sont fournies à titre purement informatif, sans
+        garantie d&rsquo;exhaustivité, d&rsquo;actualité ou
+        d&rsquo;applicabilité à un cas particulier, et ne constituent pas un
+        conseil juridique personnalisé. Thrax Legal décline toute
+        responsabilité pour une décision prise sur cette seule base, sauf
+        faute intentionnelle ou négligence grave de sa part.
+      </p>
+      <p>
         Lorsque le dossier présente une gravité ou une complexité
         particulière (notamment risque de retrait de permis de longue durée
         ou procédure pénale), Thrax Legal peut recommander au client de
@@ -289,6 +299,16 @@ function De() {
         Betrag beschränkt, ausser bei Vorsatz oder grober Fahrlässigkeit.
       </p>
       <p>
+        Die allgemeinen Informationen zum schweizerischen Recht auf dieser
+        Website (Ratgeber, FAQ, gesetzliche oder gerichtliche Verweise)
+        werden ausschliesslich zu Informationszwecken bereitgestellt, ohne
+        Gewähr für Vollständigkeit, Aktualität oder Anwendbarkeit auf einen
+        Einzelfall, und stellen keine individuelle Rechtsberatung dar.
+        Thrax Legal haftet nicht für eine Entscheidung, die allein auf
+        dieser Grundlage getroffen wird, ausser bei Vorsatz oder grober
+        Fahrlässigkeit ihrerseits.
+      </p>
+      <p>
         Bei besonders schwerwiegenden oder komplexen Fällen (insbesondere
         bei Risiko eines längeren Führerausweisentzugs oder eines
         Strafverfahrens) kann Thrax Legal dem Kunden empfehlen, eine im
@@ -418,6 +438,15 @@ function En() {
         liability, for all damages combined, is limited to the amount
         actually paid by the customer, except in cases of intent or gross
         negligence.
+      </p>
+      <p>
+        The general information about Swiss law on this site (guide, FAQ,
+        statutory or case-law references) is provided for informational
+        purposes only, without any guarantee of completeness, currency, or
+        applicability to a particular case, and does not constitute
+        individualized legal advice. Thrax Legal disclaims any liability for
+        a decision made solely on this basis, except in cases of intent or
+        gross negligence on its part.
       </p>
       <p>
         Where a case is particularly serious or complex (in particular a
@@ -553,6 +582,16 @@ function It() {
         fornitore, per tutti i danni complessivamente, è limitata
         all&rsquo;importo effettivamente pagato dal cliente, salvo dolo o
         colpa grave.
+      </p>
+      <p>
+        Le informazioni generali sul diritto svizzero presenti su questo
+        sito (guida, domande frequenti, riferimenti legali o
+        giurisprudenziali) sono fornite a puro titolo informativo, senza
+        garanzia di esaustività, attualità o applicabilità a un caso
+        particolare, e non costituiscono una consulenza legale
+        personalizzata. Thrax Legal declina ogni responsabilità per una
+        decisione presa unicamente su questa base, salvo dolo o colpa grave
+        da parte sua.
       </p>
       <p>
         Nei casi particolarmente gravi o complessi (in particolare rischio
