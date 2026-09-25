@@ -4,9 +4,9 @@ import { Container } from "./ui";
 
 const MENU = [
   { number: "001", label: "Accueil", href: "/" },
-  { number: "002", label: "Services", href: "/services" },
-  { number: "003", label: "Abonnement PME", href: "/abonnement-pme" },
-  { number: "004", label: "Contact", href: "/#contact" },
+  { number: "002", label: "Diagnostic gratuit", href: "/#diagnostic" },
+  { number: "003", label: "Suivi Conformité", href: "/suivi-conformite" },
+  { number: "004", label: "FAQ", href: "/#contact" },
 ];
 
 function ArrowIcon() {
@@ -33,11 +33,12 @@ export default function Footer() {
               <Logo />
             </Link>
             <h2 className="mt-6 text-2xl font-semibold leading-tight tracking-[-0.02em] text-text">
-              Vos droits, exécutés à prix fixe.
+              La conformité nLPD de votre PME, à prix fixe.
             </h2>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-muted">
-              Thrax Legal package les démarches juridiques courantes des PME
-              et des particuliers suisses en services à prix fixe.
+              Thrax Legal met les PME suisses en conformité avec la nLPD :
+              registre des traitements, politique de confidentialité,
+              contrats de sous-traitance.
             </p>
           </div>
 

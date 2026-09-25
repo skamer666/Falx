@@ -8,9 +8,9 @@ const schibstedGrotesk = Schibsted_Grotesk({
   display: "swap",
 });
 
-const title = "Thrax Legal : vos droits, exécutés en 24h à prix fixe";
+const title = "Conformité nLPD pour PME suisses, dès 590 CHF | Thrax Legal";
 const description =
-  "Thrax Legal remplace les cabinets traditionnels, lents et opaques, par une infrastructure juridique structurée pour les PME et les particuliers suisses. Prix fixes, sans surprise.";
+  "Thrax Legal met votre PME en conformité avec la nLPD révisée : registre des traitements, politique de confidentialité, contrats de sous-traitance. Prix fixe, sans avocat, sans rendez-vous.";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0b",

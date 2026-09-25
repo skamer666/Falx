@@ -6,9 +6,9 @@ import { useState } from "react";
 import { PrimaryButton } from "./ui";
 
 const LINKS = [
-  { href: "/services", label: "Services" },
-  { href: "/abonnement-pme", label: "Abonnement PME" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#offre", label: "Tarifs" },
+  { href: "/suivi-conformite", label: "Suivi Conformité" },
+  { href: "/#contact", label: "FAQ" },
 ];
 
 export default function MobileNav() {
@@ -64,8 +64,8 @@ export default function MobileNav() {
               );
             })}
           </nav>
-          <PrimaryButton href="/abonnement-pme" className="mt-4 w-full">
-            Découvrir l&rsquo;abonnement PME
+          <PrimaryButton href="/#diagnostic" className="mt-4 w-full" onClick={() => setOpen(false)}>
+            Diagnostic gratuit en 2 min
           </PrimaryButton>
         </div>
       ) : null}

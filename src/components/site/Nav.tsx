@@ -7,9 +7,9 @@ import MobileNav from "./MobileNav";
 import { PrimaryButton } from "./ui";
 
 const LINKS = [
-  { href: "/services", label: "Services" },
-  { href: "/abonnement-pme", label: "Abonnement PME" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#offre", label: "Tarifs" },
+  { href: "/suivi-conformite", label: "Suivi Conformité" },
+  { href: "/#contact", label: "FAQ" },
 ];
 
 export default function Nav() {
@@ -48,8 +48,8 @@ export default function Nav() {
 
         <div className="flex items-center gap-4">
           <div className="hidden sm:block">
-            <PrimaryButton href="/abonnement-pme" className="px-5 py-2.5">
-              Découvrir l&rsquo;abonnement PME
+            <PrimaryButton href="/#diagnostic" className="px-5 py-2.5">
+              Diagnostic gratuit en 2 min
             </PrimaryButton>
           </div>
           <MobileNav />

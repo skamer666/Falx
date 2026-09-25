@@ -1,6 +1,6 @@
 # Falx
 
-Landing page de Falx — legaltech suisse (génération automatisée de statuts de Sàrl, conformité nLPD et contrats PME). Next.js (App Router) + TypeScript + Tailwind CSS.
+Landing page de Falx (Thrax Legal) — legaltech suisse, service unique de mise en conformité nLPD pour PME (diagnostic gratuit, Pack Conformité à prix fixe, Suivi Conformité en abonnement). Next.js (App Router) + TypeScript + Tailwind CSS.
 
 ## Démarrer en local
 
@@ -13,10 +13,11 @@ Ouvrir [http://localhost:3000](http://localhost:3000).
 
 ## Structure
 
-- `src/app` — layout racine, polices (Fraunces / Inter) et page d'accueil
-- `src/components/site` — sections de la landing page (Nav, Hero, Sécurité, Tarifs, etc.)
+- `src/app/page.tsx` — page unique nLPD (diagnostic, offre, comparatif, FAQ)
+- `src/app/suivi-conformite` — page de l'abonnement Suivi Conformité
+- `src/components/site` — Nav, Footer, Autodiagnostic et composants UI partagés
 - `src/components/Reveal.tsx` — animation d'apparition au scroll
-- `src/app/globals.css` — tokens Tailwind (couleurs papier / encre / sapin, typographies)
+- `src/app/globals.css` — tokens Tailwind (couleurs, typographies)
 
 ## Notes
 

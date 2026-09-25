@@ -17,8 +17,8 @@ export default async function CheckoutPage({
           un compte Stripe réel. Cette page est un espace réservé en
           attendant la mise en production du module de paiement.
         </p>
-        <GhostButton href="/services" className="mt-4">
-          Retour aux services
+        <GhostButton href="/" className="mt-4">
+          Retour à l&rsquo;accueil
         </GhostButton>
         <p className="mt-8 max-w-sm text-xs leading-relaxed text-text-muted">
           Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et
