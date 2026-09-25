@@ -7,29 +7,70 @@ import GuideCta from "./GuideCta";
 import JsonLd from "./JsonLd";
 import { Container } from "./ui";
 import { getRelatedArticles, type GuideArticle } from "@/lib/guide/articles";
+import type { Locale } from "@/i18n/config";
+import { SITE_URL } from "@/lib/site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thraxlegal.ch";
+const STRINGS: Record<
+  Locale,
+  {
+    breadcrumbHome: string;
+    breadcrumbGuide: string;
+    updatedOn: string;
+    seeAlso: string;
+    dateLocale: string;
+  }
+> = {
+  fr: {
+    breadcrumbHome: "Accueil",
+    breadcrumbGuide: "Guide",
+    updatedOn: "Mis à jour le",
+    seeAlso: "À lire aussi",
+    dateLocale: "fr-CH",
+  },
+  de: {
+    breadcrumbHome: "Startseite",
+    breadcrumbGuide: "Ratgeber",
+    updatedOn: "Aktualisiert am",
+    seeAlso: "Auch interessant",
+    dateLocale: "de-CH",
+  },
+  en: {
+    breadcrumbHome: "Home",
+    breadcrumbGuide: "Guide",
+    updatedOn: "Updated on",
+    seeAlso: "Related articles",
+    dateLocale: "en-CH",
+  },
+};
 
 export default function GuideLayout({
   article,
+  locale,
   children,
 }: {
   article: GuideArticle;
+  locale: Locale;
   children: ReactNode;
 }) {
+  const t = STRINGS[locale];
   const related = getRelatedArticles(article.slug);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Guide", item: `${siteUrl}/guide` },
+      { "@type": "ListItem", position: 1, name: t.breadcrumbHome, item: `${SITE_URL}/${locale}` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t.breadcrumbGuide,
+        item: `${SITE_URL}/${locale}/guide`,
+      },
       {
         "@type": "ListItem",
         position: 3,
-        name: article.shortTitle,
-        item: `${siteUrl}/guide/${article.slug}`,
+        name: article.shortTitle[locale],
+        item: `${SITE_URL}/${locale}/guide/${article.slug}`,
       },
     ],
   };
@@ -37,9 +78,10 @@ export default function GuideLayout({
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
-    description: article.description,
+    headline: article.title[locale],
+    description: article.description[locale],
     dateModified: article.updatedAt,
+    inLanguage: locale,
     author: {
       "@type": "Organization",
       name: "Thrax Legal",
@@ -59,26 +101,26 @@ export default function GuideLayout({
         <section className="theme-light border-b border-border bg-bg pb-16 pt-32 md:pt-40">
           <Container className="mx-auto max-w-2xl">
             <Reveal>
-              <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-text-muted">
-                <Link href="/" className="hover:text-text">
-                  Accueil
+              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-text-muted">
+                <Link href={`/${locale}`} className="hover:text-text">
+                  {t.breadcrumbHome}
                 </Link>
                 <span aria-hidden>/</span>
-                <Link href="/guide" className="hover:text-text">
-                  Guide
+                <Link href={`/${locale}/guide`} className="hover:text-text">
+                  {t.breadcrumbGuide}
                 </Link>
                 <span aria-hidden>/</span>
-                <span className="text-text">{article.shortTitle}</span>
+                <span className="text-text">{article.shortTitle[locale]}</span>
               </nav>
               <h1 className="mt-4 text-[2rem] font-semibold leading-[1.15] tracking-[-0.02em] text-text sm:text-[2.5rem]">
-                {article.title}
+                {article.title[locale]}
               </h1>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-text-muted">
-                {article.description}
+                {article.description[locale]}
               </p>
               <p className="mt-4 text-xs text-text-muted">
-                Mis à jour le{" "}
-                {new Date(article.updatedAt).toLocaleDateString("fr-CH", {
+                {t.updatedOn}{" "}
+                {new Date(article.updatedAt).toLocaleDateString(t.dateLocale, {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -92,7 +134,7 @@ export default function GuideLayout({
           <Container className="mx-auto max-w-2xl">
             <Reveal>
               <div className="article-body">{children}</div>
-              <GuideCta className="mt-12" />
+              <GuideCta locale={locale} className="mt-12" />
             </Reveal>
           </Container>
         </section>
@@ -102,20 +144,20 @@ export default function GuideLayout({
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-                  À lire aussi
+                  {t.seeAlso}
                 </p>
                 <div className="mt-6 grid gap-4 sm:grid-cols-3">
                   {related.map((item) => (
                     <Link
                       key={item.slug}
-                      href={`/guide/${item.slug}`}
+                      href={`/${locale}/guide/${item.slug}`}
                       className="group rounded-2xl border border-border bg-bg p-5 transition-colors hover:border-white/20"
                     >
                       <p className="text-sm font-semibold leading-snug text-text group-hover:text-text">
-                        {item.shortTitle}
+                        {item.shortTitle[locale]}
                       </p>
                       <p className="mt-2 text-xs leading-relaxed text-text-muted">
-                        {item.description}
+                        {item.description[locale]}
                       </p>
                     </Link>
                   ))}
@@ -125,7 +167,7 @@ export default function GuideLayout({
           </section>
         ) : null}
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }

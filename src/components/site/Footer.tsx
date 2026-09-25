@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { Container } from "./ui";
-
-const MENU = [
-  { number: "001", label: "Accueil", href: "/" },
-  { number: "002", label: "Diagnostic gratuit", href: "/#diagnostic" },
-  { number: "003", label: "Suivi Conformité", href: "/suivi-conformite" },
-  { number: "004", label: "Guide", href: "/guide" },
-  { number: "005", label: "FAQ", href: "/#contact" },
-];
+import { getDictionary } from "@/i18n/dictionary";
+import type { Locale } from "@/i18n/config";
 
 function ArrowIcon() {
   return (
@@ -24,41 +18,49 @@ function ArrowIcon() {
   );
 }
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: Locale }) {
+  const t = getDictionary(locale).footer;
+
+  const MENU = [
+    { number: "001", label: t.home, href: `/${locale}` },
+    { number: "002", label: t.diagnostic, href: `/${locale}/#diagnostic` },
+    { number: "003", label: t.monitoring, href: `/${locale}/suivi-conformite` },
+    { number: "004", label: t.guide, href: `/${locale}/guide` },
+    { number: "005", label: t.faq, href: `/${locale}/#contact` },
+  ];
+
   return (
     <footer className="border-t border-border bg-bg">
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.1fr_1fr_1.2fr]">
           <div>
-            <Link href="/" aria-label="Thrax Legal, accueil">
+            <Link href={`/${locale}`} aria-label={getDictionary(locale).nav.home}>
               <Logo />
             </Link>
             <h2 className="mt-6 text-2xl font-semibold leading-tight tracking-[-0.02em] text-text">
-              La conformité nLPD de votre PME, à prix fixe.
+              {t.tagline}
             </h2>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-muted">
-              Thrax Legal met les PME suisses en conformité avec la nLPD :
-              registre des traitements, politique de confidentialité,
-              contrats de sous-traitance.
+              {t.description}
             </p>
           </div>
 
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-              Nous contacter
+              {t.contact}
             </p>
-            <p className="mt-4 text-sm text-text">hey@thraxlegal.ch</p>
+            <p className="mt-4 text-sm text-text">hey@thrax-legal.ch</p>
 
             <p className="mt-8 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-              Horaires
+              {t.hours}
             </p>
-            <p className="mt-4 text-sm text-text">Lundi à vendredi</p>
-            <p className="text-sm text-text">09:00 à 18:00</p>
+            <p className="mt-4 text-sm text-text">{t.hoursValue}</p>
+            <p className="text-sm text-text">{t.hoursValue2}</p>
           </div>
 
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-              Menu
+              {t.menu}
             </p>
             <ul className="mt-4 divide-y divide-border border-t border-border">
               {MENU.map((item) => (
@@ -84,12 +86,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-16 max-w-2xl text-xs leading-relaxed text-text-muted">
-          Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats : nous ne
-          portons pas le titre d&rsquo;avocat et n&rsquo;assurons pas la
-          représentation devant les tribunaux, réservée aux avocats inscrits
-          à un registre cantonal suisse. Pour toute procédure contentieuse
-          nécessitant une représentation, nous vous orientons vers un
-          avocat.
+          {t.disclaimer}
         </p>
 
         <p
@@ -101,10 +98,10 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-border pt-8 text-xs text-text-muted md:flex-row md:items-center md:justify-between">
           <Link href="#" className="transition-colors hover:text-text">
-            Conditions générales
+            {t.terms}
           </Link>
-          <p>Suisse romande &middot; FR</p>
-          <p>&copy; {new Date().getFullYear()} Thrax Legal. Tous droits réservés.</p>
+          <p>{t.region}</p>
+          <p>&copy; {new Date().getFullYear()} Thrax Legal. {t.rights}</p>
         </div>
       </Container>
     </footer>

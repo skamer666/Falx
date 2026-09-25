@@ -146,23 +146,29 @@ export function TrustBar({
 }
 
 export function LawyerComparison({
+  lawyerLabel = "Avocat traditionnel",
   lawyerRange,
   lawyerNote,
+  brandLabel = "Thrax Legal",
   thraxPrice,
   thraxNote,
+  disclaimer = "Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un avocat en Suisse. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
   className = "",
 }: {
+  lawyerLabel?: string;
   lawyerRange: string;
   lawyerNote: string;
+  brandLabel?: string;
   thraxPrice: string;
   thraxNote: string;
+  disclaimer?: string;
   className?: string;
 }) {
   return (
     <div className={`grid gap-4 sm:grid-cols-2 ${className}`}>
       <div className="rounded-2xl border border-border bg-surface p-6">
         <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-          Avocat traditionnel
+          {lawyerLabel}
         </p>
         <p className="mt-3 text-2xl font-semibold tracking-tight text-text-muted">
           {lawyerRange}
@@ -173,7 +179,7 @@ export function LawyerComparison({
       </div>
       <div className="rounded-2xl border border-text bg-surface p-6">
         <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-          Thrax Legal
+          {brandLabel}
         </p>
         <p className="mt-3 text-2xl font-semibold tracking-tight text-text">
           {thraxPrice}
@@ -182,12 +188,7 @@ export function LawyerComparison({
           {thraxNote}
         </p>
       </div>
-      <p className="sm:col-span-2 text-xs text-text-muted">
-        Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un
-        avocat en Suisse. Thrax Legal n&rsquo;est pas un cabinet
-        d&rsquo;avocats et n&rsquo;assure pas la représentation devant les
-        tribunaux.
-      </p>
+      <p className="sm:col-span-2 text-xs text-text-muted">{disclaimer}</p>
     </div>
   );
 }

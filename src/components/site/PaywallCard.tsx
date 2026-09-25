@@ -7,6 +7,7 @@ export default function PaywallCard({
   ctaLabel = "Débloquer le rapport complet",
   deliveryNote = "Livraison immédiate",
   guaranteeNote = "Remboursé sous 14 jours si besoin",
+  securePaymentLabel = "Paiement sécurisé",
   disabled = false,
 }: {
   price: string;
@@ -15,6 +16,7 @@ export default function PaywallCard({
   ctaLabel?: string;
   deliveryNote?: string;
   guaranteeNote?: string;
+  securePaymentLabel?: string;
   disabled?: boolean;
 }) {
   return (
@@ -44,7 +46,7 @@ export default function PaywallCard({
         {ctaLabel}
       </PrimaryButton>
       <p className="mt-3 text-center text-xs text-text-muted">
-        Paiement sécurisé &middot; {deliveryNote}
+        {securePaymentLabel} &middot; {deliveryNote}
         {guaranteeNote ? <> &middot; {guaranteeNote}</> : null}
       </p>
     </div>

@@ -1,35 +1,52 @@
 import type { MetadataRoute } from "next";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
+import { LOCALES, LOCALE_TAGS } from "@/i18n/config";
+import { SITE_URL } from "@/lib/site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thraxlegal.ch";
+function alternates(path: string) {
+  return {
+    languages: Object.fromEntries(
+      LOCALES.map((locale) => [LOCALE_TAGS[locale], `${SITE_URL}/${locale}${path}`]),
+    ),
+  };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const entries: MetadataRoute.Sitemap = [];
 
-  return [
-    {
-      url: siteUrl,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${siteUrl}/suivi-conformite`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/guide`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    ...GUIDE_ARTICLES.map((article) => ({
-      url: `${siteUrl}/guide/${article.slug}`,
-      lastModified: new Date(article.updatedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    })),
-  ];
+  for (const locale of LOCALES) {
+    entries.push(
+      {
+        url: `${SITE_URL}/${locale}`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 1,
+        alternates: alternates(""),
+      },
+      {
+        url: `${SITE_URL}/${locale}/suivi-conformite`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.8,
+        alternates: alternates("/suivi-conformite"),
+      },
+      {
+        url: `${SITE_URL}/${locale}/guide`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: alternates("/guide"),
+      },
+      ...GUIDE_ARTICLES.map((article) => ({
+        url: `${SITE_URL}/${locale}/guide/${article.slug}`,
+        lastModified: new Date(article.updatedAt),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+        alternates: alternates(`/guide/${article.slug}`),
+      })),
+    );
+  }
+
+  return entries;
 }
