@@ -103,6 +103,12 @@ function DiagnosticCta({ className = "" }: { className?: string }) {
         Faire mon diagnostic gratuit
       </PrimaryButton>
       <p className="text-sm text-text-muted">2 minutes &middot; Sans email requis</p>
+      <Link
+        href={CHECKOUT_HREF}
+        className="mt-1 text-sm text-text-muted underline decoration-dotted underline-offset-4 hover:text-text"
+      >
+        Je sais déjà ce qu&rsquo;il me faut, acheter directement — 590 CHF
+      </Link>
     </div>
   );
 }
@@ -263,8 +269,8 @@ export default function Home() {
                 </h2>
                 <LawyerComparison
                   className="mt-8"
-                  lawyerRange="250 à 3'000 CHF"
-                  lawyerNote="Pour une mise en conformité nLPD équivalente, facturée à l'heure (250 à 600 CHF/h) selon la complexité."
+                  lawyerRange="750 à 3'000 CHF"
+                  lawyerNote="Pour un dossier équivalent (5 documents adaptés à votre activité), soit 3 à 5 heures facturées à 250-600 CHF/h selon la complexité."
                   thraxPrice="590 CHF"
                   thraxNote="Pack complet à prix fixe, livré sous 3 jours ouvrables, sans rendez-vous."
                 />
