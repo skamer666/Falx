@@ -31,6 +31,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal n'est pas un cabinet d'avocats : nous ne portons pas le titre d'avocat et n'assurons pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour toute procédure contentieuse nécessitant une représentation, nous vous orientons vers un avocat.",
       terms: "Conditions générales",
+      privacy: "Politique de confidentialité",
       region: "Suisse · FR/DE/EN/IT",
       rights: "Tous droits réservés.",
     },
@@ -65,6 +66,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal ist keine Anwaltskanzlei: Wir führen keinen Anwaltstitel und übernehmen keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei streitigen Verfahren, die eine Vertretung erfordern, verweisen wir Sie an eine Anwältin oder einen Anwalt.",
       terms: "Allgemeine Geschäftsbedingungen",
+      privacy: "Datenschutzerklärung",
       region: "Schweiz · FR/DE/EN/IT",
       rights: "Alle Rechte vorbehalten.",
     },
@@ -99,6 +101,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal is not a law firm: we do not hold the title of attorney and do not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For any contentious matter requiring representation, we refer you to an attorney.",
       terms: "Terms & Conditions",
+      privacy: "Privacy Policy",
       region: "Switzerland · FR/DE/EN/IT",
       rights: "All rights reserved.",
     },
@@ -133,6 +136,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal non è uno studio legale: non portiamo il titolo di avvocato e non garantiamo la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per qualsiasi procedura contenziosa che richieda una rappresentanza, vi indirizziamo verso un avvocato.",
       terms: "Termini e condizioni",
+      privacy: "Informativa sulla privacy",
       region: "Svizzera · FR/DE/EN/IT",
       rights: "Tutti i diritti riservati.",
     },

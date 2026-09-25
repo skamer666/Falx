@@ -45,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
         alternates: alternates(`/guide/${article.slug}`),
       })),
+      {
+        url: `${SITE_URL}/${locale}/confidentialite`,
+        lastModified: now,
+        changeFrequency: "yearly",
+        priority: 0.3,
+        alternates: alternates("/confidentialite"),
+      },
     );
   }
 

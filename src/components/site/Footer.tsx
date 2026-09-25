@@ -97,9 +97,14 @@ export default function Footer({ locale }: { locale: Locale }) {
         </p>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-border pt-8 text-xs text-text-muted md:flex-row md:items-center md:justify-between">
-          <Link href="#" className="transition-colors hover:text-text">
-            {t.terms}
-          </Link>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href={`/${locale}/confidentialite`} className="transition-colors hover:text-text">
+              {t.privacy}
+            </Link>
+            <Link href="#" className="transition-colors hover:text-text">
+              {t.terms}
+            </Link>
+          </div>
           <p>{t.region}</p>
           <p>&copy; {new Date().getFullYear()} Thrax Legal. {t.rights}</p>
         </div>
