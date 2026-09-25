@@ -123,6 +123,24 @@ function Fr({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
+      <h2>Véhicule de société, de location ou en leasing</h2>
+      <p>
+        Le nom inscrit sur le permis de circulation n&rsquo;est qu&rsquo;un
+        « détenteur administratif » : pour un véhicule de leasing, de
+        location ou d&rsquo;entreprise, ce n&rsquo;est pas nécessairement la
+        personne qui conduisait au moment de l&rsquo;infraction. Si le
+        détenteur ne désigne pas le conducteur réel dans le délai imparti,
+        c&rsquo;est lui qui risque d&rsquo;être sanctionné à sa place &mdash;
+        mais l&rsquo;inverse est vrai aussi&nbsp;: si vous n&rsquo;étiez pas
+        au volant, vous pouvez et devez le faire savoir.
+      </p>
+      <p>
+        C&rsquo;est un motif particulièrement pertinent pour les excès de
+        vitesse constatés par radar sur un véhicule de société, de leasing
+        ou de location&nbsp;: la photo montre le véhicule, pas
+        nécessairement vous.
+      </p>
+
       <h2>Une précision importante</h2>
       <p>
         Ce guide présente des principes établis par la jurisprudence, pas un
@@ -242,6 +260,22 @@ function De({ locale }: { locale: Locale }) {
         </li>
       </ul>
 
+      <h2>Firmen-, Miet- oder Leasingfahrzeug</h2>
+      <p>
+        Der im Fahrzeugausweis eingetragene Name ist nur eine «administrative
+        Halterschaft»: Bei einem Leasing-, Miet- oder Firmenfahrzeug ist das
+        nicht zwingend die Person, die zum Zeitpunkt der Widerhandlung
+        gefahren ist. Bezeichnet die Halterin oder der Halter die tatsächlich
+        fahrende Person nicht innerhalb der Frist, riskiert sie oder er
+        selbst sanktioniert zu werden &mdash; das gilt aber auch umgekehrt:
+        Waren Sie nicht am Steuer, können und sollten Sie das mitteilen.
+      </p>
+      <p>
+        Das ist besonders relevant bei per Radar festgestellten
+        Geschwindigkeitsübertretungen mit einem Firmen-, Leasing- oder
+        Mietfahrzeug: Das Foto zeigt das Fahrzeug, nicht zwingend Sie.
+      </p>
+
       <h2>Ein wichtiger Hinweis</h2>
       <p>
         Dieser Ratgeber stellt von der Rechtsprechung etablierte Grundsätze
@@ -358,6 +392,22 @@ function En({ locale }: { locale: Locale }) {
           isolated local exceptions, such as in Geneva).
         </li>
       </ul>
+
+      <h2>Company, rental or leased vehicles</h2>
+      <p>
+        The name on the vehicle registration is only an
+        &ldquo;administrative holder&rdquo;: for a leased, rented or
+        company vehicle, that isn&rsquo;t necessarily the person who was
+        driving at the time of the offence. If the holder doesn&rsquo;t
+        identify the actual driver within the deadline, they risk being
+        sanctioned instead &mdash; but the reverse is also true: if you
+        weren&rsquo;t driving, you can and should say so.
+      </p>
+      <p>
+        This is particularly relevant for radar-detected speeding on a
+        company, leased or rental vehicle: the photo shows the vehicle, not
+        necessarily you.
+      </p>
 
       <h2>An important note</h2>
       <p>
@@ -480,6 +530,22 @@ function It({ locale }: { locale: Locale }) {
           eccezioni locali puntuali, ad esempio a Ginevra).
         </li>
       </ul>
+
+      <h2>Veicolo aziendale, a noleggio o in leasing</h2>
+      <p>
+        Il nome sul permesso di circolazione è solo un «detentore
+        amministrativo»: per un veicolo in leasing, a noleggio o aziendale,
+        non è necessariamente la persona che guidava al momento
+        dell&rsquo;infrazione. Se il detentore non indica il vero
+        conducente entro il termine previsto, rischia di essere sanzionato
+        al suo posto &mdash; ma vale anche il contrario: se non eravate voi
+        alla guida, potete e dovete comunicarlo.
+      </p>
+      <p>
+        Questo è particolarmente rilevante per gli eccessi di velocità
+        accertati da radar su un veicolo aziendale, in leasing o a
+        noleggio: la foto mostra il veicolo, non necessariamente voi.
+      </p>
 
       <h2>Una precisazione importante</h2>
       <p>

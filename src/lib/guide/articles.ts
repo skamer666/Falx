@@ -121,6 +121,28 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
     updatedAt: "2026-09-25",
   },
   {
+    slug: "defaut-traduction-amende-suisse",
+    title: {
+      fr: "Amende non traduite : un motif de nullité que peu de gens connaissent",
+      de: "Nicht übersetzte Busse: ein kaum bekannter Nichtigkeitsgrund",
+      en: "Untranslated fine: a little-known ground for nullity",
+      it: "Multa non tradotta: un motivo di nullità poco conosciuto",
+    },
+    shortTitle: {
+      fr: "Amende non traduite",
+      de: "Nicht übersetzte Busse",
+      en: "Untranslated fine",
+      it: "Multa non tradotta",
+    },
+    description: {
+      fr: "Si l'amende ou l'ordonnance pénale n'est pas dans une langue que vous comprenez, la procédure peut être frappée de nullité absolue.",
+      de: "Ist die Busse oder der Strafbefehl nicht in einer Sprache verfasst, die Sie verstehen, kann das Verfahren absolut nichtig sein.",
+      en: "If the fine or penal order isn't in a language you understand, the proceedings may be absolutely null.",
+      it: "Se la multa o il decreto penale non sono in una lingua che comprendete, il procedimento può essere assolutamente nullo.",
+    },
+    updatedAt: "2026-09-25",
+  },
+  {
     slug: "retrait-de-permis",
     title: {
       fr: "Retrait de permis en Suisse : ce qu'il faut savoir",

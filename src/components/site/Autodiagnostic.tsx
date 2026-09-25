@@ -15,13 +15,15 @@ type StationnementEvidence =
   | "aucune_signalisation"
   | "inconnu";
 type Evidence = VitesseEvidence | StationnementEvidence;
-type StepKey = "type" | "paid" | "deadline" | "evidence" | "reason";
+type StepKey = "type" | "paid" | "deadline" | "language" | "evidence" | "vehicleOwnership" | "reason";
 
 type Answers = {
   type?: FineType;
   paid?: YesNo;
   deadline?: Deadline;
+  language?: YesNo;
   evidence?: Evidence;
+  vehicleOwnership?: YesNo;
   reason?: Reason;
 };
 
@@ -32,10 +34,14 @@ type Content = {
   paidOptions: { value: YesNo; label: string }[];
   deadlineQuestion: string;
   deadlineOptions: { value: Deadline; label: string }[];
+  languageQuestion: string;
+  languageOptions: { value: YesNo; label: string }[];
   evidenceQuestionVitesse: string;
   evidenceOptionsVitesse: { value: VitesseEvidence; label: string }[];
   evidenceQuestionStationnement: string;
   evidenceOptionsStationnement: { value: StationnementEvidence; label: string }[];
+  vehicleOwnershipQuestion: string;
+  vehicleOwnershipOptions: { value: YesNo; label: string }[];
   reasonQuestion: string;
   reasonOptions: { value: Reason; label: string }[];
   questionCounter: (current: number, total: number) => string;
@@ -75,6 +81,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Entre 10 et 30 jours" },
       { value: "plus30", label: "Plus de 30 jours" },
     ],
+    languageQuestion: "L'amende ou l'ordonnance pénale était-elle rédigée dans une langue que vous comprenez bien ?",
+    languageOptions: [
+      { value: "oui", label: "Oui, je comprends bien la langue utilisée" },
+      { value: "non", label: "Non, je ne comprends pas bien cette langue" },
+    ],
     evidenceQuestionVitesse: "Comment l'infraction a-t-elle été constatée ?",
     evidenceOptionsVitesse: [
       { value: "radar_officiel", label: "Par un radar ou un appareil de mesure officiel de la police" },
@@ -87,6 +98,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "marquage_seul", label: "Seulement un marquage au sol ou un panneau « visiteurs », sans panneau officiel" },
       { value: "aucune_signalisation", label: "Aucune signalisation visible" },
       { value: "inconnu", label: "Je ne sais pas / je n'ai pas vérifié" },
+    ],
+    vehicleOwnershipQuestion: "Le véhicule flashé est-il un véhicule de société, de location ou en leasing ?",
+    vehicleOwnershipOptions: [
+      { value: "oui", label: "Oui" },
+      { value: "non", label: "Non, c'est mon véhicule personnel" },
     ],
     reasonQuestion: "Avez-vous un motif concret de contestation (signalisation, erreur, circonstance particulière) ?",
     reasonOptions: [
@@ -134,6 +150,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Zwischen 10 und 30 Tagen" },
       { value: "plus30", label: "Mehr als 30 Tage" },
     ],
+    languageQuestion: "War die Busse oder der Strafbefehl in einer Sprache verfasst, die Sie gut verstehen?",
+    languageOptions: [
+      { value: "oui", label: "Ja, ich verstehe die verwendete Sprache gut" },
+      { value: "non", label: "Nein, ich verstehe diese Sprache nicht gut" },
+    ],
     evidenceQuestionVitesse: "Wie wurde die Widerhandlung festgestellt?",
     evidenceOptionsVitesse: [
       { value: "radar_officiel", label: "Durch ein offizielles Radar- oder Messgerät der Polizei" },
@@ -146,6 +167,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "marquage_seul", label: "Nur eine Bodenmarkierung oder ein «Besucher»-Schild, ohne offizielles Signal" },
       { value: "aucune_signalisation", label: "Keine sichtbare Signalisation" },
       { value: "inconnu", label: "Ich weiss es nicht / habe es nicht geprüft" },
+    ],
+    vehicleOwnershipQuestion: "Handelt es sich beim geblitzten Fahrzeug um ein Firmen-, Miet- oder Leasingfahrzeug?",
+    vehicleOwnershipOptions: [
+      { value: "oui", label: "Ja" },
+      { value: "non", label: "Nein, es ist mein privates Fahrzeug" },
     ],
     reasonQuestion: "Haben Sie einen konkreten Grund für eine Anfechtung (Signalisation, Fehler, besonderer Umstand)?",
     reasonOptions: [
@@ -193,6 +219,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Between 10 and 30 days" },
       { value: "plus30", label: "More than 30 days" },
     ],
+    languageQuestion: "Was the fine or penal order written in a language you understand well?",
+    languageOptions: [
+      { value: "oui", label: "Yes, I understand the language used well" },
+      { value: "non", label: "No, I don't understand this language well" },
+    ],
     evidenceQuestionVitesse: "How was the offence recorded?",
     evidenceOptionsVitesse: [
       { value: "radar_officiel", label: "By an official police radar or measuring device" },
@@ -205,6 +236,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "marquage_seul", label: "Only ground markings or a “visitors” sign, with no official sign" },
       { value: "aucune_signalisation", label: "No visible signage" },
       { value: "inconnu", label: "I don't know / didn't check" },
+    ],
+    vehicleOwnershipQuestion: "Is the flashed vehicle a company, rental or leased vehicle?",
+    vehicleOwnershipOptions: [
+      { value: "oui", label: "Yes" },
+      { value: "non", label: "No, it's my personal vehicle" },
     ],
     reasonQuestion: "Do you have a concrete reason to contest it (signage, error, particular circumstance)?",
     reasonOptions: [
@@ -252,6 +288,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "entre10et30", label: "Tra 10 e 30 giorni" },
       { value: "plus30", label: "Più di 30 giorni" },
     ],
+    languageQuestion: "La multa o il decreto penale erano redatti in una lingua che comprendete bene?",
+    languageOptions: [
+      { value: "oui", label: "Sì, comprendo bene la lingua utilizzata" },
+      { value: "non", label: "No, non comprendo bene questa lingua" },
+    ],
     evidenceQuestionVitesse: "Come è stata accertata l'infrazione?",
     evidenceOptionsVitesse: [
       { value: "radar_officiel", label: "Da un radar o apparecchio di misura ufficiale della polizia" },
@@ -264,6 +305,11 @@ const CONTENT: Record<Locale, Content> = {
       { value: "marquage_seul", label: "Solo una segnaletica orizzontale o un cartello «visitatori», senza cartello ufficiale" },
       { value: "aucune_signalisation", label: "Nessuna segnaletica visibile" },
       { value: "inconnu", label: "Non lo so / non ho verificato" },
+    ],
+    vehicleOwnershipQuestion: "Il veicolo fotografato è un veicolo aziendale, a noleggio o in leasing?",
+    vehicleOwnershipOptions: [
+      { value: "oui", label: "Sì" },
+      { value: "non", label: "No, è il mio veicolo personale" },
     ],
     reasonQuestion: "Avete un motivo concreto di contestazione (segnaletica, errore, circostanza particolare)?",
     reasonOptions: [
@@ -306,8 +352,10 @@ function computeVerdict(
   deadline: Deadline,
   reason: Reason,
   evidence: Evidence | undefined,
+  language: YesNo | undefined,
+  vehicleOwnership: YesNo | undefined,
 ): "good" | "uncertain" | "low" {
-  const strong = isStrongEvidence(evidence);
+  const strong = isStrongEvidence(evidence) || language === "non" || vehicleOwnership === "oui";
   if (strong) return deadline === "plus30" ? "uncertain" : "good";
   if (reason === "non") return "low";
   if (deadline === "plus30") return "uncertain";
@@ -316,8 +364,9 @@ function computeVerdict(
 }
 
 function getStepOrder(type: FineType | undefined): StepKey[] {
-  const order: StepKey[] = ["type", "paid", "deadline"];
+  const order: StepKey[] = ["type", "paid", "deadline", "language"];
   if (type === "vitesse" || type === "stationnement") order.push("evidence");
+  if (type === "vitesse") order.push("vehicleOwnership");
   order.push("reason");
   return order;
 }
@@ -385,7 +434,13 @@ export default function Autodiagnostic({
   }
 
   if (isDone) {
-    const verdict = computeVerdict(answers.deadline!, answers.reason!, answers.evidence);
+    const verdict = computeVerdict(
+      answers.deadline!,
+      answers.reason!,
+      answers.evidence,
+      answers.language,
+      answers.vehicleOwnership,
+    );
     const tone = verdict === "good" ? "success" : "danger";
     const label =
       verdict === "good"
@@ -442,11 +497,15 @@ export default function Autodiagnostic({
         ? content.paidQuestion
         : currentStep === "deadline"
           ? content.deadlineQuestion
-          : currentStep === "evidence"
-            ? answers.type === "vitesse"
-              ? content.evidenceQuestionVitesse
-              : content.evidenceQuestionStationnement
-            : content.reasonQuestion;
+          : currentStep === "language"
+            ? content.languageQuestion
+            : currentStep === "evidence"
+              ? answers.type === "vitesse"
+                ? content.evidenceQuestionVitesse
+                : content.evidenceQuestionStationnement
+              : currentStep === "vehicleOwnership"
+                ? content.vehicleOwnershipQuestion
+                : content.reasonQuestion;
 
   const options: { value: string; label: string }[] =
     currentStep === "type"
@@ -455,11 +514,15 @@ export default function Autodiagnostic({
         ? content.paidOptions
         : currentStep === "deadline"
           ? content.deadlineOptions
-          : currentStep === "evidence"
-            ? answers.type === "vitesse"
-              ? content.evidenceOptionsVitesse
-              : content.evidenceOptionsStationnement
-            : content.reasonOptions;
+          : currentStep === "language"
+            ? content.languageOptions
+            : currentStep === "evidence"
+              ? answers.type === "vitesse"
+                ? content.evidenceOptionsVitesse
+                : content.evidenceOptionsStationnement
+              : currentStep === "vehicleOwnership"
+                ? content.vehicleOwnershipOptions
+                : content.reasonOptions;
 
   return (
     <div className={`rounded-2xl border border-border bg-surface p-6 md:p-8 ${className}`}>
