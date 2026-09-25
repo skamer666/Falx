@@ -75,7 +75,11 @@ function Fr() {
     <>
       <h2>Qui est responsable du traitement</h2>
       <p>
-        Ce site est édité par Thrax Legal. Pour toute question relative à la
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; est le nom commercial sous
+        lequel <strong>[Prénom NOM]</strong>, indépendant(e) domicilié(e) en
+        Belgique (numéro d&rsquo;entreprise BCE&nbsp;: [à compléter]),
+        propose les services décrits sur ce site. Il ne s&rsquo;agit pas
+        d&rsquo;une société distincte. Pour toute question relative à la
         présente politique ou à vos données, contactez-nous à{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
@@ -172,9 +176,13 @@ function De() {
     <>
       <h2>Wer für die Bearbeitung verantwortlich ist</h2>
       <p>
-        Diese Website wird von Thrax Legal betrieben. Bei Fragen zu dieser
-        Erklärung oder zu Ihren Daten kontaktieren Sie uns unter{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; ist der Handelsname, unter dem{" "}
+        <strong>[Vorname NAME]</strong>, selbstständig erwerbstätig mit
+        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: [noch zu
+        ergänzen]), die auf dieser Website beschriebenen Leistungen
+        anbietet. Es handelt sich nicht um eine eigenständige Gesellschaft.
+        Bei Fragen zu dieser Erklärung oder zu Ihren Daten kontaktieren Sie
+        uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>Welche Daten wir heute bearbeiten</h2>
@@ -269,9 +277,12 @@ function En() {
     <>
       <h2>Who is responsible for processing</h2>
       <p>
-        This site is published by Thrax Legal. For any question about this
-        policy or your data, contact us at{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        &ldquo;Thrax Legal&rdquo; is the trading name under which{" "}
+        <strong>[First name LAST NAME]</strong>, a self-employed individual
+        resident in Belgium (business number BCE: [to be added]), provides
+        the services described on this site. It is not a separate legal
+        entity. For any question about this policy or your data, contact us
+        at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>What data we process today</h2>
@@ -360,9 +371,13 @@ function It() {
     <>
       <h2>Chi è responsabile del trattamento</h2>
       <p>
-        Questo sito è pubblicato da Thrax Legal. Per qualsiasi domanda
-        relativa alla presente informativa o ai vostri dati, contattateci
-        a <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; è il nome commerciale sotto il
+        quale <strong>[Nome COGNOME]</strong>, lavoratore/lavoratrice
+        autonomo/a domiciliato/a in Belgio (numero d&rsquo;impresa
+        BCE&nbsp;: [da completare]), offre i servizi descritti su questo
+        sito. Non si tratta di una società distinta. Per qualsiasi domanda
+        relativa alla presente informativa o ai vostri dati, contattateci a{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>Quali dati trattiamo oggi</h2>

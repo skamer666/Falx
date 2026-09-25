@@ -52,6 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.3,
         alternates: alternates("/confidentialite"),
       },
+      {
+        url: `${SITE_URL}/${locale}/conditions-generales`,
+        lastModified: now,
+        changeFrequency: "yearly",
+        priority: 0.3,
+        alternates: alternates("/conditions-generales"),
+      },
     );
   }
 

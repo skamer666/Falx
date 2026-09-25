@@ -101,7 +101,7 @@ export default function Footer({ locale }: { locale: Locale }) {
             <Link href={`/${locale}/confidentialite`} className="transition-colors hover:text-text">
               {t.privacy}
             </Link>
-            <Link href="#" className="transition-colors hover:text-text">
+            <Link href={`/${locale}/conditions-generales`} className="transition-colors hover:text-text">
               {t.terms}
             </Link>
           </div>
