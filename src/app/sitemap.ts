@@ -25,13 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: alternates(""),
       },
       {
-        url: `${SITE_URL}/${locale}/suivi-conformite`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.8,
-        alternates: alternates("/suivi-conformite"),
-      },
-      {
         url: `${SITE_URL}/${locale}/guide`,
         lastModified: now,
         changeFrequency: "weekly",

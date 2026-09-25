@@ -46,9 +46,6 @@ type HomeContent = {
   offerCtaLabel: string;
   offerDeliveryNote: string;
   securePaymentLabel: string;
-  upsellTitle: string;
-  upsellText: string;
-  upsellLinkLabel: string;
   lawyerHeading: string;
   lawyerLabel: string;
   lawyerRange: string;
@@ -64,408 +61,352 @@ type HomeContent = {
 
 const CONTENT: Record<Locale, HomeContent> = {
   fr: {
-    metaTitle: "Conformité nLPD pour PME suisses, dès 590 CHF | Thrax Legal",
+    metaTitle: "Contester une amende en Suisse, dès 89 CHF | Thrax Legal",
     metaDescription:
-      "Mettez votre PME en conformité avec la nLPD révisée : registre des traitements, politique de confidentialité, contrats de sous-traitance. Prix fixe 590 CHF, sans avocat, sans rendez-vous, livré en 3 jours ouvrables.",
-    heroTitle: "Votre PME est-elle exposée aux sanctions de la nLPD ?",
+      "Vérifiez gratuitement vos chances de contester une amende suisse (stationnement, excès de vitesse, CFF), puis recevez votre lettre de contestation prête à envoyer. 89 CHF, sans avocat, sans rendez-vous, livré sous 48h.",
+    heroTitle: "Amende reçue ? Vérifiez si vous pouvez la contester, en 2 minutes.",
     heroSubtitle:
-      "La loi révisée sur la protection des données expose les PME et leurs dirigeants à des sanctions pouvant atteindre 250'000 CHF en cas de manquement grave. Mettez votre entreprise en conformité, sans avocat, sans rendez-vous.",
+      "Stationnement, excès de vitesse, transports publics : payer une amende vaut acceptation définitive. Avant de payer, vérifiez gratuitement vos chances de contestation — sans avocat, sans rendez-vous.",
     priceBadgeLabel: "Pack complet, paiement unique",
     diagnosticCtaLabel: "Faire mon diagnostic gratuit",
     diagnosticCtaSub: "2 minutes · Sans email requis",
-    directBuyLabel: "Je sais déjà ce qu'il me faut, acheter directement — 590 CHF",
-    stickyBarLabel: "Pack Conformité nLPD",
+    directBuyLabel: "Je sais déjà ce qu'il me faut, acheter directement — 89 CHF",
+    stickyBarLabel: "Pack Contestation",
     trustBar: [
-      "Conforme à la nLPD révisée, en vigueur depuis septembre 2023.",
-      "Aucun rendez-vous nécessaire : tout se passe en ligne, du diagnostic à la livraison.",
-      "Chaque document est vérifié par une vraie personne avant envoi.",
+      "Diagnostic gratuit en 2 minutes, avant de payer quoi que ce soit.",
+      "Aucun rendez-vous nécessaire : tout se passe en ligne.",
+      "Chaque lettre de contestation est vérifiée par une vraie personne avant envoi.",
     ],
     diagnosticHeading: "Diagnostic gratuit en 2 minutes",
     diagnosticSubheading:
-      "Répondez à 6 questions pour connaître votre niveau de conformité nLPD et les points précis à corriger.",
+      "Répondez à quelques questions pour connaître vos chances de contestation avant de vous engager.",
     stepsHeading: "Comment ça marche",
     steps: [
-      {
-        title: "Diagnostic gratuit",
-        description: "Répondez à 6 questions en 2 minutes pour identifier vos points de non-conformité.",
-      },
-      {
-        title: "Commande en ligne",
-        description: "590 CHF, paiement unique. Aucun appel, aucun rendez-vous nécessaire.",
-      },
-      {
-        title: "Livraison sous 3 jours",
-        description: "Vos documents sont rédigés et vérifiés par notre équipe, prêts à l'emploi.",
-      },
+      { title: "Diagnostic gratuit", description: "Répondez à 4 questions en 2 minutes pour connaître vos chances de contestation." },
+      { title: "Commande en ligne", description: "89 CHF, paiement unique. Aucun appel, aucun rendez-vous nécessaire." },
+      { title: "Livraison sous 48h", description: "Votre lettre de contestation est rédigée et vérifiée par notre équipe, prête à envoyer." },
     ],
-    includedHeading: "Ce qui est inclus dans le Pack Conformité",
+    includedHeading: "Ce qui est inclus dans le Pack Contestation",
     included: [
-      { title: "Registre des traitements", description: "Recense les données que vous traitez et pourquoi, adapté à votre activité." },
-      { title: "Politique de confidentialité", description: "Pour votre site web et vos relations RH, conforme à la nLPD." },
-      { title: "Contrat de sous-traitance (DPA)", description: "Modèle prêt à l'emploi pour vos prestataires (hébergeur, CRM, comptabilité)." },
-      { title: "Procédure violation de données", description: "La marche à suivre en cas de fuite ou de piratage, étape par étape." },
-      { title: "Checklist de mise en œuvre", description: "Pour vérifier et maintenir votre conformité dans le temps." },
+      { title: "Analyse de vos chances", description: "Basée sur les faits précis de votre dossier, pas une réponse générique." },
+      { title: "Lettre de contestation prête à envoyer", description: "Rédigée selon la procédure applicable à votre situation." },
+      { title: "Autorité et délai exacts", description: "Les bonnes coordonnées et le bon délai, pour ne rien rater." },
+      { title: "Vérifiée par notre équipe", description: "Une vraie personne relit votre dossier avant l'envoi." },
     ],
     guideLabel: "Pour aller plus loin",
-    guideLinkLabel: "Voir tout le guide nLPD ↗",
+    guideLinkLabel: "Voir tout le guide ↗",
     offerBullets: [
-      "Registre des traitements et politique de confidentialité adaptés à votre activité",
-      "Modèle de contrat de sous-traitance (DPA) et procédure violation de données",
-      "Vérifié par notre équipe avant envoi",
+      "Analyse de vos chances basée sur les faits de votre dossier",
+      "Lettre de contestation rédigée et prête à envoyer, avec la bonne autorité et le bon délai",
+      "Vérifiée par notre équipe avant envoi",
     ],
-    offerCtaLabel: "Commander mon Pack Conformité",
-    offerDeliveryNote: "Livré sous 3 jours ouvrables",
+    offerCtaLabel: "Commander mon Pack Contestation",
+    offerDeliveryNote: "Livré sous 48h",
     securePaymentLabel: "Paiement sécurisé",
-    upsellTitle: "En option : Suivi Conformité, 79 CHF/mois",
-    upsellText:
-      "Mises à jour légales, revue annuelle de votre registre et questions illimitées par email. Résiliable à tout moment.",
-    upsellLinkLabel: "En savoir plus",
     lawyerHeading: "Le prix d'un avocat, sans l'avocat",
     lawyerLabel: "Avocat traditionnel",
-    lawyerRange: "750 à 3'000 CHF",
-    lawyerNote: "Pour un dossier équivalent (5 documents adaptés à votre activité), soit 3 à 5 heures facturées à 250-600 CHF/h selon la complexité.",
+    lawyerRange: "300 à 1'200 CHF",
+    lawyerNote: "Pour une lettre de contestation équivalente, soit 1 à 2 heures facturées à 250-600 CHF/h selon la complexité.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "590 CHF",
-    thraxNote: "Pack complet à prix fixe, livré sous 3 jours ouvrables, sans rendez-vous.",
+    thraxPrice: "89 CHF",
+    thraxNote: "Pack complet à prix fixe, livré sous 48h, sans rendez-vous.",
     lawyerDisclaimer:
       "Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un avocat en Suisse. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
     faqHeading: "Questions fréquentes",
     faq: [
       {
-        q: "Qu'est-ce que la nLPD et pourquoi ma PME doit-elle s'y conformer ?",
-        a: "La nLPD (loi révisée sur la protection des données) est en vigueur depuis le 1er septembre 2023. Elle s'applique à toute entreprise suisse qui traite des données personnelles : clients, employés, prospects. La taille de l'entreprise ne dispense pas des obligations de base (registre des traitements, information des personnes concernées, sécurité des données).",
+        q: "Combien de temps ai-je pour contester une amende ?",
+        a: "Cela dépend du type de document reçu : 30 jours pour une amende d'ordre (au-delà, elle est considérée comme acceptée si non payée mais transmise en procédure pénale), 10 jours pour faire opposition à une ordonnance pénale. Notre diagnostic gratuit identifie votre situation précise.",
       },
       {
-        q: "Quelles sont les sanctions en cas de non-conformité ?",
-        a: "La loi prévoit des amendes pouvant atteindre 250'000 CHF à l'encontre des personnes responsables, en cas de manquement grave et intentionnel (défaut d'information, violation des obligations de sous-traitance). Le diagnostic gratuit vous indique où se situent vos risques.",
+        q: "Ai-je de bonnes chances de gagner ?",
+        a: "Ça dépend entièrement de votre dossier. Une contestation sans motif concret (juste ne pas être d'accord) échoue presque toujours. Une erreur d'identification, un défaut de signalisation ou un vice de procédure a de vraies chances. Le diagnostic gratuit vous donne une évaluation honnête avant d'aller plus loin.",
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
-        a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Nous vous fournissons des documents de mise en conformité vérifiés par notre équipe. Pour un contentieux, nous vous orientons vers un avocat.",
+        a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour les dossiers graves (retrait de permis important, risque de peine privative de liberté), nous vous orientons vers un avocat spécialisé plutôt que de vous vendre un service inadapté.",
       },
       {
-        q: "Combien de temps pour recevoir mes documents ?",
-        a: "3 jours ouvrables après votre commande. Vos documents sont rédigés à partir de vos réponses, puis vérifiés par notre équipe avant envoi.",
+        q: "Combien de temps pour recevoir ma lettre de contestation ?",
+        a: "48 heures après votre commande. Votre lettre est rédigée à partir de votre dossier, puis vérifiée par notre équipe avant envoi.",
       },
       {
-        q: "Proposez-vous vos services en allemand, en anglais et en italien ?",
-        a: "Oui. Le site et le Pack Conformité sont disponibles en français, en allemand, en anglais et en italien.",
+        q: "Que se passe-t-il si j'ai déjà payé l'amende ?",
+        a: "Payer une amende vaut acceptation définitive : il n'existe alors plus aucun recours. Notre diagnostic gratuit vous le signale immédiatement si c'est votre cas, pour vous éviter de perdre du temps.",
       },
       {
-        q: "Puis-je aussi m'abonner pour un suivi continu ?",
-        a: "Oui. Le Suivi Conformité (79 CHF/mois, résiliable à tout moment) inclut les mises à jour légales, une revue annuelle de votre registre et un accès illimité à nos questions par email.",
+        q: "Proposez-vous vos services en allemand, anglais et italien ?",
+        a: "Oui. Le site et le Pack Contestation sont disponibles en français, en allemand, en anglais et en italien.",
       },
       {
-        q: "Que se passe-t-il si mon entreprise est déjà partiellement conforme ?",
-        a: "Le diagnostic gratuit identifie précisément ce qui manque. Vos documents sont adaptés à votre situation, sans repartir de zéro.",
+        q: "Et si mon dossier concerne un retrait de permis important ou une infraction grave ?",
+        a: "Notre service est pensé pour les amendes et contestations courantes. Pour les cas plus lourds, nous vous orientons vers un avocat spécialisé en droit de la circulation.",
       },
     ],
     productDescription:
-      "Registre des traitements, politique de confidentialité, contrat de sous-traitance (DPA), procédure violation de données et checklist de mise en œuvre, pour la mise en conformité nLPD d'une PME suisse.",
+      "Analyse de vos chances de contestation et lettre de contestation prête à envoyer, adaptée à votre amende (stationnement, excès de vitesse, transports publics).",
   },
   de: {
-    metaTitle: "DSG-Konformität für Schweizer KMU, ab 590 CHF | Thrax Legal",
+    metaTitle: "Busse in der Schweiz anfechten, ab CHF 89 | Thrax Legal",
     metaDescription:
-      "Bringen Sie Ihr KMU in Einklang mit dem revidierten Datenschutzgesetz (DSG): Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeitungsverträge. Fixpreis 590 CHF, ohne Anwalt, ohne Termin, in 3 Arbeitstagen geliefert.",
-    heroTitle: "Ist Ihr KMU den DSG-Sanktionen ausgesetzt?",
+      "Prüfen Sie kostenlos Ihre Chancen, eine Schweizer Busse anzufechten (Parkieren, Geschwindigkeit, SBB), und erhalten Sie Ihr versandbereites Einspracheschreiben. CHF 89, ohne Anwalt, ohne Termin, Lieferung innert 48h.",
+    heroTitle: "Busse erhalten? Prüfen Sie in 2 Minuten, ob Sie sie anfechten können.",
     heroSubtitle:
-      "Das revidierte Datenschutzgesetz setzt KMU und ihre Verantwortlichen bei schweren Verstössen Bussen von bis zu CHF 250'000 aus. Bringen Sie Ihr Unternehmen in Einklang &mdash; ohne Anwalt, ohne Termin.",
+      "Parkieren, Geschwindigkeit, öffentlicher Verkehr: Eine Busse zu bezahlen gilt als endgültige Anerkennung. Prüfen Sie vor der Zahlung kostenlos Ihre Chancen — ohne Anwalt, ohne Termin.",
     priceBadgeLabel: "Komplettpaket, einmalige Zahlung",
     diagnosticCtaLabel: "Gratis-Diagnose starten",
     diagnosticCtaSub: "2 Minuten · Keine E-Mail nötig",
-    directBuyLabel: "Ich weiss bereits, was ich brauche — direkt kaufen für CHF 590",
-    stickyBarLabel: "DSG-Compliance-Paket",
+    directBuyLabel: "Ich weiss bereits, was ich brauche — direkt kaufen für CHF 89",
+    stickyBarLabel: "Anfechtungspaket",
     trustBar: [
-      "Konform mit dem revidierten DSG, in Kraft seit September 2023.",
-      "Kein Termin nötig: alles läuft online ab, von der Diagnose bis zur Lieferung.",
-      "Jedes Dokument wird vor Versand von einer echten Person geprüft.",
+      "Kostenlose Diagnose in 2 Minuten, bevor Sie irgendetwas bezahlen.",
+      "Kein Termin nötig: alles läuft online ab.",
+      "Jedes Einspracheschreiben wird vor Versand von einer echten Person geprüft.",
     ],
     diagnosticHeading: "Kostenlose Diagnose in 2 Minuten",
     diagnosticSubheading:
-      "Beantworten Sie 6 Fragen, um Ihren DSG-Konformitätsgrad und die konkreten Lücken zu erfahren.",
+      "Beantworten Sie ein paar Fragen, um Ihre Anfechtungschancen zu kennen, bevor Sie sich verpflichten.",
     stepsHeading: "So funktioniert's",
     steps: [
-      {
-        title: "Gratis-Diagnose",
-        description: "Beantworten Sie in 2 Minuten 6 Fragen, um Ihre Compliance-Lücken zu identifizieren.",
-      },
-      {
-        title: "Online bestellen",
-        description: "CHF 590, einmalige Zahlung. Kein Anruf, kein Termin nötig.",
-      },
-      {
-        title: "Lieferung in 3 Tagen",
-        description: "Ihre Dokumente werden von unserem Team erstellt, geprüft und sind sofort einsatzbereit.",
-      },
+      { title: "Gratis-Diagnose", description: "Beantworten Sie in 2 Minuten 4 Fragen, um Ihre Chancen zu kennen." },
+      { title: "Online bestellen", description: "CHF 89, einmalige Zahlung. Kein Anruf, kein Termin nötig." },
+      { title: "Lieferung innert 48h", description: "Ihr Einspracheschreiben wird von unserem Team erstellt und geprüft, versandbereit." },
     ],
-    includedHeading: "Was im Compliance-Paket enthalten ist",
+    includedHeading: "Was im Anfechtungspaket enthalten ist",
     included: [
-      { title: "Verarbeitungsverzeichnis", description: "Erfasst die von Ihnen bearbeiteten Daten und deren Zweck, angepasst an Ihre Tätigkeit." },
-      { title: "Datenschutzerklärung", description: "Für Ihre Website und Ihre HR-Prozesse, DSG-konform." },
-      { title: "Auftragsverarbeitungsvertrag (AVV)", description: "Einsatzbereite Vorlage für Ihre Dienstleister (Hosting, CRM, Buchhaltung)." },
-      { title: "Verfahren bei Datenschutzverletzung", description: "Schritt-für-Schritt-Anleitung bei Leck oder Hackerangriff." },
-      { title: "Umsetzungs-Checkliste", description: "Zur Überprüfung und langfristigen Aufrechterhaltung Ihrer Konformität." },
+      { title: "Analyse Ihrer Chancen", description: "Basierend auf den genauen Fakten Ihres Falls, keine generische Antwort." },
+      { title: "Versandbereites Einspracheschreiben", description: "Verfasst nach dem für Ihre Situation geltenden Verfahren." },
+      { title: "Exakte Behörde und Frist", description: "Die richtigen Kontaktdaten und die richtige Frist, damit nichts verpasst wird." },
+      { title: "Von unserem Team geprüft", description: "Eine echte Person prüft Ihren Fall vor dem Versand." },
     ],
     guideLabel: "Mehr erfahren",
-    guideLinkLabel: "Zum ganzen DSG-Ratgeber ↗",
+    guideLinkLabel: "Zum ganzen Ratgeber ↗",
     offerBullets: [
-      "Verarbeitungsverzeichnis und Datenschutzerklärung, angepasst an Ihre Tätigkeit",
-      "Vorlage für Auftragsverarbeitungsvertrag (AVV) und Verfahren bei Datenschutzverletzung",
+      "Analyse Ihrer Chancen basierend auf den Fakten Ihres Falls",
+      "Versandbereites Einspracheschreiben mit der richtigen Behörde und Frist",
       "Von unserem Team vor Versand geprüft",
     ],
-    offerCtaLabel: "Compliance-Paket bestellen",
-    offerDeliveryNote: "Lieferung in 3 Arbeitstagen",
+    offerCtaLabel: "Anfechtungspaket bestellen",
+    offerDeliveryNote: "Lieferung innert 48h",
     securePaymentLabel: "Sichere Zahlung",
-    upsellTitle: "Optional: Compliance-Abo, CHF 79/Monat",
-    upsellText:
-      "Gesetzliche Updates, jährliche Überprüfung Ihres Verzeichnisses und unbegrenzte Fragen per E-Mail. Jederzeit kündbar.",
-    upsellLinkLabel: "Mehr erfahren",
     lawyerHeading: "Der Preis eines Anwalts, ohne den Anwalt",
     lawyerLabel: "Klassische Anwaltskanzlei",
-    lawyerRange: "750 bis 3'000 CHF",
-    lawyerNote: "Für ein vergleichbares Dossier (5 auf Ihre Tätigkeit angepasste Dokumente), also 3 bis 5 verrechnete Stunden zu CHF 250-600/h je nach Komplexität.",
+    lawyerRange: "300 bis 1'200 CHF",
+    lawyerNote: "Für ein vergleichbares Einspracheschreiben, also 1 bis 2 verrechnete Stunden zu CHF 250-600/h je nach Komplexität.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 590",
-    thraxNote: "Komplettpaket zum Fixpreis, Lieferung in 3 Arbeitstagen, ohne Termin.",
+    thraxPrice: "CHF 89",
+    thraxNote: "Komplettpaket zum Fixpreis, Lieferung innert 48h, ohne Termin.",
     lawyerDisclaimer:
       "Schätzung basierend auf einem üblichen Stundensatz von CHF 250 bis 600 für einen Anwalt in der Schweiz. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
     faqHeading: "Häufige Fragen",
     faq: [
       {
-        q: "Was ist das DSG und warum muss mein KMU es einhalten?",
-        a: "Das revidierte Datenschutzgesetz (DSG) ist seit dem 1. September 2023 in Kraft. Es gilt für jedes Schweizer Unternehmen, das Personendaten bearbeitet: Kunden, Mitarbeitende, Interessenten. Die Unternehmensgrösse befreit nicht von den Grundpflichten (Verarbeitungsverzeichnis, Information der betroffenen Personen, Datensicherheit).",
+        q: "Wie viel Zeit habe ich, um eine Busse anzufechten?",
+        a: "Das hängt vom erhaltenen Dokument ab: 30 Tage bei einer Ordnungsbusse (danach gilt sie bei Nichtzahlung als ins Strafverfahren übergegangen), 10 Tage für eine Einsprache gegen einen Strafbefehl. Unsere kostenlose Diagnose identifiziert Ihre genaue Situation.",
       },
       {
-        q: "Welche Sanktionen drohen bei Nichteinhaltung?",
-        a: "Das Gesetz sieht Bussen von bis zu CHF 250'000 gegen die verantwortlichen Personen vor, bei schweren und vorsätzlichen Verstössen (fehlende Information, Verletzung der Pflichten zur Auftragsbearbeitung). Die kostenlose Diagnose zeigt Ihnen, wo Ihre Risiken liegen.",
+        q: "Habe ich gute Chancen zu gewinnen?",
+        a: "Das hängt ganz von Ihrem Fall ab. Eine Anfechtung ohne konkreten Grund (nur weil Sie nicht einverstanden sind) scheitert fast immer. Ein Identifikationsfehler, ein Signalisationsmangel oder ein Verfahrensfehler hat echte Chancen. Die kostenlose Diagnose gibt Ihnen eine ehrliche Einschätzung, bevor Sie weitergehen.",
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
-        a: "Nein. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Wir liefern Ihnen von unserem Team geprüfte Compliance-Dokumente. Bei einem Rechtsstreit verweisen wir Sie an eine Anwältin oder einen Anwalt.",
+        a: "Nein. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei schweren Fällen (erheblicher Führerausweisentzug, Risiko einer Freiheitsstrafe) verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt, statt Ihnen eine unpassende Leistung zu verkaufen.",
       },
       {
-        q: "Wie lange dauert es, bis ich meine Dokumente erhalte?",
-        a: "3 Arbeitstage nach Ihrer Bestellung. Ihre Dokumente werden anhand Ihrer Antworten erstellt und vor Versand von unserem Team geprüft.",
+        q: "Wie lange dauert es, bis ich mein Einspracheschreiben erhalte?",
+        a: "48 Stunden nach Ihrer Bestellung. Ihr Schreiben wird anhand Ihres Falls erstellt und vor Versand von unserem Team geprüft.",
+      },
+      {
+        q: "Was passiert, wenn ich die Busse bereits bezahlt habe?",
+        a: "Das Bezahlen einer Busse gilt als endgültige Anerkennung: Danach gibt es keinen Rechtsweg mehr. Unsere kostenlose Diagnose weist Sie sofort darauf hin, falls das bei Ihnen der Fall ist, damit Sie keine Zeit verlieren.",
       },
       {
         q: "Bieten Sie Ihre Leistungen auch auf Französisch, Englisch und Italienisch an?",
-        a: "Ja. Die Website und das Compliance-Paket sind auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
+        a: "Ja. Die Website und das Anfechtungspaket sind auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
       {
-        q: "Kann ich mich auch für eine laufende Betreuung abonnieren?",
-        a: "Ja. Das Compliance-Abo (CHF 79/Monat, jederzeit kündbar) umfasst gesetzliche Updates, eine jährliche Überprüfung Ihres Verzeichnisses und unbegrenzten Zugang zu unseren Antworten per E-Mail.",
-      },
-      {
-        q: "Was passiert, wenn mein Unternehmen bereits teilweise konform ist?",
-        a: "Die kostenlose Diagnose identifiziert genau, was fehlt. Ihre Dokumente werden an Ihre Situation angepasst, ohne bei null zu beginnen.",
+        q: "Was, wenn es um einen erheblichen Führerausweisentzug oder einen schweren Verstoss geht?",
+        a: "Unser Service ist für gängige Bussen und Einsprachen gedacht. Bei schwereren Fällen verweisen wir Sie an eine auf Verkehrsrecht spezialisierte Anwältin oder einen Anwalt.",
       },
     ],
     productDescription:
-      "Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeitungsvertrag (AVV), Verfahren bei Datenschutzverletzung und Umsetzungs-Checkliste, für die DSG-Konformität eines Schweizer KMU.",
+      "Analyse Ihrer Anfechtungschancen und versandbereites Einspracheschreiben, angepasst an Ihre Busse (Parkieren, Geschwindigkeit, öffentlicher Verkehr).",
   },
   en: {
-    metaTitle: "Swiss FADP compliance for SMEs, from CHF 590 | Thrax Legal",
+    metaTitle: "Contest a fine in Switzerland, from CHF 89 | Thrax Legal",
     metaDescription:
-      "Bring your SME into compliance with the revised Swiss FADP: records of processing, privacy policy, data processing agreements. Fixed price CHF 590, no lawyer, no appointment, delivered in 3 business days.",
-    heroTitle: "Is your SME exposed to FADP penalties?",
+      "Check for free your chances of contesting a Swiss fine (parking, speeding, SBB/CFF), then get your ready-to-send objection letter. CHF 89, no lawyer, no appointment, delivered within 48h.",
+    heroTitle: "Got a fine? Check in 2 minutes if you can contest it.",
     heroSubtitle:
-      "The revised Swiss data protection law exposes SMEs and their leaders to fines of up to CHF 250,000 for serious breaches. Bring your company into compliance, no lawyer, no appointment.",
+      "Parking, speeding, public transport: paying a fine counts as final acceptance. Before you pay, check your chances of contesting it for free — no lawyer, no appointment.",
     priceBadgeLabel: "Full pack, one-time payment",
     diagnosticCtaLabel: "Start my free diagnostic",
     diagnosticCtaSub: "2 minutes · No email required",
-    directBuyLabel: "I already know what I need, buy directly — CHF 590",
-    stickyBarLabel: "FADP Compliance Pack",
+    directBuyLabel: "I already know what I need, buy directly — CHF 89",
+    stickyBarLabel: "Contestation Pack",
     trustBar: [
-      "Compliant with the revised FADP, in force since September 2023.",
-      "No appointment needed: everything happens online, from diagnostic to delivery.",
-      "Every document is checked by a real person before it's sent.",
+      "Free 2-minute diagnostic, before you pay anything.",
+      "No appointment needed: everything happens online.",
+      "Every objection letter is checked by a real person before it's sent.",
     ],
     diagnosticHeading: "Free 2-minute diagnostic",
     diagnosticSubheading:
-      "Answer 6 questions to find out your FADP compliance level and the exact points to fix.",
+      "Answer a few questions to find out your chances of contesting before committing to anything.",
     stepsHeading: "How it works",
     steps: [
-      {
-        title: "Free diagnostic",
-        description: "Answer 6 questions in 2 minutes to identify your compliance gaps.",
-      },
-      {
-        title: "Order online",
-        description: "CHF 590, one-time payment. No call, no appointment needed.",
-      },
-      {
-        title: "Delivered in 3 days",
-        description: "Your documents are drafted and checked by our team, ready to use.",
-      },
+      { title: "Free diagnostic", description: "Answer 4 questions in 2 minutes to know your chances." },
+      { title: "Order online", description: "CHF 89, one-time payment. No call, no appointment needed." },
+      { title: "Delivered within 48h", description: "Your objection letter is drafted and checked by our team, ready to send." },
     ],
-    includedHeading: "What's included in the Compliance Pack",
+    includedHeading: "What's included in the Contestation Pack",
     included: [
-      { title: "Record of processing activities", description: "Lists the data you process and why, tailored to your business." },
-      { title: "Privacy policy", description: "For your website and your HR practices, FADP-compliant." },
-      { title: "Data processing agreement (DPA)", description: "Ready-to-use template for your vendors (hosting, CRM, accounting)." },
-      { title: "Data breach procedure", description: "The step-by-step process to follow in case of a leak or hack." },
-      { title: "Implementation checklist", description: "To check and maintain your compliance over time." },
+      { title: "Assessment of your chances", description: "Based on the precise facts of your case, not a generic answer." },
+      { title: "Ready-to-send objection letter", description: "Drafted according to the procedure that applies to your situation." },
+      { title: "The right authority and deadline", description: "The correct contact details and deadline, so nothing is missed." },
+      { title: "Checked by our team", description: "A real person reviews your case before it's sent." },
     ],
     guideLabel: "Go further",
-    guideLinkLabel: "See the full FADP guide ↗",
+    guideLinkLabel: "See the full guide ↗",
     offerBullets: [
-      "Record of processing activities and privacy policy tailored to your business",
-      "Data processing agreement (DPA) template and data breach procedure",
+      "Assessment of your chances based on the facts of your case",
+      "Objection letter drafted and ready to send, with the right authority and deadline",
       "Checked by our team before delivery",
     ],
-    offerCtaLabel: "Order my Compliance Pack",
-    offerDeliveryNote: "Delivered in 3 business days",
+    offerCtaLabel: "Order my Contestation Pack",
+    offerDeliveryNote: "Delivered within 48h",
     securePaymentLabel: "Secure payment",
-    upsellTitle: "Optional: Ongoing Compliance, CHF 79/month",
-    upsellText:
-      "Legal updates, an annual review of your record, and unlimited questions by email. Cancel anytime.",
-    upsellLinkLabel: "Learn more",
     lawyerHeading: "The price of a lawyer, without the lawyer",
     lawyerLabel: "Traditional law firm",
-    lawyerRange: "CHF 750 to 3,000",
-    lawyerNote: "For an equivalent file (5 documents tailored to your business), i.e. 3 to 5 hours billed at CHF 250-600/h depending on complexity.",
+    lawyerRange: "CHF 300 to 1,200",
+    lawyerNote: "For an equivalent objection letter, i.e. 1 to 2 hours billed at CHF 250-600/h depending on complexity.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 590",
-    thraxNote: "Full pack at a fixed price, delivered in 3 business days, no appointment.",
+    thraxPrice: "CHF 89",
+    thraxNote: "Full pack at a fixed price, delivered within 48h, no appointment.",
     lawyerDisclaimer:
       "Estimate based on a typical hourly rate of CHF 250 to 600 for a lawyer in Switzerland. Thrax Legal is not a law firm and does not represent clients before courts.",
     faqHeading: "Frequently asked questions",
     faq: [
       {
-        q: "What is the Swiss FADP and why does my SME need to comply?",
-        a: "The revised Federal Act on Data Protection (FADP) has been in force since September 1, 2023. It applies to any Swiss company that processes personal data: customers, employees, prospects. Company size does not exempt you from the basic obligations (record of processing, informing data subjects, data security).",
+        q: "How much time do I have to contest a fine?",
+        a: "It depends on the document you received: 30 days for a fixed penalty notice (if unpaid, it then moves to criminal proceedings), 10 days to object to a penal order. Our free diagnostic identifies your exact situation.",
       },
       {
-        q: "What are the penalties for non-compliance?",
-        a: "The law provides for fines of up to CHF 250,000 against responsible individuals, for serious and intentional breaches (failure to inform, violation of data processing agreement obligations). The free diagnostic shows you where your risks lie.",
+        q: "Do I have good chances of winning?",
+        a: "It entirely depends on your case. An objection with no concrete ground (just disagreeing) almost always fails. An identification error, a signage defect, or a procedural flaw has real chances. The free diagnostic gives you an honest assessment before you go further.",
       },
       {
         q: "Is Thrax Legal a law firm?",
-        a: "No. Thrax Legal is not a law firm and does not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. We provide compliance documents checked by our team. For contentious matters, we refer you to an attorney.",
+        a: "No. Thrax Legal is not a law firm and does not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For serious cases (significant licence suspension, risk of a custodial sentence), we refer you to a specialised lawyer rather than sell you an unsuitable service.",
       },
       {
-        q: "How long until I receive my documents?",
-        a: "3 business days after your order. Your documents are drafted from your answers, then checked by our team before delivery.",
+        q: "How long until I receive my objection letter?",
+        a: "48 hours after your order. Your letter is drafted from your case, then checked by our team before delivery.",
+      },
+      {
+        q: "What happens if I've already paid the fine?",
+        a: "Paying a fine counts as final acceptance: there is no recourse left afterwards. Our free diagnostic flags this immediately if that's your case, so you don't waste time.",
       },
       {
         q: "Do you offer your services in French, German and Italian too?",
-        a: "Yes. The site and the Compliance Pack are available in French, German, English and Italian.",
+        a: "Yes. The site and the Contestation Pack are available in French, German, English and Italian.",
       },
       {
-        q: "Can I also subscribe for ongoing monitoring?",
-        a: "Yes. Ongoing Compliance (CHF 79/month, cancel anytime) includes legal updates, an annual review of your record, and unlimited email questions.",
-      },
-      {
-        q: "What if my company is already partly compliant?",
-        a: "The free diagnostic identifies exactly what's missing. Your documents are tailored to your situation, without starting from scratch.",
+        q: "What if my case involves a significant licence suspension or a serious offence?",
+        a: "Our service is designed for common fines and objections. For heavier cases, we refer you to a lawyer specialised in road traffic law.",
       },
     ],
     productDescription:
-      "Record of processing activities, privacy policy, data processing agreement (DPA), data breach procedure and implementation checklist, for Swiss FADP compliance of an SME.",
+      "Assessment of your chances of contesting and a ready-to-send objection letter, tailored to your fine (parking, speeding, public transport).",
   },
   it: {
-    metaTitle: "Conformità nLPD per PMI svizzere, da CHF 590 | Thrax Legal",
+    metaTitle: "Contestare una multa in Svizzera, da CHF 89 | Thrax Legal",
     metaDescription:
-      "Mettete la vostra PMI in conformità con la nLPD revisionata: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento. Prezzo fisso CHF 590, senza avvocato, senza appuntamento, consegnato in 3 giorni lavorativi.",
-    heroTitle: "La vostra PMI è esposta alle sanzioni della nLPD?",
+      "Verificate gratuitamente le vostre possibilità di contestare una multa svizzera (parcheggio, velocità, FFS), poi ricevete la vostra lettera di contestazione pronta da inviare. CHF 89, senza avvocato, senza appuntamento, consegnata entro 48h.",
+    heroTitle: "Multa ricevuta? Verificate in 2 minuti se potete contestarla.",
     heroSubtitle:
-      "La legge revisionata sulla protezione dei dati espone le PMI e i loro dirigenti a sanzioni fino a CHF 250'000 in caso di violazione grave. Mettete la vostra azienda in conformità, senza avvocato, senza appuntamento.",
+      "Parcheggio, eccesso di velocità, trasporti pubblici: pagare una multa equivale a un'accettazione definitiva. Prima di pagare, verificate gratuitamente le vostre possibilità di contestazione — senza avvocato, senza appuntamento.",
     priceBadgeLabel: "Pack completo, pagamento unico",
     diagnosticCtaLabel: "Fare la mia diagnosi gratuita",
     diagnosticCtaSub: "2 minuti · Nessuna email richiesta",
-    directBuyLabel: "So già cosa mi serve, acquistare direttamente — CHF 590",
-    stickyBarLabel: "Pack Conformità nLPD",
+    directBuyLabel: "So già cosa mi serve, acquistare direttamente — CHF 89",
+    stickyBarLabel: "Pack Contestazione",
     trustBar: [
-      "Conforme alla nLPD revisionata, in vigore da settembre 2023.",
-      "Nessun appuntamento necessario: tutto avviene online, dalla diagnosi alla consegna.",
-      "Ogni documento è verificato da una persona reale prima dell'invio.",
+      "Diagnosi gratuita in 2 minuti, prima di pagare qualsiasi cosa.",
+      "Nessun appuntamento necessario: tutto avviene online.",
+      "Ogni lettera di contestazione è verificata da una persona reale prima dell'invio.",
     ],
     diagnosticHeading: "Diagnosi gratuita in 2 minuti",
     diagnosticSubheading:
-      "Rispondete a 6 domande per conoscere il vostro livello di conformità nLPD e i punti precisi da correggere.",
+      "Rispondete a qualche domanda per conoscere le vostre possibilità di contestazione prima di impegnarvi.",
     stepsHeading: "Come funziona",
     steps: [
-      {
-        title: "Diagnosi gratuita",
-        description: "Rispondete a 6 domande in 2 minuti per identificare i vostri punti di non conformità.",
-      },
-      {
-        title: "Ordine online",
-        description: "CHF 590, pagamento unico. Nessuna chiamata, nessun appuntamento necessario.",
-      },
-      {
-        title: "Consegna in 3 giorni",
-        description: "I vostri documenti sono redatti e verificati dal nostro team, pronti all'uso.",
-      },
+      { title: "Diagnosi gratuita", description: "Rispondete a 4 domande in 2 minuti per conoscere le vostre possibilità." },
+      { title: "Ordine online", description: "CHF 89, pagamento unico. Nessuna chiamata, nessun appuntamento necessario." },
+      { title: "Consegna entro 48h", description: "La vostra lettera di contestazione è redatta e verificata dal nostro team, pronta da inviare." },
     ],
-    includedHeading: "Cosa è incluso nel Pack Conformità",
+    includedHeading: "Cosa è incluso nel Pack Contestazione",
     included: [
-      { title: "Registro dei trattamenti", description: "Elenca i dati che trattate e perché, adattato alla vostra attività." },
-      { title: "Informativa sulla privacy", description: "Per il vostro sito web e la gestione HR, conforme alla nLPD." },
-      { title: "Contratto di sub-trattamento (DPA)", description: "Modello pronto all'uso per i vostri fornitori (hosting, CRM, contabilità)." },
-      { title: "Procedura violazione dei dati", description: "La procedura da seguire in caso di fuga o attacco informatico, passo dopo passo." },
-      { title: "Checklist di attuazione", description: "Per verificare e mantenere la vostra conformità nel tempo." },
+      { title: "Analisi delle vostre possibilità", description: "Basata sui fatti precisi del vostro caso, non una risposta generica." },
+      { title: "Lettera di contestazione pronta da inviare", description: "Redatta secondo la procedura applicabile alla vostra situazione." },
+      { title: "Autorità e termine esatti", description: "I contatti giusti e il termine giusto, per non perdere nulla." },
+      { title: "Verificata dal nostro team", description: "Una persona reale rilegge il vostro caso prima dell'invio." },
     ],
     guideLabel: "Per saperne di più",
-    guideLinkLabel: "Vedi tutta la guida nLPD ↗",
+    guideLinkLabel: "Vedi tutta la guida ↗",
     offerBullets: [
-      "Registro dei trattamenti e informativa sulla privacy adattati alla vostra attività",
-      "Modello di contratto di sub-trattamento (DPA) e procedura violazione dei dati",
-      "Verificato dal nostro team prima dell'invio",
+      "Analisi delle vostre possibilità basata sui fatti del vostro caso",
+      "Lettera di contestazione redatta e pronta da inviare, con l'autorità e il termine giusti",
+      "Verificata dal nostro team prima dell'invio",
     ],
-    offerCtaLabel: "Ordinare il mio Pack Conformità",
-    offerDeliveryNote: "Consegnato in 3 giorni lavorativi",
+    offerCtaLabel: "Ordinare il mio Pack Contestazione",
+    offerDeliveryNote: "Consegnato entro 48h",
     securePaymentLabel: "Pagamento sicuro",
-    upsellTitle: "In opzione: Abbonamento Conformità, CHF 79/mese",
-    upsellText:
-      "Aggiornamenti legali, revisione annuale del vostro registro e domande illimitate via email. Disdicibile in qualsiasi momento.",
-    upsellLinkLabel: "Saperne di più",
     lawyerHeading: "Il prezzo di un avvocato, senza l'avvocato",
     lawyerLabel: "Avvocato tradizionale",
-    lawyerRange: "da CHF 750 a 3'000",
-    lawyerNote: "Per un dossier equivalente (5 documenti adattati alla vostra attività), ovvero 3-5 ore fatturate a CHF 250-600/h secondo la complessità.",
+    lawyerRange: "da CHF 300 a 1'200",
+    lawyerNote: "Per una lettera di contestazione equivalente, ovvero 1-2 ore fatturate a CHF 250-600/h secondo la complessità.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 590",
-    thraxNote: "Pack completo a prezzo fisso, consegnato in 3 giorni lavorativi, senza appuntamento.",
+    thraxPrice: "CHF 89",
+    thraxNote: "Pack completo a prezzo fisso, consegnato entro 48h, senza appuntamento.",
     lawyerDisclaimer:
       "Stima basata su una tariffa oraria usuale di CHF 250-600 per un avvocato in Svizzera. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
     faqHeading: "Domande frequenti",
     faq: [
       {
-        q: "Cos'è la nLPD e perché la mia PMI deve conformarsi?",
-        a: "La nLPD (legge revisionata sulla protezione dei dati) è in vigore dal 1° settembre 2023. Si applica a qualsiasi azienda svizzera che tratta dati personali: clienti, dipendenti, prospect. La dimensione dell'azienda non esonera dagli obblighi di base (registro dei trattamenti, informazione degli interessati, sicurezza dei dati).",
+        q: "Quanto tempo ho per contestare una multa?",
+        a: "Dipende dal documento ricevuto: 30 giorni per una multa disciplinare (se non pagata, passa poi alla procedura penale), 10 giorni per opporsi a un decreto penale. La nostra diagnosi gratuita identifica la vostra situazione esatta.",
       },
       {
-        q: "Quali sono le sanzioni in caso di non conformità?",
-        a: "La legge prevede multe fino a CHF 250'000 a carico delle persone responsabili, in caso di violazione grave e intenzionale (mancata informazione, violazione degli obblighi di sub-trattamento). La diagnosi gratuita vi indica dove si situano i vostri rischi.",
+        q: "Ho buone possibilità di vincere?",
+        a: "Dipende interamente dal vostro caso. Una contestazione senza motivo concreto (solo perché non siete d'accordo) fallisce quasi sempre. Un errore di identificazione, un difetto di segnaletica o un vizio di procedura ha reali possibilità. La diagnosi gratuita vi dà una valutazione onesta prima di andare oltre.",
       },
       {
         q: "Thrax Legal è uno studio legale?",
-        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Vi forniamo documenti di conformità verificati dal nostro team. Per un contenzioso, vi indirizziamo verso un avvocato.",
+        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per i casi gravi (ritiro importante della licenza, rischio di pena detentiva), vi indirizziamo verso un avvocato specializzato piuttosto che vendervi un servizio inadatto.",
       },
       {
-        q: "Quanto tempo ci vuole per ricevere i miei documenti?",
-        a: "3 giorni lavorativi dopo il vostro ordine. I vostri documenti sono redatti a partire dalle vostre risposte, poi verificati dal nostro team prima dell'invio.",
+        q: "Quanto tempo ci vuole per ricevere la mia lettera di contestazione?",
+        a: "48 ore dopo il vostro ordine. La vostra lettera è redatta a partire dal vostro caso, poi verificata dal nostro team prima dell'invio.",
+      },
+      {
+        q: "Cosa succede se ho già pagato la multa?",
+        a: "Pagare una multa equivale a un'accettazione definitiva: non esiste più alcun ricorso possibile. La nostra diagnosi gratuita ve lo segnala immediatamente se è il vostro caso, per evitarvi di perdere tempo.",
       },
       {
         q: "Offrite i vostri servizi anche in francese, tedesco e inglese?",
-        a: "Sì. Il sito e il Pack Conformità sono disponibili in francese, tedesco, inglese e italiano.",
+        a: "Sì. Il sito e il Pack Contestazione sono disponibili in francese, tedesco, inglese e italiano.",
       },
       {
-        q: "Posso anche abbonarmi per un monitoraggio continuo?",
-        a: "Sì. L'Abbonamento Conformità (CHF 79/mese, disdicibile in qualsiasi momento) include gli aggiornamenti legali, una revisione annuale del vostro registro e un accesso illimitato alle nostre risposte via email.",
-      },
-      {
-        q: "Cosa succede se la mia azienda è già parzialmente conforme?",
-        a: "La diagnosi gratuita identifica precisamente cosa manca. I vostri documenti sono adattati alla vostra situazione, senza ripartire da zero.",
+        q: "E se il mio caso riguarda un ritiro importante della licenza o un'infrazione grave?",
+        a: "Il nostro servizio è pensato per multe e contestazioni comuni. Per i casi più pesanti, vi indirizziamo verso un avvocato specializzato in diritto della circolazione.",
       },
     ],
     productDescription:
-      "Registro dei trattamenti, informativa sulla privacy, contratto di sub-trattamento (DPA), procedura violazione dei dati e checklist di attuazione, per la conformità nLPD di una PMI svizzera.",
+      "Analisi delle vostre possibilità di contestazione e lettera di contestazione pronta da inviare, adattata alla vostra multa (parcheggio, eccesso di velocità, trasporti pubblici).",
   },
 };
 
-const CHECKOUT_SLUG = "checkout/pack-conformite-nlpd";
+const CHECKOUT_SLUG = "checkout/pack-contestation-amende";
 
 function DiagnosticCta({
   locale,
@@ -497,7 +438,7 @@ function StickyOrderBar({ locale, t }: { locale: Locale; t: HomeContent }) {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-bg/95 backdrop-blur">
       <Container className="flex items-center justify-between gap-4 py-3">
         <div className="min-w-0">
-          <p className="text-sm font-semibold leading-tight text-text">590 CHF</p>
+          <p className="text-sm font-semibold leading-tight text-text">89 CHF</p>
           <p className="truncate text-xs text-text-muted">{t.stickyBarLabel}</p>
         </div>
         <PrimaryButton href={`/${locale}/#diagnostic`} className="shrink-0 px-5 py-2.5 text-sm">
@@ -551,7 +492,7 @@ export default async function Home({
     brand: { "@type": "Brand", name: "Thrax Legal" },
     offers: {
       "@type": "Offer",
-      price: "590",
+      price: "89",
       priceCurrency: "CHF",
       availability: "https://schema.org/InStock",
       url: checkoutHref,
@@ -583,7 +524,7 @@ export default async function Home({
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                   {t.heroSubtitle}
                 </p>
-                <PriceBadge amount="590 CHF" label={t.priceBadgeLabel} className="mt-8" />
+                <PriceBadge amount="89 CHF" label={t.priceBadgeLabel} className="mt-8" />
                 <DiagnosticCta locale={locale} t={t} className="mt-6" />
               </Reveal>
             </Container>
@@ -672,7 +613,7 @@ export default async function Home({
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <PaywallCard
-                  price="590 CHF"
+                  price="89 CHF"
                   checkoutHref={checkoutHref}
                   ctaLabel={t.offerCtaLabel}
                   deliveryNote={t.offerDeliveryNote}
@@ -680,19 +621,6 @@ export default async function Home({
                   securePaymentLabel={t.securePaymentLabel}
                   bullets={t.offerBullets}
                 />
-                <div className="mt-3 rounded-2xl border border-dashed border-border p-5">
-                  <p className="text-base font-semibold text-text">{t.upsellTitle}</p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-text-muted">
-                    {t.upsellText}{" "}
-                    <Link
-                      href={`/${locale}/suivi-conformite`}
-                      className="text-text underline decoration-dotted underline-offset-4 hover:text-text-muted"
-                    >
-                      {t.upsellLinkLabel}
-                    </Link>
-                    .
-                  </p>
-                </div>
               </Reveal>
             </Container>
           </section>

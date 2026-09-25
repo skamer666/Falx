@@ -17,22 +17,22 @@ const META: Record<Locale, { title: string; description: string }> = {
   fr: {
     title: "Conditions générales de vente | Thrax Legal",
     description:
-      "Conditions générales applicables au Pack Conformité nLPD et à l'abonnement Suivi Conformité de Thrax Legal.",
+      "Conditions générales applicables au Pack Contestation d'amende de Thrax Legal.",
   },
   de: {
     title: "Allgemeine Geschäftsbedingungen | Thrax Legal",
     description:
-      "Allgemeine Geschäftsbedingungen für das DSG-Compliance-Paket und das Compliance-Abo von Thrax Legal.",
+      "Allgemeine Geschäftsbedingungen für das Bussen-Einspruchspaket von Thrax Legal.",
   },
   en: {
     title: "Terms & Conditions | Thrax Legal",
     description:
-      "Terms and conditions applicable to Thrax Legal's FADP Compliance Pack and Ongoing Compliance subscription.",
+      "Terms and conditions applicable to Thrax Legal's Fine Contestation Pack.",
   },
   it: {
     title: "Termini e condizioni | Thrax Legal",
     description:
-      "Termini e condizioni applicabili al Pack Conformità nLPD e all'Abbonamento Conformità di Thrax Legal.",
+      "Termini e condizioni applicabili al Pack Contestazione Multa di Thrax Legal.",
   },
 };
 
@@ -77,11 +77,10 @@ function Fr() {
       <h2>1. Champ d&rsquo;application</h2>
       <p>
         Les présentes conditions générales s&rsquo;appliquent à toute
-        commande passée sur ce site pour le Pack Conformité nLPD ou
-        l&rsquo;abonnement Suivi Conformité. Ces services sont réservés aux{" "}
-        <strong>professionnels</strong> (entreprises, indépendants) agissant
-        pour les besoins de leur activité. Ils ne sont pas destinés aux
-        consommateurs au sens du droit de la consommation.
+        commande passée sur ce site pour le Pack Contestation d&rsquo;amende.
+        Ce service est ouvert aux particuliers comme aux professionnels
+        résidant ou immatriculés en Suisse ou concernés par une amende
+        émise en Suisse.
       </p>
 
       <h2>2. Identification du prestataire</h2>
@@ -93,22 +92,17 @@ function Fr() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>3. Description et prix des services</h2>
-      <ul>
-        <li>
-          <strong>Pack Conformité nLPD</strong> : 590 CHF, paiement unique.
-          Comprend un registre des traitements, une politique de
-          confidentialité, un modèle de contrat de sous-traitance (DPA), une
-          procédure de gestion des violations de données et une checklist
-          de mise en œuvre, adaptés aux réponses fournies par le client.
-        </li>
-        <li>
-          <strong>Suivi Conformité</strong> : 79 CHF par mois, sans durée
-          minimale d&rsquo;engagement. Comprend les mises à jour légales,
-          une revue annuelle du registre des traitements et des réponses par
-          email sous 48 heures ouvrées.
-        </li>
-      </ul>
+      <h2>3. Description et prix du service</h2>
+      <p>
+        <strong>Pack Contestation</strong> : 89 CHF, paiement unique.
+        Comprend une analyse de vos chances de contester l&rsquo;amende
+        décrite dans le diagnostic, une lettre de contestation ou
+        d&rsquo;opposition prête à envoyer, l&rsquo;autorité compétente et le
+        délai exact à respecter, ainsi qu&rsquo;une vérification par notre
+        équipe avant livraison. Le service est fondé sur les informations et
+        documents fournis par le client&nbsp;; il ne constitue ni un conseil
+        juridique personnalisé, ni une garantie de succès de la contestation.
+      </p>
       <p>
         Les prix sont indiqués en francs suisses (CHF). [Régime de TVA à
         confirmer avec un comptable avant mise en production&nbsp;: le
@@ -119,58 +113,69 @@ function Fr() {
       <h2>4. Commande et paiement</h2>
       <p>
         La commande est confirmée dès réception du paiement en ligne. Le
-        paiement est exigible intégralement au moment de la commande pour le
-        Pack Conformité, et au début de chaque période mensuelle pour
-        l&rsquo;abonnement Suivi Conformité.
+        paiement est exigible intégralement au moment de la commande.
       </p>
 
       <h2>5. Délai de livraison</h2>
       <p>
-        Le Pack Conformité nLPD est livré par email sous 3 jours ouvrables à
-        compter de la réception de toutes les informations nécessaires à sa
-        préparation. L&rsquo;abonnement Suivi Conformité est actif
-        immédiatement après la commande.
+        Le Pack Contestation est livré par email sous 48 heures à compter de
+        la réception de toutes les informations et documents nécessaires à
+        sa préparation (avis d&rsquo;amende, éléments de preuve éventuels).
+        Compte tenu des délais légaux souvent courts pour contester une
+        amende, le client est invité à passer commande le plus rapidement
+        possible après réception de l&rsquo;amende.
       </p>
 
       <h2>6. Annulation et remboursement</h2>
       <p>
         Le client peut demander l&rsquo;annulation et le remboursement
-        intégral de sa commande de Pack Conformité tant que la production
-        des documents n&rsquo;a pas débuté. Une fois les documents livrés,
-        la commande est considérée comme exécutée et n&rsquo;est plus
-        remboursable, sauf non-conformité manifeste aux prestations décrites
+        intégral de sa commande tant que la préparation de la lettre de
+        contestation n&rsquo;a pas débuté. Une fois le document livré, la
+        commande est considérée comme exécutée et n&rsquo;est plus
+        remboursable, sauf non-conformité manifeste à la prestation décrite
         à l&rsquo;article 3.
       </p>
       <p>
-        L&rsquo;abonnement Suivi Conformité peut être résilié à tout moment,
-        avec effet à la fin de la période mensuelle déjà payée. Les mois
-        déjà facturés ne sont pas remboursés au prorata.
+        Si le diagnostic préalable indique que l&rsquo;amende n&rsquo;est
+        manifestement pas contestable (notamment en cas de paiement déjà
+        effectué), la commande n&rsquo;est pas acceptée et aucun paiement
+        n&rsquo;est prélevé.
       </p>
 
       <h2>7. Responsabilité</h2>
       <p>
         Thrax Legal n&rsquo;est pas un cabinet d&rsquo;avocats et
-        n&rsquo;assure pas la représentation devant les tribunaux. Les
-        documents fournis sont préparés à partir des informations
-        communiquées par le client&nbsp;; leur exactitude et leur
-        exhaustivité relèvent de la responsabilité du client. La
-        responsabilité du prestataire, tous préjudices confondus, est
-        limitée au montant effectivement payé par le client pour le service
-        concerné, sauf faute intentionnelle ou négligence grave.
+        n&rsquo;assure pas la représentation devant les tribunaux ou les
+        autorités administratives, réservée aux avocats inscrits à un
+        registre cantonal suisse. La lettre de contestation est préparée à
+        partir des informations et documents communiqués par le
+        client&nbsp;; leur exactitude et leur exhaustivité relèvent de la
+        responsabilité du client. Thrax Legal ne garantit pas l&rsquo;issue
+        de la contestation, qui dépend de l&rsquo;appréciation de
+        l&rsquo;autorité compétente. La responsabilité du prestataire, tous
+        préjudices confondus, est limitée au montant effectivement payé par
+        le client, sauf faute intentionnelle ou négligence grave.
+      </p>
+      <p>
+        Lorsque le dossier présente une gravité ou une complexité
+        particulière (notamment risque de retrait de permis de longue durée
+        ou procédure pénale), Thrax Legal peut recommander au client de
+        consulter un avocat inscrit à un barreau suisse plutôt que de
+        poursuivre avec le Pack Contestation.
       </p>
 
-      <h2>8. Propriété des documents livrés</h2>
+      <h2>8. Propriété du document livré</h2>
       <p>
-        Les documents livrés dans le cadre du Pack Conformité et du Suivi
-        Conformité peuvent être utilisés librement par le client pour les
-        besoins de son entreprise. Ils ne peuvent être revendus ou
-        redistribués à des tiers en tant que modèles commerciaux.
+        Le document livré dans le cadre du Pack Contestation peut être
+        utilisé librement par le client pour les besoins de sa propre
+        contestation. Il ne peut être revendu ou redistribué à des tiers en
+        tant que modèle commercial.
       </p>
 
       <h2>9. Protection des données</h2>
       <p>
-        Le traitement des données personnelles dans le cadre de ces
-        services est décrit dans notre{" "}
+        Le traitement des données personnelles dans le cadre de ce service
+        est décrit dans notre{" "}
         <NextLink href="/fr/confidentialite">politique de confidentialité</NextLink>.
       </p>
 
@@ -206,11 +211,10 @@ function De() {
       <h2>1. Geltungsbereich</h2>
       <p>
         Diese allgemeinen Geschäftsbedingungen gelten für jede Bestellung
-        des DSG-Compliance-Pakets oder des Compliance-Abos auf dieser
-        Website. Diese Leistungen richten sich ausschliesslich an{" "}
-        <strong>Unternehmen und Selbstständige</strong>, die im Rahmen ihrer
-        geschäftlichen Tätigkeit handeln. Sie sind nicht für Konsumentinnen
-        und Konsumenten im Sinne des Konsumentenschutzrechts bestimmt.
+        des Einspruchspakets auf dieser Website. Dieses Angebot richtet
+        sich an Privatpersonen und Unternehmen, die in der Schweiz wohnhaft
+        bzw. eingetragen sind oder von einer in der Schweiz ausgestellten
+        Busse betroffen sind.
       </p>
 
       <h2>2. Angaben zum Anbieter</h2>
@@ -223,23 +227,17 @@ function De() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>3. Beschreibung und Preise der Leistungen</h2>
-      <ul>
-        <li>
-          <strong>DSG-Compliance-Paket</strong>: CHF 590, einmalige Zahlung.
-          Umfasst ein Verarbeitungsverzeichnis, eine Datenschutzerklärung,
-          eine Vorlage für einen Auftragsverarbeitungsvertrag (AVV), ein
-          Verfahren für Datenschutzverletzungen sowie eine
-          Umsetzungs-Checkliste, angepasst an die vom Kunden gemachten
-          Angaben.
-        </li>
-        <li>
-          <strong>Compliance-Abo</strong>: CHF 79 pro Monat, ohne
-          Mindestvertragsdauer. Umfasst gesetzliche Updates, eine jährliche
-          Überprüfung des Verarbeitungsverzeichnisses und Antworten per
-          E-Mail innert 48 Arbeitsstunden.
-        </li>
-      </ul>
+      <h2>3. Beschreibung und Preis der Leistung</h2>
+      <p>
+        <strong>Einspruchspaket</strong>: CHF 89, einmalige Zahlung. Umfasst
+        eine Beurteilung Ihrer Chancen, die im Diagnosetool beschriebene
+        Busse anzufechten, ein versandfertiges Einspruchs- bzw.
+        Beschwerdeschreiben, die zuständige Behörde und die genaue
+        einzuhaltende Frist sowie eine Prüfung durch unser Team vor
+        Lieferung. Die Leistung basiert auf den vom Kunden bereitgestellten
+        Angaben und Unterlagen; sie stellt keine individuelle
+        Rechtsberatung dar und ist keine Erfolgsgarantie für den Einspruch.
+      </p>
       <p>
         Die Preise verstehen sich in Schweizer Franken (CHF). [MWST-Regime
         vor Inbetriebnahme mit einem Buchhalter zu bestätigen: der Anbieter
@@ -250,55 +248,65 @@ function De() {
       <h2>4. Bestellung und Zahlung</h2>
       <p>
         Die Bestellung ist mit Eingang der Online-Zahlung bestätigt. Die
-        Zahlung ist beim DSG-Compliance-Paket vollständig bei der Bestellung
-        fällig, beim Compliance-Abo zu Beginn jeder Monatsperiode.
+        Zahlung ist vollständig bei der Bestellung fällig.
       </p>
 
       <h2>5. Lieferfrist</h2>
       <p>
-        Das DSG-Compliance-Paket wird innert 3 Arbeitstagen nach Eingang
-        aller für die Erstellung nötigen Angaben per E-Mail geliefert. Das
-        Compliance-Abo ist sofort nach der Bestellung aktiv.
+        Das Einspruchspaket wird innert 48 Stunden nach Eingang aller für die
+        Erstellung nötigen Angaben und Unterlagen (Bussenverfügung,
+        allfällige Beweismittel) per E-Mail geliefert. Angesichts der oft
+        kurzen gesetzlichen Frist für einen Einspruch wird der Kunde
+        gebeten, so rasch wie möglich nach Erhalt der Busse zu bestellen.
       </p>
 
       <h2>6. Stornierung und Rückerstattung</h2>
       <p>
         Der Kunde kann die vollständige Stornierung und Rückerstattung
-        seiner Bestellung des Compliance-Pakets verlangen, solange die
-        Erstellung der Dokumente noch nicht begonnen hat. Nach Lieferung der
-        Dokumente gilt die Bestellung als erfüllt und ist nicht mehr
+        seiner Bestellung verlangen, solange die Erstellung des
+        Einspruchsschreibens noch nicht begonnen hat. Nach Lieferung des
+        Dokuments gilt die Bestellung als erfüllt und ist nicht mehr
         rückerstattungsfähig, ausser bei offensichtlicher Nichteinhaltung
-        der in Artikel 3 beschriebenen Leistungen.
+        der in Artikel 3 beschriebenen Leistung.
       </p>
       <p>
-        Das Compliance-Abo kann jederzeit gekündigt werden, mit Wirkung zum
-        Ende der bereits bezahlten Monatsperiode. Bereits verrechnete Monate
-        werden nicht anteilig zurückerstattet.
+        Ergibt die vorgängige Diagnose, dass die Busse offensichtlich nicht
+        anfechtbar ist (insbesondere wenn sie bereits bezahlt wurde), wird
+        die Bestellung nicht angenommen und keine Zahlung erhoben.
       </p>
 
       <h2>7. Haftung</h2>
       <p>
         Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung
-        vor Gericht. Die gelieferten Dokumente werden anhand der vom Kunden
-        mitgeteilten Angaben erstellt; für deren Richtigkeit und
-        Vollständigkeit ist der Kunde verantwortlich. Die Haftung des
-        Anbieters ist, für sämtliche Schäden zusammen, auf den vom Kunden
-        tatsächlich bezahlten Betrag für die betreffende Leistung
-        beschränkt, ausser bei Vorsatz oder grober Fahrlässigkeit.
+        vor Gericht oder Verwaltungsbehörden, die ausschliesslich im
+        kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten
+        vorbehalten ist. Das Einspruchsschreiben wird anhand der vom Kunden
+        mitgeteilten Angaben und Unterlagen erstellt; für deren Richtigkeit
+        und Vollständigkeit ist der Kunde verantwortlich. Thrax Legal
+        garantiert nicht den Ausgang des Einspruchs, der von der Beurteilung
+        der zuständigen Behörde abhängt. Die Haftung des Anbieters ist, für
+        sämtliche Schäden zusammen, auf den vom Kunden tatsächlich bezahlten
+        Betrag beschränkt, ausser bei Vorsatz oder grober Fahrlässigkeit.
+      </p>
+      <p>
+        Bei besonders schwerwiegenden oder komplexen Fällen (insbesondere
+        bei Risiko eines längeren Führerausweisentzugs oder eines
+        Strafverfahrens) kann Thrax Legal dem Kunden empfehlen, eine im
+        Anwaltsregister eingetragene Anwältin oder einen Anwalt zu
+        konsultieren, statt das Einspruchspaket fortzusetzen.
       </p>
 
-      <h2>8. Eigentum an den gelieferten Dokumenten</h2>
+      <h2>8. Eigentum am gelieferten Dokument</h2>
       <p>
-        Die im Rahmen des Compliance-Pakets und des Compliance-Abos
-        gelieferten Dokumente dürfen vom Kunden für die Bedürfnisse seines
-        Unternehmens frei verwendet werden. Sie dürfen nicht als
-        kommerzielle Vorlagen an Dritte weiterverkauft oder weitergegeben
-        werden.
+        Das im Rahmen des Einspruchspakets gelieferte Dokument darf vom
+        Kunden für die Zwecke seines eigenen Einspruchs frei verwendet
+        werden. Es darf nicht als kommerzielle Vorlage an Dritte
+        weiterverkauft oder weitergegeben werden.
       </p>
 
       <h2>9. Datenschutz</h2>
       <p>
-        Die Bearbeitung der Personendaten im Rahmen dieser Leistungen ist in
+        Die Bearbeitung der Personendaten im Rahmen dieser Leistung ist in
         unserer <NextLink href="/de/confidentialite">Datenschutzerklärung</NextLink>{" "}
         beschrieben.
       </p>
@@ -336,11 +344,9 @@ function En() {
       <h2>1. Scope</h2>
       <p>
         These terms and conditions apply to any order placed on this site
-        for the FADP Compliance Pack or the Ongoing Compliance subscription.
-        These services are reserved for <strong>businesses and
-        self-employed professionals</strong> acting for the purposes of
-        their business activity. They are not intended for consumers within
-        the meaning of consumer protection law.
+        for the Fine Contestation Pack. This service is open to individuals
+        and businesses residing or registered in Switzerland, or otherwise
+        affected by a fine issued in Switzerland.
       </p>
 
       <h2>2. Provider identification</h2>
@@ -352,22 +358,17 @@ function En() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>3. Description and price of services</h2>
-      <ul>
-        <li>
-          <strong>FADP Compliance Pack</strong>: CHF 590, one-time payment.
-          Includes a record of processing activities, a privacy policy, a
-          data processing agreement (DPA) template, a data breach procedure
-          and an implementation checklist, tailored to the answers provided
-          by the customer.
-        </li>
-        <li>
-          <strong>Ongoing Compliance</strong>: CHF 79 per month, no minimum
-          commitment. Includes legal updates, an annual review of the record
-          of processing activities and answers by email within 48 business
-          hours.
-        </li>
-      </ul>
+      <h2>3. Description and price of the service</h2>
+      <p>
+        <strong>Contestation Pack</strong>: CHF 89, one-time payment.
+        Includes an assessment of your chances of contesting the fine
+        described in the diagnostic tool, a ready-to-send objection or
+        appeal letter, the competent authority and the exact deadline to
+        respect, and a review by our team before delivery. The service is
+        based on the information and documents provided by the customer; it
+        does not constitute individualized legal advice and is not a
+        guarantee of a successful contestation.
+      </p>
       <p>
         Prices are stated in Swiss francs (CHF). [VAT treatment to be
         confirmed with an accountant before going live: the provider may be
@@ -378,56 +379,66 @@ function En() {
       <h2>4. Order and payment</h2>
       <p>
         The order is confirmed once online payment is received. Payment is
-        due in full at the time of order for the Compliance Pack, and at
-        the start of each monthly period for the Ongoing Compliance
-        subscription.
+        due in full at the time of order.
       </p>
 
       <h2>5. Delivery time</h2>
       <p>
-        The FADP Compliance Pack is delivered by email within 3 business
-        days of receiving all the information needed to prepare it. The
-        Ongoing Compliance subscription is active immediately after
-        ordering.
+        The Contestation Pack is delivered by email within 48 hours of
+        receiving all the information and documents needed to prepare it
+        (fine notice, any supporting evidence). Given how short the legal
+        deadline to contest a fine often is, customers are encouraged to
+        order as soon as possible after receiving the fine.
       </p>
 
       <h2>6. Cancellation and refunds</h2>
       <p>
-        The customer may request cancellation and a full refund of a
-        Compliance Pack order as long as document production has not yet
-        started. Once the documents have been delivered, the order is
+        The customer may request cancellation and a full refund of an order
+        as long as preparation of the contestation letter has not yet
+        started. Once the document has been delivered, the order is
         considered fulfilled and is no longer refundable, except in case of
-        a clear failure to meet the services described in Section 3.
+        a clear failure to meet the service described in Section 3.
       </p>
       <p>
-        The Ongoing Compliance subscription can be cancelled at any time,
-        effective at the end of the monthly period already paid for. Months
-        already billed are not refunded on a pro-rata basis.
+        If the prior diagnostic shows that the fine is clearly not
+        contestable (in particular where it has already been paid), the
+        order is not accepted and no payment is charged.
       </p>
 
       <h2>7. Liability</h2>
       <p>
         Thrax Legal is not a law firm and does not represent clients before
-        courts. Documents are prepared based on the information provided by
-        the customer; the accuracy and completeness of that information is
-        the customer&rsquo;s responsibility. The provider&rsquo;s liability,
-        for all damages combined, is limited to the amount actually paid by
-        the customer for the relevant service, except in cases of intent or
-        gross negligence.
+        courts or administrative authorities, which is reserved to
+        attorneys registered with a Swiss cantonal bar. The contestation
+        letter is prepared based on the information and documents provided
+        by the customer; the accuracy and completeness of that information
+        is the customer&rsquo;s responsibility. Thrax Legal does not
+        guarantee the outcome of the contestation, which depends on the
+        assessment of the competent authority. The provider&rsquo;s
+        liability, for all damages combined, is limited to the amount
+        actually paid by the customer, except in cases of intent or gross
+        negligence.
+      </p>
+      <p>
+        Where a case is particularly serious or complex (in particular a
+        risk of a long-term licence withdrawal or criminal proceedings),
+        Thrax Legal may recommend that the customer consult an attorney
+        registered with a Swiss bar instead of proceeding with the
+        Contestation Pack.
       </p>
 
-      <h2>8. Ownership of delivered documents</h2>
+      <h2>8. Ownership of the delivered document</h2>
       <p>
-        Documents delivered as part of the Compliance Pack and Ongoing
-        Compliance may be used freely by the customer for the needs of
-        their own business. They may not be resold or redistributed to
-        third parties as commercial templates.
+        The document delivered as part of the Contestation Pack may be used
+        freely by the customer for the needs of their own contestation. It
+        may not be resold or redistributed to third parties as a commercial
+        template.
       </p>
 
       <h2>9. Data protection</h2>
       <p>
-        The processing of personal data in connection with these services
-        is described in our{" "}
+        The processing of personal data in connection with this service is
+        described in our{" "}
         <NextLink href="/en/confidentialite">privacy policy</NextLink>.
       </p>
 
@@ -462,11 +473,9 @@ function It() {
       <h2>1. Ambito di applicazione</h2>
       <p>
         Le presenti condizioni generali si applicano a qualsiasi ordine
-        effettuato su questo sito per il Pack Conformità nLPD o
-        l&rsquo;Abbonamento Conformità. Questi servizi sono riservati ai{" "}
-        <strong>professionisti</strong> (aziende, lavoratori autonomi) che
-        agiscono per le esigenze della propria attività. Non sono destinati
-        ai consumatori ai sensi del diritto dei consumatori.
+        effettuato su questo sito per il Pack Contestazione Multa. Questo
+        servizio è aperto a privati e professionisti residenti o registrati
+        in Svizzera, o comunque interessati da una multa emessa in Svizzera.
       </p>
 
       <h2>2. Identificazione del fornitore</h2>
@@ -479,22 +488,18 @@ function It() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>3. Descrizione e prezzi dei servizi</h2>
-      <ul>
-        <li>
-          <strong>Pack Conformità nLPD</strong>: CHF 590, pagamento unico.
-          Comprende un registro dei trattamenti, un&rsquo;informativa sulla
-          privacy, un modello di contratto di sub-trattamento (DPA), una
-          procedura di gestione delle violazioni dei dati e una checklist
-          di attuazione, adattati alle risposte fornite dal cliente.
-        </li>
-        <li>
-          <strong>Abbonamento Conformità</strong>: CHF 79 al mese, senza
-          durata minima di impegno. Comprende gli aggiornamenti legali, una
-          revisione annuale del registro dei trattamenti e risposte via
-          email entro 48 ore lavorative.
-        </li>
-      </ul>
+      <h2>3. Descrizione e prezzo del servizio</h2>
+      <p>
+        <strong>Pack Contestazione</strong>: CHF 89, pagamento unico.
+        Comprende una valutazione delle vostre possibilità di contestare la
+        multa descritta nello strumento di diagnosi, una lettera di
+        contestazione o opposizione pronta per l&rsquo;invio,
+        l&rsquo;autorità competente e il termine esatto da rispettare,
+        nonché una verifica da parte del nostro team prima della consegna.
+        Il servizio si basa sulle informazioni e sui documenti forniti dal
+        cliente; non costituisce una consulenza legale personalizzata né una
+        garanzia di successo della contestazione.
+      </p>
       <p>
         I prezzi sono indicati in franchi svizzeri (CHF). [Regime IVA da
         confermare con un commercialista prima della messa in produzione:
@@ -506,58 +511,69 @@ function It() {
       <h2>4. Ordine e pagamento</h2>
       <p>
         L&rsquo;ordine è confermato al ricevimento del pagamento online. Il
-        pagamento è dovuto integralmente al momento dell&rsquo;ordine per il
-        Pack Conformità, e all&rsquo;inizio di ogni periodo mensile per
-        l&rsquo;Abbonamento Conformità.
+        pagamento è dovuto integralmente al momento dell&rsquo;ordine.
       </p>
 
       <h2>5. Tempi di consegna</h2>
       <p>
-        Il Pack Conformità nLPD viene consegnato via email entro 3 giorni
-        lavorativi dal ricevimento di tutte le informazioni necessarie alla
-        sua preparazione. L&rsquo;Abbonamento Conformità è attivo
-        immediatamente dopo l&rsquo;ordine.
+        Il Pack Contestazione viene consegnato via email entro 48 ore dal
+        ricevimento di tutte le informazioni e dei documenti necessari alla
+        sua preparazione (avviso di multa, eventuali prove). Considerati i
+        termini legali spesso brevi per contestare una multa, il cliente è
+        invitato a ordinare il più rapidamente possibile dopo il
+        ricevimento della multa.
       </p>
 
       <h2>6. Annullamento e rimborso</h2>
       <p>
         Il cliente può richiedere l&rsquo;annullamento e il rimborso
-        integrale del proprio ordine del Pack Conformità finché la
-        produzione dei documenti non è ancora iniziata. Una volta consegnati
-        i documenti, l&rsquo;ordine è considerato eseguito e non è più
-        rimborsabile, salvo evidente non conformità alle prestazioni
-        descritte all&rsquo;articolo 3.
+        integrale del proprio ordine finché la preparazione della lettera
+        di contestazione non è ancora iniziata. Una volta consegnato il
+        documento, l&rsquo;ordine è considerato eseguito e non è più
+        rimborsabile, salvo evidente non conformità alla prestazione
+        descritta all&rsquo;articolo 3.
       </p>
       <p>
-        L&rsquo;Abbonamento Conformità può essere disdetto in qualsiasi
-        momento, con effetto alla fine del periodo mensile già pagato. I
-        mesi già fatturati non sono rimborsati proporzionalmente.
+        Se la diagnosi preliminare indica che la multa non è manifestamente
+        contestabile (in particolare in caso di pagamento già effettuato),
+        l&rsquo;ordine non viene accettato e non viene effettuato alcun
+        pagamento.
       </p>
 
       <h2>7. Responsabilità</h2>
       <p>
         Thrax Legal non è uno studio legale e non garantisce la
-        rappresentanza davanti ai tribunali. I documenti forniti sono
-        preparati sulla base delle informazioni comunicate dal cliente; la
-        loro esattezza e completezza sono di responsabilità del cliente. La
-        responsabilità del fornitore, per tutti i danni complessivamente, è
-        limitata all&rsquo;importo effettivamente pagato dal cliente per il
-        servizio interessato, salvo dolo o colpa grave.
+        rappresentanza davanti ai tribunali o alle autorità amministrative,
+        riservata agli avvocati iscritti a un albo cantonale svizzero. La
+        lettera di contestazione è preparata sulla base delle informazioni
+        e dei documenti comunicati dal cliente; la loro esattezza e
+        completezza sono di responsabilità del cliente. Thrax Legal non
+        garantisce l&rsquo;esito della contestazione, che dipende dalla
+        valutazione dell&rsquo;autorità competente. La responsabilità del
+        fornitore, per tutti i danni complessivamente, è limitata
+        all&rsquo;importo effettivamente pagato dal cliente, salvo dolo o
+        colpa grave.
+      </p>
+      <p>
+        Nei casi particolarmente gravi o complessi (in particolare rischio
+        di un ritiro prolungato della licenza di condurre o di un
+        procedimento penale), Thrax Legal può raccomandare al cliente di
+        consultare un avvocato iscritto a un albo svizzero invece di
+        proseguire con il Pack Contestazione.
       </p>
 
-      <h2>8. Proprietà dei documenti consegnati</h2>
+      <h2>8. Proprietà del documento consegnato</h2>
       <p>
-        I documenti consegnati nell&rsquo;ambito del Pack Conformità e
-        dell&rsquo;Abbonamento Conformità possono essere utilizzati
-        liberamente dal cliente per le esigenze della propria attività. Non
-        possono essere rivenduti o ridistribuiti a terzi come modelli
-        commerciali.
+        Il documento consegnato nell&rsquo;ambito del Pack Contestazione
+        può essere utilizzato liberamente dal cliente per le esigenze della
+        propria contestazione. Non può essere rivenduto o ridistribuito a
+        terzi come modello commerciale.
       </p>
 
       <h2>9. Protezione dei dati</h2>
       <p>
-        Il trattamento dei dati personali nell&rsquo;ambito di questi
-        servizi è descritto nella nostra{" "}
+        Il trattamento dei dati personali nell&rsquo;ambito di questo
+        servizio è descritto nella nostra{" "}
         <NextLink href="/it/confidentialite">informativa sulla privacy</NextLink>.
       </p>
 

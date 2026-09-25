@@ -4,7 +4,6 @@ export const dictionary = {
   fr: {
     nav: {
       pricing: "Tarifs",
-      monitoring: "Suivi Conformité",
       guide: "Guide",
       faq: "FAQ",
       diagnosticCta: "Diagnostic gratuit en 2 min",
@@ -15,9 +14,9 @@ export const dictionary = {
       menuCloseLabel: "Fermer",
     },
     footer: {
-      tagline: "La conformité nLPD de votre PME, à prix fixe.",
+      tagline: "Contestez votre amende, à prix fixe.",
       description:
-        "Thrax Legal met les PME suisses en conformité avec la nLPD : registre des traitements, politique de confidentialité, contrats de sous-traitance.",
+        "Thrax Legal évalue vos chances de contester une amende suisse et prépare votre opposition, sans avocat, sans rendez-vous.",
       contact: "Nous contacter",
       hours: "Horaires",
       hoursValue: "Lundi à vendredi",
@@ -25,7 +24,6 @@ export const dictionary = {
       menu: "Menu",
       home: "Accueil",
       diagnostic: "Diagnostic gratuit",
-      monitoring: "Suivi Conformité",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -39,7 +37,6 @@ export const dictionary = {
   de: {
     nav: {
       pricing: "Preise",
-      monitoring: "Compliance-Abo",
       guide: "Ratgeber",
       faq: "FAQ",
       diagnosticCta: "Gratis-Diagnose in 2 Min.",
@@ -50,9 +47,9 @@ export const dictionary = {
       menuCloseLabel: "Schliessen",
     },
     footer: {
-      tagline: "DSG-Konformität für Ihr KMU, zum Fixpreis.",
+      tagline: "Fechten Sie Ihre Busse an, zum Fixpreis.",
       description:
-        "Thrax Legal bringt Schweizer KMU in Einklang mit dem revidierten Datenschutzgesetz (DSG): Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeitungsverträge.",
+        "Thrax Legal beurteilt Ihre Chancen, eine Schweizer Busse anzufechten, und bereitet Ihre Einsprache vor — ohne Anwalt, ohne Termin.",
       contact: "Kontakt",
       hours: "Öffnungszeiten",
       hoursValue: "Montag bis Freitag",
@@ -60,7 +57,6 @@ export const dictionary = {
       menu: "Menü",
       home: "Startseite",
       diagnostic: "Gratis-Diagnose",
-      monitoring: "Compliance-Abo",
       guide: "Ratgeber",
       faq: "FAQ",
       disclaimer:
@@ -74,7 +70,6 @@ export const dictionary = {
   en: {
     nav: {
       pricing: "Pricing",
-      monitoring: "Ongoing Compliance",
       guide: "Guide",
       faq: "FAQ",
       diagnosticCta: "Free 2-min diagnostic",
@@ -85,9 +80,9 @@ export const dictionary = {
       menuCloseLabel: "Close",
     },
     footer: {
-      tagline: "FADP compliance for your SME, at a fixed price.",
+      tagline: "Contest your fine, at a fixed price.",
       description:
-        "Thrax Legal brings Swiss SMEs into compliance with the revised Federal Act on Data Protection (FADP): records of processing, privacy policy, data processing agreements.",
+        "Thrax Legal assesses your chances of contesting a Swiss fine and prepares your objection — no lawyer, no appointment.",
       contact: "Contact us",
       hours: "Hours",
       hoursValue: "Monday to Friday",
@@ -95,7 +90,6 @@ export const dictionary = {
       menu: "Menu",
       home: "Home",
       diagnostic: "Free diagnostic",
-      monitoring: "Ongoing Compliance",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -109,7 +103,6 @@ export const dictionary = {
   it: {
     nav: {
       pricing: "Prezzi",
-      monitoring: "Abbonamento Conformità",
       guide: "Guida",
       faq: "FAQ",
       diagnosticCta: "Diagnosi gratuita in 2 min",
@@ -120,9 +113,9 @@ export const dictionary = {
       menuCloseLabel: "Chiudi",
     },
     footer: {
-      tagline: "La conformità nLPD della vostra PMI, a prezzo fisso.",
+      tagline: "Contestate la vostra multa, a prezzo fisso.",
       description:
-        "Thrax Legal mette le PMI svizzere in conformità con la nLPD: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento.",
+        "Thrax Legal valuta le vostre possibilità di contestare una multa svizzera e prepara la vostra opposizione — senza avvocato, senza appuntamento.",
       contact: "Contattaci",
       hours: "Orari",
       hoursValue: "Lunedì a venerdì",
@@ -130,7 +123,6 @@ export const dictionary = {
       menu: "Menu",
       home: "Home",
       diagnostic: "Diagnosi gratuita",
-      monitoring: "Abbonamento Conformità",
       guide: "Guida",
       faq: "FAQ",
       disclaimer:

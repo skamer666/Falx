@@ -18,7 +18,6 @@ export default function Nav() {
 
   const LINKS = [
     { href: `/${locale}/#offre`, label: t.pricing },
-    { href: `/${locale}/suivi-conformite`, label: t.monitoring },
     { href: `/${locale}/guide`, label: t.guide },
     { href: `/${locale}/#contact`, label: t.faq },
   ];

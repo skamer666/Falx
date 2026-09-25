@@ -14,17 +14,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 const TITLES: Record<Locale, string> = {
-  fr: "Conformité nLPD pour PME suisses, dès 590 CHF | Thrax Legal",
-  de: "DSG-Konformität für Schweizer KMU, ab 590 CHF | Thrax Legal",
-  en: "Swiss FADP compliance for SMEs, from CHF 590 | Thrax Legal",
-  it: "Conformità nLPD per PMI svizzere, da CHF 590 | Thrax Legal",
+  fr: "Contestez votre amende en Suisse, 89 CHF | Thrax Legal",
+  de: "Fechten Sie Ihre Busse in der Schweiz an, CHF 89 | Thrax Legal",
+  en: "Contest your Swiss fine, CHF 89 | Thrax Legal",
+  it: "Contestate la vostra multa in Svizzera, CHF 89 | Thrax Legal",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Thrax Legal met votre PME en conformité avec la nLPD révisée : registre des traitements, politique de confidentialité, contrats de sous-traitance. Prix fixe, sans avocat, sans rendez-vous.",
-  de: "Thrax Legal bringt Ihr KMU in Einklang mit dem revidierten Datenschutzgesetz (DSG): Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeitungsverträge. Fixpreis, ohne Anwalt, ohne Termin.",
-  en: "Thrax Legal brings your SME into compliance with the revised Swiss Federal Act on Data Protection (FADP): records of processing, privacy policy, data processing agreements. Fixed price, no lawyer, no appointment.",
-  it: "Thrax Legal mette la vostra PMI in conformità con la nLPD revisionata: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento. Prezzo fisso, senza avvocato, senza appuntamento.",
+  fr: "Thrax Legal évalue vos chances de contester une amende suisse (excès de vitesse, stationnement, CFF, retrait de permis) et prépare votre lettre d'opposition. Prix fixe 89 CHF, sans avocat, sous 48h.",
+  de: "Thrax Legal beurteilt Ihre Chancen, eine Schweizer Busse anzufechten (Geschwindigkeit, Parkieren, SBB, Führerausweis) und bereitet Ihre Einsprache vor. Fixpreis CHF 89, ohne Anwalt, innert 48 Stunden.",
+  en: "Thrax Legal assesses your chances of contesting a Swiss fine (speeding, parking, SBB/CFF, licence withdrawal) and prepares your objection letter. Fixed price CHF 89, no lawyer, within 48 hours.",
+  it: "Thrax Legal valuta le vostre possibilità di contestare una multa svizzera (velocità, parcheggio, FFS, ritiro della licenza) e prepara la vostra lettera di opposizione. Prezzo fisso CHF 89, senza avvocato, entro 48 ore.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {
@@ -91,7 +91,7 @@ function organizationJsonLd(locale: Locale) {
       "@type": "PostalAddress",
       addressCountry: "CH",
     },
-    priceRange: "CHF 590 - CHF 79/mo",
+    priceRange: "CHF 89",
   };
 }
 
