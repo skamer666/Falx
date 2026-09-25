@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
@@ -235,6 +236,86 @@ function En({ locale }: { locale: Locale }) {
   );
 }
 
+function It({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <h2>Perché un semplice copia-incolla non basta</h2>
+      <p>
+        Un&rsquo;informativa sulla privacy copiata dal sito di un
+        concorrente, o generata automaticamente senza adattamento, raramente
+        descrive i trattamenti reali della vostra azienda. Eppure la nLPD
+        richiede un&rsquo;informazione esatta su cosa fate concretamente con
+        i dati&nbsp;: le incongruenze tra ciò che è dichiarato e ciò che è
+        realmente fatto sono esattamente ciò che un controllo o un reclamo
+        mette in luce.
+      </p>
+      <p>
+        La base di un&rsquo;informativa sulla privacy affidabile è il vostro{" "}
+        <Link href={`/${locale}/guide/registre-des-traitements`}>
+          registro dei trattamenti
+        </Link>
+        &nbsp;: si può informare correttamente solo su ciò che è stato
+        prima censito.
+      </p>
+
+      <h2>Le indicazioni attese</h2>
+      <p>
+        Sia per un sito web che per un documento destinato ai dipendenti,
+        un&rsquo;informativa sulla privacy conforme precisa generalmente&nbsp;:
+      </p>
+      <ul>
+        <li>L&rsquo;identità e i contatti del titolare del trattamento</li>
+        <li>Le finalità precise di ogni trattamento di dati (non una formula generica)</li>
+        <li>La base su cui si fonda il trattamento</li>
+        <li>Le categorie di destinatari dei dati, inclusi i sub-responsabili</li>
+        <li>I trasferimenti di dati all&rsquo;estero, se applicabile, e le relative garanzie</li>
+        <li>La durata di conservazione dei dati o i criteri per determinarla</li>
+        <li>I diritti degli interessati (accesso, rettifica, cancellazione, opposizione) e come esercitarli</li>
+      </ul>
+
+      <h2>Sito web e gestione HR: due documenti, due pubblici</h2>
+      <p>
+        Un errore frequente consiste nel pubblicare un&rsquo;unica
+        informativa sulla privacy generica per tutti i pubblici. In pratica,
+        i visitatori del vostro sito, i vostri clienti e i vostri
+        dipendenti non hanno gli stessi dati trattati né gli stessi diritti
+        prioritari da conoscere&nbsp;: un documento HR deve coprire i dati
+        del dossier del collaboratore (salario, valutazioni, eventuali dati
+        sanitari) mentre la versione pubblicata sul sito copre i cookie, i
+        moduli di contatto e i dati di navigazione.
+      </p>
+
+      <h2>Cookie e tracciatori</h2>
+      <p>
+        Se il vostro sito utilizza cookie di misurazione dell&rsquo;audience,
+        pubblicitari o di social network, questi devono essere descritti
+        esplicitamente, con la possibilità per il visitatore di capire quali
+        tracciatori sono usati e per quale scopo. Un&rsquo;informativa sulla
+        privacy che non menziona gli strumenti di terze parti realmente
+        installati sul sito (pixel pubblicitari, strumenti di analytics)
+        resta incompleta, anche se il testo generale è corretto.
+      </p>
+
+      <h2>Un documento da rivedere, non da pubblicare una volta per tutte</h2>
+      <p>
+        Un nuovo strumento di marketing, un nuovo fornitore di hosting o un
+        cambiamento di finalità (ad esempio, iniziare a rivendere dati
+        aggregati) devono riflettersi nell&rsquo;informativa sulla privacy.
+        È un documento che segue l&rsquo;evoluzione reale della vostra
+        attività, non un testo statico redatto una volta al lancio del
+        sito.
+      </p>
+    </>
+  );
+}
+
+const COMPONENTS: Record<Locale, (props: { locale: Locale }) => ReactNode> = {
+  fr: Fr,
+  de: De,
+  en: En,
+  it: It,
+};
+
 export default async function Page({
   params,
 }: {
@@ -242,10 +323,11 @@ export default async function Page({
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const Body = COMPONENTS[locale];
 
   return (
     <GuideLayout article={article} locale={locale}>
-      {locale === "de" ? <De locale={locale} /> : locale === "en" ? <En locale={locale} /> : <Fr locale={locale} />}
+      <Body locale={locale} />
     </GuideLayout>
   );
 }

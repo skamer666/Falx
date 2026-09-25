@@ -17,18 +17,21 @@ const TITLES: Record<Locale, string> = {
   fr: "Conformité nLPD pour PME suisses, dès 590 CHF | Thrax Legal",
   de: "DSG-Konformität für Schweizer KMU, ab 590 CHF | Thrax Legal",
   en: "Swiss FADP compliance for SMEs, from CHF 590 | Thrax Legal",
+  it: "Conformità nLPD per PMI svizzere, da CHF 590 | Thrax Legal",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
   fr: "Thrax Legal met votre PME en conformité avec la nLPD révisée : registre des traitements, politique de confidentialité, contrats de sous-traitance. Prix fixe, sans avocat, sans rendez-vous.",
   de: "Thrax Legal bringt Ihr KMU in Einklang mit dem revidierten Datenschutzgesetz (DSG): Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeitungsverträge. Fixpreis, ohne Anwalt, ohne Termin.",
   en: "Thrax Legal brings your SME into compliance with the revised Swiss Federal Act on Data Protection (FADP): records of processing, privacy policy, data processing agreements. Fixed price, no lawyer, no appointment.",
+  it: "Thrax Legal mette la vostra PMI in conformità con la nLPD revisionata: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento. Prezzo fisso, senza avvocato, senza appuntamento.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {
   fr: "fr_CH",
   de: "de_CH",
   en: "en_CH",
+  it: "it_CH",
 };
 
 export const viewport: Viewport = {

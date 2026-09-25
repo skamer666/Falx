@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
@@ -245,6 +246,88 @@ function En({ locale }: { locale: Locale }) {
   );
 }
 
+function It({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <h2>Cos&rsquo;è un sub-responsabile, ai sensi della legge?</h2>
+      <p>
+        Un sub-responsabile è qualsiasi azienda esterna che tratta dati
+        personali <strong>per vostro conto</strong>, secondo le vostre
+        istruzioni. La maggior parte delle PMI ne ha molti più di quanto
+        pensi&nbsp;: hosting web, strumento CRM, software di contabilità
+        online, fornitore di email marketing, strumento di recruiting,
+        servizio di paghe esternalizzato. Ognuno di questi fornitori
+        dovrebbe comparire nel vostro{" "}
+        <Link href={`/${locale}/guide/registre-des-traitements`}>
+          registro dei trattamenti
+        </Link>
+        .
+      </p>
+
+      <h2>Perché un semplice contratto di servizio non basta</h2>
+      <p>
+        Un contratto commerciale classico (condizioni generali, contratto di
+        abbonamento a un software) generalmente non copre gli obblighi
+        specifici alla protezione dei dati. Il contratto di sub-trattamento
+        &mdash; spesso chiamato DPA (Data Processing Agreement) &mdash; è un
+        documento distinto, o un addendum, che fissa precisamente&nbsp;:
+      </p>
+      <ul>
+        <li>L&rsquo;oggetto e la durata del trattamento affidato al fornitore</li>
+        <li>Le istruzioni che il sub-responsabile deve seguire, senza andare oltre</li>
+        <li>Le misure di sicurezza che il fornitore si impegna a rispettare</li>
+        <li>Le condizioni alle quali può a sua volta ricorrere a un sub-sub-responsabile</li>
+        <li>Cosa succede in caso di violazione dei dati constatata dal fornitore</li>
+        <li>Cosa succede ai dati alla fine del contratto (cancellazione, restituzione)</li>
+      </ul>
+
+      <h2>E se il fornitore è all&rsquo;estero?</h2>
+      <p>
+        Numerosi strumenti SaaS usati dalle PMI svizzere sono ospitati negli
+        Stati Uniti o altrove fuori dalla Svizzera. In questo caso, il
+        contratto di sub-trattamento deve coprire anche le garanzie
+        applicabili al trasferimento di dati all&rsquo;estero (clausole
+        contrattuali tipo riconosciute, o paese con un livello di
+        protezione ritenuto adeguato). È un punto spesso dimenticato perché
+        lo strumento sembra &laquo;&nbsp;solo un software&nbsp;&raquo;,
+        mentre implica un trasferimento reale di dati fuori dalla Svizzera.
+      </p>
+
+      <h2>Chi deve firmare cosa, in pratica</h2>
+      <p>
+        Per i grandi editori (Google, Microsoft, la maggior parte dei CRM
+        noti), esiste già un DPA standard e può generalmente essere
+        accettato così com&rsquo;è, a volte direttamente dalle impostazioni
+        dell&rsquo;account. Per fornitori più piccoli o locali (agenzia,
+        freelance, contabile indipendente), spetta a voi fornire il
+        contratto &mdash; il che presuppone di avere un modello pronto da
+        proporre, adattato al diritto svizzero.
+      </p>
+
+      <h2>Un compito da non sottovalutare</h2>
+      <p>
+        Censire tutti i fornitori interessati, verificare quali hanno già
+        un DPA in atto e quali no, poi far firmare i contratti mancanti,
+        rappresenta spesso la parte più lunga di una messa in conformità
+        &mdash; ben più della redazione di un&rsquo;{" "}
+        <Link href={`/${locale}/guide/politique-de-confidentialite`}>
+          informativa sulla privacy
+        </Link>
+        . È anche la parte più spesso trascurata, proprio perché implica il
+        coordinamento di più terzi piuttosto che la redazione di un
+        documento internamente.
+      </p>
+    </>
+  );
+}
+
+const COMPONENTS: Record<Locale, (props: { locale: Locale }) => ReactNode> = {
+  fr: Fr,
+  de: De,
+  en: En,
+  it: It,
+};
+
 export default async function Page({
   params,
 }: {
@@ -252,10 +335,11 @@ export default async function Page({
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const Body = COMPONENTS[locale];
 
   return (
     <GuideLayout article={article} locale={locale}>
-      {locale === "de" ? <De locale={locale} /> : locale === "en" ? <En locale={locale} /> : <Fr locale={locale} />}
+      <Body locale={locale} />
     </GuideLayout>
   );
 }

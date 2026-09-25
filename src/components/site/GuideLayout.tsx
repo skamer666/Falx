@@ -41,6 +41,13 @@ const STRINGS: Record<
     seeAlso: "Related articles",
     dateLocale: "en-CH",
   },
+  it: {
+    breadcrumbHome: "Home",
+    breadcrumbGuide: "Guida",
+    updatedOn: "Aggiornato il",
+    seeAlso: "Da leggere anche",
+    dateLocale: "it-CH",
+  },
 };
 
 export default function GuideLayout({

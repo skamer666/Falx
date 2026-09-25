@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
@@ -251,6 +252,91 @@ function En({ locale }: { locale: Locale }) {
   );
 }
 
+function It({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <h2>A cosa serve il registro dei trattamenti?</h2>
+      <p>
+        Il registro dei trattamenti è il documento che elenca, in modo
+        strutturato, tutti i trattamenti di dati personali effettuati dalla
+        vostra azienda&nbsp;: quali dati, per quale scopo, chi vi ha
+        accesso, dove sono conservati, per quanto tempo. È il pezzo centrale
+        di qualsiasi percorso di conformità&nbsp;: senza di esso, è
+        impossibile sapere con precisione cosa deve essere coperto da
+        un&rsquo;{" "}
+        <Link href={`/${locale}/guide/politique-de-confidentialite`}>
+          informativa sulla privacy
+        </Link>{" "}
+        o da{" "}
+        <Link href={`/${locale}/guide/contrat-sous-traitance-dpa`}>
+          contratti di sub-trattamento
+        </Link>
+        .
+      </p>
+
+      <h2>Chi deve tenerlo?</h2>
+      <p>
+        La nLPD prevede un&rsquo;agevolazione per le aziende private con
+        meno di 250 dipendenti&nbsp;: possono essere esonerate
+        dall&rsquo;obbligo formale di tenere un registro, <strong>salvo</strong>{" "}
+        se il loro trattamento di dati presenta un rischio elevato per gli
+        interessati, riguarda dati sensibili su larga scala (dati sanitari,
+        dati biometrici, opinioni religiose o politiche, ad esempio), o
+        implica una profilazione ad alto rischio.
+      </p>
+      <p>
+        In pratica, molte PMI pensano di essere esonerate mentre trattano
+        proprio dati HR (dati sanitari per i certificati di malattia, ad
+        esempio) o fanno una profilazione marketing più spinta di quanto
+        pensino. E anche quando l&rsquo;esonero si applica formalmente,
+        tenere un registro resta consigliato &mdash; è l&rsquo;unico modo
+        per dimostrare, in caso di controllo o contenzioso, che sapete
+        esattamente cosa fate di questi dati.
+      </p>
+
+      <h2>Cosa deve contenere un registro conforme</h2>
+      <p>Per ogni trattamento identificato, un registro completo precisa generalmente&nbsp;:</p>
+      <ul>
+        <li>La finalità del trattamento (perché questi dati sono raccolti)</li>
+        <li>Le categorie di dati e di persone interessate</li>
+        <li>Le categorie di destinatari, inclusi i sub-responsabili esterni</li>
+        <li>La durata di conservazione o i criteri per determinarla</li>
+        <li>Le misure di sicurezza adottate</li>
+        <li>Se applicabile, il trasferimento di dati all&rsquo;estero e le relative garanzie</li>
+      </ul>
+
+      <h2>I trattamenti più spesso dimenticati</h2>
+      <p>
+        Nella nostra pratica, alcuni trattamenti sfuggono regolarmente a un
+        primo inventario&nbsp;:
+      </p>
+      <ul>
+        <li>Gli strumenti SaaS usati quotidianamente (CRM, contabilità online, strumento di recruiting)</li>
+        <li>Le telecamere di videosorveglianza nei locali</li>
+        <li>La conservazione delle candidature e CV non selezionati</li>
+        <li>Le newsletter e gli strumenti di email marketing</li>
+        <li>La geolocalizzazione dei veicoli aziendali</li>
+      </ul>
+
+      <h2>Un documento vivo, non statico</h2>
+      <p>
+        Un registro dei trattamenti è utile solo se è aggiornato. Ogni nuovo
+        strumento, ogni nuovo fornitore o ogni cambiamento di attività può
+        creare un nuovo trattamento da documentare. Per questo motivo si
+        raccomanda una revisione periodica &mdash; almeno annuale &mdash;
+        piuttosto che un esercizio una tantum.
+      </p>
+    </>
+  );
+}
+
+const COMPONENTS: Record<Locale, (props: { locale: Locale }) => ReactNode> = {
+  fr: Fr,
+  de: De,
+  en: En,
+  it: It,
+};
+
 export default async function Page({
   params,
 }: {
@@ -258,10 +344,11 @@ export default async function Page({
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const Body = COMPONENTS[locale];
 
   return (
     <GuideLayout article={article} locale={locale}>
-      {locale === "de" ? <De locale={locale} /> : locale === "en" ? <En locale={locale} /> : <Fr locale={locale} />}
+      <Body locale={locale} />
     </GuideLayout>
   );
 }

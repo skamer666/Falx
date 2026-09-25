@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
@@ -233,6 +234,84 @@ function En({ locale }: { locale: Locale }) {
   );
 }
 
+function It({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <h2>Una differenza importante con la vecchia legge</h2>
+      <p>
+        Sotto la vecchia legge del 1992, le sanzioni raramente colpivano le
+        aziende nella pratica. La nLPD cambia questa logica&nbsp;: prevede{" "}
+        <strong>multe penali a carico delle persone fisiche
+        responsabili</strong> &mdash; generalmente le persone che dirigono
+        l&rsquo;azienda o che hanno preso la decisione colposa &mdash; e non
+        l&rsquo;azienda stessa come persona giuridica, salvo impossibilità
+        di identificare la persona responsabile, nel qual caso la multa può
+        essere posta a carico dell&rsquo;azienda entro un limite inferiore.
+      </p>
+
+      <h2>Fino a quanto?</h2>
+      <p>
+        L&rsquo;importo massimo previsto dalla legge è di{" "}
+        <strong>CHF 250&rsquo;000</strong>, riservato alle violazioni
+        intenzionali e ai casi più gravi&nbsp;: mancata osservanza
+        dell&rsquo;obbligo d&rsquo;informazione, violazione degli obblighi
+        minimi di sicurezza dei dati, violazione degli obblighi legati al
+        sub-trattamento, o trasmissione di dati all&rsquo;estero in
+        violazione delle garanzie richieste. Una negligenza isolata,
+        corretta rapidamente, non espone allo stesso livello di rischio di
+        una violazione deliberata e ripetuta.
+      </p>
+
+      <h2>Cosa innesca concretamente un controllo</h2>
+      <p>In pratica, le procedure iniziano più spesso dopo&nbsp;:</p>
+      <ul>
+        <li>Un reclamo di un cliente, un dipendente o un ex dipendente</li>
+        <li>Una violazione di dati resa pubblica (fuga, attacco informatico) oggetto di notifica</li>
+        <li>Un controllo settoriale mirato dell&rsquo;Incaricato federale della protezione dei dati e della trasparenza (IFPDT)</li>
+      </ul>
+      <p>
+        In altre parole, il rischio non è tanto un controllo amministrativo
+        casuale quanto un fattore scatenante concreto &mdash; spesso una
+        persona insoddisfatta che conosce i propri diritti.
+      </p>
+
+      <h2>Il rischio reputazionale, spesso sottovalutato</h2>
+      <p>
+        Al di là della multa stessa, una violazione di dati resa pubblica o
+        un contenzioso con un cliente sull&rsquo;uso dei suoi dati ha un
+        costo in termini di fiducia, particolarmente per una PMI la cui
+        reputazione locale conta. Questo è un argomento che spesso pesa più
+        dell&rsquo;importo teorico della multa, nella decisione di mettersi
+        in conformità.
+      </p>
+
+      <h2>Ridurre il rischio, concretamente</h2>
+      <p>
+        Un{" "}
+        <Link href={`/${locale}/guide/registre-des-traitements`}>
+          registro dei trattamenti
+        </Link>{" "}
+        aggiornato, un&rsquo;{" "}
+        <Link href={`/${locale}/guide/politique-de-confidentialite`}>
+          informativa sulla privacy
+        </Link>{" "}
+        esatta e una procedura definita in caso di violazione dei dati sono
+        i tre elementi che, in caso di controllo o reclamo, dimostrano un
+        percorso di conformità serio piuttosto che una negligenza
+        caratterizzata &mdash; una differenza che conta direttamente nella
+        valutazione della gravità di una violazione.
+      </p>
+    </>
+  );
+}
+
+const COMPONENTS: Record<Locale, (props: { locale: Locale }) => ReactNode> = {
+  fr: Fr,
+  de: De,
+  en: En,
+  it: It,
+};
+
 export default async function Page({
   params,
 }: {
@@ -240,10 +319,11 @@ export default async function Page({
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const Body = COMPONENTS[locale];
 
   return (
     <GuideLayout article={article} locale={locale}>
-      {locale === "de" ? <De locale={locale} /> : locale === "en" ? <En locale={locale} /> : <Fr locale={locale} />}
+      <Body locale={locale} />
     </GuideLayout>
   );
 }

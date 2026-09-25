@@ -17,6 +17,11 @@ const STRINGS: Record<Locale, { title: string; body: string; cta: string }> = {
     body: "Free 2-minute diagnostic, then a complete FADP Compliance Pack at a fixed price (CHF 590) if you need one.",
     cta: "Start my free diagnostic",
   },
+  it: {
+    title: "Fate il punto sulla vostra conformità",
+    body: "Diagnosi gratuita in 2 minuti, poi un Pack Conformità nLPD completo a prezzo fisso (CHF 590) se ne avete bisogno.",
+    cta: "Fare la mia diagnosi gratuita",
+  },
 };
 
 export default function GuideCta({

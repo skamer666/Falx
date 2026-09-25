@@ -148,8 +148,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "3 jours ouvrables après votre commande. Vos documents sont rédigés à partir de vos réponses, puis vérifiés par notre équipe avant envoi.",
       },
       {
-        q: "Proposez-vous vos services en allemand et en anglais ?",
-        a: "Oui. Le site et le Pack Conformité sont disponibles en français, en allemand et en anglais.",
+        q: "Proposez-vous vos services en allemand, en anglais et en italien ?",
+        a: "Oui. Le site et le Pack Conformité sont disponibles en français, en allemand, en anglais et en italien.",
       },
       {
         q: "Puis-je aussi m'abonner pour un suivi continu ?",
@@ -248,8 +248,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "3 Arbeitstage nach Ihrer Bestellung. Ihre Dokumente werden anhand Ihrer Antworten erstellt und vor Versand von unserem Team geprüft.",
       },
       {
-        q: "Bieten Sie Ihre Leistungen auch auf Französisch und Englisch an?",
-        a: "Ja. Die Website und das Compliance-Paket sind auf Französisch, Deutsch und Englisch verfügbar.",
+        q: "Bieten Sie Ihre Leistungen auch auf Französisch, Englisch und Italienisch an?",
+        a: "Ja. Die Website und das Compliance-Paket sind auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
       {
         q: "Kann ich mich auch für eine laufende Betreuung abonnieren?",
@@ -348,8 +348,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "3 business days after your order. Your documents are drafted from your answers, then checked by our team before delivery.",
       },
       {
-        q: "Do you offer your services in French and German too?",
-        a: "Yes. The site and the Compliance Pack are available in French, German and English.",
+        q: "Do you offer your services in French, German and Italian too?",
+        a: "Yes. The site and the Compliance Pack are available in French, German, English and Italian.",
       },
       {
         q: "Can I also subscribe for ongoing monitoring?",
@@ -362,6 +362,106 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     productDescription:
       "Record of processing activities, privacy policy, data processing agreement (DPA), data breach procedure and implementation checklist, for Swiss FADP compliance of an SME.",
+  },
+  it: {
+    metaTitle: "Conformità nLPD per PMI svizzere, da CHF 590 | Thrax Legal",
+    metaDescription:
+      "Mettete la vostra PMI in conformità con la nLPD revisionata: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento. Prezzo fisso CHF 590, senza avvocato, senza appuntamento, consegnato in 3 giorni lavorativi.",
+    heroTitle: "La vostra PMI è esposta alle sanzioni della nLPD?",
+    heroSubtitle:
+      "La legge revisionata sulla protezione dei dati espone le PMI e i loro dirigenti a sanzioni fino a CHF 250'000 in caso di violazione grave. Mettete la vostra azienda in conformità, senza avvocato, senza appuntamento.",
+    priceBadgeLabel: "Pack completo, pagamento unico",
+    diagnosticCtaLabel: "Fare la mia diagnosi gratuita",
+    diagnosticCtaSub: "2 minuti · Nessuna email richiesta",
+    directBuyLabel: "So già cosa mi serve, acquistare direttamente — CHF 590",
+    stickyBarLabel: "Pack Conformità nLPD",
+    trustBar: [
+      "Conforme alla nLPD revisionata, in vigore da settembre 2023.",
+      "Nessun appuntamento necessario: tutto avviene online, dalla diagnosi alla consegna.",
+      "Ogni documento è verificato da una persona reale prima dell'invio.",
+    ],
+    diagnosticHeading: "Diagnosi gratuita in 2 minuti",
+    diagnosticSubheading:
+      "Rispondete a 6 domande per conoscere il vostro livello di conformità nLPD e i punti precisi da correggere.",
+    stepsHeading: "Come funziona",
+    steps: [
+      {
+        title: "Diagnosi gratuita",
+        description: "Rispondete a 6 domande in 2 minuti per identificare i vostri punti di non conformità.",
+      },
+      {
+        title: "Ordine online",
+        description: "CHF 590, pagamento unico. Nessuna chiamata, nessun appuntamento necessario.",
+      },
+      {
+        title: "Consegna in 3 giorni",
+        description: "I vostri documenti sono redatti e verificati dal nostro team, pronti all'uso.",
+      },
+    ],
+    includedHeading: "Cosa è incluso nel Pack Conformità",
+    included: [
+      { title: "Registro dei trattamenti", description: "Elenca i dati che trattate e perché, adattato alla vostra attività." },
+      { title: "Informativa sulla privacy", description: "Per il vostro sito web e la gestione HR, conforme alla nLPD." },
+      { title: "Contratto di sub-trattamento (DPA)", description: "Modello pronto all'uso per i vostri fornitori (hosting, CRM, contabilità)." },
+      { title: "Procedura violazione dei dati", description: "La procedura da seguire in caso di fuga o attacco informatico, passo dopo passo." },
+      { title: "Checklist di attuazione", description: "Per verificare e mantenere la vostra conformità nel tempo." },
+    ],
+    guideLabel: "Per saperne di più",
+    guideLinkLabel: "Vedi tutta la guida nLPD ↗",
+    offerBullets: [
+      "Registro dei trattamenti e informativa sulla privacy adattati alla vostra attività",
+      "Modello di contratto di sub-trattamento (DPA) e procedura violazione dei dati",
+      "Verificato dal nostro team prima dell'invio",
+    ],
+    offerCtaLabel: "Ordinare il mio Pack Conformità",
+    offerDeliveryNote: "Consegnato in 3 giorni lavorativi",
+    securePaymentLabel: "Pagamento sicuro",
+    upsellTitle: "In opzione: Abbonamento Conformità, CHF 79/mese",
+    upsellText:
+      "Aggiornamenti legali, revisione annuale del vostro registro e domande illimitate via email. Disdicibile in qualsiasi momento.",
+    upsellLinkLabel: "Saperne di più",
+    lawyerHeading: "Il prezzo di un avvocato, senza l'avvocato",
+    lawyerLabel: "Avvocato tradizionale",
+    lawyerRange: "da CHF 750 a 3'000",
+    lawyerNote: "Per un dossier equivalente (5 documenti adattati alla vostra attività), ovvero 3-5 ore fatturate a CHF 250-600/h secondo la complessità.",
+    brandLabel: "Thrax Legal",
+    thraxPrice: "CHF 590",
+    thraxNote: "Pack completo a prezzo fisso, consegnato in 3 giorni lavorativi, senza appuntamento.",
+    lawyerDisclaimer:
+      "Stima basata su una tariffa oraria usuale di CHF 250-600 per un avvocato in Svizzera. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
+    faqHeading: "Domande frequenti",
+    faq: [
+      {
+        q: "Cos'è la nLPD e perché la mia PMI deve conformarsi?",
+        a: "La nLPD (legge revisionata sulla protezione dei dati) è in vigore dal 1° settembre 2023. Si applica a qualsiasi azienda svizzera che tratta dati personali: clienti, dipendenti, prospect. La dimensione dell'azienda non esonera dagli obblighi di base (registro dei trattamenti, informazione degli interessati, sicurezza dei dati).",
+      },
+      {
+        q: "Quali sono le sanzioni in caso di non conformità?",
+        a: "La legge prevede multe fino a CHF 250'000 a carico delle persone responsabili, in caso di violazione grave e intenzionale (mancata informazione, violazione degli obblighi di sub-trattamento). La diagnosi gratuita vi indica dove si situano i vostri rischi.",
+      },
+      {
+        q: "Thrax Legal è uno studio legale?",
+        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Vi forniamo documenti di conformità verificati dal nostro team. Per un contenzioso, vi indirizziamo verso un avvocato.",
+      },
+      {
+        q: "Quanto tempo ci vuole per ricevere i miei documenti?",
+        a: "3 giorni lavorativi dopo il vostro ordine. I vostri documenti sono redatti a partire dalle vostre risposte, poi verificati dal nostro team prima dell'invio.",
+      },
+      {
+        q: "Offrite i vostri servizi anche in francese, tedesco e inglese?",
+        a: "Sì. Il sito e il Pack Conformità sono disponibili in francese, tedesco, inglese e italiano.",
+      },
+      {
+        q: "Posso anche abbonarmi per un monitoraggio continuo?",
+        a: "Sì. L'Abbonamento Conformità (CHF 79/mese, disdicibile in qualsiasi momento) include gli aggiornamenti legali, una revisione annuale del vostro registro e un accesso illimitato alle nostre risposte via email.",
+      },
+      {
+        q: "Cosa succede se la mia azienda è già parzialmente conforme?",
+        a: "La diagnosi gratuita identifica precisamente cosa manca. I vostri documenti sono adattati alla vostra situazione, senza ripartire da zero.",
+      },
+    ],
+    productDescription:
+      "Registro dei trattamenti, informativa sulla privacy, contratto di sub-trattamento (DPA), procedura violazione dei dati e checklist di attuazione, per la conformità nLPD di una PMI svizzera.",
   },
 };
 

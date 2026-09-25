@@ -171,6 +171,53 @@ const CONTENT: Record<Locale, Content> = {
     previous: "Back",
     freeTag: "Free · 2 minutes · Instant result, no email required",
   },
+  it: {
+    questions: [
+      {
+        q: "Avete un registro dei trattamenti di dati aggiornato?",
+        gap: "Registro dei trattamenti mancante o incompleto",
+      },
+      {
+        q: "Il vostro sito web mostra un'informativa sulla privacy conforme alla nLPD?",
+        gap: "Informativa sulla privacy assente o non conforme",
+      },
+      {
+        q: "Avete contratti di sub-trattamento (DPA) con i vostri fornitori (hosting, contabilità online, CRM)?",
+        gap: "Contratti di sub-trattamento (DPA) mancanti con i fornitori",
+      },
+      {
+        q: "Sapete esattamente cosa fare in caso di violazione dei dati (fuga, attacco informatico)?",
+        gap: "Nessuna procedura in caso di violazione dei dati",
+      },
+      {
+        q: "I vostri contratti di lavoro precisano come vengono trattati i dati dei dipendenti?",
+        gap: "Contratti di lavoro non conformi sul trattamento dei dati HR",
+      },
+      {
+        q: "Avete designato una persona responsabile per le questioni di protezione dei dati?",
+        gap: "Nessun punto di contatto designato per la protezione dei dati",
+      },
+    ],
+    options: [
+      { value: "oui", label: "Sì" },
+      { value: "non", label: "No" },
+      { value: "nsp", label: "Non lo so" },
+    ],
+    riskLow: "Rischio basso",
+    riskMedium: "Rischio moderato",
+    riskHigh: "Rischio elevato",
+    resultLabel: "Risultato della vostra diagnosi",
+    scoreCaption: "di conformità nLPD stimata per la vostra PMI.",
+    pointsToFix: (n) => `${n} punt${n > 1 ? "i" : "o"} da correggere :`,
+    noGapsFound:
+      "Buone notizie : nessun punto critico identificato su questi criteri. Il Pack Conformità formalizza e documenta la vostra situazione per renderla opponibile in caso di controllo.",
+    ctaFix: (n) => `Correggere quest${n > 1 ? "i" : "o"} ${n} punt${n > 1 ? "i" : "o"} — Pack Conformità nLPD, CHF 590`,
+    ctaFormalize: "Formalizzare la mia conformità — Pack Conformità nLPD, CHF 590",
+    restart: "Rifare la diagnosi",
+    questionCounter: (current, total) => `Domanda ${current} / ${total}`,
+    previous: "Indietro",
+    freeTag: "Gratuito · 2 minuti · Risultato immediato, nessuna email richiesta",
+  },
 };
 
 function riskLevel(

@@ -205,6 +205,57 @@ const CONTENT: Record<Locale, Content> = {
     productName: "Ongoing FADP Compliance",
     productDescription: "Monthly subscription for ongoing FADP compliance: legal updates, annual review of the record of processing activities, unlimited email questions.",
   },
+  it: {
+    metaTitle: "Abbonamento Conformità nLPD, CHF 79/mese | Thrax Legal",
+    metaDescription:
+      "Mantenete la vostra PMI in conformità con la nLPD nel tempo: aggiornamenti legali, revisione annuale del registro, domande illimitate. CHF 79/mese, disdicibile in qualsiasi momento.",
+    heroTitle: "Restate conformi alla nLPD, nel tempo",
+    heroSubtitle:
+      "La legge evolve, la vostra attività anche. L'Abbonamento Conformità mantiene i vostri documenti aggiornati, senza appuntamento, disdicibile in qualsiasi momento.",
+    priceBadgeLabel: "al mese, disdicibile in qualsiasi momento",
+    ctaLabel: "Avviare l'Abbonamento Conformità",
+    trustBar: [
+      "Nessuna chiamata necessaria: tutto avviene online.",
+      "Disdicibile in qualsiasi momento, senza giustificazione.",
+      "Ogni aggiornamento è verificato da una persona reale.",
+    ],
+    stepsHeading: "Come funziona",
+    steps: [
+      { title: "Iniziate", description: "CHF 79/mese, a partire dal vostro Pack Conformità esistente o in aggiunta a una conformità già in atto." },
+      { title: "Ci scrivete", description: "Una domanda, un nuovo fornitore, un cambiamento di attività: descrivete la vostra esigenza via email." },
+      { title: "Aggiorniamo", description: "I vostri documenti sono adeguati e verificati dal nostro team, entro 48 ore lavorative." },
+    ],
+    offerPrice: "CHF 79/mese",
+    offerDeliveryNote: "Senza chiamata, attivo immediatamente",
+    offerGuaranteeNote: "Disdicibile in qualsiasi momento",
+    securePaymentLabel: "Pagamento sicuro",
+    offerBullets: [
+      "Aggiornamenti legali non appena la nLPD o la vostra attività cambia",
+      "Revisione annuale completa del vostro registro dei trattamenti",
+      "Domande illimitate via email, risposta entro 48 ore lavorative",
+    ],
+    noPackYet: "Non avete ancora il Pack di base?",
+    noPackLinkLabel: "Iniziare con il Pack Conformità nLPD, CHF 590",
+    lawyerHeading: "Il prezzo di un avvocato, senza l'avvocato",
+    lawyerLabel: "Avvocato tradizionale",
+    lawyerRange: "da CHF 750 a 3'000 / mese",
+    lawyerNote: "Per un uso occasionale equivalente, circa 3-5 ore fatturate al mese secondo le esigenze.",
+    brandLabel: "Thrax Legal",
+    thraxPrice: "CHF 79 / mese",
+    thraxNote: "Aggiornamenti e revisione annuale inclusi, senza appuntamento, disdicibile in qualsiasi momento.",
+    lawyerDisclaimer:
+      "Stima basata su una tariffa oraria usuale di CHF 250-600 per un avvocato in Svizzera. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
+    faqHeading: "Domande frequenti",
+    faq: [
+      { q: "Cosa è incluso esattamente?", a: "Gli aggiornamenti dei vostri documenti nLPD non appena la legge o la vostra attività cambia, una revisione annuale completa del vostro registro dei trattamenti, e un accesso illimitato alle nostre risposte via email entro 48 ore lavorative." },
+      { q: "Devo già avere il Pack Conformità nLPD per abbonarmi?", a: "È consigliato, ma non obbligatorio. Se la vostra conformità è stata implementata altrove, riprendiamo i vostri documenti esistenti alla prima revisione." },
+      { q: "Devo fare una chiamata prima di iniziare?", a: "No. Vi abbonate online, ed è attivo immediatamente." },
+      { q: "Posso disdire in qualsiasi momento?", a: "Sì, senza giustificazione. Restate abbonati mese per mese, mai vincolati a una durata." },
+      { q: "I miei documenti sono verificati da una persona reale?", a: "Sì. Ogni aggiornamento è verificato dal nostro team prima di esservi inviato." },
+    ],
+    productName: "Abbonamento Conformità nLPD",
+    productDescription: "Abbonamento mensile di monitoraggio della conformità nLPD: aggiornamenti legali, revisione annuale del registro dei trattamenti, domande illimitate via email.",
+  },
 };
 
 const CHECKOUT_SLUG = "checkout/suivi-conformite";

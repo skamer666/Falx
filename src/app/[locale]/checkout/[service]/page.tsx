@@ -28,6 +28,14 @@ const STRINGS: Record<
     back: "Back to home",
     disclaimer: "Thrax Legal is not a law firm and does not represent clients before courts.",
   },
+  it: {
+    selected: "Servizio selezionato",
+    notice:
+      "L'integrazione dei pagamenti non è ancora collegata a un conto Stripe reale. Questa pagina è un segnaposto in attesa della messa in produzione del modulo di pagamento.",
+    back: "Torna alla home",
+    disclaimer:
+      "Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
+  },
 };
 
 export default async function CheckoutPage({

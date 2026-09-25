@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
@@ -339,6 +340,121 @@ function En({ locale }: { locale: Locale }) {
   );
 }
 
+function It({ locale }: { locale: Locale }) {
+  return (
+    <>
+      <h2>La nLPD in breve</h2>
+      <p>
+        La nuova legge federale sulla protezione dei dati (nLPD, chiamata
+        anche LPD revisionata) è in vigore in Svizzera dal{" "}
+        <strong>1° settembre 2023</strong>. Sostituisce la vecchia legge del
+        1992, ormai superata di fronte all&rsquo;evoluzione digitale, e
+        rafforza sia i diritti delle persone i cui dati sono trattati sia
+        gli obblighi delle aziende che li trattano.
+      </p>
+      <p>
+        Contrariamente a un&rsquo;idea diffusa, la nLPD non è una
+        &laquo;&nbsp;copia svizzera del GDPR&nbsp;&raquo;. Ne condivide lo
+        spirito (trasparenza, minimizzazione, sicurezza), ma resta un testo
+        distinto, con proprie definizioni, eccezioni e meccanismi
+        sanzionatori.
+      </p>
+
+      <h2>Chi è interessato?</h2>
+      <p>
+        La legge si applica a qualsiasi entità, pubblica o privata, che
+        tratta dati personali di persone fisiche in Svizzera o il cui
+        trattamento produce effetti in Svizzera. Concretamente, per una
+        PMI&nbsp;:
+      </p>
+      <ul>
+        <li>I dati dei vostri clienti e prospect (nome, email, storico acquisti, ecc.)</li>
+        <li>I dati dei vostri dipendenti (dossier HR, salari, dati sanitari se applicabile)</li>
+        <li>I dati raccolti tramite il vostro sito web (moduli, cookie, newsletter)</li>
+      </ul>
+      <p>
+        La dimensione dell&rsquo;azienda non esclude nessuno dal campo di
+        applicazione della legge. Influisce invece su alcuni obblighi
+        precisi, come quello di tenere un{" "}
+        <Link href={`/${locale}/guide/registre-des-traitements`}>
+          registro dei trattamenti
+        </Link>
+        , che prevede agevolazioni per le piccole strutture a determinate
+        condizioni.
+      </p>
+
+      <h2>Cosa cambia concretamente con la revisione</h2>
+      <ul>
+        <li>
+          <strong>Obbligo d&rsquo;informazione rafforzato</strong>: le
+          persone interessate devono essere informate chiaramente sulla
+          raccolta dei loro dati, prima o al momento della raccolta.
+        </li>
+        <li>
+          <strong>Sicurezza dei dati</strong>: adozione di misure tecniche e
+          organizzative proporzionate al rischio (crittografia, controllo
+          degli accessi, backup).
+        </li>
+        <li>
+          <strong>Notifica delle violazioni</strong>: obbligo di segnalare
+          determinate violazioni di sicurezza all&rsquo;Incaricato federale
+          della protezione dei dati e della trasparenza (IFPDT).
+        </li>
+        <li>
+          <strong>Sanzioni penali personali</strong>: a differenza della
+          vecchia legge, sono le persone fisiche responsabili a poter essere
+          sanzionate, non solo l&rsquo;azienda. Dettagli nella nostra guida
+          sulle{" "}
+          <Link href={`/${locale}/guide/sanctions-nlpd`}>sanzioni nLPD</Link>.
+        </li>
+      </ul>
+
+      <h2>Gli obblighi principali per una PMI</h2>
+      <p>
+        In pratica, una messa in conformità copre generalmente cinque
+        elementi&nbsp;: un inventario dei trattamenti di dati effettuati,
+        un&rsquo;{" "}
+        <Link href={`/${locale}/guide/politique-de-confidentialite`}>
+          informativa sulla privacy
+        </Link>{" "}
+        che informa chiaramente gli interessati,{" "}
+        <Link href={`/${locale}/guide/contrat-sous-traitance-dpa`}>
+          contratti di sub-trattamento
+        </Link>{" "}
+        con i fornitori che trattano dati per vostro conto (hosting, CRM,
+        contabilità online), una procedura definita in caso di violazione
+        dei dati, e una designazione chiara di chi, internamente, risponde
+        alle domande sulla protezione dei dati.
+      </p>
+
+      <h2>nLPD e GDPR: bisogna occuparsi di entrambi?</h2>
+      <p>
+        Se la vostra PMI tratta dati di residenti dell&rsquo;Unione Europea
+        (clienti, dipendenti da remoto, prospect tramite un sito accessibile
+        dall&rsquo;UE in certi casi), il GDPR può applicarsi parallelamente
+        alla nLPD. I due testi si sovrappongono in gran parte, ma non sono
+        identici&nbsp;: una conformità GDPR non garantisce automaticamente
+        una conformità nLPD, e viceversa.
+      </p>
+
+      <h2>Da dove iniziare?</h2>
+      <p>
+        Il metodo più efficace consiste nel partire da uno stato dei luoghi
+        preciso dei vostri trattamenti di dati attuali, per poi colmare le
+        lacune una per una piuttosto che ripartire da zero. È esattamente
+        ciò che fa la nostra diagnosi gratuita qui sotto.
+      </p>
+    </>
+  );
+}
+
+const COMPONENTS: Record<Locale, (props: { locale: Locale }) => ReactNode> = {
+  fr: Fr,
+  de: De,
+  en: En,
+  it: It,
+};
+
 export default async function Page({
   params,
 }: {
@@ -346,10 +462,11 @@ export default async function Page({
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const Body = COMPONENTS[locale];
 
   return (
     <GuideLayout article={article} locale={locale}>
-      {locale === "de" ? <De locale={locale} /> : locale === "en" ? <En locale={locale} /> : <Fr locale={locale} />}
+      <Body locale={locale} />
     </GuideLayout>
   );
 }

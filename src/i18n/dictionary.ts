@@ -31,7 +31,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal n'est pas un cabinet d'avocats : nous ne portons pas le titre d'avocat et n'assurons pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour toute procédure contentieuse nécessitant une représentation, nous vous orientons vers un avocat.",
       terms: "Conditions générales",
-      region: "Suisse · FR/DE/EN",
+      region: "Suisse · FR/DE/EN/IT",
       rights: "Tous droits réservés.",
     },
   },
@@ -65,7 +65,7 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal ist keine Anwaltskanzlei: Wir führen keinen Anwaltstitel und übernehmen keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei streitigen Verfahren, die eine Vertretung erfordern, verweisen wir Sie an eine Anwältin oder einen Anwalt.",
       terms: "Allgemeine Geschäftsbedingungen",
-      region: "Schweiz · FR/DE/EN",
+      region: "Schweiz · FR/DE/EN/IT",
       rights: "Alle Rechte vorbehalten.",
     },
   },
@@ -99,8 +99,42 @@ export const dictionary = {
       disclaimer:
         "Thrax Legal is not a law firm: we do not hold the title of attorney and do not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For any contentious matter requiring representation, we refer you to an attorney.",
       terms: "Terms & Conditions",
-      region: "Switzerland · FR/DE/EN",
+      region: "Switzerland · FR/DE/EN/IT",
       rights: "All rights reserved.",
+    },
+  },
+  it: {
+    nav: {
+      pricing: "Prezzi",
+      monitoring: "Abbonamento Conformità",
+      guide: "Guida",
+      faq: "FAQ",
+      diagnosticCta: "Diagnosi gratuita in 2 min",
+      home: "Thrax Legal, home",
+      menuOpen: "Apri il menu",
+      menuClose: "Chiudi il menu",
+      menuLabel: "Menu",
+      menuCloseLabel: "Chiudi",
+    },
+    footer: {
+      tagline: "La conformità nLPD della vostra PMI, a prezzo fisso.",
+      description:
+        "Thrax Legal mette le PMI svizzere in conformità con la nLPD: registro dei trattamenti, informativa sulla privacy, contratti di sub-trattamento.",
+      contact: "Contattaci",
+      hours: "Orari",
+      hoursValue: "Lunedì a venerdì",
+      hoursValue2: "09:00 - 18:00",
+      menu: "Menu",
+      home: "Home",
+      diagnostic: "Diagnosi gratuita",
+      monitoring: "Abbonamento Conformità",
+      guide: "Guida",
+      faq: "FAQ",
+      disclaimer:
+        "Thrax Legal non è uno studio legale: non portiamo il titolo di avvocato e non garantiamo la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per qualsiasi procedura contenziosa che richieda una rappresentanza, vi indirizziamo verso un avvocato.",
+      terms: "Termini e condizioni",
+      region: "Svizzera · FR/DE/EN/IT",
+      rights: "Tutti i diritti riservati.",
     },
   },
 } satisfies Record<Locale, unknown>;

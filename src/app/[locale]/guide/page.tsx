@@ -49,6 +49,16 @@ const STRINGS: Record<
     metaDescription:
       "Everything on the Swiss FADP: records of processing, privacy policy, penalties, data processing agreements. Practical guides for Swiss SMEs.",
   },
+  it: {
+    title: "Guida",
+    kicker: "Guida",
+    heading: "Capire la nLPD, passo dopo passo",
+    intro: "Guide pratiche per PMI svizzere, senza inutile gergo tecnico. Per andare oltre, ",
+    introLinkLabel: "fate la diagnosi gratuita",
+    metaTitle: "Guida alla conformità nLPD per PMI svizzere | Thrax Legal",
+    metaDescription:
+      "Capire tutto sulla nLPD: registro dei trattamenti, informativa sulla privacy, sanzioni, contratti di sub-trattamento. Guide pratiche per PMI svizzere.",
+  },
 };
 
 export async function generateMetadata({
