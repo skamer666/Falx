@@ -23,7 +23,7 @@ export default function Footer({ locale }: { locale: Locale }) {
 
   const MENU = [
     { number: "001", label: t.home, href: `/${locale}` },
-    { number: "002", label: t.diagnostic, href: `/${locale}/#diagnostic` },
+    { number: "002", label: t.diagnostic, href: `/${locale}/#offre` },
     { number: "003", label: t.guide, href: `/${locale}/guide` },
     { number: "004", label: t.faq, href: `/${locale}/#contact` },
   ];

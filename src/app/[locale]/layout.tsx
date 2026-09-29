@@ -14,17 +14,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 const TITLES: Record<Locale, string> = {
-  fr: "Contestez votre amende en Suisse, 89 CHF | Thrax Legal",
-  de: "Fechten Sie Ihre Busse in der Schweiz an, CHF 89 | Thrax Legal",
-  en: "Contest your Swiss fine, CHF 89 | Thrax Legal",
-  it: "Contestate la vostra multa in Svizzera, CHF 89 | Thrax Legal",
+  fr: "Abonnement juridique PME en Suisse romande, dès 49 CHF/mois | Thrax Legal",
+  de: "KMU-Rechtsabo in der Westschweiz, ab CHF 49/Monat | Thrax Legal",
+  en: "SME legal subscription in French-speaking Switzerland, from CHF 49/month | Thrax Legal",
+  it: "Abbonamento legale per PMI nella Svizzera romanda, da CHF 49/mese | Thrax Legal",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Thrax Legal évalue vos chances de contester une amende suisse (excès de vitesse, stationnement, CFF, retrait de permis) et prépare votre lettre d'opposition. Prix fixe 89 CHF, sans avocat, sous 48h.",
-  de: "Thrax Legal beurteilt Ihre Chancen, eine Schweizer Busse anzufechten (Geschwindigkeit, Parkieren, SBB, Führerausweis) und bereitet Ihre Einsprache vor. Fixpreis CHF 89, ohne Anwalt, innert 48 Stunden.",
-  en: "Thrax Legal assesses your chances of contesting a Swiss fine (speeding, parking, SBB/CFF, licence withdrawal) and prepares your objection letter. Fixed price CHF 89, no lawyer, within 48 hours.",
-  it: "Thrax Legal valuta le vostre possibilità di contestare una multa svizzera (velocità, parcheggio, FFS, ritiro della licenza) e prepara la vostra lettera di opposizione. Prezzo fisso CHF 89, senza avvocato, entro 48 ore.",
+  fr: "Thrax Legal répond par écrit aux questions juridiques des indépendants et PME de Suisse romande (contrats, CGV, droit du travail, nLPD). Prix fixe mensuel dès 49 CHF, sans engagement, réponse sous 48-72h.",
+  de: "Thrax Legal beantwortet schriftlich die Rechtsfragen von Selbstständigen und KMU in der Westschweiz (Verträge, AGB, Arbeitsrecht, DSG). Fixer Monatspreis ab CHF 49, ohne Vertragsbindung, Antwort innert 48-72h.",
+  en: "Thrax Legal answers in writing the legal questions of independents and SMEs in French-speaking Switzerland (contracts, T&Cs, employment law, FADP). Fixed monthly price from CHF 49, no commitment, answer within 48-72h.",
+  it: "Thrax Legal risponde per iscritto alle domande legali di indipendenti e PMI della Svizzera romanda (contratti, condizioni generali, diritto del lavoro, nLPD). Prezzo fisso mensile da CHF 49, senza impegno, risposta entro 48-72h.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {
@@ -84,14 +84,14 @@ function organizationJsonLd(locale: Locale) {
     url: `${SITE_URL}/${locale}`,
     description: DESCRIPTIONS[locale],
     areaServed: {
-      "@type": "Country",
-      name: "Switzerland",
+      "@type": "AdministrativeArea",
+      name: "Suisse romande",
     },
     address: {
       "@type": "PostalAddress",
       addressCountry: "CH",
     },
-    priceRange: "CHF 89",
+    priceRange: "CHF 49 - CHF 119 / mois",
   };
 }
 

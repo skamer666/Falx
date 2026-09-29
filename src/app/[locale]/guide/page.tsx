@@ -22,42 +22,42 @@ const STRINGS: Record<
   fr: {
     title: "Guide",
     kicker: "Guide",
-    heading: "Comprendre la nLPD, étape par étape",
-    intro: "Des guides pratiques pour PME suisses, sans jargon inutile. Pour aller plus loin, ",
-    introLinkLabel: "faites le diagnostic gratuit",
-    metaTitle: "Guide de la conformité nLPD pour PME suisses | Thrax Legal",
+    heading: "Le droit des PME suisses, étape par étape",
+    intro: "Des guides pratiques pour indépendants et PME de Suisse romande, sans jargon inutile. Pour une question précise, ",
+    introLinkLabel: "voir les formules d'abonnement",
+    metaTitle: "Guide juridique pour indépendants et PME suisses | Thrax Legal",
     metaDescription:
-      "Tout comprendre à la nLPD : registre des traitements, politique de confidentialité, sanctions, contrats de sous-traitance. Guides pratiques pour PME suisses.",
+      "Contrats, CGV, droit du travail, conformité nLPD, recouvrement : guides pratiques pour indépendants et PME de Suisse romande.",
   },
   de: {
     title: "Ratgeber",
     kicker: "Ratgeber",
-    heading: "Das DSG verstehen, Schritt für Schritt",
-    intro: "Praktische Ratgeber für Schweizer KMU, ohne unnötigen Fachjargon. Für den nächsten Schritt: ",
-    introLinkLabel: "kostenlose Diagnose starten",
-    metaTitle: "DSG-Konformitätsratgeber für Schweizer KMU | Thrax Legal",
+    heading: "Recht für Schweizer KMU, Schritt für Schritt",
+    intro: "Praktische Ratgeber für Selbstständige und KMU in der Westschweiz, ohne unnötigen Fachjargon. Für eine konkrete Frage: ",
+    introLinkLabel: "Abo-Formeln ansehen",
+    metaTitle: "Rechtsratgeber für Selbstständige und Schweizer KMU | Thrax Legal",
     metaDescription:
-      "Alles zum DSG verstehen: Verarbeitungsverzeichnis, Datenschutzerklärung, Sanktionen, Auftragsverarbeitungsverträge. Praktische Ratgeber für Schweizer KMU.",
+      "Verträge, AGB, Arbeitsrecht, DSG-Konformität, Inkasso: praktische Ratgeber für Selbstständige und KMU in der Westschweiz.",
   },
   en: {
     title: "Guide",
     kicker: "Guide",
-    heading: "Understanding the Swiss FADP, step by step",
-    intro: "Practical guides for Swiss SMEs, without unnecessary jargon. To go further, ",
-    introLinkLabel: "take the free diagnostic",
-    metaTitle: "Swiss FADP compliance guide for SMEs | Thrax Legal",
+    heading: "Swiss SME law, step by step",
+    intro: "Practical guides for freelancers and SMEs in French-speaking Switzerland, without unnecessary jargon. For a specific question, ",
+    introLinkLabel: "see the subscription plans",
+    metaTitle: "Legal guide for Swiss freelancers and SMEs | Thrax Legal",
     metaDescription:
-      "Everything on the Swiss FADP: records of processing, privacy policy, penalties, data processing agreements. Practical guides for Swiss SMEs.",
+      "Contracts, T&Cs, employment law, FADP compliance, debt collection: practical guides for freelancers and SMEs in French-speaking Switzerland.",
   },
   it: {
     title: "Guida",
     kicker: "Guida",
-    heading: "Capire la nLPD, passo dopo passo",
-    intro: "Guide pratiche per PMI svizzere, senza inutile gergo tecnico. Per andare oltre, ",
-    introLinkLabel: "fate la diagnosi gratuita",
-    metaTitle: "Guida alla conformità nLPD per PMI svizzere | Thrax Legal",
+    heading: "Il diritto delle PMI svizzere, passo dopo passo",
+    intro: "Guide pratiche per indipendenti e PMI della Svizzera romanda, senza inutile gergo tecnico. Per una domanda precisa, ",
+    introLinkLabel: "vedere le formule di abbonamento",
+    metaTitle: "Guida legale per indipendenti e PMI svizzere | Thrax Legal",
     metaDescription:
-      "Capire tutto sulla nLPD: registro dei trattamenti, informativa sulla privacy, sanzioni, contratti di sub-trattamento. Guide pratiche per PMI svizzere.",
+      "Contratti, condizioni generali, diritto del lavoro, conformità nLPD, recupero crediti: guide pratiche per indipendenti e PMI della Svizzera romanda.",
   },
 };
 
@@ -103,7 +103,7 @@ export default async function GuidePage({
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                 {t.intro}
                 <Link
-                  href={`/${locale}/#diagnostic`}
+                  href={`/${locale}/#offre`}
                   className="text-text underline decoration-dotted underline-offset-4 hover:text-text-muted"
                 >
                   {t.introLinkLabel}

@@ -3,24 +3,24 @@ import type { Locale } from "@/i18n/config";
 
 const STRINGS: Record<Locale, { title: string; body: string; cta: string }> = {
   fr: {
-    title: "Faites le point sur votre conformité",
-    body: "Diagnostic gratuit en 2 minutes, puis un Pack Conformité nLPD complet à prix fixe (590 CHF) si vous en avez besoin.",
-    cta: "Faire mon diagnostic gratuit",
+    title: "Une question sur votre situation ?",
+    body: "Abonnement juridique PME dès 49 CHF/mois : posez vos questions par écrit, réponse rédigée sous 48 à 72h, sans engagement.",
+    cta: "Voir les formules",
   },
   de: {
-    title: "Prüfen Sie Ihre Konformität",
-    body: "Kostenlose Diagnose in 2 Minuten, danach bei Bedarf ein vollständiges DSG-Compliance-Paket zum Fixpreis (CHF 590).",
-    cta: "Gratis-Diagnose starten",
+    title: "Eine Frage zu Ihrer Situation?",
+    body: "KMU-Rechtsabo ab CHF 49/Monat: Stellen Sie Ihre Fragen schriftlich, ausformulierte Antwort innert 48 bis 72h, ohne Vertragsbindung.",
+    cta: "Formeln ansehen",
   },
   en: {
-    title: "Check where your compliance stands",
-    body: "Free 2-minute diagnostic, then a complete FADP Compliance Pack at a fixed price (CHF 590) if you need one.",
-    cta: "Start my free diagnostic",
+    title: "A question about your situation?",
+    body: "SME legal subscription from CHF 49/month: ask your questions in writing, drafted answer within 48 to 72h, no commitment.",
+    cta: "See the plans",
   },
   it: {
-    title: "Fate il punto sulla vostra conformità",
-    body: "Diagnosi gratuita in 2 minuti, poi un Pack Conformità nLPD completo a prezzo fisso (CHF 590) se ne avete bisogno.",
-    cta: "Fare la mia diagnosi gratuita",
+    title: "Una domanda sulla vostra situazione?",
+    body: "Abbonamento legale per PMI da CHF 49/mese: ponete le vostre domande per iscritto, risposta redatta entro 48-72h, senza impegno.",
+    cta: "Vedere le formule",
   },
 };
 
@@ -40,7 +40,7 @@ export default function GuideCta({
       <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-text-muted">
         {t.body}
       </p>
-      <PrimaryButton href={`/${locale}/#diagnostic`} className="mt-5 px-6 py-3 text-sm">
+      <PrimaryButton href={`/${locale}/#offre`} className="mt-5 px-6 py-3 text-sm">
         {t.cta}
       </PrimaryButton>
     </div>

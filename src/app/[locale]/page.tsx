@@ -5,8 +5,6 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
-import PaywallCard from "@/components/site/PaywallCard";
-import Autodiagnostic from "@/components/site/Autodiagnostic";
 import JsonLd from "@/components/site/JsonLd";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
@@ -14,38 +12,42 @@ import {
   Container,
   LawyerComparison,
   PrimaryButton,
-  PriceBadge,
   StepList,
   TrustBar,
 } from "@/components/site/ui";
 
 type FaqItem = { q: string; a: string };
 type StepItem = { title: string; description: string };
-type IncludedItem = { title: string; description: string };
+type DomainItem = { title: string; description: string };
+type Tier = {
+  slug: string;
+  name: string;
+  price: string;
+  priceNote: string;
+  tagline: string;
+  features: string[];
+  ctaLabel: string;
+  highlight: boolean;
+};
 
 type HomeContent = {
   metaTitle: string;
   metaDescription: string;
   heroTitle: string;
   heroSubtitle: string;
-  priceBadgeLabel: string;
-  diagnosticCtaLabel: string;
-  diagnosticCtaSub: string;
-  directBuyLabel: string;
-  stickyBarLabel: string;
+  heroCtaLabel: string;
+  heroCtaSub: string;
   trustBar: [string, string, string];
-  diagnosticHeading: string;
-  diagnosticSubheading: string;
+  pricingHeading: string;
+  pricingSubheading: string;
+  tiers: [Tier, Tier];
+  extraQuestionNote: string;
   stepsHeading: string;
   steps: StepItem[];
-  includedHeading: string;
-  included: IncludedItem[];
+  domainsHeading: string;
+  domains: DomainItem[];
   guideLabel: string;
   guideLinkLabel: string;
-  offerBullets: [string, string, string];
-  offerCtaLabel: string;
-  offerDeliveryNote: string;
-  securePaymentLabel: string;
   lawyerHeading: string;
   lawyerLabel: string;
   lawyerRange: string;
@@ -56,379 +58,489 @@ type HomeContent = {
   lawyerDisclaimer: string;
   faqHeading: string;
   faq: FaqItem[];
-  productDescription: string;
+  stickyLabel: string;
+  stickyCta: string;
 };
 
 const CONTENT: Record<Locale, HomeContent> = {
   fr: {
-    metaTitle: "Contester une amende en Suisse, dès 89 CHF | Thrax Legal",
+    metaTitle: "Abonnement juridique PME en Suisse romande | Thrax Legal",
     metaDescription:
-      "Vérifiez gratuitement vos chances de contester une amende suisse (stationnement, excès de vitesse, CFF), puis recevez votre lettre de contestation prête à envoyer. 89 CHF, sans avocat, sans rendez-vous, livré sous 48h.",
-    heroTitle: "Amende reçue ? Vérifiez si vous pouvez la contester, en 2 minutes.",
+      "Conseil juridique écrit pour indépendants et PME de Suisse romande : contrats, CGV, droit du travail, nLPD. Réponse sous 48-72h, prix fixe mensuel, sans engagement, sans avocat à l'heure.",
+    heroTitle: "Un conseil juridique par écrit, pour votre PME, à prix fixe.",
     heroSubtitle:
-      "Stationnement, excès de vitesse, transports publics : payer une amende vaut acceptation définitive. Avant de payer, vérifiez gratuitement vos chances de contestation — sans avocat, sans rendez-vous.",
-    priceBadgeLabel: "Pack complet, paiement unique",
-    diagnosticCtaLabel: "Faire mon diagnostic gratuit",
-    diagnosticCtaSub: "2 minutes · Sans email requis",
-    directBuyLabel: "Je sais déjà ce qu'il me faut, acheter directement — 89 CHF",
-    stickyBarLabel: "Pack Contestation",
+      "Contrats, CGV, droit du travail, conformité nLPD, recouvrement : posez vos questions par écrit, recevez une réponse rédigée sous 48 à 72h. Pas d'avocat à l'heure, pas de rendez-vous, sans engagement.",
+    heroCtaLabel: "Voir les formules",
+    heroCtaSub: "Résiliable à tout moment · Réponse écrite garantie",
     trustBar: [
-      "Diagnostic gratuit en 2 minutes, avant de payer quoi que ce soit.",
-      "Aucun rendez-vous nécessaire : tout se passe en ligne.",
-      "Chaque lettre de contestation est vérifiée par une vraie personne avant envoi.",
+      "Réponse écrite, datée, que vous pouvez ressortir en cas de litige.",
+      "Prix fixe mensuel : jamais de facturation à l'heure ni de surprise.",
+      "Sans engagement : résiliez à tout moment, aucun frais caché.",
     ],
-    diagnosticHeading: "Diagnostic gratuit en 2 minutes",
-    diagnosticSubheading:
-      "Répondez à quelques questions pour connaître vos chances de contestation avant de vous engager.",
+    pricingHeading: "Deux formules, un seul principe : pas de surprise",
+    pricingSubheading:
+      "Choisissez le volume qui correspond à votre activité. Changez de formule ou résiliez à tout moment.",
+    tiers: [
+      {
+        slug: "abonnement-essentiel",
+        name: "Essentiel",
+        price: "49 CHF",
+        priceNote: "/ mois",
+        tagline: "Pour les indépendants et micro-entreprises",
+        features: [
+          "1 question écrite par mois",
+          "Réponse sous 72h ouvrées",
+          "Bibliothèque de modèles (CGV, contrat de travail type, etc.)",
+          "Sans engagement, résiliable à tout moment",
+        ],
+        ctaLabel: "Choisir Essentiel",
+        highlight: false,
+      },
+      {
+        slug: "abonnement-croissance",
+        name: "Croissance",
+        price: "119 CHF",
+        priceNote: "/ mois",
+        tagline: "Pour les PME avec des besoins réguliers",
+        features: [
+          "3 questions écrites par mois",
+          "Réponse sous 48h ouvrées",
+          "Révision de contrat incluse chaque mois",
+          "Bibliothèque de modèles complète",
+          "Sans engagement, résiliable à tout moment",
+        ],
+        ctaLabel: "Choisir Croissance",
+        highlight: true,
+      },
+    ],
+    extraQuestionNote:
+      "Question supplémentaire au-delà de votre forfait : 39 CHF, prix fixe — jamais d'horaire.",
     stepsHeading: "Comment ça marche",
     steps: [
-      { title: "Diagnostic gratuit", description: "Répondez à 4 questions en 2 minutes pour connaître vos chances de contestation." },
-      { title: "Commande en ligne", description: "89 CHF, paiement unique. Aucun appel, aucun rendez-vous nécessaire." },
-      { title: "Livraison sous 48h", description: "Votre lettre de contestation est rédigée et vérifiée par notre équipe, prête à envoyer." },
+      { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement. Paiement mensuel, résiliable à tout moment." },
+      { title: "Posez votre question par écrit", description: "Décrivez votre situation (contrat, litige, conformité) via le formulaire dédié." },
+      { title: "Recevez une réponse rédigée", description: "Réponse écrite et argumentée sous 48 à 72h selon votre formule, avec les documents nécessaires." },
     ],
-    includedHeading: "Ce qui est inclus dans le Pack Contestation",
-    included: [
-      { title: "Analyse de vos chances", description: "Basée sur les faits précis de votre dossier, pas une réponse générique." },
-      { title: "Lettre de contestation prête à envoyer", description: "Rédigée selon la procédure applicable à votre situation." },
-      { title: "Autorité et délai exacts", description: "Les bonnes coordonnées et le bon délai, pour ne rien rater." },
-      { title: "Vérifiée par notre équipe", description: "Une vraie personne relit votre dossier avant l'envoi." },
+    domainsHeading: "Ce que couvre l'abonnement",
+    domains: [
+      { title: "Contrats commerciaux & CGV", description: "Rédaction et relecture de vos contrats et conditions générales." },
+      { title: "Droit du travail", description: "Contrats de travail, licenciements, questions RH courantes." },
+      { title: "Droit des sociétés", description: "Questions de structure, gouvernance et formalités courantes." },
+      { title: "Recouvrement amiable", description: "Mises en demeure et démarches avant procédure judiciaire." },
+      { title: "Conformité nLPD", description: "Mise en conformité de vos traitements de données personnelles." },
+      { title: "Baux commerciaux", description: "Relecture et questions sur vos contrats de bail professionnel." },
     ],
     guideLabel: "Pour aller plus loin",
     guideLinkLabel: "Voir tout le guide ↗",
-    offerBullets: [
-      "Analyse de vos chances basée sur les faits de votre dossier",
-      "Lettre de contestation rédigée et prête à envoyer, avec la bonne autorité et le bon délai",
-      "Vérifiée par notre équipe avant envoi",
-    ],
-    offerCtaLabel: "Commander mon Pack Contestation",
-    offerDeliveryNote: "Livré sous 48h",
-    securePaymentLabel: "Paiement sécurisé",
-    lawyerHeading: "Le prix d'un avocat, sans l'avocat",
+    lawyerHeading: "Le prix d'un avocat, sans la facture horaire",
     lawyerLabel: "Avocat traditionnel",
-    lawyerRange: "300 à 1'200 CHF",
-    lawyerNote: "Pour une lettre de contestation équivalente, soit 1 à 2 heures facturées à 250-600 CHF/h selon la complexité.",
+    lawyerRange: "200 à 600 CHF / heure",
+    lawyerNote: "Facturation horaire classique, souvent difficile à prévoir sur la durée pour une PME.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "89 CHF",
-    thraxNote: "Pack complet à prix fixe, livré sous 48h, sans rendez-vous.",
+    thraxPrice: "dès 49 CHF / mois",
+    thraxNote: "Prix fixe et prévisible, sans engagement, réponses écrites incluses.",
     lawyerDisclaimer:
-      "Estimation basée sur un tarif horaire usuel de 250 à 600 CHF pour un avocat en Suisse. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
+      "Estimation basée sur les tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton). Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
     faqHeading: "Questions fréquentes",
     faq: [
       {
-        q: "Combien de temps ai-je pour contester une amende ?",
-        a: "Cela dépend du type de document reçu : 30 jours pour une amende d'ordre (au-delà, elle est considérée comme acceptée si non payée mais transmise en procédure pénale), 10 jours pour faire opposition à une ordonnance pénale. Notre diagnostic gratuit identifie votre situation précise.",
+        q: "Que couvre exactement l'abonnement ?",
+        a: "Des réponses écrites à vos questions juridiques courantes (contrats, CGV, droit du travail, nLPD, recouvrement amiable, baux commerciaux) et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
       },
       {
-        q: "Ai-je de bonnes chances de gagner ?",
-        a: "Ça dépend entièrement de votre dossier. Une contestation sans motif concret (juste ne pas être d'accord) échoue presque toujours. Une erreur d'identification, un défaut de signalisation ou un vice de procédure peut avoir de vraies chances. Le diagnostic gratuit vous donne une évaluation honnête avant d'aller plus loin.",
+        q: "Puis-je résilier à tout moment ?",
+        a: "Oui. Aucun engagement de durée : vous résiliez quand vous voulez, effectif à la fin du mois déjà payé.",
+      },
+      {
+        q: "Que se passe-t-il si j'ai plus de questions que mon forfait ?",
+        a: "Chaque question supplémentaire est facturée 39 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
+      },
+      {
+        q: "Sous quel délai ai-je une réponse ?",
+        a: "72h ouvrées pour la formule Essentiel, 48h ouvrées pour la formule Croissance. Chaque réponse est écrite et argumentée, pas un simple renvoi vers un article générique.",
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
-        a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour les dossiers graves (retrait de permis important, risque de peine privative de liberté), nous vous orientons vers un avocat spécialisé plutôt que de vous vendre un service inadapté.",
+        a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour les dossiers contentieux ou les opérations complexes, nous vous orientons vers un avocat plutôt que de répondre à l'aveugle.",
       },
       {
-        q: "Combien de temps pour recevoir ma lettre de contestation ?",
-        a: "48 heures après votre commande. Votre lettre est rédigée à partir de votre dossier, puis vérifiée par notre équipe avant envoi.",
+        q: "Proposez-vous ce service dans toute la Suisse ?",
+        a: "Le service est pensé et positionné pour les indépendants et PME de Suisse romande, mais le site est disponible en français, allemand, anglais et italien.",
       },
       {
-        q: "Que se passe-t-il si j'ai déjà payé l'amende ?",
-        a: "Payer une amende vaut acceptation définitive : il n'existe alors plus aucun recours. Notre diagnostic gratuit vous le signale immédiatement si c'est votre cas, pour vous éviter de perdre du temps.",
-      },
-      {
-        q: "Proposez-vous vos services en allemand, anglais et italien ?",
-        a: "Oui. Le site et le Pack Contestation sont disponibles en français, en allemand, en anglais et en italien.",
-      },
-      {
-        q: "Et si mon dossier concerne un retrait de permis important ou une infraction grave ?",
-        a: "Notre service est pensé pour les amendes et contestations courantes. Pour les cas plus lourds, nous vous orientons vers un avocat spécialisé en droit de la circulation.",
+        q: "Une réponse écrite a-t-elle une vraie valeur par rapport à un appel ?",
+        a: "Oui, et c'est un vrai avantage : une réponse écrite et datée constitue une trace que vous pouvez ressortir en cas de litige ou de contrôle, contrairement à une conversation téléphonique.",
       },
     ],
-    productDescription:
-      "Analyse de vos chances de contestation et lettre de contestation prête à envoyer, adaptée à votre amende (stationnement, excès de vitesse, transports publics).",
+    stickyLabel: "Dès 49 CHF/mois",
+    stickyCta: "Voir les formules",
   },
   de: {
-    metaTitle: "Busse in der Schweiz anfechten, ab CHF 89 | Thrax Legal",
+    metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Prüfen Sie kostenlos Ihre Chancen, eine Schweizer Busse anzufechten (Parkieren, Geschwindigkeit, SBB), und erhalten Sie Ihr versandbereites Einspracheschreiben. CHF 89, ohne Anwalt, ohne Termin, Lieferung innert 48h.",
-    heroTitle: "Busse erhalten? Prüfen Sie in 2 Minuten, ob Sie sie anfechten können.",
+      "Schriftliche Rechtsberatung für Selbstständige und KMU in der Westschweiz: Verträge, AGB, Arbeitsrecht, DSG. Antwort innert 48-72h, fixer Monatspreis, ohne Vertragsbindung, kein Anwalt nach Stundensatz.",
+    heroTitle: "Rechtsberatung schriftlich, für Ihr KMU, zum Fixpreis.",
     heroSubtitle:
-      "Parkieren, Geschwindigkeit, öffentlicher Verkehr: Eine Busse zu bezahlen gilt als endgültige Anerkennung. Prüfen Sie vor der Zahlung kostenlos Ihre Chancen — ohne Anwalt, ohne Termin.",
-    priceBadgeLabel: "Komplettpaket, einmalige Zahlung",
-    diagnosticCtaLabel: "Gratis-Diagnose starten",
-    diagnosticCtaSub: "2 Minuten · Keine E-Mail nötig",
-    directBuyLabel: "Ich weiss bereits, was ich brauche — direkt kaufen für CHF 89",
-    stickyBarLabel: "Anfechtungspaket",
+      "Verträge, AGB, Arbeitsrecht, DSG-Konformität, Inkasso: Stellen Sie Ihre Fragen schriftlich, erhalten Sie eine ausformulierte Antwort innert 48 bis 72h. Kein Anwalt nach Stundensatz, kein Termin, ohne Vertragsbindung.",
+    heroCtaLabel: "Formeln ansehen",
+    heroCtaSub: "Jederzeit kündbar · Schriftliche Antwort garantiert",
     trustBar: [
-      "Kostenlose Diagnose in 2 Minuten, bevor Sie irgendetwas bezahlen.",
-      "Kein Termin nötig: alles läuft online ab.",
-      "Jedes Einspracheschreiben wird vor Versand von einer echten Person geprüft.",
+      "Schriftliche, datierte Antwort, die Sie bei einem Streitfall vorlegen können.",
+      "Fixer Monatspreis: nie eine Stundenabrechnung oder Überraschung.",
+      "Ohne Vertragsbindung: jederzeit kündbar, keine versteckten Kosten.",
     ],
-    diagnosticHeading: "Kostenlose Diagnose in 2 Minuten",
-    diagnosticSubheading:
-      "Beantworten Sie ein paar Fragen, um Ihre Anfechtungschancen zu kennen, bevor Sie sich verpflichten.",
+    pricingHeading: "Zwei Formeln, ein Grundsatz: keine Überraschung",
+    pricingSubheading:
+      "Wählen Sie das Volumen, das zu Ihrer Tätigkeit passt. Formel wechseln oder jederzeit kündigen.",
+    tiers: [
+      {
+        slug: "abonnement-essentiel",
+        name: "Essentiel",
+        price: "CHF 49",
+        priceNote: "/ Monat",
+        tagline: "Für Selbstständige und Kleinstunternehmen",
+        features: [
+          "1 schriftliche Frage pro Monat",
+          "Antwort innert 72 Arbeitsstunden",
+          "Vorlagenbibliothek (AGB, Musterarbeitsvertrag usw.)",
+          "Ohne Vertragsbindung, jederzeit kündbar",
+        ],
+        ctaLabel: "Essentiel wählen",
+        highlight: false,
+      },
+      {
+        slug: "abonnement-croissance",
+        name: "Croissance",
+        price: "CHF 119",
+        priceNote: "/ Monat",
+        tagline: "Für KMU mit regelmässigem Bedarf",
+        features: [
+          "3 schriftliche Fragen pro Monat",
+          "Antwort innert 48 Arbeitsstunden",
+          "Vertragsprüfung jeden Monat inklusive",
+          "Vollständige Vorlagenbibliothek",
+          "Ohne Vertragsbindung, jederzeit kündbar",
+        ],
+        ctaLabel: "Croissance wählen",
+        highlight: true,
+      },
+    ],
+    extraQuestionNote:
+      "Zusätzliche Frage über Ihr Kontingent hinaus: CHF 39, Fixpreis — nie nach Stundensatz.",
     stepsHeading: "So funktioniert's",
     steps: [
-      { title: "Gratis-Diagnose", description: "Beantworten Sie in 2 Minuten 4 Fragen, um Ihre Chancen zu kennen." },
-      { title: "Online bestellen", description: "CHF 89, einmalige Zahlung. Kein Anruf, kein Termin nötig." },
-      { title: "Lieferung innert 48h", description: "Ihr Einspracheschreiben wird von unserem Team erstellt und geprüft, versandbereit." },
+      { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung. Monatliche Zahlung, jederzeit kündbar." },
+      { title: "Frage schriftlich stellen", description: "Beschreiben Sie Ihre Situation (Vertrag, Streitfall, Konformität) über das dafür vorgesehene Formular." },
+      { title: "Ausformulierte Antwort erhalten", description: "Schriftliche, begründete Antwort innert 48 bis 72h je nach Formel, mit den nötigen Dokumenten." },
     ],
-    includedHeading: "Was im Anfechtungspaket enthalten ist",
-    included: [
-      { title: "Analyse Ihrer Chancen", description: "Basierend auf den genauen Fakten Ihres Falls, keine generische Antwort." },
-      { title: "Versandbereites Einspracheschreiben", description: "Verfasst nach dem für Ihre Situation geltenden Verfahren." },
-      { title: "Exakte Behörde und Frist", description: "Die richtigen Kontaktdaten und die richtige Frist, damit nichts verpasst wird." },
-      { title: "Von unserem Team geprüft", description: "Eine echte Person prüft Ihren Fall vor dem Versand." },
+    domainsHeading: "Was das Abo abdeckt",
+    domains: [
+      { title: "Handelsverträge & AGB", description: "Erstellung und Prüfung Ihrer Verträge und allgemeinen Geschäftsbedingungen." },
+      { title: "Arbeitsrecht", description: "Arbeitsverträge, Kündigungen, gängige HR-Fragen." },
+      { title: "Gesellschaftsrecht", description: "Fragen zu Struktur, Governance und gängigen Formalitäten." },
+      { title: "Gütliches Inkasso", description: "Mahnschreiben und Schritte vor einem Gerichtsverfahren." },
+      { title: "DSG-Konformität", description: "Konformität Ihrer Personendatenbearbeitung." },
+      { title: "Geschäftsmietverträge", description: "Prüfung und Fragen zu Ihren gewerblichen Mietverträgen." },
     ],
     guideLabel: "Mehr erfahren",
     guideLinkLabel: "Zum ganzen Ratgeber ↗",
-    offerBullets: [
-      "Analyse Ihrer Chancen basierend auf den Fakten Ihres Falls",
-      "Versandbereites Einspracheschreiben mit der richtigen Behörde und Frist",
-      "Von unserem Team vor Versand geprüft",
-    ],
-    offerCtaLabel: "Anfechtungspaket bestellen",
-    offerDeliveryNote: "Lieferung innert 48h",
-    securePaymentLabel: "Sichere Zahlung",
-    lawyerHeading: "Der Preis eines Anwalts, ohne den Anwalt",
-    lawyerLabel: "Klassische Anwaltskanzlei",
-    lawyerRange: "300 bis 1'200 CHF",
-    lawyerNote: "Für ein vergleichbares Einspracheschreiben, also 1 bis 2 verrechnete Stunden zu CHF 250-600/h je nach Komplexität.",
+    lawyerHeading: "Der Preis eines Anwalts, ohne Stundenabrechnung",
+    lawyerLabel: "Klassischer Anwalt",
+    lawyerRange: "CHF 200 bis 600 / Stunde",
+    lawyerNote: "Klassische Stundenabrechnung, für ein KMU auf Dauer oft schwer planbar.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 89",
-    thraxNote: "Komplettpaket zum Fixpreis, Lieferung innert 48h, ohne Termin.",
+    thraxPrice: "ab CHF 49 / Monat",
+    thraxNote: "Fixer, planbarer Preis, ohne Vertragsbindung, schriftliche Antworten inklusive.",
     lawyerDisclaimer:
-      "Schätzung basierend auf einem üblichen Stundensatz von CHF 250 bis 600 für einen Anwalt in der Schweiz. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
+      "Schätzung basierend auf üblichen Stundensätzen von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton). Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
     faqHeading: "Häufige Fragen",
     faq: [
       {
-        q: "Wie viel Zeit habe ich, um eine Busse anzufechten?",
-        a: "Das hängt vom erhaltenen Dokument ab: 30 Tage bei einer Ordnungsbusse (danach gilt sie bei Nichtzahlung als ins Strafverfahren übergegangen), 10 Tage für eine Einsprache gegen einen Strafbefehl. Unsere kostenlose Diagnose identifiziert Ihre genaue Situation.",
+        q: "Was deckt das Abo genau ab?",
+        a: "Schriftliche Antworten auf gängige Rechtsfragen (Verträge, AGB, Arbeitsrecht, DSG, gütliches Inkasso, Geschäftsmietverträge) und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
       },
       {
-        q: "Habe ich gute Chancen zu gewinnen?",
-        a: "Das hängt ganz von Ihrem Fall ab. Eine Anfechtung ohne konkreten Grund (nur weil Sie nicht einverstanden sind) scheitert fast immer. Ein Identifikationsfehler, ein Signalisationsmangel oder ein Verfahrensfehler kann echte Chancen haben. Die kostenlose Diagnose gibt Ihnen eine ehrliche Einschätzung, bevor Sie weitergehen.",
+        q: "Kann ich jederzeit kündigen?",
+        a: "Ja. Keine Vertragsbindung: Sie kündigen, wann Sie wollen, wirksam am Ende des bereits bezahlten Monats.",
+      },
+      {
+        q: "Was passiert, wenn ich mehr Fragen habe als mein Kontingent?",
+        a: "Jede zusätzliche Frage kostet CHF 39, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
+      },
+      {
+        q: "Innert welcher Frist erhalte ich eine Antwort?",
+        a: "72 Arbeitsstunden bei der Formel Essentiel, 48 Arbeitsstunden bei Croissance. Jede Antwort ist schriftlich und begründet, kein blosser Verweis auf einen generischen Artikel.",
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
-        a: "Nein. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei schweren Fällen (erheblicher Führerausweisentzug, Risiko einer Freiheitsstrafe) verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt, statt Ihnen eine unpassende Leistung zu verkaufen.",
+        a: "Nein. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei streitigen Fällen oder komplexen Vorgängen verweisen wir Sie an eine Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
       },
       {
-        q: "Wie lange dauert es, bis ich mein Einspracheschreiben erhalte?",
-        a: "48 Stunden nach Ihrer Bestellung. Ihr Schreiben wird anhand Ihres Falls erstellt und vor Versand von unserem Team geprüft.",
+        q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
+        a: "Der Dienst ist für Selbstständige und KMU in der Westschweiz konzipiert und positioniert, die Website ist aber auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
       {
-        q: "Was passiert, wenn ich die Busse bereits bezahlt habe?",
-        a: "Das Bezahlen einer Busse gilt als endgültige Anerkennung: Danach gibt es keinen Rechtsweg mehr. Unsere kostenlose Diagnose weist Sie sofort darauf hin, falls das bei Ihnen der Fall ist, damit Sie keine Zeit verlieren.",
-      },
-      {
-        q: "Bieten Sie Ihre Leistungen auch auf Französisch, Englisch und Italienisch an?",
-        a: "Ja. Die Website und das Anfechtungspaket sind auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
-      },
-      {
-        q: "Was, wenn es um einen erheblichen Führerausweisentzug oder einen schweren Verstoss geht?",
-        a: "Unser Service ist für gängige Bussen und Einsprachen gedacht. Bei schwereren Fällen verweisen wir Sie an eine auf Verkehrsrecht spezialisierte Anwältin oder einen Anwalt.",
+        q: "Hat eine schriftliche Antwort wirklich einen Vorteil gegenüber einem Anruf?",
+        a: "Ja, und das ist ein echter Vorteil: Eine schriftliche, datierte Antwort ist ein Nachweis, den Sie bei einem Streitfall oder einer Kontrolle vorlegen können — anders als ein Telefongespräch.",
       },
     ],
-    productDescription:
-      "Analyse Ihrer Anfechtungschancen und versandbereites Einspracheschreiben, angepasst an Ihre Busse (Parkieren, Geschwindigkeit, öffentlicher Verkehr).",
+    stickyLabel: "Ab CHF 49/Monat",
+    stickyCta: "Formeln ansehen",
   },
   en: {
-    metaTitle: "Contest a fine in Switzerland, from CHF 89 | Thrax Legal",
+    metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Check for free your chances of contesting a Swiss fine (parking, speeding, SBB/CFF), then get your ready-to-send objection letter. CHF 89, no lawyer, no appointment, delivered within 48h.",
-    heroTitle: "Got a fine? Check in 2 minutes if you can contest it.",
+      "Written legal support for independents and SMEs in French-speaking Switzerland: contracts, T&Cs, employment law, FADP compliance. Answer within 48-72h, fixed monthly price, no commitment, no hourly lawyer.",
+    heroTitle: "Legal advice in writing, for your SME, at a fixed price.",
     heroSubtitle:
-      "Parking, speeding, public transport: paying a fine counts as final acceptance. Before you pay, check your chances of contesting it for free — no lawyer, no appointment.",
-    priceBadgeLabel: "Full pack, one-time payment",
-    diagnosticCtaLabel: "Start my free diagnostic",
-    diagnosticCtaSub: "2 minutes · No email required",
-    directBuyLabel: "I already know what I need, buy directly — CHF 89",
-    stickyBarLabel: "Contestation Pack",
+      "Contracts, T&Cs, employment law, FADP compliance, debt collection: ask your questions in writing, get a drafted answer within 48 to 72h. No hourly lawyer, no appointment, no commitment.",
+    heroCtaLabel: "See the plans",
+    heroCtaSub: "Cancel anytime · Written answer guaranteed",
     trustBar: [
-      "Free 2-minute diagnostic, before you pay anything.",
-      "No appointment needed: everything happens online.",
-      "Every objection letter is checked by a real person before it's sent.",
+      "A written, dated answer you can produce if a dispute arises.",
+      "Fixed monthly price: never an hourly bill or a surprise.",
+      "No commitment: cancel anytime, no hidden fees.",
     ],
-    diagnosticHeading: "Free 2-minute diagnostic",
-    diagnosticSubheading:
-      "Answer a few questions to find out your chances of contesting before committing to anything.",
+    pricingHeading: "Two plans, one principle: no surprises",
+    pricingSubheading:
+      "Choose the volume that fits your business. Switch plans or cancel anytime.",
+    tiers: [
+      {
+        slug: "abonnement-essentiel",
+        name: "Essential",
+        price: "CHF 49",
+        priceNote: "/ month",
+        tagline: "For freelancers and micro-businesses",
+        features: [
+          "1 written question per month",
+          "Answer within 72 business hours",
+          "Template library (T&Cs, standard employment contract, etc.)",
+          "No commitment, cancel anytime",
+        ],
+        ctaLabel: "Choose Essential",
+        highlight: false,
+      },
+      {
+        slug: "abonnement-croissance",
+        name: "Growth",
+        price: "CHF 119",
+        priceNote: "/ month",
+        tagline: "For SMEs with regular needs",
+        features: [
+          "3 written questions per month",
+          "Answer within 48 business hours",
+          "Contract review included every month",
+          "Full template library",
+          "No commitment, cancel anytime",
+        ],
+        ctaLabel: "Choose Growth",
+        highlight: true,
+      },
+    ],
+    extraQuestionNote:
+      "Extra question beyond your plan: CHF 39, fixed price — never hourly.",
     stepsHeading: "How it works",
     steps: [
-      { title: "Free diagnostic", description: "Answer 4 questions in 2 minutes to know your chances." },
-      { title: "Order online", description: "CHF 89, one-time payment. No call, no appointment needed." },
-      { title: "Delivered within 48h", description: "Your objection letter is drafted and checked by our team, ready to send." },
+      { title: "Choose your plan", description: "Essential or Growth, no commitment. Monthly payment, cancel anytime." },
+      { title: "Ask your question in writing", description: "Describe your situation (contract, dispute, compliance) via the dedicated form." },
+      { title: "Receive a drafted answer", description: "Written, reasoned answer within 48 to 72h depending on your plan, with the necessary documents." },
     ],
-    includedHeading: "What's included in the Contestation Pack",
-    included: [
-      { title: "Assessment of your chances", description: "Based on the precise facts of your case, not a generic answer." },
-      { title: "Ready-to-send objection letter", description: "Drafted according to the procedure that applies to your situation." },
-      { title: "The right authority and deadline", description: "The correct contact details and deadline, so nothing is missed." },
-      { title: "Checked by our team", description: "A real person reviews your case before it's sent." },
+    domainsHeading: "What the subscription covers",
+    domains: [
+      { title: "Commercial contracts & T&Cs", description: "Drafting and review of your contracts and terms and conditions." },
+      { title: "Employment law", description: "Employment contracts, terminations, common HR questions." },
+      { title: "Corporate law", description: "Structure, governance and common formalities questions." },
+      { title: "Amicable debt collection", description: "Formal notices and steps before legal proceedings." },
+      { title: "FADP compliance", description: "Bringing your personal data processing into compliance." },
+      { title: "Commercial leases", description: "Review and questions about your business lease agreements." },
     ],
     guideLabel: "Go further",
     guideLinkLabel: "See the full guide ↗",
-    offerBullets: [
-      "Assessment of your chances based on the facts of your case",
-      "Objection letter drafted and ready to send, with the right authority and deadline",
-      "Checked by our team before delivery",
-    ],
-    offerCtaLabel: "Order my Contestation Pack",
-    offerDeliveryNote: "Delivered within 48h",
-    securePaymentLabel: "Secure payment",
-    lawyerHeading: "The price of a lawyer, without the lawyer",
-    lawyerLabel: "Traditional law firm",
-    lawyerRange: "CHF 300 to 1,200",
-    lawyerNote: "For an equivalent objection letter, i.e. 1 to 2 hours billed at CHF 250-600/h depending on complexity.",
+    lawyerHeading: "The price of a lawyer, without the hourly bill",
+    lawyerLabel: "Traditional lawyer",
+    lawyerRange: "CHF 200 to 600 / hour",
+    lawyerNote: "Classic hourly billing, often hard to predict over time for an SME.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 89",
-    thraxNote: "Full pack at a fixed price, delivered within 48h, no appointment.",
+    thraxPrice: "from CHF 49 / month",
+    thraxNote: "Fixed, predictable price, no commitment, written answers included.",
     lawyerDisclaimer:
-      "Estimate based on a typical hourly rate of CHF 250 to 600 for a lawyer in Switzerland. Thrax Legal is not a law firm and does not represent clients before courts.",
+      "Estimate based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton). Thrax Legal is not a law firm and does not represent clients before courts.",
     faqHeading: "Frequently asked questions",
     faq: [
       {
-        q: "How much time do I have to contest a fine?",
-        a: "It depends on the document you received: 30 days for a fixed penalty notice (if unpaid, it then moves to criminal proceedings), 10 days to object to a penal order. Our free diagnostic identifies your exact situation.",
+        q: "What exactly does the subscription cover?",
+        a: "Written answers to common legal questions (contracts, T&Cs, employment law, FADP, amicable debt collection, commercial leases) and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
       },
       {
-        q: "Do I have good chances of winning?",
-        a: "It entirely depends on your case. An objection with no concrete ground (just disagreeing) almost always fails. An identification error, a signage defect, or a procedural flaw can have real chances. The free diagnostic gives you an honest assessment before you go further.",
+        q: "Can I cancel anytime?",
+        a: "Yes. No commitment period: cancel whenever you want, effective at the end of the month already paid.",
+      },
+      {
+        q: "What happens if I have more questions than my plan allows?",
+        a: "Each extra question is billed at CHF 39, fixed price — never hourly. You can also switch plans at any time.",
+      },
+      {
+        q: "How long until I get an answer?",
+        a: "72 business hours on the Essential plan, 48 business hours on Growth. Every answer is written and reasoned, not a generic article link.",
       },
       {
         q: "Is Thrax Legal a law firm?",
-        a: "No. Thrax Legal is not a law firm and does not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For serious cases (significant licence suspension, risk of a custodial sentence), we refer you to a specialised lawyer rather than sell you an unsuitable service.",
+        a: "No. Thrax Legal is not a law firm and does not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For contentious matters or complex transactions, we refer you to a lawyer rather than guess.",
       },
       {
-        q: "How long until I receive my objection letter?",
-        a: "48 hours after your order. Your letter is drafted from your case, then checked by our team before delivery.",
+        q: "Do you offer this service across all of Switzerland?",
+        a: "The service is designed and positioned for freelancers and SMEs in French-speaking Switzerland, but the site is available in French, German, English and Italian.",
       },
       {
-        q: "What happens if I've already paid the fine?",
-        a: "Paying a fine counts as final acceptance: there is no recourse left afterwards. Our free diagnostic flags this immediately if that's your case, so you don't waste time.",
-      },
-      {
-        q: "Do you offer your services in French, German and Italian too?",
-        a: "Yes. The site and the Contestation Pack are available in French, German, English and Italian.",
-      },
-      {
-        q: "What if my case involves a significant licence suspension or a serious offence?",
-        a: "Our service is designed for common fines and objections. For heavier cases, we refer you to a lawyer specialised in road traffic law.",
+        q: "Does a written answer really have an advantage over a call?",
+        a: "Yes, and it's a real one: a written, dated answer is a record you can produce in case of a dispute or an audit — unlike a phone conversation.",
       },
     ],
-    productDescription:
-      "Assessment of your chances of contesting and a ready-to-send objection letter, tailored to your fine (parking, speeding, public transport).",
+    stickyLabel: "From CHF 49/month",
+    stickyCta: "See the plans",
   },
   it: {
-    metaTitle: "Contestare una multa in Svizzera, da CHF 89 | Thrax Legal",
+    metaTitle: "Abbonamento legale per PME nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Verificate gratuitamente le vostre possibilità di contestare una multa svizzera (parcheggio, velocità, FFS), poi ricevete la vostra lettera di contestazione pronta da inviare. CHF 89, senza avvocato, senza appuntamento, consegnata entro 48h.",
-    heroTitle: "Multa ricevuta? Verificate in 2 minuti se potete contestarla.",
+      "Assistenza legale scritta per indipendenti e PMI della Svizzera romanda: contratti, condizioni generali, diritto del lavoro, nLPD. Risposta entro 48-72h, prezzo fisso mensile, senza impegno.",
+    heroTitle: "Consulenza legale scritta, per la vostra PMI, a prezzo fisso.",
     heroSubtitle:
-      "Parcheggio, eccesso di velocità, trasporti pubblici: pagare una multa equivale a un'accettazione definitiva. Prima di pagare, verificate gratuitamente le vostre possibilità di contestazione — senza avvocato, senza appuntamento.",
-    priceBadgeLabel: "Pack completo, pagamento unico",
-    diagnosticCtaLabel: "Fare la mia diagnosi gratuita",
-    diagnosticCtaSub: "2 minuti · Nessuna email richiesta",
-    directBuyLabel: "So già cosa mi serve, acquistare direttamente — CHF 89",
-    stickyBarLabel: "Pack Contestazione",
+      "Contratti, condizioni generali, diritto del lavoro, conformità nLPD, recupero crediti: ponete le vostre domande per iscritto, ricevete una risposta redatta entro 48-72h. Niente avvocato a ore, niente appuntamento, senza impegno.",
+    heroCtaLabel: "Vedere le formule",
+    heroCtaSub: "Disdicibile in qualsiasi momento · Risposta scritta garantita",
     trustBar: [
-      "Diagnosi gratuita in 2 minuti, prima di pagare qualsiasi cosa.",
-      "Nessun appuntamento necessario: tutto avviene online.",
-      "Ogni lettera di contestazione è verificata da una persona reale prima dell'invio.",
+      "Risposta scritta e datata, che potete esibire in caso di controversia.",
+      "Prezzo fisso mensile: mai una fatturazione oraria o una sorpresa.",
+      "Senza impegno: disdite in qualsiasi momento, nessun costo nascosto.",
     ],
-    diagnosticHeading: "Diagnosi gratuita in 2 minuti",
-    diagnosticSubheading:
-      "Rispondete a qualche domanda per conoscere le vostre possibilità di contestazione prima di impegnarvi.",
+    pricingHeading: "Due formule, un solo principio: nessuna sorpresa",
+    pricingSubheading:
+      "Scegliete il volume adatto alla vostra attività. Cambiate formula o disdite in qualsiasi momento.",
+    tiers: [
+      {
+        slug: "abonnement-essentiel",
+        name: "Essentiel",
+        price: "CHF 49",
+        priceNote: "/ mese",
+        tagline: "Per indipendenti e micro-imprese",
+        features: [
+          "1 domanda scritta al mese",
+          "Risposta entro 72 ore lavorative",
+          "Libreria di modelli (condizioni generali, contratto di lavoro tipo, ecc.)",
+          "Senza impegno, disdicibile in qualsiasi momento",
+        ],
+        ctaLabel: "Scegliere Essentiel",
+        highlight: false,
+      },
+      {
+        slug: "abonnement-croissance",
+        name: "Croissance",
+        price: "CHF 119",
+        priceNote: "/ mese",
+        tagline: "Per PMI con esigenze regolari",
+        features: [
+          "3 domande scritte al mese",
+          "Risposta entro 48 ore lavorative",
+          "Revisione contrattuale inclusa ogni mese",
+          "Libreria di modelli completa",
+          "Senza impegno, disdicibile in qualsiasi momento",
+        ],
+        ctaLabel: "Scegliere Croissance",
+        highlight: true,
+      },
+    ],
+    extraQuestionNote:
+      "Domanda supplementare oltre il vostro pacchetto: CHF 39, prezzo fisso — mai a ore.",
     stepsHeading: "Come funziona",
     steps: [
-      { title: "Diagnosi gratuita", description: "Rispondete a 4 domande in 2 minuti per conoscere le vostre possibilità." },
-      { title: "Ordine online", description: "CHF 89, pagamento unico. Nessuna chiamata, nessun appuntamento necessario." },
-      { title: "Consegna entro 48h", description: "La vostra lettera di contestazione è redatta e verificata dal nostro team, pronta da inviare." },
+      { title: "Scegliete la vostra formula", description: "Essentiel o Croissance, senza impegno. Pagamento mensile, disdicibile in qualsiasi momento." },
+      { title: "Ponete la vostra domanda per iscritto", description: "Descrivete la vostra situazione (contratto, controversia, conformità) tramite il modulo dedicato." },
+      { title: "Ricevete una risposta redatta", description: "Risposta scritta e motivata entro 48-72h a seconda della formula, con i documenti necessari." },
     ],
-    includedHeading: "Cosa è incluso nel Pack Contestazione",
-    included: [
-      { title: "Analisi delle vostre possibilità", description: "Basata sui fatti precisi del vostro caso, non una risposta generica." },
-      { title: "Lettera di contestazione pronta da inviare", description: "Redatta secondo la procedura applicabile alla vostra situazione." },
-      { title: "Autorità e termine esatti", description: "I contatti giusti e il termine giusto, per non perdere nulla." },
-      { title: "Verificata dal nostro team", description: "Una persona reale rilegge il vostro caso prima dell'invio." },
+    domainsHeading: "Cosa copre l'abbonamento",
+    domains: [
+      { title: "Contratti commerciali e condizioni generali", description: "Redazione e revisione dei vostri contratti e condizioni generali." },
+      { title: "Diritto del lavoro", description: "Contratti di lavoro, licenziamenti, domande HR comuni." },
+      { title: "Diritto societario", description: "Domande su struttura, governance e formalità comuni." },
+      { title: "Recupero crediti amichevole", description: "Diffide e passi prima di un procedimento giudiziario." },
+      { title: "Conformità nLPD", description: "Messa in conformità dei vostri trattamenti di dati personali." },
+      { title: "Locazioni commerciali", description: "Revisione e domande sui vostri contratti di locazione professionale." },
     ],
     guideLabel: "Per saperne di più",
     guideLinkLabel: "Vedi tutta la guida ↗",
-    offerBullets: [
-      "Analisi delle vostre possibilità basata sui fatti del vostro caso",
-      "Lettera di contestazione redatta e pronta da inviare, con l'autorità e il termine giusti",
-      "Verificata dal nostro team prima dell'invio",
-    ],
-    offerCtaLabel: "Ordinare il mio Pack Contestazione",
-    offerDeliveryNote: "Consegnato entro 48h",
-    securePaymentLabel: "Pagamento sicuro",
-    lawyerHeading: "Il prezzo di un avvocato, senza l'avvocato",
+    lawyerHeading: "Il prezzo di un avvocato, senza fatturazione oraria",
     lawyerLabel: "Avvocato tradizionale",
-    lawyerRange: "da CHF 300 a 1'200",
-    lawyerNote: "Per una lettera di contestazione equivalente, ovvero 1-2 ore fatturate a CHF 250-600/h secondo la complessità.",
+    lawyerRange: "CHF 200-600 / ora",
+    lawyerNote: "Fatturazione oraria classica, spesso difficile da prevedere nel tempo per una PMI.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "CHF 89",
-    thraxNote: "Pack completo a prezzo fisso, consegnato entro 48h, senza appuntamento.",
+    thraxPrice: "da CHF 49 / mese",
+    thraxNote: "Prezzo fisso e prevedibile, senza impegno, risposte scritte incluse.",
     lawyerDisclaimer:
-      "Stima basata su una tariffa oraria usuale di CHF 250-600 per un avvocato in Svizzera. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
+      "Stima basata sulle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone). Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
     faqHeading: "Domande frequenti",
     faq: [
       {
-        q: "Quanto tempo ho per contestare una multa?",
-        a: "Dipende dal documento ricevuto: 30 giorni per una multa disciplinare (se non pagata, passa poi alla procedura penale), 10 giorni per opporsi a un decreto penale. La nostra diagnosi gratuita identifica la vostra situazione esatta.",
+        q: "Cosa copre esattamente l'abbonamento?",
+        a: "Risposte scritte alle vostre domande legali comuni (contratti, condizioni generali, diritto del lavoro, nLPD, recupero crediti amichevole, locazioni commerciali) e l'accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
       },
       {
-        q: "Ho buone possibilità di vincere?",
-        a: "Dipende interamente dal vostro caso. Una contestazione senza motivo concreto (solo perché non siete d'accordo) fallisce quasi sempre. Un errore di identificazione, un difetto di segnaletica o un vizio di procedura può avere reali possibilità. La diagnosi gratuita vi dà una valutazione onesta prima di andare oltre.",
+        q: "Posso disdire in qualsiasi momento?",
+        a: "Sì. Nessun impegno di durata: disdite quando volete, effettivo alla fine del mese già pagato.",
+      },
+      {
+        q: "Cosa succede se ho più domande di quelle previste dal mio pacchetto?",
+        a: "Ogni domanda supplementare è fatturata CHF 39, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
+      },
+      {
+        q: "Entro quanto tempo ricevo una risposta?",
+        a: "72 ore lavorative per la formula Essentiel, 48 ore lavorative per Croissance. Ogni risposta è scritta e motivata, non un semplice rimando a un articolo generico.",
       },
       {
         q: "Thrax Legal è uno studio legale?",
-        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per i casi gravi (ritiro importante della licenza, rischio di pena detentiva), vi indirizziamo verso un avvocato specializzato piuttosto che vendervi un servizio inadatto.",
+        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per i casi contenziosi o le operazioni complesse, vi indirizziamo verso un avvocato invece di rispondere alla cieca.",
       },
       {
-        q: "Quanto tempo ci vuole per ricevere la mia lettera di contestazione?",
-        a: "48 ore dopo il vostro ordine. La vostra lettera è redatta a partire dal vostro caso, poi verificata dal nostro team prima dell'invio.",
+        q: "Offrite questo servizio in tutta la Svizzera?",
+        a: "Il servizio è pensato e posizionato per indipendenti e PMI della Svizzera romanda, ma il sito è disponibile in francese, tedesco, inglese e italiano.",
       },
       {
-        q: "Cosa succede se ho già pagato la multa?",
-        a: "Pagare una multa equivale a un'accettazione definitiva: non esiste più alcun ricorso possibile. La nostra diagnosi gratuita ve lo segnala immediatamente se è il vostro caso, per evitarvi di perdere tempo.",
-      },
-      {
-        q: "Offrite i vostri servizi anche in francese, tedesco e inglese?",
-        a: "Sì. Il sito e il Pack Contestazione sono disponibili in francese, tedesco, inglese e italiano.",
-      },
-      {
-        q: "E se il mio caso riguarda un ritiro importante della licenza o un'infrazione grave?",
-        a: "Il nostro servizio è pensato per multe e contestazioni comuni. Per i casi più pesanti, vi indirizziamo verso un avvocato specializzato in diritto della circolazione.",
+        q: "Una risposta scritta ha davvero un vantaggio rispetto a una chiamata?",
+        a: "Sì, ed è un vantaggio reale: una risposta scritta e datata è una prova che potete esibire in caso di controversia o di controllo, a differenza di una conversazione telefonica.",
       },
     ],
-    productDescription:
-      "Analisi delle vostre possibilità di contestazione e lettera di contestazione pronta da inviare, adattata alla vostra multa (parcheggio, eccesso di velocità, trasporti pubblici).",
+    stickyLabel: "Da CHF 49/mese",
+    stickyCta: "Vedere le formule",
   },
 };
 
-const CHECKOUT_SLUG = "checkout/pack-contestation-amende";
-
-function DiagnosticCta({
-  locale,
-  t,
-  className = "",
-}: {
-  locale: Locale;
-  t: HomeContent;
-  className?: string;
-}) {
+function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
   return (
-    <div className={`flex flex-col items-center gap-3 text-center ${className}`}>
-      <PrimaryButton href={`/${locale}/#diagnostic`} className="px-8 py-3.5 text-base">
-        {t.diagnosticCtaLabel}
+    <div
+      className={`flex flex-col rounded-2xl border p-6 md:p-8 ${
+        tier.highlight ? "border-accent bg-surface" : "border-border bg-surface"
+      }`}
+    >
+      <p className="text-sm font-medium uppercase tracking-[0.14em] text-text-muted">
+        {tier.name}
+      </p>
+      <p className="mt-2 text-sm text-text-muted">{tier.tagline}</p>
+      <div className="mt-6 flex items-baseline gap-1">
+        <span className="text-3xl font-semibold tracking-[-0.02em] text-text">{tier.price}</span>
+        <span className="text-sm text-text-muted">{tier.priceNote}</span>
+      </div>
+      <ul className="mt-6 flex flex-1 flex-col gap-3">
+        {tier.features.map((feature) => (
+          <li key={feature} className="flex gap-2 text-sm leading-relaxed text-text-muted">
+            <span aria-hidden className="text-text">
+              &#10003;
+            </span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <PrimaryButton href={`/${locale}/checkout/${tier.slug}`} className="mt-8 w-full px-6 py-3">
+        {tier.ctaLabel}
       </PrimaryButton>
-      <p className="text-sm text-text-muted">{t.diagnosticCtaSub}</p>
-      <Link
-        href={`/${locale}/${CHECKOUT_SLUG}`}
-        className="mt-1 text-sm text-text-muted underline decoration-dotted underline-offset-4 hover:text-text"
-      >
-        {t.directBuyLabel}
-      </Link>
     </div>
   );
 }
@@ -438,11 +550,10 @@ function StickyOrderBar({ locale, t }: { locale: Locale; t: HomeContent }) {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-bg/95 backdrop-blur">
       <Container className="flex items-center justify-between gap-4 py-3">
         <div className="min-w-0">
-          <p className="text-sm font-semibold leading-tight text-text">89 CHF</p>
-          <p className="truncate text-xs text-text-muted">{t.stickyBarLabel}</p>
+          <p className="truncate text-sm font-semibold leading-tight text-text">{t.stickyLabel}</p>
         </div>
-        <PrimaryButton href={`/${locale}/#diagnostic`} className="shrink-0 px-5 py-2.5 text-sm">
-          {t.diagnosticCtaLabel}
+        <PrimaryButton href={`/${locale}/#offre`} className="shrink-0 px-5 py-2.5 text-sm">
+          {t.stickyCta}
         </PrimaryButton>
       </Container>
     </div>
@@ -472,7 +583,6 @@ export default async function Home({
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = CONTENT[locale];
-  const checkoutHref = `/${locale}/${CHECKOUT_SLUG}`;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -487,16 +597,17 @@ export default async function Home({
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: t.stickyBarLabel,
-    description: t.productDescription,
+    name: "Thrax Legal",
+    description: t.metaDescription,
     brand: { "@type": "Brand", name: "Thrax Legal" },
-    offers: {
+    offers: t.tiers.map((tier) => ({
       "@type": "Offer",
-      price: "89",
+      name: tier.name,
+      price: tier.price.replace(/\D/g, ""),
       priceCurrency: "CHF",
       availability: "https://schema.org/InStock",
-      url: checkoutHref,
-    },
+      url: `/${locale}/checkout/${tier.slug}`,
+    })),
   };
 
   return (
@@ -524,8 +635,12 @@ export default async function Home({
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                   {t.heroSubtitle}
                 </p>
-                <PriceBadge amount="89 CHF" label={t.priceBadgeLabel} className="mt-8" />
-                <DiagnosticCta locale={locale} t={t} className="mt-6" />
+                <div className="mt-8 flex flex-col items-center gap-3">
+                  <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
+                    {t.heroCtaLabel}
+                  </PrimaryButton>
+                  <p className="text-sm text-text-muted">{t.heroCtaSub}</p>
+                </div>
               </Reveal>
             </Container>
           </section>
@@ -534,16 +649,21 @@ export default async function Home({
             <TrustBar items={t.trustBar} />
           </div>
 
-          <section id="diagnostic" className="theme-light bg-bg py-16 md:py-24">
-            <Container className="mx-auto max-w-2xl">
+          <section id="offre" className="theme-light bg-bg py-16 md:py-24">
+            <Container className="mx-auto max-w-4xl">
               <Reveal>
                 <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.diagnosticHeading}
+                  {t.pricingHeading}
                 </h2>
                 <p className="mx-auto mt-3 max-w-lg text-center text-base leading-relaxed text-text-muted">
-                  {t.diagnosticSubheading}
+                  {t.pricingSubheading}
                 </p>
-                <Autodiagnostic checkoutHref={checkoutHref} locale={locale} className="mt-8" />
+                <div className="mt-10 grid gap-6 md:grid-cols-2">
+                  {t.tiers.map((tier) => (
+                    <TierCard key={tier.slug} tier={tier} locale={locale} />
+                  ))}
+                </div>
+                <p className="mt-6 text-center text-sm text-text-muted">{t.extraQuestionNote}</p>
               </Reveal>
             </Container>
           </section>
@@ -563,10 +683,10 @@ export default async function Home({
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.includedHeading}
+                  {t.domainsHeading}
                 </h2>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {t.included.map((item) => (
+                  {t.domains.map((item) => (
                     <div key={item.title} className="rounded-2xl border border-border bg-surface p-6">
                       <h3 className="text-base font-semibold text-text">{item.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-text-muted">{item.description}</p>
@@ -609,23 +729,7 @@ export default async function Home({
             </Container>
           </section>
 
-          <section id="offre" className="theme-light bg-surface py-16 md:py-24">
-            <Container className="mx-auto max-w-2xl">
-              <Reveal>
-                <PaywallCard
-                  price="89 CHF"
-                  checkoutHref={checkoutHref}
-                  ctaLabel={t.offerCtaLabel}
-                  deliveryNote={t.offerDeliveryNote}
-                  guaranteeNote=""
-                  securePaymentLabel={t.securePaymentLabel}
-                  bullets={t.offerBullets}
-                />
-              </Reveal>
-            </Container>
-          </section>
-
-          <section className="theme-light bg-bg py-16 md:py-24">
+          <section className="theme-light bg-surface py-16 md:py-24">
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
@@ -641,19 +745,27 @@ export default async function Home({
                   thraxNote={t.thraxNote}
                   disclaimer={t.lawyerDisclaimer}
                 />
-                <DiagnosticCta locale={locale} t={t} className="mt-10" />
+                <div className="mt-10 flex justify-center">
+                  <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
+                    {t.heroCtaLabel}
+                  </PrimaryButton>
+                </div>
               </Reveal>
             </Container>
           </section>
 
-          <section id="contact" className="theme-light bg-surface py-16 md:py-24">
+          <section id="contact" className="theme-light bg-bg py-16 md:py-24">
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                   {t.faqHeading}
                 </h2>
                 <FaqAccordion items={t.faq} className="mt-8" />
-                <DiagnosticCta locale={locale} t={t} className="mt-12" />
+                <div className="mt-12 flex justify-center">
+                  <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
+                    {t.heroCtaLabel}
+                  </PrimaryButton>
+                </div>
               </Reveal>
             </Container>
           </section>

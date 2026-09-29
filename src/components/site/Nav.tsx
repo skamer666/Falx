@@ -56,7 +56,7 @@ export default function Nav() {
         <div className="flex items-center gap-3">
           <LocaleSwitcher locale={locale} pathname={pathname} className="hidden md:flex" />
           <div className="hidden sm:block">
-            <PrimaryButton href={`/${locale}/#diagnostic`} className="px-5 py-2.5">
+            <PrimaryButton href={`/${locale}/#offre`} className="px-5 py-2.5">
               {t.diagnosticCta}
             </PrimaryButton>
           </div>

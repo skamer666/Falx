@@ -3,10 +3,10 @@ import type { Locale } from "./config";
 export const dictionary = {
   fr: {
     nav: {
-      pricing: "Tarifs",
+      pricing: "Formules",
       guide: "Guide",
       faq: "FAQ",
-      diagnosticCta: "Diagnostic gratuit en 2 min",
+      diagnosticCta: "Voir les formules",
       home: "Thrax Legal, accueil",
       menuOpen: "Ouvrir le menu",
       menuClose: "Fermer le menu",
@@ -14,16 +14,16 @@ export const dictionary = {
       menuCloseLabel: "Fermer",
     },
     footer: {
-      tagline: "Contestez votre amende, à prix fixe.",
+      tagline: "Votre juriste par écrit, à prix fixe.",
       description:
-        "Thrax Legal évalue vos chances de contester une amende suisse et prépare votre opposition, sans avocat, sans rendez-vous.",
+        "Thrax Legal répond par écrit à vos questions juridiques d'indépendant ou de PME — contrats, CGV, droit du travail, nLPD — sans avocat à l'heure, sans rendez-vous.",
       contact: "Nous contacter",
       hours: "Horaires",
       hoursValue: "Lundi à vendredi",
       hoursValue2: "09:00 à 18:00",
       menu: "Menu",
       home: "Accueil",
-      diagnostic: "Diagnostic gratuit",
+      diagnostic: "Formules",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -36,10 +36,10 @@ export const dictionary = {
   },
   de: {
     nav: {
-      pricing: "Preise",
+      pricing: "Formeln",
       guide: "Ratgeber",
       faq: "FAQ",
-      diagnosticCta: "Gratis-Diagnose in 2 Min.",
+      diagnosticCta: "Formeln ansehen",
       home: "Thrax Legal, Startseite",
       menuOpen: "Menü öffnen",
       menuClose: "Menü schliessen",
@@ -47,16 +47,16 @@ export const dictionary = {
       menuCloseLabel: "Schliessen",
     },
     footer: {
-      tagline: "Fechten Sie Ihre Busse an, zum Fixpreis.",
+      tagline: "Ihr Rechtsberater schriftlich, zum Fixpreis.",
       description:
-        "Thrax Legal beurteilt Ihre Chancen, eine Schweizer Busse anzufechten, und bereitet Ihre Einsprache vor — ohne Anwalt, ohne Termin.",
+        "Thrax Legal beantwortet schriftlich Ihre Rechtsfragen als Selbstständige oder KMU — Verträge, AGB, Arbeitsrecht, DSG — ohne Anwalt nach Stundensatz, ohne Termin.",
       contact: "Kontakt",
       hours: "Öffnungszeiten",
       hoursValue: "Montag bis Freitag",
       hoursValue2: "09:00 bis 18:00 Uhr",
       menu: "Menü",
       home: "Startseite",
-      diagnostic: "Gratis-Diagnose",
+      diagnostic: "Formeln",
       guide: "Ratgeber",
       faq: "FAQ",
       disclaimer:
@@ -69,10 +69,10 @@ export const dictionary = {
   },
   en: {
     nav: {
-      pricing: "Pricing",
+      pricing: "Plans",
       guide: "Guide",
       faq: "FAQ",
-      diagnosticCta: "Free 2-min diagnostic",
+      diagnosticCta: "See the plans",
       home: "Thrax Legal, home",
       menuOpen: "Open menu",
       menuClose: "Close menu",
@@ -80,16 +80,16 @@ export const dictionary = {
       menuCloseLabel: "Close",
     },
     footer: {
-      tagline: "Contest your fine, at a fixed price.",
+      tagline: "Your legal adviser in writing, at a fixed price.",
       description:
-        "Thrax Legal assesses your chances of contesting a Swiss fine and prepares your objection — no lawyer, no appointment.",
+        "Thrax Legal answers in writing the legal questions of independents and SMEs — contracts, T&Cs, employment law, FADP — no hourly lawyer, no appointment.",
       contact: "Contact us",
       hours: "Hours",
       hoursValue: "Monday to Friday",
       hoursValue2: "9:00 am to 6:00 pm",
       menu: "Menu",
       home: "Home",
-      diagnostic: "Free diagnostic",
+      diagnostic: "Plans",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -102,10 +102,10 @@ export const dictionary = {
   },
   it: {
     nav: {
-      pricing: "Prezzi",
+      pricing: "Formule",
       guide: "Guida",
       faq: "FAQ",
-      diagnosticCta: "Diagnosi gratuita in 2 min",
+      diagnosticCta: "Vedere le formule",
       home: "Thrax Legal, home",
       menuOpen: "Apri il menu",
       menuClose: "Chiudi il menu",
@@ -113,16 +113,16 @@ export const dictionary = {
       menuCloseLabel: "Chiudi",
     },
     footer: {
-      tagline: "Contestate la vostra multa, a prezzo fisso.",
+      tagline: "Il vostro consulente legale per iscritto, a prezzo fisso.",
       description:
-        "Thrax Legal valuta le vostre possibilità di contestare una multa svizzera e prepara la vostra opposizione — senza avvocato, senza appuntamento.",
+        "Thrax Legal risponde per iscritto alle vostre domande legali da indipendenti o PMI — contratti, condizioni generali, diritto del lavoro, nLPD — senza avvocato a ore, senza appuntamento.",
       contact: "Contattaci",
       hours: "Orari",
       hoursValue: "Lunedì a venerdì",
       hoursValue2: "09:00 - 18:00",
       menu: "Menu",
       home: "Home",
-      diagnostic: "Diagnosi gratuita",
+      diagnostic: "Formule",
       guide: "Guida",
       faq: "FAQ",
       disclaimer:

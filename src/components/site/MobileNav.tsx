@@ -73,7 +73,7 @@ export default function MobileNav() {
           </nav>
           <LocaleSwitcher locale={locale} pathname={pathname} className="mt-4 flex justify-center" />
           <PrimaryButton
-            href={`/${locale}/#diagnostic`}
+            href={`/${locale}/#offre`}
             className="mt-4 w-full"
             onClick={() => setOpen(false)}
           >
