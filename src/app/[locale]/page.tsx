@@ -38,6 +38,9 @@ type HomeContent = {
   heroCtaLabel: string;
   heroCtaSub: string;
   trustBar: [string, string, string];
+  aboutHeading: string;
+  aboutBody1: string;
+  aboutBody2: string;
   pricingHeading: string;
   pricingSubheading: string;
   tiers: [Tier, Tier];
@@ -77,6 +80,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Prix fixe mensuel : jamais de facturation à l'heure ni de surprise.",
       "Sans engagement : résiliez à tout moment, aucun frais caché.",
     ],
+    aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
+    aboutBody1:
+      "Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction. Je ne prétends pas connaître chaque réponse par cœur — et c'est précisément pour ça que chaque question fait l'objet d'une vraie recherche avant une réponse écrite, jamais d'une improvisation en direct au téléphone.",
+    aboutBody2:
+      "C'est le principe du juriste fractionné : un accès sérieux et abordable au droit pour votre PME, sans les coûts d'un cabinet à temps plein. Pour les dossiers contentieux ou les décisions à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
     pricingHeading: "Deux formules, un seul principe : pas de surprise",
     pricingSubheading:
       "Choisissez le volume qui correspond à votre activité. Changez de formule ou résiliez à tout moment.",
@@ -160,8 +168,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "72h ouvrées pour la formule Essentiel, 48h ouvrées pour la formule Croissance. Chaque réponse est écrite et argumentée, pas un simple renvoi vers un article générique.",
       },
       {
-        q: "Thrax Legal est-il un cabinet d'avocats ?",
-        a: "Non. Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux, réservée aux avocats inscrits à un registre cantonal suisse. Pour les dossiers contentieux ou les opérations complexes, nous vous orientons vers un avocat plutôt que de répondre à l'aveugle.",
+        q: "Thrax Legal est-il un cabinet d'avocats ? Qui rédige les réponses ?",
+        a: "Non, ce n'est pas un cabinet d'avocats. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque question fait l'objet d'une vraie recherche avant réponse écrite, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse plutôt que de répondre à l'aveugle.",
       },
       {
         q: "Proposez-vous ce service dans toute la Suisse ?",
@@ -189,6 +197,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Fixer Monatspreis: nie eine Stundenabrechnung oder Überraschung.",
       "Ohne Vertragsbindung: jederzeit kündbar, keine versteckten Kosten.",
     ],
+    aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
+    aboutBody1:
+      "Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und Verfassen von Schriftstücken. Ich behaupte nicht, jede Antwort auswendig zu kennen — genau deshalb wird jede Frage vor einer schriftlichen Antwort richtig recherchiert, nie am Telefon improvisiert.",
+    aboutBody2:
+      "Das ist das Prinzip des fraktionierten Juristen: ein seriöser, erschwinglicher Zugang zum Recht für Ihr KMU, ohne die Kosten einer Kanzlei in Vollzeit. Bei streitigen Fällen oder Entscheidungen mit sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
     pricingHeading: "Zwei Formeln, ein Grundsatz: keine Überraschung",
     pricingSubheading:
       "Wählen Sie das Volumen, das zu Ihrer Tätigkeit passt. Formel wechseln oder jederzeit kündigen.",
@@ -272,8 +285,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "72 Arbeitsstunden bei der Formel Essentiel, 48 Arbeitsstunden bei Croissance. Jede Antwort ist schriftlich und begründet, kein blosser Verweis auf einen generischen Artikel.",
       },
       {
-        q: "Ist Thrax Legal eine Anwaltskanzlei?",
-        a: "Nein. Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht, die ausschliesslich im kantonalen Anwaltsregister eingetragenen Anwältinnen und Anwälten vorbehalten ist. Bei streitigen Fällen oder komplexen Vorgängen verweisen wir Sie an eine Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
+        q: "Ist Thrax Legal eine Anwaltskanzlei? Wer verfasst die Antworten?",
+        a: "Nein, keine Anwaltskanzlei. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jede Frage wird vor der schriftlichen Antwort richtig recherchiert, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
       },
       {
         q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
@@ -301,6 +314,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Fixed monthly price: never an hourly bill or a surprise.",
       "No commitment: cancel anytime, no hidden fees.",
     ],
+    aboutHeading: "A fractional jurist, not a law firm",
+    aboutBody1:
+      "I'm a law student, with several years of law firm experience in legal research and drafting. I don't claim to know every answer by heart — that's exactly why every question gets real research before a written answer, never live improvisation on a call.",
+    aboutBody2:
+      "That's the fractional-jurist model: serious, affordable access to legal support for your SME, without the cost of a full-time firm. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
     pricingHeading: "Two plans, one principle: no surprises",
     pricingSubheading:
       "Choose the volume that fits your business. Switch plans or cancel anytime.",
@@ -384,8 +402,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "72 business hours on the Essential plan, 48 business hours on Growth. Every answer is written and reasoned, not a generic article link.",
       },
       {
-        q: "Is Thrax Legal a law firm?",
-        a: "No. Thrax Legal is not a law firm and does not represent clients before courts, which is reserved to attorneys registered with a Swiss cantonal bar. For contentious matters or complex transactions, we refer you to a lawyer rather than guess.",
+        q: "Is Thrax Legal a law firm? Who writes the answers?",
+        a: "No, it's not a law firm. I'm a law student, with several years of law firm experience in legal research and drafting — that's the fractional-jurist model. Every question gets real research before a written answer, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
       },
       {
         q: "Do you offer this service across all of Switzerland?",
@@ -413,6 +431,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Prezzo fisso mensile: mai una fatturazione oraria o una sorpresa.",
       "Senza impegno: disdite in qualsiasi momento, nessun costo nascosto.",
     ],
+    aboutHeading: "Un giurista frazionato, non uno studio legale",
+    aboutBody1:
+      "Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione. Non pretendo di conoscere ogni risposta a memoria — è esattamente per questo che ogni domanda è oggetto di una vera ricerca prima di una risposta scritta, mai di un'improvvisazione dal vivo al telefono.",
+    aboutBody2:
+      "È il principio del giurista frazionato: un accesso serio e accessibile al diritto per la vostra PMI, senza i costi di uno studio a tempo pieno. Per i casi contenziosi o le decisioni ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
     pricingHeading: "Due formule, un solo principio: nessuna sorpresa",
     pricingSubheading:
       "Scegliete il volume adatto alla vostra attività. Cambiate formula o disdite in qualsiasi momento.",
@@ -496,8 +519,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "72 ore lavorative per la formula Essentiel, 48 ore lavorative per Croissance. Ogni risposta è scritta e motivata, non un semplice rimando a un articolo generico.",
       },
       {
-        q: "Thrax Legal è uno studio legale?",
-        a: "No. Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali, riservata agli avvocati iscritti a un albo cantonale svizzero. Per i casi contenziosi o le operazioni complesse, vi indirizziamo verso un avvocato invece di rispondere alla cieca.",
+        q: "Thrax Legal è uno studio legale? Chi redige le risposte?",
+        a: "No, non è uno studio legale. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni domanda è oggetto di una vera ricerca prima di una risposta scritta, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
       },
       {
         q: "Offrite questo servizio in tutta la Svizzera?",
@@ -648,6 +671,18 @@ export default async function Home({
           <div className="theme-light bg-bg">
             <TrustBar items={t.trustBar} />
           </div>
+
+          <section className="theme-light border-y border-border bg-surface py-16 md:py-20">
+            <Container className="mx-auto max-w-2xl">
+              <Reveal>
+                <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                  {t.aboutHeading}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{t.aboutBody1}</p>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{t.aboutBody2}</p>
+              </Reveal>
+            </Container>
+          </section>
 
           <section id="offre" className="theme-light bg-bg py-16 md:py-24">
             <Container className="mx-auto max-w-4xl">
