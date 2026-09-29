@@ -48,7 +48,6 @@ type HomeContent = {
   founderBadge: string;
   tiers: [Tier, Tier];
   extraQuestionNote: string;
-  guaranteeNote: string;
   stepsHeading: string;
   steps: StepItem[];
   domainsHeading: string;
@@ -98,7 +97,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "49 CHF",
+        price: "149 CHF",
         priceNote: "/ mois",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
@@ -106,18 +105,17 @@ const CONTENT: Record<Locale, HomeContent> = {
           "2 dossiers complets pris en charge par mois (contrat, litige, procédure)",
           "Traité sous 72h ouvrées",
           "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
-          "Garantie remboursé si non satisfait le premier mois",
           "Prix bloqué à vie tant que vous restez abonné",
           "Sans engagement, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 900 CHF",
+        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 1'500 CHF",
         ctaLabel: "Choisir Essentiel",
         highlight: false,
       },
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "119 CHF",
+        price: "349 CHF",
         priceNote: "/ mois",
         tagline: "Pour les PME avec des besoins réguliers",
         badge: "Le plus choisi",
@@ -127,19 +125,16 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Traité sous 48h ouvrées (24h pour les urgences signalées)",
           "Révision de contrat prioritaire incluse chaque mois",
           "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
-          "Garantie remboursé si non satisfait le premier mois",
           "Prix bloqué à vie tant que vous restez abonné",
           "Sans engagement, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 2'000 CHF",
+        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 4'000 CHF",
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Dossier supplémentaire au-delà de votre forfait : 39 CHF, prix fixe — jamais d'horaire.",
-    guaranteeNote:
-      "Pas convaincu ? Si votre premier mois ne vous satisfait pas, vous êtes intégralement remboursé, sans justification à fournir.",
+      "Dossier supplémentaire au-delà de votre forfait : 79 CHF, prix fixe — jamais d'horaire.",
     stepsHeading: "Comment ça marche",
     steps: [
       { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement. Paiement mensuel, résiliable à tout moment." },
@@ -162,7 +157,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerRange: "200 à 600 CHF / heure",
     lawyerNote: "Facturation horaire classique, souvent difficile à prévoir sur la durée pour une PME.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "dès 49 CHF / mois",
+    thraxPrice: "dès 149 CHF / mois",
     thraxNote: "Prix fixe et prévisible, sans engagement, prise en charge de vos besoins incluse.",
     lawyerDisclaimer:
       "Estimation basée sur les tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton). Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
@@ -177,12 +172,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail : rédiger un contrat, régler un litige, structurer une démarche — c'est ce volume-là qui est compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
       },
       {
-        q: "Que se passe-t-il si je ne suis pas satisfait ?",
-        a: "Vous êtes intégralement remboursé si votre premier mois ne vous convainc pas, sans justification à fournir. Ensuite, aucun engagement : vous résiliez quand vous voulez, effectif à la fin du mois déjà payé — et votre prix reste bloqué tant que vous restez abonné, même si nos tarifs augmentent pour les nouveaux clients.",
+        q: "Puis-je résilier à tout moment ?",
+        a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
       },
       {
         q: "Que se passe-t-il si j'ai plus de dossiers que mon forfait ?",
-        a: "Chaque dossier supplémentaire est facturé 39 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
+        a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
         q: "Sous quel délai mon dossier est-il traité ?",
@@ -201,7 +196,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Vous décrivez votre besoin via le formulaire dédié, je m'en occupe personnellement, et vous recevez le résultat (contrat rédigé, solution expliquée, procédure clarifiée) dans le délai de votre formule — avec, en prime, une trace écrite que vous pouvez ressortir en cas de litige ou de contrôle.",
       },
     ],
-    stickyLabel: "Dès 49 CHF/mois",
+    stickyLabel: "Dès 149 CHF/mois",
     stickyCta: "Voir les formules",
   },
   de: {
@@ -232,7 +227,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "CHF 49",
+        price: "CHF 149",
         priceNote: "/ Monat",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
@@ -240,18 +235,17 @@ const CONTENT: Record<Locale, HomeContent> = {
           "2 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
           "Bearbeitet innert 72 Arbeitsstunden",
           "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
-          "Geld-zurück-Garantie, falls Sie im ersten Monat nicht zufrieden sind",
           "Preis lebenslang fixiert, solange Sie abonniert bleiben",
           "Ohne Vertragsbindung, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 900",
+        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 1'500",
         ctaLabel: "Essentiel wählen",
         highlight: false,
       },
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "CHF 119",
+        price: "CHF 349",
         priceNote: "/ Monat",
         tagline: "Für KMU mit regelmässigem Bedarf",
         badge: "Am häufigsten gewählt",
@@ -261,19 +255,16 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
           "Prioritäre Vertragsprüfung jeden Monat inklusive",
           "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
-          "Geld-zurück-Garantie, falls Sie im ersten Monat nicht zufrieden sind",
           "Preis lebenslang fixiert, solange Sie abonniert bleiben",
           "Ohne Vertragsbindung, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 2'000",
+        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 4'000",
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Zusätzliches Anliegen über Ihr Kontingent hinaus: CHF 39, Fixpreis — nie nach Stundensatz.",
-    guaranteeNote:
-      "Nicht überzeugt? Wenn Sie im ersten Monat nicht zufrieden sind, erhalten Sie Ihr Geld vollständig zurück, ohne Begründung.",
+      "Zusätzliches Anliegen über Ihr Kontingent hinaus: CHF 79, Fixpreis — nie nach Stundensatz.",
     stepsHeading: "So funktioniert's",
     steps: [
       { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung. Monatliche Zahlung, jederzeit kündbar." },
@@ -296,7 +287,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerRange: "CHF 200 bis 600 / Stunde",
     lawyerNote: "Klassische Stundenabrechnung, für ein KMU auf Dauer oft schwer planbar.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "ab CHF 49 / Monat",
+    thraxPrice: "ab CHF 149 / Monat",
     thraxNote: "Fixer, planbarer Preis, ohne Vertragsbindung, Bearbeitung Ihrer Anliegen inklusive.",
     lawyerDisclaimer:
       "Schätzung basierend auf üblichen Stundensätzen von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton). Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
@@ -311,12 +302,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren — genau dieses Volumen wird in Ihrem monatlichen Kontingent gezählt (2 bei Essentiel, 5 bei Croissance).",
       },
       {
-        q: "Was passiert, wenn ich nicht zufrieden bin?",
-        a: "Sie erhalten Ihr Geld vollständig zurück, wenn Sie im ersten Monat nicht überzeugt sind, ohne Begründung. Danach keine Vertragsbindung: Sie kündigen, wann Sie wollen, wirksam am Ende des bereits bezahlten Monats — und Ihr Preis bleibt fixiert, solange Sie abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
+        q: "Kann ich jederzeit kündigen?",
+        a: "Ja, ohne Vertragsbindung und ohne Begründung: Die Kündigung wird am Ende des bereits bezahlten Monats wirksam. Ihr Preis bleibt fixiert, solange Sie ununterbrochen abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
       },
       {
         q: "Was passiert, wenn ich mehr Anliegen habe als mein Kontingent?",
-        a: "Jedes zusätzliche Anliegen kostet CHF 39, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
+        a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
       },
       {
         q: "Innert welcher Frist wird mein Anliegen bearbeitet?",
@@ -335,7 +326,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Sie schildern Ihr Anliegen über das dafür vorgesehene Formular, ich kümmere mich persönlich darum, und Sie erhalten das Ergebnis (erstellter Vertrag, erklärte Lösung, geklärtes Verfahren) innerhalb der Frist Ihrer Formel — inklusive eines schriftlichen Nachweises, den Sie bei einem Streitfall oder einer Kontrolle vorlegen können.",
       },
     ],
-    stickyLabel: "Ab CHF 49/Monat",
+    stickyLabel: "Ab CHF 149/Monat",
     stickyCta: "Formeln ansehen",
   },
   en: {
@@ -366,7 +357,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-essentiel",
         name: "Essential",
-        price: "CHF 49",
+        price: "CHF 149",
         priceNote: "/ month",
         tagline: "For freelancers and micro-businesses",
         features: [
@@ -374,18 +365,17 @@ const CONTENT: Record<Locale, HomeContent> = {
           "2 full matters handled per month (contract, dispute, procedure)",
           "Handled within 72 business hours",
           "Full template library — CHF 500 value, included",
-          "Money-back guarantee if you're not satisfied in the first month",
           "Price locked for life as long as you stay subscribed",
           "No commitment, cancel anytime",
         ],
-        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 900",
+        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 1,500",
         ctaLabel: "Choose Essential",
         highlight: false,
       },
       {
         slug: "abonnement-croissance",
         name: "Growth",
-        price: "CHF 119",
+        price: "CHF 349",
         priceNote: "/ month",
         tagline: "For SMEs with regular needs",
         badge: "Most chosen",
@@ -395,19 +385,16 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Handled within 48 business hours (24h for flagged urgent cases)",
           "Priority contract review included every month",
           "Full template library — CHF 500 value, included",
-          "Money-back guarantee if you're not satisfied in the first month",
           "Price locked for life as long as you stay subscribed",
           "No commitment, cancel anytime",
         ],
-        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 2,000",
+        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 4,000",
         ctaLabel: "Choose Growth",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Extra matter beyond your plan: CHF 39, fixed price — never hourly.",
-    guaranteeNote:
-      "Not convinced? If your first month doesn't win you over, you get a full refund, no questions asked.",
+      "Extra matter beyond your plan: CHF 79, fixed price — never hourly.",
     stepsHeading: "How it works",
     steps: [
       { title: "Choose your plan", description: "Essential or Growth, no commitment. Monthly payment, cancel anytime." },
@@ -430,7 +417,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerRange: "CHF 200 to 600 / hour",
     lawyerNote: "Classic hourly billing, often hard to predict over time for an SME.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "from CHF 49 / month",
+    thraxPrice: "from CHF 149 / month",
     thraxNote: "Fixed, predictable price, no commitment, your needs handled end to end.",
     lawyerDisclaimer:
       "Estimate based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton). Thrax Legal is not a law firm and does not represent clients before courts.",
@@ -445,12 +432,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure — that's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
       },
       {
-        q: "What happens if I'm not satisfied?",
-        a: "You get a full refund if your first month doesn't convince you, no questions asked. After that, no commitment: cancel whenever you want, effective at the end of the month already paid — and your price stays locked as long as you stay subscribed, even if our rates rise for new customers.",
+        q: "Can I cancel anytime?",
+        a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
       },
       {
         q: "What happens if I have more matters than my plan allows?",
-        a: "Each extra matter is billed at CHF 39, fixed price — never hourly. You can also switch plans at any time.",
+        a: "Each extra matter is billed at CHF 79, fixed price — never hourly. You can also switch plans at any time.",
       },
       {
         q: "How long until my matter is handled?",
@@ -469,7 +456,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "You describe your need via the dedicated form, I handle it personally, and you receive the result (a drafted contract, an explained solution, a clarified procedure) within your plan's timeframe — plus a written record you can produce in case of a dispute or an audit.",
       },
     ],
-    stickyLabel: "From CHF 49/month",
+    stickyLabel: "From CHF 149/month",
     stickyCta: "See the plans",
   },
   it: {
@@ -500,7 +487,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "CHF 49",
+        price: "CHF 149",
         priceNote: "/ mese",
         tagline: "Per indipendenti e micro-imprese",
         features: [
@@ -508,18 +495,17 @@ const CONTENT: Record<Locale, HomeContent> = {
           "2 pratiche complete gestite al mese (contratto, controversia, procedura)",
           "Gestite entro 72 ore lavorative",
           "Libreria completa di modelli — valore CHF 500, inclusa",
-          "Garanzia rimborso se non soddisfatti il primo mese",
           "Prezzo bloccato a vita finché restate abbonati",
           "Senza impegno, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 900",
+        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 1'500",
         ctaLabel: "Scegliere Essentiel",
         highlight: false,
       },
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "CHF 119",
+        price: "CHF 349",
         priceNote: "/ mese",
         tagline: "Per PMI con esigenze regolari",
         badge: "Il più scelto",
@@ -529,19 +515,16 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
           "Revisione contrattuale prioritaria inclusa ogni mese",
           "Libreria completa di modelli — valore CHF 500, inclusa",
-          "Garanzia rimborso se non soddisfatti il primo mese",
           "Prezzo bloccato a vita finché restate abbonati",
           "Senza impegno, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 2'000",
+        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 4'000",
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Pratica supplementare oltre il vostro pacchetto: CHF 39, prezzo fisso — mai a ore.",
-    guaranteeNote:
-      "Non convinti? Se il primo mese non vi soddisfa, siete rimborsati integralmente, senza dover fornire motivazioni.",
+      "Pratica supplementare oltre il vostro pacchetto: CHF 79, prezzo fisso — mai a ore.",
     stepsHeading: "Come funziona",
     steps: [
       { title: "Scegliete la vostra formula", description: "Essentiel o Croissance, senza impegno. Pagamento mensile, disdicibile in qualsiasi momento." },
@@ -564,7 +547,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerRange: "CHF 200-600 / ora",
     lawyerNote: "Fatturazione oraria classica, spesso difficile da prevedere nel tempo per una PMI.",
     brandLabel: "Thrax Legal",
-    thraxPrice: "da CHF 49 / mese",
+    thraxPrice: "da CHF 149 / mese",
     thraxNote: "Prezzo fisso e prevedibile, senza impegno, gestione delle vostre esigenze inclusa.",
     lawyerDisclaimer:
       "Stima basata sulle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone). Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
@@ -579,12 +562,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Una domanda rapida è un chiarimento puntuale, a cui si risponde senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura — è questo volume ad essere conteggiato nel vostro pacchetto mensile (2 per Essentiel, 5 per Croissance).",
       },
       {
-        q: "Cosa succede se non sono soddisfatto?",
-        a: "Siete rimborsati integralmente se il primo mese non vi convince, senza dover fornire motivazioni. In seguito, nessun impegno: disdite quando volete, effettivo alla fine del mese già pagato — e il vostro prezzo resta bloccato finché restate abbonati, anche se le nostre tariffe aumentano per i nuovi clienti.",
+        q: "Posso disdire in qualsiasi momento?",
+        a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
       },
       {
         q: "Cosa succede se ho più pratiche di quelle previste dal mio pacchetto?",
-        a: "Ogni pratica supplementare è fatturata CHF 39, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
+        a: "Ogni pratica supplementare è fatturata CHF 79, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
         q: "Entro quanto tempo viene gestita la mia pratica?",
@@ -603,7 +586,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Descrivete la vostra esigenza tramite il modulo dedicato, me ne occupo personalmente, e ricevete il risultato (contratto redatto, soluzione spiegata, procedura chiarita) entro il termine della vostra formula — con in più una prova scritta che potete esibire in caso di controversia o di controllo.",
       },
     ],
-    stickyLabel: "Da CHF 49/mese",
+    stickyLabel: "Da CHF 149/mese",
     stickyCta: "Vedere le formule",
   },
 };
@@ -780,9 +763,6 @@ export default async function Home({
                   ))}
                 </div>
                 <p className="mt-6 text-center text-sm text-text-muted">{t.extraQuestionNote}</p>
-                <p className="mx-auto mt-3 max-w-lg text-center text-sm font-medium text-text">
-                  {t.guaranteeNote}
-                </p>
               </Reveal>
             </Container>
           </section>

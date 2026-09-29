@@ -4,22 +4,22 @@ import type { Locale } from "@/i18n/config";
 const STRINGS: Record<Locale, { title: string; body: string; cta: string }> = {
   fr: {
     title: "Une question sur votre situation ?",
-    body: "Abonnement juridique PME dès 49 CHF/mois : votre juriste externalisé s'occupe de vos contrats, litiges et démarches, sans engagement.",
+    body: "Abonnement juridique PME dès 149 CHF/mois : votre juriste externalisé s'occupe de vos contrats, litiges et démarches, sans engagement.",
     cta: "Voir les formules",
   },
   de: {
     title: "Eine Frage zu Ihrer Situation?",
-    body: "KMU-Rechtsabo ab CHF 49/Monat: Ihr externer Rechtsberater kümmert sich um Ihre Verträge, Streitfälle und Verfahren, ohne Vertragsbindung.",
+    body: "KMU-Rechtsabo ab CHF 149/Monat: Ihr externer Rechtsberater kümmert sich um Ihre Verträge, Streitfälle und Verfahren, ohne Vertragsbindung.",
     cta: "Formeln ansehen",
   },
   en: {
     title: "A question about your situation?",
-    body: "SME legal subscription from CHF 49/month: your outsourced legal counsel handles your contracts, disputes and procedures, no commitment.",
+    body: "SME legal subscription from CHF 149/month: your outsourced legal counsel handles your contracts, disputes and procedures, no commitment.",
     cta: "See the plans",
   },
   it: {
     title: "Una domanda sulla vostra situazione?",
-    body: "Abbonamento legale per PMI da CHF 49/mese: il vostro giurista esternalizzato si occupa dei vostri contratti, controversie e procedure, senza impegno.",
+    body: "Abbonamento legale per PMI da CHF 149/mese: il vostro giurista esternalizzato si occupa dei vostri contratti, controversie e procedure, senza impegno.",
     cta: "Vedere le formule",
   },
 };

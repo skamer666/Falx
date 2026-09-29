@@ -95,7 +95,7 @@ function Fr() {
 
       <h2>3. Description et prix des formules</h2>
       <p>
-        <strong>Essentiel</strong> : 49 CHF par mois. Comprend une
+        <strong>Essentiel</strong> : 149 CHF par mois. Comprend une
         messagerie illimitée pour les questions rapides (clarifications
         ponctuelles ne nécessitant pas de recherche approfondie, dans les
         limites d&rsquo;un usage raisonnable et personnel), 2 dossiers
@@ -105,7 +105,7 @@ function Fr() {
         de modèles de documents.
       </p>
       <p>
-        <strong>Croissance</strong> : 119 CHF par mois. Comprend la
+        <strong>Croissance</strong> : 349 CHF par mois. Comprend la
         messagerie illimitée pour les questions rapides, 5 dossiers
         complets pris en charge par mois traités sous 48 heures ouvrées (24
         heures pour les urgences signalées comme telles), une révision de
@@ -114,7 +114,7 @@ function Fr() {
       </p>
       <p>
         Tout dossier complet au-delà du volume inclus dans la formule
-        souscrite est facturé 39 CHF, prix fixe, quelle que soit sa
+        souscrite est facturé 79 CHF, prix fixe, quelle que soit sa
         complexité. Un usage manifestement déraisonnable de la messagerie
         illimitée (volume ou fréquence incompatible avec un usage normal
         d&rsquo;une PME ou d&rsquo;un indépendant) peut être requalifié en
@@ -160,18 +160,13 @@ function Fr() {
         généralement plus court.
       </p>
 
-      <h2>6. Résiliation, remboursement et garantie</h2>
-      <p>
-        Si le client n&rsquo;est pas satisfait durant son premier mois
-        d&rsquo;abonnement, il peut demander le remboursement intégral de
-        ce premier mois, sans justification à fournir, par simple email à{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
+      <h2>6. Résiliation et remboursement</h2>
       <p>
         Le client peut résilier son abonnement à tout moment, sans motif ni
-        frais. La résiliation prend effet à la fin de la période mensuelle
-        déjà payée&nbsp;; en dehors de la garantie du premier mois décrite
-        ci-dessus, le mois en cours n&rsquo;est pas remboursé au prorata.
+        frais, par simple email à{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
+        résiliation prend effet à la fin de la période mensuelle déjà
+        payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au prorata.
         Le client peut également changer de formule à tout moment, avec
         effet au prochain cycle de facturation.
       </p>
@@ -283,7 +278,7 @@ function De() {
 
       <h2>3. Beschreibung und Preise der Formeln</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 49 pro Monat. Umfasst unbegrenzte
+        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst unbegrenzte
         Nachrichten für schnelle Fragen (punktuelle Klärungen ohne
         vertiefte Recherche, im Rahmen einer angemessenen und persönlichen
         Nutzung), 2 vollständige Anliegen pro Monat (Erstellung oder
@@ -292,7 +287,7 @@ function De() {
         vollständigen Vorlagenbibliothek.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 119 pro Monat. Umfasst
+        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst
         unbegrenzte Nachrichten für schnelle Fragen, 5 vollständige
         Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24
         Stunden bei als solche gemeldeten Notfällen), eine im Preis
@@ -301,7 +296,7 @@ function De() {
       </p>
       <p>
         Jedes vollständige Anliegen über das in der gewählten Formel
-        enthaltene Volumen hinaus wird zu CHF 39, Fixpreis, unabhängig von
+        enthaltene Volumen hinaus wird zu CHF 79, Fixpreis, unabhängig von
         seiner Komplexität, verrechnet. Eine offensichtlich unangemessene
         Nutzung der unbegrenzten Nachrichtenfunktion (Umfang oder Häufigkeit
         unvereinbar mit der normalen Nutzung durch ein KMU oder eine
@@ -346,20 +341,15 @@ function De() {
         eine Antwort innert angemessener, in der Regel kürzerer Frist.
       </p>
 
-      <h2>6. Kündigung, Rückerstattung und Garantie</h2>
-      <p>
-        Ist der Kunde während seines ersten Abonnementsmonats nicht
-        zufrieden, kann er die vollständige Rückerstattung dieses ersten
-        Monats verlangen, ohne Begründung, per einfacher E-Mail an{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
+      <h2>6. Kündigung und Rückerstattung</h2>
       <p>
         Der Kunde kann sein Abonnement jederzeit ohne Angabe von Gründen und
-        kostenlos kündigen. Die Kündigung wird zum Ende der bereits
-        bezahlten Monatsperiode wirksam; ausserhalb der oben beschriebenen
-        Garantie für den ersten Monat wird der laufende Monat nicht
-        anteilig zurückerstattet. Der Kunde kann auch jederzeit die Formel
-        wechseln, wirksam ab dem nächsten Abrechnungszyklus.
+        kostenlos kündigen, per einfacher E-Mail an{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Die
+        Kündigung wird zum Ende der bereits bezahlten Monatsperiode
+        wirksam; der laufende Monat wird nicht anteilig zurückerstattet.
+        Der Kunde kann auch jederzeit die Formel wechseln, wirksam ab dem
+        nächsten Abrechnungszyklus.
       </p>
       <p>
         Erweist sich ein konkretes Anliegen offensichtlich als ausserhalb
@@ -468,7 +458,7 @@ function En() {
 
       <h2>3. Description and price of the plans</h2>
       <p>
-        <strong>Essential</strong>: CHF 49 per month. Includes unlimited
+        <strong>Essential</strong>: CHF 149 per month. Includes unlimited
         messaging for quick questions (one-off clarifications not
         requiring in-depth research, within the limits of reasonable,
         personal use), 2 full matters handled per month (drafting or
@@ -477,7 +467,7 @@ function En() {
         full template library.
       </p>
       <p>
-        <strong>Growth</strong>: CHF 119 per month. Includes unlimited
+        <strong>Growth</strong>: CHF 349 per month. Includes unlimited
         messaging for quick questions, 5 full matters handled per month
         within 48 business hours (24 hours for matters flagged as
         urgent), a priority contract review included every month, and
@@ -485,7 +475,7 @@ function En() {
       </p>
       <p>
         Any full matter beyond the volume included in the chosen plan is
-        billed at CHF 39, fixed price, regardless of complexity. Clearly
+        billed at CHF 79, fixed price, regardless of complexity. Clearly
         unreasonable use of the unlimited messaging feature (volume or
         frequency inconsistent with normal use by an SME or self-employed
         individual) may be reclassified by Thrax Legal as full matters,
@@ -529,20 +519,15 @@ function En() {
         reasonable, generally shorter timeframe.
       </p>
 
-      <h2>6. Cancellation, refunds and guarantee</h2>
-      <p>
-        If the customer is not satisfied during their first month of
-        subscription, they may request a full refund of that first month,
-        with no reason required, by simply emailing{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
+      <h2>6. Cancellation and refunds</h2>
       <p>
         The customer may cancel their subscription at any time, without
-        reason or fees. Cancellation takes effect at the end of the monthly
-        period already paid for; outside the first-month guarantee
-        described above, the current month is not refunded on a pro-rata
-        basis. The customer may also switch plans at any time, effective
-        from the next billing cycle.
+        reason or fees, by simply emailing{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        Cancellation takes effect at the end of the monthly period already
+        paid for; the current month is not refunded on a pro-rata basis.
+        The customer may also switch plans at any time, effective from the
+        next billing cycle.
       </p>
       <p>
         If a specific matter is clearly outside the scope described in
@@ -647,7 +632,7 @@ function It() {
 
       <h2>3. Descrizione e prezzi delle formule</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 49 al mese. Comprende una
+        <strong>Essentiel</strong>: CHF 149 al mese. Comprende una
         messaggistica illimitata per le domande rapide (chiarimenti
         puntuali che non richiedono una ricerca approfondita, nei limiti
         di un uso ragionevole e personale), 2 pratiche complete gestite al
@@ -656,7 +641,7 @@ function It() {
         lavorative, e l&rsquo;accesso alla libreria completa di modelli.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 119 al mese. Comprende la
+        <strong>Croissance</strong>: CHF 349 al mese. Comprende la
         messaggistica illimitata per le domande rapide, 5 pratiche
         complete gestite al mese entro 48 ore lavorative (24 ore per le
         urgenze segnalate come tali), una revisione contrattuale
@@ -665,7 +650,7 @@ function It() {
       </p>
       <p>
         Ogni pratica completa oltre il volume incluso nella formula
-        sottoscritta è fatturata CHF 39, prezzo fisso, indipendentemente
+        sottoscritta è fatturata CHF 79, prezzo fisso, indipendentemente
         dalla sua complessità. Un uso manifestamente irragionevole della
         messaggistica illimitata (volume o frequenza incompatibili con un
         uso normale da parte di una PMI o di un indipendente) può essere
@@ -713,21 +698,15 @@ function It() {
         generalmente più breve.
       </p>
 
-      <h2>6. Disdetta, rimborso e garanzia</h2>
-      <p>
-        Se il cliente non è soddisfatto durante il primo mese di
-        abbonamento, può richiedere il rimborso integrale di tale primo
-        mese, senza dover fornire motivazioni, tramite semplice email a{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
+      <h2>6. Disdetta e rimborso</h2>
       <p>
         Il cliente può disdire il proprio abbonamento in qualsiasi momento,
-        senza motivo né costi. La disdetta ha effetto alla fine del periodo
-        mensile già pagato; al di fuori della garanzia del primo mese
-        sopra descritta, il mese in corso non è rimborsato
-        proporzionalmente. Il cliente può anche cambiare formula in
-        qualsiasi momento, con effetto dal ciclo di fatturazione
-        successivo.
+        senza motivo né costi, tramite semplice email a{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
+        disdetta ha effetto alla fine del periodo mensile già pagato; il
+        mese in corso non è rimborsato proporzionalmente. Il cliente può
+        anche cambiare formula in qualsiasi momento, con effetto dal ciclo
+        di fatturazione successivo.
       </p>
       <p>
         Se una pratica precisa risulta manifestamente al di fuori

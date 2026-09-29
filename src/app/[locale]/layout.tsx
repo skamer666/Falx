@@ -14,17 +14,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 const TITLES: Record<Locale, string> = {
-  fr: "Abonnement juridique PME en Suisse romande, dès 49 CHF/mois | Thrax Legal",
-  de: "KMU-Rechtsabo in der Westschweiz, ab CHF 49/Monat | Thrax Legal",
-  en: "SME legal subscription in French-speaking Switzerland, from CHF 49/month | Thrax Legal",
-  it: "Abbonamento legale per PMI nella Svizzera romanda, da CHF 49/mese | Thrax Legal",
+  fr: "Abonnement juridique PME en Suisse romande, dès 149 CHF/mois | Thrax Legal",
+  de: "KMU-Rechtsabo in der Westschweiz, ab CHF 149/Monat | Thrax Legal",
+  en: "SME legal subscription in French-speaking Switzerland, from CHF 149/month | Thrax Legal",
+  it: "Abbonamento legale per PMI nella Svizzera romanda, da CHF 149/mese | Thrax Legal",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Thrax Legal, votre juriste externalisé pour indépendants et PME de Suisse romande : rédaction de contrats, résolution de litiges, conformité nLPD. Prix fixe mensuel dès 49 CHF, sans engagement, traité sous 48-72h.",
-  de: "Thrax Legal, Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Vertragserstellung, Streitfalllösung, DSG-Konformität. Fixer Monatspreis ab CHF 49, ohne Vertragsbindung, bearbeitet innert 48-72h.",
-  en: "Thrax Legal, your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contract drafting, dispute resolution, FADP compliance. Fixed monthly price from CHF 49, no commitment, handled within 48-72h.",
-  it: "Thrax Legal, il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: redazione di contratti, risoluzione di controversie, conformità nLPD. Prezzo fisso mensile da CHF 49, senza impegno, gestito entro 48-72h.",
+  fr: "Thrax Legal, votre juriste externalisé pour indépendants et PME de Suisse romande : rédaction de contrats, résolution de litiges, conformité nLPD. Prix fixe mensuel dès 149 CHF, sans engagement, traité sous 48-72h.",
+  de: "Thrax Legal, Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Vertragserstellung, Streitfalllösung, DSG-Konformität. Fixer Monatspreis ab CHF 149, ohne Vertragsbindung, bearbeitet innert 48-72h.",
+  en: "Thrax Legal, your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contract drafting, dispute resolution, FADP compliance. Fixed monthly price from CHF 149, no commitment, handled within 48-72h.",
+  it: "Thrax Legal, il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: redazione di contratti, risoluzione di controversie, conformità nLPD. Prezzo fisso mensile da CHF 149, senza impegno, gestito entro 48-72h.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {
@@ -91,7 +91,7 @@ function organizationJsonLd(locale: Locale) {
       "@type": "PostalAddress",
       addressCountry: "CH",
     },
-    priceRange: "CHF 49 - CHF 119 / mois",
+    priceRange: "CHF 149 - CHF 349 / mois",
   };
 }
 
