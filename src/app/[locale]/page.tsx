@@ -69,20 +69,20 @@ const CONTENT: Record<Locale, HomeContent> = {
   fr: {
     metaTitle: "Abonnement juridique PME en Suisse romande | Thrax Legal",
     metaDescription:
-      "Conseil juridique écrit pour indépendants et PME de Suisse romande : contrats, CGV, droit du travail, nLPD. Réponse sous 48-72h, prix fixe mensuel, sans engagement, sans avocat à l'heure.",
-    heroTitle: "Un conseil juridique par écrit, pour votre PME, à prix fixe.",
+      "Votre juriste externalisé pour indépendants et PME de Suisse romande : rédaction de contrats, résolution de litiges, conformité nLPD. Traité sous 48-72h, prix fixe mensuel, sans engagement, sans avocat à l'heure.",
+    heroTitle: "Votre juriste externalisé, pour votre PME, à prix fixe.",
     heroSubtitle:
-      "Contrats, CGV, droit du travail, conformité nLPD, recouvrement : posez vos questions par écrit, recevez une réponse rédigée sous 48 à 72h. Pas d'avocat à l'heure, pas de rendez-vous, sans engagement.",
+      "Rédaction de contrats, résolution de vos litiges, explication de vos démarches : un juriste externalisé qui s'occupe de vos besoins juridiques au quotidien. Prix fixe mensuel, pas d'avocat à l'heure, pas de rendez-vous, sans engagement.",
     heroCtaLabel: "Voir les formules",
-    heroCtaSub: "Résiliable à tout moment · Réponse écrite garantie",
+    heroCtaSub: "Résiliable à tout moment · Prix fixe garanti",
     trustBar: [
-      "Réponse écrite, datée, que vous pouvez ressortir en cas de litige.",
+      "Rédaction de contrats, résolution de litiges, explication de vos démarches : on s'occupe de vos besoins juridiques.",
       "Prix fixe mensuel : jamais de facturation à l'heure ni de surprise.",
       "Sans engagement : résiliez à tout moment, aucun frais caché.",
     ],
     aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
     aboutBody1:
-      "Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction. Je ne prétends pas connaître chaque réponse par cœur — et c'est précisément pour ça que chaque question fait l'objet d'une vraie recherche avant une réponse écrite, jamais d'une improvisation en direct au téléphone.",
+      "Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction. Je ne prétends pas tout connaître par cœur — et c'est précisément pour ça que chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct au téléphone.",
     aboutBody2:
       "C'est le principe du juriste fractionné : un accès sérieux et abordable au droit pour votre PME, sans les coûts d'un cabinet à temps plein. Pour les dossiers contentieux ou les décisions à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
     pricingHeading: "Deux formules, un seul principe : pas de surprise",
@@ -96,8 +96,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mois",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
-          "1 question écrite par mois",
-          "Réponse sous 72h ouvrées",
+          "1 besoin juridique pris en charge par mois (contrat, litige, procédure)",
+          "Traité sous 72h ouvrées",
           "Bibliothèque de modèles (CGV, contrat de travail type, etc.)",
           "Sans engagement, résiliable à tout moment",
         ],
@@ -111,8 +111,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mois",
         tagline: "Pour les PME avec des besoins réguliers",
         features: [
-          "3 questions écrites par mois",
-          "Réponse sous 48h ouvrées",
+          "3 besoins juridiques pris en charge par mois",
+          "Traité sous 48h ouvrées",
           "Révision de contrat incluse chaque mois",
           "Bibliothèque de modèles complète",
           "Sans engagement, résiliable à tout moment",
@@ -126,8 +126,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     stepsHeading: "Comment ça marche",
     steps: [
       { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement. Paiement mensuel, résiliable à tout moment." },
-      { title: "Posez votre question par écrit", description: "Décrivez votre situation (contrat, litige, conformité) via le formulaire dédié." },
-      { title: "Recevez une réponse rédigée", description: "Réponse écrite et argumentée sous 48 à 72h selon votre formule, avec les documents nécessaires." },
+      { title: "Décrivez votre besoin", description: "Contrat à rédiger, litige à régler, procédure à comprendre : expliquez votre situation via le formulaire dédié." },
+      { title: "On s'en occupe", description: "Contrat rédigé, solution expliquée, procédure clarifiée sous 48 à 72h selon votre formule, avec les documents nécessaires." },
     ],
     domainsHeading: "Ce que couvre l'abonnement",
     domains: [
@@ -146,14 +146,14 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerNote: "Facturation horaire classique, souvent difficile à prévoir sur la durée pour une PME.",
     brandLabel: "Thrax Legal",
     thraxPrice: "dès 49 CHF / mois",
-    thraxNote: "Prix fixe et prévisible, sans engagement, réponses écrites incluses.",
+    thraxNote: "Prix fixe et prévisible, sans engagement, prise en charge de vos besoins incluse.",
     lawyerDisclaimer:
       "Estimation basée sur les tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton). Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
     faqHeading: "Questions fréquentes",
     faq: [
       {
         q: "Que couvre exactement l'abonnement ?",
-        a: "Des réponses écrites à vos questions juridiques courantes (contrats, CGV, droit du travail, nLPD, recouvrement amiable, baux commerciaux) et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
+        a: "La prise en charge de vos besoins juridiques courants : rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux) et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
       },
       {
         q: "Puis-je résilier à tout moment ?",
@@ -164,20 +164,20 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Chaque question supplémentaire est facturée 39 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
-        q: "Sous quel délai ai-je une réponse ?",
-        a: "72h ouvrées pour la formule Essentiel, 48h ouvrées pour la formule Croissance. Chaque réponse est écrite et argumentée, pas un simple renvoi vers un article générique.",
+        q: "Sous quel délai mon dossier est-il traité ?",
+        a: "72h ouvrées pour la formule Essentiel, 48h ouvrées pour la formule Croissance. Chaque dossier est traité personnellement à partir de votre situation, jamais un simple renvoi vers un article générique.",
       },
       {
-        q: "Thrax Legal est-il un cabinet d'avocats ? Qui rédige les réponses ?",
-        a: "Non, ce n'est pas un cabinet d'avocats. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque question fait l'objet d'une vraie recherche avant réponse écrite, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse plutôt que de répondre à l'aveugle.",
+        q: "Thrax Legal est-il un cabinet d'avocats ? Qui s'occupe de mon dossier ?",
+        a: "Non, ce n'est pas un cabinet d'avocats. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse plutôt que de répondre à l'aveugle.",
       },
       {
         q: "Proposez-vous ce service dans toute la Suisse ?",
         a: "Le service est pensé et positionné pour les indépendants et PME de Suisse romande, mais le site est disponible en français, allemand, anglais et italien.",
       },
       {
-        q: "Une réponse écrite a-t-elle une vraie valeur par rapport à un appel ?",
-        a: "Oui, et c'est un vrai avantage : une réponse écrite et datée constitue une trace que vous pouvez ressortir en cas de litige ou de contrôle, contrairement à une conversation téléphonique.",
+        q: "Comment se déroule le suivi de mon dossier ?",
+        a: "Vous décrivez votre besoin via le formulaire dédié, je m'en occupe personnellement, et vous recevez le résultat (contrat rédigé, solution expliquée, procédure clarifiée) dans le délai de votre formule — avec, en prime, une trace écrite que vous pouvez ressortir en cas de litige ou de contrôle.",
       },
     ],
     stickyLabel: "Dès 49 CHF/mois",
@@ -186,20 +186,20 @@ const CONTENT: Record<Locale, HomeContent> = {
   de: {
     metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Schriftliche Rechtsberatung für Selbstständige und KMU in der Westschweiz: Verträge, AGB, Arbeitsrecht, DSG. Antwort innert 48-72h, fixer Monatspreis, ohne Vertragsbindung, kein Anwalt nach Stundensatz.",
-    heroTitle: "Rechtsberatung schriftlich, für Ihr KMU, zum Fixpreis.",
+      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Vertragserstellung, Streitfalllösung, DSG-Konformität. Bearbeitet innert 48-72h, fixer Monatspreis, ohne Vertragsbindung, kein Anwalt nach Stundensatz.",
+    heroTitle: "Ihr externer Rechtsberater, für Ihr KMU, zum Fixpreis.",
     heroSubtitle:
-      "Verträge, AGB, Arbeitsrecht, DSG-Konformität, Inkasso: Stellen Sie Ihre Fragen schriftlich, erhalten Sie eine ausformulierte Antwort innert 48 bis 72h. Kein Anwalt nach Stundensatz, kein Termin, ohne Vertragsbindung.",
+      "Verträge erstellen, Streitfälle lösen, Verfahren erklären: ein externer Rechtsberater, der sich um Ihre rechtlichen Bedürfnisse kümmert. Fixer Monatspreis, kein Anwalt nach Stundensatz, kein Termin, ohne Vertragsbindung.",
     heroCtaLabel: "Formeln ansehen",
-    heroCtaSub: "Jederzeit kündbar · Schriftliche Antwort garantiert",
+    heroCtaSub: "Jederzeit kündbar · Fixpreis garantiert",
     trustBar: [
-      "Schriftliche, datierte Antwort, die Sie bei einem Streitfall vorlegen können.",
+      "Verträge erstellen, Streitfälle lösen, Verfahren erklären: wir kümmern uns um Ihre rechtlichen Bedürfnisse.",
       "Fixer Monatspreis: nie eine Stundenabrechnung oder Überraschung.",
       "Ohne Vertragsbindung: jederzeit kündbar, keine versteckten Kosten.",
     ],
     aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
     aboutBody1:
-      "Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und Verfassen von Schriftstücken. Ich behaupte nicht, jede Antwort auswendig zu kennen — genau deshalb wird jede Frage vor einer schriftlichen Antwort richtig recherchiert, nie am Telefon improvisiert.",
+      "Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken. Ich behaupte nicht, alles auswendig zu kennen — genau deshalb wird jeder Fall richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert.",
     aboutBody2:
       "Das ist das Prinzip des fraktionierten Juristen: ein seriöser, erschwinglicher Zugang zum Recht für Ihr KMU, ohne die Kosten einer Kanzlei in Vollzeit. Bei streitigen Fällen oder Entscheidungen mit sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
     pricingHeading: "Zwei Formeln, ein Grundsatz: keine Überraschung",
@@ -213,8 +213,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ Monat",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
-          "1 schriftliche Frage pro Monat",
-          "Antwort innert 72 Arbeitsstunden",
+          "1 rechtliches Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
+          "Bearbeitet innert 72 Arbeitsstunden",
           "Vorlagenbibliothek (AGB, Musterarbeitsvertrag usw.)",
           "Ohne Vertragsbindung, jederzeit kündbar",
         ],
@@ -228,8 +228,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ Monat",
         tagline: "Für KMU mit regelmässigem Bedarf",
         features: [
-          "3 schriftliche Fragen pro Monat",
-          "Antwort innert 48 Arbeitsstunden",
+          "3 rechtliche Anliegen pro Monat",
+          "Bearbeitet innert 48 Arbeitsstunden",
           "Vertragsprüfung jeden Monat inklusive",
           "Vollständige Vorlagenbibliothek",
           "Ohne Vertragsbindung, jederzeit kündbar",
@@ -243,8 +243,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     stepsHeading: "So funktioniert's",
     steps: [
       { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung. Monatliche Zahlung, jederzeit kündbar." },
-      { title: "Frage schriftlich stellen", description: "Beschreiben Sie Ihre Situation (Vertrag, Streitfall, Konformität) über das dafür vorgesehene Formular." },
-      { title: "Ausformulierte Antwort erhalten", description: "Schriftliche, begründete Antwort innert 48 bis 72h je nach Formel, mit den nötigen Dokumenten." },
+      { title: "Ihr Anliegen schildern", description: "Vertrag zu erstellen, Streitfall zu lösen, Verfahren zu verstehen: schildern Sie Ihre Situation über das dafür vorgesehene Formular." },
+      { title: "Wir kümmern uns darum", description: "Vertrag erstellt, Lösung erklärt, Verfahren geklärt innert 48 bis 72h je nach Formel, mit den nötigen Dokumenten." },
     ],
     domainsHeading: "Was das Abo abdeckt",
     domains: [
@@ -263,14 +263,14 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerNote: "Klassische Stundenabrechnung, für ein KMU auf Dauer oft schwer planbar.",
     brandLabel: "Thrax Legal",
     thraxPrice: "ab CHF 49 / Monat",
-    thraxNote: "Fixer, planbarer Preis, ohne Vertragsbindung, schriftliche Antworten inklusive.",
+    thraxNote: "Fixer, planbarer Preis, ohne Vertragsbindung, Bearbeitung Ihrer Anliegen inklusive.",
     lawyerDisclaimer:
       "Schätzung basierend auf üblichen Stundensätzen von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton). Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
     faqHeading: "Häufige Fragen",
     faq: [
       {
         q: "Was deckt das Abo genau ab?",
-        a: "Schriftliche Antworten auf gängige Rechtsfragen (Verträge, AGB, Arbeitsrecht, DSG, gütliches Inkasso, Geschäftsmietverträge) und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
+        a: "Die Bearbeitung Ihrer gängigen rechtlichen Anliegen: Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge) und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
       },
       {
         q: "Kann ich jederzeit kündigen?",
@@ -281,20 +281,20 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Jede zusätzliche Frage kostet CHF 39, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
       },
       {
-        q: "Innert welcher Frist erhalte ich eine Antwort?",
-        a: "72 Arbeitsstunden bei der Formel Essentiel, 48 Arbeitsstunden bei Croissance. Jede Antwort ist schriftlich und begründet, kein blosser Verweis auf einen generischen Artikel.",
+        q: "Innert welcher Frist wird mein Anliegen bearbeitet?",
+        a: "72 Arbeitsstunden bei der Formel Essentiel, 48 Arbeitsstunden bei Croissance. Jeder Fall wird persönlich anhand Ihrer Situation bearbeitet, kein blosser Verweis auf einen generischen Artikel.",
       },
       {
-        q: "Ist Thrax Legal eine Anwaltskanzlei? Wer verfasst die Antworten?",
-        a: "Nein, keine Anwaltskanzlei. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jede Frage wird vor der schriftlichen Antwort richtig recherchiert, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
+        q: "Ist Thrax Legal eine Anwaltskanzlei? Wer kümmert sich um meinen Fall?",
+        a: "Nein, keine Anwaltskanzlei. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
       },
       {
         q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
         a: "Der Dienst ist für Selbstständige und KMU in der Westschweiz konzipiert und positioniert, die Website ist aber auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
       {
-        q: "Hat eine schriftliche Antwort wirklich einen Vorteil gegenüber einem Anruf?",
-        a: "Ja, und das ist ein echter Vorteil: Eine schriftliche, datierte Antwort ist ein Nachweis, den Sie bei einem Streitfall oder einer Kontrolle vorlegen können — anders als ein Telefongespräch.",
+        q: "Wie läuft die Bearbeitung meines Falls ab?",
+        a: "Sie schildern Ihr Anliegen über das dafür vorgesehene Formular, ich kümmere mich persönlich darum, und Sie erhalten das Ergebnis (erstellter Vertrag, erklärte Lösung, geklärtes Verfahren) innerhalb der Frist Ihrer Formel — inklusive eines schriftlichen Nachweises, den Sie bei einem Streitfall oder einer Kontrolle vorlegen können.",
       },
     ],
     stickyLabel: "Ab CHF 49/Monat",
@@ -303,20 +303,20 @@ const CONTENT: Record<Locale, HomeContent> = {
   en: {
     metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Written legal support for independents and SMEs in French-speaking Switzerland: contracts, T&Cs, employment law, FADP compliance. Answer within 48-72h, fixed monthly price, no commitment, no hourly lawyer.",
-    heroTitle: "Legal advice in writing, for your SME, at a fixed price.",
+      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contract drafting, dispute resolution, FADP compliance. Handled within 48-72h, fixed monthly price, no commitment, no hourly lawyer.",
+    heroTitle: "Your outsourced legal counsel, for your SME, at a fixed price.",
     heroSubtitle:
-      "Contracts, T&Cs, employment law, FADP compliance, debt collection: ask your questions in writing, get a drafted answer within 48 to 72h. No hourly lawyer, no appointment, no commitment.",
+      "Drafting contracts, resolving disputes, explaining procedures: an outsourced legal counsel who handles your legal needs. Fixed monthly price, no hourly lawyer, no appointment, no commitment.",
     heroCtaLabel: "See the plans",
-    heroCtaSub: "Cancel anytime · Written answer guaranteed",
+    heroCtaSub: "Cancel anytime · Fixed price guaranteed",
     trustBar: [
-      "A written, dated answer you can produce if a dispute arises.",
+      "Drafting contracts, resolving disputes, explaining procedures: we handle your legal needs.",
       "Fixed monthly price: never an hourly bill or a surprise.",
       "No commitment: cancel anytime, no hidden fees.",
     ],
     aboutHeading: "A fractional jurist, not a law firm",
     aboutBody1:
-      "I'm a law student, with several years of law firm experience in legal research and drafting. I don't claim to know every answer by heart — that's exactly why every question gets real research before a written answer, never live improvisation on a call.",
+      "I'm a law student, with several years of law firm experience in legal research and drafting. I don't claim to know everything by heart — that's exactly why every case gets real research before I handle it, never live improvisation on a call.",
     aboutBody2:
       "That's the fractional-jurist model: serious, affordable access to legal support for your SME, without the cost of a full-time firm. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
     pricingHeading: "Two plans, one principle: no surprises",
@@ -330,8 +330,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ month",
         tagline: "For freelancers and micro-businesses",
         features: [
-          "1 written question per month",
-          "Answer within 72 business hours",
+          "1 legal matter handled per month (contract, dispute, procedure)",
+          "Handled within 72 business hours",
           "Template library (T&Cs, standard employment contract, etc.)",
           "No commitment, cancel anytime",
         ],
@@ -345,8 +345,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ month",
         tagline: "For SMEs with regular needs",
         features: [
-          "3 written questions per month",
-          "Answer within 48 business hours",
+          "3 legal matters handled per month",
+          "Handled within 48 business hours",
           "Contract review included every month",
           "Full template library",
           "No commitment, cancel anytime",
@@ -360,8 +360,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     stepsHeading: "How it works",
     steps: [
       { title: "Choose your plan", description: "Essential or Growth, no commitment. Monthly payment, cancel anytime." },
-      { title: "Ask your question in writing", description: "Describe your situation (contract, dispute, compliance) via the dedicated form." },
-      { title: "Receive a drafted answer", description: "Written, reasoned answer within 48 to 72h depending on your plan, with the necessary documents." },
+      { title: "Describe your need", description: "A contract to draft, a dispute to resolve, a procedure to understand: describe your situation via the dedicated form." },
+      { title: "We handle it", description: "Contract drafted, solution explained, procedure clarified within 48 to 72h depending on your plan, with the necessary documents." },
     ],
     domainsHeading: "What the subscription covers",
     domains: [
@@ -380,14 +380,14 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerNote: "Classic hourly billing, often hard to predict over time for an SME.",
     brandLabel: "Thrax Legal",
     thraxPrice: "from CHF 49 / month",
-    thraxNote: "Fixed, predictable price, no commitment, written answers included.",
+    thraxNote: "Fixed, predictable price, no commitment, your needs handled end to end.",
     lawyerDisclaimer:
       "Estimate based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton). Thrax Legal is not a law firm and does not represent clients before courts.",
     faqHeading: "Frequently asked questions",
     faq: [
       {
         q: "What exactly does the subscription cover?",
-        a: "Written answers to common legal questions (contracts, T&Cs, employment law, FADP, amicable debt collection, commercial leases) and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
+        a: "Handling your common legal needs: drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases) and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
       },
       {
         q: "Can I cancel anytime?",
@@ -398,20 +398,20 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Each extra question is billed at CHF 39, fixed price — never hourly. You can also switch plans at any time.",
       },
       {
-        q: "How long until I get an answer?",
-        a: "72 business hours on the Essential plan, 48 business hours on Growth. Every answer is written and reasoned, not a generic article link.",
+        q: "How long until my matter is handled?",
+        a: "72 business hours on the Essential plan, 48 business hours on Growth. Every case is handled personally based on your situation, not a generic article link.",
       },
       {
-        q: "Is Thrax Legal a law firm? Who writes the answers?",
-        a: "No, it's not a law firm. I'm a law student, with several years of law firm experience in legal research and drafting — that's the fractional-jurist model. Every question gets real research before a written answer, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
+        q: "Is Thrax Legal a law firm? Who handles my case?",
+        a: "No, it's not a law firm. I'm a law student, with several years of law firm experience in legal research and drafting — that's the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
       },
       {
         q: "Do you offer this service across all of Switzerland?",
         a: "The service is designed and positioned for freelancers and SMEs in French-speaking Switzerland, but the site is available in French, German, English and Italian.",
       },
       {
-        q: "Does a written answer really have an advantage over a call?",
-        a: "Yes, and it's a real one: a written, dated answer is a record you can produce in case of a dispute or an audit — unlike a phone conversation.",
+        q: "How is my case actually handled?",
+        a: "You describe your need via the dedicated form, I handle it personally, and you receive the result (a drafted contract, an explained solution, a clarified procedure) within your plan's timeframe — plus a written record you can produce in case of a dispute or an audit.",
       },
     ],
     stickyLabel: "From CHF 49/month",
@@ -420,20 +420,20 @@ const CONTENT: Record<Locale, HomeContent> = {
   it: {
     metaTitle: "Abbonamento legale per PME nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Assistenza legale scritta per indipendenti e PMI della Svizzera romanda: contratti, condizioni generali, diritto del lavoro, nLPD. Risposta entro 48-72h, prezzo fisso mensile, senza impegno.",
-    heroTitle: "Consulenza legale scritta, per la vostra PMI, a prezzo fisso.",
+      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: redazione di contratti, risoluzione di controversie, conformità nLPD. Gestito entro 48-72h, prezzo fisso mensile, senza impegno.",
+    heroTitle: "Il vostro giurista esternalizzato, per la vostra PMI, a prezzo fisso.",
     heroSubtitle:
-      "Contratti, condizioni generali, diritto del lavoro, conformità nLPD, recupero crediti: ponete le vostre domande per iscritto, ricevete una risposta redatta entro 48-72h. Niente avvocato a ore, niente appuntamento, senza impegno.",
+      "Redazione di contratti, risoluzione di controversie, spiegazione delle procedure: un giurista esternalizzato che si occupa delle vostre esigenze legali. Prezzo fisso mensile, niente avvocato a ore, niente appuntamento, senza impegno.",
     heroCtaLabel: "Vedere le formule",
-    heroCtaSub: "Disdicibile in qualsiasi momento · Risposta scritta garantita",
+    heroCtaSub: "Disdicibile in qualsiasi momento · Prezzo fisso garantito",
     trustBar: [
-      "Risposta scritta e datata, che potete esibire in caso di controversia.",
+      "Redazione di contratti, risoluzione di controversie, spiegazione delle procedure: ci occupiamo delle vostre esigenze legali.",
       "Prezzo fisso mensile: mai una fatturazione oraria o una sorpresa.",
       "Senza impegno: disdite in qualsiasi momento, nessun costo nascosto.",
     ],
     aboutHeading: "Un giurista frazionato, non uno studio legale",
     aboutBody1:
-      "Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione. Non pretendo di conoscere ogni risposta a memoria — è esattamente per questo che ogni domanda è oggetto di una vera ricerca prima di una risposta scritta, mai di un'improvvisazione dal vivo al telefono.",
+      "Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione. Non pretendo di sapere tutto a memoria — è esattamente per questo che ogni caso è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo al telefono.",
     aboutBody2:
       "È il principio del giurista frazionato: un accesso serio e accessibile al diritto per la vostra PMI, senza i costi di uno studio a tempo pieno. Per i casi contenziosi o le decisioni ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
     pricingHeading: "Due formule, un solo principio: nessuna sorpresa",
@@ -447,8 +447,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mese",
         tagline: "Per indipendenti e micro-imprese",
         features: [
-          "1 domanda scritta al mese",
-          "Risposta entro 72 ore lavorative",
+          "1 esigenza legale gestita al mese (contratto, controversia, procedura)",
+          "Gestita entro 72 ore lavorative",
           "Libreria di modelli (condizioni generali, contratto di lavoro tipo, ecc.)",
           "Senza impegno, disdicibile in qualsiasi momento",
         ],
@@ -462,8 +462,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mese",
         tagline: "Per PMI con esigenze regolari",
         features: [
-          "3 domande scritte al mese",
-          "Risposta entro 48 ore lavorative",
+          "3 esigenze legali gestite al mese",
+          "Gestite entro 48 ore lavorative",
           "Revisione contrattuale inclusa ogni mese",
           "Libreria di modelli completa",
           "Senza impegno, disdicibile in qualsiasi momento",
@@ -477,8 +477,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     stepsHeading: "Come funziona",
     steps: [
       { title: "Scegliete la vostra formula", description: "Essentiel o Croissance, senza impegno. Pagamento mensile, disdicibile in qualsiasi momento." },
-      { title: "Ponete la vostra domanda per iscritto", description: "Descrivete la vostra situazione (contratto, controversia, conformità) tramite il modulo dedicato." },
-      { title: "Ricevete una risposta redatta", description: "Risposta scritta e motivata entro 48-72h a seconda della formula, con i documenti necessari." },
+      { title: "Descrivete la vostra esigenza", description: "Un contratto da redigere, una controversia da risolvere, una procedura da capire: descrivete la vostra situazione tramite il modulo dedicato." },
+      { title: "Ce ne occupiamo noi", description: "Contratto redatto, soluzione spiegata, procedura chiarita entro 48-72h a seconda della formula, con i documenti necessari." },
     ],
     domainsHeading: "Cosa copre l'abbonamento",
     domains: [
@@ -497,14 +497,14 @@ const CONTENT: Record<Locale, HomeContent> = {
     lawyerNote: "Fatturazione oraria classica, spesso difficile da prevedere nel tempo per una PMI.",
     brandLabel: "Thrax Legal",
     thraxPrice: "da CHF 49 / mese",
-    thraxNote: "Prezzo fisso e prevedibile, senza impegno, risposte scritte incluse.",
+    thraxNote: "Prezzo fisso e prevedibile, senza impegno, gestione delle vostre esigenze inclusa.",
     lawyerDisclaimer:
       "Stima basata sulle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone). Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
     faqHeading: "Domande frequenti",
     faq: [
       {
         q: "Cosa copre esattamente l'abbonamento?",
-        a: "Risposte scritte alle vostre domande legali comuni (contratti, condizioni generali, diritto del lavoro, nLPD, recupero crediti amichevole, locazioni commerciali) e l'accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
+        a: "La gestione delle vostre esigenze legali comuni: redazione e revisione di contratti, risoluzione di controversie, spiegazione delle vostre procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali) e l'accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
       },
       {
         q: "Posso disdire in qualsiasi momento?",
@@ -515,20 +515,20 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Ogni domanda supplementare è fatturata CHF 39, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
-        q: "Entro quanto tempo ricevo una risposta?",
-        a: "72 ore lavorative per la formula Essentiel, 48 ore lavorative per Croissance. Ogni risposta è scritta e motivata, non un semplice rimando a un articolo generico.",
+        q: "Entro quanto tempo viene gestita la mia pratica?",
+        a: "72 ore lavorative per la formula Essentiel, 48 ore lavorative per Croissance. Ogni pratica è gestita personalmente a partire dalla vostra situazione, non un semplice rimando a un articolo generico.",
       },
       {
-        q: "Thrax Legal è uno studio legale? Chi redige le risposte?",
-        a: "No, non è uno studio legale. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni domanda è oggetto di una vera ricerca prima di una risposta scritta, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
+        q: "Thrax Legal è uno studio legale? Chi si occupa della mia pratica?",
+        a: "No, non è uno studio legale. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
       },
       {
         q: "Offrite questo servizio in tutta la Svizzera?",
         a: "Il servizio è pensato e posizionato per indipendenti e PMI della Svizzera romanda, ma il sito è disponibile in francese, tedesco, inglese e italiano.",
       },
       {
-        q: "Una risposta scritta ha davvero un vantaggio rispetto a una chiamata?",
-        a: "Sì, ed è un vantaggio reale: una risposta scritta e datata è una prova che potete esibire in caso di controversia o di controllo, a differenza di una conversazione telefonica.",
+        q: "Come viene gestita concretamente la mia pratica?",
+        a: "Descrivete la vostra esigenza tramite il modulo dedicato, me ne occupo personalmente, e ricevete il risultato (contratto redatto, soluzione spiegata, procedura chiarita) entro il termine della vostra formula — con in più una prova scritta che potete esibire in caso di controversia o di controllo.",
       },
     ],
     stickyLabel: "Da CHF 49/mese",

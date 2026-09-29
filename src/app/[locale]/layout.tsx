@@ -21,10 +21,10 @@ const TITLES: Record<Locale, string> = {
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Thrax Legal répond par écrit aux questions juridiques des indépendants et PME de Suisse romande (contrats, CGV, droit du travail, nLPD). Prix fixe mensuel dès 49 CHF, sans engagement, réponse sous 48-72h.",
-  de: "Thrax Legal beantwortet schriftlich die Rechtsfragen von Selbstständigen und KMU in der Westschweiz (Verträge, AGB, Arbeitsrecht, DSG). Fixer Monatspreis ab CHF 49, ohne Vertragsbindung, Antwort innert 48-72h.",
-  en: "Thrax Legal answers in writing the legal questions of independents and SMEs in French-speaking Switzerland (contracts, T&Cs, employment law, FADP). Fixed monthly price from CHF 49, no commitment, answer within 48-72h.",
-  it: "Thrax Legal risponde per iscritto alle domande legali di indipendenti e PMI della Svizzera romanda (contratti, condizioni generali, diritto del lavoro, nLPD). Prezzo fisso mensile da CHF 49, senza impegno, risposta entro 48-72h.",
+  fr: "Thrax Legal, votre juriste externalisé pour indépendants et PME de Suisse romande : rédaction de contrats, résolution de litiges, conformité nLPD. Prix fixe mensuel dès 49 CHF, sans engagement, traité sous 48-72h.",
+  de: "Thrax Legal, Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Vertragserstellung, Streitfalllösung, DSG-Konformität. Fixer Monatspreis ab CHF 49, ohne Vertragsbindung, bearbeitet innert 48-72h.",
+  en: "Thrax Legal, your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contract drafting, dispute resolution, FADP compliance. Fixed monthly price from CHF 49, no commitment, handled within 48-72h.",
+  it: "Thrax Legal, il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: redazione di contratti, risoluzione di controversie, conformità nLPD. Prezzo fisso mensile da CHF 49, senza impegno, gestito entro 48-72h.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {

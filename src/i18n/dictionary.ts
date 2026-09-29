@@ -14,9 +14,9 @@ export const dictionary = {
       menuCloseLabel: "Fermer",
     },
     footer: {
-      tagline: "Votre juriste par écrit, à prix fixe.",
+      tagline: "Votre juriste externalisé, à prix fixe.",
       description:
-        "Thrax Legal répond par écrit à vos questions juridiques d'indépendant ou de PME — contrats, CGV, droit du travail, nLPD — sans avocat à l'heure, sans rendez-vous.",
+        "Thrax Legal s'occupe des besoins juridiques de votre indépendance ou PME — rédaction de contrats, résolution de litiges, conformité nLPD — sans avocat à l'heure, sans rendez-vous.",
       contact: "Nous contacter",
       hours: "Horaires",
       hoursValue: "Lundi à vendredi",
@@ -47,9 +47,9 @@ export const dictionary = {
       menuCloseLabel: "Schliessen",
     },
     footer: {
-      tagline: "Ihr Rechtsberater schriftlich, zum Fixpreis.",
+      tagline: "Ihr externer Rechtsberater, zum Fixpreis.",
       description:
-        "Thrax Legal beantwortet schriftlich Ihre Rechtsfragen als Selbstständige oder KMU — Verträge, AGB, Arbeitsrecht, DSG — ohne Anwalt nach Stundensatz, ohne Termin.",
+        "Thrax Legal kümmert sich um die rechtlichen Bedürfnisse Ihrer Selbstständigkeit oder Ihres KMU — Vertragserstellung, Streitfalllösung, DSG-Konformität — ohne Anwalt nach Stundensatz, ohne Termin.",
       contact: "Kontakt",
       hours: "Öffnungszeiten",
       hoursValue: "Montag bis Freitag",
@@ -80,9 +80,9 @@ export const dictionary = {
       menuCloseLabel: "Close",
     },
     footer: {
-      tagline: "Your legal adviser in writing, at a fixed price.",
+      tagline: "Your outsourced legal counsel, at a fixed price.",
       description:
-        "Thrax Legal answers in writing the legal questions of independents and SMEs — contracts, T&Cs, employment law, FADP — no hourly lawyer, no appointment.",
+        "Thrax Legal handles the legal needs of your independent business or SME — contract drafting, dispute resolution, FADP compliance — no hourly lawyer, no appointment.",
       contact: "Contact us",
       hours: "Hours",
       hoursValue: "Monday to Friday",
@@ -113,9 +113,9 @@ export const dictionary = {
       menuCloseLabel: "Chiudi",
     },
     footer: {
-      tagline: "Il vostro consulente legale per iscritto, a prezzo fisso.",
+      tagline: "Il vostro giurista esternalizzato, a prezzo fisso.",
       description:
-        "Thrax Legal risponde per iscritto alle vostre domande legali da indipendenti o PMI — contratti, condizioni generali, diritto del lavoro, nLPD — senza avvocato a ore, senza appuntamento.",
+        "Thrax Legal si occupa delle esigenze legali della vostra attività indipendente o PMI — redazione di contratti, risoluzione di controversie, conformità nLPD — senza avvocato a ore, senza appuntamento.",
       contact: "Contattaci",
       hours: "Orari",
       hoursValue: "Lunedì a venerdì",
