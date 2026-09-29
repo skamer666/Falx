@@ -8,17 +8,10 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import JsonLd from "@/components/site/JsonLd";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
-import {
-  Container,
-  LawyerComparison,
-  PrimaryButton,
-  StepList,
-  TrustBar,
-} from "@/components/site/ui";
+import { Container, PrimaryButton, StepList } from "@/components/site/ui";
 
 type FaqItem = { q: string; a: string };
 type StepItem = { title: string; description: string };
-type DomainItem = { title: string; description: string };
 type Tier = {
   slug: string;
   name: string;
@@ -38,30 +31,22 @@ type HomeContent = {
   heroTitle: string;
   heroSubtitle: string;
   heroCtaLabel: string;
-  heroCtaSub: string;
-  trustBar: [string, string, string];
+  heroProof: [string, string, string];
   aboutHeading: string;
-  aboutBody1: string;
-  aboutBody2: string;
+  aboutBody: string;
   pricingHeading: string;
   pricingSubheading: string;
   founderBadge: string;
   tiers: [Tier, Tier];
+  templateNote: string;
   extraQuestionNote: string;
+  valueDisclaimer: string;
   stepsHeading: string;
   steps: StepItem[];
   domainsHeading: string;
-  domains: DomainItem[];
+  domains: string[];
   guideLabel: string;
   guideLinkLabel: string;
-  lawyerHeading: string;
-  lawyerLabel: string;
-  lawyerRange: string;
-  lawyerNote: string;
-  brandLabel: string;
-  thraxPrice: string;
-  thraxNote: string;
-  lawyerDisclaimer: string;
   faqHeading: string;
   faq: FaqItem[];
   stickyLabel: string;
@@ -72,27 +57,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   fr: {
     metaTitle: "Abonnement juridique PME en Suisse romande | Thrax Legal",
     metaDescription:
-      "Votre juriste externalisé pour indépendants et PME de Suisse romande : rédaction de contrats, résolution de litiges, conformité nLPD. Traité sous 48-72h, prix fixe mensuel, sans engagement, sans avocat à l'heure.",
-    heroTitle: "Votre juriste externalisé, pour votre PME, à prix fixe.",
+      "Votre juriste externalisé pour indépendants et PME de Suisse romande : contrats, litiges, démarches. Prix fixe dès 149 CHF/mois, sans engagement.",
+    heroTitle: "Votre juriste externalisé, à prix fixe.",
     heroSubtitle:
-      "Rédaction de contrats, résolution de vos litiges, explication de vos démarches : un juriste externalisé qui s'occupe de vos besoins juridiques au quotidien. Prix fixe mensuel, pas d'avocat à l'heure, pas de rendez-vous, sans engagement.",
+      "Contrats, litiges, démarches : votre PME est prise en charge, sans avocat à l'heure ni rendez-vous.",
     heroCtaLabel: "Voir les formules",
-    heroCtaSub: "Résiliable à tout moment · Prix fixe garanti",
-    trustBar: [
-      "Rédaction de contrats, résolution de litiges, explication de vos démarches : on s'occupe de vos besoins juridiques.",
-      "Prix fixe mensuel : jamais de facturation à l'heure ni de surprise.",
-      "Sans engagement : résiliez à tout moment, aucun frais caché.",
-    ],
+    heroProof: ["Traité sous 48 à 72h", "Prix fixe, jamais à l'heure", "Sans engagement"],
     aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
-    aboutBody1:
-      "Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction. Je ne prétends pas tout connaître par cœur — et c'est précisément pour ça que chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct au téléphone.",
-    aboutBody2:
-      "C'est le principe du juriste fractionné : un accès sérieux et abordable au droit pour votre PME, sans les coûts d'un cabinet à temps plein. Pour les dossiers contentieux ou les décisions à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
-    pricingHeading: "Deux formules, un seul principe : bien plus que ce que vous payez",
-    pricingSubheading:
-      "Choisissez le volume qui correspond à votre activité. Changez de formule ou résiliez à tout moment.",
-    founderBadge:
-      "🎯 Offre de lancement : les 20 premiers abonnés gardent ce prix à vie, même quand les tarifs augmenteront.",
+    aboutBody:
+      "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper — jamais d'improvisation en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
+    pricingHeading: "Deux formules, bien plus que ce que vous payez",
+    pricingSubheading: "Choisissez votre volume. Changez ou résiliez à tout moment.",
+    founderBadge: "Offre de lancement : les 20 premiers abonnés gardent ce prix à vie.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -101,14 +77,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mois",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
-          "Messagerie illimitée pour vos questions rapides (usage raisonnable)",
-          "2 dossiers complets pris en charge par mois (contrat, litige, procédure)",
+          "Messagerie illimitée pour vos questions rapides",
+          "2 dossiers complets par mois (contrat, litige, procédure)",
           "Traité sous 72h ouvrées",
-          "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
-          "Prix bloqué à vie tant que vous restez abonné",
-          "Sans engagement, résiliable à tout moment",
+          "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 1'500 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 1'500 CHF",
         ctaLabel: "Choisir Essentiel",
         highlight: false,
       },
@@ -120,80 +94,63 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Pour les PME avec des besoins réguliers",
         badge: "Le plus choisi",
         features: [
-          "Messagerie illimitée pour vos questions rapides (usage raisonnable)",
-          "5 dossiers complets pris en charge par mois",
-          "Traité sous 48h ouvrées (24h pour les urgences signalées)",
-          "Révision de contrat prioritaire incluse chaque mois",
-          "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
-          "Prix bloqué à vie tant que vous restez abonné",
-          "Sans engagement, résiliable à tout moment",
+          "Messagerie illimitée pour vos questions rapides",
+          "5 dossiers complets par mois",
+          "Traité sous 48h (24h pour les urgences signalées)",
+          "Révision de contrat prioritaire chaque mois",
+          "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 4'000 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 4'000 CHF",
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
     ],
-    extraQuestionNote:
-      "Dossier supplémentaire au-delà de votre forfait : 79 CHF, prix fixe — jamais d'horaire.",
+    templateNote: "Bibliothèque complète de modèles incluse sur les deux formules (valeur 500 CHF).",
+    extraQuestionNote: "Dossier supplémentaire : 79 CHF, prix fixe.",
+    valueDisclaimer:
+      "Valeur estimée sur la base des tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton).",
     stepsHeading: "Comment ça marche",
     steps: [
-      { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement. Paiement mensuel, résiliable à tout moment." },
-      { title: "Décrivez votre besoin", description: "Contrat à rédiger, litige à régler, procédure à comprendre : expliquez votre situation via le formulaire dédié." },
-      { title: "On s'en occupe", description: "Contrat rédigé, solution expliquée, procédure clarifiée sous 48 à 72h selon votre formule, avec les documents nécessaires." },
+      { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement, résiliable à tout moment." },
+      { title: "Décrivez votre besoin", description: "Contrat, litige, démarche : expliquez votre situation via le formulaire dédié." },
+      { title: "On s'en occupe", description: "Contrat rédigé, solution expliquée, avec une trace écrite en cas de litige ou de contrôle." },
     ],
     domainsHeading: "Ce que couvre l'abonnement",
     domains: [
-      { title: "Contrats commerciaux & CGV", description: "Rédaction et relecture de vos contrats et conditions générales." },
-      { title: "Droit du travail", description: "Contrats de travail, licenciements, questions RH courantes." },
-      { title: "Droit des sociétés", description: "Questions de structure, gouvernance et formalités courantes." },
-      { title: "Recouvrement amiable", description: "Mises en demeure et démarches avant procédure judiciaire." },
-      { title: "Conformité nLPD", description: "Mise en conformité de vos traitements de données personnelles." },
-      { title: "Baux commerciaux", description: "Relecture et questions sur vos contrats de bail professionnel." },
+      "Contrats commerciaux & CGV",
+      "Droit du travail",
+      "Droit des sociétés",
+      "Recouvrement amiable",
+      "Conformité nLPD",
+      "Baux commerciaux",
     ],
     guideLabel: "Pour aller plus loin",
-    guideLinkLabel: "Voir tout le guide ↗",
-    lawyerHeading: "Le prix d'un avocat, sans la facture horaire",
-    lawyerLabel: "Avocat traditionnel",
-    lawyerRange: "200 à 600 CHF / heure",
-    lawyerNote: "Facturation horaire classique, souvent difficile à prévoir sur la durée pour une PME.",
-    brandLabel: "Thrax Legal",
-    thraxPrice: "dès 149 CHF / mois",
-    thraxNote: "Prix fixe et prévisible, sans engagement, prise en charge de vos besoins incluse.",
-    lawyerDisclaimer:
-      "Estimation basée sur les tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton). Thrax Legal n'est pas un cabinet d'avocats et n'assure pas la représentation devant les tribunaux.",
+    guideLinkLabel: "Voir tout le guide",
     faqHeading: "Questions fréquentes",
     faq: [
       {
-        q: "Que couvre exactement l'abonnement ?",
-        a: "La prise en charge de vos besoins juridiques courants : rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides, et l'accès à une bibliothèque complète de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
+        q: "Que couvre l'abonnement ?",
+        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons vers un avocat spécialisé.",
       },
       {
-        q: "C'est quoi la différence entre une « question rapide » et un « dossier » ?",
-        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail : rédiger un contrat, régler un litige, structurer une démarche — c'est ce volume-là qui est compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
+        q: "Question rapide ou dossier : quelle différence ?",
+        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail — rédiger un contrat, régler un litige, structurer une démarche — compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
       },
       {
         q: "Puis-je résilier à tout moment ?",
         a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
       },
       {
-        q: "Que se passe-t-il si j'ai plus de dossiers que mon forfait ?",
+        q: "Et si j'ai plus de dossiers que mon forfait ?",
         a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
-        q: "Sous quel délai mon dossier est-il traité ?",
-        a: "72h ouvrées pour la formule Essentiel, 48h ouvrées pour la formule Croissance. Chaque dossier est traité personnellement à partir de votre situation, jamais un simple renvoi vers un article générique.",
+        q: "Thrax Legal est-il un cabinet d'avocats ?",
+        a: "Non. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse.",
       },
       {
-        q: "Thrax Legal est-il un cabinet d'avocats ? Qui s'occupe de mon dossier ?",
-        a: "Non, ce n'est pas un cabinet d'avocats. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse plutôt que de répondre à l'aveugle.",
-      },
-      {
-        q: "Proposez-vous ce service dans toute la Suisse ?",
+        q: "Le service est-il disponible dans toute la Suisse ?",
         a: "Le service est pensé et positionné pour les indépendants et PME de Suisse romande, mais le site est disponible en français, allemand, anglais et italien.",
-      },
-      {
-        q: "Comment se déroule le suivi de mon dossier ?",
-        a: "Vous décrivez votre besoin via le formulaire dédié, je m'en occupe personnellement, et vous recevez le résultat (contrat rédigé, solution expliquée, procédure clarifiée) dans le délai de votre formule — avec, en prime, une trace écrite que vous pouvez ressortir en cas de litige ou de contrôle.",
       },
     ],
     stickyLabel: "Dès 149 CHF/mois",
@@ -202,27 +159,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   de: {
     metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Vertragserstellung, Streitfalllösung, DSG-Konformität. Bearbeitet innert 48-72h, fixer Monatspreis, ohne Vertragsbindung, kein Anwalt nach Stundensatz.",
-    heroTitle: "Ihr externer Rechtsberater, für Ihr KMU, zum Fixpreis.",
+      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 149/Monat, ohne Vertragsbindung.",
+    heroTitle: "Ihr externer Rechtsberater, zum Fixpreis.",
     heroSubtitle:
-      "Verträge erstellen, Streitfälle lösen, Verfahren erklären: ein externer Rechtsberater, der sich um Ihre rechtlichen Bedürfnisse kümmert. Fixer Monatspreis, kein Anwalt nach Stundensatz, kein Termin, ohne Vertragsbindung.",
+      "Verträge, Streitfälle, Verfahren: Ihr KMU wird betreut, ohne Anwalt nach Stundensatz und ohne Termin.",
     heroCtaLabel: "Formeln ansehen",
-    heroCtaSub: "Jederzeit kündbar · Fixpreis garantiert",
-    trustBar: [
-      "Verträge erstellen, Streitfälle lösen, Verfahren erklären: wir kümmern uns um Ihre rechtlichen Bedürfnisse.",
-      "Fixer Monatspreis: nie eine Stundenabrechnung oder Überraschung.",
-      "Ohne Vertragsbindung: jederzeit kündbar, keine versteckten Kosten.",
-    ],
+    heroProof: ["Bearbeitet innert 48 bis 72h", "Fixpreis, nie nach Stundensatz", "Ohne Vertragsbindung"],
     aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
-    aboutBody1:
-      "Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken. Ich behaupte nicht, alles auswendig zu kennen — genau deshalb wird jeder Fall richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert.",
-    aboutBody2:
-      "Das ist das Prinzip des fraktionierten Juristen: ein seriöser, erschwinglicher Zugang zum Recht für Ihr KMU, ohne die Kosten einer Kanzlei in Vollzeit. Bei streitigen Fällen oder Entscheidungen mit sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
-    pricingHeading: "Zwei Formeln, ein Grundsatz: weit mehr, als Sie bezahlen",
-    pricingSubheading:
-      "Wählen Sie das Volumen, das zu Ihrer Tätigkeit passt. Formel wechseln oder jederzeit kündigen.",
-    founderBadge:
-      "🎯 Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis auf Lebenszeit, auch wenn die Tarife später steigen.",
+    aboutBody:
+      "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere — nie eine Improvisation am Telefon. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
+    pricingHeading: "Zwei Formeln, weit mehr, als Sie bezahlen",
+    pricingSubheading: "Wählen Sie Ihr Volumen. Wechseln oder kündigen Sie jederzeit.",
+    founderBadge: "Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis auf Lebenszeit.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -231,14 +179,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ Monat",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
-          "Unbegrenzte Nachrichten für schnelle Fragen (angemessene Nutzung)",
+          "Unbegrenzte Nachrichten für schnelle Fragen",
           "2 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
           "Bearbeitet innert 72 Arbeitsstunden",
-          "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
-          "Preis lebenslang fixiert, solange Sie abonniert bleiben",
-          "Ohne Vertragsbindung, jederzeit kündbar",
+          "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 1'500",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 1'500",
         ctaLabel: "Essentiel wählen",
         highlight: false,
       },
@@ -250,56 +196,47 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Für KMU mit regelmässigem Bedarf",
         badge: "Am häufigsten gewählt",
         features: [
-          "Unbegrenzte Nachrichten für schnelle Fragen (angemessene Nutzung)",
+          "Unbegrenzte Nachrichten für schnelle Fragen",
           "5 vollständige Anliegen pro Monat",
           "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
-          "Prioritäre Vertragsprüfung jeden Monat inklusive",
-          "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
-          "Preis lebenslang fixiert, solange Sie abonniert bleiben",
-          "Ohne Vertragsbindung, jederzeit kündbar",
+          "Prioritäre Vertragsprüfung jeden Monat",
+          "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 4'000",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 4'000",
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
     ],
-    extraQuestionNote:
-      "Zusätzliches Anliegen über Ihr Kontingent hinaus: CHF 79, Fixpreis — nie nach Stundensatz.",
+    templateNote: "Vollständige Vorlagenbibliothek in beiden Formeln inklusive (Wert CHF 500).",
+    extraQuestionNote: "Zusätzliches Anliegen: CHF 79, Fixpreis.",
+    valueDisclaimer:
+      "Geschätzter Wert auf Basis üblicher Stundensätze von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton).",
     stepsHeading: "So funktioniert's",
     steps: [
-      { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung. Monatliche Zahlung, jederzeit kündbar." },
-      { title: "Ihr Anliegen schildern", description: "Vertrag zu erstellen, Streitfall zu lösen, Verfahren zu verstehen: schildern Sie Ihre Situation über das dafür vorgesehene Formular." },
-      { title: "Wir kümmern uns darum", description: "Vertrag erstellt, Lösung erklärt, Verfahren geklärt innert 48 bis 72h je nach Formel, mit den nötigen Dokumenten." },
+      { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung, jederzeit kündbar." },
+      { title: "Ihr Anliegen schildern", description: "Vertrag, Streitfall, Verfahren: schildern Sie Ihre Situation über das dafür vorgesehene Formular." },
+      { title: "Wir kümmern uns darum", description: "Vertrag erstellt, Lösung erklärt, mit einem schriftlichen Nachweis für Streitfälle oder Kontrollen." },
     ],
     domainsHeading: "Was das Abo abdeckt",
     domains: [
-      { title: "Handelsverträge & AGB", description: "Erstellung und Prüfung Ihrer Verträge und allgemeinen Geschäftsbedingungen." },
-      { title: "Arbeitsrecht", description: "Arbeitsverträge, Kündigungen, gängige HR-Fragen." },
-      { title: "Gesellschaftsrecht", description: "Fragen zu Struktur, Governance und gängigen Formalitäten." },
-      { title: "Gütliches Inkasso", description: "Mahnschreiben und Schritte vor einem Gerichtsverfahren." },
-      { title: "DSG-Konformität", description: "Konformität Ihrer Personendatenbearbeitung." },
-      { title: "Geschäftsmietverträge", description: "Prüfung und Fragen zu Ihren gewerblichen Mietverträgen." },
+      "Handelsverträge & AGB",
+      "Arbeitsrecht",
+      "Gesellschaftsrecht",
+      "Gütliches Inkasso",
+      "DSG-Konformität",
+      "Geschäftsmietverträge",
     ],
     guideLabel: "Mehr erfahren",
-    guideLinkLabel: "Zum ganzen Ratgeber ↗",
-    lawyerHeading: "Der Preis eines Anwalts, ohne Stundenabrechnung",
-    lawyerLabel: "Klassischer Anwalt",
-    lawyerRange: "CHF 200 bis 600 / Stunde",
-    lawyerNote: "Klassische Stundenabrechnung, für ein KMU auf Dauer oft schwer planbar.",
-    brandLabel: "Thrax Legal",
-    thraxPrice: "ab CHF 149 / Monat",
-    thraxNote: "Fixer, planbarer Preis, ohne Vertragsbindung, Bearbeitung Ihrer Anliegen inklusive.",
-    lawyerDisclaimer:
-      "Schätzung basierend auf üblichen Stundensätzen von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton). Thrax Legal ist keine Anwaltskanzlei und übernimmt keine Vertretung vor Gericht.",
+    guideLinkLabel: "Zum ganzen Ratgeber",
     faqHeading: "Häufige Fragen",
     faq: [
       {
-        q: "Was deckt das Abo genau ab?",
-        a: "Die Bearbeitung Ihrer gängigen rechtlichen Anliegen: Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer vollständigen Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
+        q: "Was deckt das Abo ab?",
+        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
       },
       {
-        q: "Was ist der Unterschied zwischen einer «schnellen Frage» und einem «Anliegen»?",
-        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren — genau dieses Volumen wird in Ihrem monatlichen Kontingent gezählt (2 bei Essentiel, 5 bei Croissance).",
+        q: "Was ist der Unterschied zwischen einer schnellen Frage und einem Anliegen?",
+        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren — genau dieses Volumen zählt in Ihrem monatlichen Kontingent (2 bei Essentiel, 5 bei Croissance).",
       },
       {
         q: "Kann ich jederzeit kündigen?",
@@ -310,20 +247,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
       },
       {
-        q: "Innert welcher Frist wird mein Anliegen bearbeitet?",
-        a: "72 Arbeitsstunden bei der Formel Essentiel, 48 Arbeitsstunden bei Croissance. Jeder Fall wird persönlich anhand Ihrer Situation bearbeitet, kein blosser Verweis auf einen generischen Artikel.",
-      },
-      {
-        q: "Ist Thrax Legal eine Anwaltskanzlei? Wer kümmert sich um meinen Fall?",
-        a: "Nein, keine Anwaltskanzlei. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
+        q: "Ist Thrax Legal eine Anwaltskanzlei?",
+        a: "Nein. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt.",
       },
       {
         q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
-        a: "Der Dienst ist für Selbstständige und KMU in der Westschweiz konzipiert und positioniert, die Website ist aber auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
-      },
-      {
-        q: "Wie läuft die Bearbeitung meines Falls ab?",
-        a: "Sie schildern Ihr Anliegen über das dafür vorgesehene Formular, ich kümmere mich persönlich darum, und Sie erhalten das Ergebnis (erstellter Vertrag, erklärte Lösung, geklärtes Verfahren) innerhalb der Frist Ihrer Formel — inklusive eines schriftlichen Nachweises, den Sie bei einem Streitfall oder einer Kontrolle vorlegen können.",
+        a: "Der Dienst ist für Selbstständige und KMU in der Westschweiz konzipiert, die Website ist aber auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
     ],
     stickyLabel: "Ab CHF 149/Monat",
@@ -332,27 +261,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   en: {
     metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contract drafting, dispute resolution, FADP compliance. Handled within 48-72h, fixed monthly price, no commitment, no hourly lawyer.",
-    heroTitle: "Your outsourced legal counsel, for your SME, at a fixed price.",
+      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. Fixed price from CHF 149/month, no commitment.",
+    heroTitle: "Your outsourced legal counsel, at a fixed price.",
     heroSubtitle:
-      "Drafting contracts, resolving disputes, explaining procedures: an outsourced legal counsel who handles your legal needs. Fixed monthly price, no hourly lawyer, no appointment, no commitment.",
+      "Contracts, disputes, procedures: your SME is handled, no hourly lawyer, no appointment.",
     heroCtaLabel: "See the plans",
-    heroCtaSub: "Cancel anytime · Fixed price guaranteed",
-    trustBar: [
-      "Drafting contracts, resolving disputes, explaining procedures: we handle your legal needs.",
-      "Fixed monthly price: never an hourly bill or a surprise.",
-      "No commitment: cancel anytime, no hidden fees.",
-    ],
+    heroProof: ["Handled within 48 to 72h", "Fixed price, never hourly", "No commitment"],
     aboutHeading: "A fractional jurist, not a law firm",
-    aboutBody1:
-      "I'm a law student, with several years of law firm experience in legal research and drafting. I don't claim to know everything by heart — that's exactly why every case gets real research before I handle it, never live improvisation on a call.",
-    aboutBody2:
-      "That's the fractional-jurist model: serious, affordable access to legal support for your SME, without the cost of a full-time firm. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
-    pricingHeading: "Two plans, one principle: far more than you pay for",
-    pricingSubheading:
-      "Choose the volume that fits your business. Switch plans or cancel anytime.",
-    founderBadge:
-      "🎯 Launch offer: the first 20 subscribers keep this price for life, even after rates go up.",
+    aboutBody:
+      "A law student with several years of law firm experience, I research every case before handling it — never live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
+    pricingHeading: "Two plans, far more than you pay for",
+    pricingSubheading: "Choose your volume. Switch or cancel anytime.",
+    founderBadge: "Launch offer: the first 20 subscribers keep this price for life.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -361,14 +281,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ month",
         tagline: "For freelancers and micro-businesses",
         features: [
-          "Unlimited messaging for quick questions (fair use)",
+          "Unlimited messaging for quick questions",
           "2 full matters handled per month (contract, dispute, procedure)",
           "Handled within 72 business hours",
-          "Full template library — CHF 500 value, included",
-          "Price locked for life as long as you stay subscribed",
-          "No commitment, cancel anytime",
+          "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 1,500",
+        valueNote: "Estimated value from a lawyer: over CHF 1,500",
         ctaLabel: "Choose Essential",
         highlight: false,
       },
@@ -380,55 +298,46 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "For SMEs with regular needs",
         badge: "Most chosen",
         features: [
-          "Unlimited messaging for quick questions (fair use)",
+          "Unlimited messaging for quick questions",
           "5 full matters handled per month",
           "Handled within 48 business hours (24h for flagged urgent cases)",
-          "Priority contract review included every month",
-          "Full template library — CHF 500 value, included",
-          "Price locked for life as long as you stay subscribed",
-          "No commitment, cancel anytime",
+          "Priority contract review every month",
+          "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 4,000",
+        valueNote: "Estimated value from a lawyer: over CHF 4,000",
         ctaLabel: "Choose Growth",
         highlight: true,
       },
     ],
-    extraQuestionNote:
-      "Extra matter beyond your plan: CHF 79, fixed price — never hourly.",
+    templateNote: "Full template library included on both plans (CHF 500 value).",
+    extraQuestionNote: "Extra matter: CHF 79, fixed price.",
+    valueDisclaimer:
+      "Estimated value based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton).",
     stepsHeading: "How it works",
     steps: [
-      { title: "Choose your plan", description: "Essential or Growth, no commitment. Monthly payment, cancel anytime." },
-      { title: "Describe your need", description: "A contract to draft, a dispute to resolve, a procedure to understand: describe your situation via the dedicated form." },
-      { title: "We handle it", description: "Contract drafted, solution explained, procedure clarified within 48 to 72h depending on your plan, with the necessary documents." },
+      { title: "Choose your plan", description: "Essential or Growth, no commitment, cancel anytime." },
+      { title: "Describe your need", description: "A contract, a dispute, a procedure: describe your situation via the dedicated form." },
+      { title: "We handle it", description: "Contract drafted, solution explained, with a written record for disputes or audits." },
     ],
     domainsHeading: "What the subscription covers",
     domains: [
-      { title: "Commercial contracts & T&Cs", description: "Drafting and review of your contracts and terms and conditions." },
-      { title: "Employment law", description: "Employment contracts, terminations, common HR questions." },
-      { title: "Corporate law", description: "Structure, governance and common formalities questions." },
-      { title: "Amicable debt collection", description: "Formal notices and steps before legal proceedings." },
-      { title: "FADP compliance", description: "Bringing your personal data processing into compliance." },
-      { title: "Commercial leases", description: "Review and questions about your business lease agreements." },
+      "Commercial contracts & T&Cs",
+      "Employment law",
+      "Corporate law",
+      "Amicable debt collection",
+      "FADP compliance",
+      "Commercial leases",
     ],
     guideLabel: "Go further",
-    guideLinkLabel: "See the full guide ↗",
-    lawyerHeading: "The price of a lawyer, without the hourly bill",
-    lawyerLabel: "Traditional lawyer",
-    lawyerRange: "CHF 200 to 600 / hour",
-    lawyerNote: "Classic hourly billing, often hard to predict over time for an SME.",
-    brandLabel: "Thrax Legal",
-    thraxPrice: "from CHF 149 / month",
-    thraxNote: "Fixed, predictable price, no commitment, your needs handled end to end.",
-    lawyerDisclaimer:
-      "Estimate based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton). Thrax Legal is not a law firm and does not represent clients before courts.",
+    guideLinkLabel: "See the full guide",
     faqHeading: "Frequently asked questions",
     faq: [
       {
-        q: "What exactly does the subscription cover?",
-        a: "Handling your common legal needs: drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a full template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
+        q: "What does the subscription cover?",
+        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we refer you to a specialised lawyer.",
       },
       {
-        q: "What's the difference between a \"quick question\" and a \"matter\"?",
+        q: "What's the difference between a quick question and a matter?",
         a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure — that's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
       },
       {
@@ -436,53 +345,36 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
       },
       {
-        q: "What happens if I have more matters than my plan allows?",
+        q: "What if I have more matters than my plan allows?",
         a: "Each extra matter is billed at CHF 79, fixed price — never hourly. You can also switch plans at any time.",
       },
       {
-        q: "How long until my matter is handled?",
-        a: "72 business hours on the Essential plan, 48 business hours on Growth. Every case is handled personally based on your situation, not a generic article link.",
-      },
-      {
-        q: "Is Thrax Legal a law firm? Who handles my case?",
-        a: "No, it's not a law firm. I'm a law student, with several years of law firm experience in legal research and drafting — that's the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
+        q: "Is Thrax Legal a law firm?",
+        a: "No. I'm a law student, with several years of law firm experience in legal research and drafting — the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar.",
       },
       {
         q: "Do you offer this service across all of Switzerland?",
-        a: "The service is designed and positioned for freelancers and SMEs in French-speaking Switzerland, but the site is available in French, German, English and Italian.",
-      },
-      {
-        q: "How is my case actually handled?",
-        a: "You describe your need via the dedicated form, I handle it personally, and you receive the result (a drafted contract, an explained solution, a clarified procedure) within your plan's timeframe — plus a written record you can produce in case of a dispute or an audit.",
+        a: "The service is designed for freelancers and SMEs in French-speaking Switzerland, but the site is available in French, German, English and Italian.",
       },
     ],
     stickyLabel: "From CHF 149/month",
     stickyCta: "See the plans",
   },
   it: {
-    metaTitle: "Abbonamento legale per PME nella Svizzera romanda | Thrax Legal",
+    metaTitle: "Abbonamento legale per PMI nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: redazione di contratti, risoluzione di controversie, conformità nLPD. Gestito entro 48-72h, prezzo fisso mensile, senza impegno.",
-    heroTitle: "Il vostro giurista esternalizzato, per la vostra PMI, a prezzo fisso.",
+      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 149/mese, senza impegno.",
+    heroTitle: "Il vostro giurista esternalizzato, a prezzo fisso.",
     heroSubtitle:
-      "Redazione di contratti, risoluzione di controversie, spiegazione delle procedure: un giurista esternalizzato che si occupa delle vostre esigenze legali. Prezzo fisso mensile, niente avvocato a ore, niente appuntamento, senza impegno.",
+      "Contratti, controversie, procedure: la vostra PMI è seguita, senza avvocato a ore né appuntamento.",
     heroCtaLabel: "Vedere le formule",
-    heroCtaSub: "Disdicibile in qualsiasi momento · Prezzo fisso garantito",
-    trustBar: [
-      "Redazione di contratti, risoluzione di controversie, spiegazione delle procedure: ci occupiamo delle vostre esigenze legali.",
-      "Prezzo fisso mensile: mai una fatturazione oraria o una sorpresa.",
-      "Senza impegno: disdite in qualsiasi momento, nessun costo nascosto.",
-    ],
+    heroProof: ["Gestito entro 48-72h", "Prezzo fisso, mai a ore", "Senza impegno"],
     aboutHeading: "Un giurista frazionato, non uno studio legale",
-    aboutBody1:
-      "Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione. Non pretendo di sapere tutto a memoria — è esattamente per questo che ogni caso è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo al telefono.",
-    aboutBody2:
-      "È il principio del giurista frazionato: un accesso serio e accessibile al diritto per la vostra PMI, senza i costi di uno studio a tempo pieno. Per i casi contenziosi o le decisioni ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
-    pricingHeading: "Due formule, un solo principio: molto più di quanto pagate",
-    pricingSubheading:
-      "Scegliete il volume adatto alla vostra attività. Cambiate formula o disdite in qualsiasi momento.",
-    founderBadge:
-      "🎯 Offerta di lancio: i primi 20 abbonati mantengono questo prezzo a vita, anche quando le tariffe aumenteranno.",
+    aboutBody:
+      "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene — mai un'improvvisazione dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
+    pricingHeading: "Due formule, molto più di quanto pagate",
+    pricingSubheading: "Scegliete il vostro volume. Cambiate o disdite in qualsiasi momento.",
+    founderBadge: "Offerta di lancio: i primi 20 abbonati mantengono questo prezzo a vita.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -491,14 +383,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mese",
         tagline: "Per indipendenti e micro-imprese",
         features: [
-          "Messaggistica illimitata per le vostre domande rapide (uso ragionevole)",
-          "2 pratiche complete gestite al mese (contratto, controversia, procedura)",
+          "Messaggistica illimitata per le domande rapide",
+          "2 pratiche complete al mese (contratto, controversia, procedura)",
           "Gestite entro 72 ore lavorative",
-          "Libreria completa di modelli — valore CHF 500, inclusa",
-          "Prezzo bloccato a vita finché restate abbonati",
-          "Senza impegno, disdicibile in qualsiasi momento",
+          "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 1'500",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 1'500",
         ctaLabel: "Scegliere Essentiel",
         highlight: false,
       },
@@ -510,80 +400,63 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Per PMI con esigenze regolari",
         badge: "Il più scelto",
         features: [
-          "Messaggistica illimitata per le vostre domande rapide (uso ragionevole)",
-          "5 pratiche complete gestite al mese",
+          "Messaggistica illimitata per le domande rapide",
+          "5 pratiche complete al mese",
           "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
-          "Revisione contrattuale prioritaria inclusa ogni mese",
-          "Libreria completa di modelli — valore CHF 500, inclusa",
-          "Prezzo bloccato a vita finché restate abbonati",
-          "Senza impegno, disdicibile in qualsiasi momento",
+          "Revisione contrattuale prioritaria ogni mese",
+          "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 4'000",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 4'000",
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
     ],
-    extraQuestionNote:
-      "Pratica supplementare oltre il vostro pacchetto: CHF 79, prezzo fisso — mai a ore.",
+    templateNote: "Libreria completa di modelli inclusa in entrambe le formule (valore CHF 500).",
+    extraQuestionNote: "Pratica supplementare: CHF 79, prezzo fisso.",
+    valueDisclaimer:
+      "Valore stimato sulla base delle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone).",
     stepsHeading: "Come funziona",
     steps: [
-      { title: "Scegliete la vostra formula", description: "Essentiel o Croissance, senza impegno. Pagamento mensile, disdicibile in qualsiasi momento." },
-      { title: "Descrivete la vostra esigenza", description: "Un contratto da redigere, una controversia da risolvere, una procedura da capire: descrivete la vostra situazione tramite il modulo dedicato." },
-      { title: "Ce ne occupiamo noi", description: "Contratto redatto, soluzione spiegata, procedura chiarita entro 48-72h a seconda della formula, con i documenti necessari." },
+      { title: "Scegliete la formula", description: "Essentiel o Croissance, senza impegno, disdicibile in qualsiasi momento." },
+      { title: "Descrivete l'esigenza", description: "Contratto, controversia, procedura: descrivete la vostra situazione tramite il modulo dedicato." },
+      { title: "Ce ne occupiamo noi", description: "Contratto redatto, soluzione spiegata, con una prova scritta in caso di controversia o controllo." },
     ],
     domainsHeading: "Cosa copre l'abbonamento",
     domains: [
-      { title: "Contratti commerciali e condizioni generali", description: "Redazione e revisione dei vostri contratti e condizioni generali." },
-      { title: "Diritto del lavoro", description: "Contratti di lavoro, licenziamenti, domande HR comuni." },
-      { title: "Diritto societario", description: "Domande su struttura, governance e formalità comuni." },
-      { title: "Recupero crediti amichevole", description: "Diffide e passi prima di un procedimento giudiziario." },
-      { title: "Conformità nLPD", description: "Messa in conformità dei vostri trattamenti di dati personali." },
-      { title: "Locazioni commerciali", description: "Revisione e domande sui vostri contratti di locazione professionale." },
+      "Contratti commerciali e condizioni generali",
+      "Diritto del lavoro",
+      "Diritto societario",
+      "Recupero crediti amichevole",
+      "Conformità nLPD",
+      "Locazioni commerciali",
     ],
     guideLabel: "Per saperne di più",
-    guideLinkLabel: "Vedi tutta la guida ↗",
-    lawyerHeading: "Il prezzo di un avvocato, senza fatturazione oraria",
-    lawyerLabel: "Avvocato tradizionale",
-    lawyerRange: "CHF 200-600 / ora",
-    lawyerNote: "Fatturazione oraria classica, spesso difficile da prevedere nel tempo per una PMI.",
-    brandLabel: "Thrax Legal",
-    thraxPrice: "da CHF 149 / mese",
-    thraxNote: "Prezzo fisso e prevedibile, senza impegno, gestione delle vostre esigenze inclusa.",
-    lawyerDisclaimer:
-      "Stima basata sulle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone). Thrax Legal non è uno studio legale e non garantisce la rappresentanza davanti ai tribunali.",
+    guideLinkLabel: "Vedi tutta la guida",
     faqHeading: "Domande frequenti",
     faq: [
       {
-        q: "Cosa copre esattamente l'abbonamento?",
-        a: "La gestione delle vostre esigenze legali comuni: redazione e revisione di contratti, risoluzione di controversie, spiegazione delle vostre procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), una messaggistica illimitata per le vostre domande rapide, e l'accesso a una libreria completa di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
+        q: "Cosa copre l'abbonamento?",
+        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), messaggistica illimitata per le domande rapide e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo verso un avvocato specializzato.",
       },
       {
-        q: "Qual è la differenza tra una «domanda rapida» e una «pratica»?",
-        a: "Una domanda rapida è un chiarimento puntuale, a cui si risponde senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura — è questo volume ad essere conteggiato nel vostro pacchetto mensile (2 per Essentiel, 5 per Croissance).",
+        q: "Domanda rapida o pratica: che differenza c'è?",
+        a: "Una domanda rapida è un chiarimento puntuale, senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura — è questo volume ad essere conteggiato nel pacchetto mensile (2 per Essentiel, 5 per Croissance).",
       },
       {
         q: "Posso disdire in qualsiasi momento?",
         a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
       },
       {
-        q: "Cosa succede se ho più pratiche di quelle previste dal mio pacchetto?",
+        q: "Cosa succede se ho più pratiche del mio pacchetto?",
         a: "Ogni pratica supplementare è fatturata CHF 79, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
-        q: "Entro quanto tempo viene gestita la mia pratica?",
-        a: "72 ore lavorative per la formula Essentiel, 48 ore lavorative per Croissance. Ogni pratica è gestita personalmente a partire dalla vostra situazione, non un semplice rimando a un articolo generico.",
-      },
-      {
-        q: "Thrax Legal è uno studio legale? Chi si occupa della mia pratica?",
-        a: "No, non è uno studio legale. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
+        q: "Thrax Legal è uno studio legale?",
+        a: "No. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero.",
       },
       {
         q: "Offrite questo servizio in tutta la Svizzera?",
-        a: "Il servizio è pensato e posizionato per indipendenti e PMI della Svizzera romanda, ma il sito è disponibile in francese, tedesco, inglese e italiano.",
-      },
-      {
-        q: "Come viene gestita concretamente la mia pratica?",
-        a: "Descrivete la vostra esigenza tramite il modulo dedicato, me ne occupo personalmente, e ricevete il risultato (contratto redatto, soluzione spiegata, procedura chiarita) entro il termine della vostra formula — con in più una prova scritta che potete esibire in caso di controversia o di controllo.",
+        a: "Il servizio è pensato per indipendenti e PMI della Svizzera romanda, ma il sito è disponibile in francese, tedesco, inglese e italiano.",
       },
     ],
     stickyLabel: "Da CHF 149/mese",
@@ -594,8 +467,10 @@ const CONTENT: Record<Locale, HomeContent> = {
 function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
   return (
     <div
-      className={`relative flex flex-col rounded-2xl border p-6 md:p-8 ${
-        tier.highlight ? "border-accent bg-surface" : "border-border bg-surface"
+      className={`relative flex flex-col rounded-2xl border p-6 transition-shadow duration-300 md:p-8 ${
+        tier.highlight
+          ? "border-accent bg-surface shadow-[0_24px_60px_-32px_rgba(0,0,0,0.35)]"
+          : "border-border bg-surface"
       }`}
     >
       {tier.badge ? (
@@ -626,6 +501,20 @@ function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
         {tier.ctaLabel}
       </PrimaryButton>
     </div>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5">
+      <path
+        d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -723,15 +612,22 @@ export default async function Home({
                   <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
                     {t.heroCtaLabel}
                   </PrimaryButton>
-                  <p className="text-sm text-text-muted">{t.heroCtaSub}</p>
+                </div>
+                <div className="mx-auto mt-8 flex max-w-md flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-xs text-text-muted">
+                  {t.heroProof.map((item, index) => (
+                    <span key={item} className="flex items-center gap-2">
+                      {index > 0 ? (
+                        <span aria-hidden className="text-text-muted/40">
+                          &middot;
+                        </span>
+                      ) : null}
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </Reveal>
             </Container>
           </section>
-
-          <div className="theme-light bg-bg">
-            <TrustBar items={t.trustBar} />
-          </div>
 
           <section className="theme-light border-y border-border bg-surface py-16 md:py-20">
             <Container className="mx-auto max-w-2xl">
@@ -739,13 +635,12 @@ export default async function Home({
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                   {t.aboutHeading}
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-text-muted">{t.aboutBody1}</p>
-                <p className="mt-4 text-base leading-relaxed text-text-muted">{t.aboutBody2}</p>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{t.aboutBody}</p>
               </Reveal>
             </Container>
           </section>
 
-          <section id="offre" className="theme-light bg-bg py-16 md:py-24">
+          <section id="offre" className="theme-light scroll-mt-28 bg-bg py-16 md:py-24">
             <Container className="mx-auto max-w-4xl">
               <Reveal>
                 <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
@@ -762,7 +657,12 @@ export default async function Home({
                     <TierCard key={tier.slug} tier={tier} locale={locale} />
                   ))}
                 </div>
-                <p className="mt-6 text-center text-sm text-text-muted">{t.extraQuestionNote}</p>
+                <div className="mx-auto mt-6 max-w-lg text-center">
+                  <p className="text-sm text-text-muted">
+                    {t.templateNote} {t.extraQuestionNote}
+                  </p>
+                  <p className="mt-2 text-xs text-text-muted/70">{t.valueDisclaimer}</p>
+                </div>
               </Reveal>
             </Container>
           </section>
@@ -784,12 +684,14 @@ export default async function Home({
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                   {t.domainsHeading}
                 </h2>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {t.domains.map((item) => (
-                    <div key={item.title} className="rounded-2xl border border-border bg-surface p-6">
-                      <h3 className="text-base font-semibold text-text">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-text-muted">{item.description}</p>
-                    </div>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {t.domains.map((domain) => (
+                    <span
+                      key={domain}
+                      className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-text-muted"
+                    >
+                      {domain}
+                    </span>
                   ))}
                 </div>
               </Reveal>
@@ -799,22 +701,20 @@ export default async function Home({
           <section className="theme-light border-t border-border bg-bg py-16 md:py-20">
             <Container className="mx-auto max-w-2xl">
               <Reveal>
-                <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                   {t.guideLabel}
-                </p>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                </h2>
+                <div className="mt-6 divide-y divide-border border-t border-border">
                   {GUIDE_ARTICLES.slice(0, 4).map((item) => (
                     <Link
                       key={item.slug}
                       href={`/${locale}/guide/${item.slug}`}
-                      className="group rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-white/20"
+                      className="group flex items-center justify-between gap-6 py-4 text-sm font-medium text-text transition-colors hover:text-text-muted"
                     >
-                      <p className="text-sm font-semibold leading-snug text-text">
-                        {item.shortTitle[locale]}
-                      </p>
-                      <p className="mt-2 text-xs leading-relaxed text-text-muted">
-                        {item.description[locale]}
-                      </p>
+                      {item.shortTitle[locale]}
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-text-muted transition-colors duration-200 group-hover:border-white/25 group-hover:bg-surface">
+                        <ArrowIcon />
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -822,38 +722,13 @@ export default async function Home({
                   href={`/${locale}/guide`}
                   className="mt-6 inline-block text-sm font-medium text-text underline decoration-dotted underline-offset-4 hover:text-text-muted"
                 >
-                  {t.guideLinkLabel}
+                  {t.guideLinkLabel} ↗
                 </Link>
               </Reveal>
             </Container>
           </section>
 
-          <section className="theme-light bg-surface py-16 md:py-24">
-            <Container className="mx-auto max-w-2xl">
-              <Reveal>
-                <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.lawyerHeading}
-                </h2>
-                <LawyerComparison
-                  className="mt-8"
-                  lawyerLabel={t.lawyerLabel}
-                  lawyerRange={t.lawyerRange}
-                  lawyerNote={t.lawyerNote}
-                  brandLabel={t.brandLabel}
-                  thraxPrice={t.thraxPrice}
-                  thraxNote={t.thraxNote}
-                  disclaimer={t.lawyerDisclaimer}
-                />
-                <div className="mt-10 flex justify-center">
-                  <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
-                    {t.heroCtaLabel}
-                  </PrimaryButton>
-                </div>
-              </Reveal>
-            </Container>
-          </section>
-
-          <section id="contact" className="theme-light bg-bg py-16 md:py-24">
+          <section id="contact" className="theme-light scroll-mt-28 bg-surface py-16 md:py-24">
             <Container className="mx-auto max-w-2xl">
               <Reveal>
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
