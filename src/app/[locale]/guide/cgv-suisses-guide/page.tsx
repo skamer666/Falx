@@ -84,7 +84,7 @@ function Fr({ locale }: { locale: Locale }) {
       <p>
         Ce guide présente des principes généraux, pas un conseil juridique
         personnalisé. Des CGV efficaces doivent refléter votre activité
-        précise &mdash; c&rsquo;est exactement ce que couvre l&rsquo;abonnement
+        précise : c&rsquo;est exactement ce que couvre l&rsquo;abonnement
         Thrax Legal.
       </p>
 
@@ -160,7 +160,7 @@ function De({ locale }: { locale: Locale }) {
       <p>
         Dieser Ratgeber stellt allgemeine Grundsätze dar, keine individuelle
         Rechtsberatung. Wirksame AGB müssen Ihre konkrete Tätigkeit
-        widerspiegeln &mdash; genau das deckt das Thrax-Legal-Abo ab.
+        widerspiegeln: genau das deckt das Thrax-Legal-Abo ab.
       </p>
 
       <p>
@@ -230,8 +230,8 @@ function En({ locale }: { locale: Locale }) {
       <h2>An important note</h2>
       <p>
         This guide presents general principles, not individualized legal
-        advice. Effective T&amp;Cs must reflect your specific business
-        &mdash; which is exactly what the Thrax Legal subscription covers.
+        advice. Effective T&amp;Cs must reflect your specific business.
+        That is exactly what the Thrax Legal subscription covers.
       </p>
 
       <p>
@@ -305,7 +305,7 @@ function It({ locale }: { locale: Locale }) {
       <p>
         Questa guida presenta principi generali, non una consulenza legale
         personalizzata. Delle condizioni generali efficaci devono
-        riflettere la vostra attività precisa &mdash; è esattamente ciò che
+        riflettere la vostra attività precisa: è esattamente ciò che
         copre l&rsquo;abbonamento Thrax Legal.
       </p>
 

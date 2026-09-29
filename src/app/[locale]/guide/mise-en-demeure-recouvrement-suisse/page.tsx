@@ -46,7 +46,7 @@ function Fr({ locale }: { locale: Locale }) {
       <p>
         Une réquisition de poursuite auprès de l&rsquo;office des
         poursuites ne nécessite pas d&rsquo;avoir gagné un procès au
-        préalable &mdash; c&rsquo;est souvent l&rsquo;étape suivante après
+        préalable. C&rsquo;est souvent l&rsquo;étape suivante après
         une mise en demeure restée sans effet, et son coût est
         généralement mis à la charge du débiteur si la créance est fondée.
       </p>
@@ -92,7 +92,7 @@ function De({ locale }: { locale: Locale }) {
       <h2>Wann zur Betreibung übergehen</h2>
       <p>
         Ein Betreibungsbegehren beim Betreibungsamt setzt keinen
-        vorgängigen Gerichtsprozess voraus &mdash; es ist oft der nächste
+        vorgängigen Gerichtsprozess voraus. Es ist oft der nächste
         Schritt nach einer wirkungslos gebliebenen Mahnung, und die Kosten
         gehen in der Regel zulasten der schuldnerischen Partei, sofern die
         Forderung begründet ist.
@@ -138,7 +138,7 @@ function En({ locale }: { locale: Locale }) {
       <h2>When to move to formal debt collection</h2>
       <p>
         A debt collection request to the collection office doesn&rsquo;t
-        require having won a lawsuit beforehand &mdash; it&rsquo;s often
+        require having won a lawsuit beforehand. It&rsquo;s often
         the next step after a formal notice that had no effect, and its
         cost is generally charged to the debtor if the claim is well
         founded.
@@ -184,7 +184,7 @@ function It({ locale }: { locale: Locale }) {
       <h2>Quando passare all&rsquo;esecuzione</h2>
       <p>
         Una domanda di esecuzione presso l&rsquo;ufficio esecuzioni non
-        richiede di aver prima vinto una causa &mdash; è spesso la tappa
+        richiede di aver prima vinto una causa. È spesso la tappa
         successiva dopo una diffida rimasta senza effetto, e il suo costo
         è generalmente a carico del debitore se il credito è fondato.
       </p>

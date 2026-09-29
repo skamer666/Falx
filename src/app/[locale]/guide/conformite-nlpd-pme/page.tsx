@@ -31,7 +31,7 @@ function Fr({ locale }: { locale: Locale }) {
         site (dès que vous collectez des données, même juste un formulaire
         de contact), et un <strong>registre des activités de
         traitement</strong> décrivant quelles données vous traitez et
-        pourquoi &mdash; une petite entreprise en est dispensée seulement
+        pourquoi. Une petite entreprise en est dispensée seulement
         si le traitement présente un risque faible pour les personnes
         concernées, ce qui reste rarement le cas dès qu&rsquo;il y a des
         données RH ou des clients.
@@ -81,7 +81,7 @@ function De({ locale }: { locale: Locale }) {
         veröffentlichte <strong>Datenschutzerklärung</strong> (sobald Sie
         Daten erheben, auch nur über ein Kontaktformular), und ein{" "}
         <strong>Verzeichnis der Bearbeitungstätigkeiten</strong>, das
-        beschreibt, welche Daten Sie bearbeiten und warum &mdash; ein
+        beschreibt, welche Daten Sie bearbeiten und warum. Ein
         Kleinunternehmen ist davon nur befreit, wenn die Bearbeitung ein
         geringes Risiko für die betroffenen Personen darstellt, was bei
         Personal- oder Kundendaten selten zutrifft.
@@ -130,7 +130,7 @@ function En({ locale }: { locale: Locale }) {
         <strong>privacy policy</strong> published on your site (as soon as
         you collect data, even just via a contact form), and a{" "}
         <strong>record of processing activities</strong> describing what
-        data you process and why &mdash; a small business is only exempt if
+        data you process and why. A small business is only exempt if
         the processing presents a low risk to the people concerned, which
         rarely holds once HR or customer data is involved.
       </p>
@@ -176,8 +176,8 @@ function It({ locale }: { locale: Locale }) {
         <strong>informativa sulla privacy</strong> pubblicata sul vostro
         sito (non appena raccogliete dati, anche solo tramite un modulo di
         contatto), e un <strong>registro delle attività di
-        trattamento</strong> che descrive quali dati trattate e perché
-        &mdash; una piccola impresa ne è dispensata solo se il trattamento
+        trattamento</strong> che descrive quali dati trattate e perché.
+        Una piccola impresa ne è dispensata solo se il trattamento
         presenta un rischio basso per le persone interessate, cosa che
         raramente vale non appena ci sono dati HR o dei clienti.
       </p>

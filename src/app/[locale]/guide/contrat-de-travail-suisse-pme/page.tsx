@@ -30,7 +30,7 @@ function Fr({ locale }: { locale: Locale }) {
         d&rsquo;un mois, avec un délai de congé de 7 jours. Beaucoup de PME
         pensent bénéficier d&rsquo;une période de 3 mois &laquo;&nbsp;comme
         tout le monde&nbsp;&raquo; alors que ce n&rsquo;est vrai que si le
-        contrat le prévoit expressément &mdash; jusqu&rsquo;à 3 mois maximum.
+        contrat le prévoit expressément, jusqu&rsquo;à 3 mois maximum.
       </p>
 
       <h2>Délais de congé : ce qui est négociable, ce qui ne l&rsquo;est pas</h2>
@@ -38,8 +38,8 @@ function Fr({ locale }: { locale: Locale }) {
         Le Code des obligations fixe des délais minimaux selon
         l&rsquo;ancienneté (généralement 1 mois la première année, 2 mois
         de la 2e à la 9e année, 3 mois ensuite). Un contrat peut prévoir des
-        délais plus longs, mais pas plus courts que ce minimum légal &mdash;
-        une clause qui tenterait de le faire serait simplement nulle.
+        délais plus longs, mais pas plus courts que ce minimum légal.
+        Une clause qui tenterait de le faire serait simplement nulle.
       </p>
 
       <h2>Clause de non-concurrence : des conditions strictes</h2>
@@ -58,8 +58,8 @@ function Fr({ locale }: { locale: Locale }) {
         Un contrat qui ne précise pas le régime des heures supplémentaires
         (compensation en temps ou paiement, majoration éventuelle) ou qui
         reste vague sur le report des jours de vacances non pris génère la
-        majorité des litiges à la fin d&rsquo;un rapport de travail &mdash;
-        des clauses claires évitent la plupart de ces désaccords.
+        majorité des litiges à la fin d&rsquo;un rapport de travail.
+        Des clauses claires évitent la plupart de ces désaccords.
       </p>
 
       <h2>Une précision importante</h2>
@@ -87,7 +87,7 @@ function De({ locale }: { locale: Locale }) {
         Monat, mit einer Kündigungsfrist von 7 Tagen. Viele KMU glauben, sie
         hätten &laquo;&nbsp;wie üblich&nbsp;&raquo; eine 3-monatige
         Probezeit, obwohl das nur gilt, wenn der Vertrag dies ausdrücklich
-        vorsieht &mdash; bis maximal 3 Monate.
+        vorsieht, bis maximal 3 Monate.
       </p>
 
       <h2>Kündigungsfristen: was verhandelbar ist, was nicht</h2>
@@ -95,8 +95,8 @@ function De({ locale }: { locale: Locale }) {
         Das Obligationenrecht legt Mindestfristen je nach Dienstjahren fest
         (in der Regel 1 Monat im ersten Jahr, 2 Monate vom 2. bis zum 9.
         Jahr, danach 3 Monate). Ein Vertrag kann längere, aber keine
-        kürzeren Fristen vorsehen als dieses gesetzliche Minimum &mdash;
-        eine Klausel, die das versuchen würde, wäre schlicht nichtig.
+        kürzeren Fristen vorsehen als dieses gesetzliche Minimum.
+        Eine Klausel, die das versuchen würde, wäre schlicht nichtig.
       </p>
 
       <h2>Konkurrenzverbot: strenge Voraussetzungen</h2>
@@ -115,7 +115,7 @@ function De({ locale }: { locale: Locale }) {
         Ein Vertrag, der die Regelung von Überstunden (Zeitausgleich oder
         Auszahlung, allfälliger Zuschlag) nicht präzisiert oder beim
         Übertrag nicht bezogener Ferientage vage bleibt, erzeugt die meisten
-        Streitigkeiten am Ende eines Arbeitsverhältnisses &mdash; klare
+        Streitigkeiten am Ende eines Arbeitsverhältnisses. Klare
         Klauseln vermeiden die meisten dieser Meinungsverschiedenheiten.
       </p>
 
@@ -142,7 +142,7 @@ function En({ locale }: { locale: Locale }) {
         Without an explicit clause, the default statutory probation period
         is one month, with a 7-day notice period. Many SMEs assume they get
         a 3-month period &ldquo;like everyone else&rdquo;, when that&rsquo;s
-        only true if the contract expressly provides for it &mdash; up to 3
+        only true if the contract expressly provides for it, up to 3
         months maximum.
       </p>
 
@@ -151,7 +151,7 @@ function En({ locale }: { locale: Locale }) {
         The Code of Obligations sets minimum periods based on seniority
         (generally 1 month in the first year, 2 months from year 2 to 9, 3
         months after that). A contract can provide for longer periods, but
-        never shorter than this legal minimum &mdash; a clause attempting
+        never shorter than this legal minimum. A clause attempting
         to do so would simply be void.
       </p>
 
@@ -170,7 +170,7 @@ function En({ locale }: { locale: Locale }) {
         A contract that doesn&rsquo;t specify the overtime regime (time off
         or payment, any premium) or stays vague on carrying over unused
         vacation days generates most disputes at the end of an employment
-        relationship &mdash; clear clauses prevent most of these
+        relationship. Clear clauses prevent most of these
         disagreements.
       </p>
 
@@ -198,7 +198,7 @@ function It({ locale }: { locale: Locale }) {
         è di un mese, con un termine di disdetta di 7 giorni. Molte PMI
         pensano di beneficiare di un periodo di 3 mesi &laquo;&nbsp;come
         tutti&nbsp;&raquo;, mentre ciò è vero solo se il contratto lo prevede
-        espressamente &mdash; fino a un massimo di 3 mesi.
+        espressamente, fino a un massimo di 3 mesi.
       </p>
 
       <h2>Termini di disdetta: cosa è negoziabile, cosa no</h2>
@@ -206,8 +206,8 @@ function It({ locale }: { locale: Locale }) {
         Il Codice delle obbligazioni fissa termini minimi secondo
         l&rsquo;anzianità (generalmente 1 mese nel primo anno, 2 mesi dal
         2° al 9° anno, 3 mesi in seguito). Un contratto può prevedere
-        termini più lunghi, ma non più brevi di questo minimo legale &mdash;
-        una clausola che tentasse di farlo sarebbe semplicemente nulla.
+        termini più lunghi, ma non più brevi di questo minimo legale.
+        Una clausola che tentasse di farlo sarebbe semplicemente nulla.
       </p>
 
       <h2>Clausola di non concorrenza: condizioni rigorose</h2>
@@ -227,7 +227,7 @@ function It({ locale }: { locale: Locale }) {
         (compensazione in tempo o pagamento, eventuale maggiorazione) o
         resta vago sul riporto dei giorni di ferie non goduti genera la
         maggior parte delle controversie alla fine di un rapporto di
-        lavoro &mdash; clausole chiare evitano la maggior parte di questi
+        lavoro. Clausole chiare evitano la maggior parte di questi
         disaccordi.
       </p>
 

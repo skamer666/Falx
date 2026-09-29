@@ -65,8 +65,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     heroProof: ["Traité sous 48 à 72h", "Prix fixe, jamais à l'heure", "Sans engagement"],
     aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
     aboutBody:
-      "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper — jamais d'improvisation en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
-    pricingHeading: "Deux formules, bien plus que ce que vous payez",
+      "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper, sans jamais improviser en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
+    pricingHeading: "Deux formules pour votre PME",
     pricingSubheading: "Choisissez votre volume. Changez ou résiliez à tout moment.",
     founderBadge: "Offre de lancement : les 20 premiers abonnés gardent ce prix à vie.",
     tiers: [
@@ -130,11 +130,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Que couvre l'abonnement ?",
-        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons vers un avocat spécialisé.",
+        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses. Nous vous orientons vers un avocat spécialisé.",
       },
       {
         q: "Question rapide ou dossier : quelle différence ?",
-        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail — rédiger un contrat, régler un litige, structurer une démarche — compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
+        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail : rédiger un contrat, régler un litige, structurer une démarche. C'est ce volume qui est compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
       },
       {
         q: "Puis-je résilier à tout moment ?",
@@ -142,11 +142,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Et si j'ai plus de dossiers que mon forfait ?",
-        a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
+        a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe, jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
-        a: "Non. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction — c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse.",
+        a: "Non. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction : c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse.",
       },
       {
         q: "Le service est-il disponible dans toute la Suisse ?",
@@ -167,8 +167,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     heroProof: ["Bearbeitet innert 48 bis 72h", "Fixpreis, nie nach Stundensatz", "Ohne Vertragsbindung"],
     aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
     aboutBody:
-      "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere — nie eine Improvisation am Telefon. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
-    pricingHeading: "Zwei Formeln, weit mehr, als Sie bezahlen",
+      "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere, ohne am Telefon zu improvisieren. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
+    pricingHeading: "Zwei Formeln für Ihr KMU",
     pricingSubheading: "Wählen Sie Ihr Volumen. Wechseln oder kündigen Sie jederzeit.",
     founderBadge: "Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis auf Lebenszeit.",
     tiers: [
@@ -232,11 +232,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Was deckt das Abo ab?",
-        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
+        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen. Dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
       },
       {
         q: "Was ist der Unterschied zwischen einer schnellen Frage und einem Anliegen?",
-        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren — genau dieses Volumen zählt in Ihrem monatlichen Kontingent (2 bei Essentiel, 5 bei Croissance).",
+        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren. Genau dieses Volumen zählt in Ihrem monatlichen Kontingent (2 bei Essentiel, 5 bei Croissance).",
       },
       {
         q: "Kann ich jederzeit kündigen?",
@@ -244,11 +244,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Was passiert, wenn ich mehr Anliegen habe als mein Kontingent?",
-        a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
+        a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis, nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
-        a: "Nein. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken — das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt.",
+        a: "Nein. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken: das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt.",
       },
       {
         q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
@@ -269,8 +269,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     heroProof: ["Handled within 48 to 72h", "Fixed price, never hourly", "No commitment"],
     aboutHeading: "A fractional jurist, not a law firm",
     aboutBody:
-      "A law student with several years of law firm experience, I research every case before handling it — never live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
-    pricingHeading: "Two plans, far more than you pay for",
+      "A law student with several years of law firm experience, I research every case before handling it, without live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
+    pricingHeading: "Two plans for your SME",
     pricingSubheading: "Choose your volume. Switch or cancel anytime.",
     founderBadge: "Launch offer: the first 20 subscribers keep this price for life.",
     tiers: [
@@ -334,11 +334,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "What does the subscription cover?",
-        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we refer you to a specialised lawyer.",
+        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included. We refer you to a specialised lawyer.",
       },
       {
         q: "What's the difference between a quick question and a matter?",
-        a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure — that's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
+        a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure. That's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
       },
       {
         q: "Can I cancel anytime?",
@@ -346,11 +346,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "What if I have more matters than my plan allows?",
-        a: "Each extra matter is billed at CHF 79, fixed price — never hourly. You can also switch plans at any time.",
+        a: "Each extra matter is billed at CHF 79, fixed price, never hourly. You can also switch plans at any time.",
       },
       {
         q: "Is Thrax Legal a law firm?",
-        a: "No. I'm a law student, with several years of law firm experience in legal research and drafting — the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar.",
+        a: "No. I'm a law student, with several years of law firm experience in legal research and drafting: the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar.",
       },
       {
         q: "Do you offer this service across all of Switzerland?",
@@ -371,8 +371,8 @@ const CONTENT: Record<Locale, HomeContent> = {
     heroProof: ["Gestito entro 48-72h", "Prezzo fisso, mai a ore", "Senza impegno"],
     aboutHeading: "Un giurista frazionato, non uno studio legale",
     aboutBody:
-      "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene — mai un'improvvisazione dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
-    pricingHeading: "Due formule, molto più di quanto pagate",
+      "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene, senza mai improvvisare dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
+    pricingHeading: "Due formule per la vostra PMI",
     pricingSubheading: "Scegliete il vostro volume. Cambiate o disdite in qualsiasi momento.",
     founderBadge: "Offerta di lancio: i primi 20 abbonati mantengono questo prezzo a vita.",
     tiers: [
@@ -436,11 +436,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Cosa copre l'abbonamento?",
-        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), messaggistica illimitata per le domande rapide e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo verso un avvocato specializzato.",
+        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), messaggistica illimitata per le domande rapide e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse. Vi indirizziamo verso un avvocato specializzato.",
       },
       {
         q: "Domanda rapida o pratica: che differenza c'è?",
-        a: "Una domanda rapida è un chiarimento puntuale, senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura — è questo volume ad essere conteggiato nel pacchetto mensile (2 per Essentiel, 5 per Croissance).",
+        a: "Una domanda rapida è un chiarimento puntuale, senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura. È questo volume ad essere conteggiato nel pacchetto mensile (2 per Essentiel, 5 per Croissance).",
       },
       {
         q: "Posso disdire in qualsiasi momento?",
@@ -448,11 +448,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Cosa succede se ho più pratiche del mio pacchetto?",
-        a: "Ogni pratica supplementare è fatturata CHF 79, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
+        a: "Ogni pratica supplementare è fatturata CHF 79, prezzo fisso, mai a ore. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
         q: "Thrax Legal è uno studio legale?",
-        a: "No. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione — il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero.",
+        a: "No. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione: il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero.",
       },
       {
         q: "Offrite questo servizio in tutta la Svizzera?",

@@ -27,7 +27,7 @@ function Fr({ locale }: { locale: Locale }) {
       <h2>Durée fixe ou reconductible : une vraie différence</h2>
       <p>
         Un bail commercial à durée fixe ne peut généralement pas être
-        résilié avant son terme, sauf clause contraire &mdash; contrairement
+        résilié avant son terme, sauf clause contraire. Contrairement
         à un bail d&rsquo;habitation, la protection contre les congés y est
         plus limitée. Vérifier la durée exacte et les conditions de
         reconduction avant de signer évite de se retrouver engagé plus
@@ -38,7 +38,7 @@ function Fr({ locale }: { locale: Locale }) {
       <p>
         Un bail commercial flou sur les travaux d&rsquo;aménagement
         (qui les finance, qui les autorise, ce qu&rsquo;il advient en fin de
-        bail) génère des litiges fréquents à la sortie des locaux &mdash;
+        bail) génère des litiges fréquents à la sortie des locaux,
         notamment sur la remise en état exigée par le bailleur.
       </p>
 
@@ -46,7 +46,7 @@ function Fr({ locale }: { locale: Locale }) {
       <p>
         Si votre activité peut évoluer (déménagement partiel, association
         avec un tiers), la possibilité de sous-louer ou de céder le bail
-        doit être prévue explicitement &mdash; à défaut, elle dépend de
+        doit être prévue explicitement. À défaut, elle dépend de
         l&rsquo;accord du bailleur, qui peut la refuser sans motif
         particulier dans certains cas.
       </p>
@@ -73,8 +73,8 @@ function De({ locale }: { locale: Locale }) {
       <h2>Feste oder verlängerbare Dauer: ein echter Unterschied</h2>
       <p>
         Ein Geschäftsmietvertrag mit fester Dauer kann in der Regel nicht
-        vor Ablauf gekündigt werden, sofern nichts anderes vereinbart wurde
-        &mdash; anders als bei einer Wohnungsmiete ist der Kündigungsschutz
+        vor Ablauf gekündigt werden, sofern nichts anderes vereinbart wurde.
+        Anders als bei einer Wohnungsmiete ist der Kündigungsschutz
         hier eingeschränkter. Die genaue Dauer und die
         Verlängerungsbedingungen vor der Unterschrift zu prüfen verhindert
         eine längere Bindung als geplant.
@@ -84,7 +84,7 @@ function De({ locale }: { locale: Locale }) {
       <p>
         Ein Geschäftsmietvertrag, der bei Umbauarbeiten unklar bleibt (wer
         sie finanziert, wer sie bewilligt, was bei Vertragsende damit
-        geschieht), erzeugt häufig Streitigkeiten beim Auszug &mdash;
+        geschieht), erzeugt häufig Streitigkeiten beim Auszug,
         insbesondere bezüglich der vom Vermieter verlangten Rückbaupflicht.
       </p>
 
@@ -92,7 +92,7 @@ function De({ locale }: { locale: Locale }) {
       <p>
         Falls sich Ihre Tätigkeit weiterentwickeln kann (Teilumzug,
         Zusammenarbeit mit Dritten), muss die Möglichkeit der Untermiete
-        oder Abtretung ausdrücklich vorgesehen werden &mdash; andernfalls
+        oder Abtretung ausdrücklich vorgesehen werden. Andernfalls
         hängt sie von der Zustimmung der Vermieterschaft ab, die diese in
         gewissen Fällen ohne besonderen Grund verweigern kann.
       </p>
@@ -118,7 +118,7 @@ function En({ locale }: { locale: Locale }) {
       <h2>Fixed or renewable term: a real difference</h2>
       <p>
         A fixed-term commercial lease generally cannot be terminated before
-        it ends, unless otherwise agreed &mdash; unlike residential leases,
+        it ends, unless otherwise agreed. Unlike residential leases,
         protection against termination is more limited here. Checking the
         exact duration and renewal conditions before signing prevents being
         committed longer than planned.
@@ -128,7 +128,7 @@ function En({ locale }: { locale: Locale }) {
       <p>
         A commercial lease that&rsquo;s vague on fit-out works (who funds
         them, who approves them, what happens to them at the end of the
-        lease) generates frequent disputes when leaving the premises &mdash;
+        lease) generates frequent disputes when leaving the premises,
         particularly over the reinstatement required by the landlord.
       </p>
 
@@ -136,7 +136,7 @@ function En({ locale }: { locale: Locale }) {
       <p>
         If your business may evolve (partial move, partnering with a
         third party), the ability to sublet or assign the lease must be
-        explicitly provided for &mdash; otherwise it depends on the
+        explicitly provided for. Otherwise it depends on the
         landlord&rsquo;s consent, which can be refused without particular
         grounds in some cases.
       </p>
@@ -162,8 +162,8 @@ function It({ locale }: { locale: Locale }) {
       <h2>Durata fissa o rinnovabile: una vera differenza</h2>
       <p>
         Una locazione commerciale a durata fissa generalmente non può
-        essere disdetta prima della scadenza, salvo clausola contraria
-        &mdash; a differenza di una locazione abitativa, la protezione
+        essere disdetta prima della scadenza, salvo clausola contraria.
+        A differenza di una locazione abitativa, la protezione
         contro la disdetta è qui più limitata. Verificare la durata esatta
         e le condizioni di rinnovo prima di firmare evita di ritrovarsi
         vincolati più a lungo del previsto.
@@ -174,7 +174,7 @@ function It({ locale }: { locale: Locale }) {
         Una locazione commerciale poco chiara sui lavori di allestimento
         (chi li finanzia, chi li autorizza, cosa succede alla fine della
         locazione) genera frequenti controversie all&rsquo;uscita dai
-        locali &mdash; in particolare sul ripristino richiesto dal
+        locali, in particolare sul ripristino richiesto dal
         locatore.
       </p>
 
@@ -182,7 +182,7 @@ function It({ locale }: { locale: Locale }) {
       <p>
         Se la vostra attività può evolversi (trasloco parziale,
         associazione con terzi), la possibilità di sublocare o cedere il
-        contratto deve essere prevista esplicitamente &mdash; altrimenti
+        contratto deve essere prevista esplicitamente. Altrimenti
         dipende dal consenso del locatore, che può rifiutarlo senza motivo
         particolare in alcuni casi.
       </p>

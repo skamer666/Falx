@@ -10,7 +10,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 // À compléter avant mise en production : identité complète (nom, prénom),
 // numéro d'entreprise BCE une fois obtenu, adresse. Choix du droit
 // applicable et du for juridique (par défaut : Belgique, à revoir avec un
-// juriste si besoin) — voir la section correspondante dans chaque langue.
+// juriste si besoin), voir la section correspondante dans chaque langue.
 const LAST_UPDATED = "2026-09-29";
 
 const META: Record<Locale, { title: string; description: string }> = {
