@@ -72,9 +72,16 @@ export default function MobileNav() {
             })}
           </nav>
           <LocaleSwitcher locale={locale} pathname={pathname} className="mt-4 flex justify-center" />
+          <Link
+            href={`/${locale}/compte`}
+            onClick={() => setOpen(false)}
+            className="mt-4 block rounded-lg px-2 py-3 text-center text-base font-medium text-text transition-colors hover:bg-surface-hover"
+          >
+            {t.login}
+          </Link>
           <PrimaryButton
             href={`/${locale}/#offre`}
-            className="mt-4 w-full"
+            className="mt-2 w-full"
             onClick={() => setOpen(false)}
           >
             {t.diagnosticCta}

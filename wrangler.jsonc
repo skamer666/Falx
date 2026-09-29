@@ -16,5 +16,18 @@
   },
   "version_metadata": {
     "binding": "CF_VERSION_METADATA"
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "falx-app",
+      "database_id": "7ea246fb-0b9e-4e39-b0a7-a639b97a10a3"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "DOSSIERS",
+      "bucket_name": "falx-dossiers"
+    }
+  ]
 }
