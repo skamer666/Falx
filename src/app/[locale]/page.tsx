@@ -26,8 +26,10 @@ type Tier = {
   priceNote: string;
   tagline: string;
   features: string[];
+  valueNote: string;
   ctaLabel: string;
   highlight: boolean;
+  badge?: string;
 };
 
 type HomeContent = {
@@ -43,8 +45,10 @@ type HomeContent = {
   aboutBody2: string;
   pricingHeading: string;
   pricingSubheading: string;
+  founderBadge: string;
   tiers: [Tier, Tier];
   extraQuestionNote: string;
+  guaranteeNote: string;
   stepsHeading: string;
   steps: StepItem[];
   domainsHeading: string;
@@ -85,9 +89,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction. Je ne prétends pas tout connaître par cœur — et c'est précisément pour ça que chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct au téléphone.",
     aboutBody2:
       "C'est le principe du juriste fractionné : un accès sérieux et abordable au droit pour votre PME, sans les coûts d'un cabinet à temps plein. Pour les dossiers contentieux ou les décisions à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
-    pricingHeading: "Deux formules, un seul principe : pas de surprise",
+    pricingHeading: "Deux formules, un seul principe : bien plus que ce que vous payez",
     pricingSubheading:
       "Choisissez le volume qui correspond à votre activité. Changez de formule ou résiliez à tout moment.",
+    founderBadge:
+      "🎯 Offre de lancement : les 20 premiers abonnés gardent ce prix à vie, même quand les tarifs augmenteront.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -96,11 +102,15 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mois",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
-          "1 besoin juridique pris en charge par mois (contrat, litige, procédure)",
+          "Messagerie illimitée pour vos questions rapides (usage raisonnable)",
+          "2 dossiers complets pris en charge par mois (contrat, litige, procédure)",
           "Traité sous 72h ouvrées",
-          "Bibliothèque de modèles (CGV, contrat de travail type, etc.)",
+          "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
+          "Garantie remboursé si non satisfait le premier mois",
+          "Prix bloqué à vie tant que vous restez abonné",
           "Sans engagement, résiliable à tout moment",
         ],
+        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 900 CHF",
         ctaLabel: "Choisir Essentiel",
         highlight: false,
       },
@@ -110,19 +120,26 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "119 CHF",
         priceNote: "/ mois",
         tagline: "Pour les PME avec des besoins réguliers",
+        badge: "Le plus choisi",
         features: [
-          "3 besoins juridiques pris en charge par mois",
-          "Traité sous 48h ouvrées",
-          "Révision de contrat incluse chaque mois",
-          "Bibliothèque de modèles complète",
+          "Messagerie illimitée pour vos questions rapides (usage raisonnable)",
+          "5 dossiers complets pris en charge par mois",
+          "Traité sous 48h ouvrées (24h pour les urgences signalées)",
+          "Révision de contrat prioritaire incluse chaque mois",
+          "Bibliothèque complète de modèles — valeur 500 CHF, incluse",
+          "Garantie remboursé si non satisfait le premier mois",
+          "Prix bloqué à vie tant que vous restez abonné",
           "Sans engagement, résiliable à tout moment",
         ],
+        valueNote: "Valeur estimée si acheté séparément chez un avocat : plus de 2'000 CHF",
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Question supplémentaire au-delà de votre forfait : 39 CHF, prix fixe — jamais d'horaire.",
+      "Dossier supplémentaire au-delà de votre forfait : 39 CHF, prix fixe — jamais d'horaire.",
+    guaranteeNote:
+      "Pas convaincu ? Si votre premier mois ne vous satisfait pas, vous êtes intégralement remboursé, sans justification à fournir.",
     stepsHeading: "Comment ça marche",
     steps: [
       { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement. Paiement mensuel, résiliable à tout moment." },
@@ -153,15 +170,19 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Que couvre exactement l'abonnement ?",
-        a: "La prise en charge de vos besoins juridiques courants : rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux) et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
+        a: "La prise en charge de vos besoins juridiques courants : rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides, et l'accès à une bibliothèque complète de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses — nous vous orientons alors vers un avocat spécialisé.",
       },
       {
-        q: "Puis-je résilier à tout moment ?",
-        a: "Oui. Aucun engagement de durée : vous résiliez quand vous voulez, effectif à la fin du mois déjà payé.",
+        q: "C'est quoi la différence entre une « question rapide » et un « dossier » ?",
+        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail : rédiger un contrat, régler un litige, structurer une démarche — c'est ce volume-là qui est compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
       },
       {
-        q: "Que se passe-t-il si j'ai plus de questions que mon forfait ?",
-        a: "Chaque question supplémentaire est facturée 39 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
+        q: "Que se passe-t-il si je ne suis pas satisfait ?",
+        a: "Vous êtes intégralement remboursé si votre premier mois ne vous convainc pas, sans justification à fournir. Ensuite, aucun engagement : vous résiliez quand vous voulez, effectif à la fin du mois déjà payé — et votre prix reste bloqué tant que vous restez abonné, même si nos tarifs augmentent pour les nouveaux clients.",
+      },
+      {
+        q: "Que se passe-t-il si j'ai plus de dossiers que mon forfait ?",
+        a: "Chaque dossier supplémentaire est facturé 39 CHF, prix fixe — jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
         q: "Sous quel délai mon dossier est-il traité ?",
@@ -202,9 +223,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken. Ich behaupte nicht, alles auswendig zu kennen — genau deshalb wird jeder Fall richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert.",
     aboutBody2:
       "Das ist das Prinzip des fraktionierten Juristen: ein seriöser, erschwinglicher Zugang zum Recht für Ihr KMU, ohne die Kosten einer Kanzlei in Vollzeit. Bei streitigen Fällen oder Entscheidungen mit sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
-    pricingHeading: "Zwei Formeln, ein Grundsatz: keine Überraschung",
+    pricingHeading: "Zwei Formeln, ein Grundsatz: weit mehr, als Sie bezahlen",
     pricingSubheading:
       "Wählen Sie das Volumen, das zu Ihrer Tätigkeit passt. Formel wechseln oder jederzeit kündigen.",
+    founderBadge:
+      "🎯 Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis auf Lebenszeit, auch wenn die Tarife später steigen.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -213,11 +236,15 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ Monat",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
-          "1 rechtliches Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
+          "Unbegrenzte Nachrichten für schnelle Fragen (angemessene Nutzung)",
+          "2 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
           "Bearbeitet innert 72 Arbeitsstunden",
-          "Vorlagenbibliothek (AGB, Musterarbeitsvertrag usw.)",
+          "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
+          "Geld-zurück-Garantie, falls Sie im ersten Monat nicht zufrieden sind",
+          "Preis lebenslang fixiert, solange Sie abonniert bleiben",
           "Ohne Vertragsbindung, jederzeit kündbar",
         ],
+        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 900",
         ctaLabel: "Essentiel wählen",
         highlight: false,
       },
@@ -227,19 +254,26 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 119",
         priceNote: "/ Monat",
         tagline: "Für KMU mit regelmässigem Bedarf",
+        badge: "Am häufigsten gewählt",
         features: [
-          "3 rechtliche Anliegen pro Monat",
-          "Bearbeitet innert 48 Arbeitsstunden",
-          "Vertragsprüfung jeden Monat inklusive",
-          "Vollständige Vorlagenbibliothek",
+          "Unbegrenzte Nachrichten für schnelle Fragen (angemessene Nutzung)",
+          "5 vollständige Anliegen pro Monat",
+          "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
+          "Prioritäre Vertragsprüfung jeden Monat inklusive",
+          "Vollständige Vorlagenbibliothek — Wert CHF 500, inklusive",
+          "Geld-zurück-Garantie, falls Sie im ersten Monat nicht zufrieden sind",
+          "Preis lebenslang fixiert, solange Sie abonniert bleiben",
           "Ohne Vertragsbindung, jederzeit kündbar",
         ],
+        valueNote: "Geschätzter Wert bei separatem Kauf bei einem Anwalt: über CHF 2'000",
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Zusätzliche Frage über Ihr Kontingent hinaus: CHF 39, Fixpreis — nie nach Stundensatz.",
+      "Zusätzliches Anliegen über Ihr Kontingent hinaus: CHF 39, Fixpreis — nie nach Stundensatz.",
+    guaranteeNote:
+      "Nicht überzeugt? Wenn Sie im ersten Monat nicht zufrieden sind, erhalten Sie Ihr Geld vollständig zurück, ohne Begründung.",
     stepsHeading: "So funktioniert's",
     steps: [
       { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung. Monatliche Zahlung, jederzeit kündbar." },
@@ -270,15 +304,19 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Was deckt das Abo genau ab?",
-        a: "Die Bearbeitung Ihrer gängigen rechtlichen Anliegen: Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge) und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
+        a: "Die Bearbeitung Ihrer gängigen rechtlichen Anliegen: Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer vollständigen Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen — dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
       },
       {
-        q: "Kann ich jederzeit kündigen?",
-        a: "Ja. Keine Vertragsbindung: Sie kündigen, wann Sie wollen, wirksam am Ende des bereits bezahlten Monats.",
+        q: "Was ist der Unterschied zwischen einer «schnellen Frage» und einem «Anliegen»?",
+        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren — genau dieses Volumen wird in Ihrem monatlichen Kontingent gezählt (2 bei Essentiel, 5 bei Croissance).",
       },
       {
-        q: "Was passiert, wenn ich mehr Fragen habe als mein Kontingent?",
-        a: "Jede zusätzliche Frage kostet CHF 39, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
+        q: "Was passiert, wenn ich nicht zufrieden bin?",
+        a: "Sie erhalten Ihr Geld vollständig zurück, wenn Sie im ersten Monat nicht überzeugt sind, ohne Begründung. Danach keine Vertragsbindung: Sie kündigen, wann Sie wollen, wirksam am Ende des bereits bezahlten Monats — und Ihr Preis bleibt fixiert, solange Sie abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
+      },
+      {
+        q: "Was passiert, wenn ich mehr Anliegen habe als mein Kontingent?",
+        a: "Jedes zusätzliche Anliegen kostet CHF 39, Fixpreis — nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
       },
       {
         q: "Innert welcher Frist wird mein Anliegen bearbeitet?",
@@ -319,9 +357,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "I'm a law student, with several years of law firm experience in legal research and drafting. I don't claim to know everything by heart — that's exactly why every case gets real research before I handle it, never live improvisation on a call.",
     aboutBody2:
       "That's the fractional-jurist model: serious, affordable access to legal support for your SME, without the cost of a full-time firm. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
-    pricingHeading: "Two plans, one principle: no surprises",
+    pricingHeading: "Two plans, one principle: far more than you pay for",
     pricingSubheading:
       "Choose the volume that fits your business. Switch plans or cancel anytime.",
+    founderBadge:
+      "🎯 Launch offer: the first 20 subscribers keep this price for life, even after rates go up.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -330,11 +370,15 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ month",
         tagline: "For freelancers and micro-businesses",
         features: [
-          "1 legal matter handled per month (contract, dispute, procedure)",
+          "Unlimited messaging for quick questions (fair use)",
+          "2 full matters handled per month (contract, dispute, procedure)",
           "Handled within 72 business hours",
-          "Template library (T&Cs, standard employment contract, etc.)",
+          "Full template library — CHF 500 value, included",
+          "Money-back guarantee if you're not satisfied in the first month",
+          "Price locked for life as long as you stay subscribed",
           "No commitment, cancel anytime",
         ],
+        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 900",
         ctaLabel: "Choose Essential",
         highlight: false,
       },
@@ -344,19 +388,26 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 119",
         priceNote: "/ month",
         tagline: "For SMEs with regular needs",
+        badge: "Most chosen",
         features: [
-          "3 legal matters handled per month",
-          "Handled within 48 business hours",
-          "Contract review included every month",
-          "Full template library",
+          "Unlimited messaging for quick questions (fair use)",
+          "5 full matters handled per month",
+          "Handled within 48 business hours (24h for flagged urgent cases)",
+          "Priority contract review included every month",
+          "Full template library — CHF 500 value, included",
+          "Money-back guarantee if you're not satisfied in the first month",
+          "Price locked for life as long as you stay subscribed",
           "No commitment, cancel anytime",
         ],
+        valueNote: "Estimated value if purchased separately from a lawyer: over CHF 2,000",
         ctaLabel: "Choose Growth",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Extra question beyond your plan: CHF 39, fixed price — never hourly.",
+      "Extra matter beyond your plan: CHF 39, fixed price — never hourly.",
+    guaranteeNote:
+      "Not convinced? If your first month doesn't win you over, you get a full refund, no questions asked.",
     stepsHeading: "How it works",
     steps: [
       { title: "Choose your plan", description: "Essential or Growth, no commitment. Monthly payment, cancel anytime." },
@@ -387,15 +438,19 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "What exactly does the subscription cover?",
-        a: "Handling your common legal needs: drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases) and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
+        a: "Handling your common legal needs: drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a full template library. Exceptional matters (fundraising, court litigation, restructuring) are not included — we then refer you to a specialised lawyer.",
       },
       {
-        q: "Can I cancel anytime?",
-        a: "Yes. No commitment period: cancel whenever you want, effective at the end of the month already paid.",
+        q: "What's the difference between a \"quick question\" and a \"matter\"?",
+        a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure — that's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
       },
       {
-        q: "What happens if I have more questions than my plan allows?",
-        a: "Each extra question is billed at CHF 39, fixed price — never hourly. You can also switch plans at any time.",
+        q: "What happens if I'm not satisfied?",
+        a: "You get a full refund if your first month doesn't convince you, no questions asked. After that, no commitment: cancel whenever you want, effective at the end of the month already paid — and your price stays locked as long as you stay subscribed, even if our rates rise for new customers.",
+      },
+      {
+        q: "What happens if I have more matters than my plan allows?",
+        a: "Each extra matter is billed at CHF 39, fixed price — never hourly. You can also switch plans at any time.",
       },
       {
         q: "How long until my matter is handled?",
@@ -436,9 +491,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione. Non pretendo di sapere tutto a memoria — è esattamente per questo che ogni caso è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo al telefono.",
     aboutBody2:
       "È il principio del giurista frazionato: un accesso serio e accessibile al diritto per la vostra PMI, senza i costi di uno studio a tempo pieno. Per i casi contenziosi o le decisioni ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
-    pricingHeading: "Due formule, un solo principio: nessuna sorpresa",
+    pricingHeading: "Due formule, un solo principio: molto più di quanto pagate",
     pricingSubheading:
       "Scegliete il volume adatto alla vostra attività. Cambiate formula o disdite in qualsiasi momento.",
+    founderBadge:
+      "🎯 Offerta di lancio: i primi 20 abbonati mantengono questo prezzo a vita, anche quando le tariffe aumenteranno.",
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -447,11 +504,15 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mese",
         tagline: "Per indipendenti e micro-imprese",
         features: [
-          "1 esigenza legale gestita al mese (contratto, controversia, procedura)",
-          "Gestita entro 72 ore lavorative",
-          "Libreria di modelli (condizioni generali, contratto di lavoro tipo, ecc.)",
+          "Messaggistica illimitata per le vostre domande rapide (uso ragionevole)",
+          "2 pratiche complete gestite al mese (contratto, controversia, procedura)",
+          "Gestite entro 72 ore lavorative",
+          "Libreria completa di modelli — valore CHF 500, inclusa",
+          "Garanzia rimborso se non soddisfatti il primo mese",
+          "Prezzo bloccato a vita finché restate abbonati",
           "Senza impegno, disdicibile in qualsiasi momento",
         ],
+        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 900",
         ctaLabel: "Scegliere Essentiel",
         highlight: false,
       },
@@ -461,19 +522,26 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 119",
         priceNote: "/ mese",
         tagline: "Per PMI con esigenze regolari",
+        badge: "Il più scelto",
         features: [
-          "3 esigenze legali gestite al mese",
-          "Gestite entro 48 ore lavorative",
-          "Revisione contrattuale inclusa ogni mese",
-          "Libreria di modelli completa",
+          "Messaggistica illimitata per le vostre domande rapide (uso ragionevole)",
+          "5 pratiche complete gestite al mese",
+          "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
+          "Revisione contrattuale prioritaria inclusa ogni mese",
+          "Libreria completa di modelli — valore CHF 500, inclusa",
+          "Garanzia rimborso se non soddisfatti il primo mese",
+          "Prezzo bloccato a vita finché restate abbonati",
           "Senza impegno, disdicibile in qualsiasi momento",
         ],
+        valueNote: "Valore stimato se acquistato separatamente da un avvocato: oltre CHF 2'000",
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
     ],
     extraQuestionNote:
-      "Domanda supplementare oltre il vostro pacchetto: CHF 39, prezzo fisso — mai a ore.",
+      "Pratica supplementare oltre il vostro pacchetto: CHF 39, prezzo fisso — mai a ore.",
+    guaranteeNote:
+      "Non convinti? Se il primo mese non vi soddisfa, siete rimborsati integralmente, senza dover fornire motivazioni.",
     stepsHeading: "Come funziona",
     steps: [
       { title: "Scegliete la vostra formula", description: "Essentiel o Croissance, senza impegno. Pagamento mensile, disdicibile in qualsiasi momento." },
@@ -504,15 +572,19 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Cosa copre esattamente l'abbonamento?",
-        a: "La gestione delle vostre esigenze legali comuni: redazione e revisione di contratti, risoluzione di controversie, spiegazione delle vostre procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali) e l'accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
+        a: "La gestione delle vostre esigenze legali comuni: redazione e revisione di contratti, risoluzione di controversie, spiegazione delle vostre procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), una messaggistica illimitata per le vostre domande rapide, e l'accesso a una libreria completa di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse — vi indirizziamo allora verso un avvocato specializzato.",
       },
       {
-        q: "Posso disdire in qualsiasi momento?",
-        a: "Sì. Nessun impegno di durata: disdite quando volete, effettivo alla fine del mese già pagato.",
+        q: "Qual è la differenza tra una «domanda rapida» e una «pratica»?",
+        a: "Una domanda rapida è un chiarimento puntuale, a cui si risponde senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura — è questo volume ad essere conteggiato nel vostro pacchetto mensile (2 per Essentiel, 5 per Croissance).",
       },
       {
-        q: "Cosa succede se ho più domande di quelle previste dal mio pacchetto?",
-        a: "Ogni domanda supplementare è fatturata CHF 39, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
+        q: "Cosa succede se non sono soddisfatto?",
+        a: "Siete rimborsati integralmente se il primo mese non vi convince, senza dover fornire motivazioni. In seguito, nessun impegno: disdite quando volete, effettivo alla fine del mese già pagato — e il vostro prezzo resta bloccato finché restate abbonati, anche se le nostre tariffe aumentano per i nuovi clienti.",
+      },
+      {
+        q: "Cosa succede se ho più pratiche di quelle previste dal mio pacchetto?",
+        a: "Ogni pratica supplementare è fatturata CHF 39, prezzo fisso — mai a ore. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
         q: "Entro quanto tempo viene gestita la mia pratica?",
@@ -539,10 +611,15 @@ const CONTENT: Record<Locale, HomeContent> = {
 function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
   return (
     <div
-      className={`flex flex-col rounded-2xl border p-6 md:p-8 ${
+      className={`relative flex flex-col rounded-2xl border p-6 md:p-8 ${
         tier.highlight ? "border-accent bg-surface" : "border-border bg-surface"
       }`}
     >
+      {tier.badge ? (
+        <span className="absolute -top-3 left-6 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-bg">
+          {tier.badge}
+        </span>
+      ) : null}
       <p className="text-sm font-medium uppercase tracking-[0.14em] text-text-muted">
         {tier.name}
       </p>
@@ -551,6 +628,7 @@ function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
         <span className="text-3xl font-semibold tracking-[-0.02em] text-text">{tier.price}</span>
         <span className="text-sm text-text-muted">{tier.priceNote}</span>
       </div>
+      <p className="mt-2 text-xs font-medium text-accent">{tier.valueNote}</p>
       <ul className="mt-6 flex flex-1 flex-col gap-3">
         {tier.features.map((feature) => (
           <li key={feature} className="flex gap-2 text-sm leading-relaxed text-text-muted">
@@ -693,12 +771,18 @@ export default async function Home({
                 <p className="mx-auto mt-3 max-w-lg text-center text-base leading-relaxed text-text-muted">
                   {t.pricingSubheading}
                 </p>
+                <p className="mx-auto mt-4 max-w-lg rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-center text-xs font-medium text-text">
+                  {t.founderBadge}
+                </p>
                 <div className="mt-10 grid gap-6 md:grid-cols-2">
                   {t.tiers.map((tier) => (
                     <TierCard key={tier.slug} tier={tier} locale={locale} />
                   ))}
                 </div>
                 <p className="mt-6 text-center text-sm text-text-muted">{t.extraQuestionNote}</p>
+                <p className="mx-auto mt-3 max-w-lg text-center text-sm font-medium text-text">
+                  {t.guaranteeNote}
+                </p>
               </Reveal>
             </Container>
           </section>

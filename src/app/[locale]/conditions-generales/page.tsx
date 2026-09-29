@@ -95,26 +95,36 @@ function Fr() {
 
       <h2>3. Description et prix des formules</h2>
       <p>
-        <strong>Essentiel</strong> : 49 CHF par mois. Comprend 1 question
-        écrite par mois (réponse sous 72 heures ouvrées) et l&rsquo;accès à
-        la bibliothèque de modèles de documents.
+        <strong>Essentiel</strong> : 49 CHF par mois. Comprend une
+        messagerie illimitée pour les questions rapides (clarifications
+        ponctuelles ne nécessitant pas de recherche approfondie, dans les
+        limites d&rsquo;un usage raisonnable et personnel), 2 dossiers
+        complets pris en charge par mois (rédaction ou relecture de
+        contrat, résolution de litige, explication de démarche) traités
+        sous 72 heures ouvrées, et l&rsquo;accès à la bibliothèque complète
+        de modèles de documents.
       </p>
       <p>
-        <strong>Croissance</strong> : 119 CHF par mois. Comprend 3 questions
-        écrites par mois (réponse sous 48 heures ouvrées), une révision de
-        contrat incluse chaque mois, et l&rsquo;accès à la bibliothèque
-        complète de modèles.
+        <strong>Croissance</strong> : 119 CHF par mois. Comprend la
+        messagerie illimitée pour les questions rapides, 5 dossiers
+        complets pris en charge par mois traités sous 48 heures ouvrées (24
+        heures pour les urgences signalées comme telles), une révision de
+        contrat prioritaire incluse chaque mois, et l&rsquo;accès à la
+        bibliothèque complète de modèles.
       </p>
       <p>
-        Toute question au-delà du volume inclus dans la formule souscrite
-        est facturée 39 CHF, prix fixe, quelle que soit sa complexité. Les
-        formules et le service au-delà du volume inclus couvrent le
-        droit des contrats commerciaux, le droit du travail, le droit des
-        sociétés, le recouvrement amiable, la conformité nLPD et les baux
-        commerciaux. Les opérations exceptionnelles (levée de fonds,
-        contentieux devant un tribunal, restructuration, fusion-acquisition)
-        ne sont pas incluses et font l&rsquo;objet d&rsquo;une orientation
-        vers un avocat spécialisé.
+        Tout dossier complet au-delà du volume inclus dans la formule
+        souscrite est facturé 39 CHF, prix fixe, quelle que soit sa
+        complexité. Un usage manifestement déraisonnable de la messagerie
+        illimitée (volume ou fréquence incompatible avec un usage normal
+        d&rsquo;une PME ou d&rsquo;un indépendant) peut être requalifié en
+        dossiers complets par Thrax Legal, qui en informe le client au
+        préalable. Les formules couvrent le droit des contrats commerciaux,
+        le droit du travail, le droit des sociétés, le recouvrement
+        amiable, la conformité nLPD et les baux commerciaux. Les opérations
+        exceptionnelles (levée de fonds, contentieux devant un tribunal,
+        restructuration, fusion-acquisition) ne sont pas incluses et font
+        l&rsquo;objet d&rsquo;une orientation vers un avocat spécialisé.
       </p>
       <p>
         Les prix sont indiqués en francs suisses (CHF). [Régime de TVA à
@@ -123,32 +133,50 @@ function Fr() {
         franchise de la taxe, auquel cas la TVA n&rsquo;est pas appliquée.]
       </p>
 
-      <h2>4. Souscription et paiement</h2>
+      <h2>4. Souscription, paiement et prix bloqué</h2>
       <p>
         L&rsquo;abonnement est confirmé dès réception du premier paiement en
         ligne et se renouvelle automatiquement chaque mois par prélèvement
         du même montant, jusqu&rsquo;à résiliation par le client. Il
         n&rsquo;y a <strong>aucun engagement de durée minimale</strong>.
       </p>
-
-      <h2>5. Délai de réponse</h2>
       <p>
-        Chaque question écrite reçoit une réponse rédigée dans le délai
-        annoncé pour la formule souscrite (72 heures ouvrées pour Essentiel,
-        48 heures ouvrées pour Croissance), à compter de la réception de
-        toutes les informations et documents nécessaires à son traitement.
+        Le prix payé par le client au moment de sa souscription reste
+        inchangé tant que son abonnement demeure actif sans interruption,
+        même si Thrax Legal augmente ses tarifs pour les nouveaux clients.
+        Une résiliation suivie d&rsquo;une nouvelle souscription est
+        considérée comme un nouvel abonnement, soumis aux tarifs en vigueur
+        à ce moment-là.
       </p>
 
-      <h2>6. Résiliation et remboursement</h2>
+      <h2>5. Délai de traitement</h2>
+      <p>
+        Chaque dossier complet est traité dans le délai annoncé pour la
+        formule souscrite (72 heures ouvrées pour Essentiel, 48 heures
+        ouvrées pour Croissance, 24 heures pour les urgences signalées en
+        formule Croissance), à compter de la réception de toutes les
+        informations et documents nécessaires à son traitement. Les
+        questions rapides reçoivent une réponse dans un délai raisonnable,
+        généralement plus court.
+      </p>
+
+      <h2>6. Résiliation, remboursement et garantie</h2>
+      <p>
+        Si le client n&rsquo;est pas satisfait durant son premier mois
+        d&rsquo;abonnement, il peut demander le remboursement intégral de
+        ce premier mois, sans justification à fournir, par simple email à{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
       <p>
         Le client peut résilier son abonnement à tout moment, sans motif ni
         frais. La résiliation prend effet à la fin de la période mensuelle
-        déjà payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au
-        prorata. Le client peut également changer de formule à tout moment,
-        avec effet au prochain cycle de facturation.
+        déjà payée&nbsp;; en dehors de la garantie du premier mois décrite
+        ci-dessus, le mois en cours n&rsquo;est pas remboursé au prorata.
+        Le client peut également changer de formule à tout moment, avec
+        effet au prochain cycle de facturation.
       </p>
       <p>
-        Si une question précise s&rsquo;avère manifestement hors du champ
+        Si un dossier précis s&rsquo;avère manifestement hors du champ
         décrit à l&rsquo;article 3 (notamment une opération exceptionnelle),
         Thrax Legal en informe le client avant tout traitement et
         l&rsquo;oriente vers un avocat plutôt que de facturer une prestation
@@ -255,21 +283,31 @@ function De() {
 
       <h2>3. Beschreibung und Preise der Formeln</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 49 pro Monat. Umfasst 1 schriftliche
-        Frage pro Monat (Antwort innert 72 Arbeitsstunden) und Zugang zur
-        Vorlagenbibliothek.
-      </p>
-      <p>
-        <strong>Croissance</strong>: CHF 119 pro Monat. Umfasst 3
-        schriftliche Fragen pro Monat (Antwort innert 48 Arbeitsstunden),
-        eine im Preis inbegriffene Vertragsprüfung pro Monat, und Zugang zur
+        <strong>Essentiel</strong>: CHF 49 pro Monat. Umfasst unbegrenzte
+        Nachrichten für schnelle Fragen (punktuelle Klärungen ohne
+        vertiefte Recherche, im Rahmen einer angemessenen und persönlichen
+        Nutzung), 2 vollständige Anliegen pro Monat (Erstellung oder
+        Prüfung eines Vertrags, Lösung eines Streitfalls, Erklärung eines
+        Verfahrens), bearbeitet innert 72 Arbeitsstunden, sowie Zugang zur
         vollständigen Vorlagenbibliothek.
       </p>
       <p>
-        Jede Frage über das in der gewählten Formel enthaltene Volumen
-        hinaus wird zu CHF 39, Fixpreis, unabhängig von ihrer Komplexität,
-        verrechnet. Die Formeln und die Leistung über das inbegriffene
-        Volumen hinaus decken Handelsvertragsrecht, Arbeitsrecht,
+        <strong>Croissance</strong>: CHF 119 pro Monat. Umfasst
+        unbegrenzte Nachrichten für schnelle Fragen, 5 vollständige
+        Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24
+        Stunden bei als solche gemeldeten Notfällen), eine im Preis
+        inbegriffene prioritäre Vertragsprüfung pro Monat, und Zugang zur
+        vollständigen Vorlagenbibliothek.
+      </p>
+      <p>
+        Jedes vollständige Anliegen über das in der gewählten Formel
+        enthaltene Volumen hinaus wird zu CHF 39, Fixpreis, unabhängig von
+        seiner Komplexität, verrechnet. Eine offensichtlich unangemessene
+        Nutzung der unbegrenzten Nachrichtenfunktion (Umfang oder Häufigkeit
+        unvereinbar mit der normalen Nutzung durch ein KMU oder eine
+        selbstständige Person) kann von Thrax Legal als vollständiges
+        Anliegen umqualifiziert werden, wobei der Kunde vorgängig informiert
+        wird. Die Formeln decken Handelsvertragsrecht, Arbeitsrecht,
         Gesellschaftsrecht, gütliches Inkasso, DSG-Konformität und
         Geschäftsmietverträge ab. Aussergewöhnliche Vorgänge
         (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung, Fusionen und
@@ -283,33 +321,49 @@ function De() {
         wonach keine MWST erhoben wird.]
       </p>
 
-      <h2>4. Abschluss und Zahlung</h2>
+      <h2>4. Abschluss, Zahlung und Preisbindung</h2>
       <p>
         Das Abonnement ist mit Eingang der ersten Online-Zahlung bestätigt
         und verlängert sich automatisch jeden Monat um denselben Betrag, bis
         es vom Kunden gekündigt wird. Es besteht{" "}
         <strong>keine Mindestvertragsdauer</strong>.
       </p>
-
-      <h2>5. Antwortfrist</h2>
       <p>
-        Jede schriftliche Frage erhält eine ausformulierte Antwort innert
-        der für die gewählte Formel angegebenen Frist (72 Arbeitsstunden bei
-        Essentiel, 48 Arbeitsstunden bei Croissance), ab Eingang aller für
-        die Bearbeitung nötigen Angaben und Unterlagen.
+        Der vom Kunden bei Abschluss bezahlte Preis bleibt unverändert,
+        solange sein Abonnement ohne Unterbruch aktiv bleibt, auch wenn
+        Thrax Legal die Tarife für Neukunden erhöht. Eine Kündigung mit
+        anschliessendem Neuabschluss gilt als neues Abonnement und
+        unterliegt den zu diesem Zeitpunkt geltenden Tarifen.
       </p>
 
-      <h2>6. Kündigung und Rückerstattung</h2>
+      <h2>5. Bearbeitungsfrist</h2>
+      <p>
+        Jedes vollständige Anliegen wird innert der für die gewählte Formel
+        angegebenen Frist bearbeitet (72 Arbeitsstunden bei Essentiel, 48
+        Arbeitsstunden bei Croissance, 24 Stunden bei in der Formel
+        Croissance gemeldeten Notfällen), ab Eingang aller für die
+        Bearbeitung nötigen Angaben und Unterlagen. Schnelle Fragen erhalten
+        eine Antwort innert angemessener, in der Regel kürzerer Frist.
+      </p>
+
+      <h2>6. Kündigung, Rückerstattung und Garantie</h2>
+      <p>
+        Ist der Kunde während seines ersten Abonnementsmonats nicht
+        zufrieden, kann er die vollständige Rückerstattung dieses ersten
+        Monats verlangen, ohne Begründung, per einfacher E-Mail an{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
       <p>
         Der Kunde kann sein Abonnement jederzeit ohne Angabe von Gründen und
         kostenlos kündigen. Die Kündigung wird zum Ende der bereits
-        bezahlten Monatsperiode wirksam; der laufende Monat wird nicht
+        bezahlten Monatsperiode wirksam; ausserhalb der oben beschriebenen
+        Garantie für den ersten Monat wird der laufende Monat nicht
         anteilig zurückerstattet. Der Kunde kann auch jederzeit die Formel
         wechseln, wirksam ab dem nächsten Abrechnungszyklus.
       </p>
       <p>
-        Erweist sich eine konkrete Frage offensichtlich als ausserhalb des
-        in Artikel 3 beschriebenen Rahmens (insbesondere ein
+        Erweist sich ein konkretes Anliegen offensichtlich als ausserhalb
+        des in Artikel 3 beschriebenen Rahmens (insbesondere ein
         aussergewöhnlicher Vorgang), informiert Thrax Legal den Kunden vor
         jeder Bearbeitung und verweist ihn an eine Anwältin oder einen
         Anwalt, statt eine unpassende Leistung zu verrechnen.
@@ -414,20 +468,28 @@ function En() {
 
       <h2>3. Description and price of the plans</h2>
       <p>
-        <strong>Essential</strong>: CHF 49 per month. Includes 1 written
-        question per month (answer within 72 business hours) and access to
-        the template library.
+        <strong>Essential</strong>: CHF 49 per month. Includes unlimited
+        messaging for quick questions (one-off clarifications not
+        requiring in-depth research, within the limits of reasonable,
+        personal use), 2 full matters handled per month (drafting or
+        reviewing a contract, resolving a dispute, explaining a
+        procedure) handled within 72 business hours, and access to the
+        full template library.
       </p>
       <p>
-        <strong>Growth</strong>: CHF 119 per month. Includes 3 written
-        questions per month (answer within 48 business hours), a contract
-        review included every month, and access to the full template
-        library.
+        <strong>Growth</strong>: CHF 119 per month. Includes unlimited
+        messaging for quick questions, 5 full matters handled per month
+        within 48 business hours (24 hours for matters flagged as
+        urgent), a priority contract review included every month, and
+        access to the full template library.
       </p>
       <p>
-        Any question beyond the volume included in the chosen plan is
-        billed at CHF 39, fixed price, regardless of complexity. The plans
-        and the service beyond the included volume cover commercial
+        Any full matter beyond the volume included in the chosen plan is
+        billed at CHF 39, fixed price, regardless of complexity. Clearly
+        unreasonable use of the unlimited messaging feature (volume or
+        frequency inconsistent with normal use by an SME or self-employed
+        individual) may be reclassified by Thrax Legal as full matters,
+        with prior notice to the customer. The plans cover commercial
         contract law, employment law, corporate law, amicable debt
         collection, FADP compliance and commercial leases. Exceptional
         matters (fundraising, court litigation, restructuring, mergers and
@@ -441,32 +503,49 @@ function En() {
         case no VAT is charged.]
       </p>
 
-      <h2>4. Subscription and payment</h2>
+      <h2>4. Subscription, payment and price lock</h2>
       <p>
         The subscription is confirmed once the first online payment is
         received and automatically renews each month for the same amount
         until cancelled by the customer. There is{" "}
         <strong>no minimum commitment period</strong>.
       </p>
-
-      <h2>5. Response time</h2>
       <p>
-        Every written question receives a drafted answer within the
-        timeframe stated for the chosen plan (72 business hours for
-        Essential, 48 business hours for Growth), counted from receipt of
-        all the information and documents needed to handle it.
+        The price paid by the customer at the time of subscribing remains
+        unchanged for as long as their subscription stays active without
+        interruption, even if Thrax Legal raises its rates for new
+        customers. A cancellation followed by a new subscription is
+        treated as a new subscription, subject to the rates in effect at
+        that time.
       </p>
 
-      <h2>6. Cancellation and refunds</h2>
+      <h2>5. Handling time</h2>
+      <p>
+        Every full matter is handled within the timeframe stated for the
+        chosen plan (72 business hours for Essential, 48 business hours for
+        Growth, 24 hours for matters flagged as urgent under the Growth
+        plan), counted from receipt of all the information and documents
+        needed to handle it. Quick questions receive an answer within a
+        reasonable, generally shorter timeframe.
+      </p>
+
+      <h2>6. Cancellation, refunds and guarantee</h2>
+      <p>
+        If the customer is not satisfied during their first month of
+        subscription, they may request a full refund of that first month,
+        with no reason required, by simply emailing{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
       <p>
         The customer may cancel their subscription at any time, without
         reason or fees. Cancellation takes effect at the end of the monthly
-        period already paid for; the current month is not refunded on a
-        pro-rata basis. The customer may also switch plans at any time,
-        effective from the next billing cycle.
+        period already paid for; outside the first-month guarantee
+        described above, the current month is not refunded on a pro-rata
+        basis. The customer may also switch plans at any time, effective
+        from the next billing cycle.
       </p>
       <p>
-        If a specific question is clearly outside the scope described in
+        If a specific matter is clearly outside the scope described in
         Section 3 (in particular an exceptional matter), Thrax Legal
         informs the customer before any work begins and refers them to a
         lawyer rather than billing for an unsuitable service.
@@ -568,26 +647,36 @@ function It() {
 
       <h2>3. Descrizione e prezzi delle formule</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 49 al mese. Comprende 1 domanda
-        scritta al mese (risposta entro 72 ore lavorative) e l&rsquo;accesso
-        alla libreria di modelli.
+        <strong>Essentiel</strong>: CHF 49 al mese. Comprende una
+        messaggistica illimitata per le domande rapide (chiarimenti
+        puntuali che non richiedono una ricerca approfondita, nei limiti
+        di un uso ragionevole e personale), 2 pratiche complete gestite al
+        mese (redazione o revisione di un contratto, risoluzione di una
+        controversia, spiegazione di una procedura) gestite entro 72 ore
+        lavorative, e l&rsquo;accesso alla libreria completa di modelli.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 119 al mese. Comprende 3 domande
-        scritte al mese (risposta entro 48 ore lavorative), una revisione
-        contrattuale inclusa ogni mese, e l&rsquo;accesso alla libreria
+        <strong>Croissance</strong>: CHF 119 al mese. Comprende la
+        messaggistica illimitata per le domande rapide, 5 pratiche
+        complete gestite al mese entro 48 ore lavorative (24 ore per le
+        urgenze segnalate come tali), una revisione contrattuale
+        prioritaria inclusa ogni mese, e l&rsquo;accesso alla libreria
         completa di modelli.
       </p>
       <p>
-        Ogni domanda oltre il volume incluso nella formula sottoscritta è
-        fatturata CHF 39, prezzo fisso, indipendentemente dalla sua
-        complessità. Le formule e il servizio oltre il volume incluso
-        coprono il diritto dei contratti commerciali, il diritto del
-        lavoro, il diritto societario, il recupero crediti amichevole, la
-        conformità nLPD e le locazioni commerciali. Le operazioni
-        eccezionali (raccolta fondi, contenzioso giudiziario,
-        ristrutturazione, fusioni e acquisizioni) non sono incluse e sono
-        oggetto di un rinvio verso un avvocato specializzato.
+        Ogni pratica completa oltre il volume incluso nella formula
+        sottoscritta è fatturata CHF 39, prezzo fisso, indipendentemente
+        dalla sua complessità. Un uso manifestamente irragionevole della
+        messaggistica illimitata (volume o frequenza incompatibili con un
+        uso normale da parte di una PMI o di un indipendente) può essere
+        riqualificato da Thrax Legal come pratiche complete, previa
+        informazione al cliente. Le formule coprono il diritto dei
+        contratti commerciali, il diritto del lavoro, il diritto
+        societario, il recupero crediti amichevole, la conformità nLPD e
+        le locazioni commerciali. Le operazioni eccezionali (raccolta
+        fondi, contenzioso giudiziario, ristrutturazione, fusioni e
+        acquisizioni) non sono incluse e sono oggetto di un rinvio verso
+        un avvocato specializzato.
       </p>
       <p>
         I prezzi sono indicati in franchi svizzeri (CHF). [Regime IVA da
@@ -597,34 +686,51 @@ function It() {
         applicata.]
       </p>
 
-      <h2>4. Sottoscrizione e pagamento</h2>
+      <h2>4. Sottoscrizione, pagamento e blocco del prezzo</h2>
       <p>
         L&rsquo;abbonamento è confermato al ricevimento del primo pagamento
         online e si rinnova automaticamente ogni mese per lo stesso
         importo, fino a disdetta da parte del cliente. Non c&rsquo;è{" "}
         <strong>alcun impegno di durata minima</strong>.
       </p>
-
-      <h2>5. Termine di risposta</h2>
       <p>
-        Ogni domanda scritta riceve una risposta redatta entro il termine
-        indicato per la formula sottoscritta (72 ore lavorative per
-        Essentiel, 48 ore lavorative per Croissance), a partire dal
-        ricevimento di tutte le informazioni e i documenti necessari alla
-        sua trattazione.
+        Il prezzo pagato dal cliente al momento della sottoscrizione resta
+        invariato finché il suo abbonamento rimane attivo senza
+        interruzioni, anche se Thrax Legal aumenta le tariffe per i nuovi
+        clienti. Una disdetta seguita da una nuova sottoscrizione è
+        considerata un nuovo abbonamento, soggetto alle tariffe in vigore
+        in quel momento.
       </p>
 
-      <h2>6. Disdetta e rimborso</h2>
+      <h2>5. Termine di gestione</h2>
+      <p>
+        Ogni pratica completa viene gestita entro il termine indicato per
+        la formula sottoscritta (72 ore lavorative per Essentiel, 48 ore
+        lavorative per Croissance, 24 ore per le urgenze segnalate nella
+        formula Croissance), a partire dal ricevimento di tutte le
+        informazioni e i documenti necessari alla sua trattazione. Le
+        domande rapide ricevono una risposta entro un termine ragionevole,
+        generalmente più breve.
+      </p>
+
+      <h2>6. Disdetta, rimborso e garanzia</h2>
+      <p>
+        Se il cliente non è soddisfatto durante il primo mese di
+        abbonamento, può richiedere il rimborso integrale di tale primo
+        mese, senza dover fornire motivazioni, tramite semplice email a{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
       <p>
         Il cliente può disdire il proprio abbonamento in qualsiasi momento,
         senza motivo né costi. La disdetta ha effetto alla fine del periodo
-        mensile già pagato; il mese in corso non è rimborsato
+        mensile già pagato; al di fuori della garanzia del primo mese
+        sopra descritta, il mese in corso non è rimborsato
         proporzionalmente. Il cliente può anche cambiare formula in
         qualsiasi momento, con effetto dal ciclo di fatturazione
         successivo.
       </p>
       <p>
-        Se una domanda precisa risulta manifestamente al di fuori
+        Se una pratica precisa risulta manifestamente al di fuori
         dell&rsquo;ambito descritto all&rsquo;articolo 3 (in particolare
         un&rsquo;operazione eccezionale), Thrax Legal ne informa il cliente
         prima di qualsiasi trattazione e lo indirizza verso un avvocato
