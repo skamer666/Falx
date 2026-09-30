@@ -110,7 +110,7 @@ export default async function InscriptionPage({
                     name="password"
                     type="password"
                     required
-                    minLength={10}
+                    minLength={8}
                     autoComplete="new-password"
                     className={INPUT}
                   />

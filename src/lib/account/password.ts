@@ -6,7 +6,7 @@ const ITERATIONS = 100_000;
 const SALT_BYTES = 16;
 const HASH_BYTES = 32;
 
-export const PASSWORD_MIN_LENGTH = 10;
+export const PASSWORD_MIN_LENGTH = 8;
 export const PASSWORD_MAX_LENGTH = 200;
 
 function toBase64(bytes: Uint8Array): string {
@@ -68,6 +68,19 @@ const COMMON = new Set([
   "motdepasse1",
   "thraxlegal",
   "changeme123",
+  "password",
+  "password1",
+  "12345678",
+  "123456789",
+  "qwertyui",
+  "azertyui",
+  "azerty123",
+  "qwerty123",
+  "motdepasse",
+  "iloveyou",
+  "11111111",
+  "00000000",
+  "abcd1234",
 ]);
 
 export function checkPasswordStrength(password: string, email: string): PasswordProblem | null {

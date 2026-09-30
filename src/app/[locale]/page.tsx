@@ -102,12 +102,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
           "10 questions rapides par mois (réponse écrite)",
-          "3 dossiers complets par mois (contrat, litige, procédure)",
+          "5 dossiers complets par mois (contrat, litige, procédure)",
           "Appel ou visio de cadrage de 15 min pour chaque dossier",
           "Traité sous 72h ouvrées",
           "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée chez un avocat : plus de 2'000 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 3'000 CHF",
         ctaLabel: "Choisir Essentiel",
         highlight: false,
       },
@@ -120,13 +120,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         badge: "Le plus choisi",
         features: [
           "30 questions rapides par mois (réponse écrite)",
-          "8 dossiers complets par mois",
+          "12 dossiers complets par mois",
           "Appel ou visio de cadrage de 30 min pour chaque dossier",
           "Traité sous 48h (24h pour les urgences signalées)",
           "Révision de contrat prioritaire chaque mois",
           "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée chez un avocat : plus de 6'000 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 9'000 CHF",
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
@@ -154,7 +154,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       "dossier": {
         "title": "Dossier",
-        "limit": "3 par mois en Essentiel, 8 en Croissance",
+        "limit": "5 par mois en Essentiel, 12 en Croissance",
         "definition": "Un travail complet avec un livrable écrit, pour une situation et une partie. Il comprend l'appel ou la visio de cadrage, le livrable et un tour de corrections.",
         "examplesLabel": "Exemples",
         "examples": [
@@ -208,7 +208,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Question rapide ou dossier : quelle différence ?",
-        a: "Une question rapide est une question précise avec une réponse écrite de quelques lignes (environ 15 minutes de travail, sans lire ni rédiger de document) : 10 par mois en Essentiel, 30 en Croissance. Un dossier est un travail complet avec un livrable écrit, pour une situation et une partie : 3 par mois en Essentiel, 8 en Croissance. Deux livrables, deux personnes ou un document de plus de 20 pages comptent pour 2 dossiers. Le détail, avec des exemples, figure dans la section « Question rapide ou dossier » de cette page.",
+        a: "Une question rapide est une question précise avec une réponse écrite de quelques lignes (environ 15 minutes de travail, sans lire ni rédiger de document) : 10 par mois en Essentiel, 30 en Croissance. Un dossier est un travail complet avec un livrable écrit, pour une situation et une partie : 5 par mois en Essentiel, 12 en Croissance. Deux livrables, deux personnes ou un document de plus de 20 pages comptent pour 2 dossiers. Le détail, avec des exemples, figure dans la section « Question rapide ou dossier » de cette page.",
       },
       {
         q: "Puis-je résilier à tout moment ?",
@@ -263,12 +263,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
           "10 schnelle Fragen pro Monat (schriftliche Antwort)",
-          "3 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
+          "5 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
           "Telefon- oder Videogespräch (15 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 72 Arbeitsstunden",
           "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 2'000",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 3'000",
         ctaLabel: "Essentiel wählen",
         highlight: false,
       },
@@ -281,13 +281,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         badge: "Am häufigsten gewählt",
         features: [
           "30 schnelle Fragen pro Monat (schriftliche Antwort)",
-          "8 vollständige Anliegen pro Monat",
+          "12 vollständige Anliegen pro Monat",
           "Telefon- oder Videogespräch (30 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
           "Prioritäre Vertragsprüfung jeden Monat",
           "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 6'000",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 9'000",
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
@@ -315,7 +315,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       "dossier": {
         "title": "Anliegen",
-        "limit": "3 pro Monat bei Essentiel, 8 bei Croissance",
+        "limit": "5 pro Monat bei Essentiel, 12 bei Croissance",
         "definition": "Eine vollständige Arbeit mit schriftlichem Ergebnis, für eine Situation und eine Partei. Sie umfasst das Telefon- oder Videogespräch, das Ergebnis und eine Korrekturrunde.",
         "examplesLabel": "Beispiele",
         "examples": [
@@ -369,7 +369,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Was ist der Unterschied zwischen einer schnellen Frage und einem Anliegen?",
-        a: "Eine schnelle Frage ist eine präzise Frage mit einer schriftlichen Antwort in wenigen Zeilen (rund 15 Minuten Arbeit, ohne ein Dokument zu lesen oder zu verfassen): 10 pro Monat bei Essentiel, 30 bei Croissance. Ein Anliegen ist eine vollständige Arbeit mit schriftlichem Ergebnis, für eine Situation und eine Partei: 3 pro Monat bei Essentiel, 8 bei Croissance. Zwei Ergebnisse, zwei Personen oder ein Dokument von mehr als 20 Seiten zählen als 2 Anliegen. Die Details mit Beispielen stehen im Abschnitt «Schnelle Frage oder Anliegen» auf dieser Seite.",
+        a: "Eine schnelle Frage ist eine präzise Frage mit einer schriftlichen Antwort in wenigen Zeilen (rund 15 Minuten Arbeit, ohne ein Dokument zu lesen oder zu verfassen): 10 pro Monat bei Essentiel, 30 bei Croissance. Ein Anliegen ist eine vollständige Arbeit mit schriftlichem Ergebnis, für eine Situation und eine Partei: 5 pro Monat bei Essentiel, 12 bei Croissance. Zwei Ergebnisse, zwei Personen oder ein Dokument von mehr als 20 Seiten zählen als 2 Anliegen. Die Details mit Beispielen stehen im Abschnitt «Schnelle Frage oder Anliegen» auf dieser Seite.",
       },
       {
         q: "Kann ich jederzeit kündigen?",
@@ -424,12 +424,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "For freelancers and micro-businesses",
         features: [
           "10 quick questions per month (written answer)",
-          "3 full matters handled per month (contract, dispute, procedure)",
+          "5 full matters handled per month (contract, dispute, procedure)",
           "15-minute call or video briefing for every matter",
           "Handled within 72 business hours",
           "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value from a lawyer: over CHF 2,000",
+        valueNote: "Estimated value from a lawyer: over CHF 3,000",
         ctaLabel: "Choose Essential",
         highlight: false,
       },
@@ -442,13 +442,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         badge: "Most chosen",
         features: [
           "30 quick questions per month (written answer)",
-          "8 full matters handled per month",
+          "12 full matters handled per month",
           "30-minute call or video briefing for every matter",
           "Handled within 48 business hours (24h for flagged urgent cases)",
           "Priority contract review every month",
           "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value from a lawyer: over CHF 6,000",
+        valueNote: "Estimated value from a lawyer: over CHF 9,000",
         ctaLabel: "Choose Growth",
         highlight: true,
       },
@@ -476,7 +476,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       "dossier": {
         "title": "Matter",
-        "limit": "3 per month on Essential, 8 on Growth",
+        "limit": "5 per month on Essential, 12 on Growth",
         "definition": "A complete piece of work with a written deliverable, for one situation and one party. It includes the call or video briefing, the deliverable and one round of corrections.",
         "examplesLabel": "Examples",
         "examples": [
@@ -530,7 +530,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "What's the difference between a quick question and a matter?",
-        a: "A quick question is one precise question with a written answer of a few lines (about 15 minutes of work, without reading or drafting a document): 10 per month on Essential, 30 on Growth. A matter is a complete piece of work with a written deliverable, for one situation and one party: 3 per month on Essential, 8 on Growth. Two deliverables, two people or a document over 20 pages count as 2 matters. The details, with examples, are in the \"Quick question or matter\" section of this page.",
+        a: "A quick question is one precise question with a written answer of a few lines (about 15 minutes of work, without reading or drafting a document): 10 per month on Essential, 30 on Growth. A matter is a complete piece of work with a written deliverable, for one situation and one party: 5 per month on Essential, 12 on Growth. Two deliverables, two people or a document over 20 pages count as 2 matters. The details, with examples, are in the \"Quick question or matter\" section of this page.",
       },
       {
         q: "Can I cancel anytime?",
@@ -585,12 +585,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Per indipendenti e micro-imprese",
         features: [
           "10 domande rapide al mese (risposta scritta)",
-          "3 pratiche complete al mese (contratto, controversia, procedura)",
+          "5 pratiche complete al mese (contratto, controversia, procedura)",
           "Chiamata o videochiamata di inquadramento di 15 min per ogni pratica",
           "Gestite entro 72 ore lavorative",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato presso un avvocato: oltre CHF 2'000",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 3'000",
         ctaLabel: "Scegliere Essentiel",
         highlight: false,
       },
@@ -603,13 +603,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         badge: "Il più scelto",
         features: [
           "30 domande rapide al mese (risposta scritta)",
-          "8 pratiche complete al mese",
+          "12 pratiche complete al mese",
           "Chiamata o videochiamata di inquadramento di 30 min per ogni pratica",
           "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
           "Revisione contrattuale prioritaria ogni mese",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato presso un avvocato: oltre CHF 6'000",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 9'000",
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
@@ -637,7 +637,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       "dossier": {
         "title": "Pratica",
-        "limit": "3 al mese con Essentiel, 8 con Croissance",
+        "limit": "5 al mese con Essentiel, 12 con Croissance",
         "definition": "Un lavoro completo con un risultato scritto, per una situazione e una controparte. Comprende la chiamata o videochiamata di inquadramento, il risultato e un giro di correzioni.",
         "examplesLabel": "Esempi",
         "examples": [
@@ -691,7 +691,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Domanda rapida o pratica: che differenza c'è?",
-        a: "Una domanda rapida è una domanda precisa con una risposta scritta di poche righe (circa 15 minuti di lavoro, senza leggere né redigere documenti): 10 al mese con Essentiel, 30 con Croissance. Una pratica è un lavoro completo con un risultato scritto, per una situazione e una controparte: 3 al mese con Essentiel, 8 con Croissance. Due risultati, due persone o un documento di oltre 20 pagine contano come 2 pratiche. I dettagli, con esempi, sono nella sezione «Domanda rapida o pratica» di questa pagina.",
+        a: "Una domanda rapida è una domanda precisa con una risposta scritta di poche righe (circa 15 minuti di lavoro, senza leggere né redigere documenti): 10 al mese con Essentiel, 30 con Croissance. Una pratica è un lavoro completo con un risultato scritto, per una situazione e una controparte: 5 al mese con Essentiel, 12 con Croissance. Due risultati, due persone o un documento di oltre 20 pagine contano come 2 pratiche. I dettagli, con esempi, sono nella sezione «Domanda rapida o pratica» di questa pagina.",
       },
       {
         q: "Posso disdire in qualsiasi momento?",
@@ -752,7 +752,7 @@ function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
           </li>
         ))}
       </ul>
-      <PrimaryButton href={`/${locale}/checkout/${tier.slug}`} className="mt-8 w-full px-6 py-3">
+      <PrimaryButton href={`/${locale}/compte/inscription?plan=${tier.slug.replace("abonnement-", "")}`} className="mt-8 w-full px-6 py-3">
         {tier.ctaLabel}
       </PrimaryButton>
     </div>
@@ -834,7 +834,7 @@ export default async function Home({
       price: tier.price.replace(/\D/g, ""),
       priceCurrency: "CHF",
       availability: "https://schema.org/InStock",
-      url: `/${locale}/checkout/${tier.slug}`,
+      url: `/${locale}/compte/inscription?plan=${tier.slug.replace("abonnement-", "")}`,
     })),
   };
 

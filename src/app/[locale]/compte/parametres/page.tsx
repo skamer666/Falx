@@ -155,13 +155,13 @@ export default async function ParametresPage({
                   <label htmlFor="password" className={LABEL}>
                     {t.newPassword}
                   </label>
-                  <input id="password" name="password" type="password" required minLength={10} autoComplete="new-password" className={INPUT} />
+                  <input id="password" name="password" type="password" required minLength={8} autoComplete="new-password" className={INPUT} />
                 </div>
                 <div>
                   <label htmlFor="confirm" className={LABEL}>
                     {t.confirmPassword}
                   </label>
-                  <input id="confirm" name="confirm" type="password" required minLength={10} autoComplete="new-password" className={INPUT} />
+                  <input id="confirm" name="confirm" type="password" required minLength={8} autoComplete="new-password" className={INPUT} />
                 </div>
                 <SubmitButton className="self-start">{t.savePassword}</SubmitButton>
               </form>

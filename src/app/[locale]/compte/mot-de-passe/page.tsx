@@ -86,13 +86,13 @@ export default async function ResetPasswordPage({
                   <label htmlFor="password" className={LABEL}>
                     {t.passwordLabel}
                   </label>
-                  <input id="password" name="password" type="password" required minLength={10} autoComplete="new-password" className={INPUT} />
+                  <input id="password" name="password" type="password" required minLength={8} autoComplete="new-password" className={INPUT} />
                 </div>
                 <div>
                   <label htmlFor="confirm" className={LABEL}>
                     {t.confirmLabel}
                   </label>
-                  <input id="confirm" name="confirm" type="password" required minLength={10} autoComplete="new-password" className={INPUT} />
+                  <input id="confirm" name="confirm" type="password" required minLength={8} autoComplete="new-password" className={INPUT} />
                 </div>
                 <SubmitButton className="mt-2 w-full">{t.cta}</SubmitButton>
               </form>
