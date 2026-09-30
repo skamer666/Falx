@@ -24,8 +24,8 @@ export type Dossier = {
 };
 
 export const PLAN_QUOTAS: Record<Plan, number> = {
-  essentiel: 2,
-  croissance: 5,
+  essentiel: 3,
+  croissance: 8,
 };
 
 // Dynamic import defers resolution of the "cloudflare:workers" native module to

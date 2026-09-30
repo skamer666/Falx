@@ -46,6 +46,18 @@ type HomeContent = {
   tiers: [Tier, Tier];
   perksHeading: string;
   perks: { title: string; text: string }[];
+  clarityLinkLabel: string;
+  clarity: {
+    heading: string;
+    intro: string;
+    quick: { title: string; limit: string; definition: string; examplesLabel: string; examples: string[] };
+    dossier: { title: string; limit: string; definition: string; examplesLabel: string; examples: string[] };
+    twoHeading: string;
+    two: string[];
+    freeHeading: string;
+    free: string[];
+    promise: string;
+  };
   templateNote: string;
   extraQuestionNote: string;
   valueDisclaimer: string;
@@ -90,8 +102,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mois",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
-          "Messagerie illimitée pour vos questions rapides",
-          "2 dossiers complets par mois (contrat, litige, procédure)",
+          "10 questions rapides par mois (réponse écrite)",
+          "3 dossiers complets par mois (contrat, litige, procédure)",
           "Appel ou visio de cadrage de 15 min pour chaque dossier",
           "Traité sous 72h ouvrées",
           "Prix bloqué à vie, résiliable à tout moment",
@@ -108,8 +120,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Pour les PME avec des besoins réguliers",
         badge: "Le plus choisi",
         features: [
-          "Messagerie illimitée pour vos questions rapides",
-          "5 dossiers complets par mois",
+          "30 questions rapides par mois (réponse écrite)",
+          "8 dossiers complets par mois",
           "Appel ou visio de cadrage de 30 min pour chaque dossier",
           "Traité sous 48h (24h pour les urgences signalées)",
           "Révision de contrat prioritaire chaque mois",
@@ -122,10 +134,52 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Inclus dans les deux formules",
     perks: [
-      { title: "Satisfait ou remboursé 30 jours", text: "Si le service ne vous convient pas, votre premier mois vous est remboursé, sans justification." },
+      { title: "Sans surprise", text: "Ce qui compte comme une question ou comme un dossier est défini ci-dessous, et le décompte vous est confirmé avant de commencer." },
       { title: "Un humain au bout du fil", text: "Vous expliquez votre situation de vive voix (appel ou visio), la réponse reste écrite et vous la gardez." },
       { title: "Pause quand vous voulez", text: "Mettez votre abonnement en pause jusqu'à 2 mois par an, sans perdre votre prix bloqué." },
     ],
+    clarityLinkLabel: "Que compte-t-on comme un dossier ou comme une question ?",
+    clarity: {
+      "heading": "Question rapide ou dossier : c'est défini noir sur blanc",
+      "intro": "Pas de zone grise : voici exactement ce qui compte comme une question rapide et ce qui compte comme un dossier.",
+      "quick": {
+        "title": "Question rapide",
+        "limit": "10 par mois en Essentiel, 30 en Croissance",
+        "definition": "Une question précise, une réponse écrite de quelques lignes. Environ 15 minutes de travail, sans lire ni rédiger de document. Réponse écrite sous 48 h ouvrées (24 h en Croissance).",
+        "examplesLabel": "Exemples",
+        "examples": [
+          "Cette mention est-elle obligatoire sur ma facture ?",
+          "Puis-je demander un acompte de 50 % ?",
+          "Quel préavis dois-je respecter pour ce type de contrat ?"
+        ]
+      },
+      "dossier": {
+        "title": "Dossier",
+        "limit": "3 par mois en Essentiel, 8 en Croissance",
+        "definition": "Un travail complet avec un livrable écrit, pour une situation et une partie. Il comprend l'appel ou la visio de cadrage, le livrable et un tour de corrections.",
+        "examplesLabel": "Exemples",
+        "examples": [
+          "Rédiger un contrat de travail",
+          "Relire et corriger un contrat de vente (jusqu'à 20 pages)",
+          "Envoyer une mise en demeure à un client qui ne paie pas",
+          "Rédiger vos CGV ou votre politique de confidentialité nLPD"
+        ]
+      },
+      "twoHeading": "Quand ça compte pour 2 dossiers",
+      "two": [
+        "Deux livrables différents (un contrat de travail et un règlement du personnel)",
+        "Deux personnes ou sociétés concernées (deux employés, deux clients débiteurs)",
+        "Un document de plus de 20 pages : un dossier de plus par tranche de 20 pages entamée",
+        "Un nouveau sujet, une fois le premier dossier livré"
+      ],
+      "freeHeading": "Ce qui ne compte pas en plus",
+      "free": [
+        "Les questions de suivi sur un dossier livré (pendant 14 jours)",
+        "Un tour de corrections sur le livrable",
+        "Les échanges et pièces complémentaires sur la même situation"
+      ],
+      "promise": "Avant de commencer, je vous confirme par écrit ce que compte votre demande. Rien n'est décompté sans que vous l'ayez vu."
+    },
     templateNote: "Bibliothèque complète de modèles incluse sur les deux formules (valeur 500 CHF).",
     extraQuestionNote: "Dossier supplémentaire : 79 CHF, prix fixe.",
     valueDisclaimer:
@@ -152,15 +206,15 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Que couvre l'abonnement ?",
-        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), une messagerie illimitée pour vos questions rapides et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses. Nous vous orientons vers un avocat spécialisé.",
+        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), des questions rapides par écrit, un appel ou une visio de cadrage pour chaque dossier et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses. Nous vous orientons vers un avocat spécialisé.",
       },
       {
         q: "Question rapide ou dossier : quelle différence ?",
-        a: "Une question rapide est une clarification ponctuelle, répondue sans recherche approfondie (illimité, usage raisonnable). Un dossier, c'est un vrai travail : rédiger un contrat, régler un litige, structurer une démarche. C'est ce volume qui est compté dans votre forfait mensuel (2 pour Essentiel, 5 pour Croissance).",
+        a: "Une question rapide est une question précise avec une réponse écrite de quelques lignes (environ 15 minutes de travail, sans lire ni rédiger de document) : 10 par mois en Essentiel, 30 en Croissance. Un dossier est un travail complet avec un livrable écrit, pour une situation et une partie : 3 par mois en Essentiel, 8 en Croissance. Deux livrables, deux personnes ou un document de plus de 20 pages comptent pour 2 dossiers. Le détail, avec des exemples, figure dans la section « Question rapide ou dossier » de cette page.",
       },
       {
         q: "Puis-je résilier à tout moment ?",
-        a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Et pendant les 30 premiers jours, votre premier mois vous est remboursé si le service ne vous convient pas. Vous pouvez aussi mettre l'abonnement en pause jusqu'à 2 mois par an. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
+        a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Vous pouvez aussi mettre l'abonnement en pause jusqu'à 2 mois par an. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
       },
       {
         q: "Puis-je parler à quelqu'un au téléphone ?",
@@ -168,7 +222,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Et si j'ai plus de dossiers que mon forfait ?",
-        a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe, jamais à l'heure. Vous pouvez aussi changer de formule à tout moment.",
+        a: "Chaque dossier supplémentaire est facturé 79 CHF, prix fixe, jamais à l'heure. Si vous dépassez vos questions rapides du mois, la question est traitée le mois suivant ou, si vous préférez une réponse immédiate, comptée comme un dossier. Vous pouvez aussi changer de formule à tout moment.",
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
@@ -210,8 +264,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ Monat",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
-          "Unbegrenzte Nachrichten für schnelle Fragen",
-          "2 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
+          "10 schnelle Fragen pro Monat (schriftliche Antwort)",
+          "3 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
           "Telefon- oder Videogespräch (15 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 72 Arbeitsstunden",
           "Preis lebenslang fixiert, jederzeit kündbar",
@@ -228,8 +282,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Für KMU mit regelmässigem Bedarf",
         badge: "Am häufigsten gewählt",
         features: [
-          "Unbegrenzte Nachrichten für schnelle Fragen",
-          "5 vollständige Anliegen pro Monat",
+          "30 schnelle Fragen pro Monat (schriftliche Antwort)",
+          "8 vollständige Anliegen pro Monat",
           "Telefon- oder Videogespräch (30 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
           "Prioritäre Vertragsprüfung jeden Monat",
@@ -242,10 +296,52 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "In beiden Formeln inklusive",
     perks: [
-      { title: "30 Tage Geld-zurück-Garantie", text: "Wenn der Service nicht passt, erhalten Sie Ihren ersten Monat zurück, ohne Begründung." },
+      { title: "Ohne Überraschungen", text: "Was als Frage oder Anliegen zählt, ist unten definiert, und die Zählung wird Ihnen vor Beginn bestätigt." },
       { title: "Ein Mensch am Telefon", text: "Sie schildern Ihre Situation mündlich (Telefon oder Video), die Antwort bleibt schriftlich und gehört Ihnen." },
       { title: "Pause, wann Sie wollen", text: "Pausieren Sie Ihr Abo bis zu 2 Monate pro Jahr, ohne Ihren fixierten Preis zu verlieren." },
     ],
+    clarityLinkLabel: "Was zählt als Anliegen oder als schnelle Frage?",
+    clarity: {
+      "heading": "Schnelle Frage oder Anliegen: klar definiert",
+      "intro": "Keine Grauzone: So sehen Sie genau, was als schnelle Frage und was als Anliegen zählt.",
+      "quick": {
+        "title": "Schnelle Frage",
+        "limit": "10 pro Monat bei Essentiel, 30 bei Croissance",
+        "definition": "Eine präzise Frage, eine schriftliche Antwort in wenigen Zeilen. Rund 15 Minuten Arbeit, ohne ein Dokument zu lesen oder zu verfassen. Schriftliche Antwort innert 48 Arbeitsstunden (24 bei Croissance).",
+        "examplesLabel": "Beispiele",
+        "examples": [
+          "Ist diese Angabe auf meiner Rechnung Pflicht?",
+          "Darf ich eine Anzahlung von 50 % verlangen?",
+          "Welche Kündigungsfrist gilt für diese Vertragsart?"
+        ]
+      },
+      "dossier": {
+        "title": "Anliegen",
+        "limit": "3 pro Monat bei Essentiel, 8 bei Croissance",
+        "definition": "Eine vollständige Arbeit mit schriftlichem Ergebnis, für eine Situation und eine Partei. Sie umfasst das Telefon- oder Videogespräch, das Ergebnis und eine Korrekturrunde.",
+        "examplesLabel": "Beispiele",
+        "examples": [
+          "Einen Arbeitsvertrag verfassen",
+          "Einen Kaufvertrag prüfen und korrigieren (bis 20 Seiten)",
+          "Einem säumigen Kunden eine Mahnung senden",
+          "Ihre AGB oder Ihre DSG-Datenschutzerklärung verfassen"
+        ]
+      },
+      "twoHeading": "Wann es als 2 Anliegen zählt",
+      "two": [
+        "Zwei verschiedene Ergebnisse (ein Arbeitsvertrag und ein Personalreglement)",
+        "Zwei betroffene Personen oder Firmen (zwei Angestellte, zwei säumige Kunden)",
+        "Ein Dokument von mehr als 20 Seiten: ein zusätzliches Anliegen pro angefangene 20 Seiten",
+        "Ein neues Thema, nachdem das erste Anliegen geliefert wurde"
+      ],
+      "freeHeading": "Was nicht zusätzlich zählt",
+      "free": [
+        "Folgefragen zu einem gelieferten Anliegen (während 14 Tagen)",
+        "Eine Korrekturrunde am Ergebnis",
+        "Austausch und weitere Unterlagen zur selben Situation"
+      ],
+      "promise": "Bevor ich beginne, bestätige ich Ihnen schriftlich, wie viele Anliegen Ihre Anfrage zählt. Nichts wird angerechnet, ohne dass Sie es gesehen haben."
+    },
     templateNote: "Vollständige Vorlagenbibliothek in beiden Formeln inklusive (Wert CHF 500).",
     extraQuestionNote: "Zusätzliches Anliegen: CHF 79, Fixpreis.",
     valueDisclaimer:
@@ -272,15 +368,15 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Was deckt das Abo ab?",
-        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), unbegrenzte Nachrichten für schnelle Fragen und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung) sind nicht inbegriffen. Dafür verweisen wir Sie an eine spezialisierte Anwältin oder einen Anwalt.",
+        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), schnelle Fragen mit schriftlicher Antwort, ein Telefon- oder Videogespräch zur Klärung jedes Anliegens und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalbeschaffung, Gerichtsverfahren, Restrukturierung) sind nicht enthalten. Wir verweisen Sie an einen spezialisierten Anwalt.",
       },
       {
         q: "Was ist der Unterschied zwischen einer schnellen Frage und einem Anliegen?",
-        a: "Eine schnelle Frage ist eine punktuelle Klärung, ohne vertiefte Recherche beantwortet (unbegrenzt, angemessene Nutzung). Ein Anliegen ist echte Arbeit: einen Vertrag erstellen, einen Streitfall lösen, ein Verfahren strukturieren. Genau dieses Volumen zählt in Ihrem monatlichen Kontingent (2 bei Essentiel, 5 bei Croissance).",
+        a: "Eine schnelle Frage ist eine präzise Frage mit einer schriftlichen Antwort in wenigen Zeilen (rund 15 Minuten Arbeit, ohne ein Dokument zu lesen oder zu verfassen): 10 pro Monat bei Essentiel, 30 bei Croissance. Ein Anliegen ist eine vollständige Arbeit mit schriftlichem Ergebnis, für eine Situation und eine Partei: 3 pro Monat bei Essentiel, 8 bei Croissance. Zwei Ergebnisse, zwei Personen oder ein Dokument von mehr als 20 Seiten zählen als 2 Anliegen. Die Details mit Beispielen stehen im Abschnitt «Schnelle Frage oder Anliegen» auf dieser Seite.",
       },
       {
         q: "Kann ich jederzeit kündigen?",
-        a: "Ja, ohne Vertragsbindung und ohne Begründung: Die Kündigung wird am Ende des bereits bezahlten Monats wirksam. In den ersten 30 Tagen erhalten Sie Ihren ersten Monat zurück, wenn der Service nicht passt. Sie können das Abo auch bis zu 2 Monate pro Jahr pausieren. Ihr Preis bleibt fixiert, solange Sie ununterbrochen abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
+        a: "Ja, ohne Vertragsbindung und ohne Begründung: Die Kündigung wird am Ende des bereits bezahlten Monats wirksam. Sie können das Abo auch bis zu 2 Monate pro Jahr pausieren. Ihr Preis bleibt fixiert, solange Sie ununterbrochen abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
       },
       {
         q: "Kann ich mit jemandem telefonieren?",
@@ -288,7 +384,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Was passiert, wenn ich mehr Anliegen habe als mein Kontingent?",
-        a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis, nie nach Stundensatz. Sie können auch jederzeit die Formel wechseln.",
+        a: "Jedes zusätzliche Anliegen kostet CHF 79, Fixpreis, nie nach Stundensatz. Wenn Sie Ihre schnellen Fragen des Monats überschreiten, wird die Frage im Folgemonat bearbeitet oder, wenn Sie eine sofortige Antwort bevorzugen, als Anliegen angerechnet. Sie können die Formel auch jederzeit wechseln.",
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
@@ -330,8 +426,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ month",
         tagline: "For freelancers and micro-businesses",
         features: [
-          "Unlimited messaging for quick questions",
-          "2 full matters handled per month (contract, dispute, procedure)",
+          "10 quick questions per month (written answer)",
+          "3 full matters handled per month (contract, dispute, procedure)",
           "15-minute call or video briefing for every matter",
           "Handled within 72 business hours",
           "Price locked for life, cancel anytime",
@@ -348,8 +444,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "For SMEs with regular needs",
         badge: "Most chosen",
         features: [
-          "Unlimited messaging for quick questions",
-          "5 full matters handled per month",
+          "30 quick questions per month (written answer)",
+          "8 full matters handled per month",
           "30-minute call or video briefing for every matter",
           "Handled within 48 business hours (24h for flagged urgent cases)",
           "Priority contract review every month",
@@ -362,10 +458,52 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Included in both plans",
     perks: [
-      { title: "30-day money-back guarantee", text: "If the service is not right for you, your first month is refunded, no questions asked." },
+      { title: "No surprises", text: "What counts as a question or a matter is defined below, and the count is confirmed to you before we start." },
       { title: "A human on the line", text: "You explain your situation out loud (call or video), the answer stays in writing and is yours to keep." },
       { title: "Pause whenever you want", text: "Pause your subscription for up to 2 months a year without losing your locked price." },
     ],
+    clarityLinkLabel: "What counts as a matter or a quick question?",
+    clarity: {
+      "heading": "Quick question or matter: clearly defined",
+      "intro": "No grey area: here is exactly what counts as a quick question and what counts as a matter.",
+      "quick": {
+        "title": "Quick question",
+        "limit": "10 per month on Essential, 30 on Growth",
+        "definition": "One precise question, a written answer of a few lines. About 15 minutes of work, without reading or drafting a document. Written answer within 48 business hours (24 on Growth).",
+        "examplesLabel": "Examples",
+        "examples": [
+          "Is this mention mandatory on my invoice?",
+          "Can I ask for a 50% deposit?",
+          "What notice period applies to this type of contract?"
+        ]
+      },
+      "dossier": {
+        "title": "Matter",
+        "limit": "3 per month on Essential, 8 on Growth",
+        "definition": "A complete piece of work with a written deliverable, for one situation and one party. It includes the call or video briefing, the deliverable and one round of corrections.",
+        "examplesLabel": "Examples",
+        "examples": [
+          "Draft an employment contract",
+          "Review and correct a sales contract (up to 20 pages)",
+          "Send a formal demand to a customer who does not pay",
+          "Draft your T&Cs or your FADP privacy policy"
+        ]
+      },
+      "twoHeading": "When it counts as 2 matters",
+      "two": [
+        "Two different deliverables (an employment contract and a staff policy)",
+        "Two people or companies involved (two employees, two debtors)",
+        "A document over 20 pages: one extra matter per 20 pages started",
+        "A new topic, once the first matter is delivered"
+      ],
+      "freeHeading": "What does not count on top",
+      "free": [
+        "Follow-up questions on a delivered matter (for 14 days)",
+        "One round of corrections on the deliverable",
+        "Exchanges and extra documents on the same situation"
+      ],
+      "promise": "Before starting, I confirm in writing what your request counts as. Nothing is deducted without you having seen it."
+    },
     templateNote: "Full template library included on both plans (CHF 500 value).",
     extraQuestionNote: "Extra matter: CHF 79, fixed price.",
     valueDisclaimer:
@@ -392,15 +530,15 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "What does the subscription cover?",
-        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), unlimited messaging for quick questions, and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included. We refer you to a specialised lawyer.",
+        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), quick questions answered in writing, a call or video briefing for every matter and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included. We refer you to a specialised lawyer.",
       },
       {
         q: "What's the difference between a quick question and a matter?",
-        a: "A quick question is a one-off clarification, answered without in-depth research (unlimited, fair use). A matter is real work: drafting a contract, resolving a dispute, structuring a procedure. That's the volume counted against your monthly plan (2 for Essential, 5 for Growth).",
+        a: "A quick question is one precise question with a written answer of a few lines (about 15 minutes of work, without reading or drafting a document): 10 per month on Essential, 30 on Growth. A matter is a complete piece of work with a written deliverable, for one situation and one party: 3 per month on Essential, 8 on Growth. Two deliverables, two people or a document over 20 pages count as 2 matters. The details, with examples, are in the \"Quick question or matter\" section of this page.",
       },
       {
         q: "Can I cancel anytime?",
-        a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. During the first 30 days your first month is refunded if the service is not right for you. You can also pause your subscription for up to 2 months a year. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
+        a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. You can also pause your subscription for up to 2 months a year. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
       },
       {
         q: "Can I talk to someone on the phone?",
@@ -408,7 +546,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "What if I have more matters than my plan allows?",
-        a: "Each extra matter is billed at CHF 79, fixed price, never hourly. You can also switch plans at any time.",
+        a: "Each extra matter is billed at CHF 79, fixed price, never hourly. If you go over your quick questions for the month, the question is handled the following month or, if you prefer an immediate answer, counted as a matter. You can also change plan at any time.",
       },
       {
         q: "Is Thrax Legal a law firm?",
@@ -450,8 +588,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         priceNote: "/ mese",
         tagline: "Per indipendenti e micro-imprese",
         features: [
-          "Messaggistica illimitata per le domande rapide",
-          "2 pratiche complete al mese (contratto, controversia, procedura)",
+          "10 domande rapide al mese (risposta scritta)",
+          "3 pratiche complete al mese (contratto, controversia, procedura)",
           "Chiamata o videochiamata di inquadramento di 15 min per ogni pratica",
           "Gestite entro 72 ore lavorative",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
@@ -468,8 +606,8 @@ const CONTENT: Record<Locale, HomeContent> = {
         tagline: "Per PMI con esigenze regolari",
         badge: "Il più scelto",
         features: [
-          "Messaggistica illimitata per le domande rapide",
-          "5 pratiche complete al mese",
+          "30 domande rapide al mese (risposta scritta)",
+          "8 pratiche complete al mese",
           "Chiamata o videochiamata di inquadramento di 30 min per ogni pratica",
           "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
           "Revisione contrattuale prioritaria ogni mese",
@@ -482,10 +620,52 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Incluso in entrambe le formule",
     perks: [
-      { title: "Soddisfatti o rimborsati per 30 giorni", text: "Se il servizio non fa per voi, il primo mese vi viene rimborsato, senza dover fornire motivazioni." },
+      { title: "Senza sorprese", text: "Cosa conta come domanda o pratica è definito qui sotto, e il conteggio vi viene confermato prima di iniziare." },
       { title: "Una persona all'altro capo del filo", text: "Esponete la vostra situazione a voce (chiamata o video), la risposta resta scritta e la conservate." },
       { title: "Pausa quando volete", text: "Mettete in pausa l'abbonamento fino a 2 mesi all'anno, senza perdere il prezzo bloccato." },
     ],
+    clarityLinkLabel: "Cosa conta come pratica o come domanda rapida?",
+    clarity: {
+      "heading": "Domanda rapida o pratica: definito chiaramente",
+      "intro": "Nessuna zona grigia: ecco esattamente cosa conta come domanda rapida e cosa conta come pratica.",
+      "quick": {
+        "title": "Domanda rapida",
+        "limit": "10 al mese con Essentiel, 30 con Croissance",
+        "definition": "Una domanda precisa, una risposta scritta di poche righe. Circa 15 minuti di lavoro, senza leggere né redigere documenti. Risposta scritta entro 48 ore lavorative (24 con Croissance).",
+        "examplesLabel": "Esempi",
+        "examples": [
+          "Questa menzione è obbligatoria sulla mia fattura?",
+          "Posso chiedere un acconto del 50 %?",
+          "Quale preavviso devo rispettare per questo tipo di contratto?"
+        ]
+      },
+      "dossier": {
+        "title": "Pratica",
+        "limit": "3 al mese con Essentiel, 8 con Croissance",
+        "definition": "Un lavoro completo con un risultato scritto, per una situazione e una controparte. Comprende la chiamata o videochiamata di inquadramento, il risultato e un giro di correzioni.",
+        "examplesLabel": "Esempi",
+        "examples": [
+          "Redigere un contratto di lavoro",
+          "Rivedere e correggere un contratto di vendita (fino a 20 pagine)",
+          "Inviare una diffida a un cliente che non paga",
+          "Redigere le vostre condizioni generali o la vostra informativa sulla privacy nLPD"
+        ]
+      },
+      "twoHeading": "Quando conta come 2 pratiche",
+      "two": [
+        "Due risultati diversi (un contratto di lavoro e un regolamento del personale)",
+        "Due persone o società coinvolte (due dipendenti, due debitori)",
+        "Un documento di oltre 20 pagine: una pratica in più per ogni blocco di 20 pagine iniziato",
+        "Un nuovo argomento, dopo la consegna della prima pratica"
+      ],
+      "freeHeading": "Cosa non conta in più",
+      "free": [
+        "Domande di seguito su una pratica consegnata (per 14 giorni)",
+        "Un giro di correzioni sul risultato",
+        "Scambi e documenti aggiuntivi sulla stessa situazione"
+      ],
+      "promise": "Prima di iniziare, vi confermo per iscritto cosa conta la vostra richiesta. Nulla viene conteggiato senza che lo abbiate visto."
+    },
     templateNote: "Libreria completa di modelli inclusa in entrambe le formule (valore CHF 500).",
     extraQuestionNote: "Pratica supplementare: CHF 79, prezzo fisso.",
     valueDisclaimer:
@@ -512,15 +692,15 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Cosa copre l'abbonamento?",
-        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), messaggistica illimitata per le domande rapide e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse. Vi indirizziamo verso un avvocato specializzato.",
+        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), domande rapide con risposta scritta, una chiamata o videochiamata di inquadramento per ogni pratica e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse. Vi indirizziamo a un avvocato specializzato.",
       },
       {
         q: "Domanda rapida o pratica: che differenza c'è?",
-        a: "Una domanda rapida è un chiarimento puntuale, senza ricerca approfondita (illimitato, uso ragionevole). Una pratica è un vero lavoro: redigere un contratto, risolvere una controversia, strutturare una procedura. È questo volume ad essere conteggiato nel pacchetto mensile (2 per Essentiel, 5 per Croissance).",
+        a: "Una domanda rapida è una domanda precisa con una risposta scritta di poche righe (circa 15 minuti di lavoro, senza leggere né redigere documenti): 10 al mese con Essentiel, 30 con Croissance. Una pratica è un lavoro completo con un risultato scritto, per una situazione e una controparte: 3 al mese con Essentiel, 8 con Croissance. Due risultati, due persone o un documento di oltre 20 pagine contano come 2 pratiche. I dettagli, con esempi, sono nella sezione «Domanda rapida o pratica» di questa pagina.",
       },
       {
         q: "Posso disdire in qualsiasi momento?",
-        a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Nei primi 30 giorni il primo mese vi viene rimborsato se il servizio non fa per voi. Potete anche mettere in pausa l'abbonamento fino a 2 mesi all'anno. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
+        a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Potete anche mettere in pausa l'abbonamento fino a 2 mesi all'anno. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
       },
       {
         q: "Posso parlare con qualcuno al telefono?",
@@ -528,7 +708,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Cosa succede se ho più pratiche del mio pacchetto?",
-        a: "Ogni pratica supplementare è fatturata CHF 79, prezzo fisso, mai a ore. Potete anche cambiare formula in qualsiasi momento.",
+        a: "Ogni pratica supplementare costa CHF 79, prezzo fisso, mai a ore. Se superate le domande rapide del mese, la domanda è trattata il mese successivo o, se preferite una risposta immediata, conteggiata come pratica. Potete anche cambiare formula in qualsiasi momento.",
       },
       {
         q: "Thrax Legal è uno studio legale?",
@@ -780,7 +960,64 @@ export default async function Home({
                     {t.templateNote} {t.extraQuestionNote}
                   </p>
                   <p className="mt-2 text-xs text-text-muted/70">{t.valueDisclaimer}</p>
+                  <a href="#dossiers" className="mt-4 inline-block text-sm font-medium text-text underline underline-offset-4">
+                    {t.clarityLinkLabel}
+                  </a>
                 </div>
+              </Reveal>
+            </Container>
+          </section>
+
+          <section id="dossiers" className="theme-light scroll-mt-28 border-t border-border bg-bg py-16 md:py-24">
+            <Container className="mx-auto max-w-4xl">
+              <Reveal>
+                <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                  {t.clarity.heading}
+                </h2>
+                <p className="mx-auto mt-3 max-w-xl text-center text-base leading-relaxed text-text-muted">
+                  {t.clarity.intro}
+                </p>
+                <div className="mt-10 grid gap-6 md:grid-cols-2">
+                  {[t.clarity.quick, t.clarity.dossier].map((block) => (
+                    <div key={block.title} className="rounded-2xl border border-border bg-surface p-6 md:p-8">
+                      <h3 className="text-xl font-semibold tracking-[-0.02em] text-text">{block.title}</h3>
+                      <p className="mt-1 text-sm font-medium text-text">{block.limit}</p>
+                      <p className="mt-4 text-sm leading-relaxed text-text-muted">{block.definition}</p>
+                      <p className="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
+                        {block.examplesLabel}
+                      </p>
+                      <ul className="mt-2 space-y-2 text-sm text-text">
+                        {block.examples.map((item) => (
+                          <li key={item} className="flex gap-2">
+                            <span aria-hidden className="text-text-muted">&middot;</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 grid gap-6 md:grid-cols-2">
+                  {[
+                    { heading: t.clarity.twoHeading, items: t.clarity.two },
+                    { heading: t.clarity.freeHeading, items: t.clarity.free },
+                  ].map((block) => (
+                    <div key={block.heading} className="rounded-2xl border border-border bg-bg p-6 md:p-8">
+                      <h3 className="text-base font-semibold text-text">{block.heading}</h3>
+                      <ul className="mt-3 space-y-2 text-sm text-text-muted">
+                        {block.items.map((item) => (
+                          <li key={item} className="flex gap-2">
+                            <span aria-hidden>&middot;</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <p className="mx-auto mt-8 max-w-xl text-center text-sm font-medium leading-relaxed text-text">
+                  {t.clarity.promise}
+                </p>
               </Reveal>
             </Container>
           </section>

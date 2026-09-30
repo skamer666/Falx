@@ -95,31 +95,24 @@ function Fr() {
 
       <h2>3. Description et prix des formules</h2>
       <p>
-        <strong>Essentiel</strong> : 149 CHF par mois. Comprend une
-        messagerie illimitée pour les questions rapides (clarifications
-        ponctuelles ne nécessitant pas de recherche approfondie, dans les
-        limites d&rsquo;un usage raisonnable et personnel), 2 dossiers
-        complets pris en charge par mois (rédaction ou relecture de
-        contrat, résolution de litige, explication de démarche) traités
-        sous 72 heures ouvrées, et l&rsquo;accès à la bibliothèque complète
-        de modèles de documents.
+        <strong>Essentiel</strong> : 149 CHF par mois. Comprend 10 questions rapides par mois, 3 dossiers complets par mois traités sous 72 heures ouvrées, un appel ou une visioconférence de cadrage pour chaque dossier (article 4) et l&rsquo;accès à la bibliothèque complète de modèles de documents.
       </p>
       <p>
-        <strong>Croissance</strong> : 349 CHF par mois. Comprend la
-        messagerie illimitée pour les questions rapides, 5 dossiers
-        complets pris en charge par mois traités sous 48 heures ouvrées (24
-        heures pour les urgences signalées comme telles), une révision de
-        contrat prioritaire incluse chaque mois, et l&rsquo;accès à la
-        bibliothèque complète de modèles.
+        <strong>Croissance</strong> : 349 CHF par mois. Comprend 30 questions rapides par mois, 8 dossiers complets par mois traités sous 48 heures ouvrées (24 heures pour les urgences signalées comme telles), un appel ou une visioconférence de cadrage pour chaque dossier (article 4), une révision de contrat prioritaire incluse chaque mois et l&rsquo;accès à la bibliothèque complète de modèles.
+      </p>
+      <p>
+        <strong>Question rapide.</strong> Une question rapide est une question précise sur une situation, à laquelle Thrax Legal répond par écrit en quelques lignes, sans lecture ni rédaction de document et sans recherche approfondie (environ 15 minutes de travail au maximum). Si la réponse exige la lecture d&rsquo;un document, une recherche approfondie ou une rédaction, la demande est un dossier&nbsp;; le client en est informé avant tout traitement. Les questions de suivi portant sur un dossier livré, posées dans les 14 jours suivant sa livraison, ne sont pas décomptées. Au-delà du nombre de questions rapides inclus dans la formule, la question est traitée le mois suivant ou, au choix du client, décomptée comme un dossier.
+      </p>
+      <p>
+        <strong>Dossier.</strong> Un dossier est un travail complet donnant lieu à un livrable écrit (par exemple&nbsp;: rédaction ou relecture d&rsquo;un contrat, mise en demeure, règlement d&rsquo;un litige avec une partie, rédaction de conditions générales ou d&rsquo;une politique de confidentialité, analyse d&rsquo;un bail commercial). Il comprend le cadrage, le livrable et un tour de corrections demandé dans les 14 jours suivant la livraison.
+      </p>
+      <p>
+        <strong>Décompte des dossiers.</strong> Une demande compte pour deux dossiers ou plus lorsqu&rsquo;elle porte sur plusieurs livrables distincts (par exemple un contrat de travail et un règlement du personnel), sur plusieurs parties distinctes (par exemple deux employés ou deux débiteurs) ou sur un document de plus de 20 pages (un dossier supplémentaire par tranche de 20 pages entamée). Une nouvelle demande portant sur un autre sujet, formulée après la livraison d&rsquo;un dossier, est un nouveau dossier. Avant de commencer, Thrax Legal confirme par écrit au client le nombre de dossiers que compte sa demande&nbsp;; le client peut alors la préciser, la réduire ou y renoncer avant tout décompte.
       </p>
       <p>
         Tout dossier complet au-delà du volume inclus dans la formule
         souscrite est facturé 79 CHF, prix fixe, quelle que soit sa
-        complexité. Un usage manifestement déraisonnable de la messagerie
-        illimitée (volume ou fréquence incompatible avec un usage normal
-        d&rsquo;une PME ou d&rsquo;un indépendant) peut être requalifié en
-        dossiers complets par Thrax Legal, qui en informe le client au
-        préalable. Les formules couvrent le droit des contrats commerciaux,
+        complexité. Les formules couvrent le droit des contrats commerciaux,
         le droit du travail, le droit des sociétés, le recouvrement
         amiable, la conformité nLPD et les baux commerciaux. Les opérations
         exceptionnelles (levée de fonds, contentieux devant un tribunal,
@@ -132,7 +125,6 @@ function Fr() {
         prestataire est susceptible de bénéficier du régime belge de
         franchise de la taxe, auquel cas la TVA n&rsquo;est pas appliquée.]
       </p>
-
       <p>
         Chaque dossier complet comprend un appel téléphonique ou une visioconférence de cadrage, sur rendez-vous, de 15 minutes en formule Essentiel et de 30 minutes en formule Croissance, au cours desquels le client expose sa situation de vive voix. La réponse, les conseils et les documents sont ensuite fournis par écrit. Le client peut renoncer à cet échange et décrire sa situation par écrit.
       </p>
@@ -164,8 +156,8 @@ function Fr() {
         ouvrées pour Croissance, 24 heures pour les urgences signalées en
         formule Croissance), à compter de la réception de toutes les
         informations et documents nécessaires à son traitement. Les
-        questions rapides reçoivent une réponse dans un délai raisonnable,
-        généralement plus court.
+        questions rapides reçoivent une réponse écrite dans un délai de 48
+        heures ouvrées (24 heures ouvrées en formule Croissance).
       </p>
 
       <h2>6. Résiliation et remboursement</h2>
@@ -174,8 +166,7 @@ function Fr() {
         frais, par simple email à{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
         résiliation prend effet à la fin de la période mensuelle déjà
-        payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au prorata, sous
-        réserve de la garantie satisfait ou remboursé ci-dessous.
+        payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au prorata.
         Le client peut également changer de formule à tout moment, avec
         effet au prochain cycle de facturation.
       </p>
@@ -185,10 +176,6 @@ function Fr() {
         Thrax Legal en informe le client avant tout traitement et
         l&rsquo;oriente vers un avocat plutôt que de facturer une prestation
         inadaptée.
-      </p>
-
-      <p>
-        Garantie satisfait ou remboursé&nbsp;: dans les 30 jours suivant son premier paiement, le client qui souscrit un abonnement pour la première fois peut demander, par email et sans avoir à se justifier, le remboursement intégral de ce premier paiement. La demande met fin à l&rsquo;abonnement. Cette garantie ne s&rsquo;applique qu&rsquo;une fois par client et ne couvre pas les dossiers supplémentaires facturés à l&rsquo;unité.
       </p>
 
       <h2>7. Responsabilité</h2>
@@ -291,31 +278,24 @@ function De() {
 
       <h2>3. Beschreibung und Preise der Formeln</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst unbegrenzte
-        Nachrichten für schnelle Fragen (punktuelle Klärungen ohne
-        vertiefte Recherche, im Rahmen einer angemessenen und persönlichen
-        Nutzung), 2 vollständige Anliegen pro Monat (Erstellung oder
-        Prüfung eines Vertrags, Lösung eines Streitfalls, Erklärung eines
-        Verfahrens), bearbeitet innert 72 Arbeitsstunden, sowie Zugang zur
-        vollständigen Vorlagenbibliothek.
+        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst 10 schnelle Fragen pro Monat, 3 vollständige Anliegen pro Monat, bearbeitet innert 72 Arbeitsstunden, ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4) sowie Zugang zur vollständigen Vorlagenbibliothek.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst
-        unbegrenzte Nachrichten für schnelle Fragen, 5 vollständige
-        Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24
-        Stunden bei als solche gemeldeten Notfällen), eine im Preis
-        inbegriffene prioritäre Vertragsprüfung pro Monat, und Zugang zur
-        vollständigen Vorlagenbibliothek.
+        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst 30 schnelle Fragen pro Monat, 8 vollständige Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24 Stunden bei als solche gemeldeten Notfällen), ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4), eine im Preis inbegriffene prioritäre Vertragsprüfung pro Monat und Zugang zur vollständigen Vorlagenbibliothek.
+      </p>
+      <p>
+        <strong>Schnelle Frage.</strong> Eine schnelle Frage ist eine präzise Frage zu einer Situation, die Thrax Legal in wenigen Zeilen schriftlich beantwortet, ohne Lesen oder Verfassen eines Dokuments und ohne vertiefte Recherche (höchstens rund 15 Minuten Arbeit). Erfordert die Antwort das Lesen eines Dokuments, eine vertiefte Recherche oder ein Verfassen, ist die Anfrage ein Anliegen; der Kunde wird vor jeder Bearbeitung informiert. Folgefragen zu einem gelieferten Anliegen, die innert 14 Tagen nach Lieferung gestellt werden, werden nicht angerechnet. Über die in der Formel enthaltene Anzahl schneller Fragen hinaus wird die Frage im Folgemonat bearbeitet oder, nach Wahl des Kunden, als Anliegen angerechnet.
+      </p>
+      <p>
+        <strong>Anliegen.</strong> Ein Anliegen ist eine vollständige Arbeit mit schriftlichem Ergebnis (zum Beispiel: Erstellung oder Prüfung eines Vertrags, Mahnung, Lösung eines Streitfalls mit einer Partei, Erstellung von Allgemeinen Geschäftsbedingungen oder einer Datenschutzerklärung, Analyse eines Geschäftsmietvertrags). Es umfasst die Klärung, das Ergebnis und eine Korrekturrunde, die innert 14 Tagen nach Lieferung verlangt wird.
+      </p>
+      <p>
+        <strong>Zählung der Anliegen.</strong> Eine Anfrage zählt als zwei oder mehr Anliegen, wenn sie mehrere getrennte Ergebnisse betrifft (zum Beispiel einen Arbeitsvertrag und ein Personalreglement), mehrere getrennte Parteien (zum Beispiel zwei Angestellte oder zwei Schuldner) oder ein Dokument von mehr als 20 Seiten (ein zusätzliches Anliegen pro angefangene 20 Seiten). Eine neue Anfrage zu einem anderen Thema nach der Lieferung eines Anliegens ist ein neues Anliegen. Vor Beginn bestätigt Thrax Legal dem Kunden schriftlich, wie viele Anliegen seine Anfrage zählt; der Kunde kann sie dann präzisieren, verkleinern oder darauf verzichten, bevor etwas angerechnet wird.
       </p>
       <p>
         Jedes vollständige Anliegen über das in der gewählten Formel
         enthaltene Volumen hinaus wird zu CHF 79, Fixpreis, unabhängig von
-        seiner Komplexität, verrechnet. Eine offensichtlich unangemessene
-        Nutzung der unbegrenzten Nachrichtenfunktion (Umfang oder Häufigkeit
-        unvereinbar mit der normalen Nutzung durch ein KMU oder eine
-        selbstständige Person) kann von Thrax Legal als vollständiges
-        Anliegen umqualifiziert werden, wobei der Kunde vorgängig informiert
-        wird. Die Formeln decken Handelsvertragsrecht, Arbeitsrecht,
+        seiner Komplexität, verrechnet. Die Formeln decken Handelsvertragsrecht, Arbeitsrecht,
         Gesellschaftsrecht, gütliches Inkasso, DSG-Konformität und
         Geschäftsmietverträge ab. Aussergewöhnliche Vorgänge
         (Kapitalerhöhung, Gerichtsverfahren, Restrukturierung, Fusionen und
@@ -328,7 +308,6 @@ function De() {
         könnte von der belgischen Kleinunternehmerregelung profitieren,
         wonach keine MWST erhoben wird.]
       </p>
-
       <p>
         Jedes vollständige Anliegen umfasst nach Terminvereinbarung ein Telefon- oder Videogespräch zur Klärung von 15 Minuten in der Formel Essentiel und 30 Minuten in der Formel Croissance, in dem der Kunde seine Situation mündlich schildert. Antwort, Beratung und Dokumente werden anschliessend schriftlich geliefert. Der Kunde kann auf dieses Gespräch verzichten und seine Situation schriftlich schildern.
       </p>
@@ -359,7 +338,8 @@ function De() {
         Arbeitsstunden bei Croissance, 24 Stunden bei in der Formel
         Croissance gemeldeten Notfällen), ab Eingang aller für die
         Bearbeitung nötigen Angaben und Unterlagen. Schnelle Fragen erhalten
-        eine Antwort innert angemessener, in der Regel kürzerer Frist.
+        innert 48 Arbeitsstunden eine schriftliche Antwort (24 Arbeitsstunden
+        in der Formel Croissance).
       </p>
 
       <h2>6. Kündigung und Rückerstattung</h2>
@@ -368,8 +348,7 @@ function De() {
         kostenlos kündigen, per einfacher E-Mail an{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Die
         Kündigung wird zum Ende der bereits bezahlten Monatsperiode
-        wirksam; der laufende Monat wird nicht anteilig zurückerstattet, vorbehaltlich der
-        nachstehenden Geld-zurück-Garantie.
+        wirksam; der laufende Monat wird nicht anteilig zurückerstattet.
         Der Kunde kann auch jederzeit die Formel wechseln, wirksam ab dem
         nächsten Abrechnungszyklus.
       </p>
@@ -379,10 +358,6 @@ function De() {
         aussergewöhnlicher Vorgang), informiert Thrax Legal den Kunden vor
         jeder Bearbeitung und verweist ihn an eine Anwältin oder einen
         Anwalt, statt eine unpassende Leistung zu verrechnen.
-      </p>
-
-      <p>
-        Geld-zurück-Garantie: Ein Kunde, der erstmals ein Abonnement abschliesst, kann innert 30 Tagen nach seiner ersten Zahlung per E-Mail und ohne Begründung die vollständige Rückerstattung dieser ersten Zahlung verlangen. Das Begehren beendet das Abonnement. Diese Garantie gilt nur einmal pro Kunde und deckt keine einzeln verrechneten zusätzlichen Anliegen.
       </p>
 
       <h2>7. Haftung</h2>
@@ -484,28 +459,23 @@ function En() {
 
       <h2>3. Description and price of the plans</h2>
       <p>
-        <strong>Essential</strong>: CHF 149 per month. Includes unlimited
-        messaging for quick questions (one-off clarifications not
-        requiring in-depth research, within the limits of reasonable,
-        personal use), 2 full matters handled per month (drafting or
-        reviewing a contract, resolving a dispute, explaining a
-        procedure) handled within 72 business hours, and access to the
-        full template library.
+        <strong>Essential</strong>: CHF 149 per month. Includes 10 quick questions per month, 3 full matters per month handled within 72 business hours, a call or video briefing for each matter (article 4) and access to the full library of document templates.
       </p>
       <p>
-        <strong>Growth</strong>: CHF 349 per month. Includes unlimited
-        messaging for quick questions, 5 full matters handled per month
-        within 48 business hours (24 hours for matters flagged as
-        urgent), a priority contract review included every month, and
-        access to the full template library.
+        <strong>Growth</strong>: CHF 349 per month. Includes 30 quick questions per month, 8 full matters per month handled within 48 business hours (24 hours for urgent cases flagged as such), a call or video briefing for each matter (article 4), one priority contract review included each month and access to the full template library.
+      </p>
+      <p>
+        <strong>Quick question.</strong> A quick question is a precise question about a situation, which Thrax Legal answers in writing in a few lines, without reading or drafting a document and without in-depth research (about 15 minutes of work at most). If the answer requires reading a document, in-depth research or drafting, the request is a matter; the customer is informed before any work starts. Follow-up questions on a delivered matter, asked within 14 days of delivery, are not counted. Beyond the number of quick questions included in the plan, the question is handled the following month or, at the customer&rsquo;s choice, counted as a matter.
+      </p>
+      <p>
+        <strong>Matter.</strong> A matter is a complete piece of work resulting in a written deliverable (for example: drafting or reviewing a contract, a formal demand, settling a dispute with one party, drafting general terms and conditions or a privacy policy, analysing a commercial lease). It includes the briefing, the deliverable and one round of corrections requested within 14 days of delivery.
+      </p>
+      <p>
+        <strong>Counting matters.</strong> A request counts as two or more matters when it covers several separate deliverables (for example an employment contract and a staff policy), several separate parties (for example two employees or two debtors) or a document of more than 20 pages (one extra matter per 20 pages started). A new request on a different subject made after a matter has been delivered is a new matter. Before starting, Thrax Legal confirms to the customer in writing how many matters the request counts as; the customer may then clarify, reduce or withdraw it before anything is counted.
       </p>
       <p>
         Any full matter beyond the volume included in the chosen plan is
-        billed at CHF 79, fixed price, regardless of complexity. Clearly
-        unreasonable use of the unlimited messaging feature (volume or
-        frequency inconsistent with normal use by an SME or self-employed
-        individual) may be reclassified by Thrax Legal as full matters,
-        with prior notice to the customer. The plans cover commercial
+        billed at CHF 79, fixed price, regardless of complexity. The plans cover commercial
         contract law, employment law, corporate law, amicable debt
         collection, FADP compliance and commercial leases. Exceptional
         matters (fundraising, court litigation, restructuring, mergers and
@@ -518,7 +488,6 @@ function En() {
         eligible for the Belgian small-business VAT exemption, in which
         case no VAT is charged.]
       </p>
-
       <p>
         Each full matter includes a call or video briefing by appointment, lasting 15 minutes on the Essentiel plan and 30 minutes on the Croissance plan, during which the customer explains their situation out loud. The answer, advice and documents are then provided in writing. The customer may waive this briefing and describe their situation in writing.
       </p>
@@ -549,8 +518,8 @@ function En() {
         chosen plan (72 business hours for Essential, 48 business hours for
         Growth, 24 hours for matters flagged as urgent under the Growth
         plan), counted from receipt of all the information and documents
-        needed to handle it. Quick questions receive an answer within a
-        reasonable, generally shorter timeframe.
+        needed to handle it. Quick questions receive a written answer within 48
+        business hours (24 business hours under the Growth plan).
       </p>
 
       <h2>6. Cancellation and refunds</h2>
@@ -559,8 +528,7 @@ function En() {
         reason or fees, by simply emailing{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
         Cancellation takes effect at the end of the monthly period already
-        paid for; the current month is not refunded on a pro-rata basis, subject to the
-        money-back guarantee below.
+        paid for; the current month is not refunded on a pro-rata basis.
         The customer may also switch plans at any time, effective from the
         next billing cycle.
       </p>
@@ -569,10 +537,6 @@ function En() {
         Section 3 (in particular an exceptional matter), Thrax Legal
         informs the customer before any work begins and refers them to a
         lawyer rather than billing for an unsuitable service.
-      </p>
-
-      <p>
-        Money-back guarantee: a customer subscribing for the first time may, within 30 days of their first payment, request by email and without giving reasons a full refund of that first payment. The request ends the subscription. This guarantee applies once per customer and does not cover extra matters billed individually.
       </p>
 
       <h2>7. Liability</h2>
@@ -671,30 +635,24 @@ function It() {
 
       <h2>3. Descrizione e prezzi delle formule</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 al mese. Comprende una
-        messaggistica illimitata per le domande rapide (chiarimenti
-        puntuali che non richiedono una ricerca approfondita, nei limiti
-        di un uso ragionevole e personale), 2 pratiche complete gestite al
-        mese (redazione o revisione di un contratto, risoluzione di una
-        controversia, spiegazione di una procedura) gestite entro 72 ore
-        lavorative, e l&rsquo;accesso alla libreria completa di modelli.
+        <strong>Essentiel</strong>: CHF 149 al mese. Comprende 10 domande rapide al mese, 3 pratiche complete al mese gestite entro 72 ore lavorative, una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4) e l&rsquo;accesso alla libreria completa di modelli di documenti.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 al mese. Comprende la
-        messaggistica illimitata per le domande rapide, 5 pratiche
-        complete gestite al mese entro 48 ore lavorative (24 ore per le
-        urgenze segnalate come tali), una revisione contrattuale
-        prioritaria inclusa ogni mese, e l&rsquo;accesso alla libreria
-        completa di modelli.
+        <strong>Croissance</strong>: CHF 349 al mese. Comprende 30 domande rapide al mese, 8 pratiche complete al mese gestite entro 48 ore lavorative (24 ore per le urgenze segnalate come tali), una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4), una revisione contrattuale prioritaria inclusa ogni mese e l&rsquo;accesso alla libreria completa di modelli.
+      </p>
+      <p>
+        <strong>Domanda rapida.</strong> Una domanda rapida è una domanda precisa su una situazione, alla quale Thrax Legal risponde per iscritto in poche righe, senza leggere né redigere un documento e senza ricerca approfondita (al massimo circa 15 minuti di lavoro). Se la risposta richiede la lettura di un documento, una ricerca approfondita o una redazione, la richiesta è una pratica; il cliente ne è informato prima di ogni trattamento. Le domande di seguito su una pratica consegnata, poste entro 14 giorni dalla consegna, non sono conteggiate. Oltre il numero di domande rapide incluso nella formula, la domanda è trattata il mese successivo o, a scelta del cliente, conteggiata come pratica.
+      </p>
+      <p>
+        <strong>Pratica.</strong> Una pratica è un lavoro completo che dà luogo a un risultato scritto (ad esempio: redazione o revisione di un contratto, diffida, risoluzione di una controversia con una controparte, redazione di condizioni generali o di un&rsquo;informativa sulla privacy, analisi di un contratto di locazione commerciale). Comprende l&rsquo;inquadramento, il risultato e un giro di correzioni richiesto entro 14 giorni dalla consegna.
+      </p>
+      <p>
+        <strong>Conteggio delle pratiche.</strong> Una richiesta conta come due o più pratiche quando riguarda più risultati distinti (ad esempio un contratto di lavoro e un regolamento del personale), più controparti distinte (ad esempio due dipendenti o due debitori) o un documento di oltre 20 pagine (una pratica in più per ogni blocco di 20 pagine iniziato). Una nuova richiesta su un altro argomento, formulata dopo la consegna di una pratica, è una nuova pratica. Prima di iniziare, Thrax Legal conferma per iscritto al cliente quante pratiche conta la richiesta; il cliente può quindi precisarla, ridurla o rinunciarvi prima di qualsiasi conteggio.
       </p>
       <p>
         Ogni pratica completa oltre il volume incluso nella formula
         sottoscritta è fatturata CHF 79, prezzo fisso, indipendentemente
-        dalla sua complessità. Un uso manifestamente irragionevole della
-        messaggistica illimitata (volume o frequenza incompatibili con un
-        uso normale da parte di una PMI o di un indipendente) può essere
-        riqualificato da Thrax Legal come pratiche complete, previa
-        informazione al cliente. Le formule coprono il diritto dei
+        dalla sua complessità. Le formule coprono il diritto dei
         contratti commerciali, il diritto del lavoro, il diritto
         societario, il recupero crediti amichevole, la conformità nLPD e
         le locazioni commerciali. Le operazioni eccezionali (raccolta
@@ -709,7 +667,6 @@ function It() {
         IVA per le piccole imprese, nel qual caso l&rsquo;IVA non viene
         applicata.]
       </p>
-
       <p>
         Ogni pratica completa comprende una chiamata o videochiamata di inquadramento su appuntamento, di 15 minuti nella formula Essentiel e di 30 minuti nella formula Croissance, durante la quale il cliente espone a voce la propria situazione. La risposta, i consigli e i documenti sono poi forniti per iscritto. Il cliente può rinunciare a questo colloquio e descrivere la propria situazione per iscritto.
       </p>
@@ -741,8 +698,8 @@ function It() {
         lavorative per Croissance, 24 ore per le urgenze segnalate nella
         formula Croissance), a partire dal ricevimento di tutte le
         informazioni e i documenti necessari alla sua trattazione. Le
-        domande rapide ricevono una risposta entro un termine ragionevole,
-        generalmente più breve.
+        domande rapide ricevono una risposta scritta entro 48 ore lavorative
+        (24 ore lavorative nella formula Croissance).
       </p>
 
       <h2>6. Disdetta e rimborso</h2>
@@ -751,8 +708,7 @@ function It() {
         senza motivo né costi, tramite semplice email a{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
         disdetta ha effetto alla fine del periodo mensile già pagato; il
-        mese in corso non è rimborsato proporzionalmente, fatta salva la
-        garanzia soddisfatti o rimborsati qui sotto. Il cliente può
+        mese in corso non è rimborsato proporzionalmente. Il cliente può
         anche cambiare formula in qualsiasi momento, con effetto dal ciclo
         di fatturazione successivo.
       </p>
@@ -762,10 +718,6 @@ function It() {
         un&rsquo;operazione eccezionale), Thrax Legal ne informa il cliente
         prima di qualsiasi trattazione e lo indirizza verso un avvocato
         invece di fatturare una prestazione inadatta.
-      </p>
-
-      <p>
-        Garanzia soddisfatti o rimborsati: il cliente che sottoscrive un abbonamento per la prima volta può chiedere, entro 30 giorni dal primo pagamento, con email e senza doversi giustificare, il rimborso integrale di tale primo pagamento. La richiesta pone fine all&rsquo;abbonamento. Questa garanzia si applica una sola volta per cliente e non copre le pratiche supplementari fatturate singolarmente.
       </p>
 
       <h2>7. Responsabilità</h2>
