@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
+import VideoEmbed from "@/components/site/VideoEmbed";
 import JsonLd from "@/components/site/JsonLd";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
@@ -32,6 +33,11 @@ type HomeContent = {
   heroSubtitle: string;
   heroCtaLabel: string;
   heroProof: [string, string, string];
+  videoEyebrow: string;
+  videoHeading: string;
+  videoBody: string;
+  videoPlayLabel: string;
+  videoNote: string;
   aboutHeading: string;
   aboutBody: string;
   pricingHeading: string;
@@ -63,6 +69,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Contrats, litiges, démarches : votre PME est prise en charge, sans avocat à l'heure ni rendez-vous.",
     heroCtaLabel: "Voir les formules",
     heroProof: ["Traité sous 48 à 72h", "Prix fixe, jamais à l'heure", "Sans engagement"],
+    videoEyebrow: "En moins d'une minute",
+    videoHeading: "Thrax Legal, expliqué simplement.",
+    videoBody: "Un besoin juridique, un juriste qui s'en occupe, une réponse claire par écrit. Voici comment ça se passe.",
+    videoPlayLabel: "Voir la vidéo",
+    videoNote: "Vidéo hébergée sur YouTube, chargée uniquement au clic.",
     aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
     aboutBody:
       "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper, sans jamais improviser en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
@@ -166,6 +177,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Verträge, Streitfälle, Verfahren: Ihr KMU wird betreut, ohne Anwalt nach Stundensatz und ohne Termin.",
     heroCtaLabel: "Formeln ansehen",
     heroProof: ["Bearbeitet innert 48 bis 72h", "Fixpreis, nie nach Stundensatz", "Ohne Vertragsbindung"],
+    videoEyebrow: "In weniger als einer Minute",
+    videoHeading: "Thrax Legal, einfach erklärt.",
+    videoBody: "Ein rechtliches Anliegen, ein Jurist, der sich darum kümmert, eine klare schriftliche Antwort. So funktioniert es.",
+    videoPlayLabel: "Video ansehen",
+    videoNote: "Video auf Französisch, auf YouTube gehostet und erst beim Klick geladen.",
     aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
     aboutBody:
       "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere, ohne am Telefon zu improvisieren. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
@@ -269,6 +285,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Contracts, disputes, procedures: your SME is handled, no hourly lawyer, no appointment.",
     heroCtaLabel: "See the plans",
     heroProof: ["Handled within 48 to 72h", "Fixed price, never hourly", "No commitment"],
+    videoEyebrow: "In under a minute",
+    videoHeading: "Thrax Legal, simply explained.",
+    videoBody: "A legal need, a jurist who handles it, a clear written answer. Here is how it works.",
+    videoPlayLabel: "Watch the video",
+    videoNote: "Video in French, hosted on YouTube and loaded only when you click.",
     aboutHeading: "A fractional jurist, not a law firm",
     aboutBody:
       "A law student with several years of law firm experience, I research every case before handling it, without live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
@@ -372,6 +393,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Contratti, controversie, procedure: la vostra PMI è seguita, senza avvocato a ore né appuntamento.",
     heroCtaLabel: "Vedere le formule",
     heroProof: ["Gestito entro 48-72h", "Prezzo fisso, mai a ore", "Senza impegno"],
+    videoEyebrow: "In meno di un minuto",
+    videoHeading: "Thrax Legal, spiegato semplicemente.",
+    videoBody: "Un'esigenza legale, un giurista che se ne occupa, una risposta chiara per iscritto. Ecco come funziona.",
+    videoPlayLabel: "Guarda il video",
+    videoNote: "Video in francese, ospitato su YouTube e caricato solo al clic.",
     aboutHeading: "Un giurista frazionato, non uno studio legale",
     aboutBody:
       "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene, senza mai improvvisare dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
@@ -629,6 +655,31 @@ export default async function Home({
                     </span>
                   ))}
                 </div>
+              </Reveal>
+            </Container>
+          </section>
+
+          <section className="border-b border-border bg-bg py-16 md:py-24">
+            <Container>
+              <Reveal className="mx-auto max-w-2xl text-center">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-text-muted">
+                  {t.videoEyebrow}
+                </p>
+                <h2 className="mt-3 text-[28px] font-semibold leading-[1.15] tracking-[-0.02em] text-text md:text-4xl">
+                  {t.videoHeading}
+                </h2>
+                <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-text-muted">
+                  {t.videoBody}
+                </p>
+              </Reveal>
+              <Reveal delay={120} className="mx-auto mt-10 max-w-4xl">
+                <VideoEmbed
+                  videoId="u99gV2Xwcqo"
+                  poster="/media/video/presentation-poster.jpg"
+                  title={t.videoHeading}
+                  playLabel={t.videoPlayLabel}
+                />
+                <p className="mt-4 text-center text-xs text-text-muted">{t.videoNote}</p>
               </Reveal>
             </Container>
           </section>

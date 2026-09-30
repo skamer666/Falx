@@ -10,7 +10,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-09-25";
+const LAST_UPDATED = "2026-09-30";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -125,6 +125,17 @@ function Fr() {
         outil de mesure d&rsquo;audience), cette politique sera mise à jour
         en conséquence, avant toute activation.
       </p>
+      <p>
+        Seule exception : la page d&rsquo;accueil propose une vidéo de
+        présentation hébergée sur YouTube. Tant que vous ne cliquez pas sur
+        le lecteur, rien n&rsquo;est transmis à YouTube : l&rsquo;image
+        affichée est hébergée sur notre site. Si vous lancez la vidéo, elle
+        est chargée en mode de confidentialité renforcée
+        (youtube-nocookie.com) ; YouTube reçoit alors votre adresse IP et des
+        informations techniques sur votre navigateur, et peut utiliser des
+        cookies ou technologies similaires selon sa propre politique de
+        confidentialité.
+      </p>
 
       <h2>Destinataires des données</h2>
       <p>
@@ -132,6 +143,12 @@ function Fr() {
         hébergeur, Cloudflare, Inc., dans le cadre de clauses contractuelles
         types reconnues encadrant les transferts de données hors de Suisse.
         Aucune autre donnée n&rsquo;est partagée avec un tiers à ce jour.
+      </p>
+      <p>
+        Si vous lancez la vidéo de présentation, les données décrites
+        ci-dessus sont transmises à Google Ireland Limited, qui exploite
+        YouTube pour les utilisateurs de Suisse et de l&rsquo;Espace
+        économique européen, et peuvent être transférées aux États-Unis.
       </p>
 
       <h2>Durée de conservation</h2>
@@ -226,6 +243,16 @@ function De() {
         durch ein neues Analytics-Tool), wird diese Erklärung vor jeder
         Aktivierung entsprechend aktualisiert.
       </p>
+      <p>
+        Einzige Ausnahme: Die Startseite enthält ein Präsentationsvideo, das
+        auf YouTube gehostet wird. Solange Sie nicht auf den Player klicken,
+        wird nichts an YouTube übermittelt: Das angezeigte Bild wird auf
+        unserer Website gehostet. Wenn Sie das Video starten, wird es im
+        erweiterten Datenschutzmodus (youtube-nocookie.com) geladen; YouTube
+        erhält dann Ihre IP-Adresse und technische Angaben zu Ihrem Browser
+        und kann gemäss seiner eigenen Datenschutzerklärung Cookies oder
+        ähnliche Technologien verwenden.
+      </p>
 
       <h2>Empfänger der Daten</h2>
       <p>
@@ -234,6 +261,12 @@ function De() {
         Standardvertragsklauseln für Datenübermittlungen ausserhalb der
         Schweiz. Keine weiteren Daten werden derzeit an Dritte
         weitergegeben.
+      </p>
+      <p>
+        Wenn Sie das Präsentationsvideo starten, werden die oben
+        beschriebenen Daten an Google Ireland Limited übermittelt, die
+        YouTube für Nutzer in der Schweiz und im Europäischen
+        Wirtschaftsraum betreibt, und können in die USA übertragen werden.
       </p>
 
       <h2>Aufbewahrungsdauer</h2>
@@ -323,6 +356,15 @@ function En() {
         tool), this policy will be updated accordingly before any such tool
         is activated.
       </p>
+      <p>
+        The only exception: the home page offers a presentation video hosted
+        on YouTube. As long as you do not click the player, nothing is sent
+        to YouTube: the image shown is hosted on our site. If you start the
+        video, it is loaded in privacy-enhanced mode (youtube-nocookie.com);
+        YouTube then receives your IP address and technical information about
+        your browser, and may use cookies or similar technologies under its
+        own privacy policy.
+      </p>
 
       <h2>Recipients of the data</h2>
       <p>
@@ -330,6 +372,12 @@ function En() {
         Cloudflare, Inc., under recognised standard contractual clauses
         governing data transfers outside Switzerland. No other data is
         shared with a third party at this time.
+      </p>
+      <p>
+        If you start the presentation video, the data described above is
+        sent to Google Ireland Limited, which operates YouTube for users in
+        Switzerland and the European Economic Area, and may be transferred
+        to the United States.
       </p>
 
       <h2>Retention period</h2>
@@ -422,6 +470,16 @@ function It() {
         informativa sarà aggiornata di conseguenza prima di qualsiasi
         attivazione.
       </p>
+      <p>
+        Unica eccezione: la pagina iniziale propone un video di presentazione
+        ospitato su YouTube. Finché non cliccate sul lettore, nulla viene
+        trasmesso a YouTube: l&rsquo;immagine visualizzata è ospitata sul
+        nostro sito. Se avviate il video, viene caricato in modalità di
+        privacy avanzata (youtube-nocookie.com); YouTube riceve allora il
+        vostro indirizzo IP e informazioni tecniche sul browser, e può
+        utilizzare cookie o tecnologie simili secondo la propria informativa
+        sulla privacy.
+      </p>
 
       <h2>Destinatari dei dati</h2>
       <p>
@@ -430,6 +488,12 @@ function It() {
         contrattuali tipo riconosciute che disciplinano i trasferimenti di
         dati fuori dalla Svizzera. Nessun altro dato è condiviso con terzi
         ad oggi.
+      </p>
+      <p>
+        Se avviate il video di presentazione, i dati descritti sopra sono
+        trasmessi a Google Ireland Limited, che gestisce YouTube per gli
+        utenti in Svizzera e nello Spazio economico europeo, e possono essere
+        trasferiti negli Stati Uniti.
       </p>
 
       <h2>Durata di conservazione</h2>
