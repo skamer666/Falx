@@ -56,7 +56,7 @@ export type AccountStrings = {
     cta: string;
     haveAccount: string;
     signIn: string;
-    errors: { email: string; name: string; terms: string; ai: string };
+    errors: { email: string; name: string; terms: string; ai: string; throttled: string };
   };
   forgot: {
     metaTitle: string;
@@ -237,9 +237,9 @@ const fr: AccountStrings = {
     messagePlaceholder: "Ex. : contrat de distribution, litige avec un client, CGV pour ma boutique…",
     planLabel: "Votre formule",
     planEssentiel: "Essentiel",
-    planEssentielNote: "149 CHF/mois · 10 questions rapides · 5 dossiers/mois",
+    planEssentielNote: "290 CHF/mois · 10 questions rapides · 5 dossiers/mois",
     planCroissance: "Croissance",
-    planCroissanceNote: "349 CHF/mois · 30 questions rapides · 12 dossiers/mois",
+    planCroissanceNote: "690 CHF/mois · 30 questions rapides · 12 dossiers/mois",
     termsBefore: "J'ai lu et j'accepte les ",
     termsCgv: "conditions générales",
     termsMiddle: " et la ",
@@ -256,6 +256,7 @@ const fr: AccountStrings = {
       name: "Indiquez votre nom et prénom.",
       terms: "Vous devez accepter les conditions générales pour continuer.",
       ai: "Le traitement par l’intelligence artificielle est nécessaire au service : cochez la case correspondante pour continuer.",
+      throttled: "Trop d’inscriptions depuis cette connexion. Réessayez dans une heure ou demandez à être rappelé.",
     },
   },
   forgot: {
@@ -477,9 +478,9 @@ const de: AccountStrings = {
     messagePlaceholder: "Z. B.: Vertriebsvertrag, Streit mit einem Kunden, AGB für meinen Shop …",
     planLabel: "Ihre Formel",
     planEssentiel: "Essentiel",
-    planEssentielNote: "CHF 149/Monat · 10 Kurzfragen · 5 Anliegen/Monat",
+    planEssentielNote: "CHF 290/Monat · 10 Kurzfragen · 5 Anliegen/Monat",
     planCroissance: "Croissance",
-    planCroissanceNote: "CHF 349/Monat · 30 Kurzfragen · 12 Anliegen/Monat",
+    planCroissanceNote: "CHF 690/Monat · 30 Kurzfragen · 12 Anliegen/Monat",
     termsBefore: "Ich habe die ",
     termsCgv: "Allgemeinen Geschäftsbedingungen",
     termsMiddle: " und die ",
@@ -496,6 +497,7 @@ const de: AccountStrings = {
       name: "Geben Sie Ihren Vor- und Nachnamen an.",
       terms: "Sie müssen die Allgemeinen Geschäftsbedingungen akzeptieren, um fortzufahren.",
       ai: "Die Verarbeitung durch künstliche Intelligenz ist für den Dienst erforderlich: Bitte aktivieren Sie das entsprechende Feld, um fortzufahren.",
+      throttled: "Zu viele Anmeldungen von dieser Verbindung. Versuchen Sie es in einer Stunde erneut oder lassen Sie sich zurückrufen.",
     },
   },
   forgot: {
@@ -717,9 +719,9 @@ const en: AccountStrings = {
     messagePlaceholder: "E.g. distribution contract, dispute with a customer, T&Cs for my shop…",
     planLabel: "Your plan",
     planEssentiel: "Essential",
-    planEssentielNote: "CHF 149/month · 10 quick questions · 5 matters/month",
+    planEssentielNote: "CHF 290/month · 10 quick questions · 5 matters/month",
     planCroissance: "Growth",
-    planCroissanceNote: "CHF 349/month · 30 quick questions · 12 matters/month",
+    planCroissanceNote: "CHF 690/month · 30 quick questions · 12 matters/month",
     termsBefore: "I have read and accept the ",
     termsCgv: "terms and conditions",
     termsMiddle: " and the ",
@@ -736,6 +738,7 @@ const en: AccountStrings = {
       name: "Enter your full name.",
       terms: "You must accept the terms and conditions to continue.",
       ai: "Processing by artificial intelligence is necessary for the service: please tick the corresponding box to continue.",
+      throttled: "Too many sign-ups from this connection. Try again in an hour or ask to be called back.",
     },
   },
   forgot: {
@@ -956,9 +959,9 @@ const it: AccountStrings = {
     messagePlaceholder: "Es.: contratto di distribuzione, controversia con un cliente, condizioni generali per il mio negozio…",
     planLabel: "La vostra formula",
     planEssentiel: "Essentiel",
-    planEssentielNote: "CHF 149/mese · 10 domande rapide · 5 pratiche/mese",
+    planEssentielNote: "CHF 290/mese · 10 domande rapide · 5 pratiche/mese",
     planCroissance: "Croissance",
-    planCroissanceNote: "CHF 349/mese · 30 domande rapide · 12 pratiche/mese",
+    planCroissanceNote: "CHF 690/mese · 30 domande rapide · 12 pratiche/mese",
     termsBefore: "Ho letto e accetto le ",
     termsCgv: "condizioni generali",
     termsMiddle: " e l'",
@@ -975,6 +978,7 @@ const it: AccountStrings = {
       name: "Indicate nome e cognome.",
       terms: "Dovete accettare le condizioni generali per continuare.",
       ai: "Il trattamento tramite intelligenza artificiale è necessario al servizio: spuntate la casella corrispondente per continuare.",
+      throttled: "Troppe iscrizioni da questa connessione. Riprovate tra un’ora o chiedete di essere richiamati.",
     },
   },
   forgot: {

@@ -43,7 +43,7 @@ import {
   setPlan,
   updateClientFields,
 } from "@/lib/account/admin-db";
-import { safeSend, sendAccountActiveEmail, sendPasswordLinkEmail, sendReplyEmail, sendSignupInviteEmail } from "@/lib/account/email";
+import { safeSend, sendAccountActiveEmail, sendAdminTestEmail, sendPasswordLinkEmail, sendReplyEmail, sendSignupInviteEmail } from "@/lib/account/email";
 import { randomToken, sha256Hex } from "@/lib/account/password";
 import { getCurrentAdmin } from "@/lib/account/session";
 import { storeUploads } from "@/lib/account/uploads";
@@ -392,4 +392,16 @@ export async function deleteLeadAction(leadId: string) {
     await logAudit({ actor: admin, action: "lead_deleted", targetType: "lead", targetId: leadId, detail: lead.name });
   }
   redirect("/fr/admin/prospects?ok=deleted");
+}
+
+export async function sendTestEmailAction() {
+  const admin = await requireAdmin();
+  try {
+    const to = await sendAdminTestEmail();
+    await logAudit({ actor: admin, action: "test_email", detail: to.join(", ") });
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error);
+    redirect(`/fr/admin/parametres?test=fail&reason=${encodeURIComponent(reason.slice(0, 200))}`);
+  }
+  redirect("/fr/admin/parametres?test=ok");
 }

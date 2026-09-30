@@ -2,8 +2,9 @@ import type { Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 import { escapeHtml, formatDate } from "./format";
 import { PLAN_LABEL } from "./strings";
-import type { Lead, Plan } from "./model";
+import { formatChf, PLAN_PRICE_RAPPEN, type Lead, type Plan } from "./model";
 import { adminEmails, readEnv } from "./db";
+import { logAudit } from "./admin-db";
 
 const FROM = "Thrax Legal <hey@thrax-legal.ch>";
 import { CONTACT_EMAIL } from "./contact";
@@ -67,13 +68,37 @@ async function sendEmail(to: string | string[], subject: string, html: string, r
   }
 }
 
-/** Envoi « au mieux » : une panne d'email ne doit jamais bloquer l'action qui l'a déclenchée. */
-export async function safeSend(task: () => Promise<unknown>): Promise<void> {
+/**
+ * Envoi « au mieux » : une panne d'email ne doit jamais bloquer l'action qui l'a déclenchée.
+ * L'échec est inscrit dans le journal admin pour qu'une notification manquée ne passe pas inaperçue.
+ */
+export async function safeSend(task: () => Promise<unknown>, label = "email"): Promise<void> {
   try {
     await task();
   } catch (error) {
     console.error("[email] envoi échoué", error);
+    try {
+      const reason = error instanceof Error ? error.message : String(error);
+      await logAudit({ actor: null, action: "email_failed", detail: `${label} : ${reason}`.slice(0, 300) });
+    } catch {
+      // Le journal lui-même est indisponible : on a déjà écrit l'erreur dans les logs.
+    }
   }
+}
+
+/** Email de test vers les administrateurs : lève une erreur lisible si l'envoi échoue. */
+export async function sendAdminTestEmail(): Promise<string[]> {
+  if (!(await readEnv("RESEND_API_KEY"))) throw new Error("RESEND_API_KEY absente : aucun email ne peut partir.");
+  const to = await adminEmails();
+  const html = wrapEmailHtml({
+    heading: "Test de notification",
+    bodyHtml: "Si vous lisez ce message, les notifications (nouvelle inscription, nouveau prospect, nouvelle demande) arrivent bien jusqu'à vous.",
+    ctaLabel: "Ouvrir l'admin",
+    ctaUrl: `${SITE_URL}/fr/admin`,
+    footer: "Notification automatique Thrax Legal.",
+  });
+  await sendEmail(to, "Test de notification Thrax Legal", html);
+  return to;
 }
 
 // ---------------------------------------------------------------------------
@@ -302,7 +327,7 @@ export async function notifyAdminOfSignup(input: {
     `<strong>${escapeHtml(input.name)}</strong>${input.company ? ` (${escapeHtml(input.company)})` : ""}`,
     escapeHtml(input.email),
     input.phone ? escapeHtml(input.phone) : null,
-    `Formule demandée : ${PLAN_LABEL.fr[input.plan]}`,
+    `Formule demandée : <strong>${PLAN_LABEL.fr[input.plan]}</strong> (${formatChf(PLAN_PRICE_RAPPEN[input.plan]).replace(/[,.]00$/, "")} CHF/mois hors TVA)`,
     input.message ? `<br/>Message : ${escapeHtml(input.message).replace(/\n/g, "<br/>")}` : null,
   ].filter(Boolean);
   const html = wrapEmailHtml({
@@ -312,7 +337,7 @@ export async function notifyAdminOfSignup(input: {
     ctaUrl: `${SITE_URL}/fr/admin/clients/${input.userId}`,
     footer: "Notification automatique Thrax Legal.",
   });
-  await sendEmail(await adminEmails(), `Nouvelle inscription : ${input.name}`, html, input.email);
+  await sendEmail(await adminEmails(), `Nouvelle inscription ${PLAN_LABEL.fr[input.plan]} : ${input.name}`, html, input.email);
 }
 
 export async function notifyAdminOfDossier(input: {
@@ -419,7 +444,7 @@ export async function notifyAdminOfLead(lead: Lead) {
     ctaUrl: `${SITE_URL}/fr/admin/prospects`,
     footer: "Notification automatique Thrax Legal.",
   });
-  await sendEmail(await adminEmails(), `Prospect : ${lead.name}`, html, lead.email);
+  await sendEmail(await adminEmails(), `Nouveau prospect à rappeler : ${lead.name}`, html, lead.email);
 }
 
 const SIGNUP_INVITE: Record<Locale, { subject: string; heading: string; body: (name: string) => string; cta: string; footer: string }> = {

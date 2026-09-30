@@ -1,4 +1,8 @@
+import Link from "next/link";
 import { AdminDenied, AdminShell, Card, PageHeader } from "@/components/admin/parts";
+import SubmitButton from "@/components/account/SubmitButton";
+import { Notice } from "@/components/account/ui";
+import { sendTestEmailAction } from "../actions";
 import { getAdminBadges } from "@/lib/account/admin-db";
 import { adminEmails, db, readEnv } from "@/lib/account/db";
 import { SCHEMA_VERSION } from "@/lib/account/schema";
@@ -25,7 +29,12 @@ function Row({ label, ok, children }: { label: string; ok: boolean; children: Re
   );
 }
 
-export default async function AdminSettingsPage() {
+export default async function AdminSettingsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ test?: string; reason?: string }>;
+}) {
+  const { test, reason } = await searchParams;
   const admin = await getSessionUserRaw();
   if (!admin?.is_admin) return <AdminDenied signedIn={Boolean(admin)} />;
 
@@ -41,6 +50,8 @@ export default async function AdminSettingsPage() {
   return (
     <AdminShell active="parametres" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Paramètres" subtitle="État de la configuration du site." />
+      {test === "ok" ? <Notice tone="success">Email de test envoyé à {admins.join(", ")}. Vérifiez votre boîte (et les indésirables).</Notice> : null}
+      {test === "fail" ? <Notice tone="error">L&apos;envoi a échoué : {reason ?? "erreur inconnue"}</Notice> : null}
       <Card title="Diagnostic">
         <ul className="divide-y divide-border">
           <Row label="Envoi d'emails (Resend)" ok={Boolean(resendKey)}>
@@ -59,6 +70,17 @@ export default async function AdminSettingsPage() {
             Schéma version {version?.value ?? "?"} (attendu {SCHEMA_VERSION}). Les migrations s&apos;appliquent seules.
           </Row>
         </ul>
+      </Card>
+
+      <Card title="Notifications par email" className="mt-6">
+        <p className="text-sm leading-relaxed text-text-muted">
+          Vous recevez un email à <strong className="text-text">{admins.join(", ")}</strong> à chaque nouvelle inscription, nouvelle
+          demande d&apos;abonnement, nouveau prospect « Être rappelé », nouvelle demande et nouveau message d&apos;un client. Un envoi
+          raté est inscrit dans le <Link href="/fr/admin/journal" className="underline underline-offset-4">Journal</Link>.
+        </p>
+        <form action={sendTestEmailAction} className="mt-4">
+          <SubmitButton>Envoyer un email de test</SubmitButton>
+        </form>
       </Card>
 
       <Card title="Comment ça marche" className="mt-6">

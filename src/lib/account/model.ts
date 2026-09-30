@@ -105,7 +105,7 @@ export const PLAN_QUOTAS: Record<Plan, number> = { essentiel: 5, croissance: 12 
 /** Questions rapides incluses par mois. */
 export const QUESTION_QUOTAS: Record<Plan, number> = { essentiel: 10, croissance: 30 };
 /** Prix mensuel en centimes (rappen) : sert aux revenus récurrents estimés et au pré-remplissage des paiements. */
-export const PLAN_PRICE_RAPPEN: Record<Plan, number> = { essentiel: 14_900, croissance: 34_900 };
+export const PLAN_PRICE_RAPPEN: Record<Plan, number> = { essentiel: 29_000, croissance: 69_000 };
 
 /**
  * Ajustement manuel de quota pour un mois d'abonnement :

@@ -49,7 +49,7 @@ const FLASH: Record<string, string> = {
   quota_deleted: "Ajustement supprimé, compteurs recalculés.",
 };
 const ERRORS: Record<string, string> = {
-  payment: "Montant ou durée invalide (ex. 149.00 CHF, 1 à 24 mois).",
+  payment: "Montant ou durée invalide (ex. 290.00 CHF, 1 à 24 mois).",
   extend: "Nombre de jours invalide (1 à 366).",
   client: "Le nom est obligatoire.",
   status: "Statut invalide.",

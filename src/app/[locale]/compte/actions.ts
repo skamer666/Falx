@@ -20,6 +20,7 @@ import {
   isAdminEmail,
   isLoginBlocked,
   isResetThrottled,
+  isSignupThrottled,
   recordAttempt,
   setPasswordHash,
   touchLastLogin,
@@ -125,6 +126,10 @@ export async function createAccount(locale: Locale, formData: FormData) {
 
   if (await getUserByEmail(email)) redirect(`/${locale}/compte?error=exists&email=${encodeURIComponent(email)}`);
 
+  const ip = await clientIp();
+  if (await isSignupThrottled(ip)) redirect(back("throttled"));
+  await recordAttempt("signup", email, ip, true);
+
   const user = await createUser({
     email,
     name,
@@ -139,8 +144,11 @@ export async function createAccount(locale: Locale, formData: FormData) {
     signupMessage: message || null,
   });
   await logAudit({ actor: null, action: "signup", targetType: "user", targetId: user.id, detail: `${email} · ${plan}` });
-  await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale, TERMS_VERSION));
-  await safeSend(() => notifyAdminOfSignup({ userId: user.id, name, email, company: company || null, phone: phone || null, plan, message: message || null }));
+  await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale, TERMS_VERSION), `confirmation inscription ${email}`);
+  await safeSend(
+    () => notifyAdminOfSignup({ userId: user.id, name, email, company: company || null, phone: phone || null, plan, message: message || null }),
+    `notification inscription ${email}`,
+  );
   redirect(`/${locale}/compte/verifier?type=signup&email=${encodeURIComponent(email)}`);
 }
 
@@ -268,7 +276,10 @@ export async function replyToDossier(locale: Locale, dossierId: string, formData
     body: body || "(document joint)",
     attachments: uploads.attachments,
   });
-  await safeSend(() => notifyAdminOfClientMessage({ dossierId, userEmail: user.email, userName: user.name, body: body || "(document joint)" }));
+  await safeSend(
+    () => notifyAdminOfClientMessage({ dossierId, userEmail: user.email, userName: user.name, body: body || "(document joint)" }),
+    `notification message ${user.email}`,
+  );
   redirect(`/${locale}/compte/dossier/${dossierId}?sent=1`);
 }
 

@@ -36,7 +36,7 @@ export async function submitLead(locale: Locale, formData: FormData) {
     planInterest,
     locale,
   });
-  await safeSend(() => notifyAdminOfLead(lead));
-  await safeSend(() => sendLeadReceivedEmail(lead));
+  await safeSend(() => notifyAdminOfLead(lead), `notification prospect ${lead.email}`);
+  await safeSend(() => sendLeadReceivedEmail(lead), `accusé prospect ${lead.email}`);
   redirect(`/${locale}/contact?sent=1`);
 }

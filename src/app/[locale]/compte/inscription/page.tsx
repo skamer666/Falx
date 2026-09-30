@@ -34,7 +34,7 @@ export default async function InscriptionPage({
   const t = strings.signup;
 
   let errorMessage: string | null = null;
-  if (error === "email" || error === "name" || error === "terms" || error === "ai") errorMessage = t.errors[error];
+  if (error === "email" || error === "name" || error === "terms" || error === "ai" || error === "throttled") errorMessage = t.errors[error];
 
   return (
     <>

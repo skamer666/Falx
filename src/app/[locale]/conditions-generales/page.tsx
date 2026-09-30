@@ -161,13 +161,13 @@ function Fr() {
 
       <h2>4. Formules, volumes et prix</h2>
       <p>
-        <strong>Essentiel</strong>&nbsp;: 149&nbsp;CHF par mois. Comprend 10 questions
+        <strong>Essentiel</strong>&nbsp;: 290&nbsp;CHF par mois. Comprend 10 questions
         rapides par mois, 5 dossiers complets par mois traités sous 72 heures
         ouvrées et un appel ou une visioconférence de cadrage pour chaque
         dossier.
       </p>
       <p>
-        <strong>Croissance</strong>&nbsp;: 349&nbsp;CHF par mois. Comprend 30 questions
+        <strong>Croissance</strong>&nbsp;: 690&nbsp;CHF par mois. Comprend 30 questions
         rapides par mois, 12 dossiers complets par mois traités sous 48
         heures ouvrées (24 heures pour les urgences signalées comme telles),
         un appel ou une visioconférence de cadrage pour chaque dossier et une
@@ -583,10 +583,10 @@ function De() {
 
       <h2>4. Formeln, Volumen und Preise</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst 10 schnelle Fragen pro Monat, 5 vollständige Anliegen pro Monat, bearbeitet innert 72 Arbeitsstunden sowie ein Telefon- oder Videogespräch zur Klärung jedes Anliegens.
+        <strong>Essentiel</strong>: CHF 290 pro Monat. Umfasst 10 schnelle Fragen pro Monat, 5 vollständige Anliegen pro Monat, bearbeitet innert 72 Arbeitsstunden sowie ein Telefon- oder Videogespräch zur Klärung jedes Anliegens.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst 30 schnelle Fragen pro Monat, 12 vollständige Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24 Stunden bei als solche gemeldeten Notfällen), ein Telefon- oder Videogespräch zur Klärung jedes Anliegens und eine im Preis inbegriffene prioritäre Vertragsprüfung pro Monat.
+        <strong>Croissance</strong>: CHF 690 pro Monat. Umfasst 30 schnelle Fragen pro Monat, 12 vollständige Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24 Stunden bei als solche gemeldeten Notfällen), ein Telefon- oder Videogespräch zur Klärung jedes Anliegens und eine im Preis inbegriffene prioritäre Vertragsprüfung pro Monat.
       </p>
       <p>
         <strong>Schnelle Frage.</strong> Eine schnelle Frage ist eine präzise Frage zu einer Situation, die Thrax Legal in wenigen Zeilen schriftlich beantwortet, ohne Lesen oder Verfassen eines Dokuments und ohne vertiefte Recherche (höchstens rund 15 Minuten Arbeit). Erfordert die Antwort das Lesen eines Dokuments, eine vertiefte Recherche oder ein Verfassen, ist die Anfrage ein Anliegen; der Kunde wird vor jeder Bearbeitung informiert. Folgefragen zu einem gelieferten Anliegen, die innert 14 Tagen nach Lieferung gestellt werden, werden nicht angerechnet. Über die in der Formel enthaltene Anzahl schneller Fragen hinaus wird die Frage im Folgemonat bearbeitet oder, nach Wahl des Kunden, als Anliegen angerechnet.
@@ -972,10 +972,10 @@ function En() {
 
       <h2>4. Plans, volumes and prices</h2>
       <p>
-        <strong>Essential</strong>: CHF 149 per month. Includes 10 quick questions per month, 5 full matters per month handled within 72 business hours and a call or video briefing for each matter.
+        <strong>Essential</strong>: CHF 290 per month. Includes 10 quick questions per month, 5 full matters per month handled within 72 business hours and a call or video briefing for each matter.
       </p>
       <p>
-        <strong>Growth</strong>: CHF 349 per month. Includes 30 quick questions per month, 12 full matters per month handled within 48 business hours (24 hours for urgent cases flagged as such), a call or video briefing for each matter and one priority contract review included each month.
+        <strong>Growth</strong>: CHF 690 per month. Includes 30 quick questions per month, 12 full matters per month handled within 48 business hours (24 hours for urgent cases flagged as such), a call or video briefing for each matter and one priority contract review included each month.
       </p>
       <p>
         <strong>Quick question.</strong> A quick question is a precise question about a situation, which Thrax Legal answers in writing in a few lines, without reading or drafting a document and without in-depth research (about 15 minutes of work at most). If the answer requires reading a document, in-depth research or drafting, the request is a matter; the customer is informed before any work starts. Follow-up questions on a delivered matter, asked within 14 days of delivery, are not counted. Beyond the number of quick questions included in the plan, the question is handled the following month or, at the customer&rsquo;s choice, counted as a matter.
@@ -1334,10 +1334,10 @@ function It() {
 
       <h2>4. Formule, volumi e prezzi</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 al mese. Comprende 10 domande rapide al mese, 5 pratiche complete al mese gestite entro 72 ore lavorative e una chiamata o videochiamata di inquadramento per ogni pratica.
+        <strong>Essentiel</strong>: CHF 290 al mese. Comprende 10 domande rapide al mese, 5 pratiche complete al mese gestite entro 72 ore lavorative e una chiamata o videochiamata di inquadramento per ogni pratica.
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 al mese. Comprende 30 domande rapide al mese, 12 pratiche complete al mese gestite entro 48 ore lavorative (24 ore per le urgenze segnalate come tali), una chiamata o videochiamata di inquadramento per ogni pratica e una revisione contrattuale prioritaria inclusa ogni mese.
+        <strong>Croissance</strong>: CHF 690 al mese. Comprende 30 domande rapide al mese, 12 pratiche complete al mese gestite entro 48 ore lavorative (24 ore per le urgenze segnalate come tali), una chiamata o videochiamata di inquadramento per ogni pratica e una revisione contrattuale prioritaria inclusa ogni mese.
       </p>
       <p>
         <strong>Domanda rapida.</strong> Una domanda rapida è una domanda precisa su una situazione, alla quale Thrax Legal risponde per iscritto in poche righe, senza leggere né redigere un documento e senza ricerca approfondita (al massimo circa 15 minuti di lavoro). Se la risposta richiede la lettura di un documento, una ricerca approfondita o una redazione, la richiesta è una pratica; il cliente ne è informato prima di ogni trattamento. Le domande di seguito su una pratica consegnata, poste entro 14 giorni dalla consegna, non sono conteggiate. Oltre il numero di domande rapide incluso nella formula, la domanda è trattata il mese successivo o, a scelta del cliente, conteggiata come pratica.

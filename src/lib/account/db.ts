@@ -283,7 +283,7 @@ export const MAX_FAILURES_PER_EMAIL = 8;
 export const MAX_FAILURES_PER_IP = 30;
 export const MAX_RESETS_PER_EMAIL_PER_HOUR = 5;
 
-export async function recordAttempt(kind: "login" | "reset" | "lead", email: string | null, ip: string | null, success: boolean) {
+export async function recordAttempt(kind: "login" | "reset" | "lead" | "signup", email: string | null, ip: string | null, success: boolean) {
   const database = await db();
   await database
     .prepare("INSERT INTO login_attempts (kind, email, ip, success, created_at) VALUES (?, ?, ?, ?, ?)")
@@ -569,14 +569,18 @@ export async function getAttachment(key: string): Promise<R2ObjectBody | null> {
 // Prospects (formulaire « Être rappelé »)
 // ---------------------------------------------------------------------------
 
-export async function isLeadThrottled(ip: string | null): Promise<boolean> {
+async function isIpThrottled(kind: "lead" | "signup", ip: string | null): Promise<boolean> {
   if (!ip) return false;
   const row = await (await db())
-    .prepare("SELECT COUNT(*) AS n FROM login_attempts WHERE kind = 'lead' AND ip = ? AND created_at > ?")
-    .bind(ip, Date.now() - 3_600_000)
+    .prepare("SELECT COUNT(*) AS n FROM login_attempts WHERE kind = ? AND ip = ? AND created_at > ?")
+    .bind(kind, ip, Date.now() - 3_600_000)
     .first<{ n: number }>();
   return (row?.n ?? 0) >= 5;
 }
+
+export const isLeadThrottled = (ip: string | null) => isIpThrottled("lead", ip);
+/** 5 inscriptions par heure et par adresse IP : évite qu'on inonde la boîte admin ou des tiers d'emails. */
+export const isSignupThrottled = (ip: string | null) => isIpThrottled("signup", ip);
 
 export async function createLead(input: {
   name: string;

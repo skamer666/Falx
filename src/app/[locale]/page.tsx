@@ -46,11 +46,10 @@ type HomeContent = {
   pricingSubheading: string;
   founderBadge: string;
   tiers: [Tier, Tier];
+  custom: { name: string; price: string; body: string; cta: string };
   perksHeading: string;
   perks: { title: string; text: string }[];
-  clarityLinkLabel: string;
   clarity: {
-    heading: string;
     intro: string;
     quick: { title: string; limit: string; definition: string; examplesLabel: string; examples: string[] };
     dossier: { title: string; limit: string; definition: string; examplesLabel: string; examples: string[] };
@@ -78,7 +77,7 @@ const CONTENT: Record<Locale, HomeContent> = {
   fr: {
     metaTitle: "Abonnement juridique PME en Suisse romande | Thrax Legal",
     metaDescription:
-      "Votre juriste externalisé pour indépendants et PME de Suisse romande : contrats, litiges, démarches. Prix fixe dès 149 CHF/mois, sans engagement.",
+      "Votre juriste externalisé pour indépendants et PME de Suisse romande : contrats, litiges, démarches. Prix fixe dès 290 CHF/mois, sans engagement.",
     heroTitle: "Votre juriste externalisé, à prix fixe.",
     heroSubtitle:
       "Contrats, litiges, démarches : votre PME est prise en charge, sans avocat à l'heure ni rendez-vous.",
@@ -95,11 +94,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     pricingHeading: "Deux formules pour votre PME",
     pricingSubheading: "Choisissez votre volume. Changez ou résiliez à tout moment.",
     founderBadge: "Offre de lancement : les 20 premiers abonnés gardent ce prix tant que leur abonnement reste actif.",
+    custom: { name: "Sur mesure", price: "Dès 1'490 CHF / mois, hors TVA", body: "Pour les entreprises qui envisagent d'engager un juriste : volumes dédiés, interlocuteur unique, délais convenus et reporting mensuel. Devis sous 48 h ouvrées.", cta: "Demander un devis" },
     tiers: [
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "149 CHF",
+        price: "290 CHF",
         priceNote: "/ mois, hors TVA",
         tagline: "Pour les indépendants et micro-entreprises",
         features: [
@@ -116,7 +116,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "349 CHF",
+        price: "690 CHF",
         priceNote: "/ mois, hors TVA",
         tagline: "Pour les PME avec des besoins réguliers",
         badge: "Le plus choisi",
@@ -135,13 +135,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Inclus dans les deux formules",
     perks: [
-      { title: "Sans surprise", text: "Ce qui compte comme une question ou comme un dossier est défini ci-dessous, et le décompte vous est confirmé avant de commencer." },
+      { title: "Sans surprise", text: "Ce qui compte comme une question ou comme un dossier est défini en détail dans la FAQ ci-dessous, et le décompte vous est confirmé avant de commencer." },
       { title: "Un humain au bout du fil", text: "Vous expliquez votre situation de vive voix (appel ou visio), la réponse reste écrite et vous la gardez." },
       { title: "Pause quand vous voulez", text: "Mettez votre abonnement en pause jusqu'à 2 mois par an, sans perdre votre prix bloqué." },
     ],
-    clarityLinkLabel: "Que compte-t-on comme un dossier ou comme une question ?",
     clarity: {
-      "heading": "Question rapide ou dossier : c'est défini noir sur blanc",
       "intro": "Pas de zone grise : voici exactement ce qui compte comme une question rapide et ce qui compte comme un dossier.",
       "quick": {
         "title": "Question rapide",
@@ -233,13 +231,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Le service est pensé et positionné pour les indépendants et PME de Suisse romande, mais le site est disponible en français, allemand, anglais et italien.",
       },
     ],
-    stickyLabel: "Dès 149 CHF/mois",
+    stickyLabel: "Dès 290 CHF/mois",
     stickyCta: "Voir les formules",
   },
   de: {
     metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 149/Monat, ohne Vertragsbindung.",
+      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 290/Monat, ohne Vertragsbindung.",
     heroTitle: "Ihr externer Rechtsberater, zum Fixpreis.",
     heroSubtitle:
       "Verträge, Streitfälle, Verfahren: Ihr KMU wird betreut, ohne Anwalt nach Stundensatz und ohne Termin.",
@@ -256,11 +254,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     pricingHeading: "Zwei Formeln für Ihr KMU",
     pricingSubheading: "Wählen Sie Ihr Volumen. Wechseln oder kündigen Sie jederzeit.",
     founderBadge: "Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis, solange ihr Abonnement aktiv bleibt.",
+    custom: { name: "Massgeschneidert", price: "Ab CHF 1'490 / Monat, zzgl. MWST", body: "Für Unternehmen, die die Anstellung einer Juristin oder eines Juristen erwägen: eigene Volumen, feste Ansprechperson, vereinbarte Fristen und monatliches Reporting. Offerte innert 48 Arbeitsstunden.", cta: "Offerte anfragen" },
     tiers: [
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "CHF 149",
+        price: "CHF 290",
         priceNote: "/ Monat, exkl. MWST",
         tagline: "Für Selbstständige und Kleinstunternehmen",
         features: [
@@ -277,7 +276,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "CHF 349",
+        price: "CHF 690",
         priceNote: "/ Monat, exkl. MWST",
         tagline: "Für KMU mit regelmässigem Bedarf",
         badge: "Am häufigsten gewählt",
@@ -296,13 +295,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "In beiden Formeln inklusive",
     perks: [
-      { title: "Ohne Überraschungen", text: "Was als Frage oder Anliegen zählt, ist unten definiert, und die Zählung wird Ihnen vor Beginn bestätigt." },
+      { title: "Ohne Überraschungen", text: "Was als Frage oder Anliegen zählt, ist in den FAQ unten im Detail definiert, und die Zählung wird Ihnen vor Beginn bestätigt." },
       { title: "Ein Mensch am Telefon", text: "Sie schildern Ihre Situation mündlich (Telefon oder Video), die Antwort bleibt schriftlich und gehört Ihnen." },
       { title: "Pause, wann Sie wollen", text: "Pausieren Sie Ihr Abo bis zu 2 Monate pro Jahr, ohne Ihren fixierten Preis zu verlieren." },
     ],
-    clarityLinkLabel: "Was zählt als Anliegen oder als schnelle Frage?",
     clarity: {
-      "heading": "Schnelle Frage oder Anliegen: klar definiert",
       "intro": "Keine Grauzone: So sehen Sie genau, was als schnelle Frage und was als Anliegen zählt.",
       "quick": {
         "title": "Schnelle Frage",
@@ -394,13 +391,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Der Dienst ist für Selbstständige und KMU in der Westschweiz konzipiert, die Website ist aber auf Französisch, Deutsch, Englisch und Italienisch verfügbar.",
       },
     ],
-    stickyLabel: "Ab CHF 149/Monat",
+    stickyLabel: "Ab CHF 290/Monat",
     stickyCta: "Formeln ansehen",
   },
   en: {
     metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. Fixed price from CHF 149/month, no commitment.",
+      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. Fixed price from CHF 290/month, no commitment.",
     heroTitle: "Your outsourced legal counsel, at a fixed price.",
     heroSubtitle:
       "Contracts, disputes, procedures: your SME is handled, no hourly lawyer, no appointment.",
@@ -417,11 +414,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     pricingHeading: "Two plans for your SME",
     pricingSubheading: "Choose your volume. Switch or cancel anytime.",
     founderBadge: "Launch offer: the first 20 subscribers keep this price for as long as their subscription stays active.",
+    custom: { name: "Tailor-made", price: "From CHF 1,490 / month, excl. VAT", body: "For companies considering hiring an in-house lawyer: dedicated volumes, a single contact, agreed turnaround times and monthly reporting. Quote within 48 business hours.", cta: "Request a quote" },
     tiers: [
       {
         slug: "abonnement-essentiel",
         name: "Essential",
-        price: "CHF 149",
+        price: "CHF 290",
         priceNote: "/ month, excl. VAT",
         tagline: "For freelancers and micro-businesses",
         features: [
@@ -438,7 +436,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-croissance",
         name: "Growth",
-        price: "CHF 349",
+        price: "CHF 690",
         priceNote: "/ month, excl. VAT",
         tagline: "For SMEs with regular needs",
         badge: "Most chosen",
@@ -457,13 +455,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Included in both plans",
     perks: [
-      { title: "No surprises", text: "What counts as a question or a matter is defined below, and the count is confirmed to you before we start." },
+      { title: "No surprises", text: "What counts as a question or a matter is defined in detail in the FAQ below, and the count is confirmed to you before we start." },
       { title: "A human on the line", text: "You explain your situation out loud (call or video), the answer stays in writing and is yours to keep." },
       { title: "Pause whenever you want", text: "Pause your subscription for up to 2 months a year without losing your locked price." },
     ],
-    clarityLinkLabel: "What counts as a matter or a quick question?",
     clarity: {
-      "heading": "Quick question or matter: clearly defined",
       "intro": "No grey area: here is exactly what counts as a quick question and what counts as a matter.",
       "quick": {
         "title": "Quick question",
@@ -555,13 +551,13 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "The service is designed for freelancers and SMEs in French-speaking Switzerland, but the site is available in French, German, English and Italian.",
       },
     ],
-    stickyLabel: "From CHF 149/month",
+    stickyLabel: "From CHF 290/month",
     stickyCta: "See the plans",
   },
   it: {
     metaTitle: "Abbonamento legale per PMI nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 149/mese, senza impegno.",
+      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 290/mese, senza impegno.",
     heroTitle: "Il vostro giurista esternalizzato, a prezzo fisso.",
     heroSubtitle:
       "Contratti, controversie, procedure: la vostra PMI è seguita, senza avvocato a ore né appuntamento.",
@@ -578,11 +574,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     pricingHeading: "Due formule per la vostra PMI",
     pricingSubheading: "Scegliete il vostro volume. Cambiate o disdite in qualsiasi momento.",
     founderBadge: "Offerta di lancio: i primi 20 abbonati mantengono questo prezzo finché il loro abbonamento resta attivo.",
+    custom: { name: "Su misura", price: "Da CHF 1'490 / mese, IVA esclusa", body: "Per le aziende che valutano di assumere un giurista: volumi dedicati, un unico referente, tempi concordati e report mensile. Preventivo entro 48 ore lavorative.", cta: "Richiedere un preventivo" },
     tiers: [
       {
         slug: "abonnement-essentiel",
         name: "Essentiel",
-        price: "CHF 149",
+        price: "CHF 290",
         priceNote: "/ mese, IVA esclusa",
         tagline: "Per indipendenti e micro-imprese",
         features: [
@@ -599,7 +596,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       {
         slug: "abonnement-croissance",
         name: "Croissance",
-        price: "CHF 349",
+        price: "CHF 690",
         priceNote: "/ mese, IVA esclusa",
         tagline: "Per PMI con esigenze regolari",
         badge: "Il più scelto",
@@ -618,13 +615,11 @@ const CONTENT: Record<Locale, HomeContent> = {
     ],
     perksHeading: "Incluso in entrambe le formule",
     perks: [
-      { title: "Senza sorprese", text: "Cosa conta come domanda o pratica è definito qui sotto, e il conteggio vi viene confermato prima di iniziare." },
+      { title: "Senza sorprese", text: "Cosa conta come domanda o pratica è definito nel dettaglio nelle FAQ qui sotto, e il conteggio vi viene confermato prima di iniziare." },
       { title: "Una persona all'altro capo del filo", text: "Esponete la vostra situazione a voce (chiamata o video), la risposta resta scritta e la conservate." },
       { title: "Pausa quando volete", text: "Mettete in pausa l'abbonamento fino a 2 mesi all'anno, senza perdere il prezzo bloccato." },
     ],
-    clarityLinkLabel: "Cosa conta come pratica o come domanda rapida?",
     clarity: {
-      "heading": "Domanda rapida o pratica: definito chiaramente",
       "intro": "Nessuna zona grigia: ecco esattamente cosa conta come domanda rapida e cosa conta come pratica.",
       "quick": {
         "title": "Domanda rapida",
@@ -716,10 +711,23 @@ const CONTENT: Record<Locale, HomeContent> = {
         a: "Il servizio è pensato per indipendenti e PMI della Svizzera romanda, ma il sito è disponibile in francese, tedesco, inglese e italiano.",
       },
     ],
-    stickyLabel: "Da CHF 149/mese",
+    stickyLabel: "Da CHF 290/mese",
     stickyCta: "Vedere le formule",
   },
 };
+
+function clarityAnswer(c: HomeContent["clarity"]): string {
+  const block = (b: HomeContent["clarity"]["quick"]) =>
+    `${b.title} (${b.limit}) : ${b.definition} ${b.examplesLabel} : ${b.examples.join(" ; ")}.`;
+  return [
+    c.intro,
+    block(c.quick),
+    block(c.dossier),
+    `${c.twoHeading} : ${c.two.join(" ; ")}.`,
+    `${c.freeHeading} : ${c.free.join(" ; ")}.`,
+    c.promise,
+  ].join("\n\n");
+}
 
 function TierCard({ tier, locale }: { tier: Tier; locale: Locale }) {
   return (
@@ -822,10 +830,13 @@ export default async function Home({
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = CONTENT[locale];
 
+  // La 2e question de la FAQ (« question rapide ou dossier ») reprend tout le détail de la définition.
+  const faqItems = t.faq.map((item, index) => (index === 1 ? { ...item, a: clarityAnswer(t.clarity) } : item));
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: t.faq.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: { "@type": "Answer", text: item.a },
@@ -953,6 +964,19 @@ export default async function Home({
                     <TierCard key={tier.slug} tier={tier} locale={locale} />
                   ))}
                 </div>
+                <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border bg-surface px-6 py-6 md:flex-row md:items-center md:px-8">
+                  <div className="max-w-xl">
+                    <p className="text-sm font-medium uppercase tracking-[0.14em] text-text-muted">{t.custom.name}</p>
+                    <p className="mt-1 text-xl font-semibold tracking-[-0.01em] text-text">{t.custom.price}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-text-muted">{t.custom.body}</p>
+                  </div>
+                  <a
+                    href="#rappel"
+                    className="inline-flex shrink-0 items-center justify-center rounded-full border border-text bg-bg px-6 py-3 text-sm font-semibold text-text transition-colors duration-200 hover:bg-text hover:text-bg"
+                  >
+                    {t.custom.cta}
+                  </a>
+                </div>
                 <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-2xl border border-text/20 bg-surface px-6 py-5 text-center sm:flex-row sm:text-left">
                   <div>
                     <p className="text-base font-semibold text-text">{LEAD_STRINGS[locale].calloutText}</p>
@@ -983,11 +1007,19 @@ export default async function Home({
                     {t.extraQuestionNote}
                   </p>
                   <p className="mt-2 text-xs text-text-muted/70">{t.valueDisclaimer}</p>
-                  <a href="#dossiers" className="mt-4 inline-block text-sm font-medium text-text underline underline-offset-4">
-                    {t.clarityLinkLabel}
-                  </a>
 
                 </div>
+              </Reveal>
+            </Container>
+          </section>
+
+          <section className="theme-light bg-surface py-16 md:py-20">
+            <Container className="mx-auto max-w-2xl">
+              <Reveal>
+                <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
+                  {t.stepsHeading}
+                </h2>
+                <StepList steps={t.steps} className="mt-8" />
               </Reveal>
             </Container>
           </section>
@@ -1019,71 +1051,6 @@ export default async function Home({
                     <LeadForm locale={locale} />
                   </div>
                 </div>
-              </Reveal>
-            </Container>
-          </section>
-
-          <section id="dossiers" className="theme-light scroll-mt-28 border-t border-border bg-bg py-16 md:py-24">
-            <Container className="mx-auto max-w-4xl">
-              <Reveal>
-                <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.clarity.heading}
-                </h2>
-                <p className="mx-auto mt-3 max-w-xl text-center text-base leading-relaxed text-text-muted">
-                  {t.clarity.intro}
-                </p>
-                <div className="mt-10 grid gap-6 md:grid-cols-2">
-                  {[t.clarity.quick, t.clarity.dossier].map((block) => (
-                    <div key={block.title} className="rounded-2xl border border-border bg-surface p-6 md:p-8">
-                      <h3 className="text-xl font-semibold tracking-[-0.02em] text-text">{block.title}</h3>
-                      <p className="mt-1 text-sm font-medium text-text">{block.limit}</p>
-                      <p className="mt-4 text-sm leading-relaxed text-text-muted">{block.definition}</p>
-                      <p className="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
-                        {block.examplesLabel}
-                      </p>
-                      <ul className="mt-2 space-y-2 text-sm text-text">
-                        {block.examples.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span aria-hidden className="text-text-muted">&middot;</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 grid gap-6 md:grid-cols-2">
-                  {[
-                    { heading: t.clarity.twoHeading, items: t.clarity.two },
-                    { heading: t.clarity.freeHeading, items: t.clarity.free },
-                  ].map((block) => (
-                    <div key={block.heading} className="rounded-2xl border border-border bg-bg p-6 md:p-8">
-                      <h3 className="text-base font-semibold text-text">{block.heading}</h3>
-                      <ul className="mt-3 space-y-2 text-sm text-text-muted">
-                        {block.items.map((item) => (
-                          <li key={item} className="flex gap-2">
-                            <span aria-hidden>&middot;</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                <p className="mx-auto mt-8 max-w-xl text-center text-sm font-medium leading-relaxed text-text">
-                  {t.clarity.promise}
-                </p>
-              </Reveal>
-            </Container>
-          </section>
-
-          <section className="theme-light bg-surface py-16 md:py-20">
-            <Container className="mx-auto max-w-2xl">
-              <Reveal>
-                <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.stepsHeading}
-                </h2>
-                <StepList steps={t.steps} className="mt-8" />
               </Reveal>
             </Container>
           </section>
@@ -1144,7 +1111,7 @@ export default async function Home({
                 <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
                   {t.faqHeading}
                 </h2>
-                <FaqAccordion items={t.faq} className="mt-8" />
+                <FaqAccordion items={faqItems} className="mt-8" />
                 <div className="mt-12 flex justify-center">
                   <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
                     {t.heroCtaLabel}
