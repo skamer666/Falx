@@ -83,6 +83,34 @@ export const QUESTION_QUOTAS: Record<Plan, number> = { essentiel: 10, croissance
 /** Prix mensuel en centimes (rappen) : sert aux revenus récurrents estimés et au pré-remplissage des paiements. */
 export const PLAN_PRICE_RAPPEN: Record<Plan, number> = { essentiel: 14_900, croissance: 34_900 };
 
+/**
+ * Ajustement manuel de quota pour un mois d'abonnement :
+ * - field « used » : dossiers/questions déjà faits (à ajouter ou à retirer du décompte)
+ * - field « allowance » : dossiers/questions faisables en plus (ou en moins) ce mois-là
+ */
+export type QuotaItem = "dossier" | "question";
+export type QuotaField = "used" | "allowance";
+export type QuotaAdjustment = {
+  id: string;
+  user_id: string;
+  cycle_start: number;
+  item: QuotaItem;
+  field: QuotaField;
+  delta: number;
+  note: string | null;
+  created_by: string | null;
+  created_at: number;
+};
+
+export type QuotaSummary = {
+  /** Ce qui a été consommé ce mois : demandes reçues + ajustements manuels (jamais < 0). */
+  used: { dossiers: number; questions: number };
+  /** Ce qui est faisable ce mois : formule + ajustements manuels (jamais < 0). */
+  allowance: { dossiers: number; questions: number };
+  /** Part des ajustements manuels, pour l'affichage admin. */
+  adjust: { usedDossiers: number; usedQuestions: number; allowDossiers: number; allowQuestions: number };
+};
+
 export const PAYMENT_METHODS = ["virement", "twint", "carte", "especes", "autre"] as const;
 export type PaymentMethod = (typeof PAYMENT_METHODS)[number];
 

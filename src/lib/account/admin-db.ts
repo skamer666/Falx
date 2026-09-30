@@ -1,5 +1,11 @@
 import {
   ACCOUNT_STATUSES,
+  PLAN_QUOTAS,
+  QUESTION_QUOTAS,
+  getQuotaSummary,
+  listQuotaAdjustments,
+  type QuotaAdjustment,
+  type QuotaSummary,
   PLAN_PRICE_RAPPEN,
   PLANS,
   accessState,
@@ -87,6 +93,9 @@ export type ClientRow = AccountUser & {
   access: AccessState;
   dossiers_used: number;
   questions_used: number;
+  /** Dossiers / questions faisables ce mois (formule + ajustements). */
+  dossiers_allowance: number;
+  questions_allowance: number;
   open_dossiers: number;
   unread: number;
   total_paid_rappen: number;
@@ -107,7 +116,7 @@ export async function listClients(filter: ClientFilter = {}): Promise<ClientRow[
   const columns = USER_COLUMNS.split(", ").map((c) => `users.${c}`).join(", ");
 
   const where: string[] = [];
-  const params: (string | number)[] = [start, start];
+  const params: (string | number)[] = [start, start, start, start, start, start];
   if (admins.length > 0) {
     where.push(`users.email NOT IN (${admins.map(() => "?").join(", ")})`);
     params.push(...admins);
@@ -125,19 +134,40 @@ export async function listClients(filter: ClientFilter = {}): Promise<ClientRow[
   const { results } = await database
     .prepare(
       `SELECT ${columns},
-        (SELECT COALESCE(SUM(units), 0) FROM dossiers d WHERE d.user_id = users.id AND d.kind = 'dossier' AND d.created_at >= ?) AS dossiers_used,
-        (SELECT COUNT(*) FROM dossiers d WHERE d.user_id = users.id AND d.kind = 'question' AND d.created_at >= ?) AS questions_used,
+        (SELECT COALESCE(SUM(units), 0) FROM dossiers d WHERE d.user_id = users.id AND d.kind = 'dossier' AND d.created_at >= ?) AS raw_dossiers_used,
+        (SELECT COALESCE(SUM(CASE WHEN d.kind = 'question' THEN 1 ELSE 0 END), 0) FROM dossiers d WHERE d.user_id = users.id AND d.created_at >= ?) AS raw_questions_used,
+        (SELECT COALESCE(SUM(delta), 0) FROM quota_adjustments q WHERE q.user_id = users.id AND q.cycle_start = ? AND q.item = 'dossier' AND q.field = 'used') AS adj_dossiers_used,
+        (SELECT COALESCE(SUM(delta), 0) FROM quota_adjustments q WHERE q.user_id = users.id AND q.cycle_start = ? AND q.item = 'question' AND q.field = 'used') AS adj_questions_used,
+        (SELECT COALESCE(SUM(delta), 0) FROM quota_adjustments q WHERE q.user_id = users.id AND q.cycle_start = ? AND q.item = 'dossier' AND q.field = 'allowance') AS adj_dossiers_allow,
+        (SELECT COALESCE(SUM(delta), 0) FROM quota_adjustments q WHERE q.user_id = users.id AND q.cycle_start = ? AND q.item = 'question' AND q.field = 'allowance') AS adj_questions_allow,
         (SELECT COUNT(*) FROM dossiers d WHERE d.user_id = users.id AND d.status != 'traite') AS open_dossiers,
         (SELECT COUNT(*) FROM dossiers d WHERE d.user_id = users.id AND d.admin_unread = 1) AS unread,
         (SELECT COALESCE(SUM(amount_rappen), 0) FROM payments p WHERE p.user_id = users.id) AS total_paid_rappen
        FROM users ${where.length ? `WHERE ${where.join(" AND ")}` : ""}`,
     )
     .bind(...params)
-    .all<Omit<ClientRow, "access" | "is_admin">>();
+    .all<
+      Omit<ClientRow, "access" | "is_admin" | "dossiers_used" | "questions_used" | "dossiers_allowance" | "questions_allowance"> & {
+        raw_dossiers_used: number;
+        raw_questions_used: number;
+        adj_dossiers_used: number;
+        adj_questions_used: number;
+        adj_dossiers_allow: number;
+        adj_questions_allow: number;
+      }
+    >();
 
   let rows: ClientRow[] = (results ?? []).map((row) => {
     const user = toUser(row, admins);
-    return { ...row, ...user, access: accessState(user) };
+    return {
+      ...row,
+      ...user,
+      dossiers_used: Math.max(0, row.raw_dossiers_used + row.adj_dossiers_used),
+      questions_used: Math.max(0, row.raw_questions_used + row.adj_questions_used),
+      dossiers_allowance: Math.max(0, PLAN_QUOTAS[user.plan] + row.adj_dossiers_allow),
+      questions_allowance: Math.max(0, QUESTION_QUOTAS[user.plan] + row.adj_questions_allow),
+      access: accessState(user),
+    };
   });
   if (filter.access) rows = rows.filter((row) => row.access === filter.access);
 
@@ -156,7 +186,8 @@ export type ClientDetail = {
   access: AccessState;
   payments: Payment[];
   dossiers: Dossier[];
-  usage: { dossiers: number; questions: number };
+  quota: QuotaSummary;
+  adjustments: QuotaAdjustment[];
   sessions: number;
 };
 
@@ -166,15 +197,11 @@ export async function getClientDetail(userId: string): Promise<ClientDetail | nu
   const row = await database.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE id = ?`).bind(userId).first<Omit<AccountUser, "is_admin">>();
   if (!row) return null;
   const user = toUser(row, admins);
-  const [payments, dossiers, usage, sessions] = await Promise.all([
+  const [payments, dossiers, quota, adjustments, sessions] = await Promise.all([
     database.prepare("SELECT * FROM payments WHERE user_id = ? ORDER BY created_at DESC").bind(userId).all<Payment>(),
     database.prepare("SELECT * FROM dossiers WHERE user_id = ? ORDER BY created_at DESC").bind(userId).all<Dossier>(),
-    database
-      .prepare(
-        "SELECT COALESCE(SUM(CASE WHEN kind = 'dossier' THEN units ELSE 0 END), 0) AS dossiers, COALESCE(SUM(CASE WHEN kind = 'question' THEN 1 ELSE 0 END), 0) AS questions FROM dossiers WHERE user_id = ? AND created_at >= ?",
-      )
-      .bind(userId, cycleStart())
-      .first<{ dossiers: number; questions: number }>(),
+    getQuotaSummary(userId, user.plan),
+    listQuotaAdjustments(userId),
     database
       .prepare("SELECT COUNT(*) AS n FROM sessions WHERE user_id = ? AND expires_at > ?")
       .bind(userId, Date.now())
@@ -185,7 +212,8 @@ export async function getClientDetail(userId: string): Promise<ClientDetail | nu
     access: accessState(user),
     payments: payments.results ?? [],
     dossiers: dossiers.results ?? [],
-    usage: { dossiers: usage?.dossiers ?? 0, questions: usage?.questions ?? 0 },
+    quota,
+    adjustments,
     sessions: sessions?.n ?? 0,
   };
 }

@@ -10,7 +10,7 @@ import { INPUT, LABEL, Notice } from "@/components/account/ui";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { getClientGate } from "@/lib/account/session";
-import { getUsageThisCycle, PLAN_QUOTAS, QUESTION_QUOTAS } from "@/lib/account/db";
+import { getQuotaSummary } from "@/lib/account/db";
 import { DOSSIER_CATEGORIES, CATEGORY_LABELS } from "@/lib/account/categories";
 import { ACCOUNT_STRINGS } from "@/lib/account/strings";
 import { submitDossier } from "../actions";
@@ -42,9 +42,9 @@ export default async function NouveauDossierPage({
   if (gate.kind === "blocked") return <AccessBlocked locale={locale} state={gate.state} name={gate.user.name} />;
   const user = gate.user;
 
-  const usage = await getUsageThisCycle(user.id);
-  const dossiersLeft = Math.max(0, PLAN_QUOTAS[user.plan] - usage.dossiers);
-  const questionsLeft = Math.max(0, QUESTION_QUOTAS[user.plan] - usage.questions);
+  const quota = await getQuotaSummary(user.id, user.plan);
+  const dossiersLeft = Math.max(0, quota.allowance.dossiers - quota.used.dossiers);
+  const questionsLeft = Math.max(0, quota.allowance.questions - quota.used.questions);
   const isCroissance = user.plan === "croissance";
 
   return (

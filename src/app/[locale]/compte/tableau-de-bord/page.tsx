@@ -10,7 +10,7 @@ import SubmitButton from "@/components/account/SubmitButton";
 import { Container, PrimaryButton } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { getClientGate } from "@/lib/account/session";
-import { listDossiers, getUsageThisCycle, PLAN_QUOTAS, QUESTION_QUOTAS } from "@/lib/account/db";
+import { listDossiers, getQuotaSummary } from "@/lib/account/db";
 import { CATEGORY_LABELS, STATUS_LABELS, type DossierCategory } from "@/lib/account/categories";
 import { formatDate } from "@/lib/account/format";
 import { ACCOUNT_STRINGS, PLAN_LABEL } from "@/lib/account/strings";
@@ -27,7 +27,7 @@ export async function generateMetadata({
 }
 
 function Quota({ label, text, used, total, note }: { label: string; text: string; used: number; total: number; note: string | null }) {
-  const pct = Math.min(100, Math.round((used / total) * 100));
+  const pct = total === 0 ? (used > 0 ? 100 : 0) : Math.min(100, Math.round((used / total) * 100));
   return (
     <div className="rounded-2xl border border-border bg-bg p-6">
       <div className="flex items-center justify-between gap-4">
@@ -59,9 +59,10 @@ export default async function TableauDeBordPage({
   if (gate.kind === "blocked") return <AccessBlocked locale={locale} state={gate.state} name={gate.user.name} />;
   const user = gate.user;
 
-  const [dossiers, usage] = await Promise.all([listDossiers(user.id), getUsageThisCycle(user.id)]);
-  const dossierQuota = PLAN_QUOTAS[user.plan];
-  const questionQuota = QUESTION_QUOTAS[user.plan];
+  const [dossiers, quota] = await Promise.all([listDossiers(user.id), getQuotaSummary(user.id, user.plan)]);
+  const usage = quota.used;
+  const dossierQuota = quota.allowance.dossiers;
+  const questionQuota = quota.allowance.questions;
   const now = currentTime();
   const renewalSoon = !user.is_admin && user.paid_until !== null && user.paid_until - now < 7 * 86_400_000;
 

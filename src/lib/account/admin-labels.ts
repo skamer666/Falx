@@ -44,4 +44,6 @@ export const AUDIT_LABEL: Record<string, string> = {
   dossier_note: "Note interne",
   dossier_status: "Statut de la demande modifié",
   dossier_updated: "Demande modifiée",
+  quota_adjusted: "Quota ajusté",
+  quota_adjustment_deleted: "Ajustement de quota supprimé",
 };

@@ -21,7 +21,9 @@ import { CATEGORY_LABELS, type DossierCategory } from "@/lib/account/categories"
 import { formatDateTime, formatShortDate } from "@/lib/account/format";
 import { getSessionUserRaw } from "@/lib/account/session";
 import {
+  adjustQuotaAction,
   changePlanAction,
+  deleteQuotaAdjustmentAction,
   deletePaymentAction,
   extendPeriodAction,
   recordPaymentAction,
@@ -43,12 +45,15 @@ const FLASH: Record<string, string> = {
   client: "Fiche enregistrée.",
   link: "Lien de mot de passe envoyé par email.",
   sessions: "Toutes les sessions ont été fermées.",
+  quota: "Quota ajusté : les compteurs du client sont à jour.",
+  quota_deleted: "Ajustement supprimé, compteurs recalculés.",
 };
 const ERRORS: Record<string, string> = {
   payment: "Montant ou durée invalide (ex. 149.00 CHF, 1 à 24 mois).",
   extend: "Nombre de jours invalide (1 à 366).",
   client: "Le nom est obligatoire.",
   status: "Statut invalide.",
+  quota: "Quantité invalide (un nombre entier non nul, entre −100 et 100) ou mois hors plage.",
 };
 
 export default async function AdminClientPage({
@@ -74,8 +79,9 @@ export default async function AdminClientPage({
       </AdminShell>
     );
   }
-  const { user, access, payments, dossiers, usage, sessions } = detail;
+  const { user, access, payments, dossiers, quota, adjustments, sessions } = detail;
   const now = currentTime();
+  const currentMonth = new Date(now).toISOString().slice(0, 7);
 
   return (
     <AdminShell active="clients" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
@@ -109,13 +115,13 @@ export default async function AdminClientPage({
               <div>
                 <dt className="text-xs text-text-muted">Dossiers ce mois</dt>
                 <dd className="mt-0.5 font-medium">
-                  {usage.dossiers} / {PLAN_QUOTAS[user.plan]}
+                  {quota.used.dossiers} / {quota.allowance.dossiers}
                 </dd>
               </div>
               <div>
                 <dt className="text-xs text-text-muted">Questions ce mois</dt>
                 <dd className="mt-0.5 font-medium">
-                  {usage.questions} / {QUESTION_QUOTAS[user.plan]}
+                  {quota.used.questions} / {quota.allowance.questions}
                 </dd>
               </div>
             </dl>
@@ -231,6 +237,118 @@ export default async function AdminClientPage({
                 </ActionButton>
               ) : null}
             </div>
+          </Card>
+
+          <Card title="Dossiers et questions du mois">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {(
+                [
+                  { label: "Dossiers", used: quota.used.dossiers, allowance: quota.allowance.dossiers, base: PLAN_QUOTAS[user.plan], usedAdj: quota.adjust.usedDossiers, allowAdj: quota.adjust.allowDossiers },
+                  { label: "Questions rapides", used: quota.used.questions, allowance: quota.allowance.questions, base: QUESTION_QUOTAS[user.plan], usedAdj: quota.adjust.usedQuestions, allowAdj: quota.adjust.allowQuestions },
+                ] as const
+              ).map((row) => (
+                <div key={row.label} className="rounded-xl border border-border bg-surface p-4">
+                  <p className="text-xs font-medium uppercase tracking-[0.08em] text-text-muted">{row.label}</p>
+                  <p className="mt-1 text-2xl font-semibold tracking-[-0.02em]">
+                    {row.used} <span className="text-base font-normal text-text-muted">faits sur {row.allowance} faisables</span>
+                  </p>
+                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-border">
+                    <div className="h-full rounded-full bg-text" style={{ width: `${row.allowance === 0 ? (row.used > 0 ? 100 : 0) : Math.min(100, Math.round((row.used / row.allowance) * 100))}%` }} />
+                  </div>
+                  <p className="mt-2 text-xs text-text-muted">
+                    Formule {row.base}
+                    {row.allowAdj !== 0 ? ` ${row.allowAdj > 0 ? "+" : "−"} ${Math.abs(row.allowAdj)} ajusté` : ""}
+                    {row.usedAdj !== 0 ? ` · ${row.usedAdj > 0 ? "+" : "−"}${Math.abs(row.usedAdj)} fait${Math.abs(row.usedAdj) > 1 ? "s" : ""} saisi${Math.abs(row.usedAdj) > 1 ? "s" : ""} à la main` : ""}
+                    {row.used > row.allowance ? " · forfait dépassé" : ""}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <form action={adjustQuotaAction.bind(null, user.id)} className="mt-5 grid gap-3 rounded-xl border border-border bg-surface p-4 sm:grid-cols-6">
+              <p className="text-sm font-semibold sm:col-span-6">Ajouter ou retirer</p>
+              <div className="sm:col-span-3">
+                <label className={FIELD_LABEL} htmlFor="q-field">
+                  Quoi
+                </label>
+                <select id="q-field" name="field" className={`${FIELD} mt-1`}>
+                  <option value="used">Déjà faits (comptent dans la consommation)</option>
+                  <option value="allowance">Faisables (en plus ou en moins dans l&apos;abonnement)</option>
+                </select>
+              </div>
+              <div className="sm:col-span-3">
+                <label className={FIELD_LABEL} htmlFor="q-item">
+                  Type
+                </label>
+                <select id="q-item" name="item" className={`${FIELD} mt-1`}>
+                  <option value="dossier">Dossiers</option>
+                  <option value="question">Questions rapides</option>
+                </select>
+              </div>
+              <div className="sm:col-span-2">
+                <label className={FIELD_LABEL} htmlFor="q-delta">
+                  Quantité (+ ajoute, − retire)
+                </label>
+                <input id="q-delta" name="delta" type="number" step={1} min={-100} max={100} defaultValue={1} required className={`${FIELD} mt-1`} />
+              </div>
+              <div className="sm:col-span-2">
+                <label className={FIELD_LABEL} htmlFor="q-month">
+                  Mois concerné
+                </label>
+                <input id="q-month" name="month" type="month" defaultValue={currentMonth} required className={`${FIELD} mt-1`} />
+              </div>
+              <div className="sm:col-span-2">
+                <label className={FIELD_LABEL} htmlFor="q-note">
+                  Motif
+                </label>
+                <input id="q-note" name="note" placeholder="Geste commercial, dossier hors plateforme…" className={`${FIELD} mt-1`} />
+              </div>
+              <div className="sm:col-span-6">
+                <SubmitButton className="!px-5 !py-2">Enregistrer l&apos;ajustement</SubmitButton>
+                <p className="mt-2 text-xs text-text-muted">
+                  Exemples : « Faisables + 2 » offre 2 dossiers ce mois-ci ; « Déjà faits + 1 » compte un dossier réalisé hors plateforme ; « Déjà faits − 1 » en retire un du décompte.
+                </p>
+              </div>
+            </form>
+
+            {adjustments.length > 0 ? (
+              <div className="-mx-2 mt-5 overflow-x-auto">
+                <table className="w-full min-w-[520px] text-left text-sm">
+                  <thead className="text-xs text-text-muted">
+                    <tr>
+                      <th className="px-2 pb-2 font-medium">Mois</th>
+                      <th className="px-2 pb-2 font-medium">Ajustement</th>
+                      <th className="px-2 pb-2 font-medium">Motif</th>
+                      <th className="px-2 pb-2" />
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {adjustments.map((adjustment) => (
+                      <tr key={adjustment.id}>
+                        <td className="px-2 py-2.5 text-text-muted">{new Date(adjustment.cycle_start).toISOString().slice(0, 7)}</td>
+                        <td className="px-2 py-2.5 font-medium">
+                          {adjustment.delta > 0 ? "+" : "−"}
+                          {Math.abs(adjustment.delta)} {adjustment.item === "dossier" ? "dossier" : "question"}
+                          {Math.abs(adjustment.delta) > 1 ? "s" : ""} {adjustment.field === "used" ? "fait" : "faisable"}
+                          {Math.abs(adjustment.delta) > 1 ? "s" : ""}
+                        </td>
+                        <td className="px-2 py-2.5 text-text-muted">{adjustment.note ?? "—"}</td>
+                        <td className="px-2 py-2.5 text-right">
+                          <ActionButton
+                            action={deleteQuotaAdjustmentAction.bind(null, user.id, adjustment.id)}
+                            variant="danger"
+                            confirm="Supprimer cet ajustement ? Les compteurs seront recalculés."
+                            className="!py-1 !text-xs"
+                          >
+                            Supprimer
+                          </ActionButton>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
           </Card>
 
           <Card title={`Paiements (${payments.length})`}>

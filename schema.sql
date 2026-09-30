@@ -72,6 +72,18 @@ CREATE TABLE payments (
     created_at INTEGER NOT NULL
   );
 
+CREATE TABLE quota_adjustments (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL REFERENCES users(id),
+    cycle_start INTEGER NOT NULL,
+    item TEXT NOT NULL,
+    field TEXT NOT NULL,
+    delta INTEGER NOT NULL,
+    note TEXT,
+    created_by TEXT,
+    created_at INTEGER NOT NULL
+  );
+
 CREATE TABLE schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
 
 CREATE TABLE sessions (
@@ -106,6 +118,8 @@ CREATE INDEX idx_messages_dossier ON dossier_messages(dossier_id, created_at);
 CREATE INDEX idx_payments_created ON payments(created_at);
 
 CREATE INDEX idx_payments_user ON payments(user_id, created_at);
+
+CREATE INDEX idx_quota_user ON quota_adjustments(user_id, cycle_start);
 
 CREATE INDEX idx_sessions_user ON sessions(user_id);
 

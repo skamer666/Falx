@@ -3,7 +3,7 @@ import SubmitButton from "@/components/account/SubmitButton";
 import { AccessBadge, AdminDenied, AdminShell, Card, Empty, FIELD, FIELD_LABEL, Flash, LinkButton, PageHeader } from "@/components/admin/parts";
 import { getAdminBadges, listClients, type ClientFilter } from "@/lib/account/admin-db";
 import { ACCESS_LABEL, PLAN_LABEL_FR } from "@/lib/account/admin-labels";
-import { PLAN_QUOTAS, QUESTION_QUOTAS, type AccessState, type Plan } from "@/lib/account/model";
+import type { AccessState, Plan } from "@/lib/account/model";
 import { formatShortDate } from "@/lib/account/format";
 import { getSessionUserRaw } from "@/lib/account/session";
 import { createClientAction } from "../actions";
@@ -122,9 +122,9 @@ export default async function AdminClientsPage({
                     {client.paid_until ? formatShortDate(client.paid_until) : "—"}
                   </td>
                   <td className="px-4 py-3 text-xs text-text-muted">
-                    {client.dossiers_used}/{PLAN_QUOTAS[client.plan]} dossiers
+                    {client.dossiers_used}/{client.dossiers_allowance} dossiers
                     <br />
-                    {client.questions_used}/{QUESTION_QUOTAS[client.plan]} questions
+                    {client.questions_used}/{client.questions_allowance} questions
                   </td>
                   <td className="px-4 py-3 text-text-muted">{client.last_login_at ? formatShortDate(client.last_login_at) : "jamais"}</td>
                 </tr>

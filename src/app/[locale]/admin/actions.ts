@@ -3,6 +3,12 @@
 import { redirect } from "next/navigation";
 import {
   addMessage,
+  addQuotaAdjustment,
+  deleteQuotaAdjustment,
+  cycleStart,
+  addMonths,
+  type QuotaField,
+  type QuotaItem,
   createPasswordToken,
   createUser,
   deleteUserSessions,
@@ -284,4 +290,52 @@ export async function updateDossierFieldsAction(dossierId: string, formData: For
   });
   await logAudit({ actor: admin, action: "dossier_updated", targetType: "dossier", targetId: dossierId, detail: `${kind} · décompte ${units}` });
   redirect(dossierUrl(dossierId, "ok=fields"));
+}
+
+// ---------------------------------------------------------------------------
+// Quotas : dossiers faits / faisables, ajoutés ou retirés pour un mois donné
+// ---------------------------------------------------------------------------
+
+export async function adjustQuotaAction(userId: string, formData: FormData) {
+  const admin = await requireAdmin();
+  const user = await getUserById(userId);
+  if (!user) redirect("/fr/admin/clients");
+
+  const field: QuotaField = text(formData, "field") === "allowance" ? "allowance" : "used";
+  const item: QuotaItem = text(formData, "item") === "question" ? "question" : "dossier";
+  const delta = Math.round(Number(text(formData, "delta", 6).replace(",", ".")));
+  const month = text(formData, "month", 7);
+  let cycle = cycleStart();
+  if (/^\d{4}-\d{2}$/.test(month)) {
+    const parsed = Date.parse(`${month}-01T00:00:00Z`);
+    if (Number.isFinite(parsed)) cycle = parsed;
+  }
+  if (!Number.isFinite(delta) || delta === 0 || Math.abs(delta) > 100) redirect(clientUrl(userId, "error=quota"));
+  // On ne saisit que le mois en cours, les 6 derniers mois ou les 12 prochains.
+  if (cycle < addMonths(cycleStart(), -6) || cycle > addMonths(cycleStart(), 12)) redirect(clientUrl(userId, "error=quota"));
+
+  await addQuotaAdjustment({ userId, cycle, item, field, delta, note: text(formData, "note", 300) || null, createdBy: admin.email });
+  await logAudit({
+    actor: admin,
+    action: "quota_adjusted",
+    targetType: "user",
+    targetId: userId,
+    detail: `${delta > 0 ? "+" : ""}${delta} ${item === "dossier" ? "dossier(s)" : "question(s)"} ${field === "used" ? "fait(s)" : "faisable(s)"} · ${new Date(cycle).toISOString().slice(0, 7)} · ${user.email}`,
+  });
+  redirect(clientUrl(userId, "ok=quota"));
+}
+
+export async function deleteQuotaAdjustmentAction(userId: string, adjustmentId: string) {
+  const admin = await requireAdmin();
+  const removed = await deleteQuotaAdjustment(adjustmentId);
+  if (removed) {
+    await logAudit({
+      actor: admin,
+      action: "quota_adjustment_deleted",
+      targetType: "user",
+      targetId: userId,
+      detail: `${removed.delta > 0 ? "+" : ""}${removed.delta} ${removed.item} ${removed.field === "used" ? "faits" : "faisables"} · ${new Date(removed.cycle_start).toISOString().slice(0, 7)}`,
+    });
+  }
+  redirect(clientUrl(userId, "ok=quota_deleted"));
 }

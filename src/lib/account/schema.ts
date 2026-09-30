@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -78,6 +78,17 @@ const TABLES: string[] = [
     internal INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL
   )`,
+  `CREATE TABLE IF NOT EXISTS quota_adjustments (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL REFERENCES users(id),
+    cycle_start INTEGER NOT NULL,
+    item TEXT NOT NULL,
+    field TEXT NOT NULL,
+    delta INTEGER NOT NULL,
+    note TEXT,
+    created_by TEXT,
+    created_at INTEGER NOT NULL
+  )`,
   `CREATE TABLE IF NOT EXISTS audit_log (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     actor_id TEXT,
@@ -121,6 +132,7 @@ const INDEXES: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_payments_user ON payments(user_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_payments_created ON payments(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_messages_dossier ON dossier_messages(dossier_id, created_at)`,
+  `CREATE INDEX IF NOT EXISTS idx_quota_user ON quota_adjustments(user_id, cycle_start)`,
   `CREATE INDEX IF NOT EXISTS idx_audit_created ON audit_log(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_attempts_email ON login_attempts(kind, email, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_attempts_ip ON login_attempts(kind, ip, created_at)`,

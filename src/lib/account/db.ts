@@ -1,6 +1,9 @@
 import type { Locale } from "@/i18n/config";
 import { ensureSchema } from "./schema";
 import {
+  PLAN_QUOTAS,
+  QUESTION_QUOTAS,
+  addMonths,
   computeDueAt,
   cycleStart,
   type AccountStatus,
@@ -11,6 +14,10 @@ import {
   type DossierMessage,
   type DossierStatus,
   type Plan,
+  type QuotaAdjustment,
+  type QuotaField,
+  type QuotaItem,
+  type QuotaSummary,
 } from "./model";
 
 export * from "./model";
@@ -359,15 +366,100 @@ export async function getDossier(id: string): Promise<Dossier | null> {
   return row ?? null;
 }
 
-/** Consommation du mois en cours : dossiers (selon leur décompte) et questions rapides. */
-export async function getUsageThisCycle(userId: string): Promise<{ dossiers: number; questions: number }> {
-  const row = await (await db())
+/**
+ * Quotas du mois : consommation réelle (demandes + ajustements manuels) et quantité faisable
+ * (formule + ajustements manuels). Les ajustements sont saisis par l'administrateur.
+ */
+export async function getQuotaSummary(userId: string, plan: Plan, cycle: number = cycleStart()): Promise<QuotaSummary> {
+  const database = await db();
+  const cycleEnd = addMonths(cycle, 1);
+  const [usage, adjustments] = await Promise.all([
+    database
+      .prepare(
+        "SELECT COALESCE(SUM(CASE WHEN kind = 'dossier' THEN units ELSE 0 END), 0) AS dossiers, COALESCE(SUM(CASE WHEN kind = 'question' THEN 1 ELSE 0 END), 0) AS questions FROM dossiers WHERE user_id = ? AND created_at >= ? AND created_at < ?",
+      )
+      .bind(userId, cycle, cycleEnd)
+      .first<{ dossiers: number; questions: number }>(),
+    database
+      .prepare(
+        "SELECT item, field, COALESCE(SUM(delta), 0) AS total FROM quota_adjustments WHERE user_id = ? AND cycle_start = ? GROUP BY item, field",
+      )
+      .bind(userId, cycle)
+      .all<{ item: QuotaItem; field: QuotaField; total: number }>(),
+  ]);
+  const adjust = { usedDossiers: 0, usedQuestions: 0, allowDossiers: 0, allowQuestions: 0 };
+  for (const row of adjustments.results ?? []) {
+    if (row.field === "used" && row.item === "dossier") adjust.usedDossiers = row.total;
+    if (row.field === "used" && row.item === "question") adjust.usedQuestions = row.total;
+    if (row.field === "allowance" && row.item === "dossier") adjust.allowDossiers = row.total;
+    if (row.field === "allowance" && row.item === "question") adjust.allowQuestions = row.total;
+  }
+  return {
+    used: {
+      dossiers: Math.max(0, (usage?.dossiers ?? 0) + adjust.usedDossiers),
+      questions: Math.max(0, (usage?.questions ?? 0) + adjust.usedQuestions),
+    },
+    allowance: {
+      dossiers: Math.max(0, PLAN_QUOTAS[plan] + adjust.allowDossiers),
+      questions: Math.max(0, QUESTION_QUOTAS[plan] + adjust.allowQuestions),
+    },
+    adjust,
+  };
+}
+
+export async function addQuotaAdjustment(input: {
+  userId: string;
+  cycle: number;
+  item: QuotaItem;
+  field: QuotaField;
+  delta: number;
+  note: string | null;
+  createdBy: string;
+}): Promise<QuotaAdjustment> {
+  const adjustment: QuotaAdjustment = {
+    id: newId(),
+    user_id: input.userId,
+    cycle_start: input.cycle,
+    item: input.item,
+    field: input.field,
+    delta: input.delta,
+    note: input.note,
+    created_by: input.createdBy,
+    created_at: Date.now(),
+  };
+  await (await db())
     .prepare(
-      "SELECT COALESCE(SUM(CASE WHEN kind = 'dossier' THEN units ELSE 0 END), 0) AS dossiers, COALESCE(SUM(CASE WHEN kind = 'question' THEN 1 ELSE 0 END), 0) AS questions FROM dossiers WHERE user_id = ? AND created_at >= ?",
+      "INSERT INTO quota_adjustments (id, user_id, cycle_start, item, field, delta, note, created_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
     )
-    .bind(userId, cycleStart())
-    .first<{ dossiers: number; questions: number }>();
-  return { dossiers: row?.dossiers ?? 0, questions: row?.questions ?? 0 };
+    .bind(
+      adjustment.id,
+      adjustment.user_id,
+      adjustment.cycle_start,
+      adjustment.item,
+      adjustment.field,
+      adjustment.delta,
+      adjustment.note,
+      adjustment.created_by,
+      adjustment.created_at,
+    )
+    .run();
+  return adjustment;
+}
+
+export async function deleteQuotaAdjustment(id: string): Promise<QuotaAdjustment | null> {
+  const database = await db();
+  const row = await database.prepare("SELECT * FROM quota_adjustments WHERE id = ?").bind(id).first<QuotaAdjustment>();
+  if (!row) return null;
+  await database.prepare("DELETE FROM quota_adjustments WHERE id = ?").bind(id).run();
+  return row;
+}
+
+export async function listQuotaAdjustments(userId: string): Promise<QuotaAdjustment[]> {
+  const { results } = await (await db())
+    .prepare("SELECT * FROM quota_adjustments WHERE user_id = ? ORDER BY cycle_start DESC, created_at DESC LIMIT 100")
+    .bind(userId)
+    .all<QuotaAdjustment>();
+  return results ?? [];
 }
 
 export async function listMessages(dossierId: string, includeInternal: boolean): Promise<DossierMessage[]> {
