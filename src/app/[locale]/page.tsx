@@ -44,6 +44,8 @@ type HomeContent = {
   pricingSubheading: string;
   founderBadge: string;
   tiers: [Tier, Tier];
+  perksHeading: string;
+  perks: { title: string; text: string }[];
   templateNote: string;
   extraQuestionNote: string;
   valueDisclaimer: string;
@@ -90,6 +92,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Messagerie illimitée pour vos questions rapides",
           "2 dossiers complets par mois (contrat, litige, procédure)",
+          "Appel ou visio de cadrage de 15 min pour chaque dossier",
           "Traité sous 72h ouvrées",
           "Prix bloqué à vie, résiliable à tout moment",
         ],
@@ -107,6 +110,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Messagerie illimitée pour vos questions rapides",
           "5 dossiers complets par mois",
+          "Appel ou visio de cadrage de 30 min pour chaque dossier",
           "Traité sous 48h (24h pour les urgences signalées)",
           "Révision de contrat prioritaire chaque mois",
           "Prix bloqué à vie, résiliable à tout moment",
@@ -115,6 +119,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
+    ],
+    perksHeading: "Inclus dans les deux formules",
+    perks: [
+      { title: "Satisfait ou remboursé 30 jours", text: "Si le service ne vous convient pas, votre premier mois vous est remboursé, sans justification." },
+      { title: "Un humain au bout du fil", text: "Vous expliquez votre situation de vive voix (appel ou visio), la réponse reste écrite et vous la gardez." },
+      { title: "Pause quand vous voulez", text: "Mettez votre abonnement en pause jusqu'à 2 mois par an, sans perdre votre prix bloqué." },
     ],
     templateNote: "Bibliothèque complète de modèles incluse sur les deux formules (valeur 500 CHF).",
     extraQuestionNote: "Dossier supplémentaire : 79 CHF, prix fixe.",
@@ -150,7 +160,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Puis-je résilier à tout moment ?",
-        a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
+        a: "Oui, sans engagement ni justification à fournir : la résiliation est effective à la fin du mois déjà payé. Et pendant les 30 premiers jours, votre premier mois vous est remboursé si le service ne vous convient pas. Vous pouvez aussi mettre l'abonnement en pause jusqu'à 2 mois par an. Votre prix reste bloqué tant que vous restez abonné sans interruption, même si nos tarifs augmentent pour les nouveaux clients.",
+      },
+      {
+        q: "Puis-je parler à quelqu'un au téléphone ?",
+        a: "Oui. Pour chaque dossier, vous avez un appel ou une visio de cadrage (15 min en Essentiel, 30 min en Croissance) sur rendez-vous : vous expliquez votre situation de vive voix. La réponse et les documents restent ensuite par écrit, ce qui vous laisse une trace en cas de litige ou de contrôle.",
       },
       {
         q: "Et si j'ai plus de dossiers que mon forfait ?",
@@ -198,6 +212,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Unbegrenzte Nachrichten für schnelle Fragen",
           "2 vollständige Anliegen pro Monat (Vertrag, Streitfall, Verfahren)",
+          "Telefon- oder Videogespräch (15 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 72 Arbeitsstunden",
           "Preis lebenslang fixiert, jederzeit kündbar",
         ],
@@ -215,6 +230,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Unbegrenzte Nachrichten für schnelle Fragen",
           "5 vollständige Anliegen pro Monat",
+          "Telefon- oder Videogespräch (30 Min.) zur Klärung jedes Anliegens",
           "Bearbeitet innert 48 Arbeitsstunden (24h bei gemeldeten Notfällen)",
           "Prioritäre Vertragsprüfung jeden Monat",
           "Preis lebenslang fixiert, jederzeit kündbar",
@@ -223,6 +239,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
+    ],
+    perksHeading: "In beiden Formeln inklusive",
+    perks: [
+      { title: "30 Tage Geld-zurück-Garantie", text: "Wenn der Service nicht passt, erhalten Sie Ihren ersten Monat zurück, ohne Begründung." },
+      { title: "Ein Mensch am Telefon", text: "Sie schildern Ihre Situation mündlich (Telefon oder Video), die Antwort bleibt schriftlich und gehört Ihnen." },
+      { title: "Pause, wann Sie wollen", text: "Pausieren Sie Ihr Abo bis zu 2 Monate pro Jahr, ohne Ihren fixierten Preis zu verlieren." },
     ],
     templateNote: "Vollständige Vorlagenbibliothek in beiden Formeln inklusive (Wert CHF 500).",
     extraQuestionNote: "Zusätzliches Anliegen: CHF 79, Fixpreis.",
@@ -258,7 +280,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Kann ich jederzeit kündigen?",
-        a: "Ja, ohne Vertragsbindung und ohne Begründung: Die Kündigung wird am Ende des bereits bezahlten Monats wirksam. Ihr Preis bleibt fixiert, solange Sie ununterbrochen abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
+        a: "Ja, ohne Vertragsbindung und ohne Begründung: Die Kündigung wird am Ende des bereits bezahlten Monats wirksam. In den ersten 30 Tagen erhalten Sie Ihren ersten Monat zurück, wenn der Service nicht passt. Sie können das Abo auch bis zu 2 Monate pro Jahr pausieren. Ihr Preis bleibt fixiert, solange Sie ununterbrochen abonniert bleiben, auch wenn unsere Tarife für Neukunden steigen.",
+      },
+      {
+        q: "Kann ich mit jemandem telefonieren?",
+        a: "Ja. Für jedes Anliegen gibt es nach Terminvereinbarung ein Telefon- oder Videogespräch zur Klärung (15 Min. bei Essentiel, 30 Min. bei Croissance): Sie schildern Ihre Situation mündlich. Antwort und Dokumente bleiben danach schriftlich, so haben Sie im Streit- oder Kontrollfall einen Nachweis.",
       },
       {
         q: "Was passiert, wenn ich mehr Anliegen habe als mein Kontingent?",
@@ -306,6 +332,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Unlimited messaging for quick questions",
           "2 full matters handled per month (contract, dispute, procedure)",
+          "15-minute call or video briefing for every matter",
           "Handled within 72 business hours",
           "Price locked for life, cancel anytime",
         ],
@@ -323,6 +350,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Unlimited messaging for quick questions",
           "5 full matters handled per month",
+          "30-minute call or video briefing for every matter",
           "Handled within 48 business hours (24h for flagged urgent cases)",
           "Priority contract review every month",
           "Price locked for life, cancel anytime",
@@ -331,6 +359,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         ctaLabel: "Choose Growth",
         highlight: true,
       },
+    ],
+    perksHeading: "Included in both plans",
+    perks: [
+      { title: "30-day money-back guarantee", text: "If the service is not right for you, your first month is refunded, no questions asked." },
+      { title: "A human on the line", text: "You explain your situation out loud (call or video), the answer stays in writing and is yours to keep." },
+      { title: "Pause whenever you want", text: "Pause your subscription for up to 2 months a year without losing your locked price." },
     ],
     templateNote: "Full template library included on both plans (CHF 500 value).",
     extraQuestionNote: "Extra matter: CHF 79, fixed price.",
@@ -366,7 +400,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Can I cancel anytime?",
-        a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
+        a: "Yes, no commitment and no justification needed: cancellation takes effect at the end of the month already paid. During the first 30 days your first month is refunded if the service is not right for you. You can also pause your subscription for up to 2 months a year. Your price stays locked as long as you stay subscribed without interruption, even if our rates rise for new customers.",
+      },
+      {
+        q: "Can I talk to someone on the phone?",
+        a: "Yes. For every matter you get a call or video briefing by appointment (15 min on Essential, 30 min on Growth): you explain your situation out loud. The answer and documents then stay in writing, which leaves you a record in case of a dispute or an inspection.",
       },
       {
         q: "What if I have more matters than my plan allows?",
@@ -414,6 +452,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Messaggistica illimitata per le domande rapide",
           "2 pratiche complete al mese (contratto, controversia, procedura)",
+          "Chiamata o videochiamata di inquadramento di 15 min per ogni pratica",
           "Gestite entro 72 ore lavorative",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
@@ -431,6 +470,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         features: [
           "Messaggistica illimitata per le domande rapide",
           "5 pratiche complete al mese",
+          "Chiamata o videochiamata di inquadramento di 30 min per ogni pratica",
           "Gestite entro 48 ore lavorative (24h per le urgenze segnalate)",
           "Revisione contrattuale prioritaria ogni mese",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
@@ -439,6 +479,12 @@ const CONTENT: Record<Locale, HomeContent> = {
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
+    ],
+    perksHeading: "Incluso in entrambe le formule",
+    perks: [
+      { title: "Soddisfatti o rimborsati per 30 giorni", text: "Se il servizio non fa per voi, il primo mese vi viene rimborsato, senza dover fornire motivazioni." },
+      { title: "Una persona all'altro capo del filo", text: "Esponete la vostra situazione a voce (chiamata o video), la risposta resta scritta e la conservate." },
+      { title: "Pausa quando volete", text: "Mettete in pausa l'abbonamento fino a 2 mesi all'anno, senza perdere il prezzo bloccato." },
     ],
     templateNote: "Libreria completa di modelli inclusa in entrambe le formule (valore CHF 500).",
     extraQuestionNote: "Pratica supplementare: CHF 79, prezzo fisso.",
@@ -474,7 +520,11 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Posso disdire in qualsiasi momento?",
-        a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
+        a: "Sì, senza impegno e senza dover fornire motivazioni: la disdetta ha effetto alla fine del mese già pagato. Nei primi 30 giorni il primo mese vi viene rimborsato se il servizio non fa per voi. Potete anche mettere in pausa l'abbonamento fino a 2 mesi all'anno. Il vostro prezzo resta bloccato finché restate abbonati senza interruzione, anche se le nostre tariffe aumentano per i nuovi clienti.",
+      },
+      {
+        q: "Posso parlare con qualcuno al telefono?",
+        a: "Sì. Per ogni pratica avete una chiamata o videochiamata di inquadramento su appuntamento (15 min con Essentiel, 30 min con Croissance): esponete la vostra situazione a voce. La risposta e i documenti restano poi per iscritto, e vi lasciano una traccia in caso di controversia o controllo.",
       },
       {
         q: "Cosa succede se ho più pratiche del mio pacchetto?",
@@ -711,6 +761,19 @@ export default async function Home({
                   {t.tiers.map((tier) => (
                     <TierCard key={tier.slug} tier={tier} locale={locale} />
                   ))}
+                </div>
+                <div className="mt-8 rounded-2xl border border-border bg-surface p-6 md:p-8">
+                  <p className="text-center text-xs font-medium uppercase tracking-[0.18em] text-text-muted">
+                    {t.perksHeading}
+                  </p>
+                  <div className="mt-6 grid gap-6 md:grid-cols-3">
+                    {t.perks.map((perk) => (
+                      <div key={perk.title}>
+                        <h3 className="text-base font-semibold text-text">{perk.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-text-muted">{perk.text}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="mx-auto mt-6 max-w-lg text-center">
                   <p className="text-sm text-text-muted">

@@ -133,6 +133,10 @@ function Fr() {
         franchise de la taxe, auquel cas la TVA n&rsquo;est pas appliquée.]
       </p>
 
+      <p>
+        Chaque dossier complet comprend un appel téléphonique ou une visioconférence de cadrage, sur rendez-vous, de 15 minutes en formule Essentiel et de 30 minutes en formule Croissance, au cours desquels le client expose sa situation de vive voix. La réponse, les conseils et les documents sont ensuite fournis par écrit. Le client peut renoncer à cet échange et décrire sa situation par écrit.
+      </p>
+
       <h2>4. Souscription, paiement et prix bloqué</h2>
       <p>
         L&rsquo;abonnement est confirmé dès réception du premier paiement en
@@ -147,6 +151,10 @@ function Fr() {
         Une résiliation suivie d&rsquo;une nouvelle souscription est
         considérée comme un nouvel abonnement, soumis aux tarifs en vigueur
         à ce moment-là.
+      </p>
+
+      <p>
+        Le client peut demander la suspension de son abonnement pour une durée maximale de 2 mois par année civile, par simple email. Pendant la suspension, aucun paiement n&rsquo;est dû et aucun nouveau dossier n&rsquo;est pris en charge&nbsp;; le prix bloqué visé au présent article est conservé. La suspension n&rsquo;est pas une résiliation&nbsp;: l&rsquo;abonnement reprend automatiquement à la fin de la période demandée.
       </p>
 
       <h2>5. Délai de traitement</h2>
@@ -166,7 +174,8 @@ function Fr() {
         frais, par simple email à{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
         résiliation prend effet à la fin de la période mensuelle déjà
-        payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au prorata.
+        payée&nbsp;; le mois en cours n&rsquo;est pas remboursé au prorata, sous
+        réserve de la garantie satisfait ou remboursé ci-dessous.
         Le client peut également changer de formule à tout moment, avec
         effet au prochain cycle de facturation.
       </p>
@@ -176,6 +185,10 @@ function Fr() {
         Thrax Legal en informe le client avant tout traitement et
         l&rsquo;oriente vers un avocat plutôt que de facturer une prestation
         inadaptée.
+      </p>
+
+      <p>
+        Garantie satisfait ou remboursé&nbsp;: dans les 30 jours suivant son premier paiement, le client qui souscrit un abonnement pour la première fois peut demander, par email et sans avoir à se justifier, le remboursement intégral de ce premier paiement. La demande met fin à l&rsquo;abonnement. Cette garantie ne s&rsquo;applique qu&rsquo;une fois par client et ne couvre pas les dossiers supplémentaires facturés à l&rsquo;unité.
       </p>
 
       <h2>7. Responsabilité</h2>
@@ -316,6 +329,10 @@ function De() {
         wonach keine MWST erhoben wird.]
       </p>
 
+      <p>
+        Jedes vollständige Anliegen umfasst nach Terminvereinbarung ein Telefon- oder Videogespräch zur Klärung von 15 Minuten in der Formel Essentiel und 30 Minuten in der Formel Croissance, in dem der Kunde seine Situation mündlich schildert. Antwort, Beratung und Dokumente werden anschliessend schriftlich geliefert. Der Kunde kann auf dieses Gespräch verzichten und seine Situation schriftlich schildern.
+      </p>
+
       <h2>4. Abschluss, Zahlung und Preisbindung</h2>
       <p>
         Das Abonnement ist mit Eingang der ersten Online-Zahlung bestätigt
@@ -329,6 +346,10 @@ function De() {
         Thrax Legal die Tarife für Neukunden erhöht. Eine Kündigung mit
         anschliessendem Neuabschluss gilt als neues Abonnement und
         unterliegt den zu diesem Zeitpunkt geltenden Tarifen.
+      </p>
+
+      <p>
+        Der Kunde kann per einfacher E-Mail die Aussetzung seines Abonnements für höchstens 2 Monate pro Kalenderjahr verlangen. Während der Aussetzung ist keine Zahlung geschuldet und es werden keine neuen Anliegen bearbeitet; der in diesem Artikel genannte fixierte Preis bleibt erhalten. Die Aussetzung ist keine Kündigung: Das Abonnement läuft nach Ablauf der verlangten Frist automatisch weiter.
       </p>
 
       <h2>5. Bearbeitungsfrist</h2>
@@ -347,7 +368,8 @@ function De() {
         kostenlos kündigen, per einfacher E-Mail an{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Die
         Kündigung wird zum Ende der bereits bezahlten Monatsperiode
-        wirksam; der laufende Monat wird nicht anteilig zurückerstattet.
+        wirksam; der laufende Monat wird nicht anteilig zurückerstattet, vorbehaltlich der
+        nachstehenden Geld-zurück-Garantie.
         Der Kunde kann auch jederzeit die Formel wechseln, wirksam ab dem
         nächsten Abrechnungszyklus.
       </p>
@@ -357,6 +379,10 @@ function De() {
         aussergewöhnlicher Vorgang), informiert Thrax Legal den Kunden vor
         jeder Bearbeitung und verweist ihn an eine Anwältin oder einen
         Anwalt, statt eine unpassende Leistung zu verrechnen.
+      </p>
+
+      <p>
+        Geld-zurück-Garantie: Ein Kunde, der erstmals ein Abonnement abschliesst, kann innert 30 Tagen nach seiner ersten Zahlung per E-Mail und ohne Begründung die vollständige Rückerstattung dieser ersten Zahlung verlangen. Das Begehren beendet das Abonnement. Diese Garantie gilt nur einmal pro Kunde und deckt keine einzeln verrechneten zusätzlichen Anliegen.
       </p>
 
       <h2>7. Haftung</h2>
@@ -493,6 +519,10 @@ function En() {
         case no VAT is charged.]
       </p>
 
+      <p>
+        Each full matter includes a call or video briefing by appointment, lasting 15 minutes on the Essentiel plan and 30 minutes on the Croissance plan, during which the customer explains their situation out loud. The answer, advice and documents are then provided in writing. The customer may waive this briefing and describe their situation in writing.
+      </p>
+
       <h2>4. Subscription, payment and price lock</h2>
       <p>
         The subscription is confirmed once the first online payment is
@@ -507,6 +537,10 @@ function En() {
         customers. A cancellation followed by a new subscription is
         treated as a new subscription, subject to the rates in effect at
         that time.
+      </p>
+
+      <p>
+        The customer may request, by simple email, that their subscription be suspended for up to 2 months per calendar year. During the suspension no payment is due and no new matter is handled; the locked price referred to in this article is kept. A suspension is not a cancellation: the subscription resumes automatically at the end of the requested period.
       </p>
 
       <h2>5. Handling time</h2>
@@ -525,7 +559,8 @@ function En() {
         reason or fees, by simply emailing{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
         Cancellation takes effect at the end of the monthly period already
-        paid for; the current month is not refunded on a pro-rata basis.
+        paid for; the current month is not refunded on a pro-rata basis, subject to the
+        money-back guarantee below.
         The customer may also switch plans at any time, effective from the
         next billing cycle.
       </p>
@@ -534,6 +569,10 @@ function En() {
         Section 3 (in particular an exceptional matter), Thrax Legal
         informs the customer before any work begins and refers them to a
         lawyer rather than billing for an unsuitable service.
+      </p>
+
+      <p>
+        Money-back guarantee: a customer subscribing for the first time may, within 30 days of their first payment, request by email and without giving reasons a full refund of that first payment. The request ends the subscription. This guarantee applies once per customer and does not cover extra matters billed individually.
       </p>
 
       <h2>7. Liability</h2>
@@ -671,6 +710,10 @@ function It() {
         applicata.]
       </p>
 
+      <p>
+        Ogni pratica completa comprende una chiamata o videochiamata di inquadramento su appuntamento, di 15 minuti nella formula Essentiel e di 30 minuti nella formula Croissance, durante la quale il cliente espone a voce la propria situazione. La risposta, i consigli e i documenti sono poi forniti per iscritto. Il cliente può rinunciare a questo colloquio e descrivere la propria situazione per iscritto.
+      </p>
+
       <h2>4. Sottoscrizione, pagamento e blocco del prezzo</h2>
       <p>
         L&rsquo;abbonamento è confermato al ricevimento del primo pagamento
@@ -685,6 +728,10 @@ function It() {
         clienti. Una disdetta seguita da una nuova sottoscrizione è
         considerata un nuovo abbonamento, soggetto alle tariffe in vigore
         in quel momento.
+      </p>
+
+      <p>
+        Il cliente può chiedere, con semplice email, la sospensione del proprio abbonamento per un massimo di 2 mesi per anno civile. Durante la sospensione non è dovuto alcun pagamento e non viene presa in carico alcuna nuova pratica; il prezzo bloccato di cui al presente articolo è mantenuto. La sospensione non è una disdetta: l&rsquo;abbonamento riprende automaticamente al termine del periodo richiesto.
       </p>
 
       <h2>5. Termine di gestione</h2>
@@ -704,7 +751,8 @@ function It() {
         senza motivo né costi, tramite semplice email a{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. La
         disdetta ha effetto alla fine del periodo mensile già pagato; il
-        mese in corso non è rimborsato proporzionalmente. Il cliente può
+        mese in corso non è rimborsato proporzionalmente, fatta salva la
+        garanzia soddisfatti o rimborsati qui sotto. Il cliente può
         anche cambiare formula in qualsiasi momento, con effetto dal ciclo
         di fatturazione successivo.
       </p>
@@ -714,6 +762,10 @@ function It() {
         un&rsquo;operazione eccezionale), Thrax Legal ne informa il cliente
         prima di qualsiasi trattazione e lo indirizza verso un avvocato
         invece di fatturare una prestazione inadatta.
+      </p>
+
+      <p>
+        Garanzia soddisfatti o rimborsati: il cliente che sottoscrive un abbonamento per la prima volta può chiedere, entro 30 giorni dal primo pagamento, con email e senza doversi giustificare, il rimborso integrale di tale primo pagamento. La richiesta pone fine all&rsquo;abbonamento. Questa garanzia si applica una sola volta per cliente e non copre le pratiche supplementari fatturate singolarmente.
       </p>
 
       <h2>7. Responsabilità</h2>
