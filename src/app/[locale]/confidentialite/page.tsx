@@ -76,8 +76,9 @@ function Fr() {
       <h2>Qui est responsable du traitement</h2>
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; est le nom commercial sous
-        lequel <strong>[Prénom NOM]</strong>, indépendant(e) domicilié(e) en
-        Belgique (numéro d&rsquo;entreprise BCE&nbsp;: [à compléter]),
+        lequel <strong>Grégoire Giuliano</strong>, personne physique
+        domiciliée Avenue Floréal 20, 1410 Waterloo, Belgique (numéro
+        d&rsquo;entreprise BCE&nbsp;: en cours d&rsquo;attribution),
         propose les services décrits sur ce site. Il ne s&rsquo;agit pas
         d&rsquo;une société distincte. Pour toute question relative à la
         présente politique ou à vos données, contactez-nous à{" "}
@@ -192,13 +193,7 @@ function Fr() {
           préparer les réponses, que Thrax Legal relit et dont il reste
           responsable. Vous y consentez expressément en cochant la case dédiée à
           la création de votre compte&nbsp;; ce traitement est nécessaire au
-          service. Thrax Legal n’utilise que des offres professionnelles
-          d’Anthropic, dont les conditions prévoient que vos données ne servent
-          pas à entraîner ses modèles&nbsp;; Anthropic les conserve pour une durée
-          limitée (en principe 30 jours) à des fins de sécurité et de
-          conformité, puis les supprime. Le transfert vers les États-Unis est
-          encadré par les clauses contractuelles types de l’addendum de
-          traitement des données d’Anthropic. Évitez de transmettre des données
+          service. Thrax Legal configure ses outils de sorte que vos données ne servent pas à entraîner les modèles d’Anthropic (réglage d’exclusion activé ou offre professionnelle dont les conditions l’interdisent)&nbsp;; Anthropic les conserve pour une durée limitée (en principe 30 jours) à des fins de sécurité et de conformité, puis les supprime. Le transfert vers les États-Unis repose sur votre consentement exprès et, selon l’offre utilisée, sur les clauses contractuelles types de l’addendum de traitement des données d’Anthropic (prévu pour les offres professionnelles). Évitez de transmettre des données
           inutiles, en particulier des données sensibles (santé, opinions,
           procédures pénales ou administratives), sauf si votre demande
           l’exige.
@@ -279,9 +274,9 @@ function De() {
       <h2>Wer für die Bearbeitung verantwortlich ist</h2>
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; ist der Handelsname, unter dem{" "}
-        <strong>[Vorname NAME]</strong>, selbstständig erwerbstätig mit
-        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: [noch zu
-        ergänzen]), die auf dieser Website beschriebenen Leistungen
+        <strong>Grégoire Giuliano</strong>, natürliche Person mit
+        Wohnsitz an der Avenue Floréal 20, 1410 Waterloo, Belgien
+        (Unternehmensnummer BCE&nbsp;: wird zugeteilt), die auf dieser Website beschriebenen Leistungen
         anbietet. Es handelt sich nicht um eine eigenständige Gesellschaft.
         Bei Fragen zu dieser Erklärung oder zu Ihren Daten kontaktieren Sie
         uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -396,13 +391,7 @@ function De() {
           Antworten vorzubereiten, die Thrax Legal überprüft und für die es
           verantwortlich bleibt. Sie willigen ausdrücklich ein, indem Sie bei
           der Kontoerstellung das dafür vorgesehene Feld anklicken; diese
-          Verarbeitung ist für den Dienst erforderlich. Thrax Legal nutzt nur
-          professionelle Angebote von Anthropic, deren Bedingungen vorsehen,
-          dass Ihre Daten nicht zum Training der Modelle verwendet werden;
-          Anthropic bewahrt sie für begrenzte Zeit (in der Regel 30 Tage) zu
-          Sicherheits- und Compliance-Zwecken auf und löscht sie danach. Die
-          Übermittlung in die USA ist durch die Standardvertragsklauseln des
-          Datenverarbeitungszusatzes von Anthropic abgesichert. Vermeiden Sie
+          Verarbeitung ist für den Dienst erforderlich. Thrax Legal konfiguriert seine Tools so, dass Ihre Daten nicht zum Training der Modelle von Anthropic verwendet werden (aktivierte Ausschlusseinstellung oder professionelles Angebot, dessen Bedingungen dies untersagen); Anthropic bewahrt sie für begrenzte Zeit (in der Regel 30 Tage) zu Sicherheits- und Compliance-Zwecken auf und löscht sie danach. Die Übermittlung in die USA beruht auf Ihrer ausdrücklichen Einwilligung und, je nach genutztem Angebot, auf den Standardvertragsklauseln des Datenverarbeitungszusatzes von Anthropic (für professionelle Angebote vorgesehen). Vermeiden Sie
           die Übermittlung unnötiger Daten, insbesondere sensibler Daten
           (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser
           wenn Ihre Anfrage dies erfordert.
@@ -481,8 +470,9 @@ function En() {
       <h2>Who is responsible for processing</h2>
       <p>
         &ldquo;Thrax Legal&rdquo; is the trading name under which{" "}
-        <strong>[First name LAST NAME]</strong>, a self-employed individual
-        resident in Belgium (business number BCE: [to be added]), provides
+        <strong>Grégoire Giuliano</strong>, an individual residing at
+        Avenue Floréal 20, 1410 Waterloo, Belgium (business number BCE: being
+        assigned), provides
         the services described on this site. It is not a separate legal
         entity. For any question about this policy or your data, contact us
         at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -582,13 +572,7 @@ function En() {
           information and documents you entrust to it and to prepare answers,
           which Thrax Legal reviews and remains responsible for. You expressly
           consent by ticking the dedicated box when creating your account; this
-          processing is necessary for the service. Thrax Legal only uses
-          Anthropic&rsquo;s professional offerings, whose terms provide that your
-          data is not used to train its models; Anthropic keeps it for a limited
-          period (in principle 30 days) for security and compliance purposes,
-          then deletes it. The transfer to the United States is covered by the
-          standard contractual clauses in Anthropic&rsquo;s data processing
-          addendum. Avoid sending unnecessary data, in particular sensitive data
+          processing is necessary for the service. Thrax Legal configures its tools so that your data is not used to train Anthropic&rsquo;s models (opt-out setting enabled, or a professional plan whose terms prohibit it); Anthropic keeps it for a limited period (in principle 30 days) for security and compliance purposes, then deletes it. The transfer to the United States relies on your express consent and, depending on the plan used, on the standard contractual clauses in Anthropic&rsquo;s data processing addendum (provided for professional plans). Avoid sending unnecessary data, in particular sensitive data
           (health, opinions, criminal or administrative proceedings), unless
           your request requires it.
         </li>
@@ -663,9 +647,9 @@ function It() {
       <h2>Chi è responsabile del trattamento</h2>
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; è il nome commerciale sotto il
-        quale <strong>[Nome COGNOME]</strong>, lavoratore/lavoratrice
-        autonomo/a domiciliato/a in Belgio (numero d&rsquo;impresa
-        BCE&nbsp;: [da completare]), offre i servizi descritti su questo
+        quale <strong>Grégoire Giuliano</strong>, persona fisica
+        domiciliata in Avenue Floréal 20, 1410 Waterloo, Belgio (numero
+        d&rsquo;impresa BCE&nbsp;: in corso di attribuzione), offre i servizi descritti su questo
         sito. Non si tratta di una società distinta. Per qualsiasi domanda
         relativa alla presente informativa o ai vostri dati, contattateci a{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -776,13 +760,7 @@ function It() {
           le risposte, che Thrax Legal rivede e di cui resta responsabile.
           Acconsentite espressamente spuntando la casella dedicata alla
           creazione del vostro account; questo trattamento è necessario al
-          servizio. Thrax Legal utilizza solo offerte professionali di
-          Anthropic, le cui condizioni prevedono che i vostri dati non servano
-          ad addestrare i suoi modelli; Anthropic li conserva per una durata
-          limitata (in linea di principio 30 giorni) a fini di sicurezza e
-          conformità, poi li elimina. Il trasferimento verso gli Stati Uniti è
-          coperto dalle clausole contrattuali tipo dell’addendum sul
-          trattamento dei dati di Anthropic. Evitate di trasmettere dati non
+          servizio. Thrax Legal configura i propri strumenti in modo che i vostri dati non servano ad addestrare i modelli di Anthropic (impostazione di esclusione attiva o offerta professionale le cui condizioni lo vietano); Anthropic li conserva per una durata limitata (in linea di principio 30 giorni) a fini di sicurezza e conformità, poi li elimina. Il trasferimento verso gli Stati Uniti si basa sul vostro consenso espresso e, a seconda dell&rsquo;offerta utilizzata, sulle clausole contrattuali tipo dell’addendum sul trattamento dei dati di Anthropic (previsto per le offerte professionali). Evitate di trasmettere dati non
           necessari, in particolare dati sensibili (salute, opinioni,
           procedimenti penali o amministrativi), salvo che la vostra richiesta
           lo richieda.

@@ -7,9 +7,9 @@ import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 
-// À compléter avant mise en production : identité complète (nom, prénom),
-// numéro d'entreprise BCE et adresse postale (art. 2, exigés par l'art. 3 al. 1
-// let. s LCD), puis faire relire l'ensemble par un avocat suisse. Droit suisse
+// À compléter avant le premier client : numéro d'entreprise BCE (art. 2) une
+// fois l'inscription comme indépendant faite (identité et adresse de contact
+// exigées par l'art. 3 al. 1 let. s LCD : renseignées), puis faire relire l'ensemble par un avocat suisse. Droit suisse
 // et for à Lausanne choisis par défaut (art. 18) : à confirmer.
 const LAST_UPDATED = "2026-09-30";
 
@@ -91,9 +91,10 @@ function Fr() {
       <h2>2. Identification du prestataire</h2>
       <p>
         «&nbsp;Thrax Legal&nbsp;» est le nom commercial sous lequel{" "}
-        <strong>[Prénom NOM]</strong>, indépendant(e) domicilié(e) en
-        Belgique (numéro d’entreprise BCE&nbsp;: [à compléter], adresse de
-        contact&nbsp;: [adresse postale à compléter]), propose les services
+        <strong>Grégoire Giuliano</strong>, personne physique
+        domiciliée en Belgique (numéro d’entreprise BCE&nbsp;: en cours
+        d’attribution, adresse de contact&nbsp;: Avenue Floréal 20, 1410
+        Waterloo, Belgique), propose les services
         décrits sur ce site. Il ne s’agit pas d’une société distincte.
         Contact&nbsp;: <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
@@ -146,11 +147,7 @@ function Fr() {
         prestataire dans ce but. Ce traitement est nécessaire au service&nbsp;: le
         client qui n’y consent pas ne peut pas souscrire, et celui qui retire
         son consentement en cours de contrat met fin à l’abonnement, selon
-        l’article 10. Thrax Legal n’utilise que des offres professionnelles
-        d’Anthropic, dont les conditions prévoient que les données du client ne
-        servent pas à entraîner les modèles et ne sont conservées que pour une
-        durée limitée&nbsp;; le transfert vers les États-Unis est encadré par des
-        clauses contractuelles types. Le client évite de transmettre des
+        l’article 10. Thrax Legal configure ses outils pour que les données du client ne servent pas à entraîner les modèles et ne soient conservées par le fournisseur que pour une durée limitée&nbsp;; le transfert vers les États-Unis repose sur le consentement exprès du client et, selon l’offre utilisée, sur les clauses contractuelles types du fournisseur. Le client évite de transmettre des
         données inutiles, en particulier des données sensibles (santé,
         opinions, procédures pénales ou administratives), sauf si sa demande
         l’exige. Les détails figurent dans la politique de confidentialité.
@@ -513,9 +510,9 @@ function De() {
       <h2>2. Angaben zum Anbieter</h2>
       <p>
         «&nbsp;Thrax Legal&nbsp;» ist der Handelsname, unter dem{" "}
-        <strong>[Vorname NAME]</strong>, selbstständig erwerbstätig mit
-        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: [noch zu ergänzen],
-        Kontaktadresse&nbsp;: [Postadresse noch zu ergänzen]), die auf dieser
+        <strong>Grégoire Giuliano</strong>, natürliche Person mit
+        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: wird zugeteilt,
+        Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
         Website beschriebenen Leistungen anbietet. Es handelt sich nicht um
         eine eigenständige Gesellschaft. Kontakt&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -570,11 +567,7 @@ function De() {
         Dienstleister übermittelt werden. Diese Verarbeitung ist für den
         Dienst erforderlich: Wer nicht einwilligt, kann nicht abschliessen, und
         wer seine Einwilligung während des Vertrags widerruft, beendet das
-        Abonnement gemäss Artikel 10. Thrax Legal nutzt nur professionelle
-        Angebote von Anthropic, deren Bedingungen vorsehen, dass die Daten des
-        Kunden nicht zum Training der Modelle verwendet und nur für begrenzte
-        Zeit aufbewahrt werden; die Übermittlung in die USA ist durch
-        Standardvertragsklauseln abgesichert. Der Kunde vermeidet die
+        Abonnement gemäss Artikel 10. Thrax Legal konfiguriert seine Tools so, dass die Daten des Kunden nicht zum Training der Modelle verwendet und vom Anbieter nur für begrenzte Zeit aufbewahrt werden; die Übermittlung in die USA beruht auf der ausdrücklichen Einwilligung des Kunden und, je nach genutztem Angebot, auf den Standardvertragsklauseln des Anbieters. Der Kunde vermeidet die
         Übermittlung unnötiger Daten, insbesondere sensibler Daten
         (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser wenn
         seine Anfrage dies erfordert. Einzelheiten stehen in der
@@ -911,9 +904,9 @@ function En() {
       <h2>2. Identity of the provider</h2>
       <p>
         &ldquo;Thrax Legal&rdquo; is the trade name under which{" "}
-        <strong>[First name LAST NAME]</strong>, a self-employed individual
-        resident in Belgium (business number BCE: [to be added], contact
-        address: [postal address to be added]), provides the services described
+        <strong>Grégoire Giuliano</strong>, an individual resident in
+        Belgium (business number BCE: being assigned, contact address: Avenue
+        Floréal 20, 1410 Waterloo, Belgium), provides the services described
         on this site. It is not a separate company. Contact:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
@@ -964,10 +957,7 @@ function En() {
         this provider for that purpose. This processing is necessary for the
         service: a customer who does not consent cannot subscribe, and one who
         withdraws consent during the contract ends the subscription under
-        section 10. Thrax Legal only uses Anthropic&rsquo;s professional offerings,
-        whose terms provide that customer data is not used to train the models
-        and is kept only for a limited period; the transfer to the United States
-        is covered by standard contractual clauses. The customer avoids sending
+        section 10. Thrax Legal configures its tools so that customer data is not used to train the models and is kept by the provider only for a limited period; the transfer to the United States relies on the customer&rsquo;s express consent and, depending on the plan used, on the provider&rsquo;s standard contractual clauses. The customer avoids sending
         unnecessary data, in particular sensitive data (health, opinions,
         criminal or administrative proceedings), unless their request requires
         it. Details are in the privacy policy.
@@ -1276,10 +1266,10 @@ function It() {
       <h2>2. Identificazione del prestatore</h2>
       <p>
         «&nbsp;Thrax Legal&nbsp;» è il nome commerciale con cui{" "}
-        <strong>[Nome COGNOME]</strong>, lavoratore/lavoratrice indipendente
-        domiciliato/a in Belgio (numero d&rsquo;impresa BCE&nbsp;: [da
-        completare], indirizzo di contatto&nbsp;: [indirizzo postale da
-        completare]), offre i servizi descritti su questo sito. Non si tratta di
+        <strong>Grégoire Giuliano</strong>, persona fisica domiciliata
+        in Belgio (numero d&rsquo;impresa BCE&nbsp;: in corso di attribuzione,
+        indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
+        offre i servizi descritti su questo sito. Non si tratta di
         una società distinta. Contatto&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
@@ -1330,11 +1320,7 @@ function It() {
         siano trasmessi a questo fornitore a tale scopo. Questo trattamento è
         necessario al servizio: il cliente che non acconsente non può
         sottoscrivere, e chi ritira il consenso nel corso del contratto pone
-        fine all&rsquo;abbonamento, secondo l&rsquo;articolo 10. Thrax Legal utilizza solo
-        offerte professionali di Anthropic, le cui condizioni prevedono che i
-        dati del cliente non servano ad addestrare i modelli e siano conservati
-        solo per una durata limitata; il trasferimento verso gli Stati Uniti è
-        coperto da clausole contrattuali tipo. Il cliente evita di trasmettere
+        fine all&rsquo;abbonamento, secondo l&rsquo;articolo 10. Thrax Legal configura i propri strumenti in modo che i dati del cliente non servano ad addestrare i modelli e siano conservati dal fornitore solo per una durata limitata; il trasferimento verso gli Stati Uniti si basa sul consenso espresso del cliente e, a seconda dell&rsquo;offerta utilizzata, sulle clausole contrattuali tipo del fornitore. Il cliente evita di trasmettere
         dati non necessari, in particolare dati sensibili (salute, opinioni,
         procedimenti penali o amministrativi), salvo che la sua richiesta lo
         richieda. I dettagli figurano nell&rsquo;informativa sulla privacy.

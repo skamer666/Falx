@@ -48,7 +48,16 @@ export default function Footer({ locale }: { locale: Locale }) {
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
               {t.contact}
             </p>
-            <p className="mt-4 text-sm text-text">hey@thrax-legal.ch</p>
+            <p className="mt-4 text-sm text-text">
+              <a href="mailto:hey@thrax-legal.ch" className="hover:underline">
+                hey@thrax-legal.ch
+              </a>
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-text-muted">
+              Thrax Legal, Grégoire Giuliano
+              <br />
+              Avenue Floréal 20, 1410 Waterloo, Belgique
+            </p>
 
             <p className="mt-8 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
               {t.hours}
