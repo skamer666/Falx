@@ -27,6 +27,13 @@ export type LeadStrings = {
   linkLabel: string;
   alternative: string;
   alternativeCta: string;
+  heroCta: string;
+  stickyCta: string;
+  calloutText: string;
+  sectionEyebrow: string;
+  sectionHeading: string;
+  sectionBody: string;
+  points: string[];
 };
 
 export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
@@ -57,6 +64,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     linkLabel: "Pas encore décidé ? Laissez vos coordonnées, nous vous rappelons.",
     alternative: "Vous savez déjà ce qu’il vous faut ?",
     alternativeCta: "S’inscrire directement",
+    heroCta: "Être rappelé gratuitement",
+    stickyCta: "Être rappelé",
+    calloutText: "Une question avant de choisir ?",
+    sectionEyebrow: "Sans engagement",
+    sectionHeading: "Pas encore prêt ? Laissez-nous vos coordonnées.",
+    sectionBody: "Décrivez votre besoin en quelques mots : nous vous rappelons pour répondre à vos questions et vous dire si l’abonnement vous convient. Gratuit, sans engagement, sans paiement.",
+    points: ["Gratuit et sans engagement", "Nous vous rappelons en principe sous 1 jour ouvré", "Vos informations ne servent qu’à vous recontacter"],
   },
   de: {
     metaTitle: "Rückruf | Thrax Legal",
@@ -85,6 +99,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     linkLabel: "Noch unentschlossen? Hinterlassen Sie Ihre Kontaktdaten, wir rufen Sie zurück.",
     alternative: "Sie wissen schon, was Sie brauchen?",
     alternativeCta: "Direkt anmelden",
+    heroCta: "Kostenlos zurückgerufen werden",
+    stickyCta: "Rückruf",
+    calloutText: "Eine Frage vor der Wahl?",
+    sectionEyebrow: "Unverbindlich",
+    sectionHeading: "Noch nicht bereit? Hinterlassen Sie Ihre Kontaktdaten.",
+    sectionBody: "Beschreiben Sie Ihr Anliegen in wenigen Worten: Wir rufen Sie zurück, beantworten Ihre Fragen und sagen Ihnen, ob das Abonnement zu Ihnen passt. Kostenlos, unverbindlich, ohne Zahlung.",
+    points: ["Kostenlos und unverbindlich", "Wir rufen Sie in der Regel innert 1 Arbeitstag zurück", "Ihre Angaben dienen nur dazu, Sie zu kontaktieren"],
   },
   en: {
     metaTitle: "Request a call back | Thrax Legal",
@@ -113,6 +134,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     linkLabel: "Not decided yet? Leave your details and we'll call you back.",
     alternative: "Already know what you need?",
     alternativeCta: "Sign up directly",
+    heroCta: "Get a free call back",
+    stickyCta: "Call back",
+    calloutText: "A question before you choose?",
+    sectionEyebrow: "No commitment",
+    sectionHeading: "Not ready yet? Leave us your details.",
+    sectionBody: "Describe your need in a few words: we call you back to answer your questions and tell you whether the subscription suits you. Free, no commitment, no payment.",
+    points: ["Free and no commitment", "We call you back, in principle within 1 business day", "Your details are only used to contact you"],
   },
   it: {
     metaTitle: "Essere richiamati | Thrax Legal",
@@ -141,5 +169,12 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     linkLabel: "Non avete ancora deciso? Lasciate i vostri recapiti e vi richiamiamo.",
     alternative: "Sapete già di cosa avete bisogno?",
     alternativeCta: "Iscrivetevi direttamente",
+    heroCta: "Essere richiamati gratuitamente",
+    stickyCta: "Richiamo",
+    calloutText: "Una domanda prima di scegliere?",
+    sectionEyebrow: "Senza impegno",
+    sectionHeading: "Non siete ancora pronti? Lasciateci i vostri recapiti.",
+    sectionBody: "Descrivete la vostra esigenza in poche parole: vi richiamiamo per rispondere alle vostre domande e dirvi se l’abbonamento fa per voi. Gratuito, senza impegno, senza pagamento.",
+    points: ["Gratuito e senza impegno", "Vi richiamiamo in linea di principio entro 1 giorno lavorativo", "I vostri dati servono solo per ricontattarvi"],
   },
 };

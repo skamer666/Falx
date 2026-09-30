@@ -56,8 +56,6 @@ export default function Footer({ locale }: { locale: Locale }) {
             </p>
             <p className="mt-2 text-xs leading-relaxed text-text-muted">
               Thrax Legal, Grégoire Giuliano
-              <br />
-              Avenue Floréal 20, 1410 Waterloo, Belgique
             </p>
             <p className="mt-3 text-sm">
               <Link href={`/${locale}/contact`} className="text-text underline underline-offset-4 hover:text-text-muted">

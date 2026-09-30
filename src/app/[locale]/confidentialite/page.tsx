@@ -73,18 +73,6 @@ export async function generateMetadata({
 function Fr() {
   return (
     <>
-      <h2>Qui est responsable du traitement</h2>
-      <p>
-        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; est le nom commercial sous
-        lequel <strong>Grégoire Giuliano</strong>, personne physique
-        domiciliée Avenue Floréal 20, 1410 Waterloo, Belgique (numéro
-        d&rsquo;entreprise BCE&nbsp;: en cours d&rsquo;attribution),
-        propose les services décrits sur ce site. Il ne s&rsquo;agit pas
-        d&rsquo;une société distincte. Pour toute question relative à la
-        présente politique ou à vos données, contactez-nous à{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
-
       <h2>Quelles données nous traitons</h2>
       <p>
         Selon l’usage que vous faites du site, nous traitons les données
@@ -247,6 +235,18 @@ function Fr() {
         </li>
       </ul>
 
+      <h2>Qui est responsable du traitement</h2>
+      <p>
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; est le nom commercial sous
+        lequel <strong>Grégoire Giuliano</strong>, personne physique
+        domiciliée Avenue Floréal 20, 1410 Waterloo, Belgique (numéro
+        d&rsquo;entreprise BCE&nbsp;: en cours d&rsquo;attribution),
+        propose les services décrits sur ce site. Il ne s&rsquo;agit pas
+        d&rsquo;une société distincte. Pour toute question relative à la
+        présente politique ou à vos données, contactez-nous à{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
+
       <h2>Vos droits</h2>
       <p>
         Conformément à la nLPD, vous disposez d&rsquo;un droit d&rsquo;accès,
@@ -279,17 +279,6 @@ function Fr() {
 function De() {
   return (
     <>
-      <h2>Wer für die Bearbeitung verantwortlich ist</h2>
-      <p>
-        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; ist der Handelsname, unter dem{" "}
-        <strong>Grégoire Giuliano</strong>, natürliche Person mit
-        Wohnsitz an der Avenue Floréal 20, 1410 Waterloo, Belgien
-        (Unternehmensnummer BCE&nbsp;: wird zugeteilt), die auf dieser Website beschriebenen Leistungen
-        anbietet. Es handelt sich nicht um eine eigenständige Gesellschaft.
-        Bei Fragen zu dieser Erklärung oder zu Ihren Daten kontaktieren Sie
-        uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
-
       <h2>Welche Daten wir bearbeiten</h2>
       <p>
         Je nachdem, wie Sie die Website nutzen, bearbeiten wir die folgenden
@@ -452,6 +441,17 @@ function De() {
         </li>
       </ul>
 
+      <h2>Wer für die Bearbeitung verantwortlich ist</h2>
+      <p>
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; ist der Handelsname, unter dem{" "}
+        <strong>Grégoire Giuliano</strong>, natürliche Person mit
+        Wohnsitz an der Avenue Floréal 20, 1410 Waterloo, Belgien
+        (Unternehmensnummer BCE&nbsp;: wird zugeteilt), die auf dieser Website beschriebenen Leistungen
+        anbietet. Es handelt sich nicht um eine eigenständige Gesellschaft.
+        Bei Fragen zu dieser Erklärung oder zu Ihren Daten kontaktieren Sie
+        uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
+
       <h2>Ihre Rechte</h2>
       <p>
         Gemäss DSG haben Sie ein Recht auf Auskunft, Berichtigung, Löschung
@@ -483,17 +483,6 @@ function De() {
 function En() {
   return (
     <>
-      <h2>Who is responsible for processing</h2>
-      <p>
-        &ldquo;Thrax Legal&rdquo; is the trading name under which{" "}
-        <strong>Grégoire Giuliano</strong>, an individual residing at
-        Avenue Floréal 20, 1410 Waterloo, Belgium (business number BCE: being
-        assigned), provides
-        the services described on this site. It is not a separate legal
-        entity. For any question about this policy or your data, contact us
-        at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
-
       <h2>What data we process</h2>
       <p>Depending on how you use the site, we process the following data:</p>
       <ul>
@@ -638,6 +627,17 @@ function En() {
         </li>
       </ul>
 
+      <h2>Who is responsible for processing</h2>
+      <p>
+        &ldquo;Thrax Legal&rdquo; is the trading name under which{" "}
+        <strong>Grégoire Giuliano</strong>, an individual residing at
+        Avenue Floréal 20, 1410 Waterloo, Belgium (business number BCE: being
+        assigned), provides
+        the services described on this site. It is not a separate legal
+        entity. For any question about this policy or your data, contact us
+        at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
+
       <h2>Your rights</h2>
       <p>
         Under the Swiss FADP, you have the right to access, rectify, erase
@@ -667,17 +667,6 @@ function En() {
 function It() {
   return (
     <>
-      <h2>Chi è responsabile del trattamento</h2>
-      <p>
-        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; è il nome commerciale sotto il
-        quale <strong>Grégoire Giuliano</strong>, persona fisica
-        domiciliata in Avenue Floréal 20, 1410 Waterloo, Belgio (numero
-        d&rsquo;impresa BCE&nbsp;: in corso di attribuzione), offre i servizi descritti su questo
-        sito. Non si tratta di una società distinta. Per qualsiasi domanda
-        relativa alla presente informativa o ai vostri dati, contattateci a{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
-      </p>
-
       <h2>Quali dati trattiamo</h2>
       <p>A seconda dell’uso che fate del sito, trattiamo i seguenti dati:</p>
       <ul>
@@ -835,6 +824,17 @@ function It() {
           trattare la vostra richiesta.
         </li>
       </ul>
+
+      <h2>Chi è responsabile del trattamento</h2>
+      <p>
+        &laquo;&nbsp;Thrax Legal&nbsp;&raquo; è il nome commerciale sotto il
+        quale <strong>Grégoire Giuliano</strong>, persona fisica
+        domiciliata in Avenue Floréal 20, 1410 Waterloo, Belgio (numero
+        d&rsquo;impresa BCE&nbsp;: in corso di attribuzione), offre i servizi descritti su questo
+        sito. Non si tratta di una società distinta. Per qualsiasi domanda
+        relativa alla presente informativa o ai vostri dati, contattateci a{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+      </p>
 
       <h2>I vostri diritti</h2>
       <p>

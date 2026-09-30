@@ -1,4 +1,5 @@
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
+import LeadForm from "@/components/site/LeadForm";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -777,13 +778,21 @@ function ArrowIcon() {
 function StickyOrderBar({ locale, t }: { locale: Locale; t: HomeContent }) {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-bg/95 backdrop-blur">
-      <Container className="flex items-center justify-between gap-4 py-3">
-        <div className="min-w-0">
+      <Container className="flex items-center justify-between gap-3 py-3">
+        <div className="hidden min-w-0 sm:block">
           <p className="truncate text-sm font-semibold leading-tight text-text">{t.stickyLabel}</p>
         </div>
-        <PrimaryButton href={`/${locale}/#offre`} className="shrink-0 px-5 py-2.5 text-sm">
-          {t.stickyCta}
-        </PrimaryButton>
+        <div className="flex w-full items-center justify-end gap-2 sm:w-auto">
+          <a
+            href="#rappel"
+            className="inline-flex flex-1 items-center justify-center rounded-full border border-text/50 px-4 py-2.5 text-sm font-semibold text-text transition-colors duration-200 hover:bg-text hover:text-bg sm:flex-none sm:px-5"
+          >
+            {LEAD_STRINGS[locale].stickyCta}
+          </a>
+          <PrimaryButton href={`/${locale}/#offre`} className="flex-1 px-4 py-2.5 text-sm sm:flex-none sm:px-5">
+            {t.stickyCta}
+          </PrimaryButton>
+        </div>
       </Container>
     </div>
   );
@@ -864,10 +873,16 @@ export default async function Home({
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-text-muted">
                   {t.heroSubtitle}
                 </p>
-                <div className="mt-8 flex flex-col items-center gap-3">
+                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <PrimaryButton href={`/${locale}/#offre`} className="px-8 py-3.5 text-base">
                     {t.heroCtaLabel}
                   </PrimaryButton>
+                  <a
+                    href="#rappel"
+                    className="inline-flex items-center justify-center rounded-full border border-text/40 bg-bg/60 px-8 py-3.5 text-base font-medium text-text backdrop-blur transition-colors duration-200 hover:border-text hover:bg-surface"
+                  >
+                    {LEAD_STRINGS[locale].heroCta}
+                  </a>
                 </div>
                 <div className="mx-auto mt-8 flex max-w-md flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-xs text-text-muted">
                   {t.heroProof.map((item, index) => (
@@ -938,6 +953,18 @@ export default async function Home({
                     <TierCard key={tier.slug} tier={tier} locale={locale} />
                   ))}
                 </div>
+                <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-2xl border border-text/20 bg-surface px-6 py-5 text-center sm:flex-row sm:text-left">
+                  <div>
+                    <p className="text-base font-semibold text-text">{LEAD_STRINGS[locale].calloutText}</p>
+                    <p className="mt-1 text-sm text-text-muted">{LEAD_STRINGS[locale].points[0]}</p>
+                  </div>
+                  <a
+                    href="#rappel"
+                    className="inline-flex shrink-0 items-center justify-center rounded-full border border-text bg-bg px-6 py-3 text-sm font-semibold text-text transition-colors duration-200 hover:bg-text hover:text-bg"
+                  >
+                    {LEAD_STRINGS[locale].heroCta}
+                  </a>
+                </div>
                 <div className="mt-8 rounded-2xl border border-border bg-surface p-6 md:p-8">
                   <p className="text-center text-xs font-medium uppercase tracking-[0.18em] text-text-muted">
                     {t.perksHeading}
@@ -959,11 +986,38 @@ export default async function Home({
                   <a href="#dossiers" className="mt-4 inline-block text-sm font-medium text-text underline underline-offset-4">
                     {t.clarityLinkLabel}
                   </a>
-                  <p className="mt-6 border-t border-border pt-6 text-sm text-text-muted">
-                    <a href={`/${locale}/contact`} className="font-medium text-text underline underline-offset-4">
-                      {LEAD_STRINGS[locale].linkLabel}
-                    </a>
-                  </p>
+
+                </div>
+              </Reveal>
+            </Container>
+          </section>
+
+          <section id="rappel" className="theme-light scroll-mt-28 border-t border-border bg-surface py-16 md:py-24">
+            <Container className="mx-auto max-w-5xl">
+              <Reveal>
+                <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-start">
+                  <div>
+                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-text-muted">
+                      {LEAD_STRINGS[locale].sectionEyebrow}
+                    </p>
+                    <h2 className="mt-3 text-[28px] font-semibold leading-[1.15] tracking-[-0.02em] text-text md:text-4xl">
+                      {LEAD_STRINGS[locale].sectionHeading}
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-text-muted">{LEAD_STRINGS[locale].sectionBody}</p>
+                    <ul className="mt-6 space-y-3">
+                      {LEAD_STRINGS[locale].points.map((point) => (
+                        <li key={point} className="flex gap-3 text-sm text-text">
+                          <span aria-hidden className="mt-0.5 text-text">
+                            &#10003;
+                          </span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="rounded-2xl border border-border bg-bg p-6 md:p-8">
+                    <LeadForm locale={locale} />
+                  </div>
                 </div>
               </Reveal>
             </Container>

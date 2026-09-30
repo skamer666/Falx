@@ -86,18 +86,16 @@ function Fr() {
         compte et en cochant la case d’acceptation, le client confirme avoir
         lu et accepté les CGV et agir à des fins professionnelles. Des
         conditions différentes du client ne s’appliquent pas, sauf acceptation
-        écrite de Thrax Legal.
+        écrite de Thrax Legal. L’identité et l’adresse de contact du prestataire figurent à l’article 14.
       </p>
 
-      <h2>2. Identification du prestataire</h2>
+      <h2>2. Communications électroniques</h2>
       <p>
-        «&nbsp;Thrax Legal&nbsp;» est le nom commercial sous lequel{" "}
-        <strong>Grégoire Giuliano</strong>, personne physique
-        domiciliée en Belgique (numéro d’entreprise BCE&nbsp;: en cours
-        d’attribution, adresse de contact&nbsp;: Avenue Floréal 20, 1410
-        Waterloo, Belgique), propose les services
-        décrits sur ce site. Il ne s’agit pas d’une société distincte.
-        Contact&nbsp;: <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        Les communications entre les parties, y compris les confirmations,
+        factures, avis et modifications des CGV, se font valablement par
+        email à l’adresse indiquée par le client dans son compte ou à{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Le client
+        tient son adresse à jour.
       </p>
 
       <h2>3. Nature du service et limites</h2>
@@ -435,13 +433,15 @@ function Fr() {
         d’effacement décrits dans cette politique.
       </p>
 
-      <h2>14. Communications électroniques</h2>
+      <h2>14. Identité du prestataire</h2>
       <p>
-        Les communications entre les parties, y compris les confirmations,
-        factures, avis et modifications des CGV, se font valablement par
-        email à l’adresse indiquée par le client dans son compte ou à{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Le client
-        tient son adresse à jour.
+        «&nbsp;Thrax Legal&nbsp;» est le nom commercial sous lequel{" "}
+        <strong>Grégoire Giuliano</strong>, personne physique
+        domiciliée en Belgique (numéro d’entreprise BCE&nbsp;: en cours
+        d’attribution, adresse de contact&nbsp;: Avenue Floréal 20, 1410
+        Waterloo, Belgique), propose les services
+        décrits sur ce site. Il ne s’agit pas d’une société distincte.
+        Contact&nbsp;: <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>15. Force majeure</h2>
@@ -505,18 +505,17 @@ function De() {
         Kontos und dem Anklicken des Annahmefelds bestätigt der Kunde, die
         AGB gelesen und akzeptiert zu haben und zu beruflichen Zwecken zu
         handeln. Abweichende Bedingungen des Kunden gelten nur bei
-        schriftlicher Zustimmung von Thrax Legal.
+        schriftlicher Zustimmung von Thrax Legal. Die Identität und die Kontaktadresse des Anbieters stehen in Artikel 14.
       </p>
 
-      <h2>2. Angaben zum Anbieter</h2>
+      <h2>2. Elektronische Kommunikation</h2>
       <p>
-        «&nbsp;Thrax Legal&nbsp;» ist der Handelsname, unter dem{" "}
-        <strong>Grégoire Giuliano</strong>, natürliche Person mit
-        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: wird zugeteilt,
-        Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
-        Website beschriebenen Leistungen anbietet. Es handelt sich nicht um
-        eine eigenständige Gesellschaft. Kontakt&nbsp;:{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        Die Kommunikation zwischen den Parteien, einschliesslich
+        Bestätigungen, Rechnungen, Mitteilungen und Änderungen der AGB,
+        erfolgt gültig per E-Mail an die vom Kunden in seinem Konto
+        angegebene Adresse oder an{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Der Kunde
+        hält seine Adresse aktuell.
       </p>
 
       <h2>3. Art der Leistung und Grenzen</h2>
@@ -827,14 +826,15 @@ function De() {
         Auskunft, Berichtigung und Löschung.
       </p>
 
-      <h2>14. Elektronische Kommunikation</h2>
+      <h2>14. Angaben zum Anbieter</h2>
       <p>
-        Die Kommunikation zwischen den Parteien, einschliesslich
-        Bestätigungen, Rechnungen, Mitteilungen und Änderungen der AGB,
-        erfolgt gültig per E-Mail an die vom Kunden in seinem Konto
-        angegebene Adresse oder an{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Der Kunde
-        hält seine Adresse aktuell.
+        «&nbsp;Thrax Legal&nbsp;» ist der Handelsname, unter dem{" "}
+        <strong>Grégoire Giuliano</strong>, natürliche Person mit
+        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: wird zugeteilt,
+        Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
+        Website beschriebenen Leistungen anbietet. Es handelt sich nicht um
+        eine eigenständige Gesellschaft. Kontakt&nbsp;:{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>15. Höhere Gewalt</h2>
@@ -899,17 +899,16 @@ function En() {
         ticking the acceptance box, the customer confirms that they have read
         and accepted the Terms and that they act for professional purposes. The
         customer&rsquo;s own terms do not apply unless Thrax Legal accepts them
-        in writing.
+        in writing. The provider&rsquo;s identity and contact address are set out in section 14.
       </p>
 
-      <h2>2. Identity of the provider</h2>
+      <h2>2. Electronic communications</h2>
       <p>
-        &ldquo;Thrax Legal&rdquo; is the trade name under which{" "}
-        <strong>Grégoire Giuliano</strong>, an individual resident in
-        Belgium (business number BCE: being assigned, contact address: Avenue
-        Floréal 20, 1410 Waterloo, Belgium), provides the services described
-        on this site. It is not a separate company. Contact:{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        Communications between the parties, including confirmations, invoices,
+        notices and changes to the Terms, are validly made by email to the
+        address the customer gave in their account or to{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. The customer
+        keeps their address up to date.
       </p>
 
       <h2>3. Nature of the service and limits</h2>
@@ -1194,13 +1193,14 @@ function En() {
         in that policy.
       </p>
 
-      <h2>14. Electronic communications</h2>
+      <h2>14. Identity of the provider</h2>
       <p>
-        Communications between the parties, including confirmations, invoices,
-        notices and changes to the Terms, are validly made by email to the
-        address the customer gave in their account or to{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. The customer
-        keeps their address up to date.
+        &ldquo;Thrax Legal&rdquo; is the trade name under which{" "}
+        <strong>Grégoire Giuliano</strong>, an individual resident in
+        Belgium (business number BCE: being assigned, contact address: Avenue
+        Floréal 20, 1410 Waterloo, Belgium), provides the services described
+        on this site. It is not a separate company. Contact:{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>15. Force majeure</h2>
@@ -1261,18 +1261,16 @@ function It() {
         spuntando la casella di accettazione, il cliente conferma di aver letto
         e accettato le CG e di agire per fini professionali. Condizioni
         differenti del cliente non si applicano, salvo accettazione scritta di
-        Thrax Legal.
+        Thrax Legal. L&rsquo;identità e l&rsquo;indirizzo di contatto del prestatore figurano all&rsquo;articolo 14.
       </p>
 
-      <h2>2. Identificazione del prestatore</h2>
+      <h2>2. Comunicazioni elettroniche</h2>
       <p>
-        «&nbsp;Thrax Legal&nbsp;» è il nome commerciale con cui{" "}
-        <strong>Grégoire Giuliano</strong>, persona fisica domiciliata
-        in Belgio (numero d&rsquo;impresa BCE&nbsp;: in corso di attribuzione,
-        indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
-        offre i servizi descritti su questo sito. Non si tratta di
-        una società distinta. Contatto&nbsp;:{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
+        Le comunicazioni tra le parti, comprese conferme, fatture, avvisi e
+        modifiche delle CG, avvengono validamente via email all&rsquo;indirizzo
+        indicato dal cliente nel proprio account o a{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Il cliente
+        mantiene aggiornato il proprio indirizzo.
       </p>
 
       <h2>3. Natura del servizio e limiti</h2>
@@ -1567,13 +1565,15 @@ function It() {
         rettifica e cancellazione descritti in tale informativa.
       </p>
 
-      <h2>14. Comunicazioni elettroniche</h2>
+      <h2>14. Identificazione del prestatore</h2>
       <p>
-        Le comunicazioni tra le parti, comprese conferme, fatture, avvisi e
-        modifiche delle CG, avvengono validamente via email all&rsquo;indirizzo
-        indicato dal cliente nel proprio account o a{" "}
-        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>. Il cliente
-        mantiene aggiornato il proprio indirizzo.
+        «&nbsp;Thrax Legal&nbsp;» è il nome commerciale con cui{" "}
+        <strong>Grégoire Giuliano</strong>, persona fisica domiciliata
+        in Belgio (numero d&rsquo;impresa BCE&nbsp;: in corso di attribuzione,
+        indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
+        offre i servizi descritti su questo sito. Non si tratta di
+        una società distinta. Contatto&nbsp;:{" "}
+        <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
       <h2>15. Forza maggiore</h2>
