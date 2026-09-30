@@ -134,6 +134,28 @@ function Fr() {
         des informations particulièrement sensibles.
       </p>
       <p>
+        <strong>Recours à l’intelligence artificielle.</strong> Thrax Legal utilise
+        des outils d’intelligence artificielle, actuellement l’assistant Claude
+        de la société Anthropic, PBC (États-Unis), pour analyser les
+        informations et documents du client et préparer les réponses et
+        livrables, que Thrax Legal relit et dont il reste seul responsable
+        envers le client. En acceptant les CGV et en cochant la case dédiée à la
+        création de son compte, le client <strong>consent expressément</strong> à
+        ce que ses informations et documents (y compris les données
+        personnelles de tiers qu’ils contiennent) soient transmis à ce
+        prestataire dans ce but. Ce traitement est nécessaire au service&nbsp;: le
+        client qui n’y consent pas ne peut pas souscrire, et celui qui retire
+        son consentement en cours de contrat met fin à l’abonnement, selon
+        l’article 10. Thrax Legal n’utilise que des offres professionnelles
+        d’Anthropic, dont les conditions prévoient que les données du client ne
+        servent pas à entraîner les modèles et ne sont conservées que pour une
+        durée limitée&nbsp;; le transfert vers les États-Unis est encadré par des
+        clauses contractuelles types. Le client évite de transmettre des
+        données inutiles, en particulier des données sensibles (santé,
+        opinions, procédures pénales ou administratives), sauf si sa demande
+        l’exige. Les détails figurent dans la politique de confidentialité.
+      </p>
+      <p>
         Les informations générales sur le droit suisse figurant sur ce site
         (guide, foire aux questions, références légales ou
         jurisprudentielles) sont fournies à titre informatif, sans garantie
@@ -329,7 +351,9 @@ function Fr() {
         prestataires techniques qui en ont besoin pour la fournir et qui sont
         tenus à une confidentialité équivalente. Cet engagement ne s’applique
         pas aux informations déjà publiques, ni à une communication imposée
-        par la loi ou par une autorité compétente (voir l’article 3). Il
+        par la loi ou par une autorité compétente (voir l’article 3). La
+        transmission au fournisseur d’intelligence artificielle visé à l’article 3
+        est permise et ne viole pas cet engagement. Il
         subsiste après la fin du contrat.
       </p>
 
@@ -534,6 +558,29 @@ function De() {
         dies, bevor er besonders sensible Informationen übermittelt.
       </p>
       <p>
+        <strong>Einsatz künstlicher Intelligenz.</strong> Thrax Legal verwendet
+        Tools der künstlichen Intelligenz, derzeit den Assistenten Claude der
+        Anthropic, PBC (USA), um die Angaben und Dokumente des Kunden zu
+        analysieren und die Antworten und Ergebnisse vorzubereiten, die Thrax
+        Legal überprüft und für die es dem Kunden allein verantwortlich
+        bleibt. Mit der Annahme der AGB und dem Anklicken des dafür
+        vorgesehenen Felds bei der Kontoerstellung <strong>willigt der Kunde
+        ausdrücklich ein</strong>, dass seine Angaben und Dokumente (einschliesslich
+        der darin enthaltenen Personendaten Dritter) zu diesem Zweck an diesen
+        Dienstleister übermittelt werden. Diese Verarbeitung ist für den
+        Dienst erforderlich: Wer nicht einwilligt, kann nicht abschliessen, und
+        wer seine Einwilligung während des Vertrags widerruft, beendet das
+        Abonnement gemäss Artikel 10. Thrax Legal nutzt nur professionelle
+        Angebote von Anthropic, deren Bedingungen vorsehen, dass die Daten des
+        Kunden nicht zum Training der Modelle verwendet und nur für begrenzte
+        Zeit aufbewahrt werden; die Übermittlung in die USA ist durch
+        Standardvertragsklauseln abgesichert. Der Kunde vermeidet die
+        Übermittlung unnötiger Daten, insbesondere sensibler Daten
+        (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser wenn
+        seine Anfrage dies erfordert. Einzelheiten stehen in der
+        Datenschutzerklärung.
+      </p>
+      <p>
         Die allgemeinen Informationen zum Schweizer Recht auf dieser Website
         (Ratgeber, häufige Fragen, Hinweise auf Gesetze oder Rechtsprechung)
         dienen nur der Information, ohne Gewähr für Vollständigkeit,
@@ -698,7 +745,7 @@ function De() {
         zu gleichwertiger Vertraulichkeit verpflichtet sind. Diese
         Verpflichtung gilt nicht für bereits öffentliche Informationen und
         nicht für eine gesetzlich oder durch eine zuständige Behörde
-        verlangte Bekanntgabe (siehe Artikel 3). Sie besteht nach
+        verlangte Bekanntgabe (siehe Artikel 3). Die Übermittlung an den in Artikel 3 genannten KI-Anbieter ist zulässig und verletzt diese Verpflichtung nicht. Sie besteht nach
         Vertragsende fort.
       </p>
 
@@ -905,6 +952,27 @@ function En() {
         information.
       </p>
       <p>
+        <strong>Use of artificial intelligence.</strong> Thrax Legal uses
+        artificial intelligence tools, currently the Claude assistant from
+        Anthropic, PBC (United States), to analyse the customer&rsquo;s
+        information and documents and to prepare answers and deliverables,
+        which Thrax Legal reviews and for which it remains solely responsible
+        towards the customer. By accepting the Terms and ticking the dedicated
+        box when creating their account, the customer{" "}
+        <strong>expressly consents</strong> to their information and documents
+        (including any third-party personal data they contain) being sent to
+        this provider for that purpose. This processing is necessary for the
+        service: a customer who does not consent cannot subscribe, and one who
+        withdraws consent during the contract ends the subscription under
+        section 10. Thrax Legal only uses Anthropic&rsquo;s professional offerings,
+        whose terms provide that customer data is not used to train the models
+        and is kept only for a limited period; the transfer to the United States
+        is covered by standard contractual clauses. The customer avoids sending
+        unnecessary data, in particular sensitive data (health, opinions,
+        criminal or administrative proceedings), unless their request requires
+        it. Details are in the privacy policy.
+      </p>
+      <p>
         The general information on Swiss law on this site (guide, frequently
         asked questions, legal or case-law references) is provided for
         information only, without any guarantee of completeness, currency or
@@ -1057,7 +1125,7 @@ function En() {
         need them to deliver the service and are bound by equivalent
         confidentiality. This undertaking does not apply to information that is
         already public, nor to a disclosure required by law or by a competent
-        authority (see section 3). It continues after the contract ends.
+        authority (see section 3). Transmission to the artificial intelligence provider referred to in section 3 is permitted and does not breach this undertaking. It continues after the contract ends.
       </p>
 
       <h2>10. Termination, refusal and refunds</h2>
@@ -1250,6 +1318,28 @@ function It() {
         conto prima di trasmettere informazioni particolarmente sensibili.
       </p>
       <p>
+        <strong>Ricorso all&rsquo;intelligenza artificiale.</strong> Thrax Legal
+        utilizza strumenti di intelligenza artificiale, attualmente
+        l&rsquo;assistente Claude della società Anthropic, PBC (Stati Uniti), per
+        analizzare le informazioni e i documenti del cliente e preparare le
+        risposte e i risultati, che Thrax Legal rivede e di cui resta
+        l&rsquo;unico responsabile nei confronti del cliente. Accettando le CG e
+        spuntando la casella dedicata alla creazione dell&rsquo;account, il cliente{" "}
+        <strong>acconsente espressamente</strong> a che le sue informazioni e i
+        suoi documenti (compresi i dati personali di terzi in essi contenuti)
+        siano trasmessi a questo fornitore a tale scopo. Questo trattamento è
+        necessario al servizio: il cliente che non acconsente non può
+        sottoscrivere, e chi ritira il consenso nel corso del contratto pone
+        fine all&rsquo;abbonamento, secondo l&rsquo;articolo 10. Thrax Legal utilizza solo
+        offerte professionali di Anthropic, le cui condizioni prevedono che i
+        dati del cliente non servano ad addestrare i modelli e siano conservati
+        solo per una durata limitata; il trasferimento verso gli Stati Uniti è
+        coperto da clausole contrattuali tipo. Il cliente evita di trasmettere
+        dati non necessari, in particolare dati sensibili (salute, opinioni,
+        procedimenti penali o amministrativi), salvo che la sua richiesta lo
+        richieda. I dettagli figurano nell&rsquo;informativa sulla privacy.
+      </p>
+      <p>
         Le informazioni generali sul diritto svizzero presenti su questo sito
         (guida, domande frequenti, riferimenti legali o giurisprudenziali) sono
         fornite a titolo meramente informativo, senza garanzia di completezza,
@@ -1406,7 +1496,7 @@ function It() {
         ne hanno bisogno per fornire il servizio e sono tenuti a una
         riservatezza equivalente. Questo impegno non si applica alle
         informazioni già pubbliche né a una comunicazione imposta dalla legge o
-        da un&rsquo;autorità competente (vedi articolo 3). Sussiste dopo la fine del
+        da un&rsquo;autorità competente (vedi articolo 3). La trasmissione al fornitore di intelligenza artificiale di cui all&rsquo;articolo 3 è consentita e non viola questo impegno. Sussiste dopo la fine del
         contratto.
       </p>
 

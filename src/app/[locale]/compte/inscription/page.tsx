@@ -34,7 +34,7 @@ export default async function InscriptionPage({
   const t = strings.signup;
 
   let errorMessage: string | null = null;
-  if (error === "email" || error === "name" || error === "terms") errorMessage = t.errors[error];
+  if (error === "email" || error === "name" || error === "terms" || error === "ai") errorMessage = t.errors[error];
   else if (error?.startsWith("password_")) {
     const key = error.slice("password_".length) as keyof typeof strings.passwordProblems;
     errorMessage = strings.passwordProblems[key] ?? null;
@@ -149,6 +149,14 @@ export default async function InscriptionPage({
                       {t.termsPrivacy}
                     </Link>
                     {t.termsAfter}
+                  </span>
+                </label>
+
+                <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
+                  <input type="checkbox" name="ai_consent" required className="mt-1 h-4 w-4 shrink-0 accent-text" />
+                  <span>
+                    {t.aiLabel}
+                    <span className="mt-1 block text-xs">{t.aiHelp}</span>
                   </span>
                 </label>
 

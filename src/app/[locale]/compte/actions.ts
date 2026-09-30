@@ -113,6 +113,7 @@ export async function createAccount(locale: Locale, formData: FormData) {
   const password = String(formData.get("password") ?? "");
   const plan: Plan = field(formData, "plan") === "croissance" ? "croissance" : "essentiel";
   const terms = formData.get("terms") === "on";
+  const aiConsent = formData.get("ai_consent") === "on";
   const back = (error: string) =>
     `/${locale}/compte/inscription?error=${error}&email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}`;
 
@@ -121,6 +122,7 @@ export async function createAccount(locale: Locale, formData: FormData) {
   const problem = checkPasswordStrength(password, email);
   if (problem) redirect(back(`password_${problem}`));
   if (!terms) redirect(back("terms"));
+  if (!aiConsent) redirect(back("ai"));
 
   if (await getUserByEmail(email)) redirect(`/${locale}/compte?error=exists&email=${encodeURIComponent(email)}`);
 
@@ -134,6 +136,7 @@ export async function createAccount(locale: Locale, formData: FormData) {
     status: "pending",
     passwordHash: await hashPassword(password),
     termsAcceptedAt: Date.now(),
+    aiConsentAt: Date.now(),
   });
   await logAudit({ actor: null, action: "signup", targetType: "user", targetId: user.id, detail: `${email} · ${plan}` });
   await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale));

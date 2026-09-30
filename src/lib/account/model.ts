@@ -26,6 +26,8 @@ export type AccountUser = {
   notes: string | null;
   last_login_at: number | null;
   terms_accepted_at: number | null;
+  /** Date du consentement au traitement par l'IA (Claude, Anthropic). */
+  ai_consent_at: number | null;
   /** Calculé au chargement à partir de ADMIN_EMAILS, jamais stocké. */
   is_admin: boolean;
 };

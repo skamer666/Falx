@@ -74,7 +74,7 @@ export async function isAdminEmail(email: string): Promise<boolean> {
 // ---------------------------------------------------------------------------
 
 export const USER_COLUMNS =
-  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at";
+  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at, ai_consent_at";
 
 type UserRow = Omit<AccountUser, "is_admin">;
 
@@ -122,6 +122,7 @@ export async function createUser(input: {
   passwordHash?: string | null;
   phone?: string | null;
   termsAcceptedAt?: number | null;
+  aiConsentAt?: number | null;
 }): Promise<AccountUser> {
   const id = newId();
   const created_at = Date.now();
@@ -129,7 +130,7 @@ export async function createUser(input: {
   const status = input.status ?? "pending";
   await (await db())
     .prepare(
-      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, ai_consent_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     )
     .bind(
       id,
@@ -143,6 +144,7 @@ export async function createUser(input: {
       input.passwordHash ?? null,
       input.phone ?? null,
       input.termsAcceptedAt ?? null,
+      input.aiConsentAt ?? null,
       created_at,
     )
     .run();
@@ -160,6 +162,7 @@ export async function createUser(input: {
     notes: null,
     last_login_at: null,
     terms_accepted_at: input.termsAcceptedAt ?? null,
+    ai_consent_at: input.aiConsentAt ?? null,
     is_admin: (await adminEmails()).includes(email),
   };
 }

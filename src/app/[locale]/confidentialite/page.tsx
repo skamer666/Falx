@@ -10,7 +10,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-09-30";
+const LAST_UPDATED = "2026-10-01";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -184,6 +184,24 @@ function Fr() {
           confirmations, liens de mot de passe, notifications de réponse), qui
           reçoit votre adresse email et le contenu de ces messages, dans le
           cadre de clauses contractuelles types.
+        </li>
+        <li>
+          <strong>Anthropic, PBC</strong> (États-Unis), éditeur de l’assistant
+          d’intelligence artificielle Claude, auquel Thrax Legal a recours pour
+          analyser les informations et documents que vous lui confiez et
+          préparer les réponses, que Thrax Legal relit et dont il reste
+          responsable. Vous y consentez expressément en cochant la case dédiée à
+          la création de votre compte&nbsp;; ce traitement est nécessaire au
+          service. Thrax Legal n’utilise que des offres professionnelles
+          d’Anthropic, dont les conditions prévoient que vos données ne servent
+          pas à entraîner ses modèles&nbsp;; Anthropic les conserve pour une durée
+          limitée (en principe 30 jours) à des fins de sécurité et de
+          conformité, puis les supprime. Le transfert vers les États-Unis est
+          encadré par les clauses contractuelles types de l’addendum de
+          traitement des données d’Anthropic. Évitez de transmettre des données
+          inutiles, en particulier des données sensibles (santé, opinions,
+          procédures pénales ou administratives), sauf si votre demande
+          l’exige.
         </li>
         <li>
           Si vous lancez la vidéo de présentation, <strong>Google Ireland
@@ -372,6 +390,24 @@ function De() {
           von Standardvertragsklauseln.
         </li>
         <li>
+          <strong>Anthropic, PBC</strong> (USA), Herausgeberin des
+          KI-Assistenten Claude, auf den Thrax Legal zurückgreift, um die
+          Angaben und Dokumente, die Sie anvertrauen, zu analysieren und die
+          Antworten vorzubereiten, die Thrax Legal überprüft und für die es
+          verantwortlich bleibt. Sie willigen ausdrücklich ein, indem Sie bei
+          der Kontoerstellung das dafür vorgesehene Feld anklicken; diese
+          Verarbeitung ist für den Dienst erforderlich. Thrax Legal nutzt nur
+          professionelle Angebote von Anthropic, deren Bedingungen vorsehen,
+          dass Ihre Daten nicht zum Training der Modelle verwendet werden;
+          Anthropic bewahrt sie für begrenzte Zeit (in der Regel 30 Tage) zu
+          Sicherheits- und Compliance-Zwecken auf und löscht sie danach. Die
+          Übermittlung in die USA ist durch die Standardvertragsklauseln des
+          Datenverarbeitungszusatzes von Anthropic abgesichert. Vermeiden Sie
+          die Übermittlung unnötiger Daten, insbesondere sensibler Daten
+          (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser
+          wenn Ihre Anfrage dies erfordert.
+        </li>
+        <li>
           Wenn Sie das Präsentationsvideo starten, erhält <strong>Google
           Ireland Limited</strong>, die YouTube für Nutzer in der Schweiz und
           im Europäischen Wirtschaftsraum betreibt, die oben beschriebenen
@@ -539,6 +575,22 @@ function En() {
           confirmations, password links, reply notifications), which receives
           your email address and the content of these messages, under standard
           contractual clauses.
+        </li>
+        <li>
+          <strong>Anthropic, PBC</strong> (United States), publisher of the
+          Claude AI assistant, which Thrax Legal uses to analyse the
+          information and documents you entrust to it and to prepare answers,
+          which Thrax Legal reviews and remains responsible for. You expressly
+          consent by ticking the dedicated box when creating your account; this
+          processing is necessary for the service. Thrax Legal only uses
+          Anthropic&rsquo;s professional offerings, whose terms provide that your
+          data is not used to train its models; Anthropic keeps it for a limited
+          period (in principle 30 days) for security and compliance purposes,
+          then deletes it. The transfer to the United States is covered by the
+          standard contractual clauses in Anthropic&rsquo;s data processing
+          addendum. Avoid sending unnecessary data, in particular sensitive data
+          (health, opinions, criminal or administrative proceedings), unless
+          your request requires it.
         </li>
         <li>
           If you start the presentation video, <strong>Google Ireland
@@ -716,6 +768,24 @@ function It() {
           conferme, link per la password, notifiche di risposta), che riceve il
           vostro indirizzo email e il contenuto di questi messaggi,
           nell’ambito di clausole contrattuali tipo.
+        </li>
+        <li>
+          <strong>Anthropic, PBC</strong> (Stati Uniti), editore dell’assistente
+          di intelligenza artificiale Claude, al quale Thrax Legal ricorre per
+          analizzare le informazioni e i documenti che gli affidate e preparare
+          le risposte, che Thrax Legal rivede e di cui resta responsabile.
+          Acconsentite espressamente spuntando la casella dedicata alla
+          creazione del vostro account; questo trattamento è necessario al
+          servizio. Thrax Legal utilizza solo offerte professionali di
+          Anthropic, le cui condizioni prevedono che i vostri dati non servano
+          ad addestrare i suoi modelli; Anthropic li conserva per una durata
+          limitata (in linea di principio 30 giorni) a fini di sicurezza e
+          conformità, poi li elimina. Il trasferimento verso gli Stati Uniti è
+          coperto dalle clausole contrattuali tipo dell’addendum sul
+          trattamento dei dati di Anthropic. Evitate di trasmettere dati non
+          necessari, in particolare dati sensibili (salute, opinioni,
+          procedimenti penali o amministrativi), salvo che la vostra richiesta
+          lo richieda.
         </li>
         <li>
           Se avviate il video di presentazione, <strong>Google Ireland

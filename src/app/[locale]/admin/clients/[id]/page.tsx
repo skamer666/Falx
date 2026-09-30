@@ -466,6 +466,10 @@ export default async function AdminClientPage({
                 <dd>{user.terms_accepted_at ? formatDateTime(user.terms_accepted_at, "fr") : "non enregistré"}</dd>
               </div>
               <div className="flex justify-between gap-3">
+                <dt>IA (Claude) acceptée</dt>
+                <dd>{user.ai_consent_at ? formatDateTime(user.ai_consent_at, "fr") : "non enregistré"}</dd>
+              </div>
+              <div className="flex justify-between gap-3">
                 <dt>Langue</dt>
                 <dd className="uppercase">{user.locale}</dd>
               </div>

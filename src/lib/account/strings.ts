@@ -50,11 +50,13 @@ export type AccountStrings = {
     termsMiddle: string;
     termsPrivacy: string;
     termsAfter: string;
+    aiLabel: string;
+    aiHelp: string;
     activationNote: string;
     cta: string;
     haveAccount: string;
     signIn: string;
-    errors: { email: string; name: string; terms: string };
+    errors: { email: string; name: string; terms: string; ai: string };
   };
   forgot: {
     metaTitle: string;
@@ -243,6 +245,8 @@ const fr: AccountStrings = {
     termsMiddle: " et la ",
     termsPrivacy: "politique de confidentialité",
     termsAfter: ", et je confirme souscrire à des fins professionnelles.",
+    aiLabel: "J’accepte que mes informations et documents soient traités par un outil d’intelligence artificielle (Claude, édité par Anthropic, aux États-Unis) pour préparer les réponses de Thrax Legal, qui les relit et en reste responsable.",
+    aiHelp: "Ce traitement est nécessaire au service. Anthropic n’utilise pas ces données pour entraîner ses modèles. Évitez d’envoyer des données sensibles inutiles. Détails dans la politique de confidentialité.",
     activationNote:
       "Votre espace s'ouvre dès réception du paiement du premier mois. Nous vous contactons pour finaliser.",
     cta: "Créer mon compte",
@@ -252,6 +256,7 @@ const fr: AccountStrings = {
       email: "Vérifiez votre adresse email.",
       name: "Indiquez votre nom et prénom.",
       terms: "Vous devez accepter les conditions générales pour continuer.",
+      ai: "Le traitement par l’intelligence artificielle est nécessaire au service : cochez la case correspondante pour continuer.",
     },
   },
   forgot: {
@@ -481,6 +486,8 @@ const de: AccountStrings = {
     termsMiddle: " und die ",
     termsPrivacy: "Datenschutzerklärung",
     termsAfter: " gelesen, akzeptiere sie und bestätige, dass ich zu beruflichen Zwecken abschliesse.",
+    aiLabel: "Ich akzeptiere, dass meine Angaben und Dokumente von einem KI-Tool (Claude, herausgegeben von Anthropic, USA) verarbeitet werden, um die Antworten von Thrax Legal vorzubereiten, das sie überprüft und dafür verantwortlich bleibt.",
+    aiHelp: "Diese Verarbeitung ist für den Dienst erforderlich. Anthropic verwendet diese Daten nicht zum Training seiner Modelle. Senden Sie keine unnötigen sensiblen Daten. Einzelheiten in der Datenschutzerklärung.",
     activationNote: "Ihr Bereich wird nach Zahlungseingang für den ersten Monat freigeschaltet. Wir melden uns, um alles abzuschliessen.",
     cta: "Konto erstellen",
     haveAccount: "Schon ein Konto?",
@@ -489,6 +496,7 @@ const de: AccountStrings = {
       email: "Prüfen Sie Ihre E-Mail-Adresse.",
       name: "Geben Sie Ihren Vor- und Nachnamen an.",
       terms: "Sie müssen die Allgemeinen Geschäftsbedingungen akzeptieren, um fortzufahren.",
+      ai: "Die Verarbeitung durch künstliche Intelligenz ist für den Dienst erforderlich: Bitte aktivieren Sie das entsprechende Feld, um fortzufahren.",
     },
   },
   forgot: {
@@ -718,6 +726,8 @@ const en: AccountStrings = {
     termsMiddle: " and the ",
     termsPrivacy: "privacy policy",
     termsAfter: ", and I confirm that I am subscribing for professional purposes.",
+    aiLabel: "I agree that my information and documents may be processed by an artificial intelligence tool (Claude, published by Anthropic, in the United States) to prepare Thrax Legal’s answers, which Thrax Legal reviews and remains responsible for.",
+    aiHelp: "This processing is necessary for the service. Anthropic does not use this data to train its models. Avoid sending unnecessary sensitive data. Details in the privacy policy.",
     activationNote: "Your account opens once payment for the first month is received. We'll get in touch to finalise.",
     cta: "Create my account",
     haveAccount: "Already have an account?",
@@ -726,6 +736,7 @@ const en: AccountStrings = {
       email: "Check your email address.",
       name: "Enter your full name.",
       terms: "You must accept the terms and conditions to continue.",
+      ai: "Processing by artificial intelligence is necessary for the service: please tick the corresponding box to continue.",
     },
   },
   forgot: {
@@ -954,6 +965,8 @@ const it: AccountStrings = {
     termsMiddle: " e l'",
     termsPrivacy: "informativa sulla privacy",
     termsAfter: ", e confermo di sottoscrivere per fini professionali.",
+    aiLabel: "Accetto che le mie informazioni e i miei documenti siano trattati da uno strumento di intelligenza artificiale (Claude, di Anthropic, negli Stati Uniti) per preparare le risposte di Thrax Legal, che le rivede e ne resta responsabile.",
+    aiHelp: "Questo trattamento è necessario al servizio. Anthropic non utilizza questi dati per addestrare i propri modelli. Evitate di inviare dati sensibili non necessari. Dettagli nell’informativa sulla privacy.",
     activationNote: "Il vostro spazio si apre alla ricezione del pagamento del primo mese. Vi contattiamo per finalizzare.",
     cta: "Crea il mio account",
     haveAccount: "Avete già un account?",
@@ -962,6 +975,7 @@ const it: AccountStrings = {
       email: "Controllate il vostro indirizzo email.",
       name: "Indicate nome e cognome.",
       terms: "Dovete accettare le condizioni generali per continuare.",
+      ai: "Il trattamento tramite intelligenza artificiale è necessario al servizio: spuntate la casella corrispondente per continuare.",
     },
   },
   forgot: {
