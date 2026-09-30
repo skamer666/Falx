@@ -1,45 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
-import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
-
-const STRINGS: Record<Locale, { metaTitle: string; heading: string; body: string; note: string }> = {
-  fr: {
-    metaTitle: "Vérifiez vos emails | Thrax Legal",
-    heading: "Vérifiez vos emails",
-    body: "Nous avons envoyé un lien de connexion à",
-    note: "Le lien est valable 15 minutes. Pensez à vérifier vos spams si vous ne le voyez pas.",
-  },
-  de: {
-    metaTitle: "Prüfen Sie Ihre E-Mails | Thrax Legal",
-    heading: "Prüfen Sie Ihre E-Mails",
-    body: "Wir haben einen Anmeldelink gesendet an",
-    note: "Der Link ist 15 Minuten gültig. Prüfen Sie gegebenenfalls Ihren Spam-Ordner.",
-  },
-  en: {
-    metaTitle: "Check your email | Thrax Legal",
-    heading: "Check your email",
-    body: "We've sent a sign-in link to",
-    note: "The link is valid for 15 minutes. Check your spam folder if you don't see it.",
-  },
-  it: {
-    metaTitle: "Controllate la vostra email | Thrax Legal",
-    heading: "Controllate la vostra email",
-    body: "Abbiamo inviato un link di accesso a",
-    note: "Il link è valido 15 minuti. Controllate anche la cartella spam.",
-  },
-};
+import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
+import { ACCOUNT_STRINGS } from "@/lib/account/strings";
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ type?: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
+  const { type } = await searchParams;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  return { title: STRINGS[locale].metaTitle };
+  const t = ACCOUNT_STRINGS[locale].check;
+  return { title: (type === "signup" ? t.signup : t.reset).metaTitle, robots: { index: false, follow: false } };
 }
 
 export default async function VerifierPage({
@@ -47,12 +26,13 @@ export default async function VerifierPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ email?: string }>;
+  searchParams: Promise<{ email?: string; type?: string }>;
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  const { email } = await searchParams;
-  const t = STRINGS[locale];
+  const { email, type } = await searchParams;
+  const strings = ACCOUNT_STRINGS[locale].check;
+  const t = type === "signup" ? strings.signup : strings.reset;
 
   return (
     <>
@@ -72,13 +52,17 @@ export default async function VerifierPage({
                   />
                 </svg>
               </div>
-              <h1 className="mt-6 text-[2rem] font-semibold leading-[1.15] tracking-[-0.02em] text-text">
-                {t.heading}
-              </h1>
+              <h1 className="mt-6 text-[2rem] font-semibold leading-[1.15] tracking-[-0.02em] text-text">{t.heading}</h1>
               <p className="mt-3 text-base leading-relaxed text-text-muted">
                 {t.body} {email ? <strong className="text-text">{email}</strong> : null}
+                {type === "signup" ? "." : ","} {type === "signup" ? null : t.note}
               </p>
-              <p className="mt-6 text-xs leading-relaxed text-text-muted">{t.note}</p>
+              {type === "signup" ? <p className="mt-3 text-sm leading-relaxed text-text-muted">{t.note}</p> : null}
+              <p className="mt-8 text-sm">
+                <Link href={`/${locale}/compte`} className="text-text-muted underline underline-offset-4 hover:text-text">
+                  {strings.back}
+                </Link>
+              </p>
             </Reveal>
           </Container>
         </section>

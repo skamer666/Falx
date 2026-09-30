@@ -51,9 +51,9 @@ export const CATEGORY_LABELS: Record<Locale, Record<DossierCategory, string>> = 
   },
 };
 
-export const STATUS_LABELS: Record<Locale, Record<"nouveau" | "en_cours" | "traite", string>> = {
-  fr: { nouveau: "Reçu", en_cours: "En cours", traite: "Traité" },
-  de: { nouveau: "Erhalten", en_cours: "In Bearbeitung", traite: "Erledigt" },
-  en: { nouveau: "Received", en_cours: "In progress", traite: "Completed" },
-  it: { nouveau: "Ricevuto", en_cours: "In corso", traite: "Trattato" },
+export const STATUS_LABELS: Record<Locale, Record<"nouveau" | "en_cours" | "attente_client" | "traite", string>> = {
+  fr: { nouveau: "Reçu", en_cours: "En cours", attente_client: "En attente de votre retour", traite: "Traité" },
+  de: { nouveau: "Erhalten", en_cours: "In Bearbeitung", attente_client: "Wartet auf Ihre Rückmeldung", traite: "Erledigt" },
+  en: { nouveau: "Received", en_cours: "In progress", attente_client: "Waiting for your reply", traite: "Completed" },
+  it: { nouveau: "Ricevuto", en_cours: "In corso", attente_client: "In attesa del vostro riscontro", traite: "Trattato" },
 };

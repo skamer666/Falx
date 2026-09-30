@@ -6,22 +6,22 @@ import type { Locale } from "@/i18n/config";
 const STRINGS: Record<Locale, { heading: string; body: string; cta: string }> = {
   fr: {
     heading: "Connectez-vous pour continuer",
-    body: "Cette page est réservée aux abonnés. Entrez votre email pour recevoir un lien de connexion.",
+    body: "Cette page est réservée aux abonnés. Connectez-vous avec votre email et votre mot de passe.",
     cta: "Se connecter",
   },
   de: {
     heading: "Melden Sie sich an, um fortzufahren",
-    body: "Diese Seite ist Abonnentinnen und Abonnenten vorbehalten. Geben Sie Ihre E-Mail-Adresse ein, um einen Anmeldelink zu erhalten.",
+    body: "Diese Seite ist Abonnentinnen und Abonnenten vorbehalten. Melden Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passwort an.",
     cta: "Anmelden",
   },
   en: {
     heading: "Sign in to continue",
-    body: "This page is reserved for subscribers. Enter your email to receive a sign-in link.",
+    body: "This page is reserved for subscribers. Sign in with your email and password.",
     cta: "Sign in",
   },
   it: {
     heading: "Accedete per continuare",
-    body: "Questa pagina è riservata agli abbonati. Inserite la vostra email per ricevere un link di accesso.",
+    body: "Questa pagina è riservata agli abbonati. Accedete con la vostra email e la vostra password.",
     cta: "Accedi",
   },
 };
