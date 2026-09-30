@@ -95,10 +95,10 @@ function Fr() {
 
       <h2>3. Description et prix des formules</h2>
       <p>
-        <strong>Essentiel</strong> : 149 CHF par mois. Comprend 10 questions rapides par mois, 3 dossiers complets par mois traités sous 72 heures ouvrées, un appel ou une visioconférence de cadrage pour chaque dossier (article 4) et l&rsquo;accès à la bibliothèque complète de modèles de documents.
+        <strong>Essentiel</strong> : 149 CHF par mois. Comprend 10 questions rapides par mois, 3 dossiers complets par mois traités sous 72 heures ouvrées et un appel ou une visioconférence de cadrage pour chaque dossier (article 4).
       </p>
       <p>
-        <strong>Croissance</strong> : 349 CHF par mois. Comprend 30 questions rapides par mois, 8 dossiers complets par mois traités sous 48 heures ouvrées (24 heures pour les urgences signalées comme telles), un appel ou une visioconférence de cadrage pour chaque dossier (article 4), une révision de contrat prioritaire incluse chaque mois et l&rsquo;accès à la bibliothèque complète de modèles.
+        <strong>Croissance</strong> : 349 CHF par mois. Comprend 30 questions rapides par mois, 8 dossiers complets par mois traités sous 48 heures ouvrées (24 heures pour les urgences signalées comme telles), un appel ou une visioconférence de cadrage pour chaque dossier (article 4) et une révision de contrat prioritaire incluse chaque mois.
       </p>
       <p>
         <strong>Question rapide.</strong> Une question rapide est une question précise sur une situation, à laquelle Thrax Legal répond par écrit en quelques lignes, sans lecture ni rédaction de document et sans recherche approfondie (environ 15 minutes de travail au maximum). Si la réponse exige la lecture d&rsquo;un document, une recherche approfondie ou une rédaction, la demande est un dossier&nbsp;; le client en est informé avant tout traitement. Les questions de suivi portant sur un dossier livré, posées dans les 14 jours suivant sa livraison, ne sont pas décomptées. Au-delà du nombre de questions rapides inclus dans la formule, la question est traitée le mois suivant ou, au choix du client, décomptée comme un dossier.
@@ -120,10 +120,7 @@ function Fr() {
         l&rsquo;objet d&rsquo;une orientation vers un avocat spécialisé.
       </p>
       <p>
-        Les prix sont indiqués en francs suisses (CHF). [Régime de TVA à
-        confirmer avec un comptable avant mise en production&nbsp;: le
-        prestataire est susceptible de bénéficier du régime belge de
-        franchise de la taxe, auquel cas la TVA n&rsquo;est pas appliquée.]
+        Les prix sont indiqués en francs suisses (CHF).
       </p>
       <p>
         Chaque dossier complet comprend un appel téléphonique ou une visioconférence de cadrage, sur rendez-vous, de 15 minutes en formule Essentiel et de 30 minutes en formule Croissance, au cours desquels le client expose sa situation de vive voix. La réponse, les conseils et les documents sont ensuite fournis par écrit. Le client peut renoncer à cet échange et décrire sa situation par écrit.
@@ -278,10 +275,10 @@ function De() {
 
       <h2>3. Beschreibung und Preise der Formeln</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst 10 schnelle Fragen pro Monat, 3 vollständige Anliegen pro Monat, bearbeitet innert 72 Arbeitsstunden, ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4) sowie Zugang zur vollständigen Vorlagenbibliothek.
+        <strong>Essentiel</strong>: CHF 149 pro Monat. Umfasst 10 schnelle Fragen pro Monat, 3 vollständige Anliegen pro Monat, bearbeitet innert 72 Arbeitsstunden sowie ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4).
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst 30 schnelle Fragen pro Monat, 8 vollständige Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24 Stunden bei als solche gemeldeten Notfällen), ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4), eine im Preis inbegriffene prioritäre Vertragsprüfung pro Monat und Zugang zur vollständigen Vorlagenbibliothek.
+        <strong>Croissance</strong>: CHF 349 pro Monat. Umfasst 30 schnelle Fragen pro Monat, 8 vollständige Anliegen pro Monat, bearbeitet innert 48 Arbeitsstunden (24 Stunden bei als solche gemeldeten Notfällen), ein Telefon- oder Videogespräch zur Klärung jedes Anliegens (Artikel 4) und eine im Preis inbegriffene prioritäre Vertragsprüfung pro Monat.
       </p>
       <p>
         <strong>Schnelle Frage.</strong> Eine schnelle Frage ist eine präzise Frage zu einer Situation, die Thrax Legal in wenigen Zeilen schriftlich beantwortet, ohne Lesen oder Verfassen eines Dokuments und ohne vertiefte Recherche (höchstens rund 15 Minuten Arbeit). Erfordert die Antwort das Lesen eines Dokuments, eine vertiefte Recherche oder ein Verfassen, ist die Anfrage ein Anliegen; der Kunde wird vor jeder Bearbeitung informiert. Folgefragen zu einem gelieferten Anliegen, die innert 14 Tagen nach Lieferung gestellt werden, werden nicht angerechnet. Über die in der Formel enthaltene Anzahl schneller Fragen hinaus wird die Frage im Folgemonat bearbeitet oder, nach Wahl des Kunden, als Anliegen angerechnet.
@@ -303,10 +300,7 @@ function De() {
         Anwältin oder einen Anwalt weitergeleitet.
       </p>
       <p>
-        Die Preise verstehen sich in Schweizer Franken (CHF). [MWST-Regime
-        vor Inbetriebnahme mit einem Buchhalter zu bestätigen: der Anbieter
-        könnte von der belgischen Kleinunternehmerregelung profitieren,
-        wonach keine MWST erhoben wird.]
+        Die Preise verstehen sich in Schweizer Franken (CHF).
       </p>
       <p>
         Jedes vollständige Anliegen umfasst nach Terminvereinbarung ein Telefon- oder Videogespräch zur Klärung von 15 Minuten in der Formel Essentiel und 30 Minuten in der Formel Croissance, in dem der Kunde seine Situation mündlich schildert. Antwort, Beratung und Dokumente werden anschliessend schriftlich geliefert. Der Kunde kann auf dieses Gespräch verzichten und seine Situation schriftlich schildern.
@@ -459,10 +453,10 @@ function En() {
 
       <h2>3. Description and price of the plans</h2>
       <p>
-        <strong>Essential</strong>: CHF 149 per month. Includes 10 quick questions per month, 3 full matters per month handled within 72 business hours, a call or video briefing for each matter (article 4) and access to the full library of document templates.
+        <strong>Essential</strong>: CHF 149 per month. Includes 10 quick questions per month, 3 full matters per month handled within 72 business hours and a call or video briefing for each matter (article 4).
       </p>
       <p>
-        <strong>Growth</strong>: CHF 349 per month. Includes 30 quick questions per month, 8 full matters per month handled within 48 business hours (24 hours for urgent cases flagged as such), a call or video briefing for each matter (article 4), one priority contract review included each month and access to the full template library.
+        <strong>Growth</strong>: CHF 349 per month. Includes 30 quick questions per month, 8 full matters per month handled within 48 business hours (24 hours for urgent cases flagged as such), a call or video briefing for each matter (article 4) and one priority contract review included each month.
       </p>
       <p>
         <strong>Quick question.</strong> A quick question is a precise question about a situation, which Thrax Legal answers in writing in a few lines, without reading or drafting a document and without in-depth research (about 15 minutes of work at most). If the answer requires reading a document, in-depth research or drafting, the request is a matter; the customer is informed before any work starts. Follow-up questions on a delivered matter, asked within 14 days of delivery, are not counted. Beyond the number of quick questions included in the plan, the question is handled the following month or, at the customer&rsquo;s choice, counted as a matter.
@@ -483,10 +477,7 @@ function En() {
         lawyer.
       </p>
       <p>
-        Prices are stated in Swiss francs (CHF). [VAT treatment to be
-        confirmed with an accountant before going live: the provider may be
-        eligible for the Belgian small-business VAT exemption, in which
-        case no VAT is charged.]
+        Prices are stated in Swiss francs (CHF).
       </p>
       <p>
         Each full matter includes a call or video briefing by appointment, lasting 15 minutes on the Essentiel plan and 30 minutes on the Croissance plan, during which the customer explains their situation out loud. The answer, advice and documents are then provided in writing. The customer may waive this briefing and describe their situation in writing.
@@ -635,10 +626,10 @@ function It() {
 
       <h2>3. Descrizione e prezzi delle formule</h2>
       <p>
-        <strong>Essentiel</strong>: CHF 149 al mese. Comprende 10 domande rapide al mese, 3 pratiche complete al mese gestite entro 72 ore lavorative, una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4) e l&rsquo;accesso alla libreria completa di modelli di documenti.
+        <strong>Essentiel</strong>: CHF 149 al mese. Comprende 10 domande rapide al mese, 3 pratiche complete al mese gestite entro 72 ore lavorative e una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4).
       </p>
       <p>
-        <strong>Croissance</strong>: CHF 349 al mese. Comprende 30 domande rapide al mese, 8 pratiche complete al mese gestite entro 48 ore lavorative (24 ore per le urgenze segnalate come tali), una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4), una revisione contrattuale prioritaria inclusa ogni mese e l&rsquo;accesso alla libreria completa di modelli.
+        <strong>Croissance</strong>: CHF 349 al mese. Comprende 30 domande rapide al mese, 8 pratiche complete al mese gestite entro 48 ore lavorative (24 ore per le urgenze segnalate come tali), una chiamata o videochiamata di inquadramento per ogni pratica (articolo 4) e una revisione contrattuale prioritaria inclusa ogni mese.
       </p>
       <p>
         <strong>Domanda rapida.</strong> Una domanda rapida è una domanda precisa su una situazione, alla quale Thrax Legal risponde per iscritto in poche righe, senza leggere né redigere un documento e senza ricerca approfondita (al massimo circa 15 minuti di lavoro). Se la risposta richiede la lettura di un documento, una ricerca approfondita o una redazione, la richiesta è una pratica; il cliente ne è informato prima di ogni trattamento. Le domande di seguito su una pratica consegnata, poste entro 14 giorni dalla consegna, non sono conteggiate. Oltre il numero di domande rapide incluso nella formula, la domanda è trattata il mese successivo o, a scelta del cliente, conteggiata come pratica.
@@ -661,11 +652,7 @@ function It() {
         un avvocato specializzato.
       </p>
       <p>
-        I prezzi sono indicati in franchi svizzeri (CHF). [Regime IVA da
-        confermare con un commercialista prima della messa in produzione:
-        il fornitore potrebbe beneficiare del regime belga di franchigia
-        IVA per le piccole imprese, nel qual caso l&rsquo;IVA non viene
-        applicata.]
+        I prezzi sono indicati in franchi svizzeri (CHF).
       </p>
       <p>
         Ogni pratica completa comprende una chiamata o videochiamata di inquadramento su appuntamento, di 15 minuti nella formula Essentiel e di 30 minuti nella formula Croissance, durante la quale il cliente espone a voce la propria situazione. La risposta, i consigli e i documenti sono poi forniti per iscritto. Il cliente può rinunciare a questo colloquio e descrivere la propria situazione per iscritto.

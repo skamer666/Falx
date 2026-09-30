@@ -58,7 +58,6 @@ type HomeContent = {
     free: string[];
     promise: string;
   };
-  templateNote: string;
   extraQuestionNote: string;
   valueDisclaimer: string;
   stepsHeading: string;
@@ -108,7 +107,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Traité sous 72h ouvrées",
           "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée chez un avocat : plus de 1'500 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 2'000 CHF",
         ctaLabel: "Choisir Essentiel",
         highlight: false,
       },
@@ -127,7 +126,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Révision de contrat prioritaire chaque mois",
           "Prix bloqué à vie, résiliable à tout moment",
         ],
-        valueNote: "Valeur estimée chez un avocat : plus de 4'000 CHF",
+        valueNote: "Valeur estimée chez un avocat : plus de 6'000 CHF",
         ctaLabel: "Choisir Croissance",
         highlight: true,
       },
@@ -180,7 +179,6 @@ const CONTENT: Record<Locale, HomeContent> = {
       ],
       "promise": "Avant de commencer, je vous confirme par écrit ce que compte votre demande. Rien n'est décompté sans que vous l'ayez vu."
     },
-    templateNote: "Bibliothèque complète de modèles incluse sur les deux formules (valeur 500 CHF).",
     extraQuestionNote: "Dossier supplémentaire : 79 CHF, prix fixe.",
     valueDisclaimer:
       "Valeur estimée sur la base des tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton).",
@@ -206,7 +204,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Que couvre l'abonnement ?",
-        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), des questions rapides par écrit, un appel ou une visio de cadrage pour chaque dossier et l'accès à une bibliothèque de modèles. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses. Nous vous orientons vers un avocat spécialisé.",
+        a: "Rédaction et relecture de contrats, résolution de litiges, explication de vos démarches (droit du travail, CGV, nLPD, recouvrement amiable, baux commerciaux), des questions rapides par écrit et un appel ou une visio de cadrage pour chaque dossier. Les opérations exceptionnelles (levée de fonds, contentieux devant un tribunal, restructuration) ne sont pas incluses. Nous vous orientons vers un avocat spécialisé.",
       },
       {
         q: "Question rapide ou dossier : quelle différence ?",
@@ -270,7 +268,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Bearbeitet innert 72 Arbeitsstunden",
           "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 1'500",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 2'000",
         ctaLabel: "Essentiel wählen",
         highlight: false,
       },
@@ -289,7 +287,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Prioritäre Vertragsprüfung jeden Monat",
           "Preis lebenslang fixiert, jederzeit kündbar",
         ],
-        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 4'000",
+        valueNote: "Geschätzter Wert bei einem Anwalt: über CHF 6'000",
         ctaLabel: "Croissance wählen",
         highlight: true,
       },
@@ -342,7 +340,6 @@ const CONTENT: Record<Locale, HomeContent> = {
       ],
       "promise": "Bevor ich beginne, bestätige ich Ihnen schriftlich, wie viele Anliegen Ihre Anfrage zählt. Nichts wird angerechnet, ohne dass Sie es gesehen haben."
     },
-    templateNote: "Vollständige Vorlagenbibliothek in beiden Formeln inklusive (Wert CHF 500).",
     extraQuestionNote: "Zusätzliches Anliegen: CHF 79, Fixpreis.",
     valueDisclaimer:
       "Geschätzter Wert auf Basis üblicher Stundensätze von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton).",
@@ -368,7 +365,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Was deckt das Abo ab?",
-        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), schnelle Fragen mit schriftlicher Antwort, ein Telefon- oder Videogespräch zur Klärung jedes Anliegens und Zugang zu einer Vorlagenbibliothek. Aussergewöhnliche Vorgänge (Kapitalbeschaffung, Gerichtsverfahren, Restrukturierung) sind nicht enthalten. Wir verweisen Sie an einen spezialisierten Anwalt.",
+        a: "Erstellung und Prüfung von Verträgen, Lösung von Streitfällen, Erklärung Ihrer Verfahren (Arbeitsrecht, AGB, DSG, gütliches Inkasso, Geschäftsmietverträge), schnelle Fragen mit schriftlicher Antwort und ein Telefon- oder Videogespräch zur Klärung jedes Anliegens. Aussergewöhnliche Vorgänge (Kapitalbeschaffung, Gerichtsverfahren, Restrukturierung) sind nicht enthalten. Wir verweisen Sie an einen spezialisierten Anwalt.",
       },
       {
         q: "Was ist der Unterschied zwischen einer schnellen Frage und einem Anliegen?",
@@ -432,7 +429,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Handled within 72 business hours",
           "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value from a lawyer: over CHF 1,500",
+        valueNote: "Estimated value from a lawyer: over CHF 2,000",
         ctaLabel: "Choose Essential",
         highlight: false,
       },
@@ -451,7 +448,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Priority contract review every month",
           "Price locked for life, cancel anytime",
         ],
-        valueNote: "Estimated value from a lawyer: over CHF 4,000",
+        valueNote: "Estimated value from a lawyer: over CHF 6,000",
         ctaLabel: "Choose Growth",
         highlight: true,
       },
@@ -504,7 +501,6 @@ const CONTENT: Record<Locale, HomeContent> = {
       ],
       "promise": "Before starting, I confirm in writing what your request counts as. Nothing is deducted without you having seen it."
     },
-    templateNote: "Full template library included on both plans (CHF 500 value).",
     extraQuestionNote: "Extra matter: CHF 79, fixed price.",
     valueDisclaimer:
       "Estimated value based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton).",
@@ -530,7 +526,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "What does the subscription cover?",
-        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), quick questions answered in writing, a call or video briefing for every matter and access to a template library. Exceptional matters (fundraising, court litigation, restructuring) are not included. We refer you to a specialised lawyer.",
+        a: "Drafting and reviewing contracts, resolving disputes, explaining your procedures (employment law, T&Cs, FADP, amicable debt collection, commercial leases), quick questions answered in writing and a call or video briefing for every matter. Exceptional matters (fundraising, court litigation, restructuring) are not included. We refer you to a specialised lawyer.",
       },
       {
         q: "What's the difference between a quick question and a matter?",
@@ -594,7 +590,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Gestite entro 72 ore lavorative",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato presso un avvocato: oltre CHF 1'500",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 2'000",
         ctaLabel: "Scegliere Essentiel",
         highlight: false,
       },
@@ -613,7 +609,7 @@ const CONTENT: Record<Locale, HomeContent> = {
           "Revisione contrattuale prioritaria ogni mese",
           "Prezzo bloccato a vita, disdicibile in qualsiasi momento",
         ],
-        valueNote: "Valore stimato presso un avvocato: oltre CHF 4'000",
+        valueNote: "Valore stimato presso un avvocato: oltre CHF 6'000",
         ctaLabel: "Scegliere Croissance",
         highlight: true,
       },
@@ -666,7 +662,6 @@ const CONTENT: Record<Locale, HomeContent> = {
       ],
       "promise": "Prima di iniziare, vi confermo per iscritto cosa conta la vostra richiesta. Nulla viene conteggiato senza che lo abbiate visto."
     },
-    templateNote: "Libreria completa di modelli inclusa in entrambe le formule (valore CHF 500).",
     extraQuestionNote: "Pratica supplementare: CHF 79, prezzo fisso.",
     valueDisclaimer:
       "Valore stimato sulla base delle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone).",
@@ -692,7 +687,7 @@ const CONTENT: Record<Locale, HomeContent> = {
     faq: [
       {
         q: "Cosa copre l'abbonamento?",
-        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), domande rapide con risposta scritta, una chiamata o videochiamata di inquadramento per ogni pratica e accesso a una libreria di modelli. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse. Vi indirizziamo a un avvocato specializzato.",
+        a: "Redazione e revisione di contratti, risoluzione di controversie, spiegazione delle procedure (diritto del lavoro, condizioni generali, nLPD, recupero crediti amichevole, locazioni commerciali), domande rapide con risposta scritta e una chiamata o videochiamata di inquadramento per ogni pratica. Le operazioni eccezionali (raccolta fondi, contenzioso giudiziario, ristrutturazione) non sono incluse. Vi indirizziamo a un avvocato specializzato.",
       },
       {
         q: "Domanda rapida o pratica: che differenza c'è?",
@@ -957,7 +952,7 @@ export default async function Home({
                 </div>
                 <div className="mx-auto mt-6 max-w-lg text-center">
                   <p className="text-sm text-text-muted">
-                    {t.templateNote} {t.extraQuestionNote}
+                    {t.extraQuestionNote}
                   </p>
                   <p className="mt-2 text-xs text-text-muted/70">{t.valueDisclaimer}</p>
                   <a href="#dossiers" className="mt-4 inline-block text-sm font-medium text-text underline underline-offset-4">
