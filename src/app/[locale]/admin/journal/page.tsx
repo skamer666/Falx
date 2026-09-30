@@ -18,7 +18,7 @@ export default async function AdminJournalPage({ searchParams }: { searchParams:
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   return (
-    <AdminShell active="journal" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="journal" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Journal d'activité" subtitle="Toutes les actions sensibles : paiements, changements de statut, réponses, connexions admin." />
       <Card>
         {entries.length === 0 ? (

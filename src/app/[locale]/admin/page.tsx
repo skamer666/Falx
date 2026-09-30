@@ -24,7 +24,7 @@ export default async function AdminOverviewPage() {
   const now = currentTime();
 
   return (
-    <AdminShell active="overview" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="overview" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Vue d'ensemble" subtitle={`Mise à jour ${formatDateTime(now, "fr")}`} />
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

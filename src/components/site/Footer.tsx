@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import { Container } from "./ui";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
+import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 
 function ArrowIcon() {
   return (
@@ -57,6 +58,11 @@ export default function Footer({ locale }: { locale: Locale }) {
               Thrax Legal, Grégoire Giuliano
               <br />
               Avenue Floréal 20, 1410 Waterloo, Belgique
+            </p>
+            <p className="mt-3 text-sm">
+              <Link href={`/${locale}/contact`} className="text-text underline underline-offset-4 hover:text-text-muted">
+                {LEAD_STRINGS[locale].heading}
+              </Link>
             </p>
 
             <p className="mt-8 text-xs font-medium uppercase tracking-[0.14em] text-text-muted">

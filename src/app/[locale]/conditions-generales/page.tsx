@@ -6,12 +6,13 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { TERMS_VERSION } from "@/lib/account/legal";
 
 // À compléter avant le premier client : numéro d'entreprise BCE (art. 2) une
 // fois l'inscription comme indépendant faite (identité et adresse de contact
 // exigées par l'art. 3 al. 1 let. s LCD : renseignées), puis faire relire l'ensemble par un avocat suisse. Droit suisse
 // et for à Lausanne choisis par défaut (art. 18) : à confirmer.
-const LAST_UPDATED = "2026-09-30";
+const LAST_UPDATED = TERMS_VERSION;
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {

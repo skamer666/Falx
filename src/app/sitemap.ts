@@ -25,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: alternates(""),
       },
       {
+        url: `${SITE_URL}/${locale}/contact`,
+        lastModified: now,
+        changeFrequency: "yearly",
+        priority: 0.5,
+        alternates: alternates("/contact"),
+      },
+      {
         url: `${SITE_URL}/${locale}/guide`,
         lastModified: now,
         changeFrequency: "weekly",

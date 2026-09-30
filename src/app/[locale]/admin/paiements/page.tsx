@@ -30,7 +30,7 @@ export default async function AdminPaymentsPage({
   const exportQuery = new URLSearchParams({ type: "payments", ...(mois ? { mois } : {}) }).toString();
 
   return (
-    <AdminShell active="paiements" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="paiements" adminEmail={admin.email} badges={badges}>
       <PageHeader
         title="Paiements"
         subtitle="Registre des encaissements saisis à la main (en attendant le module de paiement)"

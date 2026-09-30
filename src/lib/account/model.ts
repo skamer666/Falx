@@ -28,6 +28,10 @@ export type AccountUser = {
   terms_accepted_at: number | null;
   /** Date du consentement au traitement par l'IA (Claude, Anthropic). */
   ai_consent_at: number | null;
+  /** Version des CGV acceptées (date de mise à jour). */
+  terms_version: string | null;
+  /** Message laissé à l'inscription. */
+  signup_message: string | null;
   /** Calculé au chargement à partir de ADMIN_EMAILS, jamais stocké. */
   is_admin: boolean;
 };
@@ -62,6 +66,24 @@ export type DossierMessage = {
   attachments: string | null;
   internal: number;
   created_at: number;
+};
+
+export type LeadStatus = "nouveau" | "contacte" | "converti" | "perdu";
+export const LEAD_STATUSES: LeadStatus[] = ["nouveau", "contacte", "converti", "perdu"];
+export type Lead = {
+  id: string;
+  name: string;
+  email: string;
+  phone: string | null;
+  company: string | null;
+  message: string | null;
+  plan_interest: Plan | null;
+  locale: Locale;
+  status: LeadStatus;
+  notes: string | null;
+  privacy_consent_at: number | null;
+  created_at: number;
+  contacted_at: number | null;
 };
 
 export type Payment = {

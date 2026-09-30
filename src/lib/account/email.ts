@@ -2,7 +2,7 @@ import type { Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 import { escapeHtml, formatDate } from "./format";
 import { PLAN_LABEL } from "./strings";
-import type { Plan } from "./model";
+import type { Lead, Plan } from "./model";
 import { adminEmails, readEnv } from "./db";
 
 const FROM = "Thrax Legal <hey@thrax-legal.ch>";
@@ -119,42 +119,48 @@ export async function sendPasswordLinkEmail(email: string, token: string, locale
   return url;
 }
 
-const SIGNUP_RECEIVED: Record<Locale, { subject: string; heading: string; body: (name: string, plan: string) => string; footer: string }> = {
+const SIGNUP_RECEIVED: Record<Locale, { subject: string; heading: string; body: (name: string, plan: string, version: string) => string; cta: string; footer: string }> = {
   fr: {
-    subject: "Nous avons bien reçu votre demande",
-    heading: "Merci, votre compte est créé",
-    body: (name, plan) =>
-      `Bonjour ${name},<br/><br/>Votre compte Thrax Legal (formule ${plan}) est créé. Il s'ouvre dès réception du paiement du premier mois : nous vous écrivons très vite pour finaliser. Vous pourrez ensuite vous connecter avec votre adresse email et le mot de passe choisi.`,
+    subject: "Votre demande d’abonnement Thrax Legal est enregistrée",
+    heading: "Merci, votre demande est enregistrée",
+    body: (name, plan, version) =>
+      `Bonjour ${name},<br/><br/>Nous avons bien reçu votre demande d’abonnement Thrax Legal (formule ${plan}). Vous avez accepté en ligne les conditions générales (version du ${version}) et le traitement de vos informations par l’intelligence artificielle décrit dans ces conditions : conservez cet email comme confirmation.<br/><br/>Aucun paiement n’est demandé à ce stade. Nous vous contactons dans les meilleurs délais pour finaliser votre abonnement. Votre espace s’ouvre à réception du premier paiement, et vous recevez alors un lien pour choisir votre mot de passe.`,
+    cta: "Relire les conditions générales",
     footer: "Une question ? Répondez simplement à cet email.",
   },
   de: {
-    subject: "Wir haben Ihre Anfrage erhalten",
-    heading: "Danke, Ihr Konto ist erstellt",
-    body: (name, plan) =>
-      `Guten Tag ${name}<br/><br/>Ihr Thrax-Legal-Konto (Formel ${plan}) ist erstellt. Es wird nach Zahlungseingang für den ersten Monat freigeschaltet: Wir schreiben Ihnen bald, um alles abzuschliessen. Danach melden Sie sich mit Ihrer E-Mail-Adresse und dem gewählten Passwort an.`,
+    subject: "Ihre Abonnementsanfrage bei Thrax Legal ist erfasst",
+    heading: "Danke, Ihre Anfrage ist erfasst",
+    body: (name, plan, version) =>
+      `Guten Tag ${name}<br/><br/>Wir haben Ihre Abonnementsanfrage bei Thrax Legal (Formel ${plan}) erhalten. Sie haben die Allgemeinen Geschäftsbedingungen (Fassung vom ${version}) und die darin beschriebene Verarbeitung Ihrer Angaben durch künstliche Intelligenz online akzeptiert: Bewahren Sie diese E-Mail als Bestätigung auf.<br/><br/>Zum jetzigen Zeitpunkt ist keine Zahlung nötig. Wir melden uns so rasch wie möglich, um Ihr Abonnement abzuschliessen. Ihr Bereich wird mit Eingang der ersten Zahlung freigeschaltet; dann erhalten Sie einen Link zur Wahl Ihres Passworts.`,
+    cta: "Allgemeine Geschäftsbedingungen lesen",
     footer: "Eine Frage? Antworten Sie einfach auf diese E-Mail.",
   },
   en: {
-    subject: "We've received your request",
-    heading: "Thank you, your account is created",
-    body: (name, plan) =>
-      `Hello ${name},<br/><br/>Your Thrax Legal account (${plan} plan) is created. It opens once payment for the first month is received: we'll write to you very soon to finalise. You can then sign in with your email address and the password you chose.`,
+    subject: "Your Thrax Legal subscription request is recorded",
+    heading: "Thank you, your request is recorded",
+    body: (name, plan, version) =>
+      `Hello ${name},<br/><br/>We have received your Thrax Legal subscription request (${plan} plan). You accepted the terms and conditions online (version of ${version}) and the processing of your information by artificial intelligence described in them: keep this email as confirmation.<br/><br/>No payment is requested at this stage. We will contact you as soon as possible to finalise your subscription. Your account opens when the first payment is received, and you then receive a link to choose your password.`,
+    cta: "Read the terms and conditions",
     footer: "A question? Just reply to this email.",
   },
   it: {
-    subject: "Abbiamo ricevuto la vostra richiesta",
-    heading: "Grazie, il vostro account è creato",
-    body: (name, plan) =>
-      `Buongiorno ${name},<br/><br/>Il vostro account Thrax Legal (formula ${plan}) è creato. Si apre alla ricezione del pagamento del primo mese: vi scriviamo presto per finalizzare. Potrete poi accedere con il vostro indirizzo email e la password scelta.`,
+    subject: "La vostra richiesta di abbonamento a Thrax Legal è registrata",
+    heading: "Grazie, la vostra richiesta è registrata",
+    body: (name, plan, version) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo ricevuto la vostra richiesta di abbonamento a Thrax Legal (formula ${plan}). Avete accettato online le condizioni generali (versione del ${version}) e il trattamento delle vostre informazioni tramite intelligenza artificiale ivi descritto: conservate questa email come conferma.<br/><br/>Nessun pagamento è richiesto in questa fase. Vi contattiamo il prima possibile per finalizzare il vostro abbonamento. Il vostro spazio si apre alla ricezione del primo pagamento e riceverete allora un link per scegliere la password.`,
+    cta: "Rileggere le condizioni generali",
     footer: "Una domanda? Rispondete semplicemente a questa email.",
   },
 };
 
-export async function sendSignupReceivedEmail(email: string, name: string, plan: Plan, locale: Locale) {
+export async function sendSignupReceivedEmail(email: string, name: string, plan: Plan, locale: Locale, termsVersion: string) {
   const t = SIGNUP_RECEIVED[locale];
   const html = wrapEmailHtml({
     heading: t.heading,
-    bodyHtml: t.body(escapeHtml(name), PLAN_LABEL[locale][plan]),
+    bodyHtml: t.body(escapeHtml(name), PLAN_LABEL[locale][plan], formatDate(Date.parse(termsVersion), locale)),
+    ctaLabel: t.cta,
+    ctaUrl: `${SITE_URL}/${locale}/conditions-generales`,
     footer: t.footer,
   });
   await sendEmail(email, t.subject, html, CONTACT_EMAIL);
@@ -195,13 +201,30 @@ const ACTIVE: Record<Locale, { subject: string; heading: string; body: (name: st
   },
 };
 
-export async function sendAccountActiveEmail(email: string, name: string, plan: Plan, paidUntil: number, locale: Locale) {
+const SET_PASSWORD_CTA: Record<Locale, { cta: string; note: string }> = {
+  fr: { cta: "Choisir mon mot de passe", note: "Le lien pour choisir votre mot de passe est valable 7 jours." },
+  de: { cta: "Mein Passwort wählen", note: "Der Link zur Wahl Ihres Passworts ist 7 Tage gültig." },
+  en: { cta: "Choose my password", note: "The link to choose your password is valid for 7 days." },
+  it: { cta: "Scegliere la password", note: "Il link per scegliere la password è valido 7 giorni." },
+};
+
+export async function sendAccountActiveEmail(
+  email: string,
+  name: string,
+  plan: Plan,
+  paidUntil: number,
+  locale: Locale,
+  passwordToken?: string,
+) {
   const t = ACTIVE[locale];
+  const setPassword = passwordToken ? SET_PASSWORD_CTA[locale] : null;
   const html = wrapEmailHtml({
     heading: t.heading,
-    bodyHtml: t.body(escapeHtml(name), PLAN_LABEL[locale][plan], formatDate(paidUntil, locale)),
-    ctaLabel: t.cta,
-    ctaUrl: `${SITE_URL}/${locale}/compte`,
+    bodyHtml:
+      t.body(escapeHtml(name), PLAN_LABEL[locale][plan], formatDate(paidUntil, locale)) +
+      (setPassword ? `<br/><br/>${escapeHtml(setPassword.note)}` : ""),
+    ctaLabel: setPassword ? setPassword.cta : t.cta,
+    ctaUrl: passwordToken ? `${SITE_URL}/${locale}/compte/mot-de-passe?token=${passwordToken}` : `${SITE_URL}/${locale}/compte`,
     footer: t.footer,
   });
   await sendEmail(email, t.subject, html, CONTACT_EMAIL);
@@ -273,16 +296,18 @@ export async function notifyAdminOfSignup(input: {
   company: string | null;
   phone: string | null;
   plan: Plan;
+  message?: string | null;
 }) {
   const lines = [
     `<strong>${escapeHtml(input.name)}</strong>${input.company ? ` (${escapeHtml(input.company)})` : ""}`,
     escapeHtml(input.email),
     input.phone ? escapeHtml(input.phone) : null,
     `Formule demandée : ${PLAN_LABEL.fr[input.plan]}`,
+    input.message ? `<br/>Message : ${escapeHtml(input.message).replace(/\n/g, "<br/>")}` : null,
   ].filter(Boolean);
   const html = wrapEmailHtml({
     heading: "Nouvelle inscription à activer",
-    bodyHtml: `${lines.join("<br/>")}<br/><br/>Le compte reste bloqué tant que vous n'avez pas enregistré le paiement.`,
+    bodyHtml: `${lines.join("<br/>")}<br/><br/>Le client a signé les CGV en ligne. Recontactez-le ; son espace reste fermé tant que vous n'avez pas enregistré le paiement.`,
     ctaLabel: "Ouvrir la fiche client",
     ctaUrl: `${SITE_URL}/fr/admin/clients/${input.userId}`,
     footer: "Notification automatique Thrax Legal.",
@@ -325,4 +350,123 @@ export async function notifyAdminOfClientMessage(input: {
     footer: "Notification automatique Thrax Legal.",
   });
   await sendEmail(await adminEmails(), `Nouveau message : ${input.userName}`, html, input.userEmail);
+}
+
+// ---------------------------------------------------------------------------
+// Prospects (formulaire « Être rappelé »)
+// ---------------------------------------------------------------------------
+
+const LEAD_RECEIVED: Record<Locale, { subject: string; heading: string; body: (name: string) => string; cta: string; footer: string }> = {
+  fr: {
+    subject: "Nous avons bien reçu votre demande",
+    heading: "Merci, nous vous rappelons",
+    body: (name) =>
+      `Bonjour ${name},<br/><br/>Nous avons bien reçu votre demande et vous recontactons dans les meilleurs délais. Si vous savez déjà ce qu’il vous faut, vous pouvez aussi vous inscrire en ligne dès maintenant : aucun paiement n’est demandé à ce stade.`,
+    cta: "S’inscrire en ligne",
+    footer: "Vous pouvez répondre directement à cet email.",
+  },
+  de: {
+    subject: "Wir haben Ihre Anfrage erhalten",
+    heading: "Danke, wir rufen Sie zurück",
+    body: (name) =>
+      `Guten Tag ${name}<br/><br/>Wir haben Ihre Anfrage erhalten und melden uns so rasch wie möglich. Wenn Sie schon wissen, was Sie brauchen, können Sie sich auch gleich online anmelden: Zum jetzigen Zeitpunkt ist keine Zahlung nötig.`,
+    cta: "Online anmelden",
+    footer: "Sie können direkt auf diese E-Mail antworten.",
+  },
+  en: {
+    subject: "We've received your request",
+    heading: "Thank you, we'll call you back",
+    body: (name) =>
+      `Hello ${name},<br/><br/>We have received your request and will get back to you as soon as possible. If you already know what you need, you can also sign up online right now: no payment is requested at this stage.`,
+    cta: "Sign up online",
+    footer: "You can reply directly to this email.",
+  },
+  it: {
+    subject: "Abbiamo ricevuto la vostra richiesta",
+    heading: "Grazie, vi richiamiamo",
+    body: (name) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo ricevuto la vostra richiesta e vi ricontatteremo il prima possibile. Se sapete già di cosa avete bisogno, potete anche iscrivervi subito online: nessun pagamento è richiesto in questa fase.`,
+    cta: "Iscriversi online",
+    footer: "Potete rispondere direttamente a questa email.",
+  },
+};
+
+export async function sendLeadReceivedEmail(lead: Lead) {
+  const t = LEAD_RECEIVED[lead.locale];
+  const plan = lead.plan_interest ? `?plan=${lead.plan_interest}` : "";
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name)),
+    ctaLabel: t.cta,
+    ctaUrl: `${SITE_URL}/${lead.locale}/compte/inscription${plan}`,
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
+}
+
+export async function notifyAdminOfLead(lead: Lead) {
+  const lines = [
+    `<strong>${escapeHtml(lead.name)}</strong>${lead.company ? ` (${escapeHtml(lead.company)})` : ""}`,
+    escapeHtml(lead.email),
+    lead.phone ? `Tél. ${escapeHtml(lead.phone)}` : "Pas de téléphone",
+    lead.plan_interest ? `Intéressé par : ${PLAN_LABEL.fr[lead.plan_interest]}` : null,
+    lead.message ? `<br/>${escapeHtml(lead.message).replace(/\n/g, "<br/>")}` : null,
+  ].filter(Boolean);
+  const html = wrapEmailHtml({
+    heading: "Nouveau prospect à rappeler",
+    bodyHtml: lines.join("<br/>"),
+    ctaLabel: "Ouvrir les prospects",
+    ctaUrl: `${SITE_URL}/fr/admin/prospects`,
+    footer: "Notification automatique Thrax Legal.",
+  });
+  await sendEmail(await adminEmails(), `Prospect : ${lead.name}`, html, lead.email);
+}
+
+const SIGNUP_INVITE: Record<Locale, { subject: string; heading: string; body: (name: string) => string; cta: string; footer: string }> = {
+  fr: {
+    subject: "Finalisez votre inscription Thrax Legal",
+    heading: "Finalisez votre inscription",
+    body: (name) =>
+      `Bonjour ${name},<br/><br/>Suite à notre échange, vous pouvez finaliser votre inscription en ligne : vous acceptez les conditions générales et nous ouvrons votre espace dès réception du premier paiement. Aucun paiement n’est demandé à cette étape.`,
+    cta: "Finaliser mon inscription",
+    footer: "Une question ? Répondez simplement à cet email.",
+  },
+  de: {
+    subject: "Schliessen Sie Ihre Anmeldung bei Thrax Legal ab",
+    heading: "Schliessen Sie Ihre Anmeldung ab",
+    body: (name) =>
+      `Guten Tag ${name}<br/><br/>Nach unserem Austausch können Sie Ihre Anmeldung online abschliessen: Sie akzeptieren die Allgemeinen Geschäftsbedingungen, und wir öffnen Ihren Bereich mit Eingang der ersten Zahlung. In diesem Schritt ist keine Zahlung nötig.`,
+    cta: "Anmeldung abschliessen",
+    footer: "Eine Frage? Antworten Sie einfach auf diese E-Mail.",
+  },
+  en: {
+    subject: "Complete your Thrax Legal registration",
+    heading: "Complete your registration",
+    body: (name) =>
+      `Hello ${name},<br/><br/>Following our conversation, you can complete your registration online: you accept the terms and conditions, and we open your account when the first payment is received. No payment is requested at this step.`,
+    cta: "Complete my registration",
+    footer: "A question? Just reply to this email.",
+  },
+  it: {
+    subject: "Finalizzate la vostra iscrizione a Thrax Legal",
+    heading: "Finalizzate la vostra iscrizione",
+    body: (name) =>
+      `Buongiorno ${name},<br/><br/>In seguito al nostro scambio, potete finalizzare la vostra iscrizione online: accettate le condizioni generali e apriamo il vostro spazio alla ricezione del primo pagamento. In questa fase non è richiesto alcun pagamento.`,
+    cta: "Finalizzare l’iscrizione",
+    footer: "Una domanda? Rispondete semplicemente a questa email.",
+  },
+};
+
+export async function sendSignupInviteEmail(lead: Lead) {
+  const t = SIGNUP_INVITE[lead.locale];
+  const params = new URLSearchParams({ email: lead.email, name: lead.name });
+  if (lead.plan_interest) params.set("plan", lead.plan_interest);
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name)),
+    ctaLabel: t.cta,
+    ctaUrl: `${SITE_URL}/${lead.locale}/compte/inscription?${params.toString()}`,
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
 }

@@ -39,7 +39,7 @@ export default async function AdminSettingsPage() {
   const version = await database.prepare("SELECT value FROM schema_meta WHERE key = 'version'").first<{ value: string }>();
 
   return (
-    <AdminShell active="parametres" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="parametres" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Paramètres" subtitle="État de la configuration du site." />
       <Card title="Diagnostic">
         <ul className="divide-y divide-border">
@@ -63,6 +63,7 @@ export default async function AdminSettingsPage() {
 
       <Card title="Comment ça marche" className="mt-6">
         <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-text-muted">
+          <li>Un prospect laisse ses coordonnées (« Être rappelé », page Prospects) ou s&apos;inscrit directement : dans les deux cas vous le rappelez, sans paiement à ce stade.</li>
           <li>Un client s&apos;inscrit : son compte est créé <strong className="text-text">« à activer »</strong> et il ne peut pas se connecter.</li>
           <li>Il vous paie (virement, TWINT…). Vous ouvrez sa fiche et cliquez sur <strong className="text-text">Enregistrer un paiement</strong>.</li>
           <li>L&apos;accès s&apos;ouvre jusqu&apos;à la fin de la période payée, et il reçoit un email.</li>

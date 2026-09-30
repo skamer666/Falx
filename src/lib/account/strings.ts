@@ -38,8 +38,8 @@ export type AccountStrings = {
     companyPlaceholder: string;
     phoneLabel: string;
     phonePlaceholder: string;
-    passwordLabel: string;
-    passwordHint: string;
+    messageLabel: string;
+    messagePlaceholder: string;
     planLabel: string;
     planEssentiel: string;
     planEssentielNote: string;
@@ -203,8 +203,8 @@ const fr: AccountStrings = {
     passwordLabel: "Mot de passe",
     cta: "Se connecter",
     forgot: "Mot de passe oublié ?",
-    noAccount: "Pas encore de compte ?",
-    createAccount: "Créer un compte",
+    noAccount: "Pas encore client ?",
+    createAccount: "S’inscrire",
     notices: {
       reset: "Mot de passe enregistré. Vous pouvez maintenant vous connecter.",
       signout: "Vous êtes déconnecté.",
@@ -224,17 +224,17 @@ const fr: AccountStrings = {
   },
   signup: {
     metaTitle: "Créer votre compte | Thrax Legal",
-    heading: "Créons votre compte",
-    subheading: "Quelques informations pour préparer votre espace client.",
+    heading: "Je m’inscris",
+    subheading: "Laissez vos informations et acceptez les conditions en ligne. Aucun paiement maintenant : nous vous contactons pour finaliser et ouvrir votre espace.",
     emailLabel: "Adresse email",
     nameLabel: "Nom et prénom",
     namePlaceholder: "Jean Dupont",
     companyLabel: "Entreprise (optionnel)",
     companyPlaceholder: "Nom de votre société",
-    phoneLabel: "Téléphone (optionnel)",
+    phoneLabel: "Téléphone (recommandé, pour vous rappeler)",
     phonePlaceholder: "+41 79 000 00 00",
-    passwordLabel: "Mot de passe",
-    passwordHint: "8 caractères minimum. Vous l'utiliserez avec votre email pour vous connecter.",
+    messageLabel: "Votre besoin en quelques mots (facultatif)",
+    messagePlaceholder: "Ex. : contrat de distribution, litige avec un client, CGV pour ma boutique…",
     planLabel: "Votre formule",
     planEssentiel: "Essentiel",
     planEssentielNote: "149 CHF/mois · 10 questions rapides · 5 dossiers/mois",
@@ -247,9 +247,8 @@ const fr: AccountStrings = {
     termsAfter: ", et je confirme souscrire à des fins professionnelles.",
     aiLabel: "J’accepte que mes informations et documents soient traités par un outil d’intelligence artificielle (Claude, édité par Anthropic, aux États-Unis) pour préparer les réponses de Thrax Legal, qui les relit et en reste responsable.",
     aiHelp: "Ce traitement est nécessaire au service. Thrax Legal désactive l’usage de ces données pour l’entraînement des modèles. Évitez d’envoyer des données sensibles inutiles. Détails dans la politique de confidentialité.",
-    activationNote:
-      "Votre espace s'ouvre dès réception du paiement du premier mois. Nous vous contactons pour finaliser.",
-    cta: "Créer mon compte",
+    activationNote: "Sans paiement à ce stade. Nous vous contactons dans les meilleurs délais (en principe sous 1 jour ouvré) pour finaliser votre abonnement. Votre espace s’ouvre à réception du premier paiement : vous choisissez alors votre mot de passe.",
+    cta: "Envoyer ma demande d’abonnement",
     haveAccount: "Déjà un compte ?",
     signIn: "Se connecter",
     errors: {
@@ -283,9 +282,9 @@ const fr: AccountStrings = {
   check: {
     signup: {
       metaTitle: "Demande reçue | Thrax Legal",
-      heading: "Votre compte est créé",
-      body: "Merci. Nous avons bien reçu votre demande pour",
-      note: "Votre espace est activé dès réception du paiement du premier mois. Nous vous écrivons très vite pour finaliser. Vous pourrez ensuite vous connecter avec votre email et votre mot de passe.",
+      heading: "Merci, votre demande est enregistrée",
+      body: "Nous avons bien reçu votre demande d’abonnement pour",
+      note: "Vous avez accepté les conditions générales en ligne : une confirmation vous est envoyée par email. Nous vous contactons dans les meilleurs délais pour finaliser. À l’activation de votre espace, vous recevez un lien pour choisir votre mot de passe.",
     },
     reset: {
       metaTitle: "Vérifiez vos emails | Thrax Legal",
@@ -445,8 +444,8 @@ const de: AccountStrings = {
     passwordLabel: "Passwort",
     cta: "Anmelden",
     forgot: "Passwort vergessen?",
-    noAccount: "Noch kein Konto?",
-    createAccount: "Konto erstellen",
+    noAccount: "Noch nicht Kunde?",
+    createAccount: "Registrieren",
     notices: {
       reset: "Passwort gespeichert. Sie können sich jetzt anmelden.",
       signout: "Sie sind abgemeldet.",
@@ -465,17 +464,17 @@ const de: AccountStrings = {
   },
   signup: {
     metaTitle: "Konto erstellen | Thrax Legal",
-    heading: "Erstellen wir Ihr Konto",
-    subheading: "Ein paar Angaben, um Ihren Kundenbereich vorzubereiten.",
+    heading: "Ich melde mich an",
+    subheading: "Hinterlassen Sie Ihre Angaben und akzeptieren Sie die Bedingungen online. Jetzt keine Zahlung: Wir melden uns, um alles abzuschliessen und Ihren Bereich zu öffnen.",
     emailLabel: "E-Mail-Adresse",
     nameLabel: "Vor- und Nachname",
     namePlaceholder: "Hans Muster",
     companyLabel: "Unternehmen (optional)",
     companyPlaceholder: "Name Ihres Unternehmens",
-    phoneLabel: "Telefon (optional)",
+    phoneLabel: "Telefon (empfohlen, damit wir Sie anrufen können)",
     phonePlaceholder: "+41 79 000 00 00",
-    passwordLabel: "Passwort",
-    passwordHint: "Mindestens 8 Zeichen. Sie melden sich damit zusammen mit Ihrer E-Mail an.",
+    messageLabel: "Ihr Anliegen in wenigen Worten (freiwillig)",
+    messagePlaceholder: "Z. B.: Vertriebsvertrag, Streit mit einem Kunden, AGB für meinen Shop …",
     planLabel: "Ihre Formel",
     planEssentiel: "Essentiel",
     planEssentielNote: "CHF 149/Monat · 10 Kurzfragen · 5 Anliegen/Monat",
@@ -488,8 +487,8 @@ const de: AccountStrings = {
     termsAfter: " gelesen, akzeptiere sie und bestätige, dass ich zu beruflichen Zwecken abschliesse.",
     aiLabel: "Ich akzeptiere, dass meine Angaben und Dokumente von einem KI-Tool (Claude, herausgegeben von Anthropic, USA) verarbeitet werden, um die Antworten von Thrax Legal vorzubereiten, das sie überprüft und dafür verantwortlich bleibt.",
     aiHelp: "Diese Verarbeitung ist für den Dienst erforderlich. Thrax Legal deaktiviert die Nutzung dieser Daten für das Training der Modelle. Senden Sie keine unnötigen sensiblen Daten. Einzelheiten in der Datenschutzerklärung.",
-    activationNote: "Ihr Bereich wird nach Zahlungseingang für den ersten Monat freigeschaltet. Wir melden uns, um alles abzuschliessen.",
-    cta: "Konto erstellen",
+    activationNote: "Zu diesem Zeitpunkt ohne Zahlung. Wir melden uns so rasch wie möglich (in der Regel innert 1 Arbeitstag), um Ihr Abonnement abzuschliessen. Ihr Bereich wird mit Eingang der ersten Zahlung freigeschaltet: Dann wählen Sie Ihr Passwort.",
+    cta: "Abonnementsanfrage senden",
     haveAccount: "Schon ein Konto?",
     signIn: "Anmelden",
     errors: {
@@ -523,9 +522,9 @@ const de: AccountStrings = {
   check: {
     signup: {
       metaTitle: "Anfrage erhalten | Thrax Legal",
-      heading: "Ihr Konto ist erstellt",
-      body: "Danke. Wir haben Ihre Anfrage erhalten für",
-      note: "Ihr Bereich wird nach Zahlungseingang für den ersten Monat freigeschaltet. Wir schreiben Ihnen bald, um alles abzuschliessen. Danach melden Sie sich mit E-Mail und Passwort an.",
+      heading: "Danke, Ihre Anfrage ist erfasst",
+      body: "Wir haben Ihre Abonnementsanfrage erhalten für",
+      note: "Sie haben die Allgemeinen Geschäftsbedingungen online akzeptiert: Eine Bestätigung wird Ihnen per E-Mail gesendet. Wir melden uns so rasch wie möglich, um alles abzuschliessen. Bei der Freischaltung Ihres Bereichs erhalten Sie einen Link zur Wahl Ihres Passworts.",
     },
     reset: {
       metaTitle: "Prüfen Sie Ihre E-Mails | Thrax Legal",
@@ -686,8 +685,8 @@ const en: AccountStrings = {
     passwordLabel: "Password",
     cta: "Sign in",
     forgot: "Forgot your password?",
-    noAccount: "No account yet?",
-    createAccount: "Create an account",
+    noAccount: "Not a customer yet?",
+    createAccount: "Sign up",
     notices: {
       reset: "Password saved. You can now sign in.",
       signout: "You are signed out.",
@@ -705,17 +704,17 @@ const en: AccountStrings = {
   },
   signup: {
     metaTitle: "Create your account | Thrax Legal",
-    heading: "Let's create your account",
-    subheading: "A few details to set up your client area.",
+    heading: "Sign me up",
+    subheading: "Leave your details and accept the terms online. No payment now: we will contact you to finalise and open your account.",
     emailLabel: "Email address",
     nameLabel: "Full name",
     namePlaceholder: "Jane Smith",
     companyLabel: "Company (optional)",
     companyPlaceholder: "Your company name",
-    phoneLabel: "Phone (optional)",
+    phoneLabel: "Phone (recommended, so we can call you)",
     phonePlaceholder: "+41 79 000 00 00",
-    passwordLabel: "Password",
-    passwordHint: "At least 8 characters. You'll use it with your email to sign in.",
+    messageLabel: "Your need in a few words (optional)",
+    messagePlaceholder: "E.g. distribution contract, dispute with a customer, T&Cs for my shop…",
     planLabel: "Your plan",
     planEssentiel: "Essential",
     planEssentielNote: "CHF 149/month · 10 quick questions · 5 matters/month",
@@ -728,8 +727,8 @@ const en: AccountStrings = {
     termsAfter: ", and I confirm that I am subscribing for professional purposes.",
     aiLabel: "I agree that my information and documents may be processed by an artificial intelligence tool (Claude, published by Anthropic, in the United States) to prepare Thrax Legal’s answers, which Thrax Legal reviews and remains responsible for.",
     aiHelp: "This processing is necessary for the service. Thrax Legal turns off the use of this data for model training. Avoid sending unnecessary sensitive data. Details in the privacy policy.",
-    activationNote: "Your account opens once payment for the first month is received. We'll get in touch to finalise.",
-    cta: "Create my account",
+    activationNote: "No payment at this stage. We will contact you as soon as possible (in principle within 1 business day) to finalise your subscription. Your account opens when the first payment is received: you then choose your password.",
+    cta: "Send my subscription request",
     haveAccount: "Already have an account?",
     signIn: "Sign in",
     errors: {
@@ -763,9 +762,9 @@ const en: AccountStrings = {
   check: {
     signup: {
       metaTitle: "Request received | Thrax Legal",
-      heading: "Your account is created",
-      body: "Thank you. We've received your request for",
-      note: "Your account opens once payment for the first month is received. We'll write to you very soon to finalise. You can then sign in with your email and password.",
+      heading: "Thank you, your request is recorded",
+      body: "We have received your subscription request for",
+      note: "You have accepted the terms and conditions online: a confirmation is sent to you by email. We will contact you as soon as possible to finalise. When your account is activated, you receive a link to choose your password.",
     },
     reset: {
       metaTitle: "Check your email | Thrax Legal",
@@ -925,8 +924,8 @@ const it: AccountStrings = {
     passwordLabel: "Password",
     cta: "Accedi",
     forgot: "Password dimenticata?",
-    noAccount: "Non avete ancora un account?",
-    createAccount: "Crea un account",
+    noAccount: "Non siete ancora clienti?",
+    createAccount: "Iscrivetevi",
     notices: {
       reset: "Password salvata. Ora potete accedere.",
       signout: "Siete disconnessi.",
@@ -944,17 +943,17 @@ const it: AccountStrings = {
   },
   signup: {
     metaTitle: "Crea il tuo account | Thrax Legal",
-    heading: "Creiamo il vostro account",
-    subheading: "Alcune informazioni per preparare la vostra area clienti.",
+    heading: "Mi iscrivo",
+    subheading: "Lasciate i vostri dati e accettate le condizioni online. Nessun pagamento ora: vi contattiamo per finalizzare e aprire il vostro spazio.",
     emailLabel: "Indirizzo email",
     nameLabel: "Nome e cognome",
     namePlaceholder: "Mario Rossi",
     companyLabel: "Azienda (opzionale)",
     companyPlaceholder: "Nome della vostra azienda",
-    phoneLabel: "Telefono (opzionale)",
+    phoneLabel: "Telefono (consigliato, per richiamarvi)",
     phonePlaceholder: "+41 79 000 00 00",
-    passwordLabel: "Password",
-    passwordHint: "Almeno 8 caratteri. La userete con la vostra email per accedere.",
+    messageLabel: "La vostra esigenza in poche parole (facoltativo)",
+    messagePlaceholder: "Es.: contratto di distribuzione, controversia con un cliente, condizioni generali per il mio negozio…",
     planLabel: "La vostra formula",
     planEssentiel: "Essentiel",
     planEssentielNote: "CHF 149/mese · 10 domande rapide · 5 pratiche/mese",
@@ -967,8 +966,8 @@ const it: AccountStrings = {
     termsAfter: ", e confermo di sottoscrivere per fini professionali.",
     aiLabel: "Accetto che le mie informazioni e i miei documenti siano trattati da uno strumento di intelligenza artificiale (Claude, di Anthropic, negli Stati Uniti) per preparare le risposte di Thrax Legal, che le rivede e ne resta responsabile.",
     aiHelp: "Questo trattamento è necessario al servizio. Thrax Legal disattiva l’uso di questi dati per l’addestramento dei modelli. Evitate di inviare dati sensibili non necessari. Dettagli nell’informativa sulla privacy.",
-    activationNote: "Il vostro spazio si apre alla ricezione del pagamento del primo mese. Vi contattiamo per finalizzare.",
-    cta: "Crea il mio account",
+    activationNote: "Nessun pagamento in questa fase. Vi contattiamo il prima possibile (in linea di principio entro 1 giorno lavorativo) per finalizzare il vostro abbonamento. Il vostro spazio si apre alla ricezione del primo pagamento: sceglierete allora la password.",
+    cta: "Invia la richiesta di abbonamento",
     haveAccount: "Avete già un account?",
     signIn: "Accedi",
     errors: {
@@ -1002,9 +1001,9 @@ const it: AccountStrings = {
   check: {
     signup: {
       metaTitle: "Richiesta ricevuta | Thrax Legal",
-      heading: "Il vostro account è creato",
-      body: "Grazie. Abbiamo ricevuto la vostra richiesta per",
-      note: "Il vostro spazio si apre alla ricezione del pagamento del primo mese. Vi scriviamo presto per finalizzare. Potrete poi accedere con email e password.",
+      heading: "Grazie, la vostra richiesta è registrata",
+      body: "Abbiamo ricevuto la vostra richiesta di abbonamento per",
+      note: "Avete accettato le condizioni generali online: una conferma vi viene inviata via email. Vi contattiamo il prima possibile per finalizzare. All’attivazione del vostro spazio ricevete un link per scegliere la password.",
     },
     reset: {
       metaTitle: "Controllate la vostra email | Thrax Legal",

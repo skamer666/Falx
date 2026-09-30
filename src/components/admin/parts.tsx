@@ -6,10 +6,11 @@ import { ACCESS_LABEL } from "@/lib/account/admin-labels";
 import type { AccessState, DossierStatus } from "@/lib/account/model";
 import { DOSSIER_STATUS_LABEL } from "@/lib/account/admin-labels";
 
-export type AdminSection = "overview" | "clients" | "dossiers" | "paiements" | "journal" | "parametres";
+export type AdminSection = "overview" | "prospects" | "clients" | "dossiers" | "paiements" | "journal" | "parametres";
 
 const NAV: { key: AdminSection; label: string; href: string }[] = [
   { key: "overview", label: "Vue d'ensemble", href: "/fr/admin" },
+  { key: "prospects", label: "Prospects", href: "/fr/admin/prospects" },
   { key: "clients", label: "Clients", href: "/fr/admin/clients" },
   { key: "dossiers", label: "Demandes", href: "/fr/admin/dossiers" },
   { key: "paiements", label: "Paiements", href: "/fr/admin/paiements" },

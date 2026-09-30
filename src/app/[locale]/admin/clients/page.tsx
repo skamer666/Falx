@@ -31,7 +31,7 @@ export default async function AdminClientsPage({
   const exportQuery = new URLSearchParams({ type: "clients" }).toString();
 
   return (
-    <AdminShell active="clients" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="clients" adminEmail={admin.email} badges={badges}>
       <PageHeader
         title="Clients"
         subtitle={`${clients.length} résultat${clients.length > 1 ? "s" : ""}`}

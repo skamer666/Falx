@@ -554,10 +554,10 @@ export async function getStats(): Promise<Stats> {
 }
 
 /** Pastilles de la navigation : demandes non lues et inscriptions à activer. */
-export async function getAdminBadges(): Promise<{ dossiers: number; clients: number }> {
+export async function getAdminBadges(): Promise<{ dossiers: number; clients: number; prospects: number }> {
   const database = await db();
   const admins = await adminEmails();
-  const [unread, pending] = await Promise.all([
+  const [unread, pending, leads] = await Promise.all([
     database.prepare("SELECT COUNT(*) AS n FROM dossiers WHERE admin_unread = 1").first<{ n: number }>(),
     database
       .prepare(
@@ -565,6 +565,7 @@ export async function getAdminBadges(): Promise<{ dossiers: number; clients: num
       )
       .bind(...admins)
       .first<{ n: number }>(),
+    database.prepare("SELECT COUNT(*) AS n FROM leads WHERE status = 'nouveau'").first<{ n: number }>(),
   ]);
-  return { dossiers: unread?.n ?? 0, clients: pending?.n ?? 0 };
+  return { dossiers: unread?.n ?? 0, clients: pending?.n ?? 0, prospects: leads?.n ?? 0 };
 }

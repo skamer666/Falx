@@ -85,7 +85,7 @@ export default async function AdminDossierPage({
   const dueInput = dossier.due_at ? new Date(dossier.due_at).toISOString().slice(0, 10) : "";
 
   return (
-    <AdminShell active="dossiers" adminEmail={admin.email} badges={{ dossiers: Math.max(0, badges.dossiers - (dossier.admin_unread ? 1 : 0)), clients: badges.clients }}>
+    <AdminShell active="dossiers" adminEmail={admin.email} badges={{ ...badges, dossiers: Math.max(0, badges.dossiers - (dossier.admin_unread ? 1 : 0)) }}>
       <Link href="/fr/admin/dossiers" className="text-sm text-text-muted underline underline-offset-4 hover:text-text">
         ← Demandes
       </Link>

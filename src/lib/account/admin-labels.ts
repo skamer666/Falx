@@ -45,5 +45,9 @@ export const AUDIT_LABEL: Record<string, string> = {
   dossier_status: "Statut de la demande modifié",
   dossier_updated: "Demande modifiée",
   quota_adjusted: "Quota ajusté",
+  lead_status: "Statut du prospect modifié",
+  lead_invite_sent: "Lien d’inscription envoyé au prospect",
+  lead_note: "Note sur un prospect",
+  lead_deleted: "Prospect supprimé",
   quota_adjustment_deleted: "Ajustement de quota supprimé",
 };

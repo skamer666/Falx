@@ -1,3 +1,4 @@
+import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -958,6 +959,11 @@ export default async function Home({
                   <a href="#dossiers" className="mt-4 inline-block text-sm font-medium text-text underline underline-offset-4">
                     {t.clarityLinkLabel}
                   </a>
+                  <p className="mt-6 border-t border-border pt-6 text-sm text-text-muted">
+                    <a href={`/${locale}/contact`} className="font-medium text-text underline underline-offset-4">
+                      {LEAD_STRINGS[locale].linkLabel}
+                    </a>
+                  </p>
                 </div>
               </Reveal>
             </Container>

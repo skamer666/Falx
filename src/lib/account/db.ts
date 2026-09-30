@@ -13,6 +13,8 @@ import {
   type DossierKind,
   type DossierMessage,
   type DossierStatus,
+  type Lead,
+  type LeadStatus,
   type Plan,
   type QuotaAdjustment,
   type QuotaField,
@@ -74,7 +76,7 @@ export async function isAdminEmail(email: string): Promise<boolean> {
 // ---------------------------------------------------------------------------
 
 export const USER_COLUMNS =
-  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at, ai_consent_at";
+  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at, ai_consent_at, terms_version, signup_message";
 
 type UserRow = Omit<AccountUser, "is_admin">;
 
@@ -123,6 +125,8 @@ export async function createUser(input: {
   phone?: string | null;
   termsAcceptedAt?: number | null;
   aiConsentAt?: number | null;
+  termsVersion?: string | null;
+  signupMessage?: string | null;
 }): Promise<AccountUser> {
   const id = newId();
   const created_at = Date.now();
@@ -130,7 +134,7 @@ export async function createUser(input: {
   const status = input.status ?? "pending";
   await (await db())
     .prepare(
-      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, ai_consent_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, ai_consent_at, terms_version, signup_message, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     )
     .bind(
       id,
@@ -145,6 +149,8 @@ export async function createUser(input: {
       input.phone ?? null,
       input.termsAcceptedAt ?? null,
       input.aiConsentAt ?? null,
+      input.termsVersion ?? null,
+      input.signupMessage ?? null,
       created_at,
     )
     .run();
@@ -163,6 +169,8 @@ export async function createUser(input: {
     last_login_at: null,
     terms_accepted_at: input.termsAcceptedAt ?? null,
     ai_consent_at: input.aiConsentAt ?? null,
+    terms_version: input.termsVersion ?? null,
+    signup_message: input.signupMessage ?? null,
     is_admin: (await adminEmails()).includes(email),
   };
 }
@@ -275,7 +283,7 @@ export const MAX_FAILURES_PER_EMAIL = 8;
 export const MAX_FAILURES_PER_IP = 30;
 export const MAX_RESETS_PER_EMAIL_PER_HOUR = 5;
 
-export async function recordAttempt(kind: "login" | "reset", email: string | null, ip: string | null, success: boolean) {
+export async function recordAttempt(kind: "login" | "reset" | "lead", email: string | null, ip: string | null, success: boolean) {
   const database = await db();
   await database
     .prepare("INSERT INTO login_attempts (kind, email, ip, success, created_at) VALUES (?, ?, ?, ?, ?)")
@@ -555,4 +563,93 @@ export async function putAttachment(key: string, data: ArrayBuffer, contentType:
 
 export async function getAttachment(key: string): Promise<R2ObjectBody | null> {
   return (await bucket()).get(key);
+}
+
+// ---------------------------------------------------------------------------
+// Prospects (formulaire « Être rappelé »)
+// ---------------------------------------------------------------------------
+
+export async function isLeadThrottled(ip: string | null): Promise<boolean> {
+  if (!ip) return false;
+  const row = await (await db())
+    .prepare("SELECT COUNT(*) AS n FROM login_attempts WHERE kind = 'lead' AND ip = ? AND created_at > ?")
+    .bind(ip, Date.now() - 3_600_000)
+    .first<{ n: number }>();
+  return (row?.n ?? 0) >= 5;
+}
+
+export async function createLead(input: {
+  name: string;
+  email: string;
+  phone: string | null;
+  company: string | null;
+  message: string | null;
+  planInterest: Plan | null;
+  locale: Locale;
+}): Promise<Lead> {
+  const lead: Lead = {
+    id: newId(),
+    name: input.name,
+    email: normalizeEmail(input.email),
+    phone: input.phone,
+    company: input.company,
+    message: input.message,
+    plan_interest: input.planInterest,
+    locale: input.locale,
+    status: "nouveau",
+    notes: null,
+    privacy_consent_at: Date.now(),
+    created_at: Date.now(),
+    contacted_at: null,
+  };
+  await (await db())
+    .prepare(
+      "INSERT INTO leads (id, name, email, phone, company, message, plan_interest, locale, status, notes, privacy_consent_at, created_at, contacted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'nouveau', NULL, ?, ?, NULL)",
+    )
+    .bind(lead.id, lead.name, lead.email, lead.phone, lead.company, lead.message, lead.plan_interest, lead.locale, lead.privacy_consent_at, lead.created_at)
+    .run();
+  return lead;
+}
+
+export async function listLeads(filter: { status?: LeadStatus; q?: string } = {}): Promise<Lead[]> {
+  const where: string[] = [];
+  const params: (string | number)[] = [];
+  if (filter.status) {
+    where.push("status = ?");
+    params.push(filter.status);
+  }
+  if (filter.q) {
+    const like = `%${filter.q.replace(/[%_]/g, " ").trim()}%`;
+    where.push("(name LIKE ? OR email LIKE ? OR COALESCE(company, '') LIKE ? OR COALESCE(message, '') LIKE ?)");
+    params.push(like, like, like, like);
+  }
+  const { results } = await (await db())
+    .prepare(`SELECT * FROM leads ${where.length ? `WHERE ${where.join(" AND ")}` : ""} ORDER BY CASE status WHEN 'nouveau' THEN 0 WHEN 'contacte' THEN 1 ELSE 2 END, created_at DESC LIMIT 300`)
+    .bind(...params)
+    .all<Lead>();
+  return results ?? [];
+}
+
+export async function getLead(id: string): Promise<Lead | null> {
+  return (await (await db()).prepare("SELECT * FROM leads WHERE id = ?").bind(id).first<Lead>()) ?? null;
+}
+
+export async function setLeadStatus(id: string, status: LeadStatus): Promise<void> {
+  await (await db())
+    .prepare("UPDATE leads SET status = ?, contacted_at = CASE WHEN ? != 'nouveau' AND contacted_at IS NULL THEN ? ELSE contacted_at END WHERE id = ?")
+    .bind(status, status, Date.now(), id)
+    .run();
+}
+
+export async function setLeadNotes(id: string, notes: string | null): Promise<void> {
+  await (await db()).prepare("UPDATE leads SET notes = ? WHERE id = ?").bind(notes, id).run();
+}
+
+export async function deleteLead(id: string): Promise<void> {
+  await (await db()).prepare("DELETE FROM leads WHERE id = ?").bind(id).run();
+}
+
+export async function countNewLeads(): Promise<number> {
+  const row = await (await db()).prepare("SELECT COUNT(*) AS n FROM leads WHERE status = 'nouveau'").first<{ n: number }>();
+  return row?.n ?? 0;
 }

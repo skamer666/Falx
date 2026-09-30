@@ -35,10 +35,6 @@ export default async function InscriptionPage({
 
   let errorMessage: string | null = null;
   if (error === "email" || error === "name" || error === "terms" || error === "ai") errorMessage = t.errors[error];
-  else if (error?.startsWith("password_")) {
-    const key = error.slice("password_".length) as keyof typeof strings.passwordProblems;
-    errorMessage = strings.passwordProblems[key] ?? null;
-  }
 
   return (
     <>
@@ -102,19 +98,17 @@ export default async function InscriptionPage({
                   />
                 </div>
                 <div>
-                  <label htmlFor="password" className={LABEL}>
-                    {t.passwordLabel}
+                  <label htmlFor="message" className={LABEL}>
+                    {t.messageLabel}
                   </label>
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    required
-                    minLength={8}
-                    autoComplete="new-password"
-                    className={INPUT}
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={3}
+                    maxLength={1000}
+                    placeholder={t.messagePlaceholder}
+                    className={`${INPUT} resize-y leading-relaxed`}
                   />
-                  <p className="mt-2 text-xs text-text-muted">{t.passwordHint}</p>
                 </div>
 
                 <fieldset>

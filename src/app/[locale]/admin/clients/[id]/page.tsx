@@ -84,7 +84,7 @@ export default async function AdminClientPage({
   const currentMonth = new Date(now).toISOString().slice(0, 7);
 
   return (
-    <AdminShell active="clients" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="clients" adminEmail={admin.email} badges={badges}>
       <Link href="/fr/admin/clients" className="text-sm text-text-muted underline underline-offset-4 hover:text-text">
         ← Clients
       </Link>
@@ -452,6 +452,12 @@ export default async function AdminClientPage({
               </div>
               <SubmitButton className="!px-5 !py-2">Enregistrer</SubmitButton>
             </form>
+            {user.signup_message ? (
+              <div className="mt-5 rounded-xl border border-border bg-surface px-3 py-2.5 text-xs">
+                <p className="font-medium text-text">Message à l&apos;inscription</p>
+                <p className="mt-1 whitespace-pre-wrap leading-relaxed text-text-muted">{user.signup_message}</p>
+              </div>
+            ) : null}
             <dl className="mt-5 space-y-1.5 border-t border-border pt-4 text-xs text-text-muted">
               <div className="flex justify-between gap-3">
                 <dt>Inscrit le</dt>
@@ -463,7 +469,7 @@ export default async function AdminClientPage({
               </div>
               <div className="flex justify-between gap-3">
                 <dt>CGV acceptées</dt>
-                <dd>{user.terms_accepted_at ? formatDateTime(user.terms_accepted_at, "fr") : "non enregistré"}</dd>
+                <dd className="text-right">{user.terms_accepted_at ? `${formatDateTime(user.terms_accepted_at, "fr")}${user.terms_version ? ` · version ${user.terms_version}` : ""}` : "non enregistré"}</dd>
               </div>
               <div className="flex justify-between gap-3">
                 <dt>IA (Claude) acceptée</dt>

@@ -42,6 +42,7 @@ import { clearSessionCookie, getCurrentUser, getSessionCookieValue, getSessionUs
 import { logAudit } from "@/lib/account/admin-db";
 import { CATEGORY_LABELS, DOSSIER_CATEGORIES } from "@/lib/account/categories";
 import { ACCOUNT_STRINGS } from "@/lib/account/strings";
+import { TERMS_VERSION } from "@/lib/account/legal";
 import { storeUploads } from "@/lib/account/uploads";
 
 function isValidEmail(value: string) {
@@ -110,7 +111,7 @@ export async function createAccount(locale: Locale, formData: FormData) {
   const name = field(formData, "name", 120);
   const company = field(formData, "company", 160);
   const phone = field(formData, "phone", 40);
-  const password = String(formData.get("password") ?? "");
+  const message = field(formData, "message", 1000);
   const plan: Plan = field(formData, "plan") === "croissance" ? "croissance" : "essentiel";
   const terms = formData.get("terms") === "on";
   const aiConsent = formData.get("ai_consent") === "on";
@@ -119,8 +120,6 @@ export async function createAccount(locale: Locale, formData: FormData) {
 
   if (!isValidEmail(email)) redirect(back("email"));
   if (name.length < 2) redirect(back("name"));
-  const problem = checkPasswordStrength(password, email);
-  if (problem) redirect(back(`password_${problem}`));
   if (!terms) redirect(back("terms"));
   if (!aiConsent) redirect(back("ai"));
 
@@ -134,13 +133,14 @@ export async function createAccount(locale: Locale, formData: FormData) {
     plan,
     locale,
     status: "pending",
-    passwordHash: await hashPassword(password),
     termsAcceptedAt: Date.now(),
     aiConsentAt: Date.now(),
+    termsVersion: TERMS_VERSION,
+    signupMessage: message || null,
   });
   await logAudit({ actor: null, action: "signup", targetType: "user", targetId: user.id, detail: `${email} · ${plan}` });
-  await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale));
-  await safeSend(() => notifyAdminOfSignup({ userId: user.id, name, email, company: company || null, phone: phone || null, plan }));
+  await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale, TERMS_VERSION));
+  await safeSend(() => notifyAdminOfSignup({ userId: user.id, name, email, company: company || null, phone: phone || null, plan, message: message || null }));
   redirect(`/${locale}/compte/verifier?type=signup&email=${encodeURIComponent(email)}`);
 }
 

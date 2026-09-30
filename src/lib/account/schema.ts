@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 5;
+export const SCHEMA_VERSION = 6;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -89,6 +89,21 @@ const TABLES: string[] = [
     created_by TEXT,
     created_at INTEGER NOT NULL
   )`,
+  `CREATE TABLE IF NOT EXISTS leads (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT,
+    company TEXT,
+    message TEXT,
+    plan_interest TEXT,
+    locale TEXT NOT NULL DEFAULT 'fr',
+    status TEXT NOT NULL DEFAULT 'nouveau',
+    notes TEXT,
+    privacy_consent_at INTEGER,
+    created_at INTEGER NOT NULL,
+    contacted_at INTEGER
+  )`,
   `CREATE TABLE IF NOT EXISTS audit_log (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     actor_id TEXT,
@@ -112,6 +127,8 @@ const COLUMNS: Record<string, [string, string][]> = {
     ["last_login_at", "INTEGER"],
     ["terms_accepted_at", "INTEGER"],
     ["ai_consent_at", "INTEGER"],
+    ["terms_version", "TEXT"],
+    ["signup_message", "TEXT"],
     ["updated_at", "INTEGER"],
   ],
   dossiers: [
@@ -134,6 +151,7 @@ const INDEXES: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_payments_created ON payments(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_messages_dossier ON dossier_messages(dossier_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_quota_user ON quota_adjustments(user_id, cycle_start)`,
+  `CREATE INDEX IF NOT EXISTS idx_leads_status ON leads(status, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_audit_created ON audit_log(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_attempts_email ON login_attempts(kind, email, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_attempts_ip ON login_attempts(kind, ip, created_at)`,

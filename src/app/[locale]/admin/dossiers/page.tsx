@@ -51,7 +51,7 @@ export default async function AdminDossiersPage({
   };
 
   return (
-    <AdminShell active="dossiers" adminEmail={admin.email} badges={{ dossiers: badges.dossiers, clients: badges.clients }}>
+    <AdminShell active="dossiers" adminEmail={admin.email} badges={badges}>
       <PageHeader
         title="Demandes"
         subtitle={`${rows.length} résultat${rows.length > 1 ? "s" : ""}, triées par échéance`}

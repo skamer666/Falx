@@ -135,6 +135,14 @@ function Fr() {
           envoyée, etc.).
         </li>
         <li>
+          Si vous remplissez le formulaire <strong>« Être rappelé »</strong> ou
+          une demande d’abonnement&nbsp;: votre nom, votre adresse email, votre
+          téléphone et votre entreprise (facultatifs), la formule qui vous
+          intéresse et le message que vous nous laissez, pour vous recontacter.
+          Les demandes restées sans suite sont supprimées au plus tard après 12
+          mois, ou plus tôt sur demande.
+        </li>
+        <li>
           Les <strong>tentatives de connexion</strong> (adresse email saisie,
           adresse IP, date), conservées sept jours pour bloquer les tentatives
           d’intrusion.
@@ -332,6 +340,14 @@ function De() {
           usw.).
         </li>
         <li>
+          Wenn Sie das Formular <strong>«&nbsp;Rückruf anfordern&nbsp;»</strong> oder eine
+          Abonnementsanfrage ausfüllen: Ihren Namen, Ihre E-Mail-Adresse, Ihr
+          Telefon und Ihr Unternehmen (freiwillig), die Formel, die Sie
+          interessiert, und die Nachricht, die Sie uns hinterlassen, um Sie zu
+          kontaktieren. Anfragen ohne Folge werden spätestens nach 12 Monaten
+          oder auf Wunsch früher gelöscht.
+        </li>
+        <li>
           <strong>Anmeldeversuche</strong> (eingegebene E-Mail-Adresse,
           IP-Adresse, Datum), die sieben Tage lang aufbewahrt werden, um
           Einbruchsversuche zu blockieren.
@@ -519,6 +535,13 @@ function En() {
           on accounts (payment recorded, reply sent, etc.).
         </li>
         <li>
+          If you fill in the <strong>&ldquo;Request a call back&rdquo;</strong> form or a
+          subscription request: your name, email address, phone and company
+          (optional), the plan you are interested in and the message you leave
+          us, so that we can contact you. Requests with no follow-up are deleted
+          after 12 months at the latest, or sooner on request.
+        </li>
+        <li>
           <strong>Sign-in attempts</strong> (email address entered, IP
           address, date), kept for seven days to block intrusion attempts.
         </li>
@@ -699,6 +722,14 @@ function It() {
           per il seguito e un <strong>registro tecnico</strong> delle azioni
           effettuate sugli account (pagamento registrato, risposta inviata,
           ecc.).
+        </li>
+        <li>
+          Se compilate il modulo <strong>«&nbsp;Essere richiamati&nbsp;»</strong> o una
+          richiesta di abbonamento: il vostro nome, il vostro indirizzo email,
+          il telefono e l’azienda (facoltativi), la formula di vostro interesse
+          e il messaggio che ci lasciate, per ricontattarvi. Le richieste
+          rimaste senza seguito sono eliminate al più tardi dopo 12 mesi, o
+          prima su richiesta.
         </li>
         <li>
           I <strong>tentativi di accesso</strong> (indirizzo email inserito,

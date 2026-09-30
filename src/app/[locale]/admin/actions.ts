@@ -4,6 +4,12 @@ import { redirect } from "next/navigation";
 import {
   addMessage,
   addQuotaAdjustment,
+  deleteLead,
+  getLead,
+  LEAD_STATUSES,
+  setLeadNotes,
+  setLeadStatus,
+  type LeadStatus,
   deleteQuotaAdjustment,
   cycleStart,
   addMonths,
@@ -13,6 +19,7 @@ import {
   createUser,
   deleteUserSessions,
   getDossier,
+  getPasswordHash,
   getUserByEmail,
   getUserById,
   markDossierRead,
@@ -36,7 +43,7 @@ import {
   setPlan,
   updateClientFields,
 } from "@/lib/account/admin-db";
-import { safeSend, sendAccountActiveEmail, sendPasswordLinkEmail, sendReplyEmail } from "@/lib/account/email";
+import { safeSend, sendAccountActiveEmail, sendPasswordLinkEmail, sendReplyEmail, sendSignupInviteEmail } from "@/lib/account/email";
 import { randomToken, sha256Hex } from "@/lib/account/password";
 import { getCurrentAdmin } from "@/lib/account/session";
 import { storeUploads } from "@/lib/account/uploads";
@@ -126,7 +133,13 @@ export async function recordPaymentAction(userId: string, formData: FormData) {
     detail: `CHF ${(amountRappen / 100).toFixed(2)} · ${months} mois · ${method} · ${user.email}`,
   });
   if (formData.get("notify") === "on") {
-    await safeSend(() => sendAccountActiveEmail(user.email, user.name, plan, paidUntil, user.locale));
+    // Un client inscrit sans mot de passe en reçoit un lien (valable 7 jours) dans l'email d'activation.
+    let passwordToken: string | undefined;
+    if (!(await getPasswordHash(userId))) {
+      passwordToken = randomToken();
+      await createPasswordToken(userId, "set", 7 * 24 * 60 * 60 * 1000, await sha256Hex(passwordToken));
+    }
+    await safeSend(() => sendAccountActiveEmail(user.email, user.name, plan, paidUntil, user.locale, passwordToken));
   }
   redirect(clientUrl(userId, "ok=payment"));
 }
@@ -338,4 +351,45 @@ export async function deleteQuotaAdjustmentAction(userId: string, adjustmentId: 
     });
   }
   redirect(clientUrl(userId, "ok=quota_deleted"));
+}
+
+// ---------------------------------------------------------------------------
+// Prospects
+// ---------------------------------------------------------------------------
+
+export async function setLeadStatusAction(leadId: string, status: LeadStatus) {
+  const admin = await requireAdmin();
+  if (!LEAD_STATUSES.includes(status)) redirect("/fr/admin/prospects");
+  const lead = await getLead(leadId);
+  if (!lead) redirect("/fr/admin/prospects");
+  await setLeadStatus(leadId, status);
+  await logAudit({ actor: admin, action: "lead_status", targetType: "lead", targetId: leadId, detail: `${lead.name} → ${status}` });
+  redirect(`/fr/admin/prospects?ok=status#lead-${leadId}`);
+}
+
+export async function saveLeadNotesAction(leadId: string, formData: FormData) {
+  const admin = await requireAdmin();
+  await setLeadNotes(leadId, text(formData, "notes", 5000) || null);
+  await logAudit({ actor: admin, action: "lead_note", targetType: "lead", targetId: leadId });
+  redirect(`/fr/admin/prospects?ok=note#lead-${leadId}`);
+}
+
+export async function sendLeadInviteAction(leadId: string) {
+  const admin = await requireAdmin();
+  const lead = await getLead(leadId);
+  if (!lead) redirect("/fr/admin/prospects");
+  await safeSend(() => sendSignupInviteEmail(lead));
+  if (lead.status === "nouveau") await setLeadStatus(leadId, "contacte");
+  await logAudit({ actor: admin, action: "lead_invite_sent", targetType: "lead", targetId: leadId, detail: lead.email });
+  redirect(`/fr/admin/prospects?ok=invite#lead-${leadId}`);
+}
+
+export async function deleteLeadAction(leadId: string) {
+  const admin = await requireAdmin();
+  const lead = await getLead(leadId);
+  if (lead) {
+    await deleteLead(leadId);
+    await logAudit({ actor: admin, action: "lead_deleted", targetType: "lead", targetId: leadId, detail: lead.name });
+  }
+  redirect("/fr/admin/prospects?ok=deleted");
 }
