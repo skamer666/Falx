@@ -84,12 +84,10 @@ function Fr() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>Quelles données nous traitons aujourd&rsquo;hui</h2>
+      <h2>Quelles données nous traitons</h2>
       <p>
-        À ce stade, ce site ne comporte aucun formulaire de collecte de
-        données actif (le module de paiement n&rsquo;est pas encore en
-        production, voir la page de commande). Les seules données traitées
-        sont&nbsp;:
+        Selon l’usage que vous faites du site, nous traitons les données
+        suivantes&nbsp;:
       </p>
       <ul>
         <li>
@@ -100,64 +98,133 @@ function Fr() {
           site.
         </li>
         <li>
-          Les réponses que vous donnez dans l&rsquo;<strong>autodiagnostic
-          gratuit</strong> : ces réponses restent dans votre navigateur, ne
-          sont jamais envoyées à un serveur et disparaissent lorsque vous
+          Les réponses que vous donnez dans l’<strong>autodiagnostic
+          gratuit</strong>&nbsp;: ces réponses restent dans votre navigateur,
+          ne sont jamais envoyées à un serveur et disparaissent lorsque vous
           quittez ou rechargez la page.
         </li>
         <li>
-          Le contenu d&rsquo;un <strong>email</strong> que vous nous
-          envoyez, si vous nous contactez directement.
+          Si vous <strong>créez un compte client</strong>&nbsp;: votre nom, votre
+          adresse email, votre entreprise et votre numéro de téléphone
+          (facultatif), la formule choisie, la date d’acceptation des
+          conditions générales, la date de votre dernière connexion, ainsi
+          que votre mot de passe, que nous ne conservons que sous forme
+          chiffrée irréversible (nous ne pouvons pas le lire).
+        </li>
+        <li>
+          Si vous <strong>nous envoyez une demande</strong> depuis votre
+          espace&nbsp;: le texte de votre demande, vos échanges avec nous et les
+          documents que vous joignez (contrats, courriers, etc.). Ces
+          documents peuvent contenir des données personnelles de tiers&nbsp;:
+          ne joignez que ce qui est nécessaire.
+        </li>
+        <li>
+          Les <strong>informations de paiement</strong> que nous enregistrons
+          pour gérer votre abonnement&nbsp;: montant, date, période couverte,
+          mode de paiement et référence. Nous ne traitons aucune donnée de
+          carte bancaire&nbsp;: le module de paiement en ligne n’est pas encore
+          en production, le règlement se fait pour l’instant par virement ou
+          autre moyen convenu avec vous. Cette politique sera complétée à
+          l’activation d’un prestataire de paiement.
+        </li>
+        <li>
+          Des <strong>notes internes</strong> que nous prenons sur votre dossier
+          pour assurer le suivi, et un <strong>journal technique</strong> des
+          actions effectuées sur les comptes (paiement enregistré, réponse
+          envoyée, etc.).
+        </li>
+        <li>
+          Les <strong>tentatives de connexion</strong> (adresse email saisie,
+          adresse IP, date), conservées sept jours pour bloquer les tentatives
+          d’intrusion.
+        </li>
+        <li>
+          Le contenu d’un <strong>email</strong> que vous nous envoyez, si vous
+          nous contactez directement.
         </li>
       </ul>
-      <p>
-        Dès que la commande en ligne sera activée, cette politique sera mise
-        à jour pour décrire précisément les données de commande et de
-        facturation traitées à ce moment-là (coordonnées, informations de
-        paiement via notre futur prestataire de paiement).
-      </p>
 
       <h2>Cookies et traceurs</h2>
       <p>
-        Ce site n&rsquo;utilise aucun cookie de mesure d&rsquo;audience, de
-        publicité ou de réseau social. Il n&rsquo;installe aucun traceur
-        tiers. Si cela change (par exemple avec l&rsquo;ajout d&rsquo;un
-        outil de mesure d&rsquo;audience), cette politique sera mise à jour
-        en conséquence, avant toute activation.
+        Ce site n’utilise aucun cookie de mesure d’audience, de publicité ou
+        de réseau social. Il n’installe aucun traceur tiers. Si cela change
+        (par exemple avec l’ajout d’un outil de mesure d’audience), cette
+        politique sera mise à jour en conséquence, avant toute activation.
       </p>
       <p>
-        Seule exception : la page d&rsquo;accueil propose une vidéo de
+        Lorsque vous vous connectez à votre espace client, nous déposons un
+        seul cookie, <strong>strictement nécessaire</strong> au fonctionnement
+        du service (cookie de session «&nbsp;thrax_session&nbsp;»)&nbsp;: il vous
+        garde connecté, n’est lisible que par notre serveur, n’est jamais
+        utilisé à des fins de suivi ou de publicité et expire au bout de 30
+        jours ou à votre déconnexion.
+      </p>
+      <p>
+        Seule autre exception&nbsp;: la page d’accueil propose une vidéo de
         présentation hébergée sur YouTube. Tant que vous ne cliquez pas sur
-        le lecteur, rien n&rsquo;est transmis à YouTube : l&rsquo;image
-        affichée est hébergée sur notre site. Si vous lancez la vidéo, elle
-        est chargée en mode de confidentialité renforcée
-        (youtube-nocookie.com) ; YouTube reçoit alors votre adresse IP et des
-        informations techniques sur votre navigateur, et peut utiliser des
-        cookies ou technologies similaires selon sa propre politique de
-        confidentialité.
+        le lecteur, rien n’est transmis à YouTube&nbsp;: l’image affichée est
+        hébergée sur notre site. Si vous lancez la vidéo, elle est chargée
+        en mode de confidentialité renforcée (youtube-nocookie.com)&nbsp;;
+        YouTube reçoit alors votre adresse IP et des informations techniques
+        sur votre navigateur, et peut utiliser des cookies ou technologies
+        similaires selon sa propre politique de confidentialité.
       </p>
 
       <h2>Destinataires des données</h2>
+      <p>Nous ne vendons ni ne louons vos données. Elles sont traitées par les prestataires techniques suivants&nbsp;:</p>
+      <ul>
+        <li>
+          <strong>Cloudflare, Inc.</strong> (hébergement du site, base de
+          données de comptes et stockage des documents joints), dans le cadre
+          de clauses contractuelles types reconnues encadrant les transferts de
+          données hors de Suisse.
+        </li>
+        <li>
+          <strong>Resend, Inc.</strong> (envoi des emails du service&nbsp;:
+          confirmations, liens de mot de passe, notifications de réponse), qui
+          reçoit votre adresse email et le contenu de ces messages, dans le
+          cadre de clauses contractuelles types.
+        </li>
+        <li>
+          Si vous lancez la vidéo de présentation, <strong>Google Ireland
+          Limited</strong>, qui exploite YouTube pour les utilisateurs de
+          Suisse et de l’Espace économique européen, reçoit les données
+          décrites ci-dessus, qui peuvent être transférées aux États-Unis.
+        </li>
+      </ul>
       <p>
-        Les données de connexion techniques sont traitées par notre
-        hébergeur, Cloudflare, Inc., dans le cadre de clauses contractuelles
-        types reconnues encadrant les transferts de données hors de Suisse.
-        Aucune autre donnée n&rsquo;est partagée avec un tiers à ce jour.
-      </p>
-      <p>
-        Si vous lancez la vidéo de présentation, les données décrites
-        ci-dessus sont transmises à Google Ireland Limited, qui exploite
-        YouTube pour les utilisateurs de Suisse et de l&rsquo;Espace
-        économique européen, et peuvent être transférées aux États-Unis.
+        L’accès à votre espace et à vos documents est réservé à vous-même et
+        à Thrax Legal. Un autre client ne peut jamais les consulter.
       </p>
 
       <h2>Durée de conservation</h2>
-      <p>
-        Les données de connexion techniques sont conservées selon la durée
-        standard appliquée par notre hébergeur pour les journaux de sécurité,
-        puis supprimées automatiquement. Les emails que vous nous envoyez
-        sont conservés le temps nécessaire pour traiter votre demande.
-      </p>
+      <ul>
+        <li>
+          Les données de connexion techniques sont conservées selon la durée
+          standard appliquée par notre hébergeur pour les journaux de
+          sécurité, puis supprimées automatiquement.
+        </li>
+        <li>
+          Les tentatives de connexion sont conservées sept jours&nbsp;; les liens
+          de réinitialisation de mot de passe expirent après une heure&nbsp;; une
+          session de connexion expire après 30 jours.
+        </li>
+        <li>
+          Les données de votre compte, vos demandes et vos documents sont
+          conservés pendant la durée de votre abonnement, puis pendant le
+          temps nécessaire à nos obligations légales et à la défense de nos
+          droits. Vous pouvez demander leur effacement, sous réserve de ces
+          obligations.
+        </li>
+        <li>
+          Les justificatifs de paiement sont conservés pendant la durée
+          légale applicable aux pièces comptables.
+        </li>
+        <li>
+          Les emails que vous nous envoyez sont conservés le temps nécessaire
+          pour traiter votre demande.
+        </li>
+      </ul>
 
       <h2>Vos droits</h2>
       <p>
@@ -202,12 +269,10 @@ function De() {
         uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>Welche Daten wir heute bearbeiten</h2>
+      <h2>Welche Daten wir bearbeiten</h2>
       <p>
-        Derzeit enthält diese Website kein aktives Formular zur
-        Datenerhebung (das Zahlungsmodul ist noch nicht in Produktion,
-        siehe die Bestellseite). Die einzigen bearbeiteten Daten
-        sind&nbsp;:
+        Je nachdem, wie Sie die Website nutzen, bearbeiten wir die folgenden
+        Daten:
       </p>
       <ul>
         <li>
@@ -218,64 +283,133 @@ function De() {
           Website.
         </li>
         <li>
-          Ihre Antworten in der <strong>kostenlosen
-          Gratis-Diagnose</strong>: Diese Antworten verbleiben in Ihrem
-          Browser, werden nie an einen Server gesendet und verschwinden,
-          wenn Sie die Seite verlassen oder neu laden.
+          Ihre Antworten in der <strong>kostenlosen Gratis-Diagnose</strong>:
+          Diese Antworten verbleiben in Ihrem Browser, werden nie an einen
+          Server gesendet und verschwinden, wenn Sie die Seite verlassen oder
+          neu laden.
+        </li>
+        <li>
+          Wenn Sie ein <strong>Kundenkonto erstellen</strong>: Ihr Name, Ihre
+          E-Mail-Adresse, Ihr Unternehmen und Ihre Telefonnummer (freiwillig),
+          die gewählte Formel, das Datum der Annahme der Allgemeinen
+          Geschäftsbedingungen, das Datum Ihrer letzten Anmeldung sowie Ihr
+          Passwort, das wir nur in unumkehrbar verschlüsselter Form speichern
+          (wir können es nicht lesen).
+        </li>
+        <li>
+          Wenn Sie uns aus Ihrem Bereich eine <strong>Anfrage senden</strong>:
+          den Text Ihrer Anfrage, Ihren Austausch mit uns und die Dokumente,
+          die Sie anhängen (Verträge, Schreiben usw.). Diese Dokumente können
+          personenbezogene Daten Dritter enthalten: Hängen Sie nur an, was
+          nötig ist.
+        </li>
+        <li>
+          Die <strong>Zahlungsangaben</strong>, die wir zur Verwaltung Ihres
+          Abonnements erfassen: Betrag, Datum, abgedeckte Periode,
+          Zahlungsart und Referenz. Wir bearbeiten keine Kreditkartendaten:
+          Das Online-Zahlungsmodul ist noch nicht in Betrieb, die Zahlung
+          erfolgt derzeit per Überweisung oder auf anderem mit Ihnen
+          vereinbarten Weg. Diese Erklärung wird bei Aktivierung eines
+          Zahlungsdienstleisters ergänzt.
+        </li>
+        <li>
+          <strong>Interne Notizen</strong>, die wir zu Ihrem Anliegen für die
+          Nachverfolgung machen, und ein <strong>technisches Protokoll</strong>
+          der Aktionen auf den Konten (erfasste Zahlung, gesendete Antwort
+          usw.).
+        </li>
+        <li>
+          <strong>Anmeldeversuche</strong> (eingegebene E-Mail-Adresse,
+          IP-Adresse, Datum), die sieben Tage lang aufbewahrt werden, um
+          Einbruchsversuche zu blockieren.
         </li>
         <li>
           Der Inhalt einer <strong>E-Mail</strong>, die Sie uns senden, falls
           Sie uns direkt kontaktieren.
         </li>
       </ul>
-      <p>
-        Sobald die Online-Bestellung aktiviert wird, wird diese Erklärung
-        aktualisiert, um die dann bearbeiteten Bestell- und
-        Rechnungsdaten (Kontaktdaten, Zahlungsinformationen über unseren
-        künftigen Zahlungsdienstleister) genau zu beschreiben.
-      </p>
 
       <h2>Cookies und Tracking-Tools</h2>
       <p>
         Diese Website verwendet keine Cookies zur Reichweitenmessung, für
         Werbung oder soziale Netzwerke. Es werden keine Tracking-Tools von
-        Drittanbietern installiert. Sollte sich dies ändern (z.&nbsp;B.
-        durch ein neues Analytics-Tool), wird diese Erklärung vor jeder
-        Aktivierung entsprechend aktualisiert.
+        Drittanbietern installiert. Sollte sich dies ändern (z. B. durch ein
+        neues Analytics-Tool), wird diese Erklärung vor jeder Aktivierung
+        entsprechend aktualisiert.
       </p>
       <p>
-        Einzige Ausnahme: Die Startseite enthält ein Präsentationsvideo, das
-        auf YouTube gehostet wird. Solange Sie nicht auf den Player klicken,
-        wird nichts an YouTube übermittelt: Das angezeigte Bild wird auf
-        unserer Website gehostet. Wenn Sie das Video starten, wird es im
-        erweiterten Datenschutzmodus (youtube-nocookie.com) geladen; YouTube
-        erhält dann Ihre IP-Adresse und technische Angaben zu Ihrem Browser
-        und kann gemäss seiner eigenen Datenschutzerklärung Cookies oder
-        ähnliche Technologien verwenden.
+        Wenn Sie sich in Ihrem Kundenbereich anmelden, setzen wir genau ein
+        Cookie, das für den Betrieb des Dienstes <strong>unbedingt
+        erforderlich</strong> ist (Sitzungs-Cookie «thrax_session»): Es hält
+        Sie angemeldet, ist nur für unseren Server lesbar, wird nie für
+        Tracking oder Werbung verwendet und läuft nach 30 Tagen oder bei Ihrer
+        Abmeldung ab.
+      </p>
+      <p>
+        Einzige weitere Ausnahme: Die Startseite enthält ein
+        Präsentationsvideo, das auf YouTube gehostet wird. Solange Sie nicht
+        auf den Player klicken, wird nichts an YouTube übermittelt: Das
+        angezeigte Bild wird auf unserer Website gehostet. Wenn Sie das Video
+        starten, wird es im erweiterten Datenschutzmodus
+        (youtube-nocookie.com) geladen; YouTube erhält dann Ihre IP-Adresse
+        und technische Angaben zu Ihrem Browser und kann gemäss seiner eigenen
+        Datenschutzerklärung Cookies oder ähnliche Technologien verwenden.
       </p>
 
       <h2>Empfänger der Daten</h2>
+      <p>Wir verkaufen oder vermieten Ihre Daten nicht. Sie werden von folgenden technischen Dienstleistern bearbeitet:</p>
+      <ul>
+        <li>
+          <strong>Cloudflare, Inc.</strong> (Hosting der Website,
+          Konten-Datenbank und Speicherung der angehängten Dokumente), im
+          Rahmen anerkannter Standardvertragsklauseln für
+          Datenübermittlungen ausserhalb der Schweiz.
+        </li>
+        <li>
+          <strong>Resend, Inc.</strong> (Versand der E-Mails des Dienstes:
+          Bestätigungen, Passwort-Links, Antwortbenachrichtigungen), das Ihre
+          E-Mail-Adresse und den Inhalt dieser Nachrichten erhält, im Rahmen
+          von Standardvertragsklauseln.
+        </li>
+        <li>
+          Wenn Sie das Präsentationsvideo starten, erhält <strong>Google
+          Ireland Limited</strong>, die YouTube für Nutzer in der Schweiz und
+          im Europäischen Wirtschaftsraum betreibt, die oben beschriebenen
+          Daten; sie können in die USA übertragen werden.
+        </li>
+      </ul>
       <p>
-        Die technischen Verbindungsdaten werden von unserem Hosting-Anbieter
-        Cloudflare, Inc. bearbeitet, im Rahmen anerkannter
-        Standardvertragsklauseln für Datenübermittlungen ausserhalb der
-        Schweiz. Keine weiteren Daten werden derzeit an Dritte
-        weitergegeben.
-      </p>
-      <p>
-        Wenn Sie das Präsentationsvideo starten, werden die oben
-        beschriebenen Daten an Google Ireland Limited übermittelt, die
-        YouTube für Nutzer in der Schweiz und im Europäischen
-        Wirtschaftsraum betreibt, und können in die USA übertragen werden.
+        Der Zugriff auf Ihren Bereich und Ihre Dokumente ist Ihnen selbst und
+        Thrax Legal vorbehalten. Ein anderer Kunde kann sie nie einsehen.
       </p>
 
       <h2>Aufbewahrungsdauer</h2>
-      <p>
-        Die technischen Verbindungsdaten werden gemäss der üblichen Dauer
-        unseres Hosting-Anbieters für Sicherheitsprotokolle aufbewahrt und
-        danach automatisch gelöscht. E-Mails, die Sie uns senden, werden so
-        lange aufbewahrt, wie es zur Bearbeitung Ihrer Anfrage nötig ist.
-      </p>
+      <ul>
+        <li>
+          Die technischen Verbindungsdaten werden gemäss der üblichen Dauer
+          unseres Hosting-Anbieters für Sicherheitsprotokolle aufbewahrt und
+          danach automatisch gelöscht.
+        </li>
+        <li>
+          Anmeldeversuche werden sieben Tage aufbewahrt; Links zum
+          Zurücksetzen des Passworts laufen nach einer Stunde ab; eine
+          Anmeldesitzung läuft nach 30 Tagen ab.
+        </li>
+        <li>
+          Ihre Kontodaten, Anfragen und Dokumente werden während der Dauer
+          Ihres Abonnements aufbewahrt, danach so lange, wie es unsere
+          gesetzlichen Pflichten und die Wahrung unserer Rechte erfordern. Sie
+          können ihre Löschung verlangen, vorbehaltlich dieser Pflichten.
+        </li>
+        <li>
+          Zahlungsbelege werden während der für Buchhaltungsunterlagen
+          geltenden gesetzlichen Dauer aufbewahrt.
+        </li>
+        <li>
+          E-Mails, die Sie uns senden, werden so lange aufbewahrt, wie es zur
+          Bearbeitung Ihrer Anfrage nötig ist.
+        </li>
+      </ul>
 
       <h2>Ihre Rechte</h2>
       <p>
@@ -318,75 +452,132 @@ function En() {
         at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>What data we process today</h2>
-      <p>
-        At this stage, this site has no active data-collection form (the
-        payment module is not yet live, see the order page). The only data
-        processed is:
-      </p>
+      <h2>What data we process</h2>
+      <p>Depending on how you use the site, we process the following data:</p>
       <ul>
         <li>
           <strong>Technical connection data</strong> generated by your
           browsing (IP address, browser type, pages visited, timestamp),
           collected automatically by our hosting provider Cloudflare for
-          security and to keep the site running properly.
+          security and the proper functioning of the site.
         </li>
         <li>
-          Your answers in the <strong>free diagnostic</strong>: these
-          answers stay in your browser, are never sent to a server, and
+          Your answers in the <strong>free self-assessment</strong>: these
+          answers stay in your browser, are never sent to a server and
           disappear when you leave or reload the page.
         </li>
         <li>
-          The content of an <strong>email</strong> you send us, if you
-          contact us directly.
+          If you <strong>create a client account</strong>: your name, email
+          address, company and phone number (optional), the plan you chose,
+          the date you accepted the terms and conditions, the date of your
+          last sign-in, and your password, which we only store in an
+          irreversibly encrypted form (we cannot read it).
+        </li>
+        <li>
+          If you <strong>send us a request</strong> from your account: the
+          text of your request, your exchanges with us and the documents you
+          attach (contracts, letters, etc.). These documents may contain
+          third parties&rsquo; personal data: only attach what is necessary.
+        </li>
+        <li>
+          The <strong>payment information</strong> we record to manage your
+          subscription: amount, date, period covered, payment method and
+          reference. We do not process any bank card data: the online payment
+          module is not yet live, and payment is currently made by bank
+          transfer or another means agreed with you. This policy will be
+          updated when a payment provider is activated.
+        </li>
+        <li>
+          <strong>Internal notes</strong> we take on your matter for
+          follow-up, and a <strong>technical log</strong> of actions performed
+          on accounts (payment recorded, reply sent, etc.).
+        </li>
+        <li>
+          <strong>Sign-in attempts</strong> (email address entered, IP
+          address, date), kept for seven days to block intrusion attempts.
+        </li>
+        <li>
+          The content of any <strong>email</strong> you send us if you contact
+          us directly.
         </li>
       </ul>
-      <p>
-        Once online ordering is activated, this policy will be updated to
-        precisely describe the order and billing data processed at that
-        point (contact details, payment information via our future payment
-        provider).
-      </p>
 
       <h2>Cookies and trackers</h2>
       <p>
         This site does not use any audience-measurement, advertising or
         social media cookies. It does not install any third-party trackers.
-        If this changes (for example with the addition of an analytics
-        tool), this policy will be updated accordingly before any such tool
-        is activated.
+        If this changes (for example by adding an analytics tool), this policy
+        will be updated accordingly before activation.
       </p>
       <p>
-        The only exception: the home page offers a presentation video hosted
-        on YouTube. As long as you do not click the player, nothing is sent
-        to YouTube: the image shown is hosted on our site. If you start the
-        video, it is loaded in privacy-enhanced mode (youtube-nocookie.com);
-        YouTube then receives your IP address and technical information about
-        your browser, and may use cookies or similar technologies under its
-        own privacy policy.
+        When you sign in to your client account, we set a single cookie that
+        is <strong>strictly necessary</strong> for the service to work (the
+        &ldquo;thrax_session&rdquo; session cookie): it keeps you signed in,
+        can only be read by our server, is never used for tracking or
+        advertising, and expires after 30 days or when you sign out.
+      </p>
+      <p>
+        The only other exception: the home page features a presentation video
+        hosted on YouTube. As long as you don&rsquo;t click the player,
+        nothing is sent to YouTube: the image shown is hosted on our site. If
+        you start the video, it is loaded in privacy-enhanced mode
+        (youtube-nocookie.com); YouTube then receives your IP address and
+        technical information about your browser, and may use cookies or
+        similar technologies under its own privacy policy.
       </p>
 
       <h2>Recipients of the data</h2>
+      <p>We do not sell or rent your data. It is processed by the following technical providers:</p>
+      <ul>
+        <li>
+          <strong>Cloudflare, Inc.</strong> (site hosting, accounts database
+          and storage of attached documents), under recognised standard
+          contractual clauses for transfers outside Switzerland.
+        </li>
+        <li>
+          <strong>Resend, Inc.</strong> (sending the service&rsquo;s emails:
+          confirmations, password links, reply notifications), which receives
+          your email address and the content of these messages, under standard
+          contractual clauses.
+        </li>
+        <li>
+          If you start the presentation video, <strong>Google Ireland
+          Limited</strong>, which operates YouTube for users in Switzerland and
+          the European Economic Area, receives the data described above, which
+          may be transferred to the United States.
+        </li>
+      </ul>
       <p>
-        Technical connection data is processed by our hosting provider,
-        Cloudflare, Inc., under recognised standard contractual clauses
-        governing data transfers outside Switzerland. No other data is
-        shared with a third party at this time.
-      </p>
-      <p>
-        If you start the presentation video, the data described above is
-        sent to Google Ireland Limited, which operates YouTube for users in
-        Switzerland and the European Economic Area, and may be transferred
-        to the United States.
+        Access to your account and documents is reserved to you and to Thrax
+        Legal. No other client can ever view them.
       </p>
 
       <h2>Retention period</h2>
-      <p>
-        Technical connection data is retained for the standard period
-        applied by our hosting provider for security logs, then
-        automatically deleted. Emails you send us are kept for as long as
-        needed to handle your request.
-      </p>
+      <ul>
+        <li>
+          Technical connection data is kept for the standard period applied
+          by our hosting provider for security logs, then deleted
+          automatically.
+        </li>
+        <li>
+          Sign-in attempts are kept for seven days; password reset links
+          expire after one hour; a sign-in session expires after 30 days.
+        </li>
+        <li>
+          Your account data, requests and documents are kept for the duration
+          of your subscription, then for as long as needed for our legal
+          obligations and the defence of our rights. You may ask for their
+          erasure, subject to those obligations.
+        </li>
+        <li>
+          Payment records are kept for the legal period applicable to
+          accounting records.
+        </li>
+        <li>
+          Emails you send us are kept for as long as needed to handle your
+          request.
+        </li>
+      </ul>
 
       <h2>Your rights</h2>
       <p>
@@ -428,82 +619,143 @@ function It() {
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
-      <h2>Quali dati trattiamo oggi</h2>
-      <p>
-        Al momento, questo sito non comporta alcun modulo di raccolta dati
-        attivo (il modulo di pagamento non è ancora in produzione, vedi la
-        pagina d&rsquo;ordine). Gli unici dati trattati sono&nbsp;:
-      </p>
+      <h2>Quali dati trattiamo</h2>
+      <p>A seconda dell’uso che fate del sito, trattiamo i seguenti dati:</p>
       <ul>
         <li>
-          I <strong>dati di connessione tecnici</strong> generati dalla
-          vostra navigazione (indirizzo IP, tipo di browser, pagine
-          visitate, orario), raccolti automaticamente dal nostro fornitore
-          di hosting Cloudflare a fini di sicurezza e buon funzionamento
-          del sito.
+          I <strong>dati tecnici di connessione</strong> generati dalla
+          vostra navigazione (indirizzo IP, tipo di browser, pagine visitate,
+          data e ora), raccolti automaticamente dal nostro fornitore di
+          hosting Cloudflare a fini di sicurezza e di buon funzionamento del
+          sito.
         </li>
         <li>
-          Le risposte che fornite nella <strong>diagnosi gratuita</strong>:
-          queste risposte restano nel vostro browser, non vengono mai
-          inviate a un server e scompaiono quando lasciate o ricaricate la
-          pagina.
+          Le risposte che date nell’<strong>autodiagnosi gratuita</strong>:
+          queste risposte restano nel vostro browser, non vengono mai inviate
+          a un server e scompaiono quando lasciate o ricaricate la pagina.
         </li>
         <li>
-          Il contenuto di un&rsquo;<strong>email</strong> che ci inviate, se
-          ci contattate direttamente.
+          Se <strong>create un account cliente</strong>: il vostro nome, il
+          vostro indirizzo email, la vostra azienda e il vostro numero di
+          telefono (facoltativo), la formula scelta, la data di accettazione
+          delle condizioni generali, la data dell’ultimo accesso e la vostra
+          password, che conserviamo solo in forma cifrata irreversibile (non
+          possiamo leggerla).
+        </li>
+        <li>
+          Se <strong>ci inviate una richiesta</strong> dal vostro spazio: il
+          testo della richiesta, i vostri scambi con noi e i documenti che
+          allegate (contratti, lettere, ecc.). Questi documenti possono
+          contenere dati personali di terzi: allegate solo ciò che è
+          necessario.
+        </li>
+        <li>
+          Le <strong>informazioni di pagamento</strong> che registriamo per
+          gestire il vostro abbonamento: importo, data, periodo coperto,
+          modalità di pagamento e riferimento. Non trattiamo alcun dato di
+          carta bancaria: il modulo di pagamento online non è ancora in
+          produzione e il pagamento avviene per ora tramite bonifico o altro
+          mezzo concordato con voi. Questa informativa sarà completata con
+          l’attivazione di un fornitore di pagamento.
+        </li>
+        <li>
+          Le <strong>note interne</strong> che prendiamo sulla vostra pratica
+          per il seguito e un <strong>registro tecnico</strong> delle azioni
+          effettuate sugli account (pagamento registrato, risposta inviata,
+          ecc.).
+        </li>
+        <li>
+          I <strong>tentativi di accesso</strong> (indirizzo email inserito,
+          indirizzo IP, data), conservati sette giorni per bloccare i
+          tentativi di intrusione.
+        </li>
+        <li>
+          Il contenuto di un’<strong>email</strong> che ci inviate, se ci
+          contattate direttamente.
         </li>
       </ul>
-      <p>
-        Non appena l&rsquo;ordine online sarà attivato, questa informativa
-        sarà aggiornata per descrivere precisamente i dati d&rsquo;ordine e
-        di fatturazione trattati in quel momento (dati di contatto,
-        informazioni di pagamento tramite il nostro futuro fornitore di
-        pagamenti).
-      </p>
 
       <h2>Cookie e tracciatori</h2>
       <p>
-        Questo sito non utilizza alcun cookie di misurazione
-        dell&rsquo;audience, pubblicitario o di social network. Non installa
-        alcun tracciatore di terze parti. Se ciò dovesse cambiare (ad
-        esempio con l&rsquo;aggiunta di uno strumento di analytics), questa
-        informativa sarà aggiornata di conseguenza prima di qualsiasi
-        attivazione.
+        Questo sito non utilizza alcun cookie di misurazione dell’audience,
+        pubblicitario o di social network. Non installa alcun tracciatore di
+        terzi. Se ciò dovesse cambiare (ad esempio con l’aggiunta di uno
+        strumento di misurazione dell’audience), questa informativa sarà
+        aggiornata di conseguenza, prima di qualsiasi attivazione.
       </p>
       <p>
-        Unica eccezione: la pagina iniziale propone un video di presentazione
-        ospitato su YouTube. Finché non cliccate sul lettore, nulla viene
-        trasmesso a YouTube: l&rsquo;immagine visualizzata è ospitata sul
-        nostro sito. Se avviate il video, viene caricato in modalità di
-        privacy avanzata (youtube-nocookie.com); YouTube riceve allora il
-        vostro indirizzo IP e informazioni tecniche sul browser, e può
+        Quando accedete al vostro spazio cliente, depositiamo un solo cookie,
+        <strong> strettamente necessario</strong> al funzionamento del
+        servizio (cookie di sessione «thrax_session»): vi mantiene connessi,
+        è leggibile solo dal nostro server, non è mai usato a fini di
+        tracciamento o pubblicità e scade dopo 30 giorni o alla
+        disconnessione.
+      </p>
+      <p>
+        Unica altra eccezione: la pagina iniziale propone un video di
+        presentazione ospitato su YouTube. Finché non cliccate sul lettore,
+        nulla viene trasmesso a YouTube: l’immagine mostrata è ospitata sul
+        nostro sito. Se avviate il video, viene caricato in modalità privacy
+        avanzata (youtube-nocookie.com); YouTube riceve allora il vostro
+        indirizzo IP e informazioni tecniche sul vostro browser e può
         utilizzare cookie o tecnologie simili secondo la propria informativa
         sulla privacy.
       </p>
 
       <h2>Destinatari dei dati</h2>
+      <p>Non vendiamo né affittiamo i vostri dati. Sono trattati dai seguenti fornitori tecnici:</p>
+      <ul>
+        <li>
+          <strong>Cloudflare, Inc.</strong> (hosting del sito, database degli
+          account e archiviazione dei documenti allegati), nell’ambito di
+          clausole contrattuali tipo riconosciute per i trasferimenti di dati
+          fuori dalla Svizzera.
+        </li>
+        <li>
+          <strong>Resend, Inc.</strong> (invio delle email del servizio:
+          conferme, link per la password, notifiche di risposta), che riceve il
+          vostro indirizzo email e il contenuto di questi messaggi,
+          nell’ambito di clausole contrattuali tipo.
+        </li>
+        <li>
+          Se avviate il video di presentazione, <strong>Google Ireland
+          Limited</strong>, che gestisce YouTube per gli utenti della Svizzera
+          e dello Spazio economico europeo, riceve i dati descritti sopra, che
+          possono essere trasferiti negli Stati Uniti.
+        </li>
+      </ul>
       <p>
-        I dati di connessione tecnici sono trattati dal nostro fornitore di
-        hosting, Cloudflare, Inc., nell&rsquo;ambito di clausole
-        contrattuali tipo riconosciute che disciplinano i trasferimenti di
-        dati fuori dalla Svizzera. Nessun altro dato è condiviso con terzi
-        ad oggi.
-      </p>
-      <p>
-        Se avviate il video di presentazione, i dati descritti sopra sono
-        trasmessi a Google Ireland Limited, che gestisce YouTube per gli
-        utenti in Svizzera e nello Spazio economico europeo, e possono essere
-        trasferiti negli Stati Uniti.
+        L’accesso al vostro spazio e ai vostri documenti è riservato a voi e a
+        Thrax Legal. Nessun altro cliente può mai consultarli.
       </p>
 
       <h2>Durata di conservazione</h2>
-      <p>
-        I dati di connessione tecnici sono conservati secondo la durata
-        standard applicata dal nostro fornitore di hosting per i log di
-        sicurezza, poi cancellati automaticamente. Le email che ci inviate
-        sono conservate per il tempo necessario a trattare la vostra
-        richiesta.
-      </p>
+      <ul>
+        <li>
+          I dati tecnici di connessione sono conservati secondo la durata
+          standard applicata dal nostro fornitore di hosting per i registri di
+          sicurezza, poi eliminati automaticamente.
+        </li>
+        <li>
+          I tentativi di accesso sono conservati sette giorni; i link di
+          reimpostazione della password scadono dopo un’ora; una sessione di
+          accesso scade dopo 30 giorni.
+        </li>
+        <li>
+          I dati del vostro account, le richieste e i documenti sono conservati
+          per la durata del vostro abbonamento, poi per il tempo necessario ai
+          nostri obblighi legali e alla difesa dei nostri diritti. Potete
+          chiederne la cancellazione, fatti salvi tali obblighi.
+        </li>
+        <li>
+          Le prove di pagamento sono conservate per la durata legale
+          applicabile ai documenti contabili.
+        </li>
+        <li>
+          Le email che ci inviate sono conservate per il tempo necessario a
+          trattare la vostra richiesta.
+        </li>
+      </ul>
 
       <h2>I vostri diritti</h2>
       <p>
