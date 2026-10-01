@@ -43,7 +43,7 @@
    "category_name": "Travail",
    "name": "Licenciement : vérification et opposition",
    "priority": 2,
-   "status": "claimed",
+   "status": "todo",
    "url": "https://thrax-legal.ch/fr/particuliers/licenciement-opposition",
    "guide": null,
    "content": {
@@ -68,7 +68,6 @@
      }
     ]
    },
-   "claimed_at": "2026-10-01T21:24:33Z",
    "run": "test-A"
   },
   {
