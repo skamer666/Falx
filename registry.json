@@ -595,7 +595,7 @@
    "category_name": "Travail",
    "name": "Lettre de démission",
    "priority": 17,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/lettre-de-demission",
    "guide": null,
    "content": {
@@ -620,7 +620,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:43:44Z",
-   "run": "20261001T2343Z-17281"
+   "run": "20261001T2343Z-17281",
+   "done_at": "2026-10-01T23:56:30Z",
+   "duration": 90.3
   },
   {
    "slug": "requete-conciliation-travail",
