@@ -174,5 +174,8 @@ if __name__ == "__main__":
     elif args.cmd == "add":
         cmd_add(args.slug, args.audience, args.name)
     else:
-        cmd_status()
+        try:
+            cmd_status()
+        except BrokenPipeError:
+            pass
     sys.exit(0)
