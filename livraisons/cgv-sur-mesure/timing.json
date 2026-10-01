@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.59,
+   "slot": 7.89,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.59,
+   "dur": 8.37,
+   "slot": 8.67,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 15.96,
+   "dur": 10.23,
+   "slot": 10.53,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.19,
+   "dur": 9.2,
+   "slot": 9.5,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 35.39,
+   "dur": 11.78,
+   "slot": 12.08,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 47.17,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 58.41,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 71.67,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 78.61,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.59,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.19,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 71.67,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 78.61,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 83.61,
+ "chromeShow": 7.59,
+ "chromeHide": 78.61,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.89,
+   "text": "CGV sur mesure : vos conditions générales sont copiées d’un concurrent, ou vous n’en avez pas ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.14,
+   "end": 15.26,
+   "text": "Des CGV copiées ne vous protègent pas : retards de paiement, garantie, responsabilité, tout se joue là.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.51,
+   "end": 25.49,
+   "text": "Envers les consommateurs, les clauses déséquilibrées sont déloyales. Et des CGV ne valent que si le client a pu les lire avant de conclure.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 26.74,
+   "end": 34.69,
+   "text": "On rédige des CGV complètes : commande et prix, paiement et retard, garantie et responsabilité, et for juridique.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 35.94,
+   "end": 46.47,
+   "text": "Adaptées à votre activité, à vos clients, entreprises ou particuliers, avec des conseils pour les intégrer valablement à votre site, vos offres et vos factures.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 47.72,
+   "end": 57.71,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos CGV, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 58.96,
+   "end": 70.97,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 72.22,
+   "end": 77.91,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

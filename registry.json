@@ -337,7 +337,7 @@
    "category_name": "Contrats & CGV",
    "name": "CGV sur mesure",
    "priority": 10,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/cgv-sur-mesure",
    "guide": "https://thrax-legal.ch/fr/guide/cgv-suisses-guide",
    "content": {
@@ -363,7 +363,9 @@
     ]
    },
    "claimed_at": "2026-10-01T22:38:21Z",
-   "run": "20261001T2238Z-9018"
+   "run": "20261001T2238Z-9018",
+   "done_at": "2026-10-01T23:10:49Z",
+   "duration": 83.6
   },
   {
    "slug": "contrat-de-travail-sur-mesure",
