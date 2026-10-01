@@ -79,7 +79,7 @@
    "category_name": "Logement & voisinage",
    "name": "Demande de baisse de loyer",
    "priority": 3,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/baisse-de-loyer",
    "guide": null,
    "content": {
@@ -103,7 +103,9 @@
       "a": "Cela dépend de votre dernier ajustement. Le calcul vous indique le montant exact avant d'envoyer quoi que ce soit."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T21:24:36Z",
+   "run": "test-B"
   },
   {
    "slug": "defaut-logement",
@@ -112,7 +114,7 @@
    "category_name": "Logement & voisinage",
    "name": "Défaut du logement : réduction de loyer",
    "priority": 4,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/defaut-logement",
    "guide": null,
    "content": {
@@ -136,7 +138,9 @@
       "a": "La lettre fixe un délai. Passé ce délai, vous pouvez consigner le loyer ou saisir l'autorité de conciliation."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T21:24:36Z",
+   "run": "test-B"
   },
   {
    "slug": "garantie-de-loyer",
