@@ -111,7 +111,7 @@
    "category_name": "Logement & voisinage",
    "name": "Défaut du logement : réduction de loyer",
    "priority": 4,
-   "status": "claimed",
+   "status": "todo",
    "url": "https://thrax-legal.ch/fr/particuliers/defaut-logement",
    "guide": null,
    "content": {
@@ -136,7 +136,6 @@
      }
     ]
    },
-   "claimed_at": "2026-10-01T21:24:36Z",
    "run": "test-B"
   },
   {
