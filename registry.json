@@ -411,7 +411,7 @@
    "category_name": "Employeurs",
    "name": "Rédaction de certificat de travail",
    "priority": 12,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/certificat-de-travail-employeur",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -436,7 +436,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:16:40Z",
-   "run": "20261001T2316Z-32018"
+   "run": "20261001T2316Z-32018",
+   "done_at": "2026-10-01T23:25:13Z",
+   "duration": 87.9
   },
   {
    "slug": "pack-conformite-nlpd",

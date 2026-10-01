@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.64,
+   "slot": 7.94,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.64,
+   "dur": 8.42,
+   "slot": 8.72,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.06,
+   "dur": 13.42,
+   "slot": 13.72,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 29.48,
+   "dur": 11.31,
+   "slot": 11.61,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 40.79,
+   "dur": 10.04,
+   "slot": 10.34,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 50.83,
+   "dur": 11.81,
+   "slot": 12.11,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 62.64,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 75.9,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 82.84,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.64,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 29.48,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 75.9,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 82.84,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 87.84,
+ "chromeShow": 7.64,
+ "chromeHide": 82.84,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.94,
+   "text": "Certificat de travail : un employé vous quitte, et vous devez rédiger son certificat ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.19,
+   "end": 15.36,
+   "text": "Le piège est double. Trop flatteur, il engage votre responsabilité. Trop sévère, il ouvre un litige.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.61,
+   "end": 28.78,
+   "text": "La loi est claire : le certificat doit être complet, exact et bienveillant. Et un certificat faussement élogieux peut engager votre responsabilité envers un futur employeur.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 30.03,
+   "end": 40.09,
+   "text": "On part d’un questionnaire rapide sur l’employé, puis on rédige un certificat complet ou une attestation simple, avec des formulations conformes à la pratique.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 41.34,
+   "end": 50.13,
+   "text": "Vous donnez le poste, les dates, les tâches et votre appréciation. On s’occupe du reste, y compris pour un certificat intermédiaire.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 51.38,
+   "end": 61.94,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre certificat, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 63.19,
+   "end": 75.2,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 76.45,
+   "end": 82.14,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
