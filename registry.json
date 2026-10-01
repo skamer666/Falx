@@ -155,7 +155,7 @@
    "category_name": "Logement & voisinage",
    "name": "Récupérer votre garantie de loyer",
    "priority": 5,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/garantie-de-loyer",
    "guide": null,
    "content": {
@@ -180,7 +180,9 @@
     ]
    },
    "claimed_at": "2026-10-01T21:44:55Z",
-   "run": "20261001T2144Z-2111"
+   "run": "20261001T2144Z-2111",
+   "done_at": "2026-10-01T22:29:38Z",
+   "duration": 80.1
   },
   {
    "slug": "poursuite-injustifiee",
