@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 10.18,
+   "slot": 10.48,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 10.18,
+   "dur": 6.24,
+   "slot": 6.54,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.42,
+   "dur": 13.95,
+   "slot": 14.25,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 30.37,
+   "dur": 10.57,
+   "slot": 10.87,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 40.94,
+   "dur": 8.23,
+   "slot": 8.53,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 49.17,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 60.41,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 73.67,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 80.61,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 10.18,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 30.37,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 73.67,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 80.61,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 85.61,
+ "chromeShow": 10.18,
+ "chromeHide": 80.61,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 9.48,
+   "text": "Licenciement : vous venez d’être licencié et quelque chose ne vous semble pas juste ? Un délai, une maladie, un motif douteux ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 10.73,
+   "end": 15.72,
+   "text": "Attention : si vous ne réagissez pas à temps, vous pouvez perdre vos droits.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.97,
+   "end": 29.67,
+   "text": "Pour obtenir une indemnité pour congé abusif, il faut faire opposition par écrit avant la fin du délai de congé. Et un congé donné pendant une période de protection est nul.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 30.92,
+   "end": 40.24,
+   "text": "On vérifie le délai de congé et la date de fin, les périodes de protection, maladie, accident ou grossesse, et le motif du congé.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 41.49,
+   "end": 48.47,
+   "text": "Puis on rédige votre lettre d’opposition et la demande de motivation écrite, à votre nom, prêtes à envoyer.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 49.72,
+   "end": 59.71,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 60.96,
+   "end": 72.97,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 74.22,
+   "end": 79.91,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
