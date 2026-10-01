@@ -68,7 +68,8 @@
 
   // Split an element's text into masked words: <span.txw><span.txwi>word</span></span>
   TX.words = (el) => {
-    const parts = el.textContent.trim().split(/\s+/);
+    // French punctuation (« ? », « : », « ! », « ; », « » ») stays glued to the previous word: never alone on a line.
+    const parts = el.textContent.trim().replace(/\s+([?!:;»%])/g, "\u00a0$1").replace(/«\s+/g, "«\u00a0").split(/[ \t\r\n]+/);
     el.textContent = "";
     return parts.map((w, i) => {
       const outer = document.createElement("span");
