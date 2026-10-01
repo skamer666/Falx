@@ -193,7 +193,7 @@
    "category_name": "Argent & poursuites",
    "name": "Poursuite injustifiée : opposition et radiation",
    "priority": 6,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/poursuite-injustifiee",
    "guide": null,
    "content": {
@@ -216,7 +216,9 @@
       "a": "Elle n'est plus communiquée aux tiers, par exemple à un futur bailleur, si le créancier n'a pas poursuivi la procédure."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T22:38:21Z",
+   "run": "20261001T2238Z-9018"
   },
   {
    "slug": "testament",
@@ -225,7 +227,7 @@
    "category_name": "Famille & avenir",
    "name": "Testament : rédaction guidée",
    "priority": 7,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/testament",
    "guide": null,
    "content": {
@@ -248,7 +250,9 @@
       "a": "Non, sauf testament. C'est précisément ce que le testament peut prévoir."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T22:38:21Z",
+   "run": "20261001T2238Z-9018"
   },
   {
    "slug": "mise-en-demeure",
@@ -292,7 +296,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Recouvrement de facture impayée",
    "priority": 9,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/recouvrement-facture-impayee",
    "guide": "https://thrax-legal.ch/fr/guide/mise-en-demeure-recouvrement-suisse",
    "content": {
@@ -316,7 +320,9 @@
       "a": "Une seule prestation couvre toutes les factures d'un même débiteur."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T22:38:21Z",
+   "run": "20261001T2238Z-9018"
   },
   {
    "slug": "cgv-sur-mesure",
@@ -325,7 +331,7 @@
    "category_name": "Contrats & CGV",
    "name": "CGV sur mesure",
    "priority": 10,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/cgv-sur-mesure",
    "guide": "https://thrax-legal.ch/fr/guide/cgv-suisses-guide",
    "content": {
@@ -349,7 +355,9 @@
       "a": "En français par défaut. Une traduction peut être ajoutée sur devis."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T22:38:21Z",
+   "run": "20261001T2238Z-9018"
   },
   {
    "slug": "contrat-de-travail-sur-mesure",
@@ -358,7 +366,7 @@
    "category_name": "Employeurs",
    "name": "Contrat de travail sur mesure",
    "priority": 11,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-de-travail-sur-mesure",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -382,7 +390,9 @@
       "a": "Le contrat d'apprentissage suit un modèle officiel cantonal ; nous vous orientons."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T22:38:21Z",
+   "run": "20261001T2238Z-9018"
   },
   {
    "slug": "certificat-de-travail-employeur",
