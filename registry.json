@@ -484,7 +484,7 @@
    "category_name": "Travail",
    "name": "Analyse de certificat de travail",
    "priority": 14,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/analyse-certificat-de-travail",
    "guide": null,
    "content": {
@@ -510,7 +510,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:16:40Z",
-   "run": "20261001T2316Z-32018"
+   "run": "20261001T2316Z-32018",
+   "done_at": "2026-10-01T23:37:31Z",
+   "duration": 88.9
   },
   {
    "slug": "relecture-contrat-de-travail",

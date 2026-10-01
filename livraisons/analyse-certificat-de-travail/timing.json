@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 8.92,
+   "slot": 9.22,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 8.92,
+   "dur": 7.6,
+   "slot": 7.9,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.52,
+   "dur": 10.97,
+   "slot": 11.27,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 27.49,
+   "dur": 11.21,
+   "slot": 11.51,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 38.7,
+   "dur": 13.32,
+   "slot": 13.62,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 52.02,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 63.64,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 76.9,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 83.84,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 8.92,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 27.49,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 76.9,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 83.84,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 88.84,
+ "chromeShow": 8.92,
+ "chromeHide": 83.84,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 8.22,
+   "text": "Analyse de certificat de travail : votre certificat semble positif, mais que dit-il vraiment aux recruteurs ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 9.47,
+   "end": 15.82,
+   "text": "Une formule codée, une omission, une nuance, et vos candidatures sont freinées sans que vous le sachiez.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.07,
+   "end": 26.79,
+   "text": "Votre employeur doit vous remettre un certificat complet, exact et bienveillant. Et vous pouvez demander un certificat intermédiaire à tout moment.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 28.04,
+   "end": 38.0,
+   "text": "On lit chaque phrase, formules codées et omissions comprises. Vous recevez une évaluation claire, et la liste des points que vous êtes en droit de faire modifier.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 39.25,
+   "end": 51.32,
+   "text": "Par exemple, une satisfaction « dans l’ensemble » peut signaler une faiblesse. On vous l’explique, et on vous recommande clairement : le garder, ou demander une rectification.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 52.57,
+   "end": 62.94,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre analyse, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 64.19,
+   "end": 76.2,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 77.45,
+   "end": 83.14,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
