@@ -6,6 +6,7 @@ import { CallbackBand, CompareBlock, HowItWorks, HubFaq, HubHero } from "@/compo
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 import { SERVICES_UI } from "@/lib/services/strings";
+import QuoteSection from "@/components/site/services/QuoteSection";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -14,8 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return pageMetadata({ locale, path: "/particuliers", title: t.metaTitle, description: t.metaDescription });
 }
 
-export default async function ParticuliersPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ParticuliersPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ devis?: string }>;
+}) {
   const { locale: rawLocale } = await params;
+  const { devis } = await searchParams;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const ui = SERVICES_UI[locale];
   const faqJsonLd = {
@@ -29,6 +37,7 @@ export default async function ParticuliersPage({ params }: { params: Promise<{ l
       <Nav />
       <main className="bg-bg text-text">
         <HubHero locale={locale} audience="particuliers" />
+        <QuoteSection locale={locale} audience="particuliers" error={devis} />
         <HowItWorks locale={locale} />
         <CompareBlock locale={locale} />
         <HubFaq locale={locale} audience="particuliers" />

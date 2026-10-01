@@ -6,7 +6,7 @@ import { formatChf, PLAN_PRICE_RAPPEN, type Lead, type Plan } from "./model";
 import { adminEmails, readEnv } from "./db";
 import { logAudit } from "./admin-db";
 import { EXPRESS_PRICE, getService, serviceText } from "@/lib/services/catalog";
-import { priceLabel, vatLabel } from "@/lib/services/strings";
+import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 
 const FROM = "Thrax Legal <hey@thrax-legal.ch>";
 import { CONTACT_EMAIL } from "./contact";
@@ -487,7 +487,38 @@ const ORDER_RECEIVED: Record<Locale, { subject: string; heading: string; body: (
   },
 };
 
+const QUOTE_RECEIVED: Record<Locale, { subject: string; body: (name: string) => string }> = {
+  fr: {
+    subject: "Nous préparons votre devis",
+    body: (name) =>
+      `Bonjour ${name},<br/><br/>Nous avons bien reçu la description de votre problème. Nous l’étudions et vous envoyons un devis à prix fixe par email, en principe sous 1 jour ouvré. Il est gratuit et sans engagement.<br/><br/>Vous pouvez déjà répondre à cet email pour nous envoyer vos documents.`,
+  },
+  de: {
+    subject: "Wir erstellen Ihre Offerte",
+    body: (name) =>
+      `Guten Tag ${name}<br/><br/>Wir haben die Beschreibung Ihres Problems erhalten. Wir prüfen sie und senden Ihnen eine Fixpreis-Offerte per E-Mail, in der Regel innert 1 Arbeitstag. Sie ist kostenlos und unverbindlich.<br/><br/>Sie können Ihre Unterlagen bereits als Antwort auf diese E-Mail senden.`,
+  },
+  en: {
+    subject: "We're preparing your quote",
+    body: (name) =>
+      `Hello ${name},<br/><br/>We have received the description of your problem. We are reviewing it and will email you a fixed-price quote, usually within 1 working day. It is free and without obligation.<br/><br/>You can already reply to this email to send us your documents.`,
+  },
+  it: {
+    subject: "Prepariamo il vostro preventivo",
+    body: (name) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo ricevuto la descrizione del vostro problema. La esaminiamo e vi inviamo un preventivo a prezzo fisso per email, di regola entro 1 giorno lavorativo. È gratuito e senza impegno.<br/><br/>Potete già rispondere a questa email per inviarci i documenti.`,
+  },
+};
+
+function quoteAudience(lead: Lead): "particuliers" | "entreprises" | null {
+  if (lead.service === "devis-particuliers") return "particuliers";
+  if (lead.service === "devis-entreprises") return "entreprises";
+  return null;
+}
+
 function orderSummary(lead: Lead, locale: Locale): { name: string; price: string } | null {
+  const quote = quoteAudience(lead);
+  if (quote) return { name: SERVICES_UI[locale].quote.label[quote], price: "devis à établir" };
   const service = lead.service ? getService(lead.service) : undefined;
   if (!service) return null;
   const base = `${priceLabel(locale, service.price, service.from)} ${vatLabel(locale, service.audience)}`;
@@ -496,6 +527,16 @@ function orderSummary(lead: Lead, locale: Locale): { name: string; price: string
 }
 
 export async function sendOrderReceivedEmail(lead: Lead) {
+  if (quoteAudience(lead)) {
+    const q = QUOTE_RECEIVED[lead.locale];
+    const quoteHtml = wrapEmailHtml({
+      heading: SERVICES_UI[lead.locale].thanks.quoteHeading,
+      bodyHtml: q.body(escapeHtml(lead.name)),
+      footer: ORDER_RECEIVED[lead.locale].footer,
+    });
+    await sendEmail(lead.email, q.subject, quoteHtml, CONTACT_EMAIL);
+    return;
+  }
   const t = ORDER_RECEIVED[lead.locale];
   const summary = orderSummary(lead, lead.locale);
   if (!summary) return;
@@ -513,6 +554,7 @@ export async function notifyAdminOfOrder(lead: Lead) {
   const lines = [
     summary ? `<strong>${escapeHtml(summary.name)}</strong> · ${escapeHtml(summary.price)}` : null,
     service ? `Public : ${service.audience === "particuliers" ? "particulier" : "entreprise"}` : null,
+    quoteAudience(lead) ? "À faire : chiffrer la demande et envoyer un devis à prix fixe." : null,
     lead.deadline ? `Date limite signalée : ${escapeHtml(lead.deadline)}` : null,
     `<br/><strong>${escapeHtml(lead.name)}</strong>${lead.company ? ` (${escapeHtml(lead.company)})` : ""}`,
     escapeHtml(lead.email),
@@ -522,13 +564,15 @@ export async function notifyAdminOfOrder(lead: Lead) {
     "<br/>À faire : vérifier les conflits d’intérêts, confirmer le prix et le délai, envoyer les instructions de paiement.",
   ].filter(Boolean);
   const html = wrapEmailHtml({
-    heading: lead.express ? "Nouvelle commande EXPRESS" : "Nouvelle commande",
+    heading: quoteAudience(lead) ? "Nouvelle demande de devis" : lead.express ? "Nouvelle commande EXPRESS" : "Nouvelle commande",
     bodyHtml: lines.join("<br/>"),
     ctaLabel: "Ouvrir les prospects",
     ctaUrl: `${SITE_URL}/fr/admin/prospects`,
     footer: "Notification automatique Thrax Legal.",
   });
-  const subject = `${lead.express ? "[EXPRESS] " : ""}Commande : ${summary?.name ?? lead.service} · ${lead.name}`;
+  const subject = quoteAudience(lead)
+    ? `Devis à faire : ${lead.name}`
+    : `${lead.express ? "[EXPRESS] " : ""}Commande : ${summary?.name ?? lead.service} · ${lead.name}`;
   await sendEmail(await adminEmails(), subject, html, lead.email);
 }
 

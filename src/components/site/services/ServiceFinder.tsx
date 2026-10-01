@@ -27,6 +27,8 @@ type Props = {
     all: string;
     noResult: string;
     noResultCta: string;
+    quoteTitle: string;
+    quoteCta: string;
   };
   callbackHref: string;
 };
@@ -118,6 +120,7 @@ export default function ServiceFinder({ items, categories, strings, callbackHref
       </div>
 
       {visible.length ? (
+        <>
         <ul className="mt-6 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface">
           {visible.map((item) => (
             <li key={item.slug}>
@@ -139,12 +142,23 @@ export default function ServiceFinder({ items, categories, strings, callbackHref
             </li>
           ))}
         </ul>
+        <a
+          href={callbackHref}
+          className="mt-4 flex flex-col items-start justify-between gap-4 rounded-2xl bg-text px-6 py-6 text-bg transition-opacity hover:opacity-90 sm:flex-row sm:items-center md:px-8"
+        >
+          <span className="text-xl font-semibold tracking-[-0.01em] md:text-2xl">{strings.quoteTitle}</span>
+          <span className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-full bg-bg px-6 text-sm font-semibold text-text">
+            {strings.quoteCta}
+            <ArrowIcon />
+          </span>
+        </a>
+        </>
       ) : (
         <div className="mt-6 rounded-2xl border border-border bg-surface px-6 py-8 text-center">
           <p className="mx-auto max-w-md text-sm leading-relaxed text-text-muted">{strings.noResult}</p>
-          <Link href={callbackHref} className="mt-4 inline-flex min-h-11 items-center rounded-full bg-text px-6 text-sm font-semibold text-bg">
+          <a href={callbackHref} className="mt-4 inline-flex min-h-11 items-center rounded-full bg-text px-6 text-sm font-semibold text-bg">
             {strings.noResultCta}
-          </Link>
+          </a>
         </div>
       )}
     </div>

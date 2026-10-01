@@ -570,19 +570,19 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Mahnung an einen Kunden",
-    short: "Formelles Schreiben mit Frist, Zinsen und angekündigten Folgen: die letzte Warnung vor der Betreibung.",
-    intro: "Ein Kunde zahlt trotz Erinnerungen nicht? Eine formelle Mahnung mit Frist, Verzugszinsen und angekündigten Folgen löst die Zahlung oft aus.",
+    name: "Mahnung und Fristansetzung",
+    short: "Kunde, Lieferant, Mieter, Partner: formelles Schreiben mit Frist und angekündigten Folgen, die letzte Warnung vor dem Verfahren.",
+    intro: "Jemand hält seine Verpflichtungen gegenüber Ihrem Unternehmen nicht ein? Ein Kunde zahlt nicht, ein Lieferant liefert nicht, ein Mieter ist im Rückstand, ein Partner hält sein Wort nicht: Eine formelle Mahnung mit Frist und angekündigten Folgen löst die Situation oft.",
     included: [
-      "Prüfung der Forderung und der Belege",
-      "Berechnung der Verzugszinsen",
+      "Prüfung Ihrer Rechte und der Belege",
+      "Berechnung der Verzugszinsen bei Geldforderungen",
       "Versandbereite Mahnung auf Ihrem Briefkopf",
     ],
-    needs: "Die offene Rechnung, Vertrag oder Auftragsbestätigung und Ihre Erinnerungen.",
-    note: "Ab Verzug ist ein Verzugszins von 5 % pro Jahr geschuldet (Art. 104 OR). War ein bestimmter Verfalltag vereinbart, tritt der Verzug mit dessen Ablauf ein (Art. 102 OR).",
+    needs: "Den Vertrag, die Bestellung oder die betreffende Rechnung und die Korrespondenz mit der Gegenpartei.",
+    note: "Bei Geldforderungen ist ab Verzug ein Verzugszins von 5 % pro Jahr geschuldet (Art. 104 OR). Bei einer nicht erbrachten Leistung gibt die Mahnung mit Nachfrist das Recht, auf die Leistung zu verzichten oder vom Vertrag zurückzutreten (Art. 107 OR).",
     faq: [
-      { q: "Eingeschrieben senden?", a: "Empfehlenswert, um den Empfang zu beweisen. Ein paralleler E-Mail-Versand beschleunigt oft die Zahlung." },
-      { q: "Und wenn der Kunde immer noch nicht zahlt?", a: "Wechseln Sie zum vollständigen Inkasso: Betreibungsbegehren und weiteres Verfahren." },
+      { q: "Eingeschrieben senden?", a: "Empfehlenswert, um den Empfang zu beweisen. Ein paralleler E-Mail-Versand beschleunigt oft die Reaktion." },
+      { q: "Und wenn die Gegenpartei immer noch nicht reagiert?", a: "Bei einer Rechnung wechseln Sie zum vollständigen Inkasso. Sonst nennen wir Ihnen die nächsten Schritte: Rücktritt, Schadenersatz oder Verfahren." },
     ],
   },
   "recouvrement-facture-impayee": {

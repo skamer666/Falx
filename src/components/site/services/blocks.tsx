@@ -47,8 +47,13 @@ export function HubHero({ locale, audience, dark = false }: { locale: Locale; au
           <ServiceFinder
             items={items}
             categories={categories}
-            callbackHref={`/${locale}/contact`}
-            strings={{ ...ui.finder, searchPlaceholder: ui.finder.searchPlaceholder[audience] }}
+            callbackHref="#devis"
+            strings={{
+              ...ui.finder,
+              searchPlaceholder: ui.finder.searchPlaceholder[audience],
+              quoteTitle: ui.quote.title,
+              quoteCta: ui.quote.cta,
+            }}
           />
         </div>
         <p className="mt-6 text-sm text-text-muted">

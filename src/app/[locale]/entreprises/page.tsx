@@ -13,6 +13,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 import { Container, PrimaryButton, StepList } from "@/components/site/ui";
 import { HubHero } from "@/components/site/services/blocks";
+import QuoteSection from "@/components/site/services/QuoteSection";
 import { SERVICES_UI } from "@/lib/services/strings";
 
 type FaqItem = { q: string; a: string };
@@ -821,10 +822,13 @@ export async function generateMetadata({
 
 export default async function EntreprisesPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ devis?: string }>;
 }) {
   const { locale: rawLocale } = await params;
+  const { devis } = await searchParams;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = CONTENT[locale];
 
@@ -868,6 +872,7 @@ export default async function EntreprisesPage({
         <Nav />
         <main className="bg-bg text-text">
           <HubHero locale={locale} audience="entreprises" dark />
+          <QuoteSection locale={locale} audience="entreprises" error={devis} />
 
           <section className="border-b border-border bg-bg py-16 md:py-24">
             <Container>

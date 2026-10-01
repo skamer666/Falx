@@ -69,7 +69,17 @@ export type ServicesUi = {
     submit: string;
     errors: { generic: string; consent: string; throttled: string };
   };
-  thanks: { metaTitle: string; heading: string; body: string; next: string[]; back: string };
+  thanks: { metaTitle: string; heading: string; body: string; next: string[]; back: string; quoteHeading: string; quoteBody: string };
+  quote: {
+    title: string;
+    body: string;
+    points: [string, string, string];
+    cta: string;
+    situation: string;
+    situationPlaceholder: Record<Audience, string>;
+    submit: string;
+    label: Record<Audience, string>;
+  };
 };
 
 const fr: ServicesUi = {
@@ -113,8 +123,8 @@ const fr: ServicesUi = {
     },
     popular: "Les plus demandées",
     all: "Tout",
-    noResult: "Aucune prestation ne correspond. Décrivez-nous votre situation : on vous répond avec la bonne prestation et son prix.",
-    noResultCta: "Décrire ma situation",
+    noResult: "Aucune prestation ne correspond. Décrivez-nous votre problème : on vous fait un devis à prix fixe, gratuit.",
+    noResultCta: "Demander un devis gratuit",
     order: "Commander",
   },
   price: { vatIncl: "prix final", vatExcl: "HT", from: "dès" },
@@ -199,6 +209,21 @@ const fr: ServicesUi = {
       "Nous livrons votre document dans le délai annoncé.",
     ],
     back: "Retour à l'accueil",
+    quoteHeading: "Merci, nous préparons votre devis",
+    quoteBody: "Nous étudions votre situation et vous envoyons un devis à prix fixe par email, en principe sous 1 jour ouvré. Il est gratuit et sans engagement.",
+  },
+  quote: {
+    title: "Votre problème n'est pas dans la liste ?",
+    body: "Décrivez-le-nous. On vous répond avec un devis à prix fixe.",
+    points: ["Gratuit et sans engagement", "Prix fixe, annoncé avant de commencer", "Réponse en principe sous 1 jour ouvré"],
+    cta: "Demander un devis gratuit",
+    situation: "Décrivez votre problème",
+    situationPlaceholder: {
+      particuliers: "Ex. : mon ancien employeur refuse de me payer mes heures, mon garagiste a facturé une réparation non demandée…",
+      entreprises: "Ex. : un fournisseur ne livre pas, un ancien associé utilise notre nom, nous voulons vérifier un contrat de franchise…",
+    },
+    submit: "Recevoir mon devis gratuit",
+    label: { particuliers: "Demande de devis (particulier)", entreprises: "Demande de devis (entreprise)" },
   },
 };
 
@@ -243,8 +268,8 @@ const de: ServicesUi = {
     },
     popular: "Am meisten gefragt",
     all: "Alle",
-    noResult: "Keine Leistung passt. Beschreiben Sie Ihre Situation: Wir antworten mit der passenden Leistung und ihrem Preis.",
-    noResultCta: "Situation beschreiben",
+    noResult: "Keine Leistung passt. Beschreiben Sie Ihr Problem: Wir erstellen eine kostenlose Fixpreis-Offerte.",
+    noResultCta: "Kostenlose Offerte anfordern",
     order: "Bestellen",
   },
   price: { vatIncl: "Endpreis", vatExcl: "exkl. MWST", from: "ab" },
@@ -329,6 +354,21 @@ const de: ServicesUi = {
       "Wir liefern Ihr Dokument in der angegebenen Frist.",
     ],
     back: "Zur Startseite",
+    quoteHeading: "Danke, wir erstellen Ihre Offerte",
+    quoteBody: "Wir prüfen Ihre Situation und senden Ihnen eine Fixpreis-Offerte per E-Mail, in der Regel innert 1 Arbeitstag. Sie ist kostenlos und unverbindlich.",
+  },
+  quote: {
+    title: "Ihr Problem ist nicht in der Liste?",
+    body: "Beschreiben Sie es uns. Wir antworten mit einer Offerte zum Fixpreis.",
+    points: ["Kostenlos und unverbindlich", "Fixpreis, vor Beginn bekannt", "Antwort in der Regel innert 1 Arbeitstag"],
+    cta: "Kostenlose Offerte anfordern",
+    situation: "Beschreiben Sie Ihr Problem",
+    situationPlaceholder: {
+      particuliers: "z. B.: Mein früherer Arbeitgeber zahlt meine Stunden nicht, meine Garage hat eine nicht bestellte Reparatur verrechnet …",
+      entreprises: "z. B.: Ein Lieferant liefert nicht, ein ehemaliger Partner verwendet unseren Namen, wir möchten einen Franchisevertrag prüfen …",
+    },
+    submit: "Kostenlose Offerte erhalten",
+    label: { particuliers: "Offertanfrage (Privatperson)", entreprises: "Offertanfrage (Unternehmen)" },
   },
 };
 
@@ -373,8 +413,8 @@ const en: ServicesUi = {
     },
     popular: "Most requested",
     all: "All",
-    noResult: "No service matches. Describe your situation: we reply with the right service and its price.",
-    noResultCta: "Describe my situation",
+    noResult: "No service matches. Describe your problem: we'll send a free fixed-price quote.",
+    noResultCta: "Request a free quote",
     order: "Order",
   },
   price: { vatIncl: "final price", vatExcl: "excl. VAT", from: "from" },
@@ -459,6 +499,21 @@ const en: ServicesUi = {
       "We deliver your document within the announced time.",
     ],
     back: "Back to home",
+    quoteHeading: "Thank you, we're preparing your quote",
+    quoteBody: "We review your situation and email you a fixed-price quote, usually within 1 working day. It is free and without obligation.",
+  },
+  quote: {
+    title: "Your problem isn't on the list?",
+    body: "Describe it to us. We'll reply with a fixed-price quote.",
+    points: ["Free and without obligation", "Fixed price, announced before we start", "Reply usually within 1 working day"],
+    cta: "Request a free quote",
+    situation: "Describe your problem",
+    situationPlaceholder: {
+      particuliers: "e.g. my former employer won't pay my hours, my garage charged for a repair I didn't ask for…",
+      entreprises: "e.g. a supplier doesn't deliver, a former partner uses our name, we want to check a franchise agreement…",
+    },
+    submit: "Get my free quote",
+    label: { particuliers: "Quote request (individual)", entreprises: "Quote request (business)" },
   },
 };
 
@@ -503,8 +558,8 @@ const it: ServicesUi = {
     },
     popular: "Le più richieste",
     all: "Tutte",
-    noResult: "Nessuna prestazione corrisponde. Descriveteci la vostra situazione: vi rispondiamo con la prestazione giusta e il suo prezzo.",
-    noResultCta: "Descrivere la mia situazione",
+    noResult: "Nessuna prestazione corrisponde. Descriveteci il problema: vi facciamo un preventivo gratuito a prezzo fisso.",
+    noResultCta: "Chiedere un preventivo gratuito",
     order: "Ordinare",
   },
   price: { vatIncl: "prezzo finale", vatExcl: "IVA esclusa", from: "da" },
@@ -589,6 +644,21 @@ const it: ServicesUi = {
       "Consegniamo il documento nel termine annunciato.",
     ],
     back: "Torna alla home",
+    quoteHeading: "Grazie, prepariamo il vostro preventivo",
+    quoteBody: "Esaminiamo la vostra situazione e vi inviamo un preventivo a prezzo fisso per email, di regola entro 1 giorno lavorativo. È gratuito e senza impegno.",
+  },
+  quote: {
+    title: "Il vostro problema non è nell'elenco?",
+    body: "Descrivetecelo. Vi rispondiamo con un preventivo a prezzo fisso.",
+    points: ["Gratuito e senza impegno", "Prezzo fisso, annunciato prima di iniziare", "Risposta di regola entro 1 giorno lavorativo"],
+    cta: "Chiedere un preventivo gratuito",
+    situation: "Descrivete il vostro problema",
+    situationPlaceholder: {
+      particuliers: "Es.: il mio ex datore di lavoro non mi paga le ore, il garage ha fatturato una riparazione non richiesta…",
+      entreprises: "Es.: un fornitore non consegna, un ex socio usa il nostro nome, vogliamo verificare un contratto di franchising…",
+    },
+    submit: "Ricevere il preventivo gratuito",
+    label: { particuliers: "Richiesta di preventivo (privato)", entreprises: "Richiesta di preventivo (impresa)" },
   },
 };
 

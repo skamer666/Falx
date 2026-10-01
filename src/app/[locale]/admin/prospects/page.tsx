@@ -170,6 +170,14 @@ export default async function AdminProspectsPage({
 
 /** Commande à l'acte : prestation, prix, option express et date limite signalée. */
 function OrderBadge({ lead }: { lead: Lead }) {
+  if (lead.service === "devis-particuliers" || lead.service === "devis-entreprises") {
+    return (
+      <p className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+        <span className="rounded-full bg-text px-2.5 py-0.5 text-xs font-semibold text-bg">Devis à faire</span>
+        <span className="font-semibold">{lead.service === "devis-particuliers" ? "Particulier" : "Entreprise"} : problème hors catalogue</span>
+      </p>
+    );
+  }
   const service = lead.service ? getService(lead.service) : undefined;
   if (!service) return <p className="mt-1 text-sm font-medium">Commande : {lead.service}</p>;
   return (

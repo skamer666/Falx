@@ -653,21 +653,21 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Entreprises · Recouvrement
   "mise-en-demeure": {
-    name: "Mise en demeure à un client",
-    short: "Lettre formelle avec délai, intérêts et suite annoncée : le dernier avertissement avant la poursuite.",
+    name: "Mise en demeure",
+    short: "Client, fournisseur, locataire, partenaire : lettre formelle avec délai et suite annoncée, le dernier avertissement avant la procédure.",
     intro:
-      "Un client ne paie pas malgré vos rappels ? Une mise en demeure formelle, avec délai, intérêts moratoires et suite annoncée, suffit souvent à débloquer le paiement.",
+      "Quelqu'un ne respecte pas ses engagements envers votre entreprise ? Client qui ne paie pas, fournisseur qui ne livre pas, locataire en retard, partenaire qui ne tient pas parole : une mise en demeure formelle, avec délai et suite annoncée, débloque souvent la situation.",
     included: [
-      "Vérification de la créance et des pièces",
-      "Calcul des intérêts moratoires",
+      "Vérification de vos droits et des pièces",
+      "Calcul des intérêts moratoires s'il s'agit d'une somme d'argent",
       "Mise en demeure prête à envoyer, à votre en-tête",
     ],
-    needs: "La facture impayée, le contrat ou la confirmation de commande, et vos rappels.",
+    needs: "Le contrat, la commande ou la facture concernée, et vos échanges avec l'autre partie.",
     note:
-      "Dès la demeure, un intérêt moratoire de 5 % l'an est dû (art. 104 CO). Si une échéance précise était convenue, le débiteur est en demeure dès son expiration (art. 102 CO).",
+      "Pour une somme d'argent, un intérêt moratoire de 5 % l'an est dû dès la demeure (art. 104 CO). Pour une prestation non fournie, la mise en demeure avec un délai supplémentaire ouvre le droit de renoncer à la prestation ou de résoudre le contrat (art. 107 CO).",
     faq: [
-      { q: "Faut-il envoyer en recommandé ?", a: "C'est conseillé, pour prouver la réception. Un envoi par email en parallèle accélère souvent le paiement." },
-      { q: "Et si le client ne paie toujours pas ?", a: "Passez au recouvrement complet : réquisition de poursuite et suite de la procédure." },
+      { q: "Faut-il envoyer en recommandé ?", a: "C'est conseillé, pour prouver la réception. Un envoi par email en parallèle accélère souvent la réaction." },
+      { q: "Et si l'autre partie ne réagit toujours pas ?", a: "S'il s'agit d'une facture, passez au recouvrement complet. Sinon, nous vous indiquons la suite : résolution du contrat, dommages-intérêts ou procédure." },
     ],
   },
   "recouvrement-facture-impayee": {

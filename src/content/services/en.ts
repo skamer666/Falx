@@ -570,19 +570,19 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Formal notice to a client",
-    short: "A formal letter with deadline, interest and announced consequences: the last warning before debt enforcement.",
-    intro: "A client doesn't pay despite reminders? A formal notice with a deadline, default interest and announced next steps often unlocks payment.",
+    name: "Formal notice",
+    short: "Client, supplier, tenant, partner: a formal letter with deadline and announced consequences, the last warning before proceedings.",
+    intro: "Someone is not honouring their commitments to your business? A client who doesn't pay, a supplier who doesn't deliver, a tenant in arrears, a partner who breaks their word: a formal notice with a deadline and announced next steps often unblocks the situation.",
     included: [
-      "Check of the claim and documents",
-      "Default interest calculation",
+      "Check of your rights and documents",
+      "Default interest calculation for a sum of money",
       "Formal notice on your letterhead, ready to send",
     ],
-    needs: "The unpaid invoice, the contract or order confirmation, and your reminders.",
-    note: "From default, interest of 5% per year is due (art. 104 CO). If a specific due date was agreed, the debtor is in default as soon as it passes (art. 102 CO).",
+    needs: "The contract, order or invoice concerned, and your exchanges with the other party.",
+    note: "For a sum of money, default interest of 5% per year is due from default (art. 104 CO). For an unperformed obligation, a formal notice with an additional deadline gives the right to waive performance or withdraw from the contract (art. 107 CO).",
     faq: [
-      { q: "Should I send it by registered mail?", a: "Recommended to prove receipt. Sending it by email in parallel often speeds up payment." },
-      { q: "What if the client still doesn't pay?", a: "Move on to full debt collection: debt enforcement request and next steps." },
+      { q: "Should I send it by registered mail?", a: "Recommended to prove receipt. Sending it by email in parallel often speeds up the response." },
+      { q: "What if the other party still doesn't react?", a: "For an invoice, move on to full debt collection. Otherwise, we tell you the next steps: withdrawal, damages or proceedings." },
     ],
   },
   "recouvrement-facture-impayee": {

@@ -570,19 +570,19 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Diffida a un cliente",
-    short: "Lettera formale con termine, interessi e seguito annunciato: l'ultimo avvertimento prima dell'esecuzione.",
-    intro: "Un cliente non paga nonostante i solleciti? Una diffida formale, con termine, interessi di mora e seguito annunciato, sblocca spesso il pagamento.",
+    name: "Diffida",
+    short: "Cliente, fornitore, conduttore, partner: lettera formale con termine e seguito annunciato, l'ultimo avvertimento prima della procedura.",
+    intro: "Qualcuno non rispetta i propri impegni verso la vostra impresa? Un cliente che non paga, un fornitore che non consegna, un conduttore in ritardo, un partner che non mantiene la parola: una diffida formale, con termine e seguito annunciato, sblocca spesso la situazione.",
     included: [
-      "Verifica del credito e dei documenti",
-      "Calcolo degli interessi di mora",
+      "Verifica dei vostri diritti e dei documenti",
+      "Calcolo degli interessi di mora per una somma di denaro",
       "Diffida pronta da inviare, sulla vostra carta intestata",
     ],
-    needs: "La fattura non pagata, il contratto o la conferma d'ordine e i solleciti.",
-    note: "Dalla mora è dovuto un interesse del 5 % annuo (art. 104 CO). Se era pattuita una scadenza precisa, il debitore è in mora alla sua scadenza (art. 102 CO).",
+    needs: "Il contratto, l'ordine o la fattura interessata e la corrispondenza con l'altra parte.",
+    note: "Per una somma di denaro è dovuto un interesse di mora del 5 % annuo dalla mora (art. 104 CO). Per una prestazione non fornita, la diffida con un termine supplementare dà il diritto di rinunciare alla prestazione o di recedere dal contratto (art. 107 CO).",
     faq: [
-      { q: "Raccomandata?", a: "Consigliata per provare la ricezione. Un invio parallelo via email accelera spesso il pagamento." },
-      { q: "E se il cliente ancora non paga?", a: "Passate all'incasso completo: domanda d'esecuzione e seguito della procedura." },
+      { q: "Raccomandata?", a: "Consigliata per provare la ricezione. Un invio parallelo via email accelera spesso la reazione." },
+      { q: "E se l'altra parte ancora non reagisce?", a: "Per una fattura, passate all'incasso completo. Altrimenti vi indichiamo il seguito: recesso, risarcimento o procedura." },
     ],
   },
   "recouvrement-facture-impayee": {
