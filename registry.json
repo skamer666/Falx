@@ -9,7 +9,7 @@
    "category_name": "Travail",
    "name": "Certificat de travail : demande de rectification",
    "priority": 1,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/rectification-certificat-de-travail",
    "guide": null,
    "content": {
@@ -33,7 +33,9 @@
       "a": "Il ne peut pas refuser de corriger une mention inexacte ou incomplète. S'il refuse sans raison, la lettre prépare la suite et nous vous expliquons les options."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T21:24:33Z",
+   "run": "test-A"
   },
   {
    "slug": "licenciement-opposition",
@@ -42,7 +44,7 @@
    "category_name": "Travail",
    "name": "Licenciement : vérification et opposition",
    "priority": 2,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/licenciement-opposition",
    "guide": null,
    "content": {
@@ -66,7 +68,9 @@
       "a": "En droit suisse, un congé abusif reste valable : il ouvre droit à une indemnité de six mois de salaire au plus. Un congé donné pendant une période de protection est, lui, nul."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T21:24:33Z",
+   "run": "test-A"
   },
   {
    "slug": "baisse-de-loyer",
