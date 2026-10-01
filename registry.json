@@ -193,7 +193,7 @@
    "category_name": "Argent & poursuites",
    "name": "Poursuite injustifiée : opposition et radiation",
    "priority": 6,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/poursuite-injustifiee",
    "guide": null,
    "content": {
@@ -218,7 +218,9 @@
     ]
    },
    "claimed_at": "2026-10-01T22:38:21Z",
-   "run": "20261001T2238Z-9018"
+   "run": "20261001T2238Z-9018",
+   "done_at": "2026-10-01T22:49:11Z",
+   "duration": 85.7
   },
   {
    "slug": "testament",

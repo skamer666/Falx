@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.77,
+   "slot": 8.07,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.77,
+   "dur": 6.68,
+   "slot": 6.98,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.45,
+   "dur": 16.7,
+   "slot": 17.0,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 31.15,
+   "dur": 11.38,
+   "slot": 11.68,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 42.53,
+   "dur": 6.69,
+   "slot": 6.99,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 49.22,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 60.46,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 73.72,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 80.66,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.77,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 31.15,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 73.72,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 80.66,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 85.66,
+ "chromeShow": 7.77,
+ "chromeHide": 80.66,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.07,
+   "text": "Poursuite injustifiée : vous avez reçu un commandement de payer pour une dette que vous contestez ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.32,
+   "end": 13.75,
+   "text": "Et cette poursuite peut apparaître dans votre extrait, par exemple face à un futur bailleur.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.0,
+   "end": 30.45,
+   "text": "L’opposition doit être faite dans les dix jours dès la notification. Elle est gratuite et n’a pas à être motivée. Trois mois plus tard, si le créancier n’a pas agi, vous pouvez demander que la poursuite ne soit plus communiquée aux tiers.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 31.7,
+   "end": 41.83,
+   "text": "On vérifie le commandement de payer et les délais, on vous explique comment faire opposition, puis on rédige la demande de non-divulgation au bon moment.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 43.08,
+   "end": 48.52,
+   "text": "La demande est rédigée à votre nom, adressée à l’office des poursuites, prête à envoyer.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 49.77,
+   "end": 59.76,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 61.01,
+   "end": 73.02,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 74.27,
+   "end": 79.96,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
