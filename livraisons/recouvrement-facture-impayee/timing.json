@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 6.29,
+   "slot": 6.59,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 6.29,
+   "dur": 6.48,
+   "slot": 6.78,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 12.77,
+   "dur": 9.59,
+   "slot": 9.89,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 22.36,
+   "dur": 12.82,
+   "slot": 13.12,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 35.18,
+   "dur": 13.76,
+   "slot": 14.06,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 48.94,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 60.56,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 73.82,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 80.76,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 6.29,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 22.36,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 73.82,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 80.76,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 85.76,
+ "chromeShow": 6.29,
+ "chromeHide": 80.76,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 5.59,
+   "text": "Recouvrement : une facture impayée depuis des semaines, malgré vos rappels ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 6.84,
+   "end": 12.07,
+   "text": "Chaque semaine d’attente pèse sur votre trésorerie. Et une créance finit par se prescrire.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 13.32,
+   "end": 21.66,
+   "text": "Les créances se prescrivent par dix ans en règle générale, mais par cinq ans pour de nombreuses prestations courantes. Mieux vaut agir tôt.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 22.91,
+   "end": 34.48,
+   "text": "On prend en charge tout le parcours : la mise en demeure avec intérêts, la réquisition de poursuite préparée, et si le débiteur fait opposition, l’analyse de la suite.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 35.73,
+   "end": 48.24,
+   "text": "Contrairement à une société de recouvrement, on ne prend aucun pourcentage, et on préserve la relation client quand c’est possible. Vous déposez vous-même la réquisition, prête à l’emploi.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 49.49,
+   "end": 59.86,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos documents, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 61.11,
+   "end": 73.12,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 74.37,
+   "end": 80.06,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
