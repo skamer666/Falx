@@ -229,7 +229,7 @@
    "category_name": "Famille & avenir",
    "name": "Testament : rédaction guidée",
    "priority": 7,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/testament",
    "guide": null,
    "content": {
@@ -254,7 +254,9 @@
     ]
    },
    "claimed_at": "2026-10-01T22:38:21Z",
-   "run": "20261001T2238Z-9018"
+   "run": "20261001T2238Z-9018",
+   "done_at": "2026-10-01T22:54:45Z",
+   "duration": 88.0
   },
   {
    "slug": "mise-en-demeure",

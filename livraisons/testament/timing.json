@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.65,
+   "slot": 7.95,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.65,
+   "dur": 6.87,
+   "slot": 7.17,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.52,
+   "dur": 14.69,
+   "slot": 14.99,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 29.21,
+   "dur": 13.33,
+   "slot": 13.63,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 42.54,
+   "dur": 9.0,
+   "slot": 9.3,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 51.54,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 62.78,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 76.04,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 82.98,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.65,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 29.21,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 76.04,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 82.98,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 87.98,
+ "chromeShow": 7.65,
+ "chromeHide": 82.98,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.95,
+   "text": "Testament : vous voulez protéger votre conjoint, votre partenaire, ou léguer un bien précis ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.2,
+   "end": 13.82,
+   "text": "Sans testament, c’est la loi qui décide. Et un partenaire non marié n’hérite pas.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.07,
+   "end": 28.51,
+   "text": "Un testament olographe doit être entièrement écrit à la main, daté et signé. Et depuis 2023, les règles ont changé : les parents n’ont plus de réserve, et celle des descendants est réduite.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 29.76,
+   "end": 41.84,
+   "text": "On calcule les réserves et la part dont vous pouvez disposer librement, on rédige le texte selon vos volontés, et on vous explique comment le recopier, le dater et le conserver.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 43.09,
+   "end": 50.84,
+   "text": "Pas besoin de notaire pour un testament olographe. Vous recopiez le texte à la main, et vos volontés sont claires.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 52.09,
+   "end": 62.08,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre texte, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 63.33,
+   "end": 75.34,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 76.59,
+   "end": 82.28,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
