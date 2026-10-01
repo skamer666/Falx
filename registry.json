@@ -9,7 +9,7 @@
    "category_name": "Travail",
    "name": "Certificat de travail : demande de rectification",
    "priority": 1,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/rectification-certificat-de-travail",
    "guide": null,
    "content": {
@@ -34,7 +34,8 @@
      }
     ]
    },
-   "run": "test-A"
+   "run": "20261001T2144Z-2111",
+   "claimed_at": "2026-10-01T21:44:55Z"
   },
   {
    "slug": "licenciement-opposition",
@@ -43,7 +44,7 @@
    "category_name": "Travail",
    "name": "Licenciement : vérification et opposition",
    "priority": 2,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/licenciement-opposition",
    "guide": null,
    "content": {
@@ -68,7 +69,8 @@
      }
     ]
    },
-   "run": "test-A"
+   "run": "20261001T2144Z-2111",
+   "claimed_at": "2026-10-01T21:44:55Z"
   },
   {
    "slug": "baisse-de-loyer",
@@ -77,7 +79,7 @@
    "category_name": "Logement & voisinage",
    "name": "Demande de baisse de loyer",
    "priority": 3,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/baisse-de-loyer",
    "guide": null,
    "content": {
@@ -102,7 +104,8 @@
      }
     ]
    },
-   "run": "test-B"
+   "run": "20261001T2144Z-2111",
+   "claimed_at": "2026-10-01T21:44:55Z"
   },
   {
    "slug": "defaut-logement",
@@ -111,7 +114,7 @@
    "category_name": "Logement & voisinage",
    "name": "Défaut du logement : réduction de loyer",
    "priority": 4,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/defaut-logement",
    "guide": null,
    "content": {
@@ -136,7 +139,8 @@
      }
     ]
    },
-   "run": "test-B"
+   "run": "20261001T2144Z-2111",
+   "claimed_at": "2026-10-01T21:44:55Z"
   },
   {
    "slug": "garantie-de-loyer",
@@ -145,7 +149,7 @@
    "category_name": "Logement & voisinage",
    "name": "Récupérer votre garantie de loyer",
    "priority": 5,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/garantie-de-loyer",
    "guide": null,
    "content": {
@@ -168,7 +172,9 @@
       "a": "Souvent non : la durée de vie des peintures est prise en compte. La lettre conteste les montants injustifiés."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T21:44:55Z",
+   "run": "20261001T2144Z-2111"
   },
   {
    "slug": "poursuite-injustifiee",
