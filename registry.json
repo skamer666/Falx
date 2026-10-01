@@ -558,7 +558,7 @@
    "category_name": "Travail",
    "name": "Salaire, heures sup ou vacances impayés",
    "priority": 16,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/salaire-impaye",
    "guide": null,
    "content": {
@@ -584,7 +584,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:16:40Z",
-   "run": "20261001T2316Z-32018"
+   "run": "20261001T2316Z-32018",
+   "done_at": "2026-10-01T23:49:56Z",
+   "duration": 87.9
   },
   {
    "slug": "lettre-de-demission",

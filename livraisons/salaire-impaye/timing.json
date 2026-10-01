@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.0,
+   "slot": 7.3,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.0,
+   "dur": 9.49,
+   "slot": 9.79,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.49,
+   "dur": 13.01,
+   "slot": 13.31,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 29.5,
+   "dur": 11.78,
+   "slot": 12.08,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 41.28,
+   "dur": 10.12,
+   "slot": 10.42,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 51.4,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 62.64,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 75.9,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 82.84,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.0,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 29.5,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 75.9,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 82.84,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 87.84,
+ "chromeShow": 7.0,
+ "chromeHide": 82.84,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.3,
+   "text": "Salaire impayé, heures supplémentaires jamais payées, vacances ignorées à la fin du contrat ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 7.55,
+   "end": 15.79,
+   "text": "Sans calcul précis, vous risquez d’oublier une partie de ce qui vous est dû. Salaire, heures, vacances, treizième : tout compte.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.04,
+   "end": 28.8,
+   "text": "Les heures supplémentaires sont payées avec un supplément de vingt-cinq pour cent, sauf accord écrit contraire. Et les créances de salaire se prescrivent par cinq ans : ne laissez pas traîner.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 30.05,
+   "end": 40.58,
+   "text": "On calcule précisément ce qui vous est dû, on vérifie le contrat et la convention collective, et on rédige la mise en demeure avec un délai de paiement.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 41.83,
+   "end": 50.7,
+   "text": "La lettre est ferme mais correcte, pour préserver la relation si vous restez. Et si l’employeur ne paie pas, vous avez la marche à suivre.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 51.95,
+   "end": 61.94,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 63.19,
+   "end": 75.2,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 76.45,
+   "end": 82.14,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
