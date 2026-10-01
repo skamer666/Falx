@@ -374,7 +374,7 @@
    "category_name": "Employeurs",
    "name": "Contrat de travail sur mesure",
    "priority": 11,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-de-travail-sur-mesure",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -400,7 +400,9 @@
     ]
    },
    "claimed_at": "2026-10-01T22:38:21Z",
-   "run": "20261001T2238Z-9018"
+   "run": "20261001T2238Z-9018",
+   "done_at": "2026-10-01T23:16:21Z",
+   "duration": 87.6
   },
   {
    "slug": "certificat-de-travail-employeur",
