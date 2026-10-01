@@ -30,6 +30,8 @@ export const AUDIT_LABEL: Record<string, string> = {
   login: "Connexion admin",
   email_failed: "Échec d’envoi d’un email",
   test_email: "Email de test envoyé",
+  seo_research: "Recherche SEO lancée",
+  seo_deleted: "Rapport SEO supprimé",
   signup: "Nouvelle inscription",
   admin_bootstrap: "Compte admin créé",
   password_set: "Mot de passe défini",
