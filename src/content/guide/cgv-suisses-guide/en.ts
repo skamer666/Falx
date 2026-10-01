@@ -177,7 +177,7 @@ They can apply if the customer understands the contract language or accepted it.
 
 ## T&Cs tailored to your business
 
-This guide sets out general principles and does not replace personalised advice. Drafting or reviewing your T&Cs is one of the matters covered by the Thrax Legal subscription: a legal counsel analyses your business, drafts T&Cs under Swiss law and explains every clause. [See the plans](/en/#offre) or [request a free call back](/en/contact).
+This guide sets out general principles and does not replace personalised advice. Drafting or reviewing your T&Cs is one of the matters covered by the Thrax Legal subscription: we analyse your business, draft T&Cs under Swiss law and explain every clause. [See the plans](/en/#offre) or [request a free call back](/en/contact).
 `;
 
 export default content;

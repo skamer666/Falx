@@ -15,7 +15,7 @@ export const dictionary = {
       menuCloseLabel: "Fermer",
     },
     footer: {
-      tagline: "Votre juriste externalisé, à prix fixe.",
+      tagline: "Votre service juridique externalisé, à prix fixe.",
       description:
         "Thrax Legal s'occupe des besoins juridiques de votre indépendance ou PME : rédaction de contrats, résolution de litiges, conformité nLPD. Sans avocat à l'heure, sans rendez-vous.",
       contact: "Nous contacter",
@@ -49,7 +49,7 @@ export const dictionary = {
       menuCloseLabel: "Schliessen",
     },
     footer: {
-      tagline: "Ihr externer Rechtsberater, zum Fixpreis.",
+      tagline: "Ihr externer Rechtsdienst, zum Fixpreis.",
       description:
         "Thrax Legal kümmert sich um die rechtlichen Bedürfnisse Ihrer Selbstständigkeit oder Ihres KMU: Vertragserstellung, Streitfalllösung, DSG-Konformität. Ohne Anwalt nach Stundensatz, ohne Termin.",
       contact: "Kontakt",
@@ -83,7 +83,7 @@ export const dictionary = {
       menuCloseLabel: "Close",
     },
     footer: {
-      tagline: "Your outsourced legal counsel, at a fixed price.",
+      tagline: "Your outsourced legal service, at a fixed price.",
       description:
         "Thrax Legal handles the legal needs of your independent business or SME: contract drafting, dispute resolution, FADP compliance. No hourly lawyer, no appointment.",
       contact: "Contact us",
@@ -117,7 +117,7 @@ export const dictionary = {
       menuCloseLabel: "Chiudi",
     },
     footer: {
-      tagline: "Il vostro giurista esternalizzato, a prezzo fisso.",
+      tagline: "Il vostro servizio giuridico esternalizzato, a prezzo fisso.",
       description:
         "Thrax Legal si occupa delle esigenze legali della vostra attività indipendente o PMI: redazione di contratti, risoluzione di controversie, conformità nLPD. Senza avvocato a ore, senza appuntamento.",
       contact: "Contattaci",

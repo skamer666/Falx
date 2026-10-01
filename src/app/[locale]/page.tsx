@@ -78,18 +78,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   fr: {
     metaTitle: "Abonnement juridique PME en Suisse romande | Thrax Legal",
     metaDescription:
-      "Votre juriste externalisé pour indépendants et PME de Suisse romande : contrats, litiges, démarches. Prix fixe dès 290 CHF/mois, sans engagement.",
-    heroTitle: "Votre juriste externalisé, à prix fixe.",
+      "Service juridique externalisé pour indépendants et PME de Suisse romande : contrats, litiges, démarches. Prix fixe dès 290 CHF/mois, sans engagement.",
+    heroTitle: "Votre service juridique externalisé, à prix fixe.",
     heroSubtitle:
       "Contrats, litiges, démarches : votre PME est prise en charge, sans avocat à l'heure ni rendez-vous.",
     heroCtaLabel: "Voir les formules",
     heroProof: ["Traité sous 48 à 72h", "Prix fixe, jamais à l'heure", "Sans engagement"],
     videoEyebrow: "En moins d'une minute",
     videoHeading: "Thrax Legal, expliqué simplement.",
-    videoBody: "Un besoin juridique, un juriste qui s'en occupe, une réponse claire par écrit. Voici comment ça se passe.",
+    videoBody: "Un besoin juridique, une prise en charge sérieuse, une réponse claire par écrit. Voici comment ça se passe.",
     videoPlayLabel: "Voir la vidéo",
     videoNote: "Vidéo hébergée sur YouTube, chargée uniquement au clic.",
-    aboutHeading: "Un juriste fractionné, pas un cabinet d'avocats",
+    aboutHeading: "Un service juridique à la demande, pas un cabinet d'avocats",
     aboutBody:
       "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper, sans jamais improviser en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
     pricingHeading: "Deux formules pour votre PME",
@@ -225,7 +225,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Thrax Legal est-il un cabinet d'avocats ?",
-        a: "Non. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction : c'est le principe du juriste fractionné. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse.",
+        a: "Non. Je suis étudiant en droit, avec plusieurs années d'expérience en cabinet d'avocat en recherche juridique et en rédaction : c'est le principe d'un service juridique à la demande. Chaque dossier fait l'objet d'une vraie recherche avant que je m'en occupe, jamais d'une improvisation en direct. Pour les dossiers contentieux ou les opérations complexes, je vous oriente vers un avocat inscrit à un registre cantonal suisse.",
       },
       {
         q: "Le service est-il disponible dans toute la Suisse ?",
@@ -238,18 +238,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   de: {
     metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 290/Monat, ohne Bindung.",
-    heroTitle: "Ihr externer Rechtsberater, zum Fixpreis.",
+      "Ihr externer Rechtsdienst für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 290/Monat, ohne Bindung.",
+    heroTitle: "Ihr externer Rechtsdienst, zum Fixpreis.",
     heroSubtitle:
       "Verträge, Streitfälle, Verfahren: Ihr KMU wird betreut, ohne Anwalt nach Stundensatz und ohne Termin.",
     heroCtaLabel: "Formeln ansehen",
     heroProof: ["Bearbeitet innert 48 bis 72h", "Fixpreis, nie nach Stundensatz", "Ohne Vertragsbindung"],
     videoEyebrow: "In weniger als einer Minute",
     videoHeading: "Thrax Legal, einfach erklärt.",
-    videoBody: "Ein rechtliches Anliegen, ein Jurist, der sich darum kümmert, eine klare schriftliche Antwort. So funktioniert es.",
+    videoBody: "Ein rechtliches Anliegen, eine sorgfältige Bearbeitung, eine klare schriftliche Antwort. So funktioniert es.",
     videoPlayLabel: "Video ansehen",
     videoNote: "Video auf Französisch, auf YouTube gehostet und erst beim Klick geladen.",
-    aboutHeading: "Ein fraktionierter Jurist, keine Anwaltskanzlei",
+    aboutHeading: "Ein Rechtsdienst auf Abruf, keine Anwaltskanzlei",
     aboutBody:
       "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere, ohne am Telefon zu improvisieren. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
     pricingHeading: "Zwei Formeln für Ihr KMU",
@@ -385,7 +385,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Ist Thrax Legal eine Anwaltskanzlei?",
-        a: "Nein. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken: das Prinzip des fraktionierten Juristen. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt.",
+        a: "Nein. Ich bin Jurastudent, mit mehrjähriger Erfahrung in einer Anwaltskanzlei in juristischer Recherche und im Verfassen von Schriftstücken: das Prinzip eines Rechtsdienstes auf Abruf. Jeder Fall wird richtig recherchiert, bevor ich mich darum kümmere, nie am Telefon improvisiert. Bei streitigen Fällen oder komplexen Vorgängen verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt.",
       },
       {
         q: "Bieten Sie diesen Dienst in der ganzen Schweiz an?",
@@ -398,18 +398,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   en: {
     metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. From CHF 290/month, no commitment.",
-    heroTitle: "Your outsourced legal counsel, at a fixed price.",
+      "Outsourced legal service for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. From CHF 290/month, no commitment.",
+    heroTitle: "Your outsourced legal service, at a fixed price.",
     heroSubtitle:
       "Contracts, disputes, procedures: your SME is handled, no hourly lawyer, no appointment.",
     heroCtaLabel: "See the plans",
     heroProof: ["Handled within 48 to 72h", "Fixed price, never hourly", "No commitment"],
     videoEyebrow: "In under a minute",
     videoHeading: "Thrax Legal, simply explained.",
-    videoBody: "A legal need, a jurist who handles it, a clear written answer. Here is how it works.",
+    videoBody: "A legal need, careful handling, a clear written answer. Here is how it works.",
     videoPlayLabel: "Watch the video",
     videoNote: "Video in French, hosted on YouTube and loaded only when you click.",
-    aboutHeading: "A fractional jurist, not a law firm",
+    aboutHeading: "An on-demand legal service, not a law firm",
     aboutBody:
       "A law student with several years of law firm experience, I research every case before handling it, without live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
     pricingHeading: "Two plans for your SME",
@@ -545,7 +545,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Is Thrax Legal a law firm?",
-        a: "No. I'm a law student, with several years of law firm experience in legal research and drafting: the fractional-jurist model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar.",
+        a: "No. I'm a law student, with several years of law firm experience in legal research and drafting: the on-demand legal service model. Every case gets real research before I handle it, never live improvisation. For contentious matters or complex transactions, I refer you to a lawyer registered with a Swiss cantonal bar.",
       },
       {
         q: "Do you offer this service across all of Switzerland?",
@@ -558,18 +558,18 @@ const CONTENT: Record<Locale, HomeContent> = {
   it: {
     metaTitle: "Abbonamento legale per PMI nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 290/mese, senza impegno.",
-    heroTitle: "Il vostro giurista esternalizzato, a prezzo fisso.",
+      "Servizio giuridico esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Da CHF 290/mese, senza impegno.",
+    heroTitle: "Il vostro servizio giuridico esternalizzato, a prezzo fisso.",
     heroSubtitle:
       "Contratti, controversie, procedure: la vostra PMI è seguita, senza avvocato a ore né appuntamento.",
     heroCtaLabel: "Vedere le formule",
     heroProof: ["Gestito entro 48-72h", "Prezzo fisso, mai a ore", "Senza impegno"],
     videoEyebrow: "In meno di un minuto",
     videoHeading: "Thrax Legal, spiegato semplicemente.",
-    videoBody: "Un'esigenza legale, un giurista che se ne occupa, una risposta chiara per iscritto. Ecco come funziona.",
+    videoBody: "Un'esigenza legale, una presa in carico accurata, una risposta chiara per iscritto. Ecco come funziona.",
     videoPlayLabel: "Guarda il video",
     videoNote: "Video in francese, ospitato su YouTube e caricato solo al clic.",
-    aboutHeading: "Un giurista frazionato, non uno studio legale",
+    aboutHeading: "Un servizio giuridico su richiesta, non uno studio legale",
     aboutBody:
       "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene, senza mai improvvisare dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
     pricingHeading: "Due formule per la vostra PMI",
@@ -705,7 +705,7 @@ const CONTENT: Record<Locale, HomeContent> = {
       },
       {
         q: "Thrax Legal è uno studio legale?",
-        a: "No. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione: il principio del giurista frazionato. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero.",
+        a: "No. Sono uno studente di giurisprudenza, con diversi anni di esperienza in uno studio legale nella ricerca giuridica e nella redazione: il principio di un servizio giuridico su richiesta. Ogni pratica è oggetto di una vera ricerca prima che me ne occupi, mai di un'improvvisazione dal vivo. Per i casi contenziosi o le operazioni complesse, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero.",
       },
       {
         q: "Offrite questo servizio in tutta la Svizzera?",

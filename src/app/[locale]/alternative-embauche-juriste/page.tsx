@@ -43,9 +43,9 @@ const CONTENT: Record<Locale, Content> = {
   fr: {
     metaTitle: "Embaucher un juriste en PME ou externaliser ? | Thrax Legal",
     metaDescription:
-      "Juriste salarié ou juriste externalisé : coût mensuel, délai, engagement. Comparatif pour les PME de Suisse romande, dès 290 CHF/mois sans engagement.",
+      "Juriste salarié ou service juridique externalisé : coût, délai, engagement. Comparatif pour les PME romandes, dès 290 CHF/mois sans engagement.",
     eyebrow: "Vous cherchez un juriste ?",
-    heading: "Avant d'embaucher, comparez avec un juriste externalisé.",
+    heading: "Avant d'embaucher, comparez avec un service juridique externalisé.",
     intro:
       "Un juriste salarié coûte cher et met des mois à arriver. Si votre besoin ne justifie pas un temps plein, un abonnement couvre vos contrats, litiges et démarches dès cette semaine, à prix fixe.",
     primaryCta: "Être rappelé",
@@ -94,9 +94,9 @@ const CONTENT: Record<Locale, Content> = {
   de: {
     metaTitle: "Juristen anstellen oder auslagern? KMU-Vergleich | Thrax Legal",
     metaDescription:
-      "Angestellter oder externer Jurist: Monatskosten, Vorlaufzeit, Bindung. Vergleich für KMU in der Westschweiz, ab CHF 290/Monat ohne Vertragsbindung.",
+      "Angestellter Jurist oder externer Rechtsdienst: Kosten, Vorlaufzeit, Bindung. Vergleich für KMU in der Westschweiz, ab CHF 290/Monat ohne Bindung.",
     eyebrow: "Sie suchen einen Juristen?",
-    heading: "Vergleichen Sie vor der Anstellung mit einem externen Juristen.",
+    heading: "Vergleichen Sie vor der Anstellung mit einem externen Rechtsdienst.",
     intro:
       "Ein angestellter Jurist ist teuer und braucht Monate, bis er startet. Wenn Ihr Bedarf keine Vollzeitstelle rechtfertigt, deckt ein Abo Ihre Verträge, Streitfälle und Verfahren ab dieser Woche ab, zum Fixpreis.",
     primaryCta: "Rückruf anfordern",
@@ -145,9 +145,9 @@ const CONTENT: Record<Locale, Content> = {
   en: {
     metaTitle: "Hire an in-house lawyer or outsource? SME comparison | Thrax Legal",
     metaDescription:
-      "Salaried or outsourced legal counsel: monthly cost, lead time, commitment. A comparison for SMEs in French-speaking Switzerland, from CHF 290/month, no commitment.",
+      "Salaried counsel or an outsourced legal service: cost, lead time, commitment. For SMEs in French-speaking Switzerland, from CHF 290/month.",
     eyebrow: "Looking for legal counsel?",
-    heading: "Before you hire, compare with outsourced legal counsel.",
+    heading: "Before you hire, compare with an outsourced legal service.",
     intro:
       "A salaried legal counsel is expensive and takes months to start. If your needs don't justify a full-time role, a subscription covers your contracts, disputes and procedures from this week, at a fixed price.",
     primaryCta: "Request a call back",
@@ -196,9 +196,9 @@ const CONTENT: Record<Locale, Content> = {
   it: {
     metaTitle: "Assumere un giurista o esternalizzare? Confronto PMI | Thrax Legal",
     metaDescription:
-      "Giurista dipendente o esternalizzato: costo mensile, tempi, impegno. Confronto per le PMI della Svizzera romanda, da CHF 290/mese senza impegno.",
+      "Giurista dipendente o servizio giuridico esternalizzato: costo, tempi, impegno. Per le PMI romande, da CHF 290/mese senza impegno.",
     eyebrow: "Cercate un giurista?",
-    heading: "Prima di assumere, confrontate con un giurista esternalizzato.",
+    heading: "Prima di assumere, confrontate con un servizio giuridico esternalizzato.",
     intro:
       "Un giurista dipendente costa caro e impiega mesi ad arrivare. Se il vostro bisogno non giustifica un tempo pieno, un abbonamento copre contratti, controversie e procedure da questa settimana, a prezzo fisso.",
     primaryCta: "Essere richiamati",

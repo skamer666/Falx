@@ -23,10 +23,10 @@ const TITLES: Record<Locale, string> = {
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Juriste externalisé pour indépendants et PME de Suisse romande : contrats, litiges, conformité nLPD. Prix fixe dès 290 CHF/mois, sans engagement.",
-  de: "Externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, DSG-Konformität. Fixpreis ab CHF 290/Monat, ohne Bindung.",
-  en: "Outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, FADP compliance. From CHF 290/month, no commitment.",
-  it: "Giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, conformità nLPD. Da CHF 290/mese, senza impegno.",
+  fr: "Service juridique externalisé pour indépendants et PME de Suisse romande : contrats, litiges, conformité nLPD. Prix fixe dès 290 CHF/mois, sans engagement.",
+  de: "Externer Rechtsdienst für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, DSG-Konformität. Fixpreis ab CHF 290/Monat, ohne Bindung.",
+  en: "Outsourced legal service for independents and SMEs in French-speaking Switzerland: contracts, disputes, FADP compliance. From CHF 290/month, no commitment.",
+  it: "Servizio giuridico esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, conformità nLPD. Da CHF 290/mese, senza impegno.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {

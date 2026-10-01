@@ -177,7 +177,7 @@ Elles peuvent s’appliquer si le client comprend la langue utilisée pour le co
 
 ## Besoin de CGV adaptées à votre activité ?
 
-Ce guide présente des principes généraux, pas un conseil personnalisé. La rédaction ou la relecture de vos CGV fait partie des dossiers couverts par l’abonnement Thrax Legal : un juriste analyse votre activité, rédige des CGV adaptées au droit suisse et vous explique chaque clause. [Voir les formules](/fr/#offre) ou [être rappelé gratuitement](/fr/contact).
+Ce guide présente des principes généraux, pas un conseil personnalisé. La rédaction ou la relecture de vos CGV fait partie des dossiers couverts par l’abonnement Thrax Legal : nous analysons votre activité, rédigeons des CGV adaptées au droit suisse et vous expliquons chaque clause. [Voir les formules](/fr/#offre) ou [être rappelé gratuitement](/fr/contact).
 `;
 
 export default content;

@@ -177,7 +177,7 @@ Possono valere se il cliente comprende la lingua del contratto o l’ha accettat
 
 ## Condizioni generali adatte alla vostra attività
 
-Questa guida presenta principi generali e non sostituisce una consulenza personalizzata. La redazione o la revisione delle vostre CG rientra nelle pratiche coperte dall’abbonamento Thrax Legal: un giurista analizza la vostra attività, redige CG conformi al diritto svizzero e vi spiega ogni clausola. [Vedere le formule](/it/#offre) o [essere richiamati gratuitamente](/it/contact).
+Questa guida presenta principi generali e non sostituisce una consulenza personalizzata. La redazione o la revisione delle vostre CG rientra nelle pratiche coperte dall’abbonamento Thrax Legal: analizziamo la vostra attività, redigiamo CG conformi al diritto svizzero e vi spieghiamo ogni clausola. [Vedere le formule](/it/#offre) o [essere richiamati gratuitamente](/it/contact).
 `;
 
 export default content;
