@@ -21,6 +21,10 @@ Avant toute relance musclée, assurez-vous que votre dossier tient la route :
 
 > **Bon réflexe :** commandez un extrait du registre des poursuites de votre client (auprès de l’office des poursuites de son domicile). S’il a déjà de nombreuses poursuites, privilégiez rapidement un accord de paiement ou une procédure rapide.
 
+### L’extrait des poursuites : vérifier un client
+
+L’extrait du registre des poursuites indique si une personne ou une entreprise fait l’objet de poursuites, et pour quels montants. Il se commande auprès de l’office des poursuites du **domicile ou du siège** du client, souvent en ligne, pour une vingtaine de francs. Pour obtenir l’extrait d’un tiers, vous devez rendre vraisemblable un intérêt (art. 8a LP), par exemple avec une offre, un contrat ou une facture. Avant un gros projet avec un nouveau client, c’est un réflexe simple et peu coûteux.
+
 ## Rappel ou mise en demeure : quelle différence ? {#rappel}
 
 Le **rappel** est un message aimable : « sauf erreur de notre part, la facture n° 2026-041 échue le 15 septembre n’a pas encore été réglée ». Il suffit souvent : beaucoup de retards sont de simples oublis.
@@ -65,7 +69,7 @@ Envoyez la mise en demeure par **courrier recommandé**, idéalement doublé d�
 - **Dommage supplémentaire :** si le retard vous cause un préjudice plus important (par exemple des intérêts bancaires plus élevés), il peut être réclamé s’il est prouvé (art. 106 CO).
 - **Frais de poursuite :** vous les avancez, mais ils sont mis à la charge du débiteur (art. 68 LP).
 
-## Si le client ne paie toujours pas : la poursuite {#poursuite}
+## Réquisition de poursuite et commandement de payer {#poursuite}
 
 La poursuite pour dettes est régie par la loi fédérale sur la poursuite pour dettes et la faillite (LP). Elle se déroule ainsi :
 
@@ -80,7 +84,7 @@ La poursuite pour dettes est régie par la loi fédérale sur la poursuite pour 
 
 Pas besoin d’avocat pour les premières étapes : les formulaires sont simples et disponibles en ligne. Une poursuite fait aussi apparaître la créance dans le registre des poursuites du débiteur, ce qui l’incite souvent à régler.
 
-### L’opposition et le rôle de la reconnaissance de dette
+### Opposition au commandement de payer et reconnaissance de dette
 
 L’opposition est très fréquente, car elle ne coûte rien au débiteur. Tout dépend alors de vos preuves :
 
@@ -142,6 +146,14 @@ Ce document vous permet, en cas de nouveau défaut, d’obtenir directement la m
 7. Oublier la prescription de 5 ans pour une facture de prestations de services.
 
 ## Questions fréquentes {#faq}
+
+### Comment obtenir l’extrait des poursuites d’un client ?
+
+Adressez-vous à l’office des poursuites de son domicile ou de son siège ; la plupart des cantons permettent de le commander en ligne, pour une vingtaine de francs. Joignez un document qui montre votre intérêt (offre, contrat, facture), car l’extrait d’un tiers n’est délivré qu’à cette condition (art. 8a LP).
+
+### Qu’est-ce qu’une reconnaissance de dette ?
+
+C’est un document signé par lequel le débiteur reconnaît devoir un montant déterminé. Elle peut figurer dans un contrat ou être rédigée séparément, par exemple avec un plan de paiement. Son intérêt est décisif : en cas d’opposition au commandement de payer, elle permet d’obtenir rapidement la mainlevée provisoire (art. 82 LP), sans procès au fond.
 
 ### Combien coûte une poursuite en Suisse ?
 

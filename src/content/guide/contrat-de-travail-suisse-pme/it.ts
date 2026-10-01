@@ -91,6 +91,26 @@ Il lavoratore deve mantenere il segreto sui fatti confidenziali di cui viene a c
 
 È valido solo se è **scritto**, se il lavoratore ha avuto conoscenza della clientela o di segreti d’affari il cui uso potrebbe causarvi un danno considerevole, e se è **limitato** nel luogo, nel tempo (di regola 3 anni al massimo) e nel genere di attività (art. 340 e 340a CO). Decade in particolare se disdite il contratto senza un motivo giustificato imputabile al lavoratore (art. 340c CO). Un giudice può ridurre un divieto eccessivo. Per un posto senza contatto con la clientela né accesso a segreti, è generalmente inefficace.
 
+## Esempio di struttura di un contratto di lavoro {#exemple}
+
+Un contratto di lavoro svizzero chiaro segue generalmente quest’ordine. Adattate ogni punto alla vostra situazione invece di copiare un modello così com’è:
+
+1. Parti (datore di lavoro, lavoratore) e data d’inizio.
+2. Funzione, mansionario e luogo di lavoro (eventuale telelavoro).
+3. Durata: indeterminata, o determinata con data di fine.
+4. Periodo di prova (durata, termine di disdetta di 7 giorni).
+5. Grado d’occupazione, durata settimanale e orario.
+6. Salario lordo, eventuale tredicesima, gratifica facoltativa.
+7. Ore supplementari: compensazione, supplemento o inclusione nel salario.
+8. Vacanze e giorni festivi.
+9. Incapacità lavorativa: obblighi di notifica, certificato medico, assicurazione indennità giornaliera.
+10. Spese professionali e materiale.
+11. Confidenzialità e protezione dei dati.
+12. Proprietà intellettuale sulle creazioni.
+13. Divieto di concorrenza (solo se giustificato).
+14. Termini di disdetta e fine del contratto.
+15. Rinvio al CCL o al regolamento del personale applicabile, diritto svizzero, firme.
+
 ## CCL e salari minimi: da verificare prima di firmare {#cct}
 
 In molti settori (alberghiero e della ristorazione, edilizia, pulizia, sicurezza, parrucchieri, ecc.), un **contratto collettivo di lavoro** è stato dichiarato di obbligatorietà generale e si applica a tutte le imprese del settore, associate o no. Prevale sul vostro contratto se è più favorevole al lavoratore: salario minimo, vacanze, tredicesima, orario.
@@ -176,6 +196,10 @@ Il supplemento del 25 % vale per tutti, salvo accordo scritto contrario. Per i q
 ### Un divieto di concorrenza è sempre valido?
 
 No. Deve essere scritto, ragionevole (luogo, durata, attività) e giustificato dall’accesso del collaboratore alla clientela o a segreti d’affari. Può essere ridotto da un giudice e decade in caso di disdetta senza motivo imputabile al lavoratore.
+
+### Quante volte si può rinnovare un contratto a tempo determinato in Svizzera?
+
+La legge non fissa un numero massimo. Concatenare contratti a tempo determinato senza un motivo oggettivo (sostituzione, progetto limitato, stagione) può però essere considerato un’elusione delle norme sulla disdetta: il tribunale tratta allora il rapporto come a tempo indeterminato. Un contratto a tempo determinato che prosegue tacitamente dopo la scadenza diventa anch’esso a tempo indeterminato (art. 334 cpv. 2 CO).
 
 ### Quanto dura il periodo di prova?
 

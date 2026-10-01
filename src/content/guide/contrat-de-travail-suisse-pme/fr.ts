@@ -91,6 +91,26 @@ Le travailleur doit garder secrets les faits confidentiels dont il a connaissanc
 
 Elle n’est valable que si elle est **écrite**, si le travailleur a eu connaissance de la clientèle ou de secrets d’affaires dont l’utilisation pourrait vous causer un préjudice sensible, et si elle est **limitée** dans le lieu, le temps (en principe 3 ans au maximum) et le genre d’activité (art. 340 et 340a CO). Elle tombe notamment si vous licenciez le travailleur sans motif justifié qui lui soit imputable (art. 340c CO). Un juge peut réduire une clause excessive. Une clause pour un poste sans contact avec la clientèle ni accès à des secrets est généralement inefficace.
 
+## Exemple de structure d’un contrat de travail {#exemple}
+
+Un contrat de travail suisse clair suit généralement cet ordre. Adaptez chaque point à votre situation plutôt que de copier un modèle tel quel :
+
+1. Parties (employeur, collaborateur) et date de début.
+2. Fonction, cahier des charges et lieu de travail (télétravail éventuel).
+3. Durée : indéterminée, ou déterminée avec date de fin.
+4. Période d’essai (durée, délai de congé de 7 jours).
+5. Taux d’activité, durée hebdomadaire et horaire.
+6. Salaire brut, 13e salaire éventuel, gratification facultative.
+7. Heures supplémentaires : compensation, supplément ou inclusion dans le salaire.
+8. Vacances et jours fériés.
+9. Incapacité de travail : obligations d’annonce, certificat médical, assurance perte de gain.
+10. Frais professionnels et matériel.
+11. Confidentialité et protection des données.
+12. Propriété intellectuelle sur les créations.
+13. Clause de non-concurrence (seulement si elle est justifiée).
+14. Délais de congé et fin du contrat.
+15. Renvoi à la CCT ou au règlement du personnel applicable, droit suisse, signatures.
+
 ## CCT et salaires minimaux : à vérifier avant de signer {#cct}
 
 Dans de nombreuses branches (hôtellerie-restauration, construction, nettoyage, sécurité, coiffure, etc.), une **convention collective de travail** a été étendue par les autorités et s’applique à toutes les entreprises de la branche, membres ou non d’une association patronale. Elle prime sur votre contrat lorsqu’elle est plus favorable au travailleur : salaire minimum, vacances, 13e salaire, temps de travail.
@@ -176,6 +196,10 @@ Le principe du supplément de 25 % vaut pour tous, sauf accord écrit contraire.
 ### Une clause de non-concurrence est-elle toujours valable ?
 
 Non. Elle doit être écrite, raisonnable (lieu, durée, activité) et justifiée par l’accès du collaborateur à la clientèle ou à des secrets d’affaires. Elle peut être réduite par un juge et tombe en cas de licenciement sans motif imputable au travailleur.
+
+### Combien de fois peut-on renouveler un CDD en Suisse ?
+
+La loi ne fixe pas de nombre maximal. En revanche, enchaîner des contrats de durée déterminée sans raison objective (remplacement, projet limité, saison) peut être considéré comme un contournement des règles sur le licenciement : le tribunal traite alors la relation comme un contrat de durée indéterminée. Un CDD reconduit tacitement après son terme devient aussi un contrat de durée indéterminée (art. 334 al. 2 CO).
 
 ### Combien de temps dure la période d’essai ?
 

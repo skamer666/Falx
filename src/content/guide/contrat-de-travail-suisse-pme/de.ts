@@ -91,6 +91,26 @@ Arbeitnehmende müssen vertrauliche Tatsachen geheim halten (Art. 321a Abs. 4 OR
 
 Es ist nur gültig, wenn es **schriftlich** vereinbart wurde, wenn der Arbeitnehmer Einblick in den Kundenkreis oder in Geschäftsgeheimnisse hatte, deren Verwendung Sie erheblich schädigen könnte, und wenn es nach Ort, Zeit (grundsätzlich höchstens 3 Jahre) und Gegenstand **begrenzt** ist (Art. 340 und 340a OR). Es fällt namentlich dahin, wenn Sie dem Arbeitnehmer kündigen, ohne dass er dazu begründeten Anlass gegeben hat (Art. 340c OR). Ein Gericht kann ein übermässiges Verbot einschränken. Für eine Stelle ohne Kundenkontakt und ohne Zugang zu Geheimnissen ist ein Konkurrenzverbot meist wirkungslos.
 
+## Beispiel für den Aufbau eines Arbeitsvertrags {#exemple}
+
+Ein klarer Schweizer Arbeitsvertrag folgt meist dieser Reihenfolge. Passen Sie jeden Punkt an Ihre Situation an, statt eine Vorlage unverändert zu übernehmen:
+
+1. Parteien (Arbeitgeber, Arbeitnehmer) und Beginn.
+2. Funktion, Stellenbeschreibung und Arbeitsort (allfälliges Homeoffice).
+3. Dauer: unbefristet oder befristet mit Enddatum.
+4. Probezeit (Dauer, Kündigungsfrist von 7 Tagen).
+5. Pensum, wöchentliche Arbeitszeit und Arbeitszeiten.
+6. Bruttolohn, allfälliger 13. Monatslohn, freiwillige Gratifikation.
+7. Überstunden: Kompensation, Zuschlag oder Abgeltung mit dem Lohn.
+8. Ferien und Feiertage.
+9. Arbeitsunfähigkeit: Meldepflichten, Arztzeugnis, Krankentaggeldversicherung.
+10. Spesen und Arbeitsmaterial.
+11. Vertraulichkeit und Datenschutz.
+12. Geistiges Eigentum an Arbeitsergebnissen.
+13. Konkurrenzverbot (nur wenn gerechtfertigt).
+14. Kündigungsfristen und Vertragsende.
+15. Verweis auf den anwendbaren GAV oder das Personalreglement, Schweizer Recht, Unterschriften.
+
 ## GAV und Mindestlöhne: vor der Unterzeichnung prüfen {#cct}
 
 In vielen Branchen (Gastgewerbe, Bau, Reinigung, Sicherheit, Coiffeur usw.) wurde ein **Gesamtarbeitsvertrag** allgemeinverbindlich erklärt und gilt für alle Unternehmen der Branche, ob Verbandsmitglied oder nicht. Er geht Ihrem Vertrag vor, wenn er für den Arbeitnehmer günstiger ist: Mindestlohn, Ferien, 13. Monatslohn, Arbeitszeit.
@@ -176,6 +196,10 @@ Der Grundsatz des 25-%-Zuschlags gilt für alle, sofern nichts anderes schriftli
 ### Ist ein Konkurrenzverbot immer gültig?
 
 Nein. Es muss schriftlich, angemessen (Ort, Dauer, Tätigkeit) und durch den Zugang des Mitarbeiters zu Kunden oder Geschäftsgeheimnissen gerechtfertigt sein. Ein Gericht kann es einschränken, und es fällt dahin, wenn ohne vom Arbeitnehmer zu vertretenden Grund gekündigt wird.
+
+### Wie oft darf ein befristeter Vertrag in der Schweiz verlängert werden?
+
+Das Gesetz legt keine Höchstzahl fest. Wer aber befristete Verträge ohne sachlichen Grund (Stellvertretung, begrenztes Projekt, Saison) aneinanderreiht, riskiert, dass dies als Umgehung des Kündigungsschutzes gilt: Das Gericht behandelt das Verhältnis dann als unbefristet. Ein befristeter Vertrag, der nach Ablauf stillschweigend fortgesetzt wird, gilt ebenfalls als unbefristet (Art. 334 Abs. 2 OR).
 
 ### Wie lange dauert die Probezeit?
 

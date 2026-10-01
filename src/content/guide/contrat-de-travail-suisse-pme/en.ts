@@ -91,6 +91,26 @@ Employees must keep confidential information secret (Art. 321a para. 4 CO), incl
 
 It is only valid if it is **in writing**, if the employee had access to the customer base or trade secrets whose use could cause you significant harm, and if it is **limited** in place, time (in principle 3 years at most) and type of activity (Art. 340 and 340a CO). It lapses in particular if you dismiss the employee without a justified reason attributable to them (Art. 340c CO). A court may reduce an excessive clause. For a role with no customer contact and no access to secrets, a non-compete is generally ineffective.
 
+## Sample structure of an employment contract {#exemple}
+
+A clear Swiss employment contract usually follows this order. Adapt each point to your situation rather than copying a template as is:
+
+1. Parties (employer, employee) and start date.
+2. Role, job description and place of work (any remote work).
+3. Duration: open-ended, or fixed-term with an end date.
+4. Probation (length, 7-day notice period).
+5. Workload, weekly hours and schedule.
+6. Gross salary, any 13th-month salary, discretionary bonus.
+7. Overtime: time off, premium or inclusion in the salary.
+8. Holidays and public holidays.
+9. Inability to work: reporting duties, medical certificate, sickness daily-allowance insurance.
+10. Business expenses and equipment.
+11. Confidentiality and data protection.
+12. Intellectual property in work products.
+13. Non-compete clause (only if justified).
+14. Notice periods and end of the contract.
+15. Reference to the applicable CLA or staff regulations, Swiss law, signatures.
+
 ## CLAs and minimum wages: check before signing {#cct}
 
 In many sectors (hospitality, construction, cleaning, security, hairdressing, etc.), a **collective labour agreement** has been declared generally binding and applies to every business in the sector, whether or not it belongs to an employers’ association. It overrides your contract where it is more favourable to the employee: minimum wage, holidays, 13th-month salary, working hours.
@@ -176,6 +196,10 @@ The 25% premium applies to everyone unless otherwise agreed in writing. For mana
 ### Is a non-compete clause always valid?
 
 No. It must be in writing, reasonable (place, duration, activity) and justified by the employee’s access to customers or trade secrets. A court can reduce it, and it lapses if the employee is dismissed without a reason attributable to them.
+
+### How many times can a fixed-term contract be renewed in Switzerland?
+
+The law sets no maximum number. However, chaining fixed-term contracts without an objective reason (replacement, limited project, season) may be treated as circumventing dismissal protection: the court then treats the relationship as open-ended. A fixed-term contract that tacitly continues after its end date also becomes open-ended (Art. 334 para. 2 CO).
 
 ### How long is the probation period?
 

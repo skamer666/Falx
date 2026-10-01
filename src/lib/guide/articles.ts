@@ -45,8 +45,8 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
   {
     slug: "contrat-de-travail-suisse-pme",
     title: {
-      fr: "Contrat de travail en Suisse : le guide complet pour les PME",
-      de: "Arbeitsvertrag in der Schweiz: der vollständige Leitfaden für KMU",
+      fr: "Contrat de travail en Suisse : guide complet, exemple et clauses pour les PME",
+      de: "Arbeitsvertrag in der Schweiz: Kündigungsfristen, Probezeit, Überstunden – der Leitfaden für KMU",
       en: "Employment contracts in Switzerland: the complete guide for SMEs",
       it: "Contratto di lavoro in Svizzera: la guida completa per le PMI",
     },
@@ -57,14 +57,14 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Contratto di lavoro",
     },
     description: {
-      fr: "Période d’essai, délais de congé, heures supplémentaires, maladie, non-concurrence, assurances sociales : ce qu’un contrat de travail suisse doit prévoir.",
-      de: "Probezeit, Kündigungsfristen, Überstunden, Krankheit, Konkurrenzverbot, Sozialversicherungen: was ein Schweizer Arbeitsvertrag regeln muss.",
+      fr: "Exemple de structure, période d’essai, délais de congé, heures supplémentaires, maladie, non-concurrence : un contrat de travail suisse solide.",
+      de: "Kündigungsfristen, Probezeit, Überstunden, Lohnfortzahlung, Konkurrenzverbot, Beispielaufbau: was ein Schweizer Arbeitsvertrag regeln muss.",
       en: "Probation, notice periods, overtime, sick pay, non-compete clauses, social insurance: what a Swiss employment contract must cover.",
       it: "Periodo di prova, disdetta, ore supplementari, malattia, divieto di concorrenza, assicurazioni sociali: cosa prevedere nel contratto di lavoro.",
     },
     metaTitle: {
-      fr: "Contrat de travail en Suisse : guide PME 2026 | Thrax Legal",
-      de: "Arbeitsvertrag Schweiz: Leitfaden für KMU | Thrax Legal",
+      fr: "Contrat de travail suisse : guide et exemple | Thrax Legal",
+      de: "Arbeitsvertrag & Kündigungsfrist Schweiz | Thrax Legal",
       en: "Swiss employment contracts: SME guide 2026 | Thrax Legal",
       it: "Contratto di lavoro in Svizzera: guida PMI | Thrax Legal",
     },
@@ -74,26 +74,26 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
   {
     slug: "mise-en-demeure-recouvrement-suisse",
     title: {
-      fr: "Facture impayée en Suisse : mise en demeure, poursuite et recouvrement étape par étape",
-      de: "Unbezahlte Rechnung in der Schweiz: Mahnung, Betreibung und Inkasso Schritt für Schritt",
+      fr: "Mise en demeure en Suisse : modèle, poursuite et facture impayée, étape par étape",
+      de: "Betreibung in der Schweiz: Mahnung, Zahlungsbefehl und Rechtsvorschlag Schritt für Schritt",
       en: "Unpaid invoice in Switzerland: formal notice, debt collection and recovery step by step",
       it: "Fattura non pagata in Svizzera: diffida, esecuzione e recupero passo dopo passo",
     },
     shortTitle: {
-      fr: "Facture impayée",
-      de: "Unbezahlte Rechnung",
+      fr: "Mise en demeure et poursuite",
+      de: "Mahnung und Betreibung",
       en: "Unpaid invoice",
       it: "Fattura non pagata",
     },
     description: {
-      fr: "Rappel, mise en demeure, intérêts, poursuite, opposition, mainlevée, prescription : comment récupérer une facture impayée en Suisse, étape par étape.",
-      de: "Mahnung, Verzugszins, Betreibung, Rechtsvorschlag, Rechtsöffnung, Verjährung: so treiben Sie eine unbezahlte Rechnung in der Schweiz ein.",
+      fr: "Modèle de mise en demeure, réquisition de poursuite, commandement de payer, opposition, extrait des poursuites : récupérer une facture impayée en Suisse.",
+      de: "Mahnung, Betreibungsbegehren, Zahlungsbefehl, Rechtsvorschlag, Rechtsöffnung, Betreibungsregisterauszug: so treiben Sie eine offene Rechnung ein.",
       en: "Reminders, formal notice, interest, debt collection, objections, limitation periods: how to recover an unpaid invoice in Switzerland, step by step.",
       it: "Sollecito, diffida, interessi, esecuzione, opposizione, rigetto, prescrizione: come recuperare una fattura non pagata in Svizzera, passo dopo passo.",
     },
     metaTitle: {
-      fr: "Facture impayée en Suisse : que faire ? | Thrax Legal",
-      de: "Unbezahlte Rechnung in der Schweiz: was tun? | Thrax Legal",
+      fr: "Mise en demeure en Suisse : modèle et poursuite | Thrax Legal",
+      de: "Betreibung Schweiz: Mahnung bis Zahlungsbefehl | Thrax Legal",
       en: "Unpaid invoice in Switzerland: what to do | Thrax Legal",
       it: "Fattura non pagata in Svizzera: cosa fare? | Thrax Legal",
     },
@@ -103,8 +103,8 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
   {
     slug: "conformite-nlpd-pme",
     title: {
-      fr: "nLPD : ce que votre PME doit vraiment faire (guide et checklist)",
-      de: "Neues DSG: was Ihr KMU wirklich tun muss (Leitfaden und Checkliste)",
+      fr: "nLPD (loi suisse sur la protection des données) : ce que votre PME doit faire",
+      de: "DSG Schweiz: was Ihr KMU nach dem neuen Datenschutzgesetz wirklich tun muss",
       en: "Swiss FADP: what your SME really needs to do (guide and checklist)",
       it: "Nuova LPD: cosa deve davvero fare la vostra PMI (guida e checklist)",
     },
@@ -121,8 +121,8 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Informativa privacy, responsabili del trattamento, trasferimenti all’estero, sicurezza, violazioni, cookie, IA: gli obblighi LPD concreti per le PMI.",
     },
     metaTitle: {
-      fr: "nLPD pour PME : obligations et checklist 2026 | Thrax Legal",
-      de: "Neues DSG für KMU: Pflichten und Checkliste | Thrax Legal",
+      fr: "nLPD : obligations des PME et checklist 2026 | Thrax Legal",
+      de: "DSG Schweiz für KMU: Pflichten und Checkliste | Thrax Legal",
       en: "Swiss FADP for SMEs: duties and checklist | Thrax Legal",
       it: "Nuova LPD per PMI: obblighi e checklist | Thrax Legal",
     },

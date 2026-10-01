@@ -21,6 +21,10 @@ Bevor Sie den Ton verschärfen, stellen Sie sicher, dass Ihr Dossier hält:
 
 > **Guter Reflex:** Bestellen Sie einen Betreibungsregisterauszug Ihres Kunden (beim Betreibungsamt seines Wohnsitzes). Hat er bereits viele Betreibungen, setzen Sie rasch auf eine Zahlungsvereinbarung oder ein zügiges Verfahren.
 
+### Der Betreibungsregisterauszug: einen Kunden prüfen
+
+Der Auszug aus dem Betreibungsregister zeigt, ob gegen eine Person oder ein Unternehmen Betreibungen laufen und über welche Beträge. Er wird beim Betreibungsamt am **Wohnsitz oder Sitz** des Kunden bestellt, oft online, für rund zwanzig Franken. Für den Auszug über eine Drittperson müssen Sie ein Interesse glaubhaft machen (Art. 8a SchKG), zum Beispiel mit einer Offerte, einem Vertrag oder einer Rechnung. Vor einem grösseren Projekt mit einem neuen Kunden ist das ein einfacher und günstiger Reflex.
+
 ## Zahlungserinnerung oder Mahnung: der Unterschied {#rappel}
 
 Die **Zahlungserinnerung** ist freundlich: «Sofern wir nichts übersehen haben, ist die am 15. September fällige Rechnung Nr. 2026-041 noch offen.» Sie genügt oft: Viele Verspätungen sind schlichte Versäumnisse.
@@ -65,7 +69,7 @@ Schicken Sie die Mahnung **eingeschrieben**, idealerweise zusätzlich per E-Mail
 - **Weiterer Schaden:** Verursacht die Verspätung einen grösseren Schaden (zum Beispiel höhere Bankzinsen), kann er bei Nachweis geltend gemacht werden (Art. 106 OR).
 - **Betreibungskosten:** Sie schiessen sie vor, sie werden aber dem Schuldner auferlegt (Art. 68 SchKG).
 
-## Wenn der Kunde immer noch nicht zahlt: die Betreibung {#poursuite}
+## Betreibungsbegehren und Zahlungsbefehl {#poursuite}
 
 Die Schuldbetreibung ist im Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) geregelt. Sie läuft so ab:
 
@@ -80,7 +84,7 @@ Die Schuldbetreibung ist im Bundesgesetz über Schuldbetreibung und Konkurs (Sch
 
 Für die ersten Schritte braucht es keinen Anwalt: Die Formulare sind einfach und online verfügbar. Eine Betreibung erscheint zudem im Betreibungsregister des Schuldners, was ihn oft zur Zahlung bewegt.
 
-### Rechtsvorschlag und die Rolle der Schuldanerkennung
+### Rechtsvorschlag gegen den Zahlungsbefehl und Schuldanerkennung
 
 Der Rechtsvorschlag ist sehr häufig, weil er den Schuldner nichts kostet. Dann hängt alles von Ihren Beweisen ab:
 
@@ -142,6 +146,14 @@ Mit diesem Dokument erhalten Sie bei erneutem Ausfall direkt die provisorische R
 7. Die 5-jährige Verjährung für eine Rechnung über Dienstleistungen vergessen.
 
 ## Häufige Fragen {#faq}
+
+### Wie erhalte ich den Betreibungsregisterauszug eines Kunden?
+
+Wenden Sie sich an das Betreibungsamt an seinem Wohnsitz oder Sitz; in den meisten Kantonen kann der Auszug online bestellt werden, für rund zwanzig Franken. Legen Sie ein Dokument bei, das Ihr Interesse belegt (Offerte, Vertrag, Rechnung), denn der Auszug über eine Drittperson wird nur unter dieser Voraussetzung ausgestellt (Art. 8a SchKG).
+
+### Was ist eine Schuldanerkennung?
+
+Ein vom Schuldner unterschriebenes Dokument, in dem er anerkennt, einen bestimmten Betrag zu schulden. Sie kann in einem Vertrag enthalten oder separat verfasst sein, zum Beispiel mit einem Ratenplan. Ihr Nutzen ist entscheidend: Bei einem Rechtsvorschlag gegen den Zahlungsbefehl erhalten Sie damit rasch die provisorische Rechtsöffnung (Art. 82 SchKG), ohne ordentlichen Prozess.
 
 ### Was kostet eine Betreibung in der Schweiz?
 

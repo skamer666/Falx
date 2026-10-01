@@ -21,6 +21,10 @@ Before escalating, make sure your file holds up:
 
 > **Good practice:** order an extract from the debt collection register for your customer (from the debt collection office of their domicile). If they already have many debt collection entries, move quickly to a payment agreement or a fast procedure.
 
+### The debt collection register extract: checking a customer
+
+An extract from the debt collection register shows whether a person or business is subject to debt collection proceedings, and for what amounts. You order it from the debt collection office at the customer’s **domicile or registered office**, often online, for around twenty francs. To obtain a third party’s extract, you must show a plausible interest (Art. 8a DEBA), for example with an offer, a contract or an invoice. Before a large project with a new customer, it is a simple and inexpensive check.
+
 ## Reminder or formal notice: what is the difference? {#rappel}
 
 A **reminder** is friendly: "unless we are mistaken, invoice no. 2026-041, due on 15 September, has not yet been paid". It is often enough: many delays are simple oversights.
@@ -65,7 +69,7 @@ Send the formal notice by **registered mail**, ideally also by email. Registered
 - **Additional damage:** if the delay causes you greater loss (for example higher bank interest), it can be claimed if proven (Art. 106 CO).
 - **Debt collection costs:** you advance them, but they are charged to the debtor (Art. 68 DEBA).
 
-## If the customer still does not pay: debt collection {#poursuite}
+## Request for debt collection and payment order {#poursuite}
 
 Debt collection is governed by the Federal Act on Debt Collection and Bankruptcy (DEBA, SchKG/LP). It runs as follows:
 
@@ -142,6 +146,14 @@ This document lets you obtain provisional removal of any objection directly if t
 7. Forgetting the 5-year limitation period for an invoice for services.
 
 ## Frequently asked questions {#faq}
+
+### How do I obtain a customer’s debt collection register extract?
+
+Contact the debt collection office at their domicile or registered office; most cantons let you order it online, for around twenty francs. Attach a document showing your interest (offer, contract, invoice), as a third party’s extract is only issued on that condition (Art. 8a DEBA).
+
+### What is an acknowledgement of debt?
+
+A document signed by the debtor in which they acknowledge owing a specific amount. It can be part of a contract or drafted separately, for example together with a payment plan. Its value is decisive: if the debtor objects to the payment order, it lets you quickly obtain provisional removal of the objection (Art. 82 DEBA), without full proceedings.
 
 ### How much does debt collection cost in Switzerland?
 

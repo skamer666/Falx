@@ -21,6 +21,10 @@ Prima di alzare i toni, assicuratevi che il vostro incarto regga:
 
 > **Buona abitudine:** richiedete un estratto del registro delle esecuzioni del cliente (all’ufficio d’esecuzione del suo domicilio). Se ha già molte esecuzioni, puntate rapidamente su un accordo di pagamento o su una procedura rapida.
 
+### L’estratto del registro delle esecuzioni: verificare un cliente
+
+L’estratto del registro delle esecuzioni indica se una persona o un’impresa è oggetto di esecuzioni, e per quali importi. Si ordina presso l’ufficio d’esecuzione del **domicilio o della sede** del cliente, spesso online, per una ventina di franchi. Per ottenere l’estratto di un terzo occorre rendere verosimile un interesse (art. 8a LEF), ad esempio con un’offerta, un contratto o una fattura. Prima di un progetto importante con un nuovo cliente, è un riflesso semplice e poco costoso.
+
 ## Sollecito o diffida: qual è la differenza? {#rappel}
 
 Il **sollecito** è un messaggio cortese: «salvo errore da parte nostra, la fattura n. 2026-041 scaduta il 15 settembre non è ancora stata saldata». Spesso basta: molti ritardi sono semplici dimenticanze.
@@ -65,7 +69,7 @@ Inviate la diffida per **raccomandata**, idealmente anche per email. La raccoman
 - **Danno supplementare:** se il ritardo vi causa un pregiudizio maggiore (ad esempio interessi bancari più alti), può essere richiesto se provato (art. 106 CO).
 - **Spese d’esecuzione:** le anticipate, ma sono a carico del debitore (art. 68 LEF).
 
-## Se il cliente continua a non pagare: l’esecuzione {#poursuite}
+## Domanda d’esecuzione e precetto esecutivo {#poursuite}
 
 L’esecuzione per debiti è disciplinata dalla legge federale sulla esecuzione e sul fallimento (LEF). Si svolge così:
 
@@ -142,6 +146,14 @@ Con questo documento, in caso di nuova inadempienza, ottenete direttamente il ri
 7. Dimenticare la prescrizione di 5 anni per una fattura di prestazioni di servizi.
 
 ## Domande frequenti {#faq}
+
+### Come ottenere l’estratto del registro delle esecuzioni di un cliente?
+
+Rivolgetevi all’ufficio d’esecuzione del suo domicilio o della sua sede; la maggior parte dei cantoni permette di ordinarlo online, per una ventina di franchi. Allegate un documento che dimostri il vostro interesse (offerta, contratto, fattura), perché l’estratto di un terzo è rilasciato solo a questa condizione (art. 8a LEF).
+
+### Cos’è un riconoscimento di debito?
+
+È un documento firmato con cui il debitore riconosce di dovere un importo determinato. Può far parte di un contratto o essere redatto separatamente, ad esempio con un piano di pagamento. Il suo interesse è decisivo: in caso di opposizione al precetto esecutivo, permette di ottenere rapidamente il rigetto provvisorio (art. 82 LEF), senza causa di merito.
 
 ### Quanto costa un’esecuzione in Svizzera?
 
