@@ -241,7 +241,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Mise en demeure",
    "priority": 8,
-   "status": "todo",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/mise-en-demeure",
    "guide": "https://thrax-legal.ch/fr/guide/mise-en-demeure-recouvrement-suisse",
    "content": {
@@ -264,7 +264,10 @@
       "a": "S'il s'agit d'une facture, passez au recouvrement complet. Sinon, nous vous indiquons la suite : résolution du contrat, dommages-intérêts ou procédure."
      }
     ]
-   }
+   },
+   "done_at": "2026-10-01T21:31:52Z",
+   "run": "pilot-manuel",
+   "duration": 84.5
   },
   {
    "slug": "recouvrement-facture-impayee",
