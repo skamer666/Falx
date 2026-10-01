@@ -2,7 +2,7 @@ import Link from "next/link";
 import SubmitButton from "@/components/account/SubmitButton";
 import { ActionButton, AdminDenied, AdminShell, Card, Empty, FIELD, FIELD_LABEL, Flash, PageHeader } from "@/components/admin/parts";
 import { getAdminBadges } from "@/lib/account/admin-db";
-import { listLeads, LEAD_STATUSES, currentTime, type LeadStatus } from "@/lib/account/db";
+import { getSourceSummary, listLeads, LEAD_STATUSES, currentTime, type LeadStatus } from "@/lib/account/db";
 import { PLAN_LABEL_FR } from "@/lib/account/admin-labels";
 import { formatDateTime } from "@/lib/account/format";
 import { getSessionUserRaw } from "@/lib/account/session";
@@ -28,7 +28,11 @@ export default async function AdminProspectsPage({
   const { statut, q, ok } = await searchParams;
   const status = LEAD_STATUSES.find((s) => s === statut);
 
-  const [leads, badges] = await Promise.all([listLeads({ status, q: q?.trim() || undefined }), getAdminBadges()]);
+  const [leads, badges, sources] = await Promise.all([
+    listLeads({ status, q: q?.trim() || undefined }),
+    getAdminBadges(),
+    getSourceSummary(90),
+  ]);
   const now = currentTime();
   const tabs: { key: string; label: string }[] = [{ key: "", label: "Tous" }, ...LEAD_STATUSES.map((s) => ({ key: s, label: STATUS_LABEL[s] }))];
 
@@ -36,6 +40,32 @@ export default async function AdminProspectsPage({
     <AdminShell active="prospects" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Prospects" subtitle="Personnes qui ont laissé leurs coordonnées via « Être rappelé »." />
       {ok && FLASH[ok] ? <Flash>{FLASH[ok]}</Flash> : null}
+
+      {sources.length ? (
+        <div className="mb-5 rounded-2xl border border-border bg-surface p-4">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">Provenance des demandes (90 derniers jours)</p>
+          <table className="mt-3 w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs text-text-muted">
+                <th className="pb-2 font-medium">Canal</th>
+                <th className="pb-2 text-right font-medium">Rappels</th>
+                <th className="pb-2 text-right font-medium">Inscriptions</th>
+                <th className="pb-2 text-right font-medium">Clients payants</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {sources.map((row) => (
+                <tr key={row.channel}>
+                  <td className="py-1.5">{row.channel}</td>
+                  <td className="py-1.5 text-right tabular-nums">{row.leads}</td>
+                  <td className="py-1.5 text-right tabular-nums">{row.signups}</td>
+                  <td className="py-1.5 text-right tabular-nums">{row.paying}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
 
       <div className="mb-4 flex flex-wrap gap-1.5">
         {tabs.map((tab) => (
@@ -98,7 +128,7 @@ export default async function AdminProspectsPage({
                     </p>
                     {lead.message ? <p className="mt-3 whitespace-pre-wrap rounded-xl border border-border bg-surface px-4 py-3 text-sm leading-relaxed">{lead.message}</p> : null}
                     <p className="mt-3 text-xs text-text-muted">
-                      Reçu le {formatDateTime(lead.created_at, "fr")} ({lead.locale.toUpperCase()})
+                      Reçu le {formatDateTime(lead.created_at, "fr")} ({lead.locale.toUpperCase()}) · provenance : {lead.source ?? "inconnue"}
                       {ageDays >= 300 ? <span className="font-medium text-danger"> · à supprimer bientôt (12 mois)</span> : null}
                     </p>
 

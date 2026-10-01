@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import type { Locale } from "@/i18n/config";
 import { createLead, isLeadThrottled, recordAttempt, type Plan } from "@/lib/account/db";
 import { notifyAdminOfLead, safeSend, sendLeadReceivedEmail } from "@/lib/account/email";
+import { cleanSource } from "@/lib/source";
 
 function field(formData: FormData, name: string, max = 500): string {
   return String(formData.get(name) ?? "").trim().slice(0, max);
@@ -35,6 +36,7 @@ export async function submitLead(locale: Locale, formData: FormData) {
     message: field(formData, "message", 2000) || null,
     planInterest,
     locale,
+    source: cleanSource(formData.get("source")),
   });
   await safeSend(() => notifyAdminOfLead(lead), `notification prospect ${lead.email}`);
   await safeSend(() => sendLeadReceivedEmail(lead), `accusé prospect ${lead.email}`);

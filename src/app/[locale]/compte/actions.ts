@@ -30,6 +30,7 @@ import {
   accessState,
   peekPasswordToken,
 } from "@/lib/account/db";
+import { cleanSource } from "@/lib/source";
 import {
   notifyAdminOfClientMessage,
   notifyAdminOfDossier,
@@ -142,11 +143,22 @@ export async function createAccount(locale: Locale, formData: FormData) {
     aiConsentAt: Date.now(),
     termsVersion: TERMS_VERSION,
     signupMessage: message || null,
+    signupSource: cleanSource(formData.get("source")),
   });
   await logAudit({ actor: null, action: "signup", targetType: "user", targetId: user.id, detail: `${email} · ${plan}` });
   await safeSend(() => sendSignupReceivedEmail(email, name, plan, locale, TERMS_VERSION), `confirmation inscription ${email}`);
   await safeSend(
-    () => notifyAdminOfSignup({ userId: user.id, name, email, company: company || null, phone: phone || null, plan, message: message || null }),
+    () =>
+      notifyAdminOfSignup({
+        userId: user.id,
+        name,
+        email,
+        company: company || null,
+        phone: phone || null,
+        plan,
+        message: message || null,
+        source: user.signup_source,
+      }),
     `notification inscription ${email}`,
   );
   redirect(`/${locale}/compte/verifier?type=signup&email=${encodeURIComponent(email)}`);

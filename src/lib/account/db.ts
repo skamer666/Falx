@@ -76,7 +76,7 @@ export async function isAdminEmail(email: string): Promise<boolean> {
 // ---------------------------------------------------------------------------
 
 export const USER_COLUMNS =
-  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at, ai_consent_at, terms_version, signup_message";
+  "id, email, name, company, plan, locale, created_at, status, paid_until, phone, notes, last_login_at, terms_accepted_at, ai_consent_at, terms_version, signup_message, signup_source";
 
 type UserRow = Omit<AccountUser, "is_admin">;
 
@@ -127,6 +127,7 @@ export async function createUser(input: {
   aiConsentAt?: number | null;
   termsVersion?: string | null;
   signupMessage?: string | null;
+  signupSource?: string | null;
 }): Promise<AccountUser> {
   const id = newId();
   const created_at = Date.now();
@@ -134,7 +135,7 @@ export async function createUser(input: {
   const status = input.status ?? "pending";
   await (await db())
     .prepare(
-      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, ai_consent_at, terms_version, signup_message, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO users (id, email, name, company, plan, locale, created_at, status, password_hash, phone, terms_accepted_at, ai_consent_at, terms_version, signup_message, signup_source, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     )
     .bind(
       id,
@@ -151,6 +152,7 @@ export async function createUser(input: {
       input.aiConsentAt ?? null,
       input.termsVersion ?? null,
       input.signupMessage ?? null,
+      input.signupSource ?? null,
       created_at,
     )
     .run();
@@ -171,6 +173,7 @@ export async function createUser(input: {
     ai_consent_at: input.aiConsentAt ?? null,
     terms_version: input.termsVersion ?? null,
     signup_message: input.signupMessage ?? null,
+    signup_source: input.signupSource ?? null,
     is_admin: (await adminEmails()).includes(email),
   };
 }
@@ -590,6 +593,7 @@ export async function createLead(input: {
   message: string | null;
   planInterest: Plan | null;
   locale: Locale;
+  source?: string | null;
 }): Promise<Lead> {
   const lead: Lead = {
     id: newId(),
@@ -605,12 +609,13 @@ export async function createLead(input: {
     privacy_consent_at: Date.now(),
     created_at: Date.now(),
     contacted_at: null,
+    source: input.source ?? null,
   };
   await (await db())
     .prepare(
-      "INSERT INTO leads (id, name, email, phone, company, message, plan_interest, locale, status, notes, privacy_consent_at, created_at, contacted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'nouveau', NULL, ?, ?, NULL)",
+      "INSERT INTO leads (id, name, email, phone, company, message, plan_interest, locale, status, notes, privacy_consent_at, created_at, contacted_at, source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'nouveau', NULL, ?, ?, NULL, ?)",
     )
-    .bind(lead.id, lead.name, lead.email, lead.phone, lead.company, lead.message, lead.plan_interest, lead.locale, lead.privacy_consent_at, lead.created_at)
+    .bind(lead.id, lead.name, lead.email, lead.phone, lead.company, lead.message, lead.plan_interest, lead.locale, lead.privacy_consent_at, lead.created_at, lead.source)
     .run();
   return lead;
 }
@@ -656,4 +661,43 @@ export async function deleteLead(id: string): Promise<void> {
 export async function countNewLeads(): Promise<number> {
   const row = await (await db()).prepare("SELECT COUNT(*) AS n FROM leads WHERE status = 'nouveau'").first<{ n: number }>();
   return row?.n ?? 0;
+}
+
+/** Canal = provenance sans le détail de la page d'arrivée (« Google Ads · page /fr » → « Google Ads »). */
+export function sourceChannel(source: string | null): string {
+  if (!source) return "Inconnue";
+  return source.split(" · ")[0] || "Inconnue";
+}
+
+export type SourceSummaryRow = { channel: string; leads: number; signups: number; paying: number };
+
+/** Demandes de rappel, inscriptions et clients payants par canal sur les N derniers jours. */
+export async function getSourceSummary(days: number): Promise<SourceSummaryRow[]> {
+  const database = await db();
+  const since = Date.now() - days * 86_400_000;
+  const admins = await adminEmails();
+  const [leads, users] = await Promise.all([
+    database.prepare("SELECT source FROM leads WHERE created_at > ?").bind(since).all<{ source: string | null }>(),
+    database
+      .prepare("SELECT email, signup_source, paid_until FROM users WHERE created_at > ?")
+      .bind(since)
+      .all<{ email: string; signup_source: string | null; paid_until: number | null }>(),
+  ]);
+  const rows = new Map<string, SourceSummaryRow>();
+  const row = (channel: string) => {
+    let entry = rows.get(channel);
+    if (!entry) {
+      entry = { channel, leads: 0, signups: 0, paying: 0 };
+      rows.set(channel, entry);
+    }
+    return entry;
+  };
+  for (const lead of leads.results ?? []) row(sourceChannel(lead.source)).leads += 1;
+  for (const user of users.results ?? []) {
+    if (admins.includes(user.email)) continue;
+    const entry = row(sourceChannel(user.signup_source));
+    entry.signups += 1;
+    if (user.paid_until) entry.paying += 1;
+  }
+  return [...rows.values()].sort((a, b) => b.leads + b.signups - (a.leads + a.signups));
 }

@@ -322,12 +322,14 @@ export async function notifyAdminOfSignup(input: {
   phone: string | null;
   plan: Plan;
   message?: string | null;
+  source?: string | null;
 }) {
   const lines = [
     `<strong>${escapeHtml(input.name)}</strong>${input.company ? ` (${escapeHtml(input.company)})` : ""}`,
     escapeHtml(input.email),
     input.phone ? escapeHtml(input.phone) : null,
     `Formule demandée : <strong>${PLAN_LABEL.fr[input.plan]}</strong> (${formatChf(PLAN_PRICE_RAPPEN[input.plan]).replace(/[,.]00$/, "")} CHF/mois hors TVA)`,
+    `Provenance : ${input.source ? escapeHtml(input.source) : "inconnue"}`,
     input.message ? `<br/>Message : ${escapeHtml(input.message).replace(/\n/g, "<br/>")}` : null,
   ].filter(Boolean);
   const html = wrapEmailHtml({
@@ -435,6 +437,7 @@ export async function notifyAdminOfLead(lead: Lead) {
     escapeHtml(lead.email),
     lead.phone ? `Tél. ${escapeHtml(lead.phone)}` : "Pas de téléphone",
     lead.plan_interest ? `Intéressé par : ${PLAN_LABEL.fr[lead.plan_interest]}` : null,
+    `Provenance : ${lead.source ? escapeHtml(lead.source) : "inconnue"}`,
     lead.message ? `<br/>${escapeHtml(lead.message).replace(/\n/g, "<br/>")}` : null,
   ].filter(Boolean);
   const html = wrapEmailHtml({

@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { Schibsted_Grotesk } from "next/font/google";
 import JsonLd from "@/components/site/JsonLd";
+import SourceTracker from "@/components/site/SourceTracker";
 import { LOCALES, LOCALE_TAGS, isLocale, type Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 import "../globals.css";
@@ -112,6 +113,7 @@ export default async function RootLayout({
     <html lang={LOCALE_TAGS[locale]} className={`${schibstedGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-text">
         <JsonLd data={organizationJsonLd(locale)} />
+        <SourceTracker />
         {children}
       </body>
     </html>

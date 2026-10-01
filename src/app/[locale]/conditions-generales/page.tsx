@@ -8,8 +8,8 @@ import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { TERMS_VERSION } from "@/lib/account/legal";
 
-// À compléter avant le premier client : numéro d'entreprise BCE (art. 2) une
-// fois l'inscription comme indépendant faite (identité et adresse de contact
+// À compléter avant le premier client : numéro d'entreprise BCE (art. 14) une
+// fois l'inscription comme indépendant faite (retiré du texte tant qu'il n'existe pas) (identité et adresse de contact
 // exigées par l'art. 3 al. 1 let. s LCD : renseignées), puis faire relire l'ensemble par un avocat suisse. Droit suisse
 // et for à Lausanne choisis par défaut (art. 18) : à confirmer.
 const LAST_UPDATED = TERMS_VERSION;
@@ -437,8 +437,7 @@ function Fr() {
       <p>
         «&nbsp;Thrax Legal&nbsp;» est le nom commercial sous lequel{" "}
         <strong>Grégoire Giuliano</strong>, personne physique
-        domiciliée en Belgique (numéro d’entreprise BCE&nbsp;: en cours
-        d’attribution, adresse de contact&nbsp;: Avenue Floréal 20, 1410
+        domiciliée en Belgique (adresse de contact&nbsp;: Avenue Floréal 20, 1410
         Waterloo, Belgique), propose les services
         décrits sur ce site. Il ne s’agit pas d’une société distincte.
         Contact&nbsp;: <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -830,8 +829,7 @@ function De() {
       <p>
         «&nbsp;Thrax Legal&nbsp;» ist der Handelsname, unter dem{" "}
         <strong>Grégoire Giuliano</strong>, natürliche Person mit
-        Wohnsitz in Belgien (Unternehmensnummer BCE&nbsp;: wird zugeteilt,
-        Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
+        Wohnsitz in Belgien (Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
         Website beschriebenen Leistungen anbietet. Es handelt sich nicht um
         eine eigenständige Gesellschaft. Kontakt&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -1197,7 +1195,7 @@ function En() {
       <p>
         &ldquo;Thrax Legal&rdquo; is the trade name under which{" "}
         <strong>Grégoire Giuliano</strong>, an individual resident in
-        Belgium (business number BCE: being assigned, contact address: Avenue
+        Belgium (contact address: Avenue
         Floréal 20, 1410 Waterloo, Belgium), provides the services described
         on this site. It is not a separate company. Contact:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -1569,8 +1567,7 @@ function It() {
       <p>
         «&nbsp;Thrax Legal&nbsp;» è il nome commerciale con cui{" "}
         <strong>Grégoire Giuliano</strong>, persona fisica domiciliata
-        in Belgio (numero d&rsquo;impresa BCE&nbsp;: in corso di attribuzione,
-        indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
+        in Belgio (indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
         offre i servizi descritti su questo sito. Non si tratta di
         una società distinta. Contatto&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.

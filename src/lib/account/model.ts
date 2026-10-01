@@ -32,6 +32,8 @@ export type AccountUser = {
   terms_version: string | null;
   /** Message laissé à l'inscription. */
   signup_message: string | null;
+  /** Provenance de la visite à l'inscription (annonce, lien, direct…). */
+  signup_source: string | null;
   /** Calculé au chargement à partir de ADMIN_EMAILS, jamais stocké. */
   is_admin: boolean;
 };
@@ -84,6 +86,8 @@ export type Lead = {
   privacy_consent_at: number | null;
   created_at: number;
   contacted_at: number | null;
+  /** Provenance de la visite (annonce, lien, direct…). */
+  source: string | null;
 };
 
 export type Payment = {

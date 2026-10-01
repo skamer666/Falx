@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 6;
+export const SCHEMA_VERSION = 7;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -129,8 +129,10 @@ const COLUMNS: Record<string, [string, string][]> = {
     ["ai_consent_at", "INTEGER"],
     ["terms_version", "TEXT"],
     ["signup_message", "TEXT"],
+    ["signup_source", "TEXT"],
     ["updated_at", "INTEGER"],
   ],
+  leads: [["source", "TEXT"]],
   dossiers: [
     ["kind", "TEXT NOT NULL DEFAULT 'dossier'"],
     ["units", "INTEGER NOT NULL DEFAULT 1"],

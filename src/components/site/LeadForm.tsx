@@ -4,12 +4,14 @@ import { INPUT, LABEL } from "@/components/account/ui";
 import type { Locale } from "@/i18n/config";
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 import { submitLead } from "@/app/[locale]/contact/actions";
+import SourceField from "./SourceField";
 
 /** Formulaire complet « Être rappelé » (utilisé sur la page d'accueil et sur /contact). */
 export default function LeadForm({ locale, className = "" }: { locale: Locale; className?: string }) {
   const t = LEAD_STRINGS[locale];
   return (
     <form action={submitLead.bind(null, locale)} className={`relative flex flex-col gap-5 ${className}`}>
+      <SourceField />
       {/* Champ piège à robots, invisible pour les humains. */}
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label htmlFor="website">Website</label>

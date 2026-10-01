@@ -157,7 +157,19 @@ function Fr() {
         jours ou à votre déconnexion.
       </p>
       <p>
-        Seule autre exception&nbsp;: la page d’accueil propose une vidéo de
+        Pour savoir quels canaux nous amènent des demandes, nous retenons dans
+        votre navigateur (stockage local, pendant 90&nbsp;jours) la
+        <strong>provenance de votre visite</strong>&nbsp;: par exemple
+        «&nbsp;annonce Google&nbsp;», «&nbsp;lien depuis tel site&nbsp;» ou
+        «&nbsp;direct&nbsp;», et la page d’arrivée. Cette information reste
+        sur votre appareil, n’est transmise à aucun tiers et ne nous parvient
+        que si vous envoyez un formulaire (demande de rappel ou
+        inscription)&nbsp;: elle est alors enregistrée avec votre demande.
+        Vous pouvez l’effacer en supprimant les données du site dans votre
+        navigateur.
+      </p>
+      <p>
+        Autre exception&nbsp;: la page d’accueil propose une vidéo de
         présentation hébergée sur YouTube. Tant que vous ne cliquez pas sur
         le lecteur, rien n’est transmis à YouTube&nbsp;: l’image affichée est
         hébergée sur notre site. Si vous lancez la vidéo, elle est chargée
@@ -239,8 +251,7 @@ function Fr() {
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; est le nom commercial sous
         lequel <strong>Grégoire Giuliano</strong>, personne physique
-        domiciliée Avenue Floréal 20, 1410 Waterloo, Belgique (numéro
-        d&rsquo;entreprise BCE&nbsp;: en cours d&rsquo;attribution),
+        domiciliée Avenue Floréal 20, 1410 Waterloo, Belgique,
         propose les services décrits sur ce site. Il ne s&rsquo;agit pas
         d&rsquo;une société distincte. Pour toute question relative à la
         présente politique ou à vos données, contactez-nous à{" "}
@@ -364,7 +375,18 @@ function De() {
         Abmeldung ab.
       </p>
       <p>
-        Einzige weitere Ausnahme: Die Startseite enthält ein
+        Um zu wissen, welche Kanäle uns Anfragen bringen, speichern wir in
+        Ihrem Browser (lokaler Speicher, 90&nbsp;Tage) die
+        <strong>Herkunft Ihres Besuchs</strong>: zum Beispiel
+        «Google-Anzeige», «Link von einer anderen Website» oder «direkt»
+        sowie die Einstiegsseite. Diese Angabe bleibt auf Ihrem Gerät, wird
+        an keine Dritten übermittelt und erreicht uns nur, wenn Sie ein
+        Formular senden (Rückrufanfrage oder Anmeldung): Sie wird dann mit
+        Ihrer Anfrage gespeichert. Sie können sie löschen, indem Sie die
+        Website-Daten in Ihrem Browser entfernen.
+      </p>
+      <p>
+        Weitere Ausnahme: Die Startseite enthält ein
         Präsentationsvideo, das auf YouTube gehostet wird. Solange Sie nicht
         auf den Player klicken, wird nichts an YouTube übermittelt: Das
         angezeigte Bild wird auf unserer Website gehostet. Wenn Sie das Video
@@ -445,8 +467,7 @@ function De() {
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; ist der Handelsname, unter dem{" "}
         <strong>Grégoire Giuliano</strong>, natürliche Person mit
-        Wohnsitz an der Avenue Floréal 20, 1410 Waterloo, Belgien
-        (Unternehmensnummer BCE&nbsp;: wird zugeteilt), die auf dieser Website beschriebenen Leistungen
+        Wohnsitz an der Avenue Floréal 20, 1410 Waterloo, Belgien, die auf dieser Website beschriebenen Leistungen
         anbietet. Es handelt sich nicht um eine eigenständige Gesellschaft.
         Bei Fragen zu dieser Erklärung oder zu Ihren Daten kontaktieren Sie
         uns unter <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -555,7 +576,17 @@ function En() {
         advertising, and expires after 30 days or when you sign out.
       </p>
       <p>
-        The only other exception: the home page features a presentation video
+        To know which channels bring us requests, we keep in your browser
+        (local storage, for 90&nbsp;days) the <strong>origin of your
+        visit</strong>: for example &ldquo;Google ad&rdquo;, &ldquo;link
+        from another site&rdquo; or &ldquo;direct&rdquo;, and the landing
+        page. This information stays on your device, is not shared with any
+        third party and only reaches us if you submit a form (callback
+        request or sign-up): it is then stored with your request. You can
+        erase it by clearing this site&rsquo;s data in your browser.
+      </p>
+      <p>
+        Another exception: the home page features a presentation video
         hosted on YouTube. As long as you don&rsquo;t click the player,
         nothing is sent to YouTube: the image shown is hosted on our site. If
         you start the video, it is loaded in privacy-enhanced mode
@@ -631,8 +662,7 @@ function En() {
       <p>
         &ldquo;Thrax Legal&rdquo; is the trading name under which{" "}
         <strong>Grégoire Giuliano</strong>, an individual residing at
-        Avenue Floréal 20, 1410 Waterloo, Belgium (business number BCE: being
-        assigned), provides
+        Avenue Floréal 20, 1410 Waterloo, Belgium, provides
         the services described on this site. It is not a separate legal
         entity. For any question about this policy or your data, contact us
         at <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
@@ -748,7 +778,18 @@ function It() {
         disconnessione.
       </p>
       <p>
-        Unica altra eccezione: la pagina iniziale propone un video di
+        Per sapere quali canali ci portano richieste, conserviamo nel vostro
+        browser (memoria locale, per 90&nbsp;giorni) la
+        <strong>provenienza della vostra visita</strong>: ad esempio
+        «annuncio Google», «link da un altro sito» o «diretto», e la pagina
+        di arrivo. Questa informazione resta sul vostro dispositivo, non è
+        trasmessa a terzi e ci arriva solo se inviate un modulo (richiesta di
+        richiamata o iscrizione): viene allora registrata con la vostra
+        richiesta. Potete cancellarla eliminando i dati del sito nel vostro
+        browser.
+      </p>
+      <p>
+        Altra eccezione: la pagina iniziale propone un video di
         presentazione ospitato su YouTube. Finché non cliccate sul lettore,
         nulla viene trasmesso a YouTube: l’immagine mostrata è ospitata sul
         nostro sito. Se avviate il video, viene caricato in modalità privacy
@@ -829,8 +870,7 @@ function It() {
       <p>
         &laquo;&nbsp;Thrax Legal&nbsp;&raquo; è il nome commerciale sotto il
         quale <strong>Grégoire Giuliano</strong>, persona fisica
-        domiciliata in Avenue Floréal 20, 1410 Waterloo, Belgio (numero
-        d&rsquo;impresa BCE&nbsp;: in corso di attribuzione), offre i servizi descritti su questo
+        domiciliata in Avenue Floréal 20, 1410 Waterloo, Belgio, offre i servizi descritti su questo
         sito. Non si tratta di una società distinta. Per qualsiasi domanda
         relativa alla presente informativa o ai vostri dati, contattateci a{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.

@@ -472,6 +472,10 @@ export default async function AdminClientPage({
                 <dd className="text-right">{user.terms_accepted_at ? `${formatDateTime(user.terms_accepted_at, "fr")}${user.terms_version ? ` · version ${user.terms_version}` : ""}` : "non enregistré"}</dd>
               </div>
               <div className="flex justify-between gap-3">
+                <dt>Provenance</dt>
+                <dd className="text-right">{user.signup_source ?? "inconnue"}</dd>
+              </div>
+              <div className="flex justify-between gap-3">
                 <dt>IA (Claude) acceptée</dt>
                 <dd>{user.ai_consent_at ? formatDateTime(user.ai_consent_at, "fr") : "non enregistré"}</dd>
               </div>

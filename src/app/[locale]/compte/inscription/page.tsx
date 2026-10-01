@@ -9,6 +9,7 @@ import { INPUT, LABEL, Notice } from "@/components/account/ui";
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { ACCOUNT_STRINGS } from "@/lib/account/strings";
 import { createAccount } from "../actions";
+import SourceField from "@/components/site/SourceField";
 
 export async function generateMetadata({
   params,
@@ -49,6 +50,7 @@ export default async function InscriptionPage({
               {errorMessage ? <Notice tone="error">{errorMessage}</Notice> : null}
 
               <form action={createAccount.bind(null, locale)} className="mt-8 flex flex-col gap-5">
+                <SourceField />
                 <div>
                   <label htmlFor="email" className={LABEL}>
                     {t.emailLabel}

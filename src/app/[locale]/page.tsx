@@ -46,7 +46,7 @@ type HomeContent = {
   pricingSubheading: string;
   founderBadge: string;
   tiers: [Tier, Tier];
-  custom: { name: string; price: string; body: string; cta: string };
+  custom: { name: string; price: string; body: string; cta: string; compare: string };
   perksHeading: string;
   perks: { title: string; text: string }[];
   clarity: {
@@ -93,8 +93,8 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Étudiant en droit avec plusieurs années d'expérience en cabinet d'avocat, je recherche chaque dossier avant de m'en occuper, sans jamais improviser en direct. Pour les dossiers contentieux ou à très haut risque, je vous oriente vers un avocat inscrit à un barreau suisse plutôt que de répondre à l'aveugle.",
     pricingHeading: "Deux formules pour votre PME",
     pricingSubheading: "Choisissez votre volume. Changez ou résiliez à tout moment.",
-    founderBadge: "Offre de lancement : les 20 premiers abonnés gardent ce prix tant que leur abonnement reste actif.",
-    custom: { name: "Sur mesure", price: "Dès 1'490 CHF / mois, hors TVA", body: "Pour les entreprises qui envisagent d'engager un juriste : volumes dédiés, interlocuteur unique, délais convenus et reporting mensuel. Devis sous 48 h ouvrées.", cta: "Demander un devis" },
+    founderBadge: "Prix de lancement : garanti tant que votre abonnement reste actif.",
+    custom: { name: "Sur mesure", price: "Dès 1'490 CHF / mois, hors TVA", body: "Pour les entreprises qui envisagent d'engager un juriste : volumes dédiés, interlocuteur unique, délais convenus et reporting mensuel. Devis sous 48 h ouvrées.", cta: "Demander un devis", compare: "Comparer avec une embauche" },
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -119,7 +119,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "690 CHF",
         priceNote: "/ mois, hors TVA",
         tagline: "Pour les PME avec des besoins réguliers",
-        badge: "Le plus choisi",
+        badge: "Recommandé pour les PME",
         features: [
           "30 questions rapides par mois (réponse écrite)",
           "12 dossiers complets par mois",
@@ -253,8 +253,8 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Als Jurastudent mit mehrjähriger Erfahrung in einer Anwaltskanzlei recherchiere ich jeden Fall, bevor ich mich darum kümmere, ohne am Telefon zu improvisieren. Bei streitigen Fällen oder sehr hohem Risiko verweise ich Sie an eine im kantonalen Anwaltsregister eingetragene Anwältin oder einen Anwalt, statt aufs Geratewohl zu antworten.",
     pricingHeading: "Zwei Formeln für Ihr KMU",
     pricingSubheading: "Wählen Sie Ihr Volumen. Wechseln oder kündigen Sie jederzeit.",
-    founderBadge: "Lancierungsangebot: Die ersten 20 Abonnentinnen und Abonnenten behalten diesen Preis, solange ihr Abonnement aktiv bleibt.",
-    custom: { name: "Massgeschneidert", price: "Ab CHF 1'490 / Monat, zzgl. MWST", body: "Für Unternehmen, die die Anstellung einer Juristin oder eines Juristen erwägen: eigene Volumen, feste Ansprechperson, vereinbarte Fristen und monatliches Reporting. Offerte innert 48 Arbeitsstunden.", cta: "Offerte anfragen" },
+    founderBadge: "Lancierungspreis: garantiert, solange Ihr Abonnement aktiv bleibt.",
+    custom: { name: "Massgeschneidert", price: "Ab CHF 1'490 / Monat, zzgl. MWST", body: "Für Unternehmen, die die Anstellung einer Juristin oder eines Juristen erwägen: eigene Volumen, feste Ansprechperson, vereinbarte Fristen und monatliches Reporting. Offerte innert 48 Arbeitsstunden.", cta: "Offerte anfragen", compare: "Mit einer Anstellung vergleichen" },
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -279,7 +279,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 690",
         priceNote: "/ Monat, exkl. MWST",
         tagline: "Für KMU mit regelmässigem Bedarf",
-        badge: "Am häufigsten gewählt",
+        badge: "Empfohlen für KMU",
         features: [
           "30 schnelle Fragen pro Monat (schriftliche Antwort)",
           "12 vollständige Anliegen pro Monat",
@@ -413,8 +413,8 @@ const CONTENT: Record<Locale, HomeContent> = {
       "A law student with several years of law firm experience, I research every case before handling it, without live improvisation. For contentious matters or very high-stakes decisions, I refer you to a lawyer registered with a Swiss cantonal bar rather than guess.",
     pricingHeading: "Two plans for your SME",
     pricingSubheading: "Choose your volume. Switch or cancel anytime.",
-    founderBadge: "Launch offer: the first 20 subscribers keep this price for as long as their subscription stays active.",
-    custom: { name: "Tailor-made", price: "From CHF 1,490 / month, excl. VAT", body: "For companies considering hiring an in-house lawyer: dedicated volumes, a single contact, agreed turnaround times and monthly reporting. Quote within 48 business hours.", cta: "Request a quote" },
+    founderBadge: "Launch price: guaranteed for as long as your subscription stays active.",
+    custom: { name: "Tailor-made", price: "From CHF 1,490 / month, excl. VAT", body: "For companies considering hiring an in-house lawyer: dedicated volumes, a single contact, agreed turnaround times and monthly reporting. Quote within 48 business hours.", cta: "Request a quote", compare: "Compare with hiring" },
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -439,7 +439,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 690",
         priceNote: "/ month, excl. VAT",
         tagline: "For SMEs with regular needs",
-        badge: "Most chosen",
+        badge: "Recommended for SMEs",
         features: [
           "30 quick questions per month (written answer)",
           "12 full matters handled per month",
@@ -573,8 +573,8 @@ const CONTENT: Record<Locale, HomeContent> = {
       "Studente di giurisprudenza con diversi anni di esperienza in uno studio legale, ricerco ogni pratica prima di occuparmene, senza mai improvvisare dal vivo. Per i casi contenziosi o ad altissimo rischio, vi indirizzo verso un avvocato iscritto a un albo cantonale svizzero invece di rispondere alla cieca.",
     pricingHeading: "Due formule per la vostra PMI",
     pricingSubheading: "Scegliete il vostro volume. Cambiate o disdite in qualsiasi momento.",
-    founderBadge: "Offerta di lancio: i primi 20 abbonati mantengono questo prezzo finché il loro abbonamento resta attivo.",
-    custom: { name: "Su misura", price: "Da CHF 1'490 / mese, IVA esclusa", body: "Per le aziende che valutano di assumere un giurista: volumi dedicati, un unico referente, tempi concordati e report mensile. Preventivo entro 48 ore lavorative.", cta: "Richiedere un preventivo" },
+    founderBadge: "Prezzo di lancio: garantito finché il vostro abbonamento resta attivo.",
+    custom: { name: "Su misura", price: "Da CHF 1'490 / mese, IVA esclusa", body: "Per le aziende che valutano di assumere un giurista: volumi dedicati, un unico referente, tempi concordati e report mensile. Preventivo entro 48 ore lavorative.", cta: "Richiedere un preventivo", compare: "Confrontare con un'assunzione" },
     tiers: [
       {
         slug: "abonnement-essentiel",
@@ -599,7 +599,7 @@ const CONTENT: Record<Locale, HomeContent> = {
         price: "CHF 690",
         priceNote: "/ mese, IVA esclusa",
         tagline: "Per PMI con esigenze regolari",
-        badge: "Il più scelto",
+        badge: "Consigliato per le PMI",
         features: [
           "30 domande rapide al mese (risposta scritta)",
           "12 pratiche complete al mese",
@@ -969,6 +969,9 @@ export default async function Home({
                     <p className="text-sm font-medium uppercase tracking-[0.14em] text-text-muted">{t.custom.name}</p>
                     <p className="mt-1 text-xl font-semibold tracking-[-0.01em] text-text">{t.custom.price}</p>
                     <p className="mt-2 text-sm leading-relaxed text-text-muted">{t.custom.body}</p>
+                    <Link href={`/${locale}/alternative-embauche-juriste`} className="mt-2 inline-block text-sm font-medium text-text underline underline-offset-4">
+                      {t.custom.compare}
+                    </Link>
                   </div>
                   <a
                     href="#rappel"
