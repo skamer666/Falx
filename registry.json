@@ -593,7 +593,7 @@
    "category_name": "Travail",
    "name": "Lettre de démission",
    "priority": 17,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/lettre-de-demission",
    "guide": null,
    "content": {
@@ -616,7 +616,9 @@
       "a": "C'est recommandé pour prouver la date de réception, ou remettre la lettre en main propre contre signature."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:43:44Z",
+   "run": "20261001T2343Z-17281"
   },
   {
    "slug": "requete-conciliation-travail",
@@ -625,7 +627,7 @@
    "category_name": "Travail",
    "name": "Requête de conciliation (travail)",
    "priority": 18,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/requete-conciliation-travail",
    "guide": null,
    "content": {
@@ -648,7 +650,9 @@
       "a": "Si votre situation exige un avocat, par exemple pour un montant élevé, nous vous le disons avant que vous payiez."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:43:44Z",
+   "run": "20261001T2343Z-17281"
   },
   {
    "slug": "contestation-loyer-initial",
@@ -657,7 +661,7 @@
    "category_name": "Logement & voisinage",
    "name": "Contestation du loyer initial",
    "priority": 19,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/contestation-loyer-initial",
    "guide": null,
    "content": {
@@ -681,7 +685,9 @@
       "a": "Le bailleur ne peut pas vous résilier pour ce motif pendant la procédure et les trois ans qui suivent (art. 271a CO)."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:43:44Z",
+   "run": "20261001T2343Z-17281"
   },
   {
    "slug": "resiliation-anticipee-bail",
@@ -690,7 +696,7 @@
    "category_name": "Logement & voisinage",
    "name": "Résiliation anticipée du bail",
    "priority": 20,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/resiliation-anticipee-bail",
    "guide": null,
    "content": {
@@ -713,7 +719,9 @@
       "a": "Un seul suffit s'il remplit les conditions. En pratique, en présenter deux ou trois accélère les choses."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:43:44Z",
+   "run": "20261001T2343Z-17281"
   },
   {
    "slug": "contestation-conge",
@@ -722,7 +730,7 @@
    "category_name": "Logement & voisinage",
    "name": "Contester un congé ou prolonger le bail",
    "priority": 21,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/contestation-conge",
    "guide": null,
    "content": {
@@ -745,7 +753,9 @@
       "a": "Souvent oui : une prolongation peut être accordée si le départ entraîne des conséquences pénibles."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:43:44Z",
+   "run": "20261001T2343Z-17281"
   },
   {
    "slug": "decompte-de-charges",
