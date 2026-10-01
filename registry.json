@@ -9,7 +9,7 @@
    "category_name": "Travail",
    "name": "Certificat de travail : demande de rectification",
    "priority": 1,
-   "status": "claimed",
+   "status": "todo",
    "url": "https://thrax-legal.ch/fr/particuliers/rectification-certificat-de-travail",
    "guide": null,
    "content": {
@@ -34,7 +34,6 @@
      }
     ]
    },
-   "claimed_at": "2026-10-01T21:24:33Z",
    "run": "test-A"
   },
   {
