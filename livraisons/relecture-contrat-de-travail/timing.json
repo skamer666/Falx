@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 8.56,
+   "slot": 8.86,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 8.56,
+   "dur": 7.77,
+   "slot": 8.07,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.33,
+   "dur": 13.6,
+   "slot": 13.9,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 29.93,
+   "dur": 14.76,
+   "slot": 15.06,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 44.69,
+   "dur": 12.87,
+   "slot": 13.17,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 57.56,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 69.18,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 82.44,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 89.38,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 8.56,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 29.93,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 82.44,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 89.38,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 94.38,
+ "chromeShow": 8.56,
+ "chromeHide": 89.38,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.86,
+   "text": "Relecture de contrat de travail : on vous propose un contrat, et vous voulez savoir ce que vous signez ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 9.11,
+   "end": 15.63,
+   "text": "Une clause défavorable passe vite inaperçue. Et une fois signée, elle est plus difficile à négocier.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.88,
+   "end": 29.23,
+   "text": "Deux repères : la période d’essai ne dépasse pas trois mois. Et une non-concurrence n’est valable que si elle est écrite, et si vous avez accès à la clientèle ou à des secrets d’affaires.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 30.48,
+   "end": 43.99,
+   "text": "On relit tout le contrat et on signale les points à risque : essai, heures supplémentaires, non-concurrence, mobilité, vacances. Et on compare avec la convention collective, s’il y en a une.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 45.24,
+   "end": 56.86,
+   "text": "Vous recevez les changements à demander avant de signer, avec une formulation polie pour les aborder. Et si vous avez déjà signé, on vous dit quelles clauses sont nulles.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 58.11,
+   "end": 68.48,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre relecture, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 69.73,
+   "end": 81.74,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 82.99,
+   "end": 88.68,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
