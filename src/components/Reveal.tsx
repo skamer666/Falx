@@ -25,7 +25,8 @@ export default function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
+      // threshold 0 : un bloc très long (article, CGV) ne peut jamais être visible à 15 %.
+      { threshold: 0, rootMargin: "0px 0px -40px 0px" },
     );
 
     observer.observe(node);

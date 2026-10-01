@@ -18,6 +18,8 @@ const STRINGS: Record<
     updatedOn: string;
     seeAlso: string;
     dateLocale: string;
+    toc: string;
+    readingTime: (minutes: number) => string;
   }
 > = {
   fr: {
@@ -26,6 +28,8 @@ const STRINGS: Record<
     updatedOn: "Mis à jour le",
     seeAlso: "À lire aussi",
     dateLocale: "fr-CH",
+    toc: "Sommaire",
+    readingTime: (m) => `${m} min de lecture`,
   },
   de: {
     breadcrumbHome: "Startseite",
@@ -33,6 +37,8 @@ const STRINGS: Record<
     updatedOn: "Aktualisiert am",
     seeAlso: "Auch interessant",
     dateLocale: "de-CH",
+    toc: "Inhalt",
+    readingTime: (m) => `${m} Min. Lesezeit`,
   },
   en: {
     breadcrumbHome: "Home",
@@ -40,6 +46,8 @@ const STRINGS: Record<
     updatedOn: "Updated on",
     seeAlso: "Related articles",
     dateLocale: "en-CH",
+    toc: "Contents",
+    readingTime: (m) => `${m} min read`,
   },
   it: {
     breadcrumbHome: "Home",
@@ -47,6 +55,8 @@ const STRINGS: Record<
     updatedOn: "Aggiornato il",
     seeAlso: "Da leggere anche",
     dateLocale: "it-CH",
+    toc: "Indice",
+    readingTime: (m) => `${m} min di lettura`,
   },
 };
 
@@ -54,10 +64,16 @@ export default function GuideLayout({
   article,
   locale,
   children,
+  toc = [],
+  faq = [],
+  wordCount,
 }: {
   article: GuideArticle;
   locale: Locale;
   children: ReactNode;
+  toc?: { id: string; text: string }[];
+  faq?: { question: string; answer: string }[];
+  wordCount?: number;
 }) {
   const t = STRINGS[locale];
   const related = getRelatedArticles(article.slug);
@@ -82,31 +98,52 @@ export default function GuideLayout({
     ],
   };
 
+  const url = `${SITE_URL}/${locale}/guide/${article.slug}`;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title[locale],
     description: article.description[locale],
+    datePublished: article.publishedAt,
     dateModified: article.updatedAt,
     inLanguage: locale,
+    mainEntityOfPage: url,
+    image: `${SITE_URL}/opengraph-image.png`,
+    ...(wordCount ? { wordCount } : {}),
     author: {
       "@type": "Organization",
       name: "Thrax Legal",
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "Thrax Legal",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
     },
   };
+
+  const faqJsonLd = faq.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
+  const minutes = wordCount ? Math.max(1, Math.round(wordCount / 220)) : null;
 
   return (
     <>
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={articleJsonLd} />
+      {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Nav />
       <main className="bg-bg text-text">
         <section className="theme-light border-b border-border bg-bg pb-16 pt-32 md:pt-40">
-          <Container className="mx-auto max-w-2xl">
+          <Container className="mx-auto max-w-3xl!">
             <Reveal>
               <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-text-muted">
                 <Link href={`/${locale}`} className="hover:text-text">
@@ -132,14 +169,29 @@ export default function GuideLayout({
                   month: "long",
                   year: "numeric",
                 })}
+                {minutes ? ` · ${t.readingTime(minutes)}` : null}
               </p>
             </Reveal>
           </Container>
         </section>
 
         <section className="theme-light bg-bg py-12 md:py-16">
-          <Container className="mx-auto max-w-2xl">
+          <Container className="mx-auto max-w-3xl!">
             <Reveal>
+              {toc.length > 2 ? (
+                <nav aria-label={t.toc} className="mb-10 rounded-2xl border border-border bg-surface p-5">
+                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">{t.toc}</p>
+                  <ol className="mt-3 space-y-1.5 text-sm">
+                    {toc.map((item) => (
+                      <li key={item.id}>
+                        <a href={`#${item.id}`} className="text-text-muted underline-offset-4 hover:text-text hover:underline">
+                          {item.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              ) : null}
               <div className="article-body">{children}</div>
               <GuideCta locale={locale} className="mt-12" />
             </Reveal>
@@ -148,7 +200,7 @@ export default function GuideLayout({
 
         {related.length > 0 ? (
           <section className="theme-light border-t border-border bg-surface py-16">
-            <Container className="mx-auto max-w-2xl">
+            <Container className="mx-auto max-w-3xl!">
               <Reveal>
                 <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">
                   {t.seeAlso}

@@ -6,6 +6,9 @@ export type GuideArticle = {
   /** Titre court utilisé dans les listes et le maillage interne. */
   shortTitle: Record<Locale, string>;
   description: Record<Locale, string>;
+  /** Titre affiché dans Google (≤ 60 caractères environ). */
+  metaTitle?: Record<Locale, string>;
+  publishedAt: string;
   updatedAt: string;
 };
 
@@ -13,10 +16,10 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
   {
     slug: "cgv-suisses-guide",
     title: {
-      fr: "Rédiger ses CGV en Suisse : le guide complet pour indépendants et PME",
-      de: "AGB in der Schweiz erstellen: der vollständige Ratgeber für Selbstständige und KMU",
-      en: "Drafting Swiss T&Cs: the complete guide for freelancers and SMEs",
-      it: "Redigere le condizioni generali in Svizzera: la guida completa per indipendenti e PMI",
+      fr: "CGV en Suisse : le guide complet pour rédiger des conditions générales valables",
+      de: "AGB in der Schweiz: der vollständige Leitfaden für gültige Allgemeine Geschäftsbedingungen",
+      en: "Terms and conditions in Switzerland: the complete guide to drafting valid T&Cs",
+      it: "Condizioni generali in Svizzera: la guida completa per redigerle in modo valido",
     },
     shortTitle: {
       fr: "Rédiger ses CGV",
@@ -25,20 +28,27 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Redigere le condizioni generali",
     },
     description: {
-      fr: "Ce que doivent contenir des CGV suisses valables, les clauses souvent oubliées, et les erreurs qui les rendent inopposables.",
-      de: "Was gültige Schweizer AGB enthalten müssen, häufig vergessene Klauseln, und die Fehler, die sie unwirksam machen.",
-      en: "What valid Swiss T&Cs must contain, commonly forgotten clauses, and the mistakes that make them unenforceable.",
-      it: "Cosa devono contenere condizioni generali svizzere valide, le clausole spesso dimenticate, e gli errori che le rendono inopponibili.",
+      fr: "Comment rédiger des CGV valables en Suisse : clauses essentielles, règle de l’insolite, B2B ou B2C, erreurs fréquentes et checklist.",
+      de: "So erstellen Sie gültige AGB in der Schweiz: wichtige Klauseln, Ungewöhnlichkeitsregel, B2B oder B2C, häufige Fehler und Checkliste.",
+      en: "How to draft valid terms and conditions in Switzerland: key clauses, the unusual-clause rule, B2B vs B2C, common mistakes and a checklist.",
+      it: "Come redigere condizioni generali valide in Svizzera: clausole essenziali, regola dell’insolito, B2B o B2C, errori frequenti e checklist.",
     },
-    updatedAt: "2026-09-29",
+    metaTitle: {
+      fr: "CGV en Suisse : guide complet et checklist | Thrax Legal",
+      de: "AGB in der Schweiz: Leitfaden und Checkliste | Thrax Legal",
+      en: "Swiss terms and conditions: complete guide | Thrax Legal",
+      it: "Condizioni generali in Svizzera: guida completa | Thrax Legal",
+    },
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-10-01",
   },
   {
     slug: "contrat-de-travail-suisse-pme",
     title: {
-      fr: "Contrat de travail en Suisse : ce qu'une PME doit absolument prévoir",
-      de: "Arbeitsvertrag in der Schweiz: was ein KMU unbedingt regeln muss",
-      en: "Employment contracts in Switzerland: what an SME must get right",
-      it: "Contratto di lavoro in Svizzera: cosa una PMI deve assolutamente prevedere",
+      fr: "Contrat de travail en Suisse : le guide complet pour les PME",
+      de: "Arbeitsvertrag in der Schweiz: der vollständige Leitfaden für KMU",
+      en: "Employment contracts in Switzerland: the complete guide for SMEs",
+      it: "Contratto di lavoro in Svizzera: la guida completa per le PMI",
     },
     shortTitle: {
       fr: "Contrat de travail",
@@ -47,20 +57,27 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Contratto di lavoro",
     },
     description: {
-      fr: "Période d'essai, délais de congé, clause de non-concurrence : les clauses qui protègent réellement votre entreprise.",
-      de: "Probezeit, Kündigungsfristen, Konkurrenzverbot: die Klauseln, die Ihr Unternehmen wirklich schützen.",
-      en: "Probation period, notice periods, non-compete clause: the clauses that actually protect your business.",
-      it: "Periodo di prova, termini di disdetta, clausola di non concorrenza: le clausole che proteggono davvero la vostra azienda.",
+      fr: "Période d’essai, délais de congé, heures supplémentaires, maladie, non-concurrence, assurances sociales : ce qu’un contrat de travail suisse doit prévoir.",
+      de: "Probezeit, Kündigungsfristen, Überstunden, Krankheit, Konkurrenzverbot, Sozialversicherungen: was ein Schweizer Arbeitsvertrag regeln muss.",
+      en: "Probation, notice periods, overtime, sick pay, non-compete clauses, social insurance: what a Swiss employment contract must cover.",
+      it: "Periodo di prova, disdetta, ore supplementari, malattia, divieto di concorrenza, assicurazioni sociali: cosa prevedere nel contratto di lavoro.",
     },
-    updatedAt: "2026-09-29",
+    metaTitle: {
+      fr: "Contrat de travail en Suisse : guide PME 2026 | Thrax Legal",
+      de: "Arbeitsvertrag Schweiz: Leitfaden für KMU | Thrax Legal",
+      en: "Swiss employment contracts: SME guide 2026 | Thrax Legal",
+      it: "Contratto di lavoro in Svizzera: guida PMI | Thrax Legal",
+    },
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-10-01",
   },
   {
     slug: "mise-en-demeure-recouvrement-suisse",
     title: {
-      fr: "Facture impayée en Suisse : comment rédiger une mise en demeure efficace",
-      de: "Unbezahlte Rechnung in der Schweiz: wie Sie eine wirksame Mahnung verfassen",
-      en: "Unpaid invoice in Switzerland: how to draft an effective formal notice",
-      it: "Fattura non pagata in Svizzera: come redigere una diffida efficace",
+      fr: "Facture impayée en Suisse : mise en demeure, poursuite et recouvrement étape par étape",
+      de: "Unbezahlte Rechnung in der Schweiz: Mahnung, Betreibung und Inkasso Schritt für Schritt",
+      en: "Unpaid invoice in Switzerland: formal notice, debt collection and recovery step by step",
+      it: "Fattura non pagata in Svizzera: diffida, esecuzione e recupero passo dopo passo",
     },
     shortTitle: {
       fr: "Facture impayée",
@@ -69,34 +86,48 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Fattura non pagata",
     },
     description: {
-      fr: "Les étapes avant la poursuite (LP) : rappel, mise en demeure, et ce qui donne réellement du poids à votre lettre.",
-      de: "Die Schritte vor der Betreibung: Mahnung, Inverzugsetzung, und was Ihrem Schreiben wirklich Gewicht verleiht.",
-      en: "The steps before formal debt collection: reminder, formal notice, and what actually gives your letter weight.",
-      it: "Le tappe prima dell'esecuzione: sollecito, diffida, e ciò che dà davvero peso alla vostra lettera.",
+      fr: "Rappel, mise en demeure, intérêts, poursuite, opposition, mainlevée, prescription : comment récupérer une facture impayée en Suisse, étape par étape.",
+      de: "Mahnung, Verzugszins, Betreibung, Rechtsvorschlag, Rechtsöffnung, Verjährung: so treiben Sie eine unbezahlte Rechnung in der Schweiz ein.",
+      en: "Reminders, formal notice, interest, debt collection, objections, limitation periods: how to recover an unpaid invoice in Switzerland, step by step.",
+      it: "Sollecito, diffida, interessi, esecuzione, opposizione, rigetto, prescrizione: come recuperare una fattura non pagata in Svizzera, passo dopo passo.",
     },
-    updatedAt: "2026-09-29",
+    metaTitle: {
+      fr: "Facture impayée en Suisse : que faire ? | Thrax Legal",
+      de: "Unbezahlte Rechnung in der Schweiz: was tun? | Thrax Legal",
+      en: "Unpaid invoice in Switzerland: what to do | Thrax Legal",
+      it: "Fattura non pagata in Svizzera: cosa fare? | Thrax Legal",
+    },
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-10-01",
   },
   {
     slug: "conformite-nlpd-pme",
     title: {
-      fr: "Conformité nLPD pour PME : ce qui est vraiment obligatoire",
-      de: "DSG-Konformität für KMU: was wirklich obligatorisch ist",
-      en: "FADP compliance for SMEs: what's actually mandatory",
-      it: "Conformità nLPD per PMI: cosa è davvero obbligatorio",
+      fr: "nLPD : ce que votre PME doit vraiment faire (guide et checklist)",
+      de: "Neues DSG: was Ihr KMU wirklich tun muss (Leitfaden und Checkliste)",
+      en: "Swiss FADP: what your SME really needs to do (guide and checklist)",
+      it: "Nuova LPD: cosa deve davvero fare la vostra PMI (guida e checklist)",
     },
     shortTitle: {
       fr: "Conformité nLPD",
       de: "DSG-Konformität",
       en: "FADP compliance",
-      it: "Conformità nLPD",
+      it: "Conformità LPD",
     },
     description: {
-      fr: "Registre des traitements, politique de confidentialité, sous-traitants : le strict nécessaire pour une PME, sans usine à gaz.",
-      de: "Verarbeitungsverzeichnis, Datenschutzerklärung, Auftragsverarbeiter: das absolut Nötige für ein KMU, ohne Überkomplexität.",
-      en: "Records of processing, privacy policy, processors: the strict minimum for an SME, without overengineering.",
-      it: "Registro dei trattamenti, informativa sulla privacy, sub-responsabili: il minimo indispensabile per una PMI, senza complicazioni inutili.",
+      fr: "Politique de confidentialité, sous-traitants, transferts à l’étranger, sécurité, fuites, cookies, IA : les obligations nLPD concrètes pour une PME suisse.",
+      de: "Datenschutzerklärung, Auftragsbearbeiter, Auslandsübermittlung, Sicherheit, Datenpannen, Cookies, KI: die konkreten DSG-Pflichten für Schweizer KMU.",
+      en: "Privacy policy, processors, transfers abroad, security, data breaches, cookies, AI: the practical obligations of the Swiss FADP for SMEs.",
+      it: "Informativa privacy, responsabili del trattamento, trasferimenti all’estero, sicurezza, violazioni, cookie, IA: gli obblighi LPD concreti per le PMI.",
     },
-    updatedAt: "2026-09-29",
+    metaTitle: {
+      fr: "nLPD pour PME : obligations et checklist 2026 | Thrax Legal",
+      de: "Neues DSG für KMU: Pflichten und Checkliste | Thrax Legal",
+      en: "Swiss FADP for SMEs: duties and checklist | Thrax Legal",
+      it: "Nuova LPD per PMI: obblighi e checklist | Thrax Legal",
+    },
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-10-01",
   },
   {
     slug: "bail-commercial-suisse-guide",
@@ -113,12 +144,19 @@ export const GUIDE_ARTICLES: GuideArticle[] = [
       it: "Locazione commerciale",
     },
     description: {
-      fr: "Durée, résiliation anticipée, travaux, sous-location : ce qui distingue un bail commercial équilibré d'un piège.",
-      de: "Dauer, vorzeitige Kündigung, Umbauten, Untermiete: was einen ausgewogenen Geschäftsmietvertrag von einer Falle unterscheidet.",
-      en: "Duration, early termination, works, subletting: what separates a balanced commercial lease from a trap.",
-      it: "Durata, disdetta anticipata, lavori, sublocazione: cosa distingue una locazione commerciale equilibrata da una trappola.",
+      fr: "Durée, loyer indexé ou échelonné, charges, travaux, remise en état, transfert, résiliation : signer un bail commercial en Suisse sans mauvaise surprise.",
+      de: "Dauer, Index- oder Staffelmiete, Nebenkosten, Umbauten, Rückbau, Übertragung, Kündigung: Geschäftsräume in der Schweiz ohne böse Überraschung mieten.",
+      en: "Term, indexed or stepped rent, charges, fit-out works, reinstatement, transfer, termination: signing a Swiss commercial lease without surprises.",
+      it: "Durata, pigione indicizzata o scalare, spese accessorie, lavori, ripristino, trasferimento, disdetta: firmare una locazione commerciale senza sorprese.",
     },
-    updatedAt: "2026-09-29",
+    metaTitle: {
+      fr: "Bail commercial en Suisse : clauses à vérifier | Thrax Legal",
+      de: "Geschäftsmiete Schweiz: Klauseln prüfen | Thrax Legal",
+      en: "Commercial lease in Switzerland: key clauses | Thrax Legal",
+      it: "Locazione commerciale in Svizzera: clausole | Thrax Legal",
+    },
+    publishedAt: "2026-09-29",
+    updatedAt: "2026-10-01",
   },
 ];
 

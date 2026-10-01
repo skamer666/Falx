@@ -124,6 +124,71 @@ body {
   text-underline-offset: 4px;
 }
 
+.article-body .article-note,
+.article-body .article-summary {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1rem 1.25rem;
+}
+
+.article-body .article-note {
+  border-left: 3px solid var(--color-accent);
+}
+
+.article-body .article-note p,
+.article-body .article-summary li {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.article-body .article-summary-title {
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.article-body .article-summary ul {
+  margin-top: 0.75rem;
+}
+
+.article-body .article-table {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.article-body th,
+.article-body td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.article-body th {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.article-body tr:last-child td {
+  border-bottom: 0;
+}
+
 .article-body > *:first-child {
   margin-top: 0;
 }
