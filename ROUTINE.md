@@ -32,8 +32,9 @@ de présentation. La routine ne fait **que** les vidéos de prestations listées
 ```bash
 cd <racine du dépôt cloné>            # le dossier git de la session
 git fetch origin video-studio claude/falx-landing-page-design-zvjcet
-git worktree add -B video-studio /tmp/studio origin/video-studio 2>/dev/null || (cd /tmp/studio && git fetch origin video-studio && git reset --hard origin/video-studio)
+if [ -d /tmp/studio ]; then git -C /tmp/studio fetch origin video-studio && git -C /tmp/studio checkout --detach -f origin/video-studio; else git worktree prune; git worktree add --detach /tmp/studio origin/video-studio; fi
 cd /tmp/studio
+git log --oneline -1   # doit être le dernier commit de origin/video-studio
 git config user.name "Thrax Video Routine"; git config user.email "routine@thrax-legal.ch"
 bash setup.sh                          # doit afficher SETUP OK
 RUN=$(date -u +%Y%m%dT%H%MZ)-$RANDOM
