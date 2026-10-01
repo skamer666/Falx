@@ -5,6 +5,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 
 // À compléter avant mise en production : dénomination sociale exacte,
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
@@ -63,11 +64,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  return {
-    title: META[locale].title,
-    description: META[locale].description,
-    alternates: { canonical: `/${locale}/confidentialite` },
-  };
+  return pageMetadata({ locale, path: "/confidentialite", title: META[locale].title, description: META[locale].description });
 }
 
 function Fr() {

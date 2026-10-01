@@ -6,6 +6,7 @@ import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 
 const STRINGS: Record<
   Locale,
@@ -69,13 +70,7 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = STRINGS[locale];
-  return {
-    title: t.metaTitle,
-    description: t.metaDescription,
-    alternates: {
-      canonical: `/${locale}/guide`,
-    },
-  };
+  return pageMetadata({ locale, path: "/guide", title: t.metaTitle, description: t.metaDescription });
 }
 
 export default async function GuidePage({

@@ -53,6 +53,7 @@ export default function VideoEmbed({
             alt=""
             fill
             sizes="(min-width: 1024px) 900px, 100vw"
+            unoptimized
             className="object-cover"
           />
           <span className="absolute inset-x-0 bottom-[6%] flex flex-col items-center gap-2 sm:bottom-[8%] sm:gap-3">

@@ -4,10 +4,11 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <Image
-        src="/logo/crest-light.png"
+        src="/logo/crest-light-sm.png"
         alt=""
         width={30}
         height={40}
+        unoptimized
         className="h-9 w-auto shrink-0"
       />
       <span className="inline-flex items-baseline gap-1.5">

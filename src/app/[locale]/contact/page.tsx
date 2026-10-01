@@ -5,9 +5,17 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Container, PrimaryButton } from "@/components/site/ui";
 import { Notice } from "@/components/account/ui";
-import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 import LeadForm from "@/components/site/LeadForm";
+
+const CONTACT_DESCRIPTION: Record<Locale, string> = {
+  fr: "Laissez vos coordonnées : nous vous rappelons pour répondre à vos questions sur l'abonnement juridique PME. Gratuit et sans engagement.",
+  de: "Hinterlassen Sie Ihre Kontaktdaten: Wir rufen Sie zurück und beantworten Ihre Fragen zum KMU-Rechtsabo. Kostenlos und unverbindlich.",
+  en: "Leave your details: we'll call you back to answer your questions about the SME legal subscription. Free, no commitment.",
+  it: "Lasciate i vostri recapiti: vi richiamiamo per rispondere alle domande sull'abbonamento legale per PMI. Gratuito e senza impegno.",
+};
 
 export async function generateMetadata({
   params,
@@ -16,10 +24,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  return {
-    title: LEAD_STRINGS[locale].metaTitle,
-    alternates: { canonical: `/${locale}/contact` },
-  };
+  return pageMetadata({ locale, path: "/contact", title: LEAD_STRINGS[locale].metaTitle, description: CONTACT_DESCRIPTION[locale] });
 }
 
 export default async function ContactPage({

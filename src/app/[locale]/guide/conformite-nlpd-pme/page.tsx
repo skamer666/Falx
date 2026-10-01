@@ -4,6 +4,7 @@ import Link from "next/link";
 import GuideLayout from "@/components/site/GuideLayout";
 import { getGuideArticle } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata, seoTitle } from "@/lib/seo";
 
 const article = getGuideArticle("conformite-nlpd-pme")!;
 
@@ -14,11 +15,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  return {
-    title: `${article.title[locale]} | Thrax Legal`,
+  return pageMetadata({
+    locale,
+    path: `/guide/${article.slug}`,
+    title: seoTitle(article.title[locale]),
     description: article.description[locale],
-    alternates: { canonical: `/${locale}/guide/${article.slug}` },
-  };
+  });
 }
 
 function Fr({ locale }: { locale: Locale }) {

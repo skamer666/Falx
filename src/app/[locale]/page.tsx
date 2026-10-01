@@ -11,6 +11,7 @@ import VideoEmbed from "@/components/site/VideoEmbed";
 import JsonLd from "@/components/site/JsonLd";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { Container, PrimaryButton, StepList } from "@/components/site/ui";
 
 type FaqItem = { q: string; a: string };
@@ -237,7 +238,7 @@ const CONTENT: Record<Locale, HomeContent> = {
   de: {
     metaTitle: "KMU-Rechtsabo in der Westschweiz | Thrax Legal",
     metaDescription:
-      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 290/Monat, ohne Vertragsbindung.",
+      "Ihr externer Rechtsberater für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, Verfahren. Fixpreis ab CHF 290/Monat, ohne Bindung.",
     heroTitle: "Ihr externer Rechtsberater, zum Fixpreis.",
     heroSubtitle:
       "Verträge, Streitfälle, Verfahren: Ihr KMU wird betreut, ohne Anwalt nach Stundensatz und ohne Termin.",
@@ -397,7 +398,7 @@ const CONTENT: Record<Locale, HomeContent> = {
   en: {
     metaTitle: "SME legal subscription in French-speaking Switzerland | Thrax Legal",
     metaDescription:
-      "Your outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. Fixed price from CHF 290/month, no commitment.",
+      "Outsourced legal counsel for independents and SMEs in French-speaking Switzerland: contracts, disputes, procedures. From CHF 290/month, no commitment.",
     heroTitle: "Your outsourced legal counsel, at a fixed price.",
     heroSubtitle:
       "Contracts, disputes, procedures: your SME is handled, no hourly lawyer, no appointment.",
@@ -557,7 +558,7 @@ const CONTENT: Record<Locale, HomeContent> = {
   it: {
     metaTitle: "Abbonamento legale per PMI nella Svizzera romanda | Thrax Legal",
     metaDescription:
-      "Il vostro giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 290/mese, senza impegno.",
+      "Giurista esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, procedure. Prezzo fisso da CHF 290/mese, senza impegno.",
     heroTitle: "Il vostro giurista esternalizzato, a prezzo fisso.",
     heroSubtitle:
       "Contratti, controversie, procedure: la vostra PMI è seguita, senza avvocato a ore né appuntamento.",
@@ -814,11 +815,7 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = CONTENT[locale];
-  return {
-    title: t.metaTitle,
-    description: t.metaDescription,
-    alternates: { canonical: `/${locale}` },
-  };
+  return pageMetadata({ locale, path: "", title: t.metaTitle, description: t.metaDescription });
 }
 
 export default async function Home({
@@ -868,10 +865,11 @@ export default async function Home({
         <main className="bg-bg text-text">
           <section className="relative isolate flex min-h-screen flex-col justify-center overflow-hidden border-b border-border">
             <Image
-              src="/media/photos/hero-building.jpg"
+              src="/media/photos/hero-building.webp"
               alt=""
               fill
               priority
+              unoptimized
               sizes="100vw"
               className="object-cover opacity-30 grayscale"
             />
@@ -927,7 +925,7 @@ export default async function Home({
               <Reveal delay={120} className="mx-auto mt-10 max-w-4xl">
                 <VideoEmbed
                   videoId="2A64ZshrWSQ"
-                  poster="/media/video/presentation-poster.jpg"
+                  poster="/media/video/presentation-poster.webp"
                   title={t.videoHeading}
                   playLabel={t.videoPlayLabel}
                 />

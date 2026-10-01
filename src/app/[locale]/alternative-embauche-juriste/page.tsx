@@ -5,6 +5,7 @@ import Footer from "@/components/site/Footer";
 import LeadForm from "@/components/site/LeadForm";
 import { Container, PrimaryButton } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 
 // Page d'arrivée pour les annonces « embaucher un juriste » : comparaison chiffrée et honnête
 // entre un juriste salarié et l'abonnement. Les montants salariaux sont des ordres de grandeur
@@ -40,7 +41,7 @@ type Content = {
 
 const CONTENT: Record<Locale, Content> = {
   fr: {
-    metaTitle: "Embaucher un juriste ou l'externaliser ? Comparatif PME | Thrax Legal",
+    metaTitle: "Embaucher un juriste en PME ou externaliser ? | Thrax Legal",
     metaDescription:
       "Juriste salarié ou juriste externalisé : coût mensuel, délai, engagement. Comparatif pour les PME de Suisse romande, dès 290 CHF/mois sans engagement.",
     eyebrow: "Vous cherchez un juriste ?",
@@ -255,11 +256,7 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = CONTENT[locale];
-  return {
-    title: { absolute: t.metaTitle },
-    description: t.metaDescription,
-    alternates: { canonical: `/${locale}${PATH}` },
-  };
+  return pageMetadata({ locale, path: PATH, title: t.metaTitle, description: t.metaDescription });
 }
 
 export default async function HiringAlternativePage({ params }: { params: Promise<{ locale: string }> }) {

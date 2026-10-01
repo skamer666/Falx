@@ -6,6 +6,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { TERMS_VERSION } from "@/lib/account/legal";
 
 // À compléter avant le premier client : numéro d'entreprise BCE (art. 14) une
@@ -65,11 +66,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  return {
-    title: META[locale].title,
-    description: META[locale].description,
-    alternates: { canonical: `/${locale}/conditions-generales` },
-  };
+  return pageMetadata({ locale, path: "/conditions-generales", title: META[locale].title, description: META[locale].description });
 }
 
 function Fr() {
