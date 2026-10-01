@@ -411,7 +411,7 @@
    "category_name": "Employeurs",
    "name": "Rédaction de certificat de travail",
    "priority": 12,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/certificat-de-travail-employeur",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -434,7 +434,9 @@
       "a": "Deux jours ouvrés, ou 24 heures avec l'option express."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:16:40Z",
+   "run": "20261001T2316Z-32018"
   },
   {
    "slug": "pack-conformite-nlpd",
@@ -443,7 +445,7 @@
    "category_name": "Conformité & société",
    "name": "Pack conformité nLPD",
    "priority": 13,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/pack-conformite-nlpd",
    "guide": "https://thrax-legal.ch/fr/guide/conformite-nlpd-pme",
    "content": {
@@ -467,7 +469,9 @@
       "a": "S'il s'applique à vous, nous l'intégrons dans les documents."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:16:40Z",
+   "run": "20261001T2316Z-32018"
   },
   {
    "slug": "analyse-certificat-de-travail",
@@ -476,7 +480,7 @@
    "category_name": "Travail",
    "name": "Analyse de certificat de travail",
    "priority": 14,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/analyse-certificat-de-travail",
    "guide": null,
    "content": {
@@ -500,7 +504,9 @@
       "a": "Vous pouvez passer à la demande de rectification : le prix de l'analyse est alors déduit si vous commandez dans les 30 jours."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:16:40Z",
+   "run": "20261001T2316Z-32018"
   },
   {
    "slug": "relecture-contrat-de-travail",
@@ -509,7 +515,7 @@
    "category_name": "Travail",
    "name": "Relecture de contrat de travail",
    "priority": 15,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/relecture-contrat-de-travail",
    "guide": null,
    "content": {
@@ -533,7 +539,9 @@
       "a": "La relecture reste utile : certaines clauses sont nulles même signées. Nous vous disons lesquelles."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:16:40Z",
+   "run": "20261001T2316Z-32018"
   },
   {
    "slug": "salaire-impaye",
@@ -542,7 +550,7 @@
    "category_name": "Travail",
    "name": "Salaire, heures sup ou vacances impayés",
    "priority": 16,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/salaire-impaye",
    "guide": null,
    "content": {
@@ -566,7 +574,9 @@
       "a": "Vous pouvez saisir l'autorité de conciliation. Nous pouvons rédiger la requête : c'est la prestation « Requête de conciliation (travail) »."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-01T23:16:40Z",
+   "run": "20261001T2316Z-32018"
   },
   {
    "slug": "lettre-de-demission",
