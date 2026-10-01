@@ -207,7 +207,7 @@ Grundsätzlich einen Monat, durch schriftliche Vereinbarung höchstens drei Mona
 
 ## Arbeitsverträge prüfen oder erstellen lassen
 
-Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Beratung für Ihre Situation. Die Erstellung eines Arbeitsvertrags oder Personalreglements und die Begleitung einer Kündigung gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. Sie überlegen, einen Juristen anzustellen oder auszulagern? Lesen Sie unseren [Vergleich Anstellung oder Auslagerung](/de/alternative-embauche-juriste), [sehen Sie sich die Formeln an](/de/#offre) oder [fordern Sie einen Rückruf an](/de/contact).
+Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Beratung für Ihre Situation. Die Erstellung eines Arbeitsvertrags oder Personalreglements und die Begleitung einer Kündigung gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. Sie überlegen, einen Juristen anzustellen oder auszulagern? Lesen Sie unseren [Vergleich Anstellung oder Auslagerung](/de/alternative-embauche-juriste), [sehen Sie sich die Formeln an](/de/entreprises#abonnement) oder [fordern Sie einen Rückruf an](/de/contact).
 `;
 
 export default content;

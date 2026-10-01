@@ -177,7 +177,7 @@ La poursuite suisse suppose en principe un domicile ou un siège en Suisse (ou d
 
 ## Besoin d’aide pour récupérer une facture ?
 
-Ce guide présente des principes généraux et ne remplace pas un conseil adapté à votre dossier. La rédaction d’une mise en demeure, l’accompagnement d’une poursuite ou la négociation d’un plan de paiement font partie des dossiers couverts par l’abonnement Thrax Legal. [Voir les formules](/fr/#offre) ou [être rappelé gratuitement](/fr/contact).
+Ce guide présente des principes généraux et ne remplace pas un conseil adapté à votre dossier. La rédaction d’une mise en demeure, l’accompagnement d’une poursuite ou la négociation d’un plan de paiement font partie des dossiers couverts par l’abonnement Thrax Legal. [Voir les formules](/fr/entreprises#abonnement) ou [être rappelé gratuitement](/fr/contact).
 `;
 
 export default content;

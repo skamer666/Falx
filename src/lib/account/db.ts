@@ -594,6 +594,9 @@ export async function createLead(input: {
   planInterest: Plan | null;
   locale: Locale;
   source?: string | null;
+  service?: string | null;
+  express?: boolean;
+  deadline?: string | null;
 }): Promise<Lead> {
   const lead: Lead = {
     id: newId(),
@@ -610,12 +613,15 @@ export async function createLead(input: {
     created_at: Date.now(),
     contacted_at: null,
     source: input.source ?? null,
+    service: input.service ?? null,
+    express: input.express ? 1 : 0,
+    deadline: input.deadline ?? null,
   };
   await (await db())
     .prepare(
-      "INSERT INTO leads (id, name, email, phone, company, message, plan_interest, locale, status, notes, privacy_consent_at, created_at, contacted_at, source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'nouveau', NULL, ?, ?, NULL, ?)",
+      "INSERT INTO leads (id, name, email, phone, company, message, plan_interest, locale, status, notes, privacy_consent_at, created_at, contacted_at, source, service, express, deadline) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'nouveau', NULL, ?, ?, NULL, ?, ?, ?, ?)",
     )
-    .bind(lead.id, lead.name, lead.email, lead.phone, lead.company, lead.message, lead.plan_interest, lead.locale, lead.privacy_consent_at, lead.created_at, lead.source)
+    .bind(lead.id, lead.name, lead.email, lead.phone, lead.company, lead.message, lead.plan_interest, lead.locale, lead.privacy_consent_at, lead.created_at, lead.source, lead.service, lead.express, lead.deadline)
     .run();
   return lead;
 }
@@ -629,8 +635,8 @@ export async function listLeads(filter: { status?: LeadStatus; q?: string } = {}
   }
   if (filter.q) {
     const like = `%${filter.q.replace(/[%_]/g, " ").trim()}%`;
-    where.push("(name LIKE ? OR email LIKE ? OR COALESCE(company, '') LIKE ? OR COALESCE(message, '') LIKE ?)");
-    params.push(like, like, like, like);
+    where.push("(name LIKE ? OR email LIKE ? OR COALESCE(company, '') LIKE ? OR COALESCE(message, '') LIKE ? OR COALESCE(service, '') LIKE ?)");
+    params.push(like, like, like, like, like);
   }
   const { results } = await (await db())
     .prepare(`SELECT * FROM leads ${where.length ? `WHERE ${where.join(" AND ")}` : ""} ORDER BY CASE status WHEN 'nouveau' THEN 0 WHEN 'contacte' THEN 1 ELSE 2 END, created_at DESC LIMIT 300`)

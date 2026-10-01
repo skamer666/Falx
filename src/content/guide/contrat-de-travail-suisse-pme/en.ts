@@ -207,7 +207,7 @@ One month by default, up to three months by written agreement. It is extended in
 
 ## Have your employment contracts reviewed or drafted
 
-This guide sets out general principles and does not replace advice tailored to your situation. Drafting an employment contract or staff regulations, or handling a dismissal, are among the matters covered by the Thrax Legal subscription. Weighing up hiring in-house counsel versus outsourcing? Read our [hiring vs outsourcing comparison](/en/alternative-embauche-juriste), [see the plans](/en/#offre) or [request a call back](/en/contact).
+This guide sets out general principles and does not replace advice tailored to your situation. Drafting an employment contract or staff regulations, or handling a dismissal, are among the matters covered by the Thrax Legal subscription. Weighing up hiring in-house counsel versus outsourcing? Read our [hiring vs outsourcing comparison](/en/alternative-embauche-juriste), [see the plans](/en/entreprises#abonnement) or [request a call back](/en/contact).
 `;
 
 export default content;

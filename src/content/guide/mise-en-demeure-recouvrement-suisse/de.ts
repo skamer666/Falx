@@ -177,7 +177,7 @@ Die Schweizer Betreibung setzt grundsätzlich einen Wohnsitz oder Sitz in der Sc
 
 ## Hilfe beim Eintreiben einer Rechnung?
 
-Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Beratung für Ihr Dossier. Das Verfassen einer Mahnung, die Begleitung einer Betreibung oder das Aushandeln einer Abzahlungsvereinbarung gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. [Formeln ansehen](/de/#offre) oder [kostenlosen Rückruf anfordern](/de/contact).
+Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Beratung für Ihr Dossier. Das Verfassen einer Mahnung, die Begleitung einer Betreibung oder das Aushandeln einer Abzahlungsvereinbarung gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. [Formeln ansehen](/de/entreprises#abonnement) oder [kostenlosen Rückruf anfordern](/de/contact).
 `;
 
 export default content;

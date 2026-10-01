@@ -3,11 +3,12 @@ import type { Locale } from "./config";
 export const dictionary = {
   fr: {
     nav: {
-      pricing: "Formules",
+      particuliers: "Particuliers",
+      entreprises: "Entreprises",
       guide: "Guide",
       faq: "FAQ",
       login: "Connexion",
-      diagnosticCta: "Voir les formules",
+      diagnosticCta: "Être rappelé",
       home: "Thrax Legal, accueil",
       menuOpen: "Ouvrir le menu",
       menuClose: "Fermer le menu",
@@ -15,16 +16,17 @@ export const dictionary = {
       menuCloseLabel: "Fermer",
     },
     footer: {
-      tagline: "Votre service juridique externalisé, à prix fixe.",
+      tagline: "Le juridique à prix fixe, jamais à l'heure.",
       description:
-        "Thrax Legal s'occupe des besoins juridiques de votre indépendance ou PME : rédaction de contrats, résolution de litiges, conformité nLPD. Sans avocat à l'heure, sans rendez-vous.",
+        "Lettres, contrats, litiges, démarches : pour les particuliers comme pour les indépendants et PME de Suisse romande. Le prix est fixé avant de commencer.",
       contact: "Nous contacter",
       hours: "Horaires",
       hoursValue: "Lundi à vendredi",
       hoursValue2: "09:00 à 18:00",
       menu: "Menu",
       home: "Accueil",
-      diagnostic: "Formules",
+      particuliers: "Particuliers",
+      entreprises: "Entreprises",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -37,11 +39,12 @@ export const dictionary = {
   },
   de: {
     nav: {
-      pricing: "Formeln",
+      particuliers: "Privatpersonen",
+      entreprises: "Unternehmen",
       guide: "Ratgeber",
       faq: "FAQ",
       login: "Anmelden",
-      diagnosticCta: "Formeln ansehen",
+      diagnosticCta: "Rückruf anfordern",
       home: "Thrax Legal, Startseite",
       menuOpen: "Menü öffnen",
       menuClose: "Menü schliessen",
@@ -49,16 +52,17 @@ export const dictionary = {
       menuCloseLabel: "Schliessen",
     },
     footer: {
-      tagline: "Ihr externer Rechtsdienst, zum Fixpreis.",
+      tagline: "Rechtliches zum Fixpreis, nie nach Stunden.",
       description:
-        "Thrax Legal kümmert sich um die rechtlichen Bedürfnisse Ihrer Selbstständigkeit oder Ihres KMU: Vertragserstellung, Streitfalllösung, DSG-Konformität. Ohne Anwalt nach Stundensatz, ohne Termin.",
+        "Briefe, Verträge, Streitfälle, Verfahren: für Privatpersonen wie für Selbstständige und KMU in der Westschweiz. Der Preis steht vor Beginn fest.",
       contact: "Kontakt",
       hours: "Öffnungszeiten",
       hoursValue: "Montag bis Freitag",
       hoursValue2: "09:00 bis 18:00 Uhr",
       menu: "Menü",
       home: "Startseite",
-      diagnostic: "Formeln",
+      particuliers: "Privatpersonen",
+      entreprises: "Unternehmen",
       guide: "Ratgeber",
       faq: "FAQ",
       disclaimer:
@@ -71,11 +75,12 @@ export const dictionary = {
   },
   en: {
     nav: {
-      pricing: "Plans",
+      particuliers: "Individuals",
+      entreprises: "Businesses",
       guide: "Guide",
       faq: "FAQ",
       login: "Log in",
-      diagnosticCta: "See the plans",
+      diagnosticCta: "Request a call back",
       home: "Thrax Legal, home",
       menuOpen: "Open menu",
       menuClose: "Close menu",
@@ -83,16 +88,17 @@ export const dictionary = {
       menuCloseLabel: "Close",
     },
     footer: {
-      tagline: "Your outsourced legal service, at a fixed price.",
+      tagline: "Legal help at a fixed price, never by the hour.",
       description:
-        "Thrax Legal handles the legal needs of your independent business or SME: contract drafting, dispute resolution, FADP compliance. No hourly lawyer, no appointment.",
+        "Letters, contracts, disputes, procedures: for individuals as well as freelancers and SMEs in French-speaking Switzerland. The price is set before we start.",
       contact: "Contact us",
       hours: "Hours",
       hoursValue: "Monday to Friday",
       hoursValue2: "9:00 am to 6:00 pm",
       menu: "Menu",
       home: "Home",
-      diagnostic: "Plans",
+      particuliers: "Individuals",
+      entreprises: "Businesses",
       guide: "Guide",
       faq: "FAQ",
       disclaimer:
@@ -105,11 +111,12 @@ export const dictionary = {
   },
   it: {
     nav: {
-      pricing: "Formule",
+      particuliers: "Privati",
+      entreprises: "Imprese",
       guide: "Guida",
       faq: "FAQ",
       login: "Accedi",
-      diagnosticCta: "Vedere le formule",
+      diagnosticCta: "Essere richiamati",
       home: "Thrax Legal, home",
       menuOpen: "Apri il menu",
       menuClose: "Chiudi il menu",
@@ -117,16 +124,17 @@ export const dictionary = {
       menuCloseLabel: "Chiudi",
     },
     footer: {
-      tagline: "Il vostro servizio giuridico esternalizzato, a prezzo fisso.",
+      tagline: "Il giuridico a prezzo fisso, mai a ore.",
       description:
-        "Thrax Legal si occupa delle esigenze legali della vostra attività indipendente o PMI: redazione di contratti, risoluzione di controversie, conformità nLPD. Senza avvocato a ore, senza appuntamento.",
+        "Lettere, contratti, controversie, pratiche: per i privati come per indipendenti e PMI della Svizzera romanda. Il prezzo è fissato prima di iniziare.",
       contact: "Contattaci",
       hours: "Orari",
       hoursValue: "Lunedì a venerdì",
       hoursValue2: "09:00 - 18:00",
       menu: "Menu",
       home: "Home",
-      diagnostic: "Formule",
+      particuliers: "Privati",
+      entreprises: "Imprese",
       guide: "Guida",
       faq: "FAQ",
       disclaimer:

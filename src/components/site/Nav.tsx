@@ -17,9 +17,9 @@ export default function Nav() {
   const t = getDictionary(locale).nav;
 
   const LINKS = [
-    { href: `/${locale}/#offre`, label: t.pricing },
+    { href: `/${locale}/particuliers`, label: t.particuliers },
+    { href: `/${locale}/entreprises`, label: t.entreprises },
     { href: `/${locale}/guide`, label: t.guide },
-    { href: `/${locale}/#contact`, label: t.faq },
   ];
 
   return (
@@ -62,7 +62,7 @@ export default function Nav() {
             {t.login}
           </Link>
           <div className="hidden sm:block">
-            <PrimaryButton href={`/${locale}/#offre`} className="px-5 py-2.5">
+            <PrimaryButton href={`/${locale}/contact`} className="px-5 py-2.5">
               {t.diagnosticCta}
             </PrimaryButton>
           </div>

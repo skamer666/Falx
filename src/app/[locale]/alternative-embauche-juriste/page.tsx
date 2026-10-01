@@ -281,7 +281,7 @@ export default async function HiringAlternativePage({ params }: { params: Promis
                   {t.primaryCta}
                 </PrimaryButton>
                 <a
-                  href={`/${locale}/#offre`}
+                  href={`/${locale}/entreprises#abonnement`}
                   className="inline-flex items-center justify-center rounded-full border border-text/50 px-6 py-3 text-sm font-semibold text-text transition-colors duration-200 hover:bg-text hover:text-bg"
                 >
                   {t.secondaryCta}

@@ -88,6 +88,12 @@ export type Lead = {
   contacted_at: number | null;
   /** Provenance de la visite (annonce, lien, direct…). */
   source: string | null;
+  /** Commande à l'acte : slug de la prestation (null pour une simple demande de rappel). */
+  service: string | null;
+  /** Option express 24 h demandée (0/1). */
+  express: number;
+  /** Date limite signalée par le client (texte libre, AAAA-MM-JJ en pratique). */
+  deadline: string | null;
 };
 
 export type Payment = {

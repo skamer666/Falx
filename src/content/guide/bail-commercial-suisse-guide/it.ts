@@ -160,7 +160,7 @@ Segnalate il difetto per scritto fissando un termine ragionevole. Senza reazione
 
 ## Far verificare la locazione prima di firmare
 
-Questa guida presenta principi generali e non sostituisce l’analisi del vostro contratto. La verifica di una locazione commerciale, la negoziazione delle clausole sui lavori o la contestazione di una pigione rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. [Vedere le formule](/it/#offre) o [essere richiamati gratuitamente](/it/contact).
+Questa guida presenta principi generali e non sostituisce l’analisi del vostro contratto. La verifica di una locazione commerciale, la negoziazione delle clausole sui lavori o la contestazione di una pigione rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. [Vedere le formule](/it/entreprises#abonnement) o [essere richiamati gratuitamente](/it/contact).
 `;
 
 export default content;

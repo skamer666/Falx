@@ -16,17 +16,17 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 const TITLES: Record<Locale, string> = {
-  fr: "Abonnement juridique PME, dès 290 CHF/mois | Thrax Legal",
-  de: "KMU-Rechtsabo ab CHF 290/Monat | Thrax Legal",
-  en: "SME legal subscription from CHF 290/month | Thrax Legal",
-  it: "Abbonamento legale PMI da CHF 290/mese | Thrax Legal",
+  fr: "Thrax Legal | Le juridique à prix fixe, Suisse romande",
+  de: "Thrax Legal | Rechtliches zum Fixpreis, Westschweiz",
+  en: "Thrax Legal | Fixed-price legal help, French-speaking Switzerland",
+  it: "Thrax Legal | Il giuridico a prezzo fisso, Svizzera romanda",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  fr: "Service juridique externalisé pour indépendants et PME de Suisse romande : contrats, litiges, conformité nLPD. Prix fixe dès 290 CHF/mois, sans engagement.",
-  de: "Externer Rechtsdienst für Selbstständige und KMU in der Westschweiz: Verträge, Streitfälle, DSG-Konformität. Fixpreis ab CHF 290/Monat, ohne Bindung.",
-  en: "Outsourced legal service for independents and SMEs in French-speaking Switzerland: contracts, disputes, FADP compliance. From CHF 290/month, no commitment.",
-  it: "Servizio giuridico esternalizzato per indipendenti e PMI della Svizzera romanda: contratti, controversie, conformità nLPD. Da CHF 290/mese, senza impegno.",
+  fr: "Lettres, contrats, litiges, démarches : particuliers et entreprises de Suisse romande, un prix fixe annoncé avant de commencer. Dès 49 CHF.",
+  de: "Briefe, Verträge, Streitfälle, Verfahren: für Privatpersonen und Unternehmen in der Westschweiz, Fixpreis vor Beginn. Ab CHF 49.",
+  en: "Letters, contracts, disputes, procedures: for individuals and businesses in French-speaking Switzerland, a fixed price before we start. From CHF 49.",
+  it: "Lettere, contratti, controversie, pratiche: per privati e imprese della Svizzera romanda, un prezzo fisso prima di iniziare. Da CHF 49.",
 };
 
 const OG_LOCALE: Record<Locale, string> = {
@@ -87,7 +87,7 @@ function organizationJsonLd(locale: Locale) {
     email: "hey@thrax-legal.ch",
     logo: `${SITE_URL}/icon.png`,
     availableLanguage: ["fr", "de", "en", "it"],
-    priceRange: "CHF 290 - CHF 690 / mois",
+    priceRange: "CHF 49 - CHF 890",
   };
 }
 

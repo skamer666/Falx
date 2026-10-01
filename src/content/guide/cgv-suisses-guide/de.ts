@@ -177,7 +177,7 @@ Sie können gelten, wenn der Kunde die Vertragssprache versteht oder akzeptiert 
 
 ## AGB, die zu Ihrer Tätigkeit passen
 
-Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine individuelle Beratung. Die Erstellung oder Überprüfung Ihrer AGB gehört zu den Anliegen, die das Thrax-Legal-Abo abdeckt: Wir analysieren Ihre Tätigkeit, erstellen AGB nach Schweizer Recht und erklären Ihnen jede Klausel. [Formeln ansehen](/de/#offre) oder [kostenlosen Rückruf anfordern](/de/contact).
+Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine individuelle Beratung. Die Erstellung oder Überprüfung Ihrer AGB gehört zu den Anliegen, die das Thrax-Legal-Abo abdeckt: Wir analysieren Ihre Tätigkeit, erstellen AGB nach Schweizer Recht und erklären Ihnen jede Klausel. [Formeln ansehen](/de/entreprises#abonnement) oder [kostenlosen Rückruf anfordern](/de/contact).
 `;
 
 export default content;

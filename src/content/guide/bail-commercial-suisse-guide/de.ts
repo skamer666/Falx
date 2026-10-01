@@ -160,7 +160,7 @@ Melden Sie den Mangel schriftlich und setzen Sie eine angemessene Frist. Ohne Re
 
 ## Ihren Mietvertrag vor der Unterschrift prüfen lassen
 
-Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Prüfung Ihres Vertrags. Die Prüfung eines Geschäftsmietvertrags, die Verhandlung der Klauseln zu Ausbauarbeiten oder die Anfechtung eines Mietzinses gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. [Formeln ansehen](/de/#offre) oder [kostenlosen Rückruf anfordern](/de/contact).
+Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Prüfung Ihres Vertrags. Die Prüfung eines Geschäftsmietvertrags, die Verhandlung der Klauseln zu Ausbauarbeiten oder die Anfechtung eines Mietzinses gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. [Formeln ansehen](/de/entreprises#abonnement) oder [kostenlosen Rückruf anfordern](/de/contact).
 `;
 
 export default content;

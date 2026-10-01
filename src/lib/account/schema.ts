@@ -145,7 +145,12 @@ const COLUMNS: Record<string, [string, string][]> = {
     ["signup_source", "TEXT"],
     ["updated_at", "INTEGER"],
   ],
-  leads: [["source", "TEXT"]],
+  leads: [
+    ["source", "TEXT"],
+    ["service", "TEXT"],
+    ["express", "INTEGER NOT NULL DEFAULT 0"],
+    ["deadline", "TEXT"],
+  ],
   dossiers: [
     ["kind", "TEXT NOT NULL DEFAULT 'dossier'"],
     ["units", "INTEGER NOT NULL DEFAULT 1"],

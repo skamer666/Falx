@@ -207,7 +207,7 @@ Un mois par défaut, jusqu’à trois mois au maximum par accord écrit. Elle es
 
 ## Faire relire ou rédiger vos contrats de travail
 
-Ce guide présente des principes généraux et ne remplace pas un conseil adapté à votre situation. La rédaction d’un contrat de travail, d’un règlement du personnel ou la gestion d’un licenciement font partie des dossiers couverts par l’abonnement Thrax Legal. Vous hésitez entre embaucher un juriste et externaliser ? Lisez notre [comparatif embauche ou externalisation](/fr/alternative-embauche-juriste), [voyez les formules](/fr/#offre) ou [demandez à être rappelé](/fr/contact).
+Ce guide présente des principes généraux et ne remplace pas un conseil adapté à votre situation. La rédaction d’un contrat de travail, d’un règlement du personnel ou la gestion d’un licenciement font partie des dossiers couverts par l’abonnement Thrax Legal. Vous hésitez entre embaucher un juriste et externaliser ? Lisez notre [comparatif embauche ou externalisation](/fr/alternative-embauche-juriste), [voyez les formules](/fr/entreprises#abonnement) ou [demandez à être rappelé](/fr/contact).
 `;
 
 export default content;

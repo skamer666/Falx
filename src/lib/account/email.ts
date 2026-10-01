@@ -5,6 +5,8 @@ import { PLAN_LABEL } from "./strings";
 import { formatChf, PLAN_PRICE_RAPPEN, type Lead, type Plan } from "./model";
 import { adminEmails, readEnv } from "./db";
 import { logAudit } from "./admin-db";
+import { EXPRESS_PRICE, getService, serviceText } from "@/lib/services/catalog";
+import { priceLabel, vatLabel } from "@/lib/services/strings";
 
 const FROM = "Thrax Legal <hey@thrax-legal.ch>";
 import { CONTACT_EMAIL } from "./contact";
@@ -448,6 +450,86 @@ export async function notifyAdminOfLead(lead: Lead) {
     footer: "Notification automatique Thrax Legal.",
   });
   await sendEmail(await adminEmails(), `Nouveau prospect à rappeler : ${lead.name}`, html, lead.email);
+}
+
+// ---------------------------------------------------------------------------
+// Commandes à l'acte (fiches prestations)
+// ---------------------------------------------------------------------------
+
+const ORDER_RECEIVED: Record<Locale, { subject: string; heading: string; body: (name: string, service: string, price: string) => string; footer: string }> = {
+  fr: {
+    subject: "Nous avons bien reçu votre commande",
+    heading: "Merci, votre demande est bien reçue",
+    body: (name, service, price) =>
+      `Bonjour ${name},<br/><br/>Nous avons bien reçu votre demande pour <strong>${service}</strong> (${price}).<br/><br/>Nous vérifions que la prestation convient à votre situation et vous confirmons le prix et le délai par email, en principe sous 1 jour ouvré, avec les instructions de paiement. Vous ne payez rien avant cette confirmation.<br/><br/>Vous pouvez déjà répondre à cet email pour nous envoyer vos documents.`,
+    footer: "Thrax Legal n’est pas un cabinet d’avocats. Vous pouvez répondre directement à cet email.",
+  },
+  de: {
+    subject: "Wir haben Ihre Bestellung erhalten",
+    heading: "Danke, Ihre Anfrage ist eingegangen",
+    body: (name, service, price) =>
+      `Guten Tag ${name}<br/><br/>Wir haben Ihre Anfrage für <strong>${service}</strong> (${price}) erhalten.<br/><br/>Wir prüfen, ob die Leistung zu Ihrer Situation passt, und bestätigen Ihnen Preis und Frist per E-Mail, in der Regel innert 1 Arbeitstag, mit den Zahlungsangaben. Vor dieser Bestätigung bezahlen Sie nichts.<br/><br/>Sie können Ihre Unterlagen bereits als Antwort auf diese E-Mail senden.`,
+    footer: "Thrax Legal ist keine Anwaltskanzlei. Sie können direkt auf diese E-Mail antworten.",
+  },
+  en: {
+    subject: "We've received your order",
+    heading: "Thank you, your request has been received",
+    body: (name, service, price) =>
+      `Hello ${name},<br/><br/>We have received your request for <strong>${service}</strong> (${price}).<br/><br/>We check that the service fits your situation and confirm the price and timing by email, usually within 1 working day, with payment details. You pay nothing before this confirmation.<br/><br/>You can already reply to this email to send us your documents.`,
+    footer: "Thrax Legal is not a law firm. You can reply directly to this email.",
+  },
+  it: {
+    subject: "Abbiamo ricevuto il vostro ordine",
+    heading: "Grazie, la vostra richiesta è stata ricevuta",
+    body: (name, service, price) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo ricevuto la vostra richiesta per <strong>${service}</strong> (${price}).<br/><br/>Verifichiamo che la prestazione sia adatta alla vostra situazione e vi confermiamo prezzo e termine per email, di regola entro 1 giorno lavorativo, con le istruzioni di pagamento. Non pagate nulla prima di questa conferma.<br/><br/>Potete già rispondere a questa email per inviarci i documenti.`,
+    footer: "Thrax Legal non è uno studio legale. Potete rispondere direttamente a questa email.",
+  },
+};
+
+function orderSummary(lead: Lead, locale: Locale): { name: string; price: string } | null {
+  const service = lead.service ? getService(lead.service) : undefined;
+  if (!service) return null;
+  const base = `${priceLabel(locale, service.price, service.from)} ${vatLabel(locale, service.audience)}`;
+  const price = lead.express ? `${base} + express ${priceLabel(locale, EXPRESS_PRICE)}` : base;
+  return { name: serviceText(locale, service.slug).name, price };
+}
+
+export async function sendOrderReceivedEmail(lead: Lead) {
+  const t = ORDER_RECEIVED[lead.locale];
+  const summary = orderSummary(lead, lead.locale);
+  if (!summary) return;
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name), escapeHtml(summary.name), escapeHtml(summary.price)),
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
+}
+
+export async function notifyAdminOfOrder(lead: Lead) {
+  const summary = orderSummary(lead, "fr");
+  const service = lead.service ? getService(lead.service) : undefined;
+  const lines = [
+    summary ? `<strong>${escapeHtml(summary.name)}</strong> · ${escapeHtml(summary.price)}` : null,
+    service ? `Public : ${service.audience === "particuliers" ? "particulier" : "entreprise"}` : null,
+    lead.deadline ? `Date limite signalée : ${escapeHtml(lead.deadline)}` : null,
+    `<br/><strong>${escapeHtml(lead.name)}</strong>${lead.company ? ` (${escapeHtml(lead.company)})` : ""}`,
+    escapeHtml(lead.email),
+    lead.phone ? `Tél. ${escapeHtml(lead.phone)}` : "Pas de téléphone",
+    `Langue : ${lead.locale.toUpperCase()} · Provenance : ${lead.source ? escapeHtml(lead.source) : "inconnue"}`,
+    lead.message ? `<br/>${escapeHtml(lead.message).replace(/\n/g, "<br/>")}` : null,
+    "<br/>À faire : vérifier les conflits d’intérêts, confirmer le prix et le délai, envoyer les instructions de paiement.",
+  ].filter(Boolean);
+  const html = wrapEmailHtml({
+    heading: lead.express ? "Nouvelle commande EXPRESS" : "Nouvelle commande",
+    bodyHtml: lines.join("<br/>"),
+    ctaLabel: "Ouvrir les prospects",
+    ctaUrl: `${SITE_URL}/fr/admin/prospects`,
+    footer: "Notification automatique Thrax Legal.",
+  });
+  const subject = `${lead.express ? "[EXPRESS] " : ""}Commande : ${summary?.name ?? lead.service} · ${lead.name}`;
+  await sendEmail(await adminEmails(), subject, html, lead.email);
 }
 
 const SIGNUP_INVITE: Record<Locale, { subject: string; heading: string; body: (name: string) => string; cta: string; footer: string }> = {

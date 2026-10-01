@@ -17,9 +17,9 @@ export default function MobileNav() {
   const t = getDictionary(locale).nav;
 
   const LINKS = [
-    { href: `/${locale}/#offre`, label: t.pricing },
+    { href: `/${locale}/particuliers`, label: t.particuliers },
+    { href: `/${locale}/entreprises`, label: t.entreprises },
     { href: `/${locale}/guide`, label: t.guide },
-    { href: `/${locale}/#contact`, label: t.faq },
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function MobileNav() {
             {t.login}
           </Link>
           <PrimaryButton
-            href={`/${locale}/#offre`}
+            href={`/${locale}/contact`}
             className="mt-2 w-full"
             onClick={() => setOpen(false)}
           >

@@ -177,7 +177,7 @@ Swiss debt collection generally requires a domicile or registered office in Swit
 
 ## Need help recovering an invoice?
 
-This guide sets out general principles and does not replace advice on your specific case. Drafting a formal notice, supporting debt collection proceedings or negotiating a payment plan are among the matters covered by the Thrax Legal subscription. [See the plans](/en/#offre) or [request a free call back](/en/contact).
+This guide sets out general principles and does not replace advice on your specific case. Drafting a formal notice, supporting debt collection proceedings or negotiating a payment plan are among the matters covered by the Thrax Legal subscription. [See the plans](/en/entreprises#abonnement) or [request a free call back](/en/contact).
 `;
 
 export default content;

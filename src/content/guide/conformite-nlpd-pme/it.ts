@@ -155,7 +155,7 @@ In pratica, il rischio principale viene da un incidente (fuga di dati, attacco i
 
 ## Mettersi in regola senza perdere settimane
 
-Questa guida presenta principi generali e non sostituisce un’analisi dei vostri trattamenti. La redazione dell’informativa sulla protezione dei dati, la verifica dei contratti con i responsabili del trattamento o una procedura in caso di fuga di dati rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. Pensate anche ad aggiornare le vostre [condizioni generali](/it/guide/cgv-suisses-guide) e i vostri [contratti di lavoro](/it/guide/contrat-de-travail-suisse-pme). [Vedere le formule](/it/#offre) o [essere richiamati gratuitamente](/it/contact).
+Questa guida presenta principi generali e non sostituisce un’analisi dei vostri trattamenti. La redazione dell’informativa sulla protezione dei dati, la verifica dei contratti con i responsabili del trattamento o una procedura in caso di fuga di dati rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. Pensate anche ad aggiornare le vostre [condizioni generali](/it/guide/cgv-suisses-guide) e i vostri [contratti di lavoro](/it/guide/contrat-de-travail-suisse-pme). [Vedere le formule](/it/entreprises#abonnement) o [essere richiamati gratuitamente](/it/contact).
 `;
 
 export default content;

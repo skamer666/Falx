@@ -207,7 +207,7 @@ Un mese di regola, fino a tre mesi con accordo scritto. È prolungato in caso di
 
 ## Far verificare o redigere i vostri contratti di lavoro
 
-Questa guida presenta principi generali e non sostituisce una consulenza adatta alla vostra situazione. La redazione di un contratto di lavoro o di un regolamento del personale e la gestione di una disdetta rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. State valutando se assumere un giurista o esternalizzare? Leggete il nostro [confronto tra assunzione ed esternalizzazione](/it/alternative-embauche-juriste), [vedete le formule](/it/#offre) o [chiedete di essere richiamati](/it/contact).
+Questa guida presenta principi generali e non sostituisce una consulenza adatta alla vostra situazione. La redazione di un contratto di lavoro o di un regolamento del personale e la gestione di una disdetta rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. State valutando se assumere un giurista o esternalizzare? Leggete il nostro [confronto tra assunzione ed esternalizzazione](/it/alternative-embauche-juriste), [vedete le formule](/it/entreprises#abonnement) o [chiedete di essere richiamati](/it/contact).
 `;
 
 export default content;

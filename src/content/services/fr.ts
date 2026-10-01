@@ -1,0 +1,1012 @@
+import type { CategoryId } from "@/lib/services/catalog";
+import type { CategoryText, ServiceText } from "./types";
+
+const categories: Record<CategoryId, CategoryText> = {
+  travail: { name: "Travail", lead: "Vos droits face à votre employeur" },
+  logement: { name: "Logement & voisinage", lead: "Loyer, défauts, garantie, congé" },
+  consommation: { name: "Achats, contrats & voyages", lead: "Garantie, résiliation, remboursement" },
+  argent: { name: "Argent & poursuites", lead: "Récupérer votre argent, contester une poursuite" },
+  administration: { name: "Impôts & assurances sociales", lead: "Décisions à contester dans les 30 jours" },
+  famille: { name: "Famille & avenir", lead: "Protéger vos proches et vos volontés" },
+  "sur-mesure": { name: "Sur mesure", lead: "Votre situation n'est pas dans la liste" },
+  recouvrement: { name: "Recouvrement & litiges", lead: "Faire payer vos clients, défendre votre position" },
+  contrats: { name: "Contrats & CGV", lead: "Des contrats qui vous protègent vraiment" },
+  employeurs: { name: "Employeurs", lead: "Engager, encadrer et se séparer sans risque" },
+  conformite: { name: "Conformité & société", lead: "nLPD, bail commercial, associés" },
+};
+
+const services: Record<string, ServiceText> = {
+  // ------------------------------------------------------------------ Particuliers · Travail
+  "analyse-certificat-de-travail": {
+    name: "Analyse de certificat de travail",
+    short: "Chaque formule de votre certificat décodée : ce qui vous sert, ce qui vous dessert, ce qui manque.",
+    intro:
+      "Un certificat de travail peut sembler positif et contenir des formules codées, des omissions ou des nuances qui freinent vos candidatures. Nous l'analysons phrase par phrase et vous disons ce qu'il dit vraiment aux recruteurs.",
+    included: [
+      "Lecture de chaque phrase, formules codées et omissions comprises",
+      "Évaluation globale : très bon, bon, moyen ou à corriger",
+      "Liste des points que vous êtes en droit de faire modifier",
+      "Recommandation claire : le garder tel quel ou demander une rectification",
+    ],
+    needs: "Votre certificat de travail (photo lisible ou PDF) et, si possible, votre cahier des charges.",
+    note:
+      "Votre employeur doit vous remettre un certificat complet, exact et formulé de manière bienveillante, qui porte sur la nature et la durée des rapports de travail, la qualité du travail et la conduite (art. 330a CO). Vous pouvez aussi demander un certificat intermédiaire à tout moment.",
+    faq: [
+      { q: "Qu'est-ce qu'une formule codée ?", a: "Une phrase en apparence positive qui signale une faiblesse aux recruteurs, par exemple une satisfaction « dans l'ensemble » ou un comportement simplement « correct ». L'analyse les repère et les explique." },
+      { q: "Et si le certificat doit être corrigé ?", a: "Vous pouvez passer à la demande de rectification : le prix de l'analyse est alors déduit si vous commandez dans les 30 jours." },
+    ],
+  },
+  "rectification-certificat-de-travail": {
+    name: "Certificat de travail : demande de rectification",
+    short: "Analyse de votre certificat et lettre à l'employeur avec les reformulations que vous pouvez exiger.",
+    intro:
+      "Votre certificat contient des formules floues, des omissions ou des phrases qui vous desservent ? Nous l'analysons phrase par phrase et rédigeons la lettre à votre employeur, avec les reformulations que vous êtes en droit de demander.",
+    included: [
+      "Analyse complète du certificat, formules codées et omissions comprises",
+      "Proposition de texte corrigé, phrase par phrase",
+      "Lettre de demande de rectification, prête à envoyer",
+      "Marche à suivre si l'employeur refuse",
+    ],
+    needs: "Votre certificat de travail, votre contrat si vous l'avez, et deux lignes sur ce qui vous gêne.",
+    note:
+      "Le certificat doit être complet, exact et bienveillant (art. 330a CO). En cas de refus, une action en rectification est possible devant le tribunal : pour un litige de travail jusqu'à 30'000 CHF, la procédure est gratuite (art. 114 CPC).",
+    faq: [
+      { q: "Mon employeur saura-t-il que vous m'aidez ?", a: "Non. La lettre est rédigée à votre nom et vous l'envoyez vous-même." },
+      { q: "Mon employeur peut-il refuser ?", a: "Il ne peut pas refuser de corriger une mention inexacte ou incomplète. S'il refuse sans raison, la lettre prépare la suite et nous vous expliquons les options." },
+    ],
+  },
+  "licenciement-opposition": {
+    name: "Licenciement : vérification et opposition",
+    short: "Délais, période de protection, congé abusif : on vérifie votre licenciement et on rédige l'opposition.",
+    intro:
+      "Vous venez d'être licencié et quelque chose ne vous semble pas juste ? Nous vérifions si le congé respecte les délais, s'il tombe pendant une période de protection et s'il peut être abusif, puis nous rédigeons votre opposition écrite.",
+    included: [
+      "Vérification du délai de congé et de la date de fin",
+      "Contrôle des périodes de protection : maladie, accident, grossesse, service militaire",
+      "Analyse du motif : congé abusif ou non",
+      "Lettre d'opposition et demande de motivation écrite, prêtes à envoyer",
+    ],
+    needs: "La lettre de licenciement, votre contrat de travail et les dates importantes (arrêt maladie, entretien…).",
+    note:
+      "Pour réclamer une indemnité pour congé abusif, vous devez faire opposition par écrit avant la fin du délai de congé, puis agir dans les 180 jours après la fin du contrat (art. 336b CO). Un congé donné pendant une période de protection est nul (art. 336c CO).",
+    faq: [
+      { q: "Combien de temps ai-je pour réagir ?", a: "L'opposition doit parvenir à l'employeur avant la fin du délai de congé. Ne tardez pas : choisissez l'option express si la date approche." },
+      { q: "Est-ce que je récupère mon poste ?", a: "En droit suisse, un congé abusif reste valable : il ouvre droit à une indemnité de six mois de salaire au plus. Un congé donné pendant une période de protection est, lui, nul." },
+    ],
+  },
+  "relecture-contrat-de-travail": {
+    name: "Relecture de contrat de travail",
+    short: "Avant de signer : période d'essai, heures supplémentaires, non-concurrence, vacances, tout est vérifié.",
+    intro:
+      "On vous propose un contrat et vous voulez savoir ce que vous signez ? Nous le relisons et vous signalons les clauses défavorables, inhabituelles ou nulles, avec ce que vous pouvez négocier.",
+    included: [
+      "Relecture complète du contrat (jusqu'à 15 pages)",
+      "Points à risque signalés : essai, heures sup, non-concurrence, mobilité, vacances",
+      "Comparaison avec la convention collective applicable, s'il y en a une",
+      "Propositions de modifications à demander avant de signer",
+    ],
+    needs: "Le contrat proposé et, si vous l'avez, l'offre ou l'annonce du poste.",
+    note:
+      "La période d'essai ne peut pas dépasser trois mois (art. 335b CO). Une clause de non-concurrence n'est valable que si elle est écrite et si vous avez accès à la clientèle ou à des secrets d'affaires (art. 340 CO).",
+    faq: [
+      { q: "Puis-je négocier mon contrat ?", a: "Oui, avant de signer. Nous vous indiquons les points prioritaires et une formulation polie pour les aborder." },
+      { q: "Et si j'ai déjà signé ?", a: "La relecture reste utile : certaines clauses sont nulles même signées. Nous vous disons lesquelles." },
+    ],
+  },
+  "salaire-impaye": {
+    name: "Salaire, heures sup ou vacances impayés",
+    short: "Calcul de ce qui vous est dû et mise en demeure à l'employeur, avec délai de paiement.",
+    intro:
+      "Salaire en retard, heures supplémentaires jamais payées, solde de vacances ignoré à la fin du contrat : nous calculons précisément ce qui vous est dû et rédigeons la mise en demeure à votre employeur.",
+    included: [
+      "Calcul détaillé des montants dus (salaire, heures, vacances, 13e)",
+      "Vérification des règles du contrat et de la convention collective",
+      "Mise en demeure avec délai de paiement, prête à envoyer",
+      "Marche à suivre si l'employeur ne paie pas",
+    ],
+    needs: "Votre contrat, vos fiches de salaire et, si vous l'avez, un décompte de vos heures.",
+    note:
+      "Les heures supplémentaires sont payées avec un supplément de 25 %, sauf accord écrit contraire (art. 321c CO). Les créances de salaire se prescrivent par cinq ans (art. 128 CO) : ne laissez pas traîner.",
+    faq: [
+      { q: "Puis-je réclamer pendant que je travaille encore ?", a: "Oui. La lettre est rédigée de façon ferme mais correcte, pour préserver la relation si vous restez." },
+      { q: "Et si l'employeur ne répond pas ?", a: "Vous pouvez saisir l'autorité de conciliation. Nous pouvons rédiger la requête : c'est la prestation « Requête de conciliation (travail) »." },
+    ],
+  },
+  "lettre-de-demission": {
+    name: "Lettre de démission",
+    short: "Le bon préavis, la bonne date de fin, le solde de vacances et la demande de certificat.",
+    intro:
+      "Une démission mal datée peut vous coûter un mois de salaire ou créer un conflit inutile. Nous calculons votre délai et rédigeons une lettre claire, qui règle aussi les vacances restantes et le certificat de travail.",
+    included: [
+      "Calcul du délai de congé et de la date de fin exacte",
+      "Lettre de démission personnalisée",
+      "Demande de certificat de travail et point sur le solde de vacances",
+    ],
+    needs: "Votre contrat de travail et la date à laquelle vous souhaitez partir.",
+    note:
+      "Sauf contrat ou convention contraire, le délai est d'un mois la première année, deux mois de la deuxième à la neuvième, trois mois ensuite, pour la fin d'un mois (art. 335c CO). La lettre doit parvenir à l'employeur avant le début du délai.",
+    faq: [
+      { q: "Puis-je partir plus tôt ?", a: "Seulement avec l'accord de l'employeur. La lettre peut proposer une date anticipée tout en respectant le délai légal." },
+      { q: "Faut-il envoyer en recommandé ?", a: "C'est recommandé pour prouver la date de réception, ou remettre la lettre en main propre contre signature." },
+    ],
+  },
+  "requete-conciliation-travail": {
+    name: "Requête de conciliation (travail)",
+    short: "Votre requête prête à déposer devant l'autorité de conciliation, avec les pièces classées.",
+    intro:
+      "Votre employeur ne paie pas ou conteste vos droits malgré vos courriers ? La procédure devant le tribunal des prud'hommes commence en principe par une tentative de conciliation. Nous rédigeons votre requête, prête à déposer, et vous expliquons le déroulement de l'audience.",
+    included: [
+      "Requête de conciliation rédigée, avec vos conclusions chiffrées",
+      "Liste et classement des pièces à joindre",
+      "Fiche de préparation à l'audience de conciliation",
+    ],
+    needs: "Votre contrat, vos courriers échangés avec l'employeur et les pièces qui prouvent vos prétentions.",
+    note:
+      "Pour les litiges de travail jusqu'à 30'000 CHF, la procédure est simplifiée et gratuite (art. 114 et 243 CPC). Vous déposez la requête vous-même : Thrax Legal ne vous représente pas devant les autorités.",
+    faq: [
+      { q: "Dois-je aller à l'audience ?", a: "Oui, la comparution personnelle est en principe obligatoire. La fiche de préparation vous aide à présenter votre position calmement." },
+      { q: "Et si mon cas est complexe ?", a: "Si votre situation exige un avocat, par exemple pour un montant élevé, nous vous le disons avant que vous payiez." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Logement
+  "baisse-de-loyer": {
+    name: "Demande de baisse de loyer",
+    short: "Calcul de la baisse à laquelle vous avez droit et lettre au bailleur, prête à envoyer.",
+    intro:
+      "Quand le taux hypothécaire de référence baisse, votre loyer peut baisser aussi. Nous vérifions votre droit, calculons la baisse demandable et rédigeons la lettre à votre bailleur ou à la régie.",
+    included: [
+      "Vérification du taux de référence et du dernier ajustement de votre loyer",
+      "Calcul de la baisse demandable",
+      "Lettre de demande de baisse, prête à envoyer",
+      "Marche à suivre si le bailleur refuse",
+    ],
+    needs: "Votre bail et la dernière notification de loyer (ou de hausse) reçue.",
+    note:
+      "La demande se fait par écrit pour le prochain terme de résiliation. Le bailleur a 30 jours pour répondre ; s'il refuse ou ne répond pas, vous pouvez saisir l'autorité de conciliation dans les 30 jours (art. 270a CO).",
+    faq: [
+      { q: "Le bailleur peut-il me résilier parce que j'ai demandé une baisse ?", a: "Non. Un congé donné parce que le locataire fait valoir ses droits est annulable (art. 271a CO)." },
+      { q: "Combien puis-je économiser ?", a: "Cela dépend de votre dernier ajustement. Le calcul vous indique le montant exact avant d'envoyer quoi que ce soit." },
+    ],
+  },
+  "contestation-loyer-initial": {
+    name: "Contestation du loyer initial",
+    short: "Loyer abusif à l'entrée ? Vous avez 30 jours : analyse et requête prête à déposer.",
+    intro:
+      "Vous venez d'emménager et votre loyer est nettement plus élevé que celui du locataire précédent ? Vous pouvez peut-être le contester. Nous analysons vos chances et rédigeons la requête à l'autorité de conciliation.",
+    included: [
+      "Analyse des conditions de contestation",
+      "Vérification de la formule officielle de notification",
+      "Requête à l'autorité de conciliation, prête à déposer",
+      "Explication de la procédure et des risques",
+    ],
+    needs: "Votre bail, la formule officielle reçue (si elle existe) et la date de remise des clés.",
+    note:
+      "Le délai est de 30 jours dès la réception de l'objet loué (art. 270 CO). Dans plusieurs cantons romands, le bailleur doit communiquer le loyer précédent sur une formule officielle : son absence peut aussi être invoquée.",
+    faq: [
+      { q: "Je suis hors délai, que faire ?", a: "Si la formule officielle manquait, d'autres possibilités existent. Commandez un appel juridique pour vérifier." },
+      { q: "Est-ce risqué pour mon bail ?", a: "Le bailleur ne peut pas vous résilier pour ce motif pendant la procédure et les trois ans qui suivent (art. 271a CO)." },
+    ],
+  },
+  "defaut-logement": {
+    name: "Défaut du logement : réduction de loyer",
+    short: "Moisissure, panne, bruit, travaux : avis de défaut et demande de réduction de loyer.",
+    intro:
+      "Moisissure, chauffage en panne, infiltration, chantier bruyant : un défaut qui dure vous donne droit à une réparation et à une réduction de loyer. Nous rédigeons l'avis de défaut et la demande de réduction, dans les formes.",
+    included: [
+      "Qualification du défaut et estimation de la réduction usuelle",
+      "Avis de défaut avec délai de réparation",
+      "Demande de réduction de loyer",
+      "Explication de la consignation du loyer, si nécessaire",
+    ],
+    needs: "Des photos du défaut, la date de découverte et vos échanges avec la régie.",
+    note:
+      "Ne cessez jamais de payer votre loyer : c'est un motif de résiliation. La consignation du loyer est possible, mais seulement après un avis écrit et un délai raisonnable (art. 259g CO). La réduction est due dès que le bailleur connaît le défaut (art. 259d CO).",
+    faq: [
+      { q: "De combien le loyer peut-il baisser ?", a: "Cela dépend de la gravité et de la durée du défaut. Nous vous indiquons une fourchette fondée sur la pratique." },
+      { q: "Et si la régie ne réagit pas ?", a: "La lettre fixe un délai. Passé ce délai, vous pouvez consigner le loyer ou saisir l'autorité de conciliation." },
+    ],
+  },
+  "garantie-de-loyer": {
+    name: "Récupérer votre garantie de loyer",
+    short: "Frais de remise en état contestés, garantie bloquée : on rédige votre réclamation.",
+    intro:
+      "Votre ancienne régie bloque la garantie ou vous facture des frais de remise en état ? Nous vérifions ce qui peut vraiment vous être demandé et rédigeons la contestation et la demande de libération.",
+    included: [
+      "Analyse de l'état des lieux de sortie et des frais réclamés",
+      "Tri entre usure normale et dégâts à votre charge",
+      "Lettre de contestation et demande de libération de la garantie",
+    ],
+    needs: "Votre bail, les états des lieux d'entrée et de sortie, et le décompte de la régie.",
+    note:
+      "L'usure normale est à la charge du bailleur (art. 267 CO). Si le bailleur n'a fait valoir aucune prétention en justice ou par poursuite dans l'année qui suit la fin du bail, vous pouvez demander à la banque de libérer la garantie (art. 257e CO).",
+    faq: [
+      { q: "La régie peut-elle garder la garantie sans rien faire ?", a: "Pas indéfiniment : passé un an sans procédure de sa part, vous pouvez demander la libération directement à la banque." },
+      { q: "On me facture une peinture complète, est-ce normal ?", a: "Souvent non : la durée de vie des peintures est prise en compte. La lettre conteste les montants injustifiés." },
+    ],
+  },
+  "resiliation-anticipee-bail": {
+    name: "Résiliation anticipée du bail",
+    short: "Partir avant l'échéance sans payer des mois de loyer : lettre et locataire de remplacement.",
+    intro:
+      "Vous devez déménager avant l'échéance de votre bail ? En présentant un locataire de remplacement, vous pouvez vous libérer plus tôt. Nous rédigeons la lettre de résiliation et la présentation du candidat.",
+    included: [
+      "Calcul de l'échéance ordinaire et des délais",
+      "Lettre de résiliation anticipée conforme",
+      "Lettre de présentation du locataire de remplacement",
+    ],
+    needs: "Votre bail et, si vous l'avez déjà, les coordonnées du locataire de remplacement.",
+    note:
+      "Le locataire de remplacement doit être solvable, acceptable pour le bailleur et prêt à reprendre le bail aux mêmes conditions (art. 264 CO). Pour le logement de la famille, la résiliation doit être signée par les deux époux (art. 266m CO).",
+    faq: [
+      { q: "Le bailleur peut-il refuser mon candidat ?", a: "Seulement pour de justes motifs (insolvabilité, motif sérieux). Sinon, vous êtes libéré à la date proposée." },
+      { q: "Combien de candidats faut-il présenter ?", a: "Un seul suffit s'il remplit les conditions. En pratique, en présenter deux ou trois accélère les choses." },
+    ],
+  },
+  "contestation-conge": {
+    name: "Contester un congé ou prolonger le bail",
+    short: "Vous avez 30 jours : requête à l'autorité de conciliation pour annuler le congé ou obtenir du temps.",
+    intro:
+      "Vous avez reçu votre congé ? Vous pouvez le contester s'il est abusif, ou demander une prolongation si le départ vous pose de graves difficultés. Nous rédigeons la requête à l'autorité de conciliation.",
+    included: [
+      "Vérification de la validité formelle du congé",
+      "Analyse des motifs : congé annulable ou non",
+      "Requête en annulation et/ou en prolongation, prête à déposer",
+    ],
+    needs: "La formule officielle de congé, l'enveloppe ou l'avis de réception, et votre bail.",
+    note:
+      "Le délai est de 30 jours dès la réception du congé (art. 273 CO). Un congé qui n'est pas donné sur formule officielle est nul (art. 266l et 266o CO). La prolongation peut atteindre quatre ans pour un logement (art. 272b CO).",
+    faq: [
+      { q: "Le délai court depuis quand ?", a: "Depuis la réception effective ou le dernier jour du délai de retrait à la poste. Choisissez l'option express si la date approche." },
+      { q: "Vais-je gagner du temps même si le congé est valable ?", a: "Souvent oui : une prolongation peut être accordée si le départ entraîne des conséquences pénibles." },
+    ],
+  },
+  "decompte-de-charges": {
+    name: "Contester le décompte de charges",
+    short: "Vérification ligne par ligne de votre décompte et réclamation au bailleur.",
+    intro:
+      "Votre décompte de chauffage et de frais accessoires a explosé ? Nous vérifions chaque poste et rédigeons la réclamation à la régie, avec la demande de consulter les justificatifs.",
+    included: [
+      "Contrôle des postes facturés par rapport au bail",
+      "Identification des frais non convenus ou excessifs",
+      "Lettre de réclamation et demande de justificatifs",
+    ],
+    needs: "Votre bail et le décompte de charges contesté.",
+    note:
+      "Vous ne devez que les frais accessoires expressément prévus dans le bail (art. 257a CO), et vous avez le droit de consulter les pièces justificatives (art. 257b CO).",
+    faq: [
+      { q: "Dois-je payer le solde en attendant ?", a: "Nous vous indiquons quelle partie payer et quelle partie contester, pour éviter tout reproche de retard." },
+      { q: "Puis-je contester un décompte ancien ?", a: "Souvent oui, dans certaines limites. Indiquez les années concernées dans votre demande." },
+    ],
+  },
+  "litige-de-voisinage": {
+    name: "Litige de voisinage : courrier formel",
+    short: "Bruit, plantations, limites, nuisances : un courrier clair et juridiquement fondé.",
+    intro:
+      "Les discussions n'ont rien donné et la situation dure ? Un courrier formel, posé et juridiquement fondé, règle souvent le problème sans procès. Nous le rédigeons pour vous.",
+    included: [
+      "Analyse de la situation et des règles applicables",
+      "Courrier formel au voisin ou à la régie",
+      "Conseils pour constituer des preuves",
+    ],
+    needs: "Une description du problème, sa durée et, si vous en avez, des photos ou un journal des nuisances.",
+    note:
+      "Chacun doit s'abstenir de tout excès au détriment des voisins (art. 684 CC). Les distances des arbres et des plantations sont fixées par le droit cantonal.",
+    faq: [
+      { q: "Le courrier ne va-t-il pas envenimer les choses ?", a: "Il est rédigé de façon ferme mais courtoise, pour ouvrir une solution plutôt qu'un conflit." },
+      { q: "Je suis locataire, à qui écrire ?", a: "Souvent à la régie, qui doit garantir un usage paisible du logement. Nous vous disons à qui adresser le courrier." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Consommation
+  "resiliation-de-contrat": {
+    name: "Résilier un abonnement ou un contrat",
+    short: "Fitness, téléphonie, assurance, abonnement : le bon délai, la bonne forme, la bonne date.",
+    intro:
+      "Un abonnement qui se renouvelle tout seul, une assurance qui refuse votre résiliation, un fitness qui fait la sourde oreille : nous vérifions votre contrat et rédigeons une résiliation qui tient.",
+    included: [
+      "Vérification des conditions de résiliation du contrat",
+      "Calcul de la date de fin possible",
+      "Lettre de résiliation prête à envoyer",
+    ],
+    needs: "Le contrat ou les conditions générales, et la date à laquelle vous souhaitez arrêter.",
+    note:
+      "Une résiliation tardive prend effet à l'échéance suivante seulement. Pour l'assurance, le contrat peut en principe être résilié pour la fin de la troisième année, puis chaque année (art. 35a LCA).",
+    faq: [
+      { q: "Le fournisseur refuse ma résiliation, que faire ?", a: "Si la résiliation respecte le contrat, elle produit ses effets même sans accord. La lettre le rappelle clairement." },
+      { q: "Puis-je résilier pour juste motif ?", a: "Dans certains cas, oui. Décrivez votre situation : nous vérifions si un motif de résiliation immédiate existe." },
+    ],
+  },
+  "garantie-achat-defectueux": {
+    name: "Achat défectueux : faire valoir la garantie",
+    short: "Mise en demeure au vendeur : réparation, échange ou remboursement, selon vos droits.",
+    intro:
+      "Un appareil, un meuble ou un véhicule défectueux, et le vendeur se renvoie la balle ? Nous vérifions vos droits de garantie et rédigeons la mise en demeure.",
+    included: [
+      "Analyse de la garantie légale et contractuelle",
+      "Choix de la demande la plus favorable : réparation, échange, réduction ou annulation",
+      "Mise en demeure au vendeur, prête à envoyer",
+    ],
+    needs: "La facture ou le ticket, les conditions de garantie et des photos du défaut.",
+    note:
+      "Le défaut doit être signalé au vendeur dès sa découverte (art. 201 CO). Pour un bien neuf acheté par un consommateur, le délai de garantie de deux ans ne peut pas être raccourci (art. 210 CO).",
+    faq: [
+      { q: "Le vendeur me renvoie vers le fabricant, est-ce normal ?", a: "La garantie légale lie le vendeur. La lettre rappelle qu'il reste votre interlocuteur." },
+      { q: "Et pour un achat en ligne ?", a: "Les règles sont les mêmes pour un vendeur établi en Suisse. Pour un vendeur étranger, nous vous indiquons le droit applicable." },
+    ],
+  },
+  "litige-artisan": {
+    name: "Litige avec un artisan ou une entreprise",
+    short: "Travaux mal faits, retard, devis dépassé : avis des défauts et mise en demeure.",
+    intro:
+      "Travaux bâclés, chantier qui s'éternise, facture bien au-delà du devis : nous analysons votre contrat et rédigeons l'avis des défauts et la mise en demeure à l'artisan.",
+    included: [
+      "Analyse du contrat, du devis et des factures",
+      "Avis des défauts dans les formes",
+      "Mise en demeure : réfection, délai ou réduction du prix",
+    ],
+    needs: "Le devis ou contrat, les factures, des photos et vos échanges avec l'entreprise.",
+    note:
+      "Les défauts doivent être signalés rapidement après leur découverte. Si un devis approximatif est dépassé de manière excessive, vous pouvez demander une réduction ou vous départir du contrat (art. 375 CO).",
+    faq: [
+      { q: "Dois-je payer la facture en attendant ?", a: "Nous vous indiquons quelle partie payer et quelle partie retenir, sans vous mettre en tort." },
+      { q: "Et si la norme SIA 118 s'applique ?", a: "Nous en tenons compte : elle prévoit ses propres règles et délais pour les défauts." },
+    ],
+  },
+  "contester-une-facture": {
+    name: "Contester une facture",
+    short: "Facture injustifiée ou excessive : contestation écrite et motivée, prête à envoyer.",
+    intro:
+      "Une facture pour une prestation jamais commandée, un montant gonflé, des frais surprises : nous rédigeons une contestation claire, qui expose pourquoi vous ne devez pas ce montant.",
+    included: [
+      "Analyse de la facture et de ce qui a été convenu",
+      "Lettre de contestation motivée",
+      "Marche à suivre en cas de rappel ou de poursuite",
+    ],
+    needs: "La facture contestée, le contrat ou l'offre, et vos échanges avec l'entreprise.",
+    note:
+      "Payer « pour avoir la paix » vaut souvent reconnaissance. En cas de commandement de payer, vous avez 10 jours pour faire opposition (art. 74 LP).",
+    faq: [
+      { q: "Faut-il payer la partie non contestée ?", a: "Oui, c'est conseillé : cela montre votre bonne foi. La lettre précise le montant reconnu." },
+      { q: "Et si l'entreprise me met aux poursuites ?", a: "Faites opposition dans les 10 jours. Voir la prestation « Poursuite injustifiée »." },
+    ],
+  },
+  "relecture-contrat-particulier": {
+    name: "Relecture d'un contrat avant signature",
+    short: "Leasing, prêt, achat de véhicule, travaux : on relit et on vous signale les pièges.",
+    intro:
+      "Avant de signer un contrat important, faites-le relire. Nous vous signalons les clauses défavorables, les frais cachés et ce que vous pouvez négocier.",
+    included: [
+      "Relecture complète (jusqu'à 15 pages)",
+      "Liste des risques et clauses inhabituelles",
+      "Propositions de modifications",
+    ],
+    needs: "Le contrat, les conditions générales et l'offre éventuelle.",
+    note:
+      "Pour un leasing ou un crédit à la consommation, vous pouvez révoquer votre accord dans les 14 jours (art. 16 LCC).",
+    faq: [
+      { q: "Le contrat fait plus de 15 pages, que faire ?", a: "Commandez quand même : nous confirmons le prix exact avant de commencer." },
+      { q: "En combien de temps ?", a: "Trois jours ouvrés, ou 24 heures avec l'option express." },
+    ],
+  },
+  "vol-annule-retarde": {
+    name: "Vol annulé ou retardé : indemnisation",
+    short: "Réclamation à la compagnie aérienne, à prix fixe, sans commission sur votre indemnité.",
+    intro:
+      "Vol annulé, surréservation, retard important : vous avez peut-être droit à une indemnité de 250 à 600 euros par passager. Nous vérifions votre droit et rédigeons la réclamation, sans prélever de pourcentage.",
+    included: [
+      "Vérification du droit à indemnisation et du montant",
+      "Réclamation à la compagnie, prête à envoyer",
+      "Marche à suivre en cas de refus",
+    ],
+    needs: "La réservation, la carte d'embarquement et ce que la compagnie vous a communiqué.",
+    note:
+      "Le règlement européen sur les droits des passagers aériens s'applique aussi en Suisse, notamment aux vols au départ d'un aéroport suisse. Les circonstances extraordinaires (météo, grève du contrôle aérien) peuvent exclure l'indemnité.",
+    faq: [
+      { q: "Pourquoi pas une plateforme de réclamation ?", a: "Elles prélèvent souvent 25 à 35 % de l'indemnité. Ici, vous payez un prix fixe et gardez tout le reste." },
+      { q: "Pour plusieurs passagers ?", a: "Une seule commande suffit pour toutes les personnes d'une même réservation." },
+    ],
+  },
+  "refus-assurance": {
+    name: "Refus d'une assurance : réclamation",
+    short: "Ménage, voyage, véhicule, protection juridique : réclamation motivée à l'assureur.",
+    intro:
+      "Votre assurance refuse de payer ou ne rembourse qu'une partie ? Nous analysons votre police et la décision, puis rédigeons une réclamation motivée.",
+    included: [
+      "Analyse de la police, des conditions générales et du refus",
+      "Arguments juridiques et contractuels",
+      "Réclamation à l'assureur, prête à envoyer",
+      "Marche à suivre : médiateur, procédure",
+    ],
+    needs: "La police, les conditions générales, la lettre de refus et les pièces du sinistre.",
+    note:
+      "Les prétentions découlant d'un contrat d'assurance se prescrivent en principe par cinq ans (art. 46 LCA). L'ombudsman de l'assurance privée peut intervenir gratuitement.",
+    faq: [
+      { q: "Et pour une caisse maladie (LAMal) ?", a: "C'est une assurance sociale : voir « Opposition à une décision d'assurance sociale »." },
+      { q: "L'assureur invoque une exclusion, est-ce fini ?", a: "Pas forcément : une exclusion doit être claire et s'interprète en faveur de l'assuré en cas de doute." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Argent & poursuites
+  "poursuite-injustifiee": {
+    name: "Poursuite injustifiée : opposition et radiation",
+    short: "Commandement de payer injustifié : opposition, puis demande de non-divulgation au registre.",
+    intro:
+      "Vous avez reçu un commandement de payer pour une dette que vous contestez ? Nous vous expliquons comment faire opposition et rédigeons ensuite la demande de non-divulgation, pour que la poursuite n'apparaisse plus dans votre extrait.",
+    included: [
+      "Vérification du commandement de payer et des délais",
+      "Instructions pour l'opposition",
+      "Demande de non-divulgation à l'office des poursuites, au bon moment",
+    ],
+    needs: "Le commandement de payer (photo ou PDF) et ce que vous savez de la créance.",
+    note:
+      "L'opposition doit être faite dans les 10 jours dès la notification (art. 74 LP). Trois mois après, vous pouvez demander que la poursuite ne soit plus communiquée aux tiers si le créancier n'a pas agi (art. 8a LP).",
+    faq: [
+      { q: "Faire opposition coûte-t-il quelque chose ?", a: "Non, l'opposition est gratuite et ne doit pas être motivée." },
+      { q: "La poursuite disparaît-elle vraiment ?", a: "Elle n'est plus communiquée aux tiers, par exemple à un futur bailleur, si le créancier n'a pas poursuivi la procédure." },
+    ],
+  },
+  "recuperer-argent-prete": {
+    name: "Récupérer de l'argent prêté ou dû",
+    short: "Mise en demeure et réquisition de poursuite prête à déposer, pour un prêt ou une dette privée.",
+    intro:
+      "Vous avez prêté de l'argent à un proche, vendu un objet sans être payé ou avancé des frais ? Nous rédigeons la mise en demeure et préparons la réquisition de poursuite si rien ne bouge.",
+    included: [
+      "Analyse des preuves de la créance",
+      "Mise en demeure avec délai de paiement",
+      "Réquisition de poursuite préparée, prête à déposer",
+    ],
+    needs: "Les preuves du prêt ou de la dette : messages, virements, reconnaissance de dette.",
+    note:
+      "Un prêt sans échéance doit être remboursé dans les six semaines qui suivent la première réclamation (art. 318 CO). Une reconnaissance de dette signée facilite beaucoup la suite (art. 82 LP).",
+    faq: [
+      { q: "Je n'ai pas de contrat écrit, est-ce possible ?", a: "Oui : messages, virements et témoins peuvent prouver le prêt. Nous évaluons la solidité de vos preuves." },
+      { q: "Et si le débiteur fait opposition ?", a: "Il faudra demander la mainlevée ou saisir le juge. Nous vous expliquons la suite et ses coûts." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Administration
+  "reclamation-taxation-impots": {
+    name: "Réclamation contre une taxation",
+    short: "Déduction refusée, revenu mal évalué : réclamation motivée dans le délai de 30 jours.",
+    intro:
+      "Votre décision de taxation ne correspond pas à votre déclaration ? Déduction refusée, revenu estimé d'office, erreur de calcul : nous rédigeons une réclamation motivée.",
+    included: [
+      "Comparaison entre votre déclaration et la décision",
+      "Arguments et pièces à joindre",
+      "Réclamation prête à envoyer",
+    ],
+    needs: "La décision de taxation, votre déclaration et les justificatifs concernés.",
+    note:
+      "La réclamation doit être déposée dans les 30 jours dès la notification de la décision, par écrit et motivée (art. 132 LIFD pour l'impôt fédéral direct, règles similaires dans les cantons).",
+    faq: [
+      { q: "Le délai de 30 jours peut-il être prolongé ?", a: "Non, il est légal. Si la date approche, choisissez l'option express." },
+      { q: "L'impôt peut-il augmenter après une réclamation ?", a: "L'autorité réexamine toute la taxation : nous vérifions ce risque avant de déposer." },
+    ],
+  },
+  "opposition-assurance-sociale": {
+    name: "Opposition à une décision d'assurance sociale",
+    short: "Chômage, AVS, caisse maladie, accident : opposition motivée dans les 30 jours.",
+    intro:
+      "Jours de suspension au chômage, prestation refusée par la caisse maladie, rente calculée trop bas : nous analysons la décision et rédigeons votre opposition.",
+    included: [
+      "Analyse de la décision et des règles applicables",
+      "Arguments et pièces à joindre",
+      "Opposition prête à envoyer",
+    ],
+    needs: "La décision, les courriers échangés et les pièces utiles (certificats, contrats, attestations).",
+    note:
+      "L'opposition doit être formée dans les 30 jours (art. 52 LPGA). Pour l'assurance-invalidité, la procédure est différente : vous pouvez faire des observations sur le préavis, puis recourir.",
+    faq: [
+      { q: "L'opposition est-elle gratuite ?", a: "Oui, la procédure d'opposition est en principe gratuite." },
+      { q: "Et si l'opposition est rejetée ?", a: "Un recours au tribunal cantonal est possible dans les 30 jours. Nous vous indiquons si un avocat est recommandé." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Famille
+  testament: {
+    name: "Testament : rédaction guidée",
+    short: "Un testament sur mesure, conforme au nouveau droit successoral, à recopier à la main.",
+    intro:
+      "Avantager votre conjoint, protéger votre partenaire, léguer un bien précis : nous vous aidons à rédiger un testament clair, conforme au droit successoral entré en vigueur en 2023, que vous recopiez à la main.",
+    included: [
+      "Calcul des réserves héréditaires et de la quotité disponible",
+      "Texte du testament adapté à vos volontés",
+      "Instructions pour le recopier, le dater, le signer et le conserver",
+    ],
+    needs: "Votre situation familiale, vos principaux biens et ce que vous souhaitez transmettre, à qui.",
+    note:
+      "Un testament olographe doit être entièrement écrit à la main, daté et signé (art. 505 CC). Depuis 2023, les parents n'ont plus de réserve et celle des descendants est réduite à la moitié de leur part légale.",
+    faq: [
+      { q: "Faut-il passer chez le notaire ?", a: "Non pour un testament olographe. Un testament public chez le notaire reste conseillé pour les situations complexes." },
+      { q: "Mon partenaire non marié hérite-t-il ?", a: "Non, sauf testament. C'est précisément ce que le testament peut prévoir." },
+    ],
+  },
+  "mandat-pour-cause-d-inaptitude": {
+    name: "Mandat pour cause d'inaptitude",
+    short: "Désignez qui décidera pour vous si vous ne pouvez plus le faire : patrimoine, santé, administratif.",
+    intro:
+      "Accident, maladie : si vous ne pouvez plus gérer vos affaires, l'autorité de protection désigne quelqu'un. Avec un mandat pour cause d'inaptitude, c'est vous qui choisissez. Nous le rédigeons avec vous.",
+    included: [
+      "Choix des domaines : personne, patrimoine, représentation",
+      "Texte du mandat adapté à votre situation",
+      "Instructions pour la forme et l'enregistrement",
+    ],
+    needs: "La ou les personnes choisies et ce que vous souhaitez leur confier.",
+    note:
+      "Le mandat doit être entièrement écrit à la main, daté et signé, ou passé en la forme authentique (art. 361 CC). Son existence peut être inscrite à l'état civil.",
+    faq: [
+      { q: "Mon conjoint ne peut-il pas déjà me représenter ?", a: "Seulement pour les affaires courantes (art. 374 CC). Le mandat va plus loin et évite l'intervention de l'autorité." },
+      { q: "Puis-je le modifier ?", a: "Oui, à tout moment, tant que vous êtes capable de discernement." },
+    ],
+  },
+  "directives-anticipees": {
+    name: "Directives anticipées",
+    short: "Vos volontés médicales, claires et valables, et la personne qui les fera respecter.",
+    intro:
+      "Quels traitements accepter ou refuser si vous ne pouvez plus vous exprimer ? Les directives anticipées le disent clairement et désignent la personne qui parlera pour vous.",
+    included: [
+      "Questionnaire guidé sur vos volontés",
+      "Directives rédigées en termes précis",
+      "Désignation d'un représentant thérapeutique",
+    ],
+    needs: "Vos souhaits et la personne de confiance que vous souhaitez désigner.",
+    note:
+      "Les directives anticipées doivent être écrites, datées et signées (art. 371 CC). Vous pouvez les faire inscrire sur votre carte d'assuré.",
+    faq: [
+      { q: "Le médecin doit-il les suivre ?", a: "Oui, sauf si elles violent la loi ou ne correspondent plus à votre volonté présumée (art. 372 CC)." },
+      { q: "Faut-il un notaire ?", a: "Non, la forme écrite, datée et signée suffit." },
+    ],
+  },
+  "convention-de-concubinage": {
+    name: "Convention de concubinage",
+    short: "Logement, frais communs, biens, séparation : tout est prévu, noir sur blanc.",
+    intro:
+      "Les couples non mariés n'ont presque aucune règle légale qui les protège. Une convention de concubinage règle le logement, les dépenses, les biens achetés ensemble et ce qui se passe en cas de séparation.",
+    included: [
+      "Analyse de votre situation commune",
+      "Convention sur mesure : logement, frais, biens, séparation",
+      "Recommandations : testament, prévoyance, assurance",
+    ],
+    needs: "Votre situation : logement, revenus, biens communs, enfants éventuels.",
+    note:
+      "En concubinage, aucun partenaire n'hérite de l'autre sans testament, et le logement commun n'est pas protégé comme celui des époux.",
+    faq: [
+      { q: "La convention est-elle valable sans notaire ?", a: "Oui, une convention écrite et signée par les deux partenaires suffit." },
+      { q: "Et si nous avons des enfants ?", a: "Nous intégrons les points utiles et vous indiquons ce qui doit être réglé auprès de l'autorité (autorité parentale, entretien)." },
+    ],
+  },
+  "separation-divorce-amiable": {
+    name: "Divorce à l'amiable sans enfants mineurs",
+    short: "Convention et requête commune, pour les couples sans enfants mineurs d'accord sur l'essentiel.",
+    intro:
+      "Vous êtes d'accord sur l'essentiel, vous n'avez pas d'enfants mineurs et vous voulez éviter une procédure longue ? Nous rédigeons, de façon neutre et pour vous deux, la convention de divorce et la requête commune que vous déposez au tribunal.",
+    included: [
+      "Entretien de cadrage avec les deux époux",
+      "Convention : logement, entretien, biens, partage de la prévoyance professionnelle",
+      "Requête commune de divorce prête à déposer, avec la liste des pièces",
+    ],
+    needs: "Les revenus, les attestations de prévoyance (2e pilier) de chacun et la liste des biens.",
+    note:
+      "Le divorce sur requête commune ne requiert pas d'avocat : les époux déposent eux-mêmes la requête et la convention (art. 111 CC). Le juge vérifie que la convention est claire, complète et équitable. Nous intervenons de façon neutre, pour les deux époux, et uniquement s'ils sont d'accord.",
+    faq: [
+      { q: "Et si nous avons des enfants mineurs ?", a: "Nous ne prenons pas ces dossiers : l'autorité parentale, la garde et l'entretien méritent un médiateur familial ou un avocat. Nous vous orientons." },
+      { q: "Pourquoi « dès 590 CHF » ?", a: "Le prix vaut pour une situation simple, sans immobilier ni entreprise. Il est confirmé par écrit après le premier échange, avant tout paiement." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Particuliers · Sur mesure
+  "question-juridique": {
+    name: "Question juridique : réponse écrite",
+    short: "Une question précise, une réponse claire et écrite, avec les articles de loi utiles.",
+    intro:
+      "Vous avez une question précise et voulez une réponse fiable, sans rendez-vous ? Posez-la : vous recevez une réponse écrite, claire, avec la marche à suivre.",
+    included: [
+      "Recherche juridique sur votre question",
+      "Réponse écrite claire, avec les bases légales",
+      "Prochaine étape conseillée",
+    ],
+    needs: "Votre question et le contexte en quelques lignes.",
+    note:
+      "Une question rapide porte sur un point précis. Si votre situation demande un document ou une analyse complète, nous vous proposons la prestation adaptée avant de commencer.",
+    faq: [
+      { q: "Et si j'ai une question de suivi ?", a: "Une précision sur la réponse reçue est incluse." },
+      { q: "Quels domaines ?", a: "Droit du travail, bail, consommation, contrats, poursuites, famille simple. Pour le pénal, nous vous orientons vers un avocat." },
+    ],
+  },
+  "appel-juridique": {
+    name: "Appel juridique de 20 minutes",
+    short: "Vous expliquez votre situation, on vous dit quoi faire et dans quels délais.",
+    intro:
+      "Vous préférez en parler ? Réservez un appel de 20 minutes : vous exposez votre situation, nous vous disons ce que vous pouvez faire, dans quels délais, et ce qu'il faut éviter.",
+    included: [
+      "Appel téléphonique ou visio de 20 minutes",
+      "Préparation à partir de votre description écrite",
+      "Résumé écrit des prochaines étapes",
+    ],
+    needs: "Une description de votre situation et vos disponibilités.",
+    note:
+      "Si vous commandez ensuite une prestation liée à l'appel dans les 30 jours, le prix de l'appel est déduit.",
+    faq: [
+      { q: "Quand a lieu l'appel ?", a: "Nous vous proposons des créneaux dans les deux jours ouvrés." },
+      { q: "Et si 20 minutes ne suffisent pas ?", a: "Le résumé écrit indique la prestation adaptée et son prix fixe." },
+    ],
+  },
+  "lettre-juridique-sur-mesure": {
+    name: "Lettre juridique sur mesure",
+    short: "Un courrier formel adapté à votre situation, juridiquement fondé, prêt à envoyer.",
+    intro:
+      "Votre situation n'entre dans aucune case ? Nous rédigeons le courrier formel qu'il vous faut : réclamation, contestation, demande, mise en demeure.",
+    included: [
+      "Analyse de votre situation",
+      "Lettre juridiquement fondée, prête à envoyer",
+      "Un tour de corrections",
+    ],
+    needs: "Votre situation, le destinataire et les documents utiles.",
+    note:
+      "Une lettre bien rédigée fixe un délai, cite les bonnes règles et laisse une trace écrite utile en cas de procédure.",
+    faq: [
+      { q: "La lettre est-elle signée par Thrax Legal ?", a: "Non, elle est rédigée à votre nom et vous l'envoyez vous-même." },
+      { q: "Et si la situation est plus complexe ?", a: "Nous vous le disons avant de commencer et vous proposons le prix adapté." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Entreprises · Recouvrement
+  "mise-en-demeure": {
+    name: "Mise en demeure à un client",
+    short: "Lettre formelle avec délai, intérêts et suite annoncée : le dernier avertissement avant la poursuite.",
+    intro:
+      "Un client ne paie pas malgré vos rappels ? Une mise en demeure formelle, avec délai, intérêts moratoires et suite annoncée, suffit souvent à débloquer le paiement.",
+    included: [
+      "Vérification de la créance et des pièces",
+      "Calcul des intérêts moratoires",
+      "Mise en demeure prête à envoyer, à votre en-tête",
+    ],
+    needs: "La facture impayée, le contrat ou la confirmation de commande, et vos rappels.",
+    note:
+      "Dès la demeure, un intérêt moratoire de 5 % l'an est dû (art. 104 CO). Si une échéance précise était convenue, le débiteur est en demeure dès son expiration (art. 102 CO).",
+    faq: [
+      { q: "Faut-il envoyer en recommandé ?", a: "C'est conseillé, pour prouver la réception. Un envoi par email en parallèle accélère souvent le paiement." },
+      { q: "Et si le client ne paie toujours pas ?", a: "Passez au recouvrement complet : réquisition de poursuite et suite de la procédure." },
+    ],
+  },
+  "recouvrement-facture-impayee": {
+    name: "Recouvrement de facture impayée",
+    short: "Mise en demeure, réquisition de poursuite préparée, suivi de l'opposition : on s'occupe de tout.",
+    intro:
+      "Une facture impayée depuis des semaines ? Nous prenons en charge tout le parcours amiable puis la préparation de la poursuite, jusqu'à la requête de mainlevée si le débiteur fait opposition.",
+    included: [
+      "Mise en demeure avec intérêts",
+      "Réquisition de poursuite préparée, prête à déposer",
+      "Analyse de l'opposition éventuelle et de la suite",
+      "Conseils pour préserver la relation client quand c'est possible",
+    ],
+    needs: "La facture, le contrat ou la commande, vos rappels et les coordonnées du débiteur.",
+    note:
+      "Les créances se prescrivent par dix ans en règle générale, mais par cinq ans pour de nombreuses prestations courantes (art. 127 et 128 CO). Vous déposez la réquisition vous-même : la représentation professionnelle devant les offices de poursuite est réglementée selon les cantons.",
+    faq: [
+      { q: "Pourquoi pas une société de recouvrement ?", a: "Elles prennent un pourcentage ou facturent des frais au débiteur, parfois de façon contestée. Ici, le prix est fixe et la relation client est préservée." },
+      { q: "Plusieurs factures du même client ?", a: "Une seule prestation couvre toutes les factures d'un même débiteur." },
+    ],
+  },
+  "requete-de-mainlevee": {
+    name: "Requête de mainlevée",
+    short: "Après une opposition : requête de mainlevée prête à déposer, avec les pièces classées.",
+    intro:
+      "Votre débiteur a fait opposition au commandement de payer ? Si vous avez une reconnaissance de dette ou un jugement, la mainlevée permet de continuer la poursuite. Nous rédigeons la requête.",
+    included: [
+      "Vérification du titre : reconnaissance de dette ou jugement",
+      "Requête de mainlevée provisoire ou définitive, prête à déposer",
+      "Bordereau de pièces",
+    ],
+    needs: "Le commandement de payer avec l'opposition, le contrat signé ou la reconnaissance de dette, et les factures.",
+    note:
+      "Une reconnaissance de dette signée permet la mainlevée provisoire (art. 82 LP), un jugement exécutoire la mainlevée définitive (art. 80 LP). Sans titre, il faut agir en reconnaissance de dette devant le juge.",
+    faq: [
+      { q: "Un contrat signé suffit-il ?", a: "Souvent oui, si la prestation a été fournie et que le montant ressort clairement du contrat." },
+      { q: "Qui dépose la requête ?", a: "Vous, auprès du tribunal compétent. Nous vous indiquons lequel et comment." },
+    ],
+  },
+  "litige-commercial": {
+    name: "Litige commercial : analyse et courrier",
+    short: "Client, fournisseur ou partenaire : votre position analysée et défendue par écrit.",
+    intro:
+      "Livraison non conforme, prestation contestée, rupture de contrat : nous analysons la situation et rédigeons le courrier qui défend votre position et ouvre la voie à une solution.",
+    included: [
+      "Analyse du contrat et des échanges",
+      "Évaluation de votre position et des risques",
+      "Courrier formel à la partie adverse",
+    ],
+    needs: "Le contrat, les factures et les échanges importants.",
+    note:
+      "Les écrits comptent : un courrier précis, envoyé tôt, renforce votre position en cas de procédure.",
+    faq: [
+      { q: "Et si le litige va au tribunal ?", a: "Nous vous orientons vers un avocat et lui transmettons un dossier propre." },
+      { q: "Pouvez-vous négocier pour nous ?", a: "Nous préparons vos courriers et vos arguments ; vous restez l'interlocuteur." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Entreprises · Contrats
+  "cgv-sur-mesure": {
+    name: "CGV sur mesure",
+    short: "Conditions générales rédigées pour votre activité : paiement, responsabilité, garantie, for.",
+    intro:
+      "Des CGV copiées d'un concurrent ne vous protègent pas. Nous rédigeons des conditions générales adaptées à votre activité, à vos clients (entreprises ou particuliers) et à votre façon de vendre.",
+    included: [
+      "Questionnaire sur votre activité et vos risques",
+      "CGV complètes : commande, prix, paiement, retard, garantie, responsabilité, for",
+      "Conseils pour les intégrer valablement (site, offres, factures)",
+      "Un tour de corrections",
+    ],
+    needs: "Une description de votre activité, vos documents actuels (offre, facture, CGV existantes).",
+    note:
+      "Les CGV ne s'appliquent que si le client a pu en prendre connaissance avant de conclure. Envers les consommateurs, les clauses déséquilibrées sont déloyales (art. 8 LCD).",
+    faq: [
+      { q: "Faut-il des CGV différentes pour la boutique en ligne ?", a: "Souvent oui, ou un chapitre dédié. Nous l'intégrons si vous vendez en ligne." },
+      { q: "En quelles langues ?", a: "En français par défaut. Une traduction peut être ajoutée sur devis." },
+    ],
+  },
+  "contrat-commercial-sur-mesure": {
+    name: "Contrat commercial sur mesure",
+    short: "Prestation, sous-traitance, distribution, partenariat : un contrat rédigé pour votre situation.",
+    intro:
+      "Un accord important mérite un vrai contrat. Nous rédigeons un contrat adapté à votre relation commerciale, avec les clauses qui protègent vos intérêts.",
+    included: [
+      "Cadrage de l'accord et des risques",
+      "Contrat complet : objet, prix, délais, responsabilité, résiliation, for",
+      "Un tour de corrections",
+    ],
+    needs: "Les points convenus avec votre partenaire et vos documents existants.",
+    note:
+      "La plupart des contrats commerciaux ne requièrent aucune forme, mais un écrit clair évite l'essentiel des litiges.",
+    faq: [
+      { q: "Et si l'autre partie propose son propre contrat ?", a: "Choisissez plutôt la relecture de contrat commercial." },
+      { q: "Contrat en anglais ?", a: "Possible, prix confirmé avant de commencer." },
+    ],
+  },
+  "relecture-contrat-commercial": {
+    name: "Relecture de contrat commercial",
+    short: "Risques signalés et corrections proposées, avant de signer (jusqu'à 20 pages).",
+    intro:
+      "Un client ou un fournisseur vous soumet son contrat ? Nous le relisons, signalons les clauses dangereuses et proposons des corrections à négocier.",
+    included: [
+      "Relecture complète (jusqu'à 20 pages)",
+      "Liste des risques classés par priorité",
+      "Corrections proposées en suivi des modifications",
+    ],
+    needs: "Le contrat (Word de préférence) et le contexte de la relation.",
+    note:
+      "Les clauses de responsabilité, de pénalité, de durée et de for sont celles qui coûtent le plus cher en cas de problème.",
+    faq: [
+      { q: "Plus de 20 pages ?", a: "Le prix est confirmé avant de commencer, par tranche de 20 pages." },
+      { q: "Contrat en anglais ?", a: "Oui, la relecture en anglais est possible." },
+    ],
+  },
+  "accord-de-confidentialite": {
+    name: "Accord de confidentialité (NDA)",
+    short: "Unilatéral ou réciproque, adapté à votre projet, avec une peine conventionnelle dissuasive.",
+    intro:
+      "Avant de présenter un projet, un savoir-faire ou des chiffres, protégez-les. Nous rédigeons un accord de confidentialité adapté à votre situation.",
+    included: [
+      "Choix entre accord unilatéral et réciproque",
+      "Définition précise des informations protégées",
+      "Peine conventionnelle et durée adaptées",
+    ],
+    needs: "Les parties, le projet et les informations à protéger.",
+    note:
+      "Une peine conventionnelle (art. 160 ss CO) évite de devoir prouver le montant exact du dommage en cas de violation.",
+    faq: [
+      { q: "Un modèle gratuit ne suffit-il pas ?", a: "Souvent, il protège mal ce qui compte pour vous ou prévoit une peine inapplicable." },
+      { q: "En anglais ?", a: "Oui, sans supplément pour un NDA standard." },
+    ],
+  },
+  "contrat-de-mandat-independant": {
+    name: "Contrat de mandat pour indépendant",
+    short: "Mission, honoraires, responsabilité, propriété intellectuelle : un contrat freelance solide.",
+    intro:
+      "Que vous soyez freelance ou que vous engagiez un indépendant, un contrat clair évite les malentendus et le risque de requalification en contrat de travail.",
+    included: [
+      "Contrat de mandat ou d'entreprise selon la mission",
+      "Clauses d'honoraires, de responsabilité et de propriété intellectuelle",
+      "Points de vigilance sur le statut d'indépendant",
+    ],
+    needs: "La mission, la durée, les honoraires et les parties.",
+    note:
+      "Le statut d'indépendant au sens de l'AVS dépend de la réalité de la collaboration, pas seulement du contrat. Le mandat peut être résilié en tout temps par chaque partie (art. 404 CO).",
+    faq: [
+      { q: "Mandat ou contrat d'entreprise ?", a: "Cela dépend du résultat promis. Nous choisissons la qualification adaptée et vous l'expliquons." },
+      { q: "Pour plusieurs clients ?", a: "Nous pouvons rédiger un modèle réutilisable ; précisez-le dans votre demande." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Entreprises · Employeurs
+  "contrat-de-travail-sur-mesure": {
+    name: "Contrat de travail sur mesure",
+    short: "Adapté au poste et à la convention collective, avec les clauses qui protègent l'entreprise.",
+    intro:
+      "Un contrat de travail bien rédigé évite la plupart des litiges : temps de travail, heures supplémentaires, vacances, non-concurrence, confidentialité. Nous le rédigeons pour le poste concerné.",
+    included: [
+      "Vérification de la convention collective applicable",
+      "Contrat complet adapté au poste",
+      "Clauses écrites indispensables : heures sup, non-concurrence, confidentialité",
+      "Un tour de corrections",
+    ],
+    needs: "Le poste, le taux d'activité, le salaire, la date d'entrée et vos pratiques internes.",
+    note:
+      "Certaines clauses ne valent que par écrit, comme l'exclusion de la compensation des heures supplémentaires (art. 321c CO) ou la non-concurrence (art. 340 CO). Une convention collective étendue s'impose même sans adhésion.",
+    faq: [
+      { q: "Un modèle pour plusieurs employés ?", a: "Oui, nous pouvons rédiger un modèle adapté à plusieurs postes similaires ; précisez-le dans votre demande." },
+      { q: "Et pour un apprenti ?", a: "Le contrat d'apprentissage suit un modèle officiel cantonal ; nous vous orientons." },
+    ],
+  },
+  "certificat-de-travail-employeur": {
+    name: "Rédaction de certificat de travail",
+    short: "Complet, exact et bienveillant, sans formule qui se retourne contre vous.",
+    intro:
+      "Rédiger un certificat de travail prend du temps et comporte des pièges : trop flatteur, il engage votre responsabilité ; trop sévère, il ouvre un litige. Nous le rédigeons à partir de vos indications.",
+    included: [
+      "Questionnaire rapide sur l'employé",
+      "Certificat complet ou attestation simple",
+      "Formulations conformes à la pratique",
+    ],
+    needs: "Le poste, les dates, les tâches principales et votre appréciation du travail et du comportement.",
+    note:
+      "Le certificat doit être complet, exact et bienveillant (art. 330a CO). Un certificat faussement élogieux peut engager votre responsabilité envers un futur employeur.",
+    faq: [
+      { q: "Certificat intermédiaire ?", a: "Oui, même prix." },
+      { q: "En combien de temps ?", a: "Deux jours ouvrés, ou 24 heures avec l'option express." },
+    ],
+  },
+  "licenciement-employeur": {
+    name: "Licenciement sécurisé",
+    short: "Délai vérifié, période de protection contrôlée, lettre de congé conforme.",
+    intro:
+      "Un licenciement mal préparé peut être nul ou abusif. Nous vérifions les délais et les périodes de protection, puis rédigeons la lettre de congé et la motivation écrite.",
+    included: [
+      "Vérification du délai de congé et de la date de fin",
+      "Contrôle des périodes de protection",
+      "Lettre de licenciement et motivation écrite",
+      "Points d'attention : solde de vacances, certificat, assurances",
+    ],
+    needs: "Le contrat de travail, la situation de l'employé (absences, grossesse…) et le motif.",
+    note:
+      "Un congé donné pendant une période de protection (maladie, accident, grossesse, service) est nul (art. 336c CO). Un congé abusif peut coûter jusqu'à six mois de salaire (art. 336a CO).",
+    faq: [
+      { q: "Et un licenciement immédiat ?", a: "Il exige de justes motifs (art. 337 CO), souvent précédés d'un avertissement. Nous évaluons le risque avant tout." },
+      { q: "Faut-il un entretien préalable ?", a: "Ce n'est pas obligatoire en général, mais recommandé. Nous vous donnons une trame." },
+    ],
+  },
+  "avertissement-employe": {
+    name: "Avertissement écrit",
+    short: "Faits, attentes, conséquences : un avertissement qui tient en cas de litige.",
+    intro:
+      "Retards répétés, comportement inadéquat, consignes ignorées : un avertissement écrit, précis et proportionné protège l'entreprise si la situation doit aboutir à un licenciement.",
+    included: [
+      "Description factuelle des manquements",
+      "Attentes claires et conséquences annoncées",
+      "Avertissement prêt à remettre",
+    ],
+    needs: "Les faits, les dates et les éventuels avertissements précédents.",
+    note:
+      "Pour un manquement de gravité moyenne, un licenciement immédiat suppose en principe un avertissement préalable resté sans effet.",
+    faq: [
+      { q: "L'employé doit-il signer ?", a: "Une signature pour réception est utile ; à défaut, remettez-le devant témoin." },
+      { q: "Combien de temps reste-t-il valable ?", a: "Il n'y a pas de durée fixe ; plus il est ancien, moins il pèse." },
+    ],
+  },
+  "reglement-du-personnel": {
+    name: "Règlement du personnel",
+    short: "Horaires, vacances, frais, télétravail, données : les règles claires pour toute l'équipe.",
+    intro:
+      "Dès quelques employés, un règlement du personnel évite de renégocier chaque règle. Nous le rédigeons pour votre entreprise, en cohérence avec vos contrats et la convention collective.",
+    included: [
+      "Questionnaire sur vos pratiques",
+      "Règlement complet : temps de travail, absences, frais, télétravail, informatique, données",
+      "Conseils de mise en place et de communication",
+      "Un tour de corrections",
+    ],
+    needs: "Vos contrats types, vos pratiques actuelles et la convention collective applicable.",
+    note:
+      "Le règlement doit être porté à la connaissance des employés et intégré aux contrats pour leur être opposable.",
+    faq: [
+      { q: "À partir de combien d'employés ?", a: "Dès deux ou trois employés, il fait gagner du temps et évite les inégalités de traitement." },
+      { q: "Peut-on le modifier ensuite ?", a: "Oui, en respectant les délais de modification des conditions de travail." },
+    ],
+  },
+
+  // ------------------------------------------------------------------ Entreprises · Conformité
+  "pack-conformite-nlpd": {
+    name: "Pack conformité nLPD",
+    short: "Politique de confidentialité, registre des traitements, clauses et mentions : votre mise en conformité.",
+    intro:
+      "Depuis le 1er septembre 2023, la nouvelle loi sur la protection des données s'applique à toutes les entreprises. Nous faisons l'inventaire de vos traitements et rédigeons les documents essentiels.",
+    included: [
+      "Inventaire guidé de vos traitements et sous-traitants",
+      "Politique de confidentialité du site et des clients",
+      "Registre des activités de traitement",
+      "Clauses pour vos contrats et vos sous-traitants",
+    ],
+    needs: "Votre site, vos outils (CRM, newsletter, comptabilité, cloud) et vos types de données.",
+    note:
+      "Vous devez informer les personnes de la collecte de leurs données (art. 19 nLPD). Les violations intentionnelles de certaines obligations exposent les responsables à une amende jusqu'à 250'000 CHF (art. 60 nLPD).",
+    faq: [
+      { q: "Le registre est-il obligatoire pour une PME ?", a: "Pas toujours sous 250 employés, mais il reste la meilleure preuve de conformité et il est souvent demandé par les clients." },
+      { q: "Et le RGPD européen ?", a: "S'il s'applique à vous, nous l'intégrons dans les documents." },
+    ],
+  },
+  "politique-de-confidentialite": {
+    name: "Politique de confidentialité du site",
+    short: "Conforme à la nLPD, adaptée à vos outils : formulaires, analytics, newsletter.",
+    intro:
+      "Votre site collecte des données via un formulaire, des statistiques ou une newsletter ? Il lui faut une politique de confidentialité exacte, adaptée à vos outils réels.",
+    included: [
+      "Inventaire des outils du site",
+      "Politique de confidentialité complète",
+      "Mentions légales du site",
+    ],
+    needs: "L'adresse du site et la liste de vos outils (hébergeur, analytics, formulaires, newsletter).",
+    note:
+      "Une politique générique qui ne correspond pas à vos traitements réels ne remplit pas le devoir d'information (art. 19 nLPD).",
+    faq: [
+      { q: "Et les cookies ?", a: "Nous indiquons si un bandeau est nécessaire selon vos outils." },
+      { q: "En plusieurs langues ?", a: "Traduction possible, prix confirmé avant de commencer." },
+    ],
+  },
+  "relecture-bail-commercial": {
+    name: "Relecture de bail commercial",
+    short: "Loyer, indexation, durée, remise en état : les points à négocier avant de signer.",
+    intro:
+      "Un bail commercial vous engage souvent pour cinq ans ou plus. Nous le relisons et vous signalons les clauses défavorables et les points à négocier.",
+    included: [
+      "Relecture complète du bail et des annexes",
+      "Points à négocier : loyer, indexation, durée, options, travaux, remise en état",
+      "Liste de questions à poser au bailleur",
+    ],
+    needs: "Le projet de bail, les annexes et l'état des lieux s'il existe.",
+    note:
+      "Le loyer initial d'un local commercial peut aussi être contesté dans les 30 jours (art. 270 CO). La limite de trois mois de garantie ne vaut que pour les logements.",
+    faq: [
+      { q: "Et si j'ai déjà signé ?", a: "La relecture vous indique vos droits et les délais à surveiller." },
+      { q: "Reprise de commerce ?", a: "Indiquez-le : la reprise de bail et le pas-de-porte sont analysés." },
+    ],
+  },
+  "convention-d-actionnaires": {
+    name: "Convention d'actionnaires ou d'associés",
+    short: "Gouvernance, sortie, préemption, non-concurrence : les règles entre associés.",
+    intro:
+      "Les statuts ne règlent pas tout. Une convention d'actionnaires ou d'associés organise les décisions, l'arrivée et le départ d'un associé, et protège chacun en cas de désaccord.",
+    included: [
+      "Entretien de cadrage",
+      "Convention complète : gouvernance, transfert, préemption, sortie, non-concurrence",
+      "Peines conventionnelles et mécanismes de blocage",
+      "Un tour de corrections",
+    ],
+    needs: "Les statuts, la répartition du capital et les points sensibles entre associés.",
+    note:
+      "La convention lie les associés entre eux, pas la société : les peines conventionnelles assurent son respect.",
+    faq: [
+      { q: "Plus de trois associés ?", a: "Le prix est confirmé avant de commencer." },
+      { q: "Faut-il un notaire ?", a: "Non pour la convention elle-même ; la modification des statuts d'une SA ou d'une Sàrl requiert un acte authentique." },
+    ],
+  },
+  "statuts-d-association": {
+    name: "Statuts d'association",
+    short: "Conformes au Code civil, adaptés à votre projet : but, organes, membres, finances.",
+    intro:
+      "Club, association culturelle, projet de quartier : nous rédigeons des statuts clairs, conformes au Code civil, et le procès-verbal de l'assemblée constitutive.",
+    included: [
+      "Statuts complets",
+      "Procès-verbal de l'assemblée constitutive",
+      "Indications pour l'inscription au registre du commerce si nécessaire",
+    ],
+    needs: "Le but de l'association, les membres fondateurs et l'organisation souhaitée.",
+    note:
+      "Les statuts doivent être écrits et indiquer le but, les ressources et l'organisation de l'association (art. 60 CC).",
+    faq: [
+      { q: "L'inscription au registre du commerce est-elle obligatoire ?", a: "Seulement dans certains cas (activité commerciale, révision obligatoire). Nous vous le précisons." },
+      { q: "Peut-on modifier les statuts plus tard ?", a: "Oui, par décision de l'assemblée générale." },
+    ],
+  },
+};
+
+export const SERVICE_TEXT_FR = { services, categories };

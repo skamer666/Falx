@@ -155,7 +155,7 @@ In der Praxis entsteht das Hauptrisiko durch einen Vorfall (Datenleck, Hackerang
 
 ## DSG-konform werden, ohne Wochen zu verlieren
 
-Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Analyse Ihrer Bearbeitungen. Das Verfassen Ihrer Datenschutzerklärung, die Prüfung Ihrer Auftragsbearbeitungsverträge oder ein Ablauf für Datenpannen gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. Denken Sie auch daran, Ihre [AGB](/de/guide/cgv-suisses-guide) und Ihre [Arbeitsverträge](/de/guide/contrat-de-travail-suisse-pme) zu aktualisieren. [Formeln ansehen](/de/#offre) oder [kostenlosen Rückruf anfordern](/de/contact).
+Dieser Leitfaden stellt allgemeine Grundsätze dar und ersetzt keine Analyse Ihrer Bearbeitungen. Das Verfassen Ihrer Datenschutzerklärung, die Prüfung Ihrer Auftragsbearbeitungsverträge oder ein Ablauf für Datenpannen gehören zu den Anliegen, die das Thrax-Legal-Abo abdeckt. Denken Sie auch daran, Ihre [AGB](/de/guide/cgv-suisses-guide) und Ihre [Arbeitsverträge](/de/guide/contrat-de-travail-suisse-pme) zu aktualisieren. [Formeln ansehen](/de/entreprises#abonnement) oder [kostenlosen Rückruf anfordern](/de/contact).
 `;
 
 export default content;

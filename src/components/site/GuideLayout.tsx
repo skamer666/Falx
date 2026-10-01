@@ -193,7 +193,7 @@ export default function GuideLayout({
                 </nav>
               ) : null}
               <div className="article-body">{children}</div>
-              <GuideCta locale={locale} className="mt-12" />
+              <GuideCta locale={locale} articleSlug={article.slug} className="mt-12" />
             </Reveal>
           </Container>
         </section>

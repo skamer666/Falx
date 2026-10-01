@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { EXPRESS_PRICE, getService, serviceText } from "@/lib/services/catalog";
+import { priceLabel, vatLabel } from "@/lib/services/strings";
+import type { Lead } from "@/lib/account/model";
 import SubmitButton from "@/components/account/SubmitButton";
 import { ActionButton, AdminDenied, AdminShell, Card, Empty, FIELD, FIELD_LABEL, Flash, PageHeader } from "@/components/admin/parts";
 import { getAdminBadges } from "@/lib/account/admin-db";
@@ -113,6 +116,7 @@ export default async function AdminProspectsPage({
                       </span>
                       {lead.plan_interest ? <span className="text-xs text-text-muted">Intéressé par {PLAN_LABEL_FR[lead.plan_interest]}</span> : null}
                     </div>
+                    {lead.service ? <OrderBadge lead={lead} /> : null}
                     {lead.company ? <p className="text-sm text-text-muted">{lead.company}</p> : null}
                     <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                       <a href={`mailto:${lead.email}`} className="underline underline-offset-4">
@@ -161,5 +165,23 @@ export default async function AdminProspectsPage({
         </div>
       )}
     </AdminShell>
+  );
+}
+
+/** Commande à l'acte : prestation, prix, option express et date limite signalée. */
+function OrderBadge({ lead }: { lead: Lead }) {
+  const service = lead.service ? getService(lead.service) : undefined;
+  if (!service) return <p className="mt-1 text-sm font-medium">Commande : {lead.service}</p>;
+  return (
+    <p className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+      <span className="rounded-full bg-text px-2.5 py-0.5 text-xs font-semibold text-bg">Commande</span>
+      <span className="font-semibold">{serviceText("fr", service.slug).name}</span>
+      <span className="text-text-muted">
+        {priceLabel("fr", service.price, service.from)} {vatLabel("fr", service.audience)}
+        {lead.express ? ` + express ${priceLabel("fr", EXPRESS_PRICE)}` : ""}
+      </span>
+      {lead.express ? <span className="rounded-full bg-danger-soft px-2.5 py-0.5 text-xs font-semibold text-danger">EXPRESS 24 h</span> : null}
+      {lead.deadline ? <span className="text-xs font-medium text-danger">Date limite : {lead.deadline}</span> : null}
+    </p>
   );
 }

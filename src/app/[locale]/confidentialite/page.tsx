@@ -128,6 +128,19 @@ function Fr() {
           mois, ou plus tôt sur demande.
         </li>
         <li>
+          Si vous <strong>commandez une prestation</strong>&nbsp;: votre nom, votre
+          adresse email, votre téléphone et votre entreprise (facultatifs), la
+          prestation choisie, la description de votre situation, une éventuelle
+          date limite et les documents que vous nous envoyez ensuite, pour
+          vérifier l’absence de conflit d’intérêts, vous confirmer le prix et
+          fournir la prestation. Selon votre situation, ces informations peuvent
+          contenir des données sensibles (par exemple de santé, en cas de
+          licenciement pendant une maladie)&nbsp;: ne nous transmettez que ce
+          qui est nécessaire. Les commandes non confirmées sont supprimées au
+          plus tard après 12 mois&nbsp;; les dossiers traités sont conservés
+          selon la durée indiquée plus bas.
+        </li>
+        <li>
           Les <strong>tentatives de connexion</strong> (adresse email saisie,
           adresse IP, date), conservées sept jours pour bloquer les tentatives
           d’intrusion.
@@ -345,6 +358,19 @@ function De() {
           oder auf Wunsch früher gelöscht.
         </li>
         <li>
+          Wenn Sie <strong>eine Leistung bestellen</strong>: Ihr Name, Ihre
+          E-Mail-Adresse, Ihre Telefonnummer und Ihr Unternehmen (freiwillig),
+          die gewählte Leistung, die Beschreibung Ihrer Situation, eine
+          allfällige Frist und die Unterlagen, die Sie uns danach senden, um
+          Interessenkonflikte auszuschliessen, Ihnen den Preis zu bestätigen
+          und die Leistung zu erbringen. Je nach Situation können diese
+          Angaben besonders schützenswerte Daten enthalten (etwa
+          Gesundheitsdaten bei einer Kündigung während einer Krankheit):
+          Übermitteln Sie uns nur, was nötig ist. Nicht bestätigte
+          Bestellungen werden spätestens nach 12 Monaten gelöscht; bearbeitete
+          Dossiers werden gemäss der unten angegebenen Dauer aufbewahrt.
+        </li>
+        <li>
           <strong>Anmeldeversuche</strong> (eingegebene E-Mail-Adresse,
           IP-Adresse, Datum), die sieben Tage lang aufbewahrt werden, um
           Einbruchsversuche zu blockieren.
@@ -549,6 +575,17 @@ function En() {
           after 12 months at the latest, or sooner on request.
         </li>
         <li>
+          If you <strong>order a service</strong>: your name, email address,
+          phone number and company (optional), the chosen service, the
+          description of your situation, any deadline and the documents you
+          send us afterwards, to check for conflicts of interest, confirm the
+          price and provide the service. Depending on your situation, this
+          information may include sensitive data (for example health data, for
+          a dismissal during illness): only send us what is necessary.
+          Unconfirmed orders are deleted after 12 months at the latest;
+          completed matters are kept for the period stated below.
+        </li>
+        <li>
           <strong>Sign-in attempts</strong> (email address entered, IP
           address, date), kept for seven days to block intrusion attempts.
         </li>
@@ -746,6 +783,19 @@ function It() {
           e il messaggio che ci lasciate, per ricontattarvi. Le richieste
           rimaste senza seguito sono eliminate al più tardi dopo 12 mesi, o
           prima su richiesta.
+        </li>
+        <li>
+          Se <strong>ordinate una prestazione</strong>: il vostro nome,
+          indirizzo email, telefono e impresa (facoltativi), la prestazione
+          scelta, la descrizione della situazione, un&rsquo;eventuale scadenza
+          e i documenti che ci inviate in seguito, per verificare
+          l&rsquo;assenza di conflitti d&rsquo;interesse, confermarvi il prezzo
+          e fornire la prestazione. A seconda della situazione, queste
+          informazioni possono contenere dati degni di particolare protezione
+          (ad esempio dati sulla salute, in caso di licenziamento durante una
+          malattia): trasmetteteci solo ciò che è necessario. Gli ordini non
+          confermati sono cancellati al più tardi dopo 12 mesi; le pratiche
+          trattate sono conservate per la durata indicata più sotto.
         </li>
         <li>
           I <strong>tentativi di accesso</strong> (indirizzo email inserito,

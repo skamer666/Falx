@@ -177,7 +177,7 @@ L’esecuzione svizzera presuppone di regola un domicilio o una sede in Svizzera
 
 ## Serve aiuto per recuperare una fattura?
 
-Questa guida presenta principi generali e non sostituisce una consulenza adatta al vostro caso. La redazione di una diffida, l’accompagnamento di un’esecuzione o la negoziazione di un piano di pagamento rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. [Vedere le formule](/it/#offre) o [essere richiamati gratuitamente](/it/contact).
+Questa guida presenta principi generali e non sostituisce una consulenza adatta al vostro caso. La redazione di una diffida, l’accompagnamento di un’esecuzione o la negoziazione di un piano di pagamento rientrano nelle pratiche coperte dall’abbonamento Thrax Legal. [Vedere le formule](/it/entreprises#abonnement) o [essere richiamati gratuitamente](/it/contact).
 `;
 
 export default content;

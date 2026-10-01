@@ -75,13 +75,17 @@ function Fr() {
       <h2>1. Champ d’application et acceptation</h2>
       <p>
         Les présentes conditions générales (les «&nbsp;CGV&nbsp;») régissent tout
-        abonnement souscrit sur ce site et toute prestation fournie par
-        Thrax Legal. Ce service est réservé aux{" "}
-        <strong>indépendants et personnes morales</strong> (entreprises,
-        associations) qui agissent pour les besoins de leur activité
-        professionnelle. Il n’est pas destiné aux consommateurs. En créant un
-        compte et en cochant la case d’acceptation, le client confirme avoir
-        lu et accepté les CGV et agir à des fins professionnelles. Des
+        abonnement souscrit sur ce site, toute prestation à l’acte commandée
+        sur ce site et toute prestation fournie par Thrax Legal. Les{" "}
+        <strong>abonnements</strong> sont réservés aux indépendants et personnes
+        morales (entreprises, associations) qui agissent pour les besoins de
+        leur activité professionnelle. Les <strong>prestations à l’acte</strong>{" "}
+        sont ouvertes aux professionnels et aux <strong>consommateurs</strong>,
+        c’est-à-dire aux personnes physiques qui agissent à des fins privées&nbsp;;
+        les dispositions impératives qui protègent les consommateurs leur
+        restent acquises en tout état de cause. En créant un compte ou en
+        envoyant un formulaire de commande, et en cochant la case
+        d’acceptation, le client confirme avoir lu et accepté les CGV. Des
         conditions différentes du client ne s’appliquent pas, sauf acceptation
         écrite de Thrax Legal. L’identité et l’adresse de contact du prestataire figurent à l’article 14.
       </p>
@@ -154,6 +158,11 @@ function Fr() {
         jurisprudentielles) sont fournies à titre informatif, sans garantie
         d’exhaustivité, d’actualité ou d’applicabilité à un cas particulier,
         et ne constituent pas un conseil juridique personnalisé.
+      </p>
+      <p>
+        Pour une prestation à l’acte, le consentement à ce recours à
+        l’intelligence artificielle est donné en cochant la case prévue dans
+        le formulaire de commande, aux mêmes conditions.
       </p>
 
       <h2>4. Formules, volumes et prix</h2>
@@ -231,6 +240,21 @@ function Fr() {
         prestations fournies depuis l’étranger (notamment l’impôt sur les
         acquisitions) restent à sa charge.
       </p>
+      <p>
+        <strong>Prestations à l’acte.</strong> Chaque prestation à l’acte fait
+        l’objet d’une fiche sur ce site qui décrit son contenu, son prix fixe
+        et son délai de livraison indicatif. Les prix des prestations destinées
+        aux particuliers sont des <strong>prix finaux</strong>&nbsp;: aucun
+        montant ne s’y ajoute. Les prix des prestations destinées aux
+        entreprises s’entendent hors TVA, selon le paragraphe précédent. Un
+        prix indiqué «&nbsp;dès&nbsp;» est confirmé par écrit après analyse de
+        la situation, avant tout paiement. L’option express (49&nbsp;CHF)
+        ramène le délai de livraison à 24 heures ouvrées, lorsqu’elle est
+        proposée. Chaque prestation comprend un tour de corrections demandé
+        dans les 14 jours suivant la livraison&nbsp;; un travail qui sort du
+        contenu décrit fait l’objet d’une offre séparée, que le client est libre
+        de refuser.
+      </p>
 
       <h2>5. Conclusion du contrat en ligne</h2>
       <p>
@@ -248,6 +272,17 @@ function Fr() {
         indemnité de part ni d’autre. Les CGV applicables au moment de la
         souscription peuvent être consultées et imprimées sur cette page&nbsp;;
         le client est invité à les conserver.
+      </p>
+      <p>
+        <strong>Prestations à l’acte.</strong> Pour une prestation à l’acte,
+        le contrat se conclut par étapes&nbsp;: (1) le client remplit le
+        formulaire de commande de la prestation et accepte les CGV&nbsp;; (2) Thrax
+        Legal lui confirme sans délai la réception de sa demande par email&nbsp;;
+        (3) après avoir vérifié que la prestation convient à la situation et
+        l’absence de conflit d’intérêts, Thrax Legal confirme par écrit le
+        prix et le délai, ou décline la demande&nbsp;; (4) le contrat est conclu à
+        la réception du paiement du prix confirmé. L’envoi du formulaire
+        n’engage le client à aucun paiement.
       </p>
 
       <h2>6. Durée, paiement et prix bloqué</h2>
@@ -289,6 +324,11 @@ function Fr() {
         reprend à la fin de la période demandée, sur paiement de la période
         suivante.
       </p>
+      <p>
+        Le prix d’une prestation à l’acte est payable d’avance, après la
+        confirmation visée à l’article 5, par TWINT, facture QR ou un autre
+        moyen convenu.
+      </p>
 
       <h2>7. Délais de traitement</h2>
       <p>
@@ -304,6 +344,11 @@ function Fr() {
         objectifs de service&nbsp;; un dépassement ne donne droit qu’à un
         traitement prioritaire, sans préjudice de l’article 11 en cas de
         faute.
+      </p>
+      <p>
+        Le délai de livraison d’une prestation à l’acte est celui indiqué sur
+        sa fiche ou dans la confirmation écrite. Il court dès la réception du
+        paiement et de toutes les informations et documents nécessaires.
       </p>
 
       <h2>8. Obligations du client</h2>
@@ -374,6 +419,15 @@ function Fr() {
         l’article 3 ou à l’article 4, Thrax Legal en informe le client avant
         tout traitement et l’oriente vers un avocat plutôt que de facturer
         une prestation inadaptée.
+      </p>
+      <p>
+        <strong>Prestations à l’acte.</strong> Le client peut renoncer à une
+        prestation à l’acte en tout temps (art. 404 CO). S’il y renonce avant
+        le début du travail, le prix payé lui est intégralement remboursé.
+        S’il y renonce ensuite, le prix reste dû pour le travail déjà
+        effectué, et le solde lui est remboursé. Si Thrax Legal ne peut pas
+        fournir le livrable pour une raison qui ne tient pas au client, le
+        prix est intégralement remboursé.
       </p>
 
       <h2>11. Responsabilité</h2>
@@ -483,6 +537,13 @@ function Fr() {
         leur exécution relève de la compétence exclusive des tribunaux
         ordinaires du canton de <strong>Vaud</strong>, à Lausanne.
       </p>
+      <p>
+        Si le client est un consommateur, les dispositions impératives du
+        droit suisse en sa faveur sont réservées&nbsp;: il peut notamment agir
+        devant le tribunal de son domicile ou de celui du prestataire, et le
+        prestataire ne peut agir que devant le tribunal du domicile du
+        consommateur (art. 32 et 35 du Code de procédure civile).
+      </p>
     </>
   );
 }
@@ -493,15 +554,19 @@ function De() {
       <h2>1. Geltungsbereich und Annahme</h2>
       <p>
         Diese Allgemeinen Geschäftsbedingungen (die «&nbsp;AGB&nbsp;») regeln jedes
-        auf dieser Website abgeschlossene Abonnement und jede von Thrax Legal
-        erbrachte Leistung. Dieses Angebot richtet sich an{" "}
-        <strong>Selbstständige und juristische Personen</strong> (Unternehmen,
-        Vereine), die zu beruflichen Zwecken handeln. Es ist nicht für
-        Konsumentinnen und Konsumenten bestimmt. Mit der Erstellung eines
-        Kontos und dem Anklicken des Annahmefelds bestätigt der Kunde, die
-        AGB gelesen und akzeptiert zu haben und zu beruflichen Zwecken zu
-        handeln. Abweichende Bedingungen des Kunden gelten nur bei
-        schriftlicher Zustimmung von Thrax Legal. Die Identität und die Kontaktadresse des Anbieters stehen in Artikel 14.
+        auf dieser Website abgeschlossene Abonnement, jede auf dieser Website
+        bestellte Einzelleistung und jede von Thrax Legal erbrachte Leistung.
+        Die <strong>Abonnemente</strong> richten sich an Selbstständige und
+        juristische Personen (Unternehmen, Vereine), die zu beruflichen Zwecken
+        handeln. Die <strong>Einzelleistungen</strong> stehen Geschäftskunden
+        und <strong>Konsumentinnen und Konsumenten</strong> offen, also
+        natürlichen Personen, die zu privaten Zwecken handeln; die zwingenden
+        Bestimmungen zum Schutz der Konsumenten bleiben in jedem Fall
+        vorbehalten. Mit der Erstellung eines Kontos oder dem Absenden eines
+        Bestellformulars und dem Anklicken des Annahmefelds bestätigt der
+        Kunde, die AGB gelesen und akzeptiert zu haben. Abweichende
+        Bedingungen des Kunden gelten nur bei schriftlicher Zustimmung von
+        Thrax Legal. Die Identität und die Kontaktadresse des Anbieters stehen in Artikel 14.
       </p>
 
       <h2>2. Elektronische Kommunikation</h2>
@@ -576,6 +641,11 @@ function De() {
         Aktualität oder Anwendbarkeit auf einen Einzelfall, und stellen keine
         persönliche Rechtsberatung dar.
       </p>
+      <p>
+        Bei einer Einzelleistung wird die Einwilligung in diesen Einsatz
+        künstlicher Intelligenz durch Anklicken des entsprechenden Feldes im
+        Bestellformular erteilt, zu denselben Bedingungen.
+      </p>
 
       <h2>4. Formeln, Volumen und Preise</h2>
       <p>
@@ -619,6 +689,21 @@ function De() {
         beim Kunden geschuldete Abgaben auf aus dem Ausland erbrachte
         Leistungen (insbesondere die Bezugsteuer) gehen zu seinen Lasten.
       </p>
+      <p>
+        <strong>Einzelleistungen.</strong> Jede Einzelleistung wird auf dieser
+        Website in einem Beschrieb mit Inhalt, Fixpreis und unverbindlicher
+        Lieferfrist dargestellt. Die Preise der Leistungen für
+        Privatpersonen sind <strong>Endpreise</strong>: Es kommt kein Betrag
+        hinzu. Die Preise der Leistungen für Unternehmen verstehen sich
+        exklusive MWST gemäss dem vorstehenden Absatz. Ein mit «&nbsp;ab&nbsp;»
+        angegebener Preis wird nach Prüfung der Situation vor jeder Zahlung
+        schriftlich bestätigt. Die Express-Option (CHF&nbsp;49) verkürzt die
+        Lieferfrist auf 24 Arbeitsstunden, sofern sie angeboten wird. Jede
+        Leistung umfasst eine Korrekturrunde, die innert 14 Tagen nach
+        Lieferung verlangt wird; Arbeiten ausserhalb des beschriebenen
+        Inhalts sind Gegenstand einer separaten Offerte, die der Kunde
+        ablehnen kann.
+      </p>
 
       <h2>5. Online-Vertragsabschluss</h2>
       <p>
@@ -637,6 +722,17 @@ function De() {
         Entschädigung für beide Seiten ablehnen. Die bei Abschluss geltenden
         AGB können auf dieser Seite eingesehen und ausgedruckt werden; dem
         Kunden wird empfohlen, sie aufzubewahren.
+      </p>
+      <p>
+        <strong>Einzelleistungen.</strong> Bei einer Einzelleistung kommt der
+        Vertrag in Schritten zustande: (1) Der Kunde füllt das
+        Bestellformular aus und akzeptiert die AGB; (2) Thrax Legal bestätigt
+        den Eingang umgehend per E-Mail; (3) nach Prüfung, ob die Leistung
+        zur Situation passt und kein Interessenkonflikt besteht, bestätigt
+        Thrax Legal Preis und Frist schriftlich oder lehnt die Anfrage ab;
+        (4) der Vertrag kommt mit Eingang der Zahlung des bestätigten Preises
+        zustande. Das Absenden des Formulars verpflichtet den Kunden zu
+        keiner Zahlung.
       </p>
 
       <h2>6. Dauer, Zahlung und Preisbindung</h2>
@@ -678,6 +774,11 @@ function De() {
         läuft nach Ablauf der verlangten Frist gegen Zahlung der folgenden
         Periode weiter.
       </p>
+      <p>
+        Der Preis einer Einzelleistung ist nach der Bestätigung gemäss
+        Artikel 5 im Voraus zahlbar, per TWINT, QR-Rechnung oder einem
+        anderen vereinbarten Zahlungsmittel.
+      </p>
 
       <h2>7. Bearbeitungsfristen</h2>
       <p>
@@ -692,6 +793,12 @@ function De() {
         Westschweiz. Diese Fristen sind Serviceziele; eine Überschreitung
         begründet nur Anspruch auf bevorzugte Bearbeitung, unbeschadet von
         Artikel 11 bei Verschulden.
+      </p>
+      <p>
+        Die Lieferfrist einer Einzelleistung ist jene, die in ihrem Beschrieb
+        oder in der schriftlichen Bestätigung angegeben ist. Sie beginnt mit
+        dem Eingang der Zahlung und aller nötigen Informationen und
+        Unterlagen.
       </p>
 
       <h2>8. Pflichten des Kunden</h2>
@@ -764,6 +871,15 @@ function De() {
         3 oder Artikel 4 beschriebenen Bereich, informiert Thrax Legal den
         Kunden vor jeder Bearbeitung und verweist ihn an eine Anwältin oder
         einen Anwalt, statt eine ungeeignete Leistung zu verrechnen.
+      </p>
+      <p>
+        <strong>Einzelleistungen.</strong> Der Kunde kann jederzeit auf eine
+        Einzelleistung verzichten (Art. 404 OR). Verzichtet er vor Beginn der
+        Arbeit, wird ihm der bezahlte Preis vollständig zurückerstattet.
+        Verzichtet er danach, bleibt der Preis für die bereits geleistete
+        Arbeit geschuldet, und der Rest wird zurückerstattet. Kann Thrax
+        Legal das Ergebnis aus einem Grund nicht liefern, der nicht beim
+        Kunden liegt, wird der Preis vollständig zurückerstattet.
       </p>
 
       <h2>11. Haftung</h2>
@@ -876,6 +992,13 @@ function De() {
         oder ihre Erfüllung fällt in die ausschliessliche Zuständigkeit der
         ordentlichen Gerichte des Kantons <strong>Waadt</strong> in Lausanne.
       </p>
+      <p>
+        Ist der Kunde Konsument, bleiben die zwingenden Bestimmungen des
+        schweizerischen Rechts zu seinen Gunsten vorbehalten: Er kann
+        namentlich am Gericht seines Wohnsitzes oder des Anbieters klagen,
+        und der Anbieter kann nur am Gericht des Wohnsitzes des Konsumenten
+        klagen (Art. 32 und 35 der Zivilprozessordnung).
+      </p>
     </>
   );
 }
@@ -886,13 +1009,16 @@ function En() {
       <h2>1. Scope and acceptance</h2>
       <p>
         These terms and conditions (the &ldquo;Terms&rdquo;) govern every
-        subscription taken out on this site and every service provided by Thrax
-        Legal. The service is reserved for{" "}
-        <strong>self-employed individuals and legal entities</strong>{" "}
-        (companies, associations) acting for the purposes of their professional
-        activity. It is not intended for consumers. By creating an account and
-        ticking the acceptance box, the customer confirms that they have read
-        and accepted the Terms and that they act for professional purposes. The
+        subscription taken out on this site, every one-off service ordered on
+        this site and every service provided by Thrax Legal.{" "}
+        <strong>Subscriptions</strong> are reserved for self-employed
+        individuals and legal entities (companies, associations) acting for the
+        purposes of their professional activity. <strong>One-off services</strong>{" "}
+        are open to business customers and to <strong>consumers</strong>, i.e.
+        individuals acting for private purposes; the mandatory rules protecting
+        consumers remain applicable in all cases. By creating an account or
+        sending an order form, and ticking the acceptance box, the customer
+        confirms that they have read and accepted the Terms. The
         customer&rsquo;s own terms do not apply unless Thrax Legal accepts them
         in writing. The provider&rsquo;s identity and contact address are set out in section 14.
       </p>
@@ -964,6 +1090,11 @@ function En() {
         applicability to a particular case, and does not constitute
         personalised legal advice.
       </p>
+      <p>
+        For a one-off service, consent to this use of artificial intelligence
+        is given by ticking the box provided in the order form, on the same
+        terms.
+      </p>
 
       <h2>4. Plans, volumes and prices</h2>
       <p>
@@ -1005,6 +1136,19 @@ function En() {
         side on services supplied from abroad (in particular acquisition tax)
         remain for the customer&rsquo;s account.
       </p>
+      <p>
+        <strong>One-off services.</strong> Each one-off service has a page on
+        this site describing its content, fixed price and indicative delivery
+        time. Prices of services for individuals are <strong>final
+        prices</strong>: nothing is added. Prices of services for businesses
+        exclude VAT, as set out in the previous paragraph. A price shown as
+        &ldquo;from&rdquo; is confirmed in writing after the situation has
+        been assessed, before any payment. The express option (CHF&nbsp;49)
+        reduces delivery to 24 working hours where offered. Each service
+        includes one round of revisions requested within 14 days of
+        delivery; work outside the described content is subject to a separate
+        quote, which the customer is free to decline.
+      </p>
 
       <h2>5. Concluding the contract online</h2>
       <p>
@@ -1021,6 +1165,16 @@ function En() {
         compensation on either side. The Terms applicable when the subscription
         is taken out can be viewed and printed on this page; the customer is
         invited to keep a copy.
+      </p>
+      <p>
+        <strong>One-off services.</strong> For a one-off service, the contract
+        is concluded in steps: (1) the customer completes the order form and
+        accepts the Terms; (2) Thrax Legal promptly confirms receipt by email;
+        (3) after checking that the service fits the situation and that there
+        is no conflict of interest, Thrax Legal confirms the price and timing
+        in writing, or declines the request; (4) the contract is concluded upon
+        receipt of payment of the confirmed price. Sending the form does not
+        commit the customer to any payment.
       </p>
 
       <h2>6. Term, payment and locked price</h2>
@@ -1057,6 +1211,11 @@ function En() {
         subscription resumes at the end of the requested period, on payment of
         the following period.
       </p>
+      <p>
+        The price of a one-off service is payable in advance, after the
+        confirmation referred to in section 5, by TWINT, QR bill or another
+        agreed means.
+      </p>
 
       <h2>7. Turnaround times</h2>
       <p>
@@ -1069,6 +1228,11 @@ function En() {
         Saturdays, Sundays and public holidays in French-speaking Switzerland.
         These times are service targets; missing one only entitles the customer
         to priority handling, without prejudice to section 11 in case of fault.
+      </p>
+      <p>
+        The delivery time of a one-off service is the one stated on its page
+        or in the written confirmation. It runs from receipt of payment and of
+        all necessary information and documents.
       </p>
 
       <h2>8. Customer obligations</h2>
@@ -1137,6 +1301,15 @@ function En() {
         section 3 or section 4, Thrax Legal informs the customer before any work
         starts and refers them to a lawyer rather than billing an unsuitable
         service.
+      </p>
+      <p>
+        <strong>One-off services.</strong> The customer may withdraw from a
+        one-off service at any time (art. 404 CO). If they withdraw before work
+        begins, the price paid is refunded in full. If they withdraw
+        afterwards, the price remains due for the work already done and the
+        balance is refunded. If Thrax Legal cannot provide the deliverable for
+        a reason not attributable to the customer, the price is refunded in
+        full.
       </p>
 
       <h2>11. Liability</h2>
@@ -1238,6 +1411,13 @@ function En() {
         jurisdiction of the ordinary courts of the canton of{" "}
         <strong>Vaud</strong>, in Lausanne.
       </p>
+      <p>
+        If the customer is a consumer, the mandatory provisions of Swiss law
+        in their favour are reserved: in particular, they may sue before the
+        court of their domicile or that of the provider, and the provider may
+        only sue before the court of the consumer&rsquo;s domicile (art. 32
+        and 35 of the Civil Procedure Code).
+      </p>
     </>
   );
 }
@@ -1248,15 +1428,18 @@ function It() {
       <h2>1. Campo di applicazione e accettazione</h2>
       <p>
         Le presenti condizioni generali (le «&nbsp;CG&nbsp;») disciplinano ogni
-        abbonamento sottoscritto su questo sito e ogni prestazione fornita da
-        Thrax Legal. Il servizio è riservato a{" "}
-        <strong>indipendenti e persone giuridiche</strong> (aziende,
-        associazioni) che agiscono per le esigenze della propria attività
-        professionale. Non è destinato ai consumatori. Creando un account e
+        abbonamento sottoscritto su questo sito, ogni prestazione singola
+        ordinata su questo sito e ogni prestazione fornita da Thrax Legal. Gli{" "}
+        <strong>abbonamenti</strong> sono riservati a indipendenti e persone
+        giuridiche (aziende, associazioni) che agiscono per le esigenze della
+        propria attività professionale. Le <strong>prestazioni singole</strong>{" "}
+        sono aperte ai clienti professionali e ai <strong>consumatori</strong>,
+        ossia alle persone fisiche che agiscono per fini privati; le
+        disposizioni imperative a tutela dei consumatori restano in ogni caso
+        riservate. Creando un account o inviando un modulo d&rsquo;ordine, e
         spuntando la casella di accettazione, il cliente conferma di aver letto
-        e accettato le CG e di agire per fini professionali. Condizioni
-        differenti del cliente non si applicano, salvo accettazione scritta di
-        Thrax Legal. L&rsquo;identità e l&rsquo;indirizzo di contatto del prestatore figurano all&rsquo;articolo 14.
+        e accettato le CG. Condizioni differenti del cliente non si applicano,
+        salvo accettazione scritta di Thrax Legal. L&rsquo;identità e l&rsquo;indirizzo di contatto del prestatore figurano all&rsquo;articolo 14.
       </p>
 
       <h2>2. Comunicazioni elettroniche</h2>
@@ -1326,6 +1509,11 @@ function It() {
         attualità o applicabilità a un caso particolare, e non costituiscono una
         consulenza giuridica personalizzata.
       </p>
+      <p>
+        Per una prestazione singola, il consenso a questo ricorso
+        all&rsquo;intelligenza artificiale è dato spuntando l&rsquo;apposita
+        casella del modulo d&rsquo;ordine, alle stesse condizioni.
+      </p>
 
       <h2>4. Formule, volumi e prezzi</h2>
       <p>
@@ -1369,6 +1557,21 @@ function It() {
         dall&rsquo;estero (in particolare l&rsquo;imposta sull&rsquo;acquisto) restano a suo
         carico.
       </p>
+      <p>
+        <strong>Prestazioni singole.</strong> Ogni prestazione singola è
+        descritta su questo sito in una scheda che ne indica il contenuto, il
+        prezzo fisso e il termine di consegna indicativo. I prezzi delle
+        prestazioni per i privati sono <strong>prezzi finali</strong>: non si
+        aggiunge alcun importo. I prezzi delle prestazioni per le imprese si
+        intendono IVA esclusa, secondo il paragrafo precedente. Un prezzo
+        indicato «&nbsp;da&nbsp;» è confermato per scritto dopo l&rsquo;analisi
+        della situazione, prima di qualsiasi pagamento. L&rsquo;opzione express
+        (CHF&nbsp;49) riduce il termine di consegna a 24 ore lavorative, se
+        proposta. Ogni prestazione comprende un giro di correzioni richiesto
+        entro 14 giorni dalla consegna; un lavoro che esce dal contenuto
+        descritto è oggetto di un&rsquo;offerta separata, che il cliente è
+        libero di rifiutare.
+      </p>
 
       <h2>5. Conclusione del contratto online</h2>
       <p>
@@ -1385,6 +1588,17 @@ function It() {
         attivazione, senza indennità da nessuna delle parti. Le CG applicabili
         al momento della sottoscrizione possono essere consultate e stampate su
         questa pagina; il cliente è invitato a conservarle.
+      </p>
+      <p>
+        <strong>Prestazioni singole.</strong> Per una prestazione singola il
+        contratto si conclude per fasi: (1) il cliente compila il modulo
+        d&rsquo;ordine e accetta le CG; (2) Thrax Legal conferma senza indugio
+        la ricezione per email; (3) dopo aver verificato che la prestazione
+        sia adatta alla situazione e l&rsquo;assenza di conflitti
+        d&rsquo;interesse, Thrax Legal conferma per scritto prezzo e termine,
+        o declina la richiesta; (4) il contratto è concluso alla ricezione del
+        pagamento del prezzo confermato. L&rsquo;invio del modulo non obbliga
+        il cliente ad alcun pagamento.
       </p>
 
       <h2>6. Durata, pagamento e prezzo bloccato</h2>
@@ -1423,6 +1637,11 @@ function It() {
         conservato. La sospensione non è una disdetta: l&rsquo;abbonamento riprende
         alla fine del periodo richiesto, con il pagamento del periodo successivo.
       </p>
+      <p>
+        Il prezzo di una prestazione singola è pagabile in anticipo, dopo la
+        conferma di cui all&rsquo;articolo 5, tramite TWINT, fattura QR o un
+        altro mezzo convenuto.
+      </p>
 
       <h2>7. Termini di trattamento</h2>
       <p>
@@ -1436,6 +1655,11 @@ function It() {
         domeniche e festivi nella Svizzera romanda. Questi termini sono
         obiettivi di servizio; un superamento dà diritto soltanto a un
         trattamento prioritario, fatto salvo l&rsquo;articolo 11 in caso di colpa.
+      </p>
+      <p>
+        Il termine di consegna di una prestazione singola è quello indicato
+        nella sua scheda o nella conferma scritta. Decorre dalla ricezione
+        del pagamento e di tutte le informazioni e i documenti necessari.
       </p>
 
       <h2>8. Obblighi del cliente</h2>
@@ -1505,6 +1729,15 @@ function It() {
         dell&rsquo;ambito descritto all&rsquo;articolo 3 o all&rsquo;articolo 4, Thrax Legal ne
         informa il cliente prima di ogni trattamento e lo orienta verso un
         avvocato anziché fatturare una prestazione inadatta.
+      </p>
+      <p>
+        <strong>Prestazioni singole.</strong> Il cliente può rinunciare a una
+        prestazione singola in ogni tempo (art. 404 CO). Se vi rinuncia prima
+        dell&rsquo;inizio del lavoro, il prezzo pagato gli è interamente
+        rimborsato. Se vi rinuncia dopo, il prezzo resta dovuto per il lavoro
+        già svolto e il saldo gli è rimborsato. Se Thrax Legal non può
+        fornire il risultato per un motivo non imputabile al cliente, il
+        prezzo è interamente rimborsato.
       </p>
 
       <h2>11. Responsabilità</h2>
@@ -1611,6 +1844,13 @@ function It() {
         conflitto di leggi. Ogni controversia relativa alla loro conclusione,
         interpretazione o esecuzione è di competenza esclusiva dei tribunali
         ordinari del cantone di <strong>Vaud</strong>, a Losanna.
+      </p>
+      <p>
+        Se il cliente è un consumatore, sono riservate le disposizioni
+        imperative del diritto svizzero a suo favore: in particolare può agire
+        davanti al tribunale del proprio domicilio o di quello del prestatore,
+        e il prestatore può agire solo davanti al tribunale del domicilio del
+        consumatore (art. 32 e 35 del Codice di procedura civile).
       </p>
     </>
   );

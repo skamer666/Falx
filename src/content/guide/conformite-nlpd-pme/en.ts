@@ -155,7 +155,7 @@ In practice, the main risk comes from an incident (leak, hacking) or a complaint
 
 ## Getting compliant without losing weeks
 
-This guide sets out general principles and does not replace an analysis of your processing. Drafting your privacy policy, reviewing your data processing agreements or setting up a breach procedure are among the matters covered by the Thrax Legal subscription. Remember to update your [terms and conditions](/en/guide/cgv-suisses-guide) and your [employment contracts](/en/guide/contrat-de-travail-suisse-pme) too. [See the plans](/en/#offre) or [request a free call back](/en/contact).
+This guide sets out general principles and does not replace an analysis of your processing. Drafting your privacy policy, reviewing your data processing agreements or setting up a breach procedure are among the matters covered by the Thrax Legal subscription. Remember to update your [terms and conditions](/en/guide/cgv-suisses-guide) and your [employment contracts](/en/guide/contrat-de-travail-suisse-pme) too. [See the plans](/en/entreprises#abonnement) or [request a free call back](/en/contact).
 `;
 
 export default content;

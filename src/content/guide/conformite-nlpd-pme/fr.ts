@@ -155,7 +155,7 @@ En pratique, le risque principal vient d’un incident (fuite, piratage) ou d’
 
 ## Se mettre en conformité sans y passer des semaines
 
-Ce guide présente des principes généraux et ne remplace pas une analyse de vos traitements. La rédaction de votre politique de confidentialité, la revue de vos contrats de sous-traitance ou la mise en place d’une procédure en cas de fuite font partie des dossiers couverts par l’abonnement Thrax Legal. Pensez aussi à mettre à jour vos [CGV](/fr/guide/cgv-suisses-guide) et vos [contrats de travail](/fr/guide/contrat-de-travail-suisse-pme). [Voir les formules](/fr/#offre) ou [être rappelé gratuitement](/fr/contact).
+Ce guide présente des principes généraux et ne remplace pas une analyse de vos traitements. La rédaction de votre politique de confidentialité, la revue de vos contrats de sous-traitance ou la mise en place d’une procédure en cas de fuite font partie des dossiers couverts par l’abonnement Thrax Legal. Pensez aussi à mettre à jour vos [CGV](/fr/guide/cgv-suisses-guide) et vos [contrats de travail](/fr/guide/contrat-de-travail-suisse-pme). [Voir les formules](/fr/entreprises#abonnement) ou [être rappelé gratuitement](/fr/contact).
 `;
 
 export default content;

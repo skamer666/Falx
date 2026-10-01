@@ -160,7 +160,7 @@ Notify the defect in writing and set a reasonable deadline. If there is no respo
 
 ## Have your lease reviewed before signing
 
-This guide sets out general principles and does not replace a review of your contract. Reviewing a commercial lease, negotiating the fit-out clauses or challenging a rent are among the matters covered by the Thrax Legal subscription. [See the plans](/en/#offre) or [request a free call back](/en/contact).
+This guide sets out general principles and does not replace a review of your contract. Reviewing a commercial lease, negotiating the fit-out clauses or challenging a rent are among the matters covered by the Thrax Legal subscription. [See the plans](/en/entreprises#abonnement) or [request a free call back](/en/contact).
 `;
 
 export default content;

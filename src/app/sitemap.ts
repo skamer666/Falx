@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
+import { SERVICES } from "@/lib/services/catalog";
 import { LOCALES, LOCALE_TAGS } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 
@@ -24,6 +25,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1,
         alternates: alternates(""),
       },
+      {
+        url: `${SITE_URL}/${locale}/particuliers`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.9,
+        alternates: alternates("/particuliers"),
+      },
+      {
+        url: `${SITE_URL}/${locale}/entreprises`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.9,
+        alternates: alternates("/entreprises"),
+      },
+      ...SERVICES.map((service) => ({
+        url: `${SITE_URL}/${locale}/${service.audience}/${service.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+        alternates: alternates(`/${service.audience}/${service.slug}`),
+      })),
       {
         url: `${SITE_URL}/${locale}/contact`,
         lastModified: now,

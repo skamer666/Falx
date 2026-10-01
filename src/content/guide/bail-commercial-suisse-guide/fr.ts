@@ -160,7 +160,7 @@ Signalez le défaut par écrit en fixant un délai raisonnable. Sans réaction, 
 
 ## Faire relire votre bail avant de signer
 
-Ce guide présente des principes généraux et ne remplace pas l’analyse de votre contrat. La relecture d’un bail commercial, la négociation des clauses de travaux ou la contestation d’un loyer font partie des dossiers couverts par l’abonnement Thrax Legal. [Voir les formules](/fr/#offre) ou [être rappelé gratuitement](/fr/contact).
+Ce guide présente des principes généraux et ne remplace pas l’analyse de votre contrat. La relecture d’un bail commercial, la négociation des clauses de travaux ou la contestation d’un loyer font partie des dossiers couverts par l’abonnement Thrax Legal. [Voir les formules](/fr/entreprises#abonnement) ou [être rappelé gratuitement](/fr/contact).
 `;
 
 export default content;
