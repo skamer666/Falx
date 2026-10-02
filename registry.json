@@ -1569,7 +1569,7 @@
    "category_name": "Contrats & CGV",
    "name": "Relecture de contrat commercial",
    "priority": 44,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/relecture-contrat-commercial",
    "guide": null,
    "content": {
@@ -1594,7 +1594,9 @@
     ]
    },
    "claimed_at": "2026-10-02T04:44:58Z",
-   "run": "20261002T0444Z-8230"
+   "run": "20261002T0444Z-8230",
+   "done_at": "2026-10-02T05:03:56Z",
+   "duration": 77.3
   },
   {
    "slug": "accord-de-confidentialite",

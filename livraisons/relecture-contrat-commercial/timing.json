@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.06,
+   "slot": 7.36,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.06,
+   "dur": 7.71,
+   "slot": 8.01,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.77,
+   "dur": 9.21,
+   "slot": 9.51,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 23.98,
+   "dur": 9.13,
+   "slot": 9.43,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 33.11,
+   "dur": 7.39,
+   "slot": 7.69,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 40.5,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 52.12,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 65.38,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 72.32,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.06,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 23.98,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 65.38,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 72.32,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 77.32,
+ "chromeShow": 7.06,
+ "chromeHide": 72.32,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.36,
+   "text": "Relecture de contrat commercial : un client ou un fournisseur vous soumet son contrat ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 7.61,
+   "end": 14.07,
+   "text": "Attention : son contrat est rédigé pour lui, pour protéger ses intérêts. Pas pour vous.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.32,
+   "end": 23.28,
+   "text": "Les clauses qui coûtent le plus cher en cas de problème : la responsabilité, les pénalités, la durée et le for.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 24.53,
+   "end": 32.41,
+   "text": "On relit tout le contrat, on classe les risques par priorité, et on propose des corrections en suivi des modifications.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 33.66,
+   "end": 39.8,
+   "text": "Vous négociez avec une liste claire, point par point. Et la relecture en anglais est possible.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 41.05,
+   "end": 51.42,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre relecture, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 52.67,
+   "end": 64.68,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 65.93,
+   "end": 71.62,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
