@@ -631,7 +631,7 @@
    "category_name": "Travail",
    "name": "Requête de conciliation (travail)",
    "priority": 18,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/requete-conciliation-travail",
    "guide": null,
    "content": {
@@ -656,7 +656,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:43:44Z",
-   "run": "20261001T2343Z-17281"
+   "run": "20261001T2343Z-17281",
+   "done_at": "2026-10-02T00:02:35Z",
+   "duration": 87.8
   },
   {
    "slug": "contestation-loyer-initial",
