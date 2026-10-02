@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.64,
+   "slot": 7.94,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.64,
+   "dur": 9.06,
+   "slot": 9.36,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.7,
+   "dur": 12.93,
+   "slot": 13.23,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 29.63,
+   "dur": 14.22,
+   "slot": 14.52,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 43.85,
+   "dur": 7.44,
+   "slot": 7.74,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 51.29,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 62.72,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 75.98,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 82.92,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.64,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 29.63,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 75.98,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 82.92,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 87.92,
+ "chromeShow": 7.64,
+ "chromeHide": 82.92,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.94,
+   "text": "Contrat de mandat pour indépendant : vous êtes freelance, ou vous engagez un indépendant ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.19,
+   "end": 16.0,
+   "text": "Sans contrat clair, le risque, c’est une requalification en contrat de travail. Et des malentendus sur la mission.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.25,
+   "end": 28.93,
+   "text": "Le statut d’indépendant au sens de l’AVS dépend de la réalité de la collaboration, pas seulement du contrat. Et le mandat peut être résilié en tout temps par chaque partie.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 30.18,
+   "end": 43.15,
+   "text": "On choisit le bon contrat, mandat ou contrat d’entreprise, on rédige les clauses d’honoraires, de responsabilité et de propriété intellectuelle, et on signale les points de vigilance sur le statut.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 44.4,
+   "end": 50.59,
+   "text": "Et pour plusieurs clients, on peut prévoir un modèle réutilisable. La collaboration reste claire.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 51.84,
+   "end": 62.02,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre contrat, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 63.27,
+   "end": 75.28,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 76.53,
+   "end": 82.22,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

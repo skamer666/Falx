@@ -1641,7 +1641,7 @@
    "category_name": "Contrats & CGV",
    "name": "Contrat de mandat pour indépendant",
    "priority": 46,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-de-mandat-independant",
    "guide": null,
    "content": {
@@ -1666,7 +1666,9 @@
     ]
    },
    "claimed_at": "2026-10-02T04:44:58Z",
-   "run": "20261002T0444Z-8230"
+   "run": "20261002T0444Z-8230",
+   "done_at": "2026-10-02T05:14:51Z",
+   "duration": 87.9
   },
   {
    "slug": "licenciement-employeur",
