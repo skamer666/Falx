@@ -1137,7 +1137,7 @@
    "category_name": "Impôts & assurances sociales",
    "name": "Réclamation contre une taxation",
    "priority": 32,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/reclamation-taxation-impots",
    "guide": null,
    "content": {
@@ -1160,7 +1160,9 @@
       "a": "L'autorité réexamine toute la taxation : nous vérifions ce risque avant de déposer."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T02:44:09Z",
+   "run": "20261002T0244Z-8025"
   },
   {
    "slug": "opposition-assurance-sociale",
@@ -1169,7 +1171,7 @@
    "category_name": "Impôts & assurances sociales",
    "name": "Opposition à une décision d'assurance sociale",
    "priority": 33,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/opposition-assurance-sociale",
    "guide": null,
    "content": {
@@ -1192,7 +1194,9 @@
       "a": "Un recours au tribunal cantonal est possible dans les 30 jours. Nous vous indiquons si un avocat est recommandé."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T02:44:09Z",
+   "run": "20261002T0244Z-8025"
   },
   {
    "slug": "mandat-pour-cause-d-inaptitude",
@@ -1201,7 +1205,7 @@
    "category_name": "Famille & avenir",
    "name": "Mandat pour cause d'inaptitude",
    "priority": 34,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/mandat-pour-cause-d-inaptitude",
    "guide": null,
    "content": {
@@ -1224,7 +1228,9 @@
       "a": "Oui, à tout moment, tant que vous êtes capable de discernement."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T02:44:09Z",
+   "run": "20261002T0244Z-8025"
   },
   {
    "slug": "directives-anticipees",
@@ -1233,7 +1239,7 @@
    "category_name": "Famille & avenir",
    "name": "Directives anticipées",
    "priority": 35,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/directives-anticipees",
    "guide": null,
    "content": {
@@ -1256,7 +1262,9 @@
       "a": "Non, la forme écrite, datée et signée suffit."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T02:44:09Z",
+   "run": "20261002T0244Z-8025"
   },
   {
    "slug": "convention-de-concubinage",
@@ -1265,7 +1273,7 @@
    "category_name": "Famille & avenir",
    "name": "Convention de concubinage",
    "priority": 36,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/convention-de-concubinage",
    "guide": null,
    "content": {
@@ -1288,7 +1296,9 @@
       "a": "Nous intégrons les points utiles et vous indiquons ce qui doit être réglé auprès de l'autorité (autorité parentale, entretien)."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T02:44:09Z",
+   "run": "20261002T0244Z-8025"
   },
   {
    "slug": "separation-divorce-amiable",
