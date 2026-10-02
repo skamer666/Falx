@@ -1859,7 +1859,7 @@
    "category_name": "Conformité & société",
    "name": "Convention d'actionnaires ou d'associés",
    "priority": 52,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/convention-d-actionnaires",
    "guide": null,
    "content": {
@@ -1883,7 +1883,9 @@
       "a": "Non pour la convention elle-même ; la modification des statuts d'une SA ou d'une Sàrl requiert un acte authentique."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T06:44:38Z",
+   "run": "20261002T0644Z-29773"
   },
   {
    "slug": "statuts-d-association",
@@ -1892,7 +1894,7 @@
    "category_name": "Conformité & société",
    "name": "Statuts d'association",
    "priority": 53,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/statuts-d-association",
    "guide": null,
    "content": {
@@ -1915,7 +1917,9 @@
       "a": "Oui, par décision de l'assemblée générale."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T06:44:38Z",
+   "run": "20261002T0644Z-29773"
   }
  ]
 }
