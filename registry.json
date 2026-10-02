@@ -1064,7 +1064,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Refus d'une assurance : réclamation",
    "priority": 30,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/refus-assurance",
    "guide": null,
    "content": {
@@ -1090,7 +1090,9 @@
     ]
    },
    "claimed_at": "2026-10-02T01:44:10Z",
-   "run": "20261002T0144Z-32099"
+   "run": "20261002T0144Z-32099",
+   "done_at": "2026-10-02T02:09:57Z",
+   "duration": 90.3
   },
   {
    "slug": "recuperer-argent-prete",
