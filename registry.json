@@ -884,7 +884,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Achat défectueux : faire valoir la garantie",
    "priority": 25,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/garantie-achat-defectueux",
    "guide": null,
    "content": {
@@ -909,7 +909,9 @@
     ]
    },
    "claimed_at": "2026-10-02T00:44:10Z",
-   "run": "20261002T0044Z-26343"
+   "run": "20261002T0044Z-26343",
+   "done_at": "2026-10-02T01:09:04Z",
+   "duration": 86.9
   },
   {
    "slug": "litige-artisan",

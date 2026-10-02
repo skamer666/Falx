@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 8.57,
+   "slot": 8.87,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 8.57,
+   "dur": 7.14,
+   "slot": 7.44,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 15.71,
+   "dur": 12.89,
+   "slot": 13.19,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 28.6,
+   "dur": 11.32,
+   "slot": 11.62,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 39.92,
+   "dur": 10.5,
+   "slot": 10.8,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 50.42,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 61.66,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 74.92,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 81.86,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 8.57,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 28.6,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 74.92,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 81.86,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 86.86,
+ "chromeShow": 8.57,
+ "chromeHide": 81.86,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.87,
+   "text": "Achat défectueux : un appareil, un meuble ou un véhicule en panne, et le vendeur se renvoie la balle ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 9.12,
+   "end": 15.01,
+   "text": "Le vendeur vous renvoie vers le fabricant ? Pourtant, la garantie légale le lie, lui.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.26,
+   "end": 27.9,
+   "text": "Deux règles : le défaut doit être signalé au vendeur dès sa découverte. Et pour un bien neuf acheté par un consommateur, la garantie de deux ans ne peut pas être raccourcie.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 29.15,
+   "end": 39.22,
+   "text": "On analyse la garantie légale et contractuelle, et on choisit la demande la plus favorable : réparation, échange, réduction, ou annulation.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 40.47,
+   "end": 49.72,
+   "text": "La mise en demeure est rédigée au vendeur, prête à envoyer. Et pour un achat en ligne à l’étranger, on vous indique le droit applicable.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 50.97,
+   "end": 60.96,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 62.21,
+   "end": 74.22,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 75.47,
+   "end": 81.16,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
