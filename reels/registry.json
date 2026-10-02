@@ -15,9 +15,10 @@
    },
    "duration": 28.5,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r001-maladie-licenciement.mp4",
-   "status": "ready",
-   "posted_at": null,
-   "stats": {}
+   "status": "scheduled",
+   "posted_at": "2026-10-03T11:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 386455075
   },
   {
    "id": "r002-garantie-loyer",
@@ -34,9 +35,10 @@
    },
    "duration": 34.0,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r002-garantie-loyer.mp4",
-   "status": "ready",
-   "posted_at": null,
-   "stats": {}
+   "status": "scheduled",
+   "posted_at": "2026-10-03T19:00 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 386455086
   },
   {
    "id": "r003-portefeuille-geneve",
@@ -53,9 +55,10 @@
    },
    "duration": 33.1,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r003-portefeuille-geneve.mp4",
-   "status": "ready",
-   "posted_at": null,
-   "stats": {}
+   "status": "scheduled",
+   "posted_at": "2026-10-02T12:15 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 386454750
   },
   {
    "id": "r004-heures-sup-lausanne",
@@ -72,9 +75,10 @@
    },
    "duration": 35.7,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r004-heures-sup-lausanne.mp4",
-   "status": "ready",
-   "posted_at": null,
-   "stats": {}
+   "status": "scheduled",
+   "posted_at": "2026-10-02T18:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 386455048
   },
   {
    "id": "r005-achat-en-ligne",
@@ -91,9 +95,10 @@
    },
    "duration": 31.4,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r005-achat-en-ligne.mp4",
-   "status": "ready",
-   "posted_at": null,
-   "stats": {}
+   "status": "scheduled",
+   "posted_at": "2026-10-02T20:45 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 386455060
   }
  ]
 }

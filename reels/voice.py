@@ -30,10 +30,10 @@ def load_spec(path):
     return m
 
 
-async def tts(text, rate, out_mp3):
+async def tts(text, rate, out_mp3, voice=VOICE):
     os.environ.setdefault("SSL_CERT_FILE", "/root/.ccr/ca-bundle.crt")
     proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
-    com = edge_tts.Communicate(text, VOICE, rate=rate, boundary="WordBoundary", proxy=proxy)
+    com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary", proxy=proxy)
     words = []
     with open(out_mp3, "wb") as f:
         async for ch in com.stream():
@@ -70,7 +70,7 @@ def main():
     raw = os.path.join(work, "assets", "vo-raw.mp3")
     for attempt in range(4):
         try:
-            words = asyncio.run(tts(text, rate, raw))
+            words = asyncio.run(tts(text, rate, raw, getattr(spec, "VOICE", VOICE)))
             if words:
                 break
         except Exception as e:  # network hiccup: retry

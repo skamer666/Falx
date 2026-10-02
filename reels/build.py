@@ -121,7 +121,7 @@ def main():
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width={W_}, height={H_}">
-    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>{'<script src="assets/vendor/three.min.js"></script>' if getattr(spec, "USE_THREE", False) else ""}
     <script src="assets/reel-data.js"></script>
     <script src="assets/lib.js"></script>
     <script src="assets/reel.js"></script>

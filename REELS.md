@@ -18,6 +18,22 @@ Retour du propriétaire sur les 2 pilotes : « trop technique, c'est chiant ». 
 6. **Chiffres concrets** : francs, jours, années, pourcentages, un calcul simple.
 7. **CTA court** : partager à quelqu'un (« Envoie ça à… »), « Thrax Legal, lien en bio ».
 
+## Créativité : tout peut changer (consigne du propriétaire)
+
+« Sois beaucoup plus créatif. Tu peux totalement tout refaire. » Rien n'est figé d'un Reel à l'autre :
+- **Personnage** : l'homme en costume avec le pin's suisse n'est plus obligatoire. Nouveaux personnages, figurines 3D,
+  marionnettes, objets qui parlent (une lettre de licenciement, une facture, une clé d'appartement), animaux…
+- **Voix** : changer de voix, de ton, de rythme ; dialogues à plusieurs voix (`VOICE` par spec).
+  Voix disponibles : fr-CH-FabriceNeural, fr-CH-ArianeNeural, fr-FR-RemyMultilingualNeural, fr-FR-HenriNeural,
+  fr-FR-DeniseNeural, fr-FR-EloiseNeural, fr-FR-VivienneMultilingualNeural, fr-BE-GerardNeural, fr-BE-CharlineNeural,
+  fr-CA-ThierryNeural, fr-CA-AntoineNeural, fr-CA-JeanNeural, fr-CA-SylvieNeural.
+- **Technique** : 2D, 3D (`USE_THREE = True` charge Three.js ; dessiner dans `R.on(t)` avec `preserveDrawingBuffer`),
+  papier découpé, faux écran de téléphone, faux JT, jeu vidéo rétro, documentaire, ASMR, POV, sketch, quiz…
+- **Narration** : histoires de clients, sketchs, débats, « POV », compte à rebours, enquête.
+  Une histoire de client est TOUJOURS fictive (Thrax Legal n'en publie pas de vraies) et l'écran le dit
+  (« histoire fictive inspirée de situations courantes ») : pas de faux témoignage, pas de faux avis.
+- Chaque jour : au moins 1 Reel avec une technique ou un personnage jamais utilisé avant.
+
 ## Vérité (non négociable)
 
 - Uniquement des règles de droit suisse vérifiées, article exact à l'écran et dans la légende ; nuances importantes dans la légende.
