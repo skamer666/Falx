@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 9.66,
+   "slot": 9.96,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 9.66,
+   "dur": 7.64,
+   "slot": 7.94,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 17.3,
+   "dur": 9.05,
+   "slot": 9.35,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.35,
+   "dur": 8.95,
+   "slot": 9.25,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 35.3,
+   "dur": 9.98,
+   "slot": 10.28,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 45.28,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 56.9,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 70.16,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 77.1,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 9.66,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.35,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 70.16,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 77.1,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 82.1,
+ "chromeShow": 9.66,
+ "chromeHide": 77.1,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 8.96,
+   "text": "Convention de concubinage : vous vivez en couple sans être mariés, avec un logement, des frais et des biens en commun ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 10.21,
+   "end": 16.6,
+   "text": "Les couples non mariés n’ont presque aucune règle légale qui les protège. Surtout en cas de séparation.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.85,
+   "end": 25.65,
+   "text": "Sans testament, aucun partenaire n’hérite de l’autre. Et le logement commun n’est pas protégé comme celui des époux.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 26.9,
+   "end": 34.6,
+   "text": "La convention règle le logement, les frais, les biens achetés ensemble, et ce qui se passe en cas de séparation.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 35.85,
+   "end": 44.58,
+   "text": "Elle est valable sans notaire, signée par vous deux. Et on vous recommande les compléments utiles : testament, prévoyance, assurance.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 45.83,
+   "end": 56.2,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre convention, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 57.45,
+   "end": 69.46,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 70.71,
+   "end": 76.4,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

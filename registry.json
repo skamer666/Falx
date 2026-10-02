@@ -1281,7 +1281,7 @@
    "category_name": "Famille & avenir",
    "name": "Convention de concubinage",
    "priority": 36,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/convention-de-concubinage",
    "guide": null,
    "content": {
@@ -1306,7 +1306,9 @@
     ]
    },
    "claimed_at": "2026-10-02T02:44:09Z",
-   "run": "20261002T0244Z-8025"
+   "run": "20261002T0244Z-8025",
+   "done_at": "2026-10-02T03:14:24Z",
+   "duration": 82.1
   },
   {
    "slug": "separation-divorce-amiable",
