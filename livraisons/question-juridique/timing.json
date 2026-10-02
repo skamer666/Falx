@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.97,
+   "slot": 8.27,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.97,
+   "dur": 6.8,
+   "slot": 7.1,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.77,
+   "dur": 11.44,
+   "slot": 11.74,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.21,
+   "dur": 10.13,
+   "slot": 10.43,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 36.34,
+   "dur": 10.09,
+   "slot": 10.39,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 46.43,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 57.86,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 71.12,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 78.06,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.97,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.21,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 71.12,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 78.06,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 83.06,
+ "chromeShow": 7.97,
+ "chromeHide": 78.06,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.27,
+   "text": "Question juridique : vous avez une question précise et vous voulez une réponse fiable, sans rendez-vous ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.52,
+   "end": 14.07,
+   "text": "Sur internet, les réponses se contredisent. Et beaucoup ne valent pas en Suisse.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.32,
+   "end": 25.51,
+   "text": "Une question rapide porte sur un point précis. Et si votre situation demande une analyse complète, on vous propose la prestation adaptée avant de commencer.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 26.76,
+   "end": 35.64,
+   "text": "Droit du travail, bail, consommation, contrats, poursuites, famille simple : posez votre question. Pour le pénal, on vous oriente.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 36.89,
+   "end": 45.73,
+   "text": "Vous recevez une réponse écrite, avec les bases légales et la prochaine étape conseillée. Et une précision sur la réponse est incluse.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 46.98,
+   "end": 57.16,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réponse, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 58.41,
+   "end": 70.42,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 71.67,
+   "end": 77.36,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
