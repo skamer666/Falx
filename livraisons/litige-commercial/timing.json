@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.06,
+   "slot": 7.36,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.06,
+   "dur": 8.02,
+   "slot": 8.32,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 15.08,
+   "dur": 7.91,
+   "slot": 8.21,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 22.99,
+   "dur": 9.98,
+   "slot": 10.28,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 32.97,
+   "dur": 11.77,
+   "slot": 12.07,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 44.74,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 56.17,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 69.43,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 76.37,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.06,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 22.99,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 69.43,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 76.37,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 81.37,
+ "chromeShow": 7.06,
+ "chromeHide": 76.37,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.36,
+   "text": "Litige commercial : livraison non conforme, prestation contestée, rupture de contrat ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 7.61,
+   "end": 14.38,
+   "text": "Sans écrit précis, votre position s’affaiblit. Et les échanges informels s’accumulent, sans trace claire.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.63,
+   "end": 22.29,
+   "text": "Les écrits comptent : un courrier précis, envoyé tôt, renforce votre position en cas de procédure.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 23.54,
+   "end": 32.27,
+   "text": "On analyse le contrat et les échanges, on évalue votre position et les risques, puis on rédige le courrier formel à la partie adverse.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 33.52,
+   "end": 44.04,
+   "text": "Vous restez l’interlocuteur, avec des arguments solides. Et si le litige va au tribunal, on vous oriente vers un avocat, avec un dossier propre.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 45.29,
+   "end": 55.47,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre courrier, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 56.72,
+   "end": 68.73,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 69.98,
+   "end": 75.67,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

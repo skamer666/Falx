@@ -1497,7 +1497,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Litige commercial : analyse et courrier",
    "priority": 42,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/litige-commercial",
    "guide": null,
    "content": {
@@ -1522,7 +1522,9 @@
     ]
    },
    "claimed_at": "2026-10-02T04:44:58Z",
-   "run": "20261002T0444Z-8230"
+   "run": "20261002T0444Z-8230",
+   "done_at": "2026-10-02T04:53:16Z",
+   "duration": 81.4
   },
   {
    "slug": "contrat-commercial-sur-mesure",
