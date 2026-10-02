@@ -1533,7 +1533,7 @@
    "category_name": "Contrats & CGV",
    "name": "Contrat commercial sur mesure",
    "priority": 43,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-commercial-sur-mesure",
    "guide": null,
    "content": {
@@ -1558,7 +1558,9 @@
     ]
    },
    "claimed_at": "2026-10-02T04:44:58Z",
-   "run": "20261002T0444Z-8230"
+   "run": "20261002T0444Z-8230",
+   "done_at": "2026-10-02T04:58:52Z",
+   "duration": 82.8
   },
   {
    "slug": "relecture-contrat-commercial",
