@@ -1028,7 +1028,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Vol annulé ou retardé : indemnisation",
    "priority": 29,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/vol-annule-retarde",
    "guide": null,
    "content": {
@@ -1053,7 +1053,9 @@
     ]
    },
    "claimed_at": "2026-10-02T01:44:10Z",
-   "run": "20261002T0144Z-32099"
+   "run": "20261002T0144Z-32099",
+   "done_at": "2026-10-02T02:03:38Z",
+   "duration": 86.8
   },
   {
    "slug": "refus-assurance",
