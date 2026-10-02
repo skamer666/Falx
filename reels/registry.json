@@ -55,10 +55,15 @@
    },
    "duration": 33.1,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r003-portefeuille-geneve.mp4",
-   "status": "scheduled",
-   "posted_at": "2026-10-02T12:15 Europe/Brussels",
+   "status": "published",
+   "posted_at": "2026-10-02T10:34 Europe/Brussels",
    "stats": {},
-   "metricool_id": 386454750
+   "metricool_id": 386458004,
+   "urls": {
+    "instagram": "https://www.instagram.com/reel/Dd_ETgJDwYj/",
+    "facebook": "https://facebook.com/reel/1861575825253824",
+    "youtube": "https://www.youtube.com/shorts/lx3r3Cx1CDc"
+   }
   },
   {
    "id": "r004-heures-sup-lausanne",
