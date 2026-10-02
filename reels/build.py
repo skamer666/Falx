@@ -35,7 +35,7 @@ class Words:
         self.cursor = 0
 
     def _find(self, phrase):
-        target = [norm(x) for x in phrase.split()]
+        target = [t for t in (norm(x) for x in phrase.split()) if t]
         n = len(target)
         for start in (self.cursor, 0):
             for i in range(start, len(self.words) - n + 1):

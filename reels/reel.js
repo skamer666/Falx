@@ -83,10 +83,12 @@
     const ch = c.chunks[k];
     const pop = TX.step(t - ch.t0 + 0.05, 0.55, 4);
     c.el.style.transform = `translate(-50%,0) scale(${0.85 + 0.15 * pop})`;
+    let cur = -1;  // exactly one active word: the latest one that has started
+    c.spans.forEach((sp) => { const i = +sp.dataset.i; if (t >= RE.words[i].t0 - 0.02) cur = i; });
     c.spans.forEach((sp) => {
-      const w = RE.words[+sp.dataset.i];
+      const i = +sp.dataset.i, w = RE.words[i];
       sp.classList.toggle("on", t >= w.t0 - 0.02);
-      sp.classList.toggle("now", t >= w.t0 - 0.02 && t < w.t1 + 0.05);
+      sp.classList.toggle("now", i === cur && t < w.t1 + 0.3);
     });
   }
 

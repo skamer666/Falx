@@ -8,6 +8,7 @@ PALETTES = {
     "navy":     dict(suit="#1d2a44", suitd="#141d31", shirt="#f4f4f2", tie="#c8102e", skin="#f1c7a5", skind="#d9a684", hair="#3a2a20"),
     "charcoal": dict(suit="#2b2d33", suitd="#1d1f24", shirt="#ffffff", tie="#da291c", skin="#efc19c", skind="#cf9e7c", hair="#1f1a17"),
     "mono":     dict(suit="#111113", suitd="#000000", shirt="#f5f5f7", tie="#f5f5f7", skin="#f5f5f7", skind="#c9c9cd", hair="#111113"),
+    "steel":    dict(suit="#5d6f8c", suitd="#475670", shirt="#ffffff", tie="#ff4d5e", skin="#f1c7a5", skind="#d9a684", hair="#2a211b"),
     "warm":     dict(suit="#283a5e", suitd="#1b2945", shirt="#fff8ee", tie="#e63946", skin="#e9b48f", skind="#c98f6c", hair="#5a3b28"),
 }
 

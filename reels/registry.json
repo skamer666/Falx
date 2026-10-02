@@ -1,0 +1,99 @@
+{
+ "reels": [
+  {
+   "id": "r001-maladie-licenciement",
+   "genome": {
+    "style": "flat-cartoon-pop",
+    "palette": "cream/navy/red",
+    "hook": "question-choc + 'Attends'",
+    "format": "regle-chiffree",
+    "topic": "travail/licenciement-maladie",
+    "mascot": "flat-talking",
+    "captions": "karaoke-jaune",
+    "music": "bounce",
+    "length": "~30s"
+   },
+   "duration": 28.5,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r001-maladie-licenciement.mp4",
+   "status": "ready",
+   "posted_at": null,
+   "stats": {}
+  },
+  {
+   "id": "r002-garantie-loyer",
+   "genome": {
+    "style": "noir-neon-dossier",
+    "palette": "black/cyan/red",
+    "hook": "situation-frustrante + 'Écoute bien'",
+    "format": "secret-peu-connu",
+    "topic": "bail/garantie-loyer",
+    "mascot": "line-neon",
+    "captions": "majuscules-cyan",
+    "music": "tension",
+    "length": "~35s"
+   },
+   "duration": 34.0,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r002-garantie-loyer.mp4",
+   "status": "ready",
+   "posted_at": null,
+   "stats": {}
+  },
+  {
+   "id": "r003-portefeuille-geneve",
+   "genome": {
+    "style": "collage-papier-carte-postale",
+    "palette": "papier/violet/rouge",
+    "hook": "dilemme-moral 'Tu fais quoi ?'",
+    "format": "storytime-choix-twist",
+    "topic": "vie-quotidienne/objet-trouve",
+    "mascot": "ink-charcoal",
+    "captions": "noir-surligne-violet",
+    "music": "lofi",
+    "length": "~35s"
+   },
+   "duration": 33.1,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r003-portefeuille-geneve.mp4",
+   "status": "ready",
+   "posted_at": null,
+   "stats": {}
+  },
+  {
+   "id": "r004-heures-sup-lausanne",
+   "genome": {
+    "style": "nuit-bureau-ticket-caisse",
+    "palette": "nuit/blanc/vert-argent",
+    "hook": "perte-d-argent-chiffree 'tu offres 6000 francs'",
+    "format": "storytime-calcul",
+    "topic": "travail/heures-sup",
+    "mascot": "flat-steel",
+    "captions": "blanc-surligne-vert",
+    "music": "drive",
+    "length": "~35s"
+   },
+   "duration": 35.7,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r004-heures-sup-lausanne.mp4",
+   "status": "ready",
+   "posted_at": null,
+   "stats": {}
+  },
+  {
+   "id": "r005-achat-en-ligne",
+   "genome": {
+    "style": "smartphone-chat-degrade",
+    "palette": "violet/rose/blanc",
+    "hook": "mythe-a-casser 'non ?'",
+    "format": "mythe-vs-realite",
+    "topic": "conso/achat-en-ligne",
+    "mascot": "flat-warm",
+    "captions": "blanc-surligne-jaune",
+    "music": "bounce",
+    "length": "~35s"
+   },
+   "duration": 31.4,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r005-achat-en-ligne.mp4",
+   "status": "ready",
+   "posted_at": null,
+   "stats": {}
+  }
+ ]
+}
