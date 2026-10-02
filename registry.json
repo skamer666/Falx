@@ -812,7 +812,7 @@
    "category_name": "Logement & voisinage",
    "name": "Litige de voisinage : courrier formel",
    "priority": 23,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/litige-de-voisinage",
    "guide": null,
    "content": {
@@ -837,7 +837,9 @@
     ]
    },
    "claimed_at": "2026-10-02T00:44:10Z",
-   "run": "20261002T0044Z-26343"
+   "run": "20261002T0044Z-26343",
+   "done_at": "2026-10-02T00:57:41Z",
+   "duration": 84.5
   },
   {
    "slug": "resiliation-de-contrat",

@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 8.3,
+   "slot": 8.6,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 8.3,
+   "dur": 5.07,
+   "slot": 5.37,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 13.37,
+   "dur": 13.09,
+   "slot": 13.39,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.46,
+   "dur": 11.14,
+   "slot": 11.44,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 37.6,
+   "dur": 10.24,
+   "slot": 10.54,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 47.84,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 59.27,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 72.53,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 79.47,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 8.3,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.46,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 72.53,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 79.47,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 84.47,
+ "chromeShow": 8.3,
+ "chromeHide": 79.47,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.6,
+   "text": "Litige de voisinage : bruit, plantations, limites, nuisances… et les discussions n’ont rien donné ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.85,
+   "end": 12.67,
+   "text": "La situation dure, la tension monte. Et rien ne bouge.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 13.92,
+   "end": 25.76,
+   "text": "Pourtant, la loi est claire : chacun doit s’abstenir de tout excès au détriment de ses voisins. Et pour les arbres et les plantations, les distances sont fixées par le droit cantonal.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 27.01,
+   "end": 36.9,
+   "text": "On analyse la situation et les règles applicables, on rédige un courrier formel au voisin ou à la régie, et on vous conseille pour constituer des preuves.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 38.15,
+   "end": 47.14,
+   "text": "Le ton est ferme mais courtois, pour ouvrir une solution plutôt qu’un conflit. Et si vous êtes locataire, on vous dit à qui écrire.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 48.39,
+   "end": 58.57,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre courrier, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 59.82,
+   "end": 71.83,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 73.08,
+   "end": 78.77,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
