@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.71,
+   "slot": 8.01,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.71,
+   "dur": 9.9,
+   "slot": 10.2,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 17.61,
+   "dur": 10.78,
+   "slot": 11.08,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 28.39,
+   "dur": 10.49,
+   "slot": 10.79,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 38.88,
+   "dur": 10.4,
+   "slot": 10.7,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 49.28,
+   "dur": 11.81,
+   "slot": 12.11,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 61.09,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 74.35,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 81.29,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.71,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 28.39,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 74.35,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 81.29,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 86.29,
+ "chromeShow": 7.71,
+ "chromeHide": 81.29,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.01,
+   "text": "Opposition à une décision d’assurance sociale : chômage, AVS, caisse maladie, accident ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.26,
+   "end": 16.91,
+   "text": "Jours de suspension, prestation refusée, rente trop basse… Une décision n’est pas une fatalité : vous pouvez faire opposition.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 18.16,
+   "end": 27.69,
+   "text": "L’opposition doit être formée dans les trente jours. Elle est en principe gratuite. Et pour l’assurance-invalidité, la procédure est différente.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 28.94,
+   "end": 38.18,
+   "text": "On analyse la décision et les règles applicables, on rassemble les arguments et les pièces, et on rédige votre opposition, prête à envoyer.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 39.43,
+   "end": 48.58,
+   "text": "Et si l’opposition est rejetée, un recours au tribunal cantonal est possible. On vous dit alors si un avocat est recommandé.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 49.83,
+   "end": 60.39,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre opposition, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 61.64,
+   "end": 73.65,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 74.9,
+   "end": 80.59,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

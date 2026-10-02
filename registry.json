@@ -1173,7 +1173,7 @@
    "category_name": "Impôts & assurances sociales",
    "name": "Opposition à une décision d'assurance sociale",
    "priority": 33,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/opposition-assurance-sociale",
    "guide": null,
    "content": {
@@ -1198,7 +1198,9 @@
     ]
    },
    "claimed_at": "2026-10-02T02:44:09Z",
-   "run": "20261002T0244Z-8025"
+   "run": "20261002T0244Z-8025",
+   "done_at": "2026-10-02T02:57:22Z",
+   "duration": 86.3
   },
   {
    "slug": "mandat-pour-cause-d-inaptitude",
