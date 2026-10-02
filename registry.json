@@ -1389,7 +1389,7 @@
    "category_name": "Sur mesure",
    "name": "Appel juridique de 20 minutes",
    "priority": 39,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/appel-juridique",
    "guide": null,
    "content": {
@@ -1414,7 +1414,9 @@
     ]
    },
    "claimed_at": "2026-10-02T03:43:48Z",
-   "run": "20261002T0343Z-18667"
+   "run": "20261002T0343Z-18667",
+   "done_at": "2026-10-02T04:02:55Z",
+   "duration": 78.7
   },
   {
    "slug": "lettre-juridique-sur-mesure",
