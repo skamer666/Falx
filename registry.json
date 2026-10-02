@@ -1317,7 +1317,7 @@
    "category_name": "Famille & avenir",
    "name": "Divorce à l'amiable sans enfants mineurs",
    "priority": 37,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/separation-divorce-amiable",
    "guide": null,
    "content": {
@@ -1340,7 +1340,9 @@
       "a": "Le prix vaut pour une situation simple, sans immobilier ni entreprise. Il est confirmé par écrit après le premier échange, avant tout paiement."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T03:43:48Z",
+   "run": "20261002T0343Z-18667"
   },
   {
    "slug": "question-juridique",
@@ -1349,7 +1351,7 @@
    "category_name": "Sur mesure",
    "name": "Question juridique : réponse écrite",
    "priority": 38,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/question-juridique",
    "guide": null,
    "content": {
@@ -1372,7 +1374,9 @@
       "a": "Droit du travail, bail, consommation, contrats, poursuites, famille simple. Pour le pénal, nous vous orientons vers un avocat."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T03:43:48Z",
+   "run": "20261002T0343Z-18667"
   },
   {
    "slug": "appel-juridique",
@@ -1381,7 +1385,7 @@
    "category_name": "Sur mesure",
    "name": "Appel juridique de 20 minutes",
    "priority": 39,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/appel-juridique",
    "guide": null,
    "content": {
@@ -1404,7 +1408,9 @@
       "a": "Le résumé écrit indique la prestation adaptée et son prix fixe."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T03:43:48Z",
+   "run": "20261002T0343Z-18667"
   },
   {
    "slug": "lettre-juridique-sur-mesure",
@@ -1413,7 +1419,7 @@
    "category_name": "Sur mesure",
    "name": "Lettre juridique sur mesure",
    "priority": 40,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/lettre-juridique-sur-mesure",
    "guide": null,
    "content": {
@@ -1436,7 +1442,9 @@
       "a": "Nous vous le disons avant de commencer et vous proposons le prix adapté."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T03:43:48Z",
+   "run": "20261002T0343Z-18667"
   },
   {
    "slug": "requete-de-mainlevee",
@@ -1445,7 +1453,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Requête de mainlevée",
    "priority": 41,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/requete-de-mainlevee",
    "guide": "https://thrax-legal.ch/fr/guide/mise-en-demeure-recouvrement-suisse",
    "content": {
@@ -1468,7 +1476,9 @@
       "a": "Vous, auprès du tribunal compétent. Nous vous indiquons lequel et comment."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T03:43:48Z",
+   "run": "20261002T0343Z-18667"
   },
   {
    "slug": "litige-commercial",
