@@ -1823,7 +1823,7 @@
    "category_name": "Conformité & société",
    "name": "Relecture de bail commercial",
    "priority": 51,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/relecture-bail-commercial",
    "guide": "https://thrax-legal.ch/fr/guide/bail-commercial-suisse-guide",
    "content": {
@@ -1848,7 +1848,9 @@
     ]
    },
    "claimed_at": "2026-10-02T05:45:07Z",
-   "run": "20261002T0545Z-14500"
+   "run": "20261002T0545Z-14500",
+   "done_at": "2026-10-02T06:17:39Z",
+   "duration": 83.8
   },
   {
    "slug": "convention-d-actionnaires",

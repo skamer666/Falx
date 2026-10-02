@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 6.61,
+   "slot": 6.91,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 6.61,
+   "dur": 7.64,
+   "slot": 7.94,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.25,
+   "dur": 11.65,
+   "slot": 11.95,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 25.9,
+   "dur": 11.23,
+   "slot": 11.53,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 37.13,
+   "dur": 9.83,
+   "slot": 10.13,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 46.96,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 58.58,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 71.84,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 78.78,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 6.61,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 25.9,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 71.84,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 78.78,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 83.78,
+ "chromeShow": 6.61,
+ "chromeHide": 78.78,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 5.91,
+   "text": "Relecture de bail commercial : vous allez louer un local pour votre entreprise ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 7.16,
+   "end": 13.55,
+   "text": "Un bail commercial vous engage souvent pour plusieurs années. Une clause mal négociée vous suit jusqu’au bout.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 14.8,
+   "end": 25.2,
+   "text": "Bon à savoir : le loyer initial d’un local commercial peut aussi être contesté. Et la limite de trois mois de garantie ne vaut que pour les logements.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 26.45,
+   "end": 36.43,
+   "text": "On relit le bail et ses annexes, et on vous signale les points à négocier : loyer, indexation, durée, options, travaux et remise en état.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 37.68,
+   "end": 46.26,
+   "text": "Vous recevez aussi la liste des questions à poser au bailleur. Et pour une reprise de commerce, le pas-de-porte est analysé.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 47.51,
+   "end": 57.88,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre relecture, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 59.13,
+   "end": 71.14,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 72.39,
+   "end": 78.08,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
