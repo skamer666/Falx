@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 10.53,
+   "slot": 10.83,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 10.53,
+   "dur": 6.37,
+   "slot": 6.67,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.9,
+   "dur": 14.81,
+   "slot": 15.11,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 31.71,
+   "dur": 11.82,
+   "slot": 12.12,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 43.53,
+   "dur": 13.46,
+   "slot": 13.76,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 56.99,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 68.42,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 81.68,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 88.62,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 10.53,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 31.71,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 81.68,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 88.62,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 93.62,
+ "chromeShow": 10.53,
+ "chromeHide": 88.62,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 9.83,
+   "text": "Contestation du loyer initial : vous venez d’emménager, et votre loyer est nettement plus élevé que celui du locataire précédent ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 11.08,
+   "end": 16.2,
+   "text": "Attendre, c’est payer ce loyer chaque mois. Et le délai pour agir est très court.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.45,
+   "end": 31.01,
+   "text": "Le délai est de trente jours dès la réception de l’objet loué. Et dans plusieurs cantons romands, le bailleur doit communiquer le loyer précédent sur une formule officielle : son absence peut aussi être invoquée.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 32.26,
+   "end": 42.83,
+   "text": "On analyse les conditions de contestation, on vérifie la formule officielle, et on rédige la requête à l’autorité de conciliation, prête à déposer.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 44.08,
+   "end": 56.29,
+   "text": "Est-ce risqué pour votre bail ? Le bailleur ne peut pas vous résilier pour ce motif pendant la procédure et les trois ans qui suivent. On vous explique aussi la procédure et les risques.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 57.54,
+   "end": 67.72,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre requête, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 68.97,
+   "end": 80.98,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 82.23,
+   "end": 87.92,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
