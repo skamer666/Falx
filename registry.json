@@ -848,7 +848,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Résilier un abonnement ou un contrat",
    "priority": 24,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/resiliation-de-contrat",
    "guide": null,
    "content": {
@@ -873,7 +873,9 @@
     ]
    },
    "claimed_at": "2026-10-02T00:44:10Z",
-   "run": "20261002T0044Z-26343"
+   "run": "20261002T0044Z-26343",
+   "done_at": "2026-10-02T01:03:30Z",
+   "duration": 88.4
   },
   {
    "slug": "garantie-achat-defectueux",
