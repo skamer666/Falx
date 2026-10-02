@@ -18,7 +18,13 @@
    "status": "scheduled",
    "posted_at": "2026-10-03T11:30 Europe/Brussels",
    "stats": {},
-   "metricool_id": 386455075
+   "metricool_id": 386469858,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   },
   {
    "id": "r002-garantie-loyer",
@@ -38,7 +44,13 @@
    "status": "scheduled",
    "posted_at": "2026-10-03T19:00 Europe/Brussels",
    "stats": {},
-   "metricool_id": 386455086
+   "metricool_id": 386469922,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   },
   {
    "id": "r003-portefeuille-geneve",
@@ -63,7 +75,15 @@
     "instagram": "https://www.instagram.com/reel/Dd_ETgJDwYj/",
     "facebook": "https://facebook.com/reel/1861575825253824",
     "youtube": "https://www.youtube.com/shorts/lx3r3Cx1CDc"
-   }
+   },
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ],
+   "tiktok_metricool_id": 386469642,
+   "tiktok_at": "2026-10-02T12:15 Europe/Brussels"
   },
   {
    "id": "r004-heures-sup-lausanne",
@@ -83,7 +103,13 @@
    "status": "scheduled",
    "posted_at": "2026-10-02T18:30 Europe/Brussels",
    "stats": {},
-   "metricool_id": 386455048
+   "metricool_id": 386469715,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   },
   {
    "id": "r005-achat-en-ligne",
@@ -103,7 +129,13 @@
    "status": "scheduled",
    "posted_at": "2026-10-02T20:45 Europe/Brussels",
    "stats": {},
-   "metricool_id": 386455060
+   "metricool_id": 386469783,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   }
  ]
 }
