@@ -956,7 +956,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Contester une facture",
    "priority": 27,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/contester-une-facture",
    "guide": null,
    "content": {
@@ -979,7 +979,9 @@
       "a": "Faites opposition dans les 10 jours. Voir la prestation « Poursuite injustifiée »."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T01:44:10Z",
+   "run": "20261002T0144Z-32099"
   },
   {
    "slug": "relecture-contrat-particulier",
@@ -988,7 +990,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Relecture d'un contrat avant signature",
    "priority": 28,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/relecture-contrat-particulier",
    "guide": null,
    "content": {
@@ -1011,7 +1013,9 @@
       "a": "Trois jours ouvrés, ou 24 heures avec l'option express."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T01:44:10Z",
+   "run": "20261002T0144Z-32099"
   },
   {
    "slug": "vol-annule-retarde",
@@ -1020,7 +1024,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Vol annulé ou retardé : indemnisation",
    "priority": 29,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/vol-annule-retarde",
    "guide": null,
    "content": {
@@ -1043,7 +1047,9 @@
       "a": "Une seule commande suffit pour toutes les personnes d'une même réservation."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T01:44:10Z",
+   "run": "20261002T0144Z-32099"
   },
   {
    "slug": "refus-assurance",
@@ -1052,7 +1058,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Refus d'une assurance : réclamation",
    "priority": 30,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/refus-assurance",
    "guide": null,
    "content": {
@@ -1076,7 +1082,9 @@
       "a": "Pas forcément : une exclusion doit être claire et s'interprète en faveur de l'assuré en cas de doute."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T01:44:10Z",
+   "run": "20261002T0144Z-32099"
   },
   {
    "slug": "recuperer-argent-prete",
@@ -1085,7 +1093,7 @@
    "category_name": "Argent & poursuites",
    "name": "Récupérer de l'argent prêté ou dû",
    "priority": 31,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/recuperer-argent-prete",
    "guide": null,
    "content": {
@@ -1108,7 +1116,9 @@
       "a": "Il faudra demander la mainlevée ou saisir le juge. Nous vous expliquons la suite et ses coûts."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T01:44:10Z",
+   "run": "20261002T0144Z-32099"
   },
   {
    "slug": "reclamation-taxation-impots",
