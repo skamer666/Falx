@@ -920,7 +920,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Litige avec un artisan ou une entreprise",
    "priority": 26,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/litige-artisan",
    "guide": null,
    "content": {
@@ -945,7 +945,9 @@
     ]
    },
    "claimed_at": "2026-10-02T00:44:10Z",
-   "run": "20261002T0044Z-26343"
+   "run": "20261002T0044Z-26343",
+   "done_at": "2026-10-02T01:15:07Z",
+   "duration": 87.8
   },
   {
    "slug": "contester-une-facture",
