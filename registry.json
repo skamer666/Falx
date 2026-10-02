@@ -776,7 +776,7 @@
    "category_name": "Logement & voisinage",
    "name": "Contester le décompte de charges",
    "priority": 22,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/decompte-de-charges",
    "guide": null,
    "content": {
@@ -801,7 +801,9 @@
     ]
    },
    "claimed_at": "2026-10-02T00:44:10Z",
-   "run": "20261002T0044Z-26343"
+   "run": "20261002T0044Z-26343",
+   "done_at": "2026-10-02T00:51:52Z",
+   "duration": 82.3
   },
   {
    "slug": "litige-de-voisinage",
