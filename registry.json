@@ -1896,7 +1896,7 @@
    "category_name": "Conformité & société",
    "name": "Statuts d'association",
    "priority": 53,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/statuts-d-association",
    "guide": null,
    "content": {
@@ -1921,7 +1921,9 @@
     ]
    },
    "claimed_at": "2026-10-02T06:44:38Z",
-   "run": "20261002T0644Z-29773"
+   "run": "20261002T0644Z-29773",
+   "done_at": "2026-10-02T06:59:49Z",
+   "duration": 85.9
   }
  ]
 }

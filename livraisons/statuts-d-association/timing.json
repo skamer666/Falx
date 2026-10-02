@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 9.83,
+   "slot": 10.13,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 9.83,
+   "dur": 8.37,
+   "slot": 8.67,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 18.2,
+   "dur": 9.32,
+   "slot": 9.62,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 27.52,
+   "dur": 12.6,
+   "slot": 12.9,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 40.12,
+   "dur": 9.15,
+   "slot": 9.45,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 49.27,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 60.7,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 73.96,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 80.9,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 9.83,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 27.52,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 73.96,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 80.9,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 85.9,
+ "chromeShow": 9.83,
+ "chromeHide": 80.9,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 9.13,
+   "text": "Statuts d’association : un club, une association culturelle, un projet de quartier… vous voulez créer votre association ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 10.38,
+   "end": 17.5,
+   "text": "Des statuts flous, et ce sont les conflits entre membres qui commencent. Sur le but, l’argent ou les décisions.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 18.75,
+   "end": 26.82,
+   "text": "La loi est claire : les statuts doivent être écrits et indiquer le but, les ressources et l’organisation de l’association.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 28.07,
+   "end": 39.42,
+   "text": "On rédige des statuts complets, conformes au Code civil, et le procès-verbal de l’assemblée constitutive. Avec les indications pour le registre du commerce, si nécessaire.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 40.67,
+   "end": 48.57,
+   "text": "But, organes, membres, finances : tout est clair dès le départ. Et l’assemblée générale pourra les modifier plus tard.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 49.82,
+   "end": 60.0,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos statuts, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 61.25,
+   "end": 73.26,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 74.51,
+   "end": 80.2,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
