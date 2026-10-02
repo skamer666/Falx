@@ -1605,7 +1605,7 @@
    "category_name": "Contrats & CGV",
    "name": "Accord de confidentialité (NDA)",
    "priority": 45,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/accord-de-confidentialite",
    "guide": null,
    "content": {
@@ -1630,7 +1630,9 @@
     ]
    },
    "claimed_at": "2026-10-02T04:44:58Z",
-   "run": "20261002T0444Z-8230"
+   "run": "20261002T0444Z-8230",
+   "done_at": "2026-10-02T05:09:17Z",
+   "duration": 81.0
   },
   {
    "slug": "contrat-de-mandat-independant",

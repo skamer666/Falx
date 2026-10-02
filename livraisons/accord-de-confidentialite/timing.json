@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.83,
+   "slot": 8.13,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.83,
+   "dur": 8.75,
+   "slot": 9.05,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.58,
+   "dur": 10.04,
+   "slot": 10.34,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.62,
+   "dur": 9.16,
+   "slot": 9.46,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 35.78,
+   "dur": 8.62,
+   "slot": 8.92,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 44.4,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 55.83,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 69.09,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 76.03,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.83,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.62,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 69.09,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 76.03,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 81.03,
+ "chromeShow": 7.83,
+ "chromeHide": 76.03,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.13,
+   "text": "Accord de confidentialité : avant de présenter un projet, un savoir-faire ou des chiffres ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.38,
+   "end": 15.88,
+   "text": "Un modèle gratuit, trouvé en ligne, protège souvent mal ce qui compte pour vous. Ou prévoit une peine inapplicable.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.13,
+   "end": 25.92,
+   "text": "Bon à savoir : une peine conventionnelle, bien rédigée, évite de devoir prouver le montant exact du dommage en cas de violation.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 27.17,
+   "end": 35.08,
+   "text": "Accord unilatéral ou réciproque selon votre situation, informations protégées définies précisément, peine et durée adaptées.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 36.33,
+   "end": 43.7,
+   "text": "Et en anglais, c’est possible aussi. Vous présentez votre projet, vos chiffres et votre savoir-faire, l’esprit tranquille.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 44.95,
+   "end": 55.13,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre accord, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 56.38,
+   "end": 68.39,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 69.64,
+   "end": 75.33,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
