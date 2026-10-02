@@ -992,7 +992,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Relecture d'un contrat avant signature",
    "priority": 28,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/relecture-contrat-particulier",
    "guide": null,
    "content": {
@@ -1017,7 +1017,9 @@
     ]
    },
    "claimed_at": "2026-10-02T01:44:10Z",
-   "run": "20261002T0144Z-32099"
+   "run": "20261002T0144Z-32099",
+   "done_at": "2026-10-02T01:57:48Z",
+   "duration": 82.1
   },
   {
    "slug": "vol-annule-retarde",
