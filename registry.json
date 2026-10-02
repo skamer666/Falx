@@ -1101,7 +1101,7 @@
    "category_name": "Argent & poursuites",
    "name": "Récupérer de l'argent prêté ou dû",
    "priority": 31,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/recuperer-argent-prete",
    "guide": null,
    "content": {
@@ -1126,7 +1126,9 @@
     ]
    },
    "claimed_at": "2026-10-02T01:44:10Z",
-   "run": "20261002T0144Z-32099"
+   "run": "20261002T0144Z-32099",
+   "done_at": "2026-10-02T02:15:46Z",
+   "duration": 85.1
   },
   {
    "slug": "reclamation-taxation-impots",
