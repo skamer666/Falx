@@ -776,7 +776,7 @@
    "category_name": "Logement & voisinage",
    "name": "Contester le décompte de charges",
    "priority": 22,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/decompte-de-charges",
    "guide": null,
    "content": {
@@ -799,7 +799,9 @@
       "a": "Souvent oui, dans certaines limites. Indiquez les années concernées dans votre demande."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T00:44:10Z",
+   "run": "20261002T0044Z-26343"
   },
   {
    "slug": "litige-de-voisinage",
@@ -808,7 +810,7 @@
    "category_name": "Logement & voisinage",
    "name": "Litige de voisinage : courrier formel",
    "priority": 23,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/litige-de-voisinage",
    "guide": null,
    "content": {
@@ -831,7 +833,9 @@
       "a": "Souvent à la régie, qui doit garantir un usage paisible du logement. Nous vous disons à qui adresser le courrier."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T00:44:10Z",
+   "run": "20261002T0044Z-26343"
   },
   {
    "slug": "resiliation-de-contrat",
@@ -840,7 +844,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Résilier un abonnement ou un contrat",
    "priority": 24,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/resiliation-de-contrat",
    "guide": null,
    "content": {
@@ -863,7 +867,9 @@
       "a": "Dans certains cas, oui. Décrivez votre situation : nous vérifions si un motif de résiliation immédiate existe."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T00:44:10Z",
+   "run": "20261002T0044Z-26343"
   },
   {
    "slug": "garantie-achat-defectueux",
@@ -872,7 +878,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Achat défectueux : faire valoir la garantie",
    "priority": 25,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/garantie-achat-defectueux",
    "guide": null,
    "content": {
@@ -895,7 +901,9 @@
       "a": "Les règles sont les mêmes pour un vendeur établi en Suisse. Pour un vendeur étranger, nous vous indiquons le droit applicable."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T00:44:10Z",
+   "run": "20261002T0044Z-26343"
   },
   {
    "slug": "litige-artisan",
@@ -904,7 +912,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Litige avec un artisan ou une entreprise",
    "priority": 26,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/particuliers/litige-artisan",
    "guide": null,
    "content": {
@@ -927,7 +935,9 @@
       "a": "Nous en tenons compte : elle prévoit ses propres règles et délais pour les défauts."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T00:44:10Z",
+   "run": "20261002T0044Z-26343"
   },
   {
    "slug": "contester-une-facture",
