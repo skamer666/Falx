@@ -1461,7 +1461,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Requête de mainlevée",
    "priority": 41,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/requete-de-mainlevee",
    "guide": "https://thrax-legal.ch/fr/guide/mise-en-demeure-recouvrement-suisse",
    "content": {
@@ -1486,7 +1486,9 @@
     ]
    },
    "claimed_at": "2026-10-02T03:43:48Z",
-   "run": "20261002T0343Z-18667"
+   "run": "20261002T0343Z-18667",
+   "done_at": "2026-10-02T04:13:36Z",
+   "duration": 82.3
   },
   {
    "slug": "litige-commercial",
