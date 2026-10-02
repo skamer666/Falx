@@ -956,7 +956,7 @@
    "category_name": "Achats, contrats & voyages",
    "name": "Contester une facture",
    "priority": 27,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/contester-une-facture",
    "guide": null,
    "content": {
@@ -981,7 +981,9 @@
     ]
    },
    "claimed_at": "2026-10-02T01:44:10Z",
-   "run": "20261002T0144Z-32099"
+   "run": "20261002T0144Z-32099",
+   "done_at": "2026-10-02T01:52:13Z",
+   "duration": 85.4
   },
   {
    "slug": "relecture-contrat-particulier",
