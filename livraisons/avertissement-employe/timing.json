@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.49,
+   "slot": 7.79,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.49,
+   "dur": 7.9,
+   "slot": 8.2,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 15.39,
+   "dur": 9.55,
+   "slot": 9.85,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 24.94,
+   "dur": 7.58,
+   "slot": 7.88,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 32.52,
+   "dur": 9.59,
+   "slot": 9.89,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 42.11,
+   "dur": 12.0,
+   "slot": 12.3,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 54.11,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 67.37,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 74.31,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.49,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 24.94,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 67.37,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 74.31,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 79.31,
+ "chromeShow": 7.49,
+ "chromeHide": 74.31,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 6.79,
+   "text": "Avertissement écrit : retards répétés, comportement inadéquat, consignes ignorées ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.04,
+   "end": 14.69,
+   "text": "Un avertissement oral ne laisse aucune trace. Et un écrit vague ne tient pas en cas de litige.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 15.94,
+   "end": 24.24,
+   "text": "Pour un manquement de gravité moyenne, un licenciement immédiat suppose en principe un avertissement préalable resté sans effet.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 25.49,
+   "end": 31.82,
+   "text": "On décrit les manquements de façon factuelle, on fixe des attentes claires et on annonce les conséquences.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 33.07,
+   "end": 41.41,
+   "text": "Il est prêt à remettre, à votre en-tête. Pour garder une preuve, faites-le signer pour réception, ou remettez-le devant témoin.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 42.66,
+   "end": 53.41,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre avertissement, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 54.66,
+   "end": 66.67,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 67.92,
+   "end": 73.61,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}

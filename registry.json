@@ -1714,7 +1714,7 @@
    "category_name": "Employeurs",
    "name": "Avertissement écrit",
    "priority": 48,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/avertissement-employe",
    "guide": null,
    "content": {
@@ -1739,7 +1739,9 @@
     ]
    },
    "claimed_at": "2026-10-02T05:45:07Z",
-   "run": "20261002T0545Z-14500"
+   "run": "20261002T0545Z-14500",
+   "done_at": "2026-10-02T05:59:20Z",
+   "duration": 79.3
   },
   {
    "slug": "reglement-du-personnel",
