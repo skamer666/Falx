@@ -1787,7 +1787,7 @@
    "category_name": "Conformité & société",
    "name": "Politique de confidentialité du site",
    "priority": 50,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/politique-de-confidentialite",
    "guide": "https://thrax-legal.ch/fr/guide/conformite-nlpd-pme",
    "content": {
@@ -1812,7 +1812,9 @@
     ]
    },
    "claimed_at": "2026-10-02T05:45:07Z",
-   "run": "20261002T0545Z-14500"
+   "run": "20261002T0545Z-14500",
+   "done_at": "2026-10-02T06:11:33Z",
+   "duration": 82.4
   },
   {
    "slug": "relecture-bail-commercial",

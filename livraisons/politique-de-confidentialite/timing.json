@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 9.19,
+   "slot": 9.49,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 9.19,
+   "dur": 8.66,
+   "slot": 8.96,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 17.85,
+   "dur": 8.54,
+   "slot": 8.84,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 26.39,
+   "dur": 9.51,
+   "slot": 9.81,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 35.9,
+   "dur": 9.65,
+   "slot": 9.95,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 45.55,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 57.17,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 70.43,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 77.37,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 9.19,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 26.39,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 70.43,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 77.37,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 82.37,
+ "chromeShow": 9.19,
+ "chromeHide": 77.37,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 8.49,
+   "text": "Politique de confidentialité : votre site collecte des données, via un formulaire, des statistiques ou une newsletter ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 9.74,
+   "end": 17.15,
+   "text": "Un modèle copié ailleurs décrit souvent des outils que vous n’utilisez pas. Et oublie ceux que vous utilisez.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 18.4,
+   "end": 25.69,
+   "text": "Une politique générique, qui ne correspond pas à vos traitements réels, ne remplit pas le devoir d’information.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 26.94,
+   "end": 35.2,
+   "text": "On fait l’inventaire des outils de votre site, puis on rédige une politique de confidentialité complète, et les mentions légales.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 36.45,
+   "end": 44.85,
+   "text": "Hébergeur, analytics, formulaires, newsletter : tout est couvert. Et on vous dit si un bandeau cookies est nécessaire.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 46.1,
+   "end": 56.47,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre politique, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 57.72,
+   "end": 69.73,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 70.98,
+   "end": 76.67,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
