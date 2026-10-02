@@ -740,7 +740,7 @@
    "category_name": "Logement & voisinage",
    "name": "Contester un congé ou prolonger le bail",
    "priority": 21,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/contestation-conge",
    "guide": null,
    "content": {
@@ -765,7 +765,9 @@
     ]
    },
    "claimed_at": "2026-10-01T23:43:44Z",
-   "run": "20261001T2343Z-17281"
+   "run": "20261001T2343Z-17281",
+   "done_at": "2026-10-02T00:21:30Z",
+   "duration": 91.5
   },
   {
    "slug": "decompte-de-charges",
