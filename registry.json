@@ -1245,7 +1245,7 @@
    "category_name": "Famille & avenir",
    "name": "Directives anticipées",
    "priority": 35,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/directives-anticipees",
    "guide": null,
    "content": {
@@ -1270,7 +1270,9 @@
     ]
    },
    "claimed_at": "2026-10-02T02:44:09Z",
-   "run": "20261002T0244Z-8025"
+   "run": "20261002T0244Z-8025",
+   "done_at": "2026-10-02T03:08:49Z",
+   "duration": 81.5
   },
   {
    "slug": "convention-de-concubinage",

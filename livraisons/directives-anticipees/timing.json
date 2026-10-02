@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 8.08,
+   "slot": 8.38,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 8.08,
+   "dur": 6.16,
+   "slot": 6.46,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.24,
+   "dur": 12.76,
+   "slot": 13.06,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 27.0,
+   "dur": 9.25,
+   "slot": 9.55,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 36.25,
+   "dur": 8.42,
+   "slot": 8.72,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 44.67,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 56.29,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 69.55,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 76.49,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 8.08,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 27.0,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 69.55,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 76.49,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 81.49,
+ "chromeShow": 8.08,
+ "chromeHide": 76.49,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.38,
+   "text": "Directives anticipées : quels traitements accepter ou refuser si vous ne pouvez plus vous exprimer ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.63,
+   "end": 13.54,
+   "text": "Sans directives, ce sont d’autres qui devront deviner ce que vous auriez voulu.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 14.79,
+   "end": 26.3,
+   "text": "Les directives doivent être écrites, datées et signées, sans notaire. Et le médecin doit les suivre, sauf si elles violent la loi ou ne correspondent plus à votre volonté présumée.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 27.55,
+   "end": 35.55,
+   "text": "On vous guide avec un questionnaire, on rédige vos directives en termes précis, et on désigne votre représentant thérapeutique.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 36.8,
+   "end": 43.97,
+   "text": "Vous pouvez ensuite les faire inscrire sur votre carte d’assuré. Et la personne de confiance saura quoi dire pour vous.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 45.22,
+   "end": 55.59,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos directives, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 56.84,
+   "end": 68.85,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 70.1,
+   "end": 75.79,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
