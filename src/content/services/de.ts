@@ -17,8 +17,8 @@ const categories: Record<CategoryId, CategoryText> = {
 
 const services: Record<string, ServiceText> = {
   "analyse-certificat-de-travail": {
-    name: "Analyse des Arbeitszeugnisses",
-    short: "Jede Formulierung Ihres Zeugnisses entschlüsselt: was Ihnen nützt, was Ihnen schadet, was fehlt.",
+    name: "Analyse Ihres Arbeitszeugnisses",
+    short: "Wir lesen Ihr Zeugnis so, wie es ein Personalverantwortlicher liest, und sagen Ihnen ehrlich, ob es Ihnen hilft oder schadet.",
     intro: "Ein Arbeitszeugnis kann positiv wirken und trotzdem Codes, Lücken oder Nuancen enthalten, die Ihre Bewerbungen bremsen. Wir analysieren es Satz für Satz und sagen Ihnen, was es Personalverantwortlichen wirklich sagt.",
     included: [
       "Prüfung jedes Satzes, inklusive Codes und Auslassungen",
@@ -34,8 +34,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "rectification-certificat-de-travail": {
-    name: "Arbeitszeugnis: Berichtigung verlangen",
-    short: "Analyse Ihres Zeugnisses und Brief an den Arbeitgeber mit den Umformulierungen, die Sie verlangen können.",
+    name: "Arbeitszeugnis berichtigen lassen",
+    short: "Wir finden die Sätze, die Ihnen schaden, und schreiben Ihrem Arbeitgeber, damit Sie eine neue Fassung erhalten.",
     intro: "Ihr Zeugnis enthält vage Formulierungen, Lücken oder Sätze, die Ihnen schaden? Wir analysieren es Satz für Satz und verfassen den Brief an Ihren Arbeitgeber mit den Umformulierungen, auf die Sie Anspruch haben.",
     included: [
       "Vollständige Analyse des Zeugnisses, inklusive Codes und Lücken",
@@ -51,8 +51,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-opposition": {
-    name: "Kündigung: Prüfung und Einsprache",
-    short: "Fristen, Sperrfristen, Missbrauch: Wir prüfen Ihre Kündigung und verfassen die Einsprache.",
+    name: "Gegen eine Kündigung vorgehen",
+    short: "Wir prüfen, ob Fristen und Sperrfristen eingehalten wurden, und verfassen Ihre Einsprache.",
     intro: "Sie wurden gerade entlassen und etwas scheint nicht richtig? Wir prüfen, ob die Kündigung die Fristen einhält, in eine Sperrfrist fällt oder missbräuchlich sein könnte, und verfassen Ihre schriftliche Einsprache.",
     included: [
       "Prüfung der Kündigungsfrist und des Enddatums",
@@ -68,8 +68,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-de-travail": {
-    name: "Prüfung des Arbeitsvertrags",
-    short: "Vor der Unterschrift: Probezeit, Überstunden, Konkurrenzverbot, Ferien, alles geprüft.",
+    name: "Arbeitsvertrag vor der Unterschrift prüfen",
+    short: "Wir lesen den ganzen Vertrag und zeigen Ihnen, was Sie verhandeln sollten, etwa die Probezeit oder ein Konkurrenzverbot.",
     intro: "Ihnen wird ein Vertrag vorgelegt und Sie wollen wissen, was Sie unterschreiben? Wir prüfen ihn und zeigen Ihnen ungünstige, ungewöhnliche oder nichtige Klauseln sowie Verhandlungsspielraum.",
     included: [
       "Vollständige Prüfung des Vertrags (bis 15 Seiten)",
@@ -85,8 +85,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "salaire-impaye": {
-    name: "Unbezahlter Lohn, Überstunden oder Ferien",
-    short: "Berechnung Ihrer Ansprüche und Mahnung an den Arbeitgeber mit Zahlungsfrist.",
+    name: "Ausstehenden Lohn, Überstunden oder Ferien einfordern",
+    short: "Wir berechnen, was Ihnen Ihr Arbeitgeber schuldet, und schicken ihm eine Mahnung mit Zahlungsfrist.",
     intro: "Verspäteter Lohn, nie bezahlte Überstunden, ignorierter Feriensaldo bei Vertragsende: Wir berechnen genau, was Ihnen zusteht, und verfassen die Mahnung an Ihren Arbeitgeber.",
     included: [
       "Detaillierte Berechnung (Lohn, Stunden, Ferien, 13. Monatslohn)",
@@ -103,7 +103,7 @@ const services: Record<string, ServiceText> = {
   },
   "lettre-de-demission": {
     name: "Kündigungsschreiben",
-    short: "Die richtige Frist, das richtige Enddatum, der Feriensaldo und das Arbeitszeugnis.",
+    short: "Ein Schreiben, das Ihre Kündigungsfrist einhält und Restferien und Arbeitszeugnis gleich mitregelt.",
     intro: "Eine falsch datierte Kündigung kann Sie einen Monatslohn kosten. Wir berechnen Ihre Frist und verfassen einen klaren Brief, der auch Ferien und Arbeitszeugnis regelt.",
     included: [
       "Berechnung der Kündigungsfrist und des genauen Enddatums",
@@ -118,8 +118,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-conciliation-travail": {
-    name: "Schlichtungsgesuch (Arbeit)",
-    short: "Ihr Gesuch, bereit zur Einreichung bei der Schlichtungsbehörde, mit geordneten Beilagen.",
+    name: "Schlichtungsgesuch (Arbeitsrecht)",
+    short: "Ihr Arbeitgeber reagiert nicht mehr? Wir bereiten das Gesuch vor, das Sie selbst einreichen, mit geordneten Belegen.",
     intro: "Ihr Arbeitgeber zahlt trotz Ihrer Briefe nicht? Das Verfahren vor dem Arbeitsgericht beginnt grundsätzlich mit einem Schlichtungsversuch. Wir verfassen Ihr Gesuch und erklären Ihnen den Ablauf der Verhandlung.",
     included: [
       "Schlichtungsgesuch mit bezifferten Rechtsbegehren",
@@ -135,7 +135,7 @@ const services: Record<string, ServiceText> = {
   },
   "baisse-de-loyer": {
     name: "Mietzinssenkung verlangen",
-    short: "Berechnung der Senkung, auf die Sie Anspruch haben, und versandbereiter Brief an den Vermieter.",
+    short: "Sinkt der hypothekarische Referenzzinssatz, kann auch Ihre Miete sinken. Wir berechnen den Betrag und schreiben dem Vermieter.",
     intro: "Sinkt der hypothekarische Referenzzinssatz, kann auch Ihre Miete sinken. Wir prüfen Ihren Anspruch, berechnen die mögliche Senkung und verfassen den Brief an Vermieter oder Verwaltung.",
     included: [
       "Prüfung des Referenzzinssatzes und der letzten Mietzinsanpassung",
@@ -151,8 +151,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-loyer-initial": {
-    name: "Anfechtung des Anfangsmietzinses",
-    short: "Missbräuchliche Anfangsmiete? Sie haben 30 Tage: Analyse und einreichebereites Gesuch.",
+    name: "Anfangsmietzins anfechten",
+    short: "Ihre neue Miete scheint missbräuchlich? Sie haben 30 Tage ab Übernahme der Wohnung. Wir prüfen und bereiten das Gesuch vor.",
     intro: "Sie sind eben eingezogen und die Miete ist deutlich höher als beim Vormieter? Vielleicht können Sie sie anfechten. Wir prüfen Ihre Chancen und verfassen das Gesuch an die Schlichtungsbehörde.",
     included: [
       "Prüfung der Anfechtungsvoraussetzungen",
@@ -168,8 +168,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "defaut-logement": {
-    name: "Mangel in der Wohnung: Mietzinsreduktion",
-    short: "Schimmel, Defekt, Lärm, Bauarbeiten: Mängelrüge und Herabsetzungsbegehren.",
+    name: "Mietzinsreduktion wegen eines Mangels",
+    short: "Schimmel, defekte Heizung, lärmige Baustelle… Wir melden den Mangel schriftlich und verlangen die Reduktion, die Ihnen zusteht.",
     intro: "Schimmel, defekte Heizung, Wasserschaden, lärmige Baustelle: Ein andauernder Mangel gibt Anspruch auf Behebung und Mietzinsreduktion. Wir verfassen Mängelrüge und Reduktionsbegehren formgerecht.",
     included: [
       "Einordnung des Mangels und übliche Reduktion",
@@ -185,8 +185,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-de-loyer": {
-    name: "Mietkaution zurückholen",
-    short: "Bestrittene Instandstellungskosten, blockierte Kaution: Wir verfassen Ihre Reklamation.",
+    name: "Mietkaution zurückerhalten",
+    short: "Ihr ehemaliger Vermieter blockiert die Kaution oder verrechnet fragwürdige Kosten? Wir verfassen die Forderung.",
     intro: "Die frühere Verwaltung blockiert die Kaution oder verrechnet Instandstellungskosten? Wir prüfen, was wirklich verlangt werden darf, und verfassen Bestreitung und Freigabegesuch.",
     included: [
       "Analyse des Abnahmeprotokolls und der Kosten",
@@ -201,8 +201,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "resiliation-anticipee-bail": {
-    name: "Vorzeitige Kündigung des Mietvertrags",
-    short: "Vor Ablauf ausziehen, ohne Monatsmieten zu zahlen: Brief und Ersatzmieter.",
+    name: "Vorzeitig aus der Wohnung ausziehen",
+    short: "Wir verfassen die Kündigung und die Meldung eines Ersatzmieters, damit Sie die Miete nicht bis zum Ende zahlen.",
     intro: "Sie müssen vor dem Kündigungstermin ausziehen? Mit einem Ersatzmieter können Sie sich früher befreien. Wir verfassen das Kündigungsschreiben und die Vorstellung des Ersatzmieters.",
     included: [
       "Berechnung des ordentlichen Termins und der Fristen",
@@ -217,8 +217,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-conge": {
-    name: "Kündigung anfechten oder Erstreckung verlangen",
-    short: "Sie haben 30 Tage: Gesuch an die Schlichtungsbehörde zur Aufhebung oder für mehr Zeit.",
+    name: "Kündigung anfechten oder Mieterstreckung verlangen",
+    short: "Sie haben 30 Tage ab Erhalt der Kündigung. Wir bereiten das Gesuch an die Schlichtungsbehörde vor.",
     intro: "Sie haben die Kündigung erhalten? Sie können sie anfechten, wenn sie missbräuchlich ist, oder eine Erstreckung verlangen, wenn der Auszug Härten bringt. Wir verfassen das Gesuch an die Schlichtungsbehörde.",
     included: [
       "Prüfung der Formgültigkeit der Kündigung",
@@ -233,8 +233,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "decompte-de-charges": {
-    name: "Nebenkostenabrechnung anfechten",
-    short: "Prüfung Ihrer Abrechnung Posten für Posten und Reklamation beim Vermieter.",
+    name: "Nebenkostenabrechnung prüfen",
+    short: "Wir prüfen Ihre Abrechnung Zeile für Zeile und schreiben dem Vermieter zu jedem fragwürdigen Posten.",
     intro: "Ihre Heiz- und Nebenkostenabrechnung ist explodiert? Wir prüfen jeden Posten und verfassen die Reklamation samt Gesuch um Einsicht in die Belege.",
     included: [
       "Abgleich der Posten mit dem Mietvertrag",
@@ -249,8 +249,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-de-voisinage": {
-    name: "Nachbarschaftsstreit: formeller Brief",
-    short: "Lärm, Pflanzen, Grenzen, Immissionen: ein klarer, rechtlich begründeter Brief.",
+    name: "Streit mit dem Nachbarn",
+    short: "Wenn Reden nichts mehr bringt: ein sachlicher, rechtlich begründeter Brief wegen Lärm, einer Hecke oder einer Grenze.",
     intro: "Gespräche haben nichts gebracht und die Situation dauert an? Ein formeller, sachlicher und rechtlich begründeter Brief löst das Problem oft ohne Prozess. Wir verfassen ihn für Sie.",
     included: [
       "Analyse der Situation und der anwendbaren Regeln",
@@ -266,7 +266,7 @@ const services: Record<string, ServiceText> = {
   },
   "resiliation-de-contrat": {
     name: "Abo oder Vertrag kündigen",
-    short: "Fitness, Telefon, Versicherung, Abo: die richtige Frist, Form und das richtige Datum.",
+    short: "Wir prüfen, auf wann Sie aus Ihrem Abo (Fitness, Telefon, Versicherung…) aussteigen können, und verfassen eine gültige Kündigung.",
     intro: "Ein Abo, das sich automatisch verlängert, eine Versicherung, die Ihre Kündigung ablehnt, ein Fitnesscenter, das nicht reagiert: Wir prüfen Ihren Vertrag und verfassen eine Kündigung, die hält.",
     included: [
       "Prüfung der Kündigungsbedingungen",
@@ -281,8 +281,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-achat-defectueux": {
-    name: "Defekter Kauf: Gewährleistung geltend machen",
-    short: "Mahnung an den Verkäufer: Reparatur, Ersatz oder Rückerstattung, je nach Ihren Rechten.",
+    name: "Garantie für einen Kauf geltend machen",
+    short: "Das Gerät ist defekt oder nicht wie verkauft? Wir schreiben dem Verkäufer, damit Sie bekommen, worauf Sie Anspruch haben.",
     intro: "Ein defektes Gerät, Möbel oder Fahrzeug, und der Verkäufer schiebt die Verantwortung ab? Wir prüfen Ihre Gewährleistungsrechte und verfassen die Mahnung.",
     included: [
       "Analyse der gesetzlichen und vertraglichen Garantie",
@@ -297,8 +297,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-artisan": {
-    name: "Streit mit Handwerker oder Unternehmen",
-    short: "Mangelhafte Arbeit, Verzug, überschrittene Offerte: Mängelrüge und Mahnung.",
+    name: "Streit mit einem Handwerker",
+    short: "Die Arbeiten sind mangelhaft, verspätet oder teurer als vereinbart? Wir rügen die Mängel schriftlich und setzen eine Frist.",
     intro: "Schlampige Arbeit, endlose Baustelle, Rechnung weit über der Offerte: Wir prüfen Ihren Vertrag und verfassen Mängelrüge und Mahnung an den Handwerker.",
     included: [
       "Analyse von Vertrag, Offerte und Rechnungen",
@@ -314,7 +314,7 @@ const services: Record<string, ServiceText> = {
   },
   "contester-une-facture": {
     name: "Rechnung bestreiten",
-    short: "Ungerechtfertigte oder überhöhte Rechnung: begründete schriftliche Bestreitung.",
+    short: "Eine Rechnung entspricht nicht dem, was Sie bestellt haben? Wir verfassen eine begründete Bestreitung.",
     intro: "Eine Rechnung für nie bestellte Leistungen, ein aufgeblähter Betrag, überraschende Gebühren: Wir verfassen eine klare Bestreitung, die erklärt, warum Sie den Betrag nicht schulden.",
     included: [
       "Analyse der Rechnung und der Vereinbarung",
@@ -329,8 +329,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-particulier": {
-    name: "Vertragsprüfung vor der Unterschrift",
-    short: "Leasing, Kredit, Autokauf, Bauarbeiten: Wir prüfen und zeigen Ihnen die Fallen.",
+    name: "Vertrag vor der Unterschrift prüfen",
+    short: "Leasing, Kredit, Autokauf oder Handwerkerofferte: Wir lesen ihn vor Ihnen und zeigen Ihnen die Fallen.",
     intro: "Lassen Sie wichtige Verträge vor der Unterschrift prüfen. Wir zeigen Ihnen ungünstige Klauseln, versteckte Kosten und Verhandlungsspielraum.",
     included: [
       "Vollständige Prüfung (bis 15 Seiten)",
@@ -345,8 +345,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "vol-annule-retarde": {
-    name: "Flug annulliert oder verspätet: Entschädigung",
-    short: "Reklamation bei der Fluggesellschaft, zum Fixpreis, ohne Provision auf Ihre Entschädigung.",
+    name: "Entschädigung für einen annullierten oder verspäteten Flug",
+    short: "Wir schreiben der Fluggesellschaft für Sie. Sie zahlen einen Festpreis und behalten die ganze Entschädigung.",
     intro: "Annullierung, Überbuchung, grosse Verspätung: Vielleicht haben Sie Anspruch auf 250 bis 600 Euro pro Person. Wir prüfen Ihren Anspruch und verfassen die Reklamation, ohne Prozentabzug.",
     included: [
       "Prüfung des Anspruchs und der Höhe",
@@ -361,8 +361,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "refus-assurance": {
-    name: "Ablehnung durch eine Versicherung: Reklamation",
-    short: "Hausrat, Reise, Fahrzeug, Rechtsschutz: begründete Reklamation an den Versicherer.",
+    name: "Ablehnung einer Versicherung anfechten",
+    short: "Ihre Hausrat-, Reise- oder Fahrzeugversicherung will nicht zahlen? Wir antworten schriftlich, mit dem Vertrag in der Hand.",
     intro: "Ihre Versicherung zahlt nicht oder nur teilweise? Wir analysieren Police und Entscheid und verfassen eine begründete Reklamation.",
     included: [
       "Analyse von Police, AVB und Ablehnung",
@@ -378,8 +378,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "poursuite-injustifiee": {
-    name: "Ungerechtfertigte Betreibung: Rechtsvorschlag und Löschung",
-    short: "Ungerechtfertigter Zahlungsbefehl: Rechtsvorschlag, danach Gesuch um Nichtbekanntgabe.",
+    name: "Sich gegen eine ungerechtfertigte Betreibung wehren",
+    short: "Sie haben 10 Tage für den Rechtsvorschlag. Wir übernehmen das und beantragen später, dass die Betreibung aus Ihrem Auszug verschwindet.",
     intro: "Sie haben einen Zahlungsbefehl für eine bestrittene Schuld erhalten? Wir erklären Ihnen den Rechtsvorschlag und verfassen danach das Gesuch um Nichtbekanntgabe, damit die Betreibung nicht mehr im Auszug erscheint.",
     included: [
       "Prüfung des Zahlungsbefehls und der Fristen",
@@ -394,8 +394,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recuperer-argent-prete": {
-    name: "Geliehenes oder geschuldetes Geld zurückholen",
-    short: "Mahnung und einreichebereites Betreibungsbegehren für ein Darlehen oder eine private Schuld.",
+    name: "Geliehenes Geld zurückfordern",
+    short: "Jemand zahlt nicht zurück? Zuerst eine Mahnung, dann das Betreibungsbegehren, bereit zum Einreichen.",
     intro: "Sie haben einer nahestehenden Person Geld geliehen, etwas verkauft ohne bezahlt zu werden oder Kosten vorgeschossen? Wir verfassen die Mahnung und bereiten das Betreibungsbegehren vor.",
     included: [
       "Prüfung der Beweise für die Forderung",
@@ -410,8 +410,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "reclamation-taxation-impots": {
-    name: "Einsprache gegen eine Steuerveranlagung",
-    short: "Abzug verweigert, Einkommen falsch eingeschätzt: begründete Einsprache innert 30 Tagen.",
+    name: "Steuerveranlagung anfechten",
+    short: "Ein Abzug abgelehnt oder ein Einkommen falsch berechnet? Sie haben 30 Tage für die Einsprache. Wir verfassen sie.",
     intro: "Ihre Veranlagung entspricht nicht Ihrer Steuererklärung? Verweigerter Abzug, Ermessenseinschätzung, Rechenfehler: Wir verfassen eine begründete Einsprache.",
     included: [
       "Vergleich Steuererklärung / Veranlagung",
@@ -427,7 +427,7 @@ const services: Record<string, ServiceText> = {
   },
   "opposition-assurance-sociale": {
     name: "Einsprache gegen einen Sozialversicherungsentscheid",
-    short: "Arbeitslosenkasse, AHV, Krankenkasse, Unfall: begründete Einsprache innert 30 Tagen.",
+    short: "Die ALV, AHV, Kranken- oder Unfallversicherung hat falsch entschieden? Wir verfassen die Einsprache innert 30 Tagen.",
     intro: "Einstelltage bei der Arbeitslosenversicherung, verweigerte Leistung der Krankenkasse, zu tiefe Rente: Wir analysieren den Entscheid und verfassen Ihre Einsprache.",
     included: [
       "Analyse des Entscheids und der Regeln",
@@ -442,8 +442,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   testament: {
-    name: "Testament: begleitete Redaktion",
-    short: "Ein massgeschneidertes Testament nach neuem Erbrecht, zum Abschreiben von Hand.",
+    name: "Testament verfassen",
+    short: "Wir bereiten mit Ihnen ein Testament vor, das zu Ihrer Familie und zum geltenden Recht passt. Sie schreiben es dann von Hand ab.",
     intro: "Den Ehegatten begünstigen, die Partnerin schützen, einen bestimmten Gegenstand vermachen: Wir helfen Ihnen, ein klares Testament nach dem seit 2023 geltenden Erbrecht zu verfassen, das Sie von Hand abschreiben.",
     included: [
       "Berechnung der Pflichtteile und der verfügbaren Quote",
@@ -459,7 +459,7 @@ const services: Record<string, ServiceText> = {
   },
   "mandat-pour-cause-d-inaptitude": {
     name: "Vorsorgeauftrag",
-    short: "Bestimmen Sie, wer für Sie entscheidet, wenn Sie es nicht mehr können: Vermögen, Gesundheit, Administratives.",
+    short: "Sie bestimmen im Voraus, wer sich um Ihr Geld, Ihre Unterlagen und Ihre Gesundheitsentscheide kümmert, falls Sie es nicht mehr können.",
     intro: "Unfall, Krankheit: Können Sie Ihre Angelegenheiten nicht mehr regeln, bestimmt die Erwachsenenschutzbehörde jemanden. Mit einem Vorsorgeauftrag wählen Sie selbst. Wir verfassen ihn mit Ihnen.",
     included: [
       "Wahl der Bereiche: Personensorge, Vermögenssorge, Vertretung",
@@ -475,7 +475,7 @@ const services: Record<string, ServiceText> = {
   },
   "directives-anticipees": {
     name: "Patientenverfügung",
-    short: "Ihr medizinischer Wille, klar und gültig, und die Person, die ihn durchsetzt.",
+    short: "Sie halten schwarz auf weiss fest, welche Behandlungen Sie wollen oder ablehnen, und wer für Sie sprechen soll.",
     intro: "Welche Behandlungen möchten Sie annehmen oder ablehnen, wenn Sie sich nicht mehr äussern können? Die Patientenverfügung hält es klar fest und bezeichnet die Person, die für Sie spricht.",
     included: [
       "Geführter Fragebogen zu Ihren Wünschen",
@@ -491,7 +491,7 @@ const services: Record<string, ServiceText> = {
   },
   "convention-de-concubinage": {
     name: "Konkubinatsvertrag",
-    short: "Wohnung, gemeinsame Kosten, Vermögen, Trennung: alles schwarz auf weiss geregelt.",
+    short: "Sie leben unverheiratet zusammen? Wir halten fest, wer was bezahlt und wer was behält, falls Sie sich trennen.",
     intro: "Unverheiratete Paare sind gesetzlich kaum geschützt. Ein Konkubinatsvertrag regelt Wohnung, Ausgaben, gemeinsam gekaufte Gegenstände und die Trennung.",
     included: [
       "Analyse Ihrer gemeinsamen Situation",
@@ -507,7 +507,7 @@ const services: Record<string, ServiceText> = {
   },
   "separation-divorce-amiable": {
     name: "Einvernehmliche Scheidung ohne minderjährige Kinder",
-    short: "Vereinbarung und gemeinsames Begehren, für Paare ohne minderjährige Kinder, die sich im Wesentlichen einig sind.",
+    short: "Sie sind sich im Wesentlichen einig? Wir verfassen die Vereinbarung und das gemeinsame Begehren ans Gericht.",
     intro: "Sie sind sich im Wesentlichen einig, haben keine minderjährigen Kinder und möchten ein langes Verfahren vermeiden? Wir verfassen neutral und für Sie beide die Scheidungsvereinbarung und das gemeinsame Begehren, das Sie beim Gericht einreichen.",
     included: [
       "Vorgespräch mit beiden Ehegatten",
@@ -522,8 +522,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "question-juridique": {
-    name: "Rechtsfrage: schriftliche Antwort",
-    short: "Eine präzise Frage, eine klare schriftliche Antwort mit den einschlägigen Gesetzesartikeln.",
+    name: "Eine Rechtsfrage stellen",
+    short: "Sie stellen eine genaue Frage, wir antworten schriftlich und nennen die Gesetzesartikel, die gelten.",
     intro: "Sie haben eine präzise Frage und wollen eine verlässliche Antwort, ohne Termin? Stellen Sie sie: Sie erhalten eine klare schriftliche Antwort mit dem weiteren Vorgehen.",
     included: [
       "Rechtliche Abklärung Ihrer Frage",
@@ -538,8 +538,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "appel-juridique": {
-    name: "Rechtsgespräch von 20 Minuten",
-    short: "Sie schildern Ihre Situation, wir sagen Ihnen, was zu tun ist und innert welcher Fristen.",
+    name: "Ein Gespräch von 20 Minuten",
+    short: "Sie schildern Ihre Lage am Telefon, wir sagen Ihnen, was Sie tun können und welche Fristen laufen.",
     intro: "Sie sprechen lieber darüber? Buchen Sie ein Gespräch von 20 Minuten: Sie schildern Ihre Situation, wir sagen Ihnen, was Sie tun können, innert welcher Fristen und was zu vermeiden ist.",
     included: [
       "Telefon- oder Videogespräch von 20 Minuten",
@@ -554,8 +554,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "lettre-juridique-sur-mesure": {
-    name: "Massgeschneiderter Rechtsbrief",
-    short: "Ein formeller Brief für Ihre Situation, rechtlich begründet und versandbereit.",
+    name: "Brief nach Mass",
+    short: "Für ein formelles Schreiben, das in keine andere Kategorie passt. Wir verfassen es für Ihren Fall.",
     intro: "Ihre Situation passt in kein Raster? Wir verfassen den formellen Brief, den Sie brauchen: Reklamation, Bestreitung, Gesuch, Mahnung.",
     included: [
       "Analyse Ihrer Situation",
@@ -570,8 +570,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Mahnung und Fristansetzung",
-    short: "Kunde, Lieferant, Mieter, Partner: formelles Schreiben mit Frist und angekündigten Folgen, die letzte Warnung vor dem Verfahren.",
+    name: "Mahnung (Inverzugsetzung)",
+    short: "Ein formelles Schreiben, das festhält, was Ihnen geschuldet ist, eine Frist setzt und die nächsten Schritte klar ankündigt.",
     intro: "Jemand hält seine Verpflichtungen gegenüber Ihrem Unternehmen nicht ein? Ein Kunde zahlt nicht, ein Lieferant liefert nicht, ein Mieter ist im Rückstand, ein Partner hält sein Wort nicht: Eine formelle Mahnung mit Frist und angekündigten Folgen löst die Situation oft.",
     included: [
       "Prüfung Ihrer Rechte und der Belege",
@@ -586,8 +586,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recouvrement-facture-impayee": {
-    name: "Inkasso einer unbezahlten Rechnung",
-    short: "Mahnung, vorbereitetes Betreibungsbegehren, Begleitung beim Rechtsvorschlag: Wir kümmern uns um alles.",
+    name: "Offene Rechnung eintreiben",
+    short: "Wir schreiben dem Kunden, bereiten das Betreibungsbegehren vor und sagen Ihnen, was bei einem Rechtsvorschlag zu tun ist.",
     intro: "Eine Rechnung ist seit Wochen offen? Wir übernehmen den ganzen aussergerichtlichen Weg und die Vorbereitung der Betreibung, bis zum Rechtsöffnungsgesuch, falls der Schuldner Rechtsvorschlag erhebt.",
     included: [
       "Mahnung mit Zinsen",
@@ -603,8 +603,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-de-mainlevee": {
-    name: "Rechtsöffnungsgesuch",
-    short: "Nach dem Rechtsvorschlag: einreichebereites Rechtsöffnungsgesuch mit geordneten Beilagen.",
+    name: "Gesuch um Rechtsöffnung",
+    short: "Ihr Schuldner hat Rechtsvorschlag erhoben? Wir bereiten das Gesuch ans Gericht vor und ordnen Ihre Belege.",
     intro: "Ihr Schuldner hat Rechtsvorschlag erhoben? Mit einer Schuldanerkennung oder einem Urteil können Sie die Betreibung mit der Rechtsöffnung fortsetzen. Wir verfassen das Gesuch.",
     included: [
       "Prüfung des Titels: Schuldanerkennung oder Urteil",
@@ -619,8 +619,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-commercial": {
-    name: "Geschäftsstreit: Analyse und Schreiben",
-    short: "Kunde, Lieferant oder Partner: Ihre Position analysiert und schriftlich verteidigt.",
+    name: "Streit mit einem Kunden, Lieferanten oder Partner",
+    short: "Wir analysieren den Fall, sagen Ihnen, wo Sie stehen, und vertreten Ihre Position schriftlich.",
     intro: "Mangelhafte Lieferung, bestrittene Leistung, Vertragsbruch: Wir analysieren die Situation und verfassen das Schreiben, das Ihre Position verteidigt und eine Lösung ermöglicht.",
     included: [
       "Analyse von Vertrag und Korrespondenz",
@@ -635,8 +635,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "cgv-sur-mesure": {
-    name: "Massgeschneiderte AGB",
-    short: "AGB für Ihre Tätigkeit: Zahlung, Haftung, Gewährleistung, Gerichtsstand.",
+    name: "AGB nach Mass",
+    short: "AGB, geschrieben für Ihre tatsächliche Tätigkeit, die Zahlungsverzug, Haftung und Gerichtsstand regeln.",
     intro: "Von der Konkurrenz kopierte AGB schützen Sie nicht. Wir verfassen AGB, die zu Ihrer Tätigkeit, Ihren Kunden (Unternehmen oder Konsumenten) und Ihrer Verkaufsart passen.",
     included: [
       "Fragebogen zu Tätigkeit und Risiken",
@@ -652,8 +652,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-commercial-sur-mesure": {
-    name: "Massgeschneiderter Geschäftsvertrag",
-    short: "Dienstleistung, Unterakkord, Vertrieb, Partnerschaft: ein Vertrag für Ihre Situation.",
+    name: "Geschäftsvertrag nach Mass",
+    short: "Ein Dienstleistungs-, Subunternehmer-, Vertriebs- oder Partnerschaftsvertrag, ausgehend von Ihrer Situation.",
     intro: "Eine wichtige Vereinbarung verdient einen echten Vertrag. Wir verfassen einen Vertrag für Ihre Geschäftsbeziehung mit den Klauseln, die Ihre Interessen schützen.",
     included: [
       "Klärung der Vereinbarung und der Risiken",
@@ -668,8 +668,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-commercial": {
-    name: "Prüfung eines Geschäftsvertrags",
-    short: "Risiken markiert und Korrekturen vorgeschlagen, vor der Unterschrift (bis 20 Seiten).",
+    name: "Geschäftsvertrag prüfen",
+    short: "Vor der Unterschrift prüfen wir den Vertrag (bis 20 Seiten), zeigen die Risiken und schlagen Korrekturen vor.",
     intro: "Ein Kunde oder Lieferant legt Ihnen seinen Vertrag vor? Wir prüfen ihn, markieren gefährliche Klauseln und schlagen Korrekturen für die Verhandlung vor.",
     included: [
       "Vollständige Prüfung (bis 20 Seiten)",
@@ -685,7 +685,7 @@ const services: Record<string, ServiceText> = {
   },
   "accord-de-confidentialite": {
     name: "Geheimhaltungsvereinbarung (NDA)",
-    short: "Einseitig oder gegenseitig, auf Ihr Projekt zugeschnitten, mit abschreckender Konventionalstrafe.",
+    short: "Bevor Sie ein Projekt oder Zahlen teilen: eine einseitige oder gegenseitige Vereinbarung mit Konventionalstrafe.",
     intro: "Bevor Sie ein Projekt, Know-how oder Zahlen präsentieren: Schützen Sie sie. Wir verfassen eine Geheimhaltungsvereinbarung für Ihre Situation.",
     included: [
       "Wahl zwischen einseitiger und gegenseitiger Vereinbarung",
@@ -700,8 +700,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-mandat-independant": {
-    name: "Auftragsvertrag für Selbstständige",
-    short: "Auftrag, Honorar, Haftung, geistiges Eigentum: ein solider Freelance-Vertrag.",
+    name: "Vertrag für Selbständige (Auftrag)",
+    short: "Für Freelancer und Berater: ein Vertrag, der Auftrag, Honorar und die Rechte am gelieferten Werk regelt.",
     intro: "Ob Sie Freelancer sind oder eine selbstständige Person beauftragen: Ein klarer Vertrag vermeidet Missverständnisse und das Risiko einer Umqualifizierung in einen Arbeitsvertrag.",
     included: [
       "Auftrag oder Werkvertrag je nach Mission",
@@ -716,8 +716,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-travail-sur-mesure": {
-    name: "Massgeschneiderter Arbeitsvertrag",
-    short: "Auf Stelle und Gesamtarbeitsvertrag zugeschnitten, mit den Klauseln, die das Unternehmen schützen.",
+    name: "Arbeitsvertrag nach Mass",
+    short: "Für die Stelle und den anwendbaren GAV verfasst, mit den Klauseln, die das Unternehmen schützen.",
     intro: "Ein gut formulierter Arbeitsvertrag verhindert die meisten Streitigkeiten: Arbeitszeit, Überstunden, Ferien, Konkurrenzverbot, Geheimhaltung. Wir verfassen ihn für die betreffende Stelle.",
     included: [
       "Prüfung des anwendbaren Gesamtarbeitsvertrags",
@@ -734,7 +734,7 @@ const services: Record<string, ServiceText> = {
   },
   "certificat-de-travail-employeur": {
     name: "Arbeitszeugnis verfassen",
-    short: "Vollständig, wahr und wohlwollend, ohne Formulierungen, die sich gegen Sie wenden.",
+    short: "Ein wahres und wohlwollendes Zeugnis, wie es das Gesetz verlangt, ohne ungeschickte Formulierung, die man Ihnen vorhalten könnte.",
     intro: "Ein Arbeitszeugnis zu schreiben braucht Zeit und birgt Fallen: Zu schmeichelhaft begründet es Haftung, zu streng einen Streit. Wir verfassen es nach Ihren Angaben.",
     included: [
       "Kurzer Fragebogen zur Person",
@@ -749,8 +749,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-employeur": {
-    name: "Sichere Kündigung",
-    short: "Frist geprüft, Sperrfristen kontrolliert, korrektes Kündigungsschreiben.",
+    name: "Mitarbeitende korrekt entlassen",
+    short: "Wir prüfen Kündigungsfrist und Sperrfristen und verfassen das Kündigungsschreiben.",
     intro: "Eine schlecht vorbereitete Kündigung kann nichtig oder missbräuchlich sein. Wir prüfen Fristen und Sperrfristen und verfassen Kündigungsschreiben und schriftliche Begründung.",
     included: [
       "Prüfung der Kündigungsfrist und des Enddatums",
@@ -767,7 +767,7 @@ const services: Record<string, ServiceText> = {
   },
   "avertissement-employe": {
     name: "Schriftliche Verwarnung",
-    short: "Fakten, Erwartungen, Konsequenzen: eine Verwarnung, die im Streitfall hält.",
+    short: "Wir beschreiben die Fakten, Ihre Erwartungen und die möglichen Folgen, damit die Verwarnung im Streitfall hält.",
     intro: "Wiederholte Verspätungen, unangemessenes Verhalten, missachtete Weisungen: Eine präzise, verhältnismässige schriftliche Verwarnung schützt das Unternehmen, falls es zur Kündigung kommt.",
     included: [
       "Sachliche Beschreibung der Verfehlungen",
@@ -783,7 +783,7 @@ const services: Record<string, ServiceText> = {
   },
   "reglement-du-personnel": {
     name: "Personalreglement",
-    short: "Arbeitszeit, Ferien, Spesen, Homeoffice, Daten: klare Regeln für das ganze Team.",
+    short: "Die Hausregeln, einmal für das ganze Team aufgeschrieben, von den Arbeitszeiten über Spesen bis zum Homeoffice.",
     intro: "Schon ab wenigen Mitarbeitenden erspart ein Personalreglement das Neuverhandeln jeder Regel. Wir verfassen es für Ihr Unternehmen, abgestimmt auf Verträge und GAV.",
     included: [
       "Fragebogen zu Ihren Gepflogenheiten",
@@ -799,8 +799,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "pack-conformite-nlpd": {
-    name: "DSG-Compliance-Paket",
-    short: "Datenschutzerklärung, Bearbeitungsverzeichnis, Klauseln: Ihre Umsetzung des neuen DSG.",
+    name: "Umsetzung des neuen DSG",
+    short: "Datenschutzerklärung, Bearbeitungsverzeichnis und aktuelle Klauseln, damit Sie das Datenschutzgesetz einhalten.",
     intro: "Seit dem 1. September 2023 gilt das neue Datenschutzgesetz für alle Unternehmen. Wir erfassen Ihre Bearbeitungen und verfassen die wesentlichen Dokumente.",
     included: [
       "Geführte Erfassung Ihrer Bearbeitungen und Auftragsbearbeiter",
@@ -816,8 +816,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "politique-de-confidentialite": {
-    name: "Datenschutzerklärung der Website",
-    short: "DSG-konform, auf Ihre Tools abgestimmt: Formulare, Analytics, Newsletter.",
+    name: "Datenschutzerklärung für Ihre Website",
+    short: "Verfasst anhand der Tools, die Sie wirklich nutzen (Formulare, Statistik, Newsletter), konform mit dem DSG.",
     intro: "Ihre Website erhebt Daten über ein Formular, Statistiken oder einen Newsletter? Sie braucht eine genaue Datenschutzerklärung, abgestimmt auf Ihre tatsächlichen Tools.",
     included: [
       "Erfassung der Website-Tools",
@@ -832,8 +832,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-bail-commercial": {
-    name: "Prüfung eines Geschäftsmietvertrags",
-    short: "Miete, Indexierung, Dauer, Instandstellung: die Verhandlungspunkte vor der Unterschrift.",
+    name: "Geschäftsmietvertrag prüfen",
+    short: "Vor der Unterschrift zeigen wir, was verhandelt werden sollte, etwa Indexierung, Dauer oder Rückbau beim Auszug.",
     intro: "Ein Geschäftsmietvertrag bindet Sie oft fünf Jahre oder länger. Wir prüfen ihn und zeigen Ihnen ungünstige Klauseln und Verhandlungspunkte.",
     included: [
       "Vollständige Prüfung von Vertrag und Anhängen",
@@ -848,8 +848,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "convention-d-actionnaires": {
-    name: "Aktionärbindungs- oder Gesellschaftervertrag",
-    short: "Governance, Ausstieg, Vorkaufsrecht, Konkurrenzverbot: die Regeln unter Gesellschaftern.",
+    name: "Aktionärbindungsvertrag oder Gesellschaftervereinbarung",
+    short: "Die Regeln unter Partnern festlegen, solange alles gut läuft, insbesondere Entscheide, Ausstieg und Rückkauf der Anteile.",
     intro: "Die Statuten regeln nicht alles. Ein Aktionärbindungs- oder Gesellschaftervertrag ordnet Entscheide, Ein- und Austritt und schützt alle bei Uneinigkeit.",
     included: [
       "Vorgespräch",
@@ -866,7 +866,7 @@ const services: Record<string, ServiceText> = {
   },
   "statuts-d-association": {
     name: "Vereinsstatuten",
-    short: "ZGB-konform, auf Ihr Projekt zugeschnitten: Zweck, Organe, Mitglieder, Finanzen.",
+    short: "Statuten nach Zivilgesetzbuch, passend zu Ihrem Verein, vom Zweck bis zur Verwaltung der Finanzen.",
     intro: "Sportclub, Kulturverein, Quartierprojekt: Wir verfassen klare, ZGB-konforme Statuten und das Protokoll der Gründungsversammlung.",
     included: [
       "Vollständige Statuten",

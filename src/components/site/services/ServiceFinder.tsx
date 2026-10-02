@@ -142,16 +142,12 @@ export default function ServiceFinder({ items, categories, strings, callbackHref
             </li>
           ))}
         </ul>
-        <a
-          href={callbackHref}
-          className="mt-4 flex flex-col items-start justify-between gap-4 rounded-2xl bg-text px-6 py-6 text-bg transition-opacity hover:opacity-90 sm:flex-row sm:items-center md:px-8"
-        >
-          <span className="text-xl font-semibold tracking-[-0.01em] md:text-2xl">{strings.quoteTitle}</span>
-          <span className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-full bg-bg px-6 text-sm font-semibold text-text">
+        <p className="mt-4 text-sm text-text-muted">
+          {strings.quoteTitle}{" "}
+          <a href={callbackHref} className="font-semibold text-text underline underline-offset-4 hover:no-underline">
             {strings.quoteCta}
-            <ArrowIcon />
-          </span>
-        </a>
+          </a>
+        </p>
         </>
       ) : (
         <div className="mt-6 rounded-2xl border border-border bg-surface px-6 py-8 text-center">

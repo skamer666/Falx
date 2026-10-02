@@ -17,8 +17,8 @@ const categories: Record<CategoryId, CategoryText> = {
 
 const services: Record<string, ServiceText> = {
   "analyse-certificat-de-travail": {
-    name: "Analisi del certificato di lavoro",
-    short: "Ogni formula del vostro certificato decifrata: cosa vi aiuta, cosa vi penalizza, cosa manca.",
+    name: "Analisi del vostro certificato di lavoro",
+    short: "Leggiamo il certificato come lo leggerebbe un selezionatore e vi diciamo francamente se vi aiuta o vi frena.",
     intro: "Un certificato di lavoro può sembrare positivo e contenere comunque formule in codice, omissioni o sfumature che frenano le vostre candidature. Lo analizziamo frase per frase e vi diciamo cosa dice davvero ai selezionatori.",
     included: [
       "Lettura di ogni frase, formule in codice e omissioni comprese",
@@ -34,8 +34,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "rectification-certificat-de-travail": {
-    name: "Certificato di lavoro: richiesta di rettifica",
-    short: "Analisi del certificato e lettera al datore di lavoro con le riformulazioni che potete esigere.",
+    name: "Far correggere il certificato di lavoro",
+    short: "Troviamo le frasi che vi penalizzano e scriviamo al datore di lavoro per ottenere una nuova versione.",
     intro: "Il vostro certificato contiene formule vaghe, omissioni o frasi che vi penalizzano? Lo analizziamo frase per frase e redigiamo la lettera al datore di lavoro con le riformulazioni a cui avete diritto.",
     included: [
       "Analisi completa del certificato, formule in codice e omissioni comprese",
@@ -51,8 +51,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-opposition": {
-    name: "Licenziamento: verifica e opposizione",
-    short: "Termini, periodi di protezione, disdetta abusiva: verifichiamo il licenziamento e redigiamo l'opposizione.",
+    name: "Contestare un licenziamento",
+    short: "Verifichiamo se termini e periodi di protezione sono stati rispettati, poi redigiamo la vostra opposizione.",
     intro: "Siete stati licenziati e qualcosa non vi convince? Verifichiamo se la disdetta rispetta i termini, se cade in un periodo di protezione e se può essere abusiva, poi redigiamo la vostra opposizione scritta.",
     included: [
       "Verifica del termine di disdetta e della data di fine",
@@ -68,8 +68,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-de-travail": {
-    name: "Verifica del contratto di lavoro",
-    short: "Prima di firmare: periodo di prova, ore supplementari, divieto di concorrenza, vacanze, tutto verificato.",
+    name: "Verificare un contratto di lavoro prima di firmare",
+    short: "Leggiamo tutto il contratto e vi segnaliamo cosa vale la pena negoziare, come il periodo di prova o un divieto di concorrenza.",
     intro: "Vi è stato proposto un contratto e volete sapere cosa firmate? Lo rileggiamo e vi segnaliamo le clausole sfavorevoli, insolite o nulle, con ciò che potete negoziare.",
     included: [
       "Rilettura completa del contratto (fino a 15 pagine)",
@@ -85,8 +85,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "salaire-impaye": {
-    name: "Salario, ore supplementari o vacanze non pagati",
-    short: "Calcolo di quanto vi spetta e diffida al datore di lavoro con termine di pagamento.",
+    name: "Recuperare salario, ore supplementari o vacanze non pagati",
+    short: "Calcoliamo quanto vi deve il datore di lavoro e gli inviamo una diffida con un termine per pagare.",
     intro: "Salario in ritardo, ore supplementari mai pagate, saldo vacanze ignorato alla fine del contratto: calcoliamo esattamente quanto vi spetta e redigiamo la diffida al datore di lavoro.",
     included: [
       "Calcolo dettagliato (salario, ore, vacanze, tredicesima)",
@@ -103,7 +103,7 @@ const services: Record<string, ServiceText> = {
   },
   "lettre-de-demission": {
     name: "Lettera di dimissioni",
-    short: "Il giusto preavviso, la giusta data di fine, il saldo vacanze e la richiesta di certificato.",
+    short: "Una lettera che rispetta il termine di disdetta e regola in anticipo le vacanze residue e il certificato.",
     intro: "Una disdetta datata male può costarvi un mese di salario. Calcoliamo il vostro termine e redigiamo una lettera chiara, che regola anche le vacanze residue e il certificato di lavoro.",
     included: [
       "Calcolo del termine di disdetta e della data di fine",
@@ -118,8 +118,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-conciliation-travail": {
-    name: "Istanza di conciliazione (lavoro)",
-    short: "La vostra istanza, pronta da depositare presso l'autorità di conciliazione, con gli allegati ordinati.",
+    name: "Rivolgersi all'autorità di conciliazione (lavoro)",
+    short: "Il datore di lavoro non risponde più? Prepariamo l'istanza che depositate voi, con i documenti in ordine.",
     intro: "Il datore di lavoro non paga nonostante le vostre lettere? La procedura davanti al tribunale del lavoro inizia di regola con un tentativo di conciliazione. Redigiamo la vostra istanza e vi spieghiamo come si svolge l'udienza.",
     included: [
       "Istanza di conciliazione con conclusioni quantificate",
@@ -134,8 +134,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "baisse-de-loyer": {
-    name: "Richiesta di riduzione della pigione",
-    short: "Calcolo della riduzione a cui avete diritto e lettera al locatore, pronta da inviare.",
+    name: "Chiedere una riduzione della pigione",
+    short: "Quando il tasso ipotecario di riferimento scende, anche la pigione può scendere. Calcoliamo l'importo e scriviamo al locatore.",
     intro: "Quando il tasso ipotecario di riferimento scende, anche la vostra pigione può scendere. Verifichiamo il vostro diritto, calcoliamo la riduzione e redigiamo la lettera al locatore o all'amministrazione.",
     included: [
       "Verifica del tasso di riferimento e dell'ultimo adeguamento della pigione",
@@ -151,8 +151,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-loyer-initial": {
-    name: "Contestazione della pigione iniziale",
-    short: "Pigione iniziale abusiva? Avete 30 giorni: analisi e istanza pronta da depositare.",
+    name: "Contestare la pigione iniziale",
+    short: "La nuova pigione vi sembra abusiva? Avete 30 giorni dalla consegna dell'alloggio. Analizziamo e prepariamo l'istanza.",
     intro: "Siete appena entrati e la pigione è molto più alta di quella del conduttore precedente? Forse potete contestarla. Valutiamo le vostre possibilità e redigiamo l'istanza all'autorità di conciliazione.",
     included: [
       "Analisi delle condizioni di contestazione",
@@ -168,8 +168,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "defaut-logement": {
-    name: "Difetto dell'abitazione: riduzione della pigione",
-    short: "Muffa, guasto, rumore, lavori: avviso dei difetti e richiesta di riduzione della pigione.",
+    name: "Riduzione della pigione per un difetto",
+    short: "Muffa, riscaldamento guasto, cantiere rumoroso… Avvisiamo il locatore per iscritto e chiediamo la riduzione che vi spetta.",
     intro: "Muffa, riscaldamento guasto, infiltrazioni, cantiere rumoroso: un difetto che dura vi dà diritto a una riparazione e a una riduzione della pigione. Redigiamo l'avviso e la richiesta, nelle forme.",
     included: [
       "Qualifica del difetto e riduzione usuale",
@@ -185,8 +185,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-de-loyer": {
-    name: "Recuperare la garanzia della pigione",
-    short: "Spese di ripristino contestate, garanzia bloccata: redigiamo il vostro reclamo.",
+    name: "Recuperare la garanzia d'affitto",
+    short: "Il vecchio locatore blocca la garanzia o vi addebita spese discutibili? Redigiamo il reclamo.",
     intro: "La vecchia amministrazione blocca la garanzia o vi addebita spese di ripristino? Verifichiamo cosa può davvero esservi chiesto e redigiamo la contestazione e la richiesta di liberazione.",
     included: [
       "Analisi del verbale di riconsegna e delle spese",
@@ -201,8 +201,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "resiliation-anticipee-bail": {
-    name: "Disdetta anticipata della locazione",
-    short: "Partire prima della scadenza senza pagare mesi di pigione: lettera e conduttore subentrante.",
+    name: "Lasciare l'alloggio prima della scadenza",
+    short: "Redigiamo la disdetta e la presentazione di un inquilino subentrante, per non pagare la pigione fino al termine.",
     intro: "Dovete traslocare prima della scadenza? Presentando un conduttore subentrante potete liberarvi prima. Redigiamo la lettera di disdetta e la presentazione del candidato.",
     included: [
       "Calcolo della scadenza ordinaria e dei termini",
@@ -217,8 +217,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-conge": {
-    name: "Contestare una disdetta o prorogare la locazione",
-    short: "Avete 30 giorni: istanza all'autorità di conciliazione per annullare la disdetta o ottenere tempo.",
+    name: "Contestare una disdetta o chiedere una proroga",
+    short: "Avete 30 giorni dalla ricezione della disdetta. Prepariamo l'istanza all'autorità di conciliazione.",
     intro: "Avete ricevuto la disdetta? Potete contestarla se è abusiva, o chiedere una protrazione se il trasloco vi crea gravi difficoltà. Redigiamo l'istanza all'autorità di conciliazione.",
     included: [
       "Verifica della validità formale della disdetta",
@@ -233,8 +233,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "decompte-de-charges": {
-    name: "Contestare il conteggio delle spese accessorie",
-    short: "Verifica voce per voce del conteggio e reclamo al locatore.",
+    name: "Verificare un conteggio delle spese accessorie",
+    short: "Controlliamo il conteggio riga per riga e scriviamo al locatore per ogni voce discutibile.",
     intro: "Il conteggio di riscaldamento e spese accessorie è esploso? Verifichiamo ogni voce e redigiamo il reclamo all'amministrazione, con la richiesta di consultare i giustificativi.",
     included: [
       "Controllo delle voci rispetto al contratto",
@@ -249,8 +249,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-de-voisinage": {
-    name: "Lite di vicinato: lettera formale",
-    short: "Rumore, piante, confini, immissioni: una lettera chiara e giuridicamente fondata.",
+    name: "Lite con un vicino",
+    short: "Quando parlare non basta più, una lettera pacata e fondata sul diritto, per rumore, una siepe o un confine.",
     intro: "Le discussioni non hanno portato a nulla e la situazione si protrae? Una lettera formale, pacata e giuridicamente fondata risolve spesso il problema senza processo. La redigiamo per voi.",
     included: [
       "Analisi della situazione e delle regole applicabili",
@@ -266,7 +266,7 @@ const services: Record<string, ServiceText> = {
   },
   "resiliation-de-contrat": {
     name: "Disdire un abbonamento o un contratto",
-    short: "Fitness, telefonia, assicurazione, abbonamento: il termine, la forma e la data giusti.",
+    short: "Verifichiamo quando potete uscire dall'abbonamento (palestra, telefono, assicurazione…) e redigiamo una disdetta valida.",
     intro: "Un abbonamento che si rinnova da solo, un'assicurazione che rifiuta la disdetta, una palestra che non risponde: verifichiamo il contratto e redigiamo una disdetta che regge.",
     included: [
       "Verifica delle condizioni di disdetta",
@@ -281,8 +281,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-achat-defectueux": {
-    name: "Acquisto difettoso: far valere la garanzia",
-    short: "Diffida al venditore: riparazione, sostituzione o rimborso, secondo i vostri diritti.",
+    name: "Far valere la garanzia di un acquisto",
+    short: "L'oggetto è guasto o non è quello che vi hanno venduto? Scriviamo al venditore per ottenere ciò che vi spetta.",
     intro: "Un apparecchio, un mobile o un veicolo difettoso, e il venditore scarica la responsabilità? Verifichiamo i vostri diritti di garanzia e redigiamo la diffida.",
     included: [
       "Analisi della garanzia legale e contrattuale",
@@ -297,8 +297,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-artisan": {
-    name: "Controversia con un artigiano o un'impresa",
-    short: "Lavori mal fatti, ritardi, preventivo superato: avviso dei difetti e diffida.",
+    name: "Lite con un artigiano",
+    short: "Lavori fatti male, in ritardo o più cari del previsto? Segnaliamo i difetti per iscritto e fissiamo un termine all'impresa.",
     intro: "Lavori fatti male, cantiere infinito, fattura ben oltre il preventivo: analizziamo il contratto e redigiamo l'avviso dei difetti e la diffida all'artigiano.",
     included: [
       "Analisi di contratto, preventivo e fatture",
@@ -314,7 +314,7 @@ const services: Record<string, ServiceText> = {
   },
   "contester-une-facture": {
     name: "Contestare una fattura",
-    short: "Fattura ingiustificata o eccessiva: contestazione scritta e motivata, pronta da inviare.",
+    short: "Una fattura che non corrisponde a quanto ordinato? Redigiamo una contestazione motivata.",
     intro: "Una fattura per una prestazione mai ordinata, un importo gonfiato, spese a sorpresa: redigiamo una contestazione chiara che spiega perché non dovete quell'importo.",
     included: [
       "Analisi della fattura e di quanto pattuito",
@@ -329,8 +329,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-particulier": {
-    name: "Verifica di un contratto prima della firma",
-    short: "Leasing, prestito, acquisto di un veicolo, lavori: rileggiamo e vi segnaliamo le trappole.",
+    name: "Verificare un contratto prima di firmare",
+    short: "Leasing, credito, acquisto di un'auto o preventivo di lavori: lo leggiamo prima di voi e vi mostriamo le trappole.",
     intro: "Prima di firmare un contratto importante, fatelo rileggere. Vi segnaliamo le clausole sfavorevoli, i costi nascosti e cosa potete negoziare.",
     included: [
       "Rilettura completa (fino a 15 pagine)",
@@ -345,8 +345,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "vol-annule-retarde": {
-    name: "Volo cancellato o in ritardo: indennizzo",
-    short: "Reclamo alla compagnia aerea a prezzo fisso, senza commissione sul vostro indennizzo.",
+    name: "Indennizzo per un volo cancellato o in ritardo",
+    short: "Scriviamo noi alla compagnia aerea. Pagate un prezzo fisso e tenete tutto l'indennizzo.",
     intro: "Cancellazione, overbooking, forte ritardo: potreste avere diritto a 250-600 euro per passeggero. Verifichiamo il vostro diritto e redigiamo il reclamo, senza trattenere percentuali.",
     included: [
       "Verifica del diritto e dell'importo",
@@ -361,8 +361,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "refus-assurance": {
-    name: "Rifiuto di un'assicurazione: reclamo",
-    short: "Economia domestica, viaggio, veicolo, protezione giuridica: reclamo motivato all'assicuratore.",
+    name: "Contestare il rifiuto di un'assicurazione",
+    short: "L'assicurazione mobilia domestica, viaggio o veicolo rifiuta di pagare? Rispondiamo per iscritto, contratto alla mano.",
     intro: "La vostra assicurazione rifiuta di pagare o rimborsa solo in parte? Analizziamo polizza e decisione e redigiamo un reclamo motivato.",
     included: [
       "Analisi di polizza, condizioni generali e rifiuto",
@@ -378,8 +378,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "poursuite-injustifiee": {
-    name: "Esecuzione ingiustificata: opposizione e cancellazione",
-    short: "Precetto esecutivo ingiustificato: opposizione, poi domanda di non comunicazione a terzi.",
+    name: "Difendersi da un'esecuzione ingiustificata",
+    short: "Avete 10 giorni per fare opposizione. Ce ne occupiamo noi e, al momento giusto, chiediamo che l'esecuzione sparisca dal vostro estratto.",
     intro: "Avete ricevuto un precetto esecutivo per un debito che contestate? Vi spieghiamo come fare opposizione e redigiamo poi la domanda di non comunicazione, perché l'esecuzione non compaia più nell'estratto.",
     included: [
       "Verifica del precetto esecutivo e dei termini",
@@ -394,8 +394,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recuperer-argent-prete": {
-    name: "Recuperare denaro prestato o dovuto",
-    short: "Diffida e domanda d'esecuzione pronta da depositare, per un prestito o un debito privato.",
+    name: "Recuperare denaro prestato",
+    short: "Qualcuno non vi restituisce i soldi? Prima una diffida, poi la domanda d'esecuzione, pronta da depositare.",
     intro: "Avete prestato denaro a una persona vicina, venduto qualcosa senza essere pagati o anticipato spese? Redigiamo la diffida e prepariamo la domanda d'esecuzione se nulla si muove.",
     included: [
       "Analisi delle prove del credito",
@@ -410,8 +410,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "reclamation-taxation-impots": {
-    name: "Reclamo contro una tassazione",
-    short: "Deduzione rifiutata, reddito valutato male: reclamo motivato entro 30 giorni.",
+    name: "Contestare la tassazione",
+    short: "Una deduzione rifiutata o un reddito calcolato male? Avete 30 giorni per il reclamo. Lo redigiamo noi.",
     intro: "La decisione di tassazione non corrisponde alla vostra dichiarazione? Deduzione rifiutata, tassazione d'ufficio, errore di calcolo: redigiamo un reclamo motivato.",
     included: [
       "Confronto tra dichiarazione e decisione",
@@ -426,8 +426,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "opposition-assurance-sociale": {
-    name: "Opposizione a una decisione di assicurazione sociale",
-    short: "Disoccupazione, AVS, cassa malati, infortuni: opposizione motivata entro 30 giorni.",
+    name: "Opporsi a una decisione delle assicurazioni sociali",
+    short: "Disoccupazione, AVS, cassa malati o assicurazione infortuni hanno deciso in modo che vi sembra sbagliato? Redigiamo l'opposizione entro 30 giorni.",
     intro: "Giorni di sospensione alla disoccupazione, prestazione rifiutata dalla cassa malati, rendita calcolata troppo bassa: analizziamo la decisione e redigiamo la vostra opposizione.",
     included: [
       "Analisi della decisione e delle regole applicabili",
@@ -442,8 +442,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   testament: {
-    name: "Testamento: redazione guidata",
-    short: "Un testamento su misura, conforme al nuovo diritto successorio, da ricopiare a mano.",
+    name: "Redigere il testamento",
+    short: "Prepariamo con voi un testamento adatto alla vostra famiglia e al diritto attuale. Poi lo ricopiate a mano.",
     intro: "Favorire il coniuge, proteggere il partner, lasciare un bene preciso: vi aiutiamo a redigere un testamento chiaro, conforme al diritto successorio in vigore dal 2023, che ricopiate a mano.",
     included: [
       "Calcolo delle porzioni legittime e della quota disponibile",
@@ -459,7 +459,7 @@ const services: Record<string, ServiceText> = {
   },
   "mandat-pour-cause-d-inaptitude": {
     name: "Mandato precauzionale",
-    short: "Scegliete chi deciderà per voi se non potrete più farlo: patrimonio, salute, amministrazione.",
+    short: "Scegliete in anticipo chi si occuperà dei vostri soldi, dei vostri documenti e delle decisioni sulla salute se non potrete più farlo.",
     intro: "Infortunio, malattia: se non potete più gestire i vostri affari, l'autorità di protezione designa qualcuno. Con un mandato precauzionale scegliete voi. Lo redigiamo con voi.",
     included: [
       "Scelta degli ambiti: cura della persona, patrimonio, rappresentanza",
@@ -474,8 +474,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "directives-anticipees": {
-    name: "Direttive del paziente",
-    short: "Le vostre volontà mediche, chiare e valide, e la persona che le farà rispettare.",
+    name: "Direttive anticipate",
+    short: "Mettete per iscritto le cure che volete o rifiutate e indicate chi parlerà per voi.",
     intro: "Quali trattamenti accettare o rifiutare se non potete più esprimervi? Le direttive del paziente lo dicono chiaramente e designano la persona che parlerà per voi.",
     included: [
       "Questionario guidato sulle vostre volontà",
@@ -490,8 +490,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "convention-de-concubinage": {
-    name: "Contratto di convivenza",
-    short: "Abitazione, spese comuni, beni, separazione: tutto previsto, nero su bianco.",
+    name: "Contratto di concubinato",
+    short: "Vivete insieme senza essere sposati? Mettiamo per iscritto chi paga cosa e chi tiene cosa in caso di separazione.",
     intro: "Le coppie non sposate non hanno quasi alcuna regola legale che le protegga. Un contratto di convivenza regola abitazione, spese, beni acquistati insieme e cosa succede in caso di separazione.",
     included: [
       "Analisi della vostra situazione comune",
@@ -507,7 +507,7 @@ const services: Record<string, ServiceText> = {
   },
   "separation-divorce-amiable": {
     name: "Divorzio consensuale senza figli minorenni",
-    short: "Convenzione e richiesta comune, per le coppie senza figli minorenni d'accordo sull'essenziale.",
+    short: "Siete d'accordo sull'essenziale? Redigiamo la convenzione e la richiesta comune al tribunale.",
     intro: "Siete d'accordo sull'essenziale, non avete figli minorenni e volete evitare una procedura lunga? Redigiamo, in modo neutrale e per entrambi, la convenzione di divorzio e la richiesta comune che depositate in tribunale.",
     included: [
       "Colloquio preliminare con entrambi i coniugi",
@@ -522,8 +522,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "question-juridique": {
-    name: "Domanda giuridica: risposta scritta",
-    short: "Una domanda precisa, una risposta chiara e scritta, con gli articoli di legge utili.",
+    name: "Porre una domanda giuridica",
+    short: "Ponete una domanda precisa, vi rispondiamo per iscritto citando gli articoli di legge che si applicano.",
     intro: "Avete una domanda precisa e volete una risposta affidabile, senza appuntamento? Ponetela: ricevete una risposta scritta, chiara, con i passi da seguire.",
     included: [
       "Ricerca giuridica sulla vostra domanda",
@@ -538,8 +538,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "appel-juridique": {
-    name: "Chiamata giuridica di 20 minuti",
-    short: "Spiegate la vostra situazione, vi diciamo cosa fare ed entro quali termini.",
+    name: "Una chiamata di 20 minuti",
+    short: "Ci raccontate la situazione al telefono, vi diciamo cosa potete fare e quali termini tenere d'occhio.",
     intro: "Preferite parlarne? Prenotate una chiamata di 20 minuti: esponete la vostra situazione e vi diciamo cosa potete fare, entro quali termini e cosa evitare.",
     included: [
       "Chiamata telefonica o video di 20 minuti",
@@ -554,8 +554,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "lettre-juridique-sur-mesure": {
-    name: "Lettera giuridica su misura",
-    short: "Una lettera formale adattata alla vostra situazione, giuridicamente fondata e pronta da inviare.",
+    name: "Lettera su misura",
+    short: "Per una lettera formale che non rientra in nessun'altra categoria. La redigiamo per il vostro caso.",
     intro: "La vostra situazione non rientra in nessuna casella? Redigiamo la lettera formale che vi serve: reclamo, contestazione, richiesta, diffida.",
     included: [
       "Analisi della situazione",
@@ -571,7 +571,7 @@ const services: Record<string, ServiceText> = {
   },
   "mise-en-demeure": {
     name: "Diffida",
-    short: "Cliente, fornitore, conduttore, partner: lettera formale con termine e seguito annunciato, l'ultimo avvertimento prima della procedura.",
+    short: "Una lettera formale che ricorda quanto vi è dovuto, fissa un termine e annuncia chiaramente cosa succederà dopo.",
     intro: "Qualcuno non rispetta i propri impegni verso la vostra impresa? Un cliente che non paga, un fornitore che non consegna, un conduttore in ritardo, un partner che non mantiene la parola: una diffida formale, con termine e seguito annunciato, sblocca spesso la situazione.",
     included: [
       "Verifica dei vostri diritti e dei documenti",
@@ -586,8 +586,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recouvrement-facture-impayee": {
-    name: "Incasso di una fattura non pagata",
-    short: "Diffida, domanda d'esecuzione preparata, seguito dell'opposizione: ci occupiamo di tutto.",
+    name: "Recuperare una fattura non pagata",
+    short: "Scriviamo al cliente, prepariamo la domanda d'esecuzione e vi diciamo cosa fare se fa opposizione.",
     intro: "Una fattura non pagata da settimane? Ci occupiamo dell'intero percorso bonale e della preparazione dell'esecuzione, fino all'istanza di rigetto se il debitore fa opposizione.",
     included: [
       "Diffida con interessi",
@@ -604,7 +604,7 @@ const services: Record<string, ServiceText> = {
   },
   "requete-de-mainlevee": {
     name: "Istanza di rigetto dell'opposizione",
-    short: "Dopo un'opposizione: istanza di rigetto pronta da depositare, con gli allegati ordinati.",
+    short: "Il debitore ha fatto opposizione? Prepariamo l'istanza al tribunale e ordiniamo i vostri documenti.",
     intro: "Il debitore ha fatto opposizione al precetto esecutivo? Con un riconoscimento di debito o una sentenza potete proseguire l'esecuzione con il rigetto dell'opposizione. Redigiamo l'istanza.",
     included: [
       "Verifica del titolo: riconoscimento di debito o sentenza",
@@ -619,8 +619,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-commercial": {
-    name: "Controversia commerciale: analisi e lettera",
-    short: "Cliente, fornitore o partner: la vostra posizione analizzata e difesa per scritto.",
+    name: "Lite con un cliente, un fornitore o un partner",
+    short: "Analizziamo il caso, vi diciamo a che punto siete e difendiamo la vostra posizione per iscritto.",
     intro: "Consegna non conforme, prestazione contestata, rottura del contratto: analizziamo la situazione e redigiamo la lettera che difende la vostra posizione e apre a una soluzione.",
     included: [
       "Analisi del contratto e della corrispondenza",
@@ -635,8 +635,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "cgv-sur-mesure": {
-    name: "CG su misura",
-    short: "Condizioni generali scritte per la vostra attività: pagamento, responsabilità, garanzia, foro.",
+    name: "Condizioni generali (CG) su misura",
+    short: "CG scritte per la vostra attività reale, che regolano i ritardi di pagamento, la responsabilità e il foro competente.",
     intro: "CG copiate da un concorrente non vi proteggono. Redigiamo condizioni generali adatte alla vostra attività, ai vostri clienti (imprese o consumatori) e al vostro modo di vendere.",
     included: [
       "Questionario su attività e rischi",
@@ -653,7 +653,7 @@ const services: Record<string, ServiceText> = {
   },
   "contrat-commercial-sur-mesure": {
     name: "Contratto commerciale su misura",
-    short: "Prestazione, subappalto, distribuzione, partenariato: un contratto scritto per la vostra situazione.",
+    short: "Un contratto di prestazione, subappalto, distribuzione o partenariato, scritto a partire dalla vostra situazione.",
     intro: "Un accordo importante merita un vero contratto. Redigiamo un contratto adatto al vostro rapporto commerciale, con le clausole che proteggono i vostri interessi.",
     included: [
       "Inquadramento dell'accordo e dei rischi",
@@ -668,8 +668,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-commercial": {
-    name: "Verifica di contratto commerciale",
-    short: "Rischi segnalati e correzioni proposte, prima di firmare (fino a 20 pagine).",
+    name: "Verificare un contratto commerciale",
+    short: "Prima della firma rileggiamo il contratto (fino a 20 pagine), vi segnaliamo i rischi e proponiamo correzioni.",
     intro: "Un cliente o un fornitore vi sottopone il suo contratto? Lo rileggiamo, segnaliamo le clausole pericolose e proponiamo correzioni da negoziare.",
     included: [
       "Rilettura completa (fino a 20 pagine)",
@@ -685,7 +685,7 @@ const services: Record<string, ServiceText> = {
   },
   "accord-de-confidentialite": {
     name: "Accordo di riservatezza (NDA)",
-    short: "Unilaterale o reciproco, adattato al progetto, con una penale dissuasiva.",
+    short: "Prima di condividere un progetto o dei numeri: un accordo unilaterale o reciproco, con una penale in caso di fuga di notizie.",
     intro: "Prima di presentare un progetto, un know-how o delle cifre, proteggeteli. Redigiamo un accordo di riservatezza adatto alla vostra situazione.",
     included: [
       "Scelta tra accordo unilaterale e reciproco",
@@ -700,8 +700,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-mandat-independant": {
-    name: "Contratto di mandato per indipendenti",
-    short: "Incarico, onorari, responsabilità, proprietà intellettuale: un contratto freelance solido.",
+    name: "Contratto per indipendenti (mandato)",
+    short: "Per freelance e consulenti, un contratto che fissa l'incarico, l'onorario e a chi appartiene il lavoro consegnato.",
     intro: "Che siate freelance o che incarichiate un indipendente, un contratto chiaro evita malintesi e il rischio di riqualifica in contratto di lavoro.",
     included: [
       "Mandato o contratto d'appalto secondo l'incarico",
@@ -717,7 +717,7 @@ const services: Record<string, ServiceText> = {
   },
   "contrat-de-travail-sur-mesure": {
     name: "Contratto di lavoro su misura",
-    short: "Adattato al posto e al contratto collettivo, con le clausole che proteggono l'impresa.",
+    short: "Scritto per il posto e il CCL applicabile, con le clausole che proteggono l'azienda.",
     intro: "Un contratto di lavoro ben redatto evita la maggior parte delle controversie: orario, ore supplementari, vacanze, divieto di concorrenza, riservatezza. Lo redigiamo per il posto interessato.",
     included: [
       "Verifica del contratto collettivo applicabile",
@@ -733,8 +733,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "certificat-de-travail-employeur": {
-    name: "Redazione di un certificato di lavoro",
-    short: "Completo, veritiero e benevolo, senza formule che si ritorcono contro di voi.",
+    name: "Redigere un certificato di lavoro",
+    short: "Un certificato veritiero e benevolo, come vuole la legge, senza formule maldestre che vi si potrebbero rimproverare.",
     intro: "Redigere un certificato di lavoro richiede tempo e ha le sue insidie: troppo lusinghiero impegna la vostra responsabilità, troppo severo apre una controversia. Lo redigiamo in base alle vostre indicazioni.",
     included: [
       "Breve questionario sul dipendente",
@@ -749,8 +749,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-employeur": {
-    name: "Licenziamento sicuro",
-    short: "Termine verificato, periodi di protezione controllati, lettera di disdetta conforme.",
+    name: "Licenziare un collaboratore senza errori",
+    short: "Verifichiamo il termine di disdetta e i periodi di protezione, poi redigiamo la lettera di licenziamento.",
     intro: "Un licenziamento mal preparato può essere nullo o abusivo. Verifichiamo termini e periodi di protezione, poi redigiamo la lettera di disdetta e la motivazione scritta.",
     included: [
       "Verifica del termine di disdetta e della data di fine",
@@ -767,7 +767,7 @@ const services: Record<string, ServiceText> = {
   },
   "avertissement-employe": {
     name: "Ammonimento scritto",
-    short: "Fatti, aspettative, conseguenze: un ammonimento che regge in caso di controversia.",
+    short: "Descriviamo i fatti, le vostre aspettative e le possibili conseguenze, perché l'ammonimento regga in caso di lite.",
     intro: "Ritardi ripetuti, comportamento inadeguato, istruzioni ignorate: un ammonimento scritto, preciso e proporzionato protegge l'impresa se la situazione porta a un licenziamento.",
     included: [
       "Descrizione fattuale delle mancanze",
@@ -783,7 +783,7 @@ const services: Record<string, ServiceText> = {
   },
   "reglement-du-personnel": {
     name: "Regolamento del personale",
-    short: "Orari, vacanze, spese, telelavoro, dati: regole chiare per tutto il team.",
+    short: "Le regole della casa, scritte una volta per tutto il team, dagli orari alle spese fino al telelavoro.",
     intro: "Già con pochi dipendenti, un regolamento del personale evita di rinegoziare ogni regola. Lo redigiamo per la vostra impresa, coerente con contratti e CCL.",
     included: [
       "Questionario sulle vostre prassi",
@@ -799,8 +799,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "pack-conformite-nlpd": {
-    name: "Pacchetto conformità nLPD",
-    short: "Informativa sulla protezione dei dati, registro dei trattamenti, clausole: la vostra conformità.",
+    name: "Conformità alla nLPD",
+    short: "Informativa sulla privacy, registro delle attività di trattamento e clausole aggiornate, per rispettare la legge sulla protezione dei dati.",
     intro: "Dal 1° settembre 2023 la nuova legge sulla protezione dei dati si applica a tutte le imprese. Facciamo l'inventario dei vostri trattamenti e redigiamo i documenti essenziali.",
     included: [
       "Inventario guidato dei trattamenti e dei responsabili del trattamento",
@@ -816,8 +816,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "politique-de-confidentialite": {
-    name: "Informativa sulla protezione dei dati del sito",
-    short: "Conforme alla nLPD, adattata ai vostri strumenti: moduli, analytics, newsletter.",
+    name: "Informativa sulla privacy del vostro sito",
+    short: "Scritta in base agli strumenti che usate davvero (moduli, statistiche, newsletter), conforme alla nLPD.",
     intro: "Il vostro sito raccoglie dati tramite un modulo, statistiche o una newsletter? Gli serve un'informativa esatta, adattata agli strumenti che usate davvero.",
     included: [
       "Inventario degli strumenti del sito",
@@ -832,8 +832,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-bail-commercial": {
-    name: "Verifica di una locazione commerciale",
-    short: "Pigione, indicizzazione, durata, ripristino: i punti da negoziare prima di firmare.",
+    name: "Verificare un contratto di locazione commerciale",
+    short: "Prima della firma vi mostriamo cosa negoziare, come l'indicizzazione, la durata o il ripristino all'uscita.",
     intro: "Una locazione commerciale vi impegna spesso per cinque anni o più. La rileggiamo e vi segnaliamo le clausole sfavorevoli e i punti da negoziare.",
     included: [
       "Rilettura completa del contratto e degli allegati",
@@ -848,8 +848,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "convention-d-actionnaires": {
-    name: "Patto parasociale o tra soci",
-    short: "Governance, uscita, prelazione, divieto di concorrenza: le regole tra soci.",
+    name: "Patto parasociale o accordo tra soci",
+    short: "Fissare le regole tra soci finché tutto va bene, in particolare decisioni, uscita e riacquisto delle quote.",
     intro: "Gli statuti non regolano tutto. Un patto parasociale organizza le decisioni, l'entrata e l'uscita di un socio e protegge ciascuno in caso di disaccordo.",
     included: [
       "Colloquio preliminare",
@@ -865,8 +865,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "statuts-d-association": {
-    name: "Statuti di un'associazione",
-    short: "Conformi al Codice civile, adattati al progetto: scopo, organi, membri, finanze.",
+    name: "Statuti di associazione",
+    short: "Statuti conformi al Codice civile e adatti alla vostra associazione, dallo scopo alla gestione delle finanze.",
     intro: "Club sportivo, associazione culturale, progetto di quartiere: redigiamo statuti chiari, conformi al Codice civile, e il verbale dell'assemblea costitutiva.",
     included: [
       "Statuti completi",

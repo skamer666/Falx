@@ -38,7 +38,7 @@ export function HubHero({ locale, audience, dark = false }: { locale: Locale; au
   return (
     <section className={`${dark ? "" : "theme-light"} border-b border-border bg-bg pb-14 pt-28 md:pb-20 md:pt-36`}>
       <Container className="mx-auto max-w-4xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">{t.eyebrow}</p>
+        <p className="text-sm text-text-muted">{t.eyebrow}</p>
         <h1 className="mt-3 text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.03em] text-text sm:text-5xl md:text-[3.5rem]">
           {t.title}
         </h1>
@@ -71,13 +71,22 @@ export function HowItWorks({ locale, className = "" }: { locale: Locale; classNa
   const t = SERVICES_UI[locale].steps;
   return (
     <section className={`theme-light bg-surface py-14 md:py-20 ${className}`}>
-      <Container className="mx-auto max-w-4xl">
-        <h2 className="text-[26px] font-semibold tracking-[-0.02em] text-text md:text-3xl">{t.title}</h2>
-        <ol className="mt-8 grid gap-4 md:grid-cols-3">
-          {t.items.map((step) => (
-            <li key={step.title} className="rounded-2xl border border-border bg-bg p-6">
-              <h3 className="text-lg font-semibold text-text">{step.title}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-text-muted">{step.text}</p>
+      <Container className="mx-auto grid max-w-4xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-14">
+        <div>
+          <h2 className="text-[26px] font-semibold tracking-[-0.02em] text-text md:text-3xl">{t.title}</h2>
+          <p className="mt-4 text-base leading-relaxed text-text-muted">{t.intro}</p>
+        </div>
+        <ol className="relative">
+          {t.items.map((step, index) => (
+            <li key={step.title} className="relative border-l border-border pb-9 pl-8 last:border-transparent last:pb-0">
+              <span
+                aria-hidden
+                className="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center rounded-full border border-border bg-surface text-xs font-semibold text-text"
+              >
+                {index + 1}
+              </span>
+              <h3 className="text-[17px] font-semibold leading-snug text-text">{step.title}</h3>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-text-muted">{step.text}</p>
             </li>
           ))}
         </ol>

@@ -18,8 +18,8 @@ const categories: Record<CategoryId, CategoryText> = {
 const services: Record<string, ServiceText> = {
   // ------------------------------------------------------------------ Particuliers · Travail
   "analyse-certificat-de-travail": {
-    name: "Analyse de certificat de travail",
-    short: "Chaque formule de votre certificat décodée : ce qui vous sert, ce qui vous dessert, ce qui manque.",
+    name: "Analyse de votre certificat de travail",
+    short: "On lit votre certificat comme un recruteur le lirait, et on vous dit franchement s'il vous aide ou s'il vous freine.",
     intro:
       "Un certificat de travail peut sembler positif et contenir des formules codées, des omissions ou des nuances qui freinent vos candidatures. Nous l'analysons phrase par phrase et vous disons ce qu'il dit vraiment aux recruteurs.",
     included: [
@@ -37,8 +37,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "rectification-certificat-de-travail": {
-    name: "Certificat de travail : demande de rectification",
-    short: "Analyse de votre certificat et lettre à l'employeur avec les reformulations que vous pouvez exiger.",
+    name: "Faire corriger son certificat de travail",
+    short: "On repère les phrases qui vous desservent et on écrit à votre employeur pour obtenir une nouvelle version.",
     intro:
       "Votre certificat contient des formules floues, des omissions ou des phrases qui vous desservent ? Nous l'analysons phrase par phrase et rédigeons la lettre à votre employeur, avec les reformulations que vous êtes en droit de demander.",
     included: [
@@ -56,8 +56,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-opposition": {
-    name: "Licenciement : vérification et opposition",
-    short: "Délais, période de protection, congé abusif : on vérifie votre licenciement et on rédige l'opposition.",
+    name: "Contester un licenciement",
+    short: "On vérifie si votre congé respecte les délais et les périodes de protection, puis on rédige votre lettre d'opposition.",
     intro:
       "Vous venez d'être licencié et quelque chose ne vous semble pas juste ? Nous vérifions si le congé respecte les délais, s'il tombe pendant une période de protection et s'il peut être abusif, puis nous rédigeons votre opposition écrite.",
     included: [
@@ -75,8 +75,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-de-travail": {
-    name: "Relecture de contrat de travail",
-    short: "Avant de signer : période d'essai, heures supplémentaires, non-concurrence, vacances, tout est vérifié.",
+    name: "Relire un contrat de travail avant de signer",
+    short: "On lit tout le contrat et on vous signale ce qui mérite d'être négocié, comme la période d'essai ou une clause de non-concurrence.",
     intro:
       "On vous propose un contrat et vous voulez savoir ce que vous signez ? Nous le relisons et vous signalons les clauses défavorables, inhabituelles ou nulles, avec ce que vous pouvez négocier.",
     included: [
@@ -94,8 +94,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "salaire-impaye": {
-    name: "Salaire, heures sup ou vacances impayés",
-    short: "Calcul de ce qui vous est dû et mise en demeure à l'employeur, avec délai de paiement.",
+    name: "Récupérer un salaire, des heures sup ou des vacances impayés",
+    short: "On calcule ce que votre employeur vous doit et on lui envoie une mise en demeure avec un délai pour payer.",
     intro:
       "Salaire en retard, heures supplémentaires jamais payées, solde de vacances ignoré à la fin du contrat : nous calculons précisément ce qui vous est dû et rédigeons la mise en demeure à votre employeur.",
     included: [
@@ -114,7 +114,7 @@ const services: Record<string, ServiceText> = {
   },
   "lettre-de-demission": {
     name: "Lettre de démission",
-    short: "Le bon préavis, la bonne date de fin, le solde de vacances et la demande de certificat.",
+    short: "Une lettre qui respecte votre délai de congé et qui règle d'avance les vacances restantes et le certificat.",
     intro:
       "Une démission mal datée peut vous coûter un mois de salaire ou créer un conflit inutile. Nous calculons votre délai et rédigeons une lettre claire, qui règle aussi les vacances restantes et le certificat de travail.",
     included: [
@@ -131,8 +131,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-conciliation-travail": {
-    name: "Requête de conciliation (travail)",
-    short: "Votre requête prête à déposer devant l'autorité de conciliation, avec les pièces classées.",
+    name: "Saisir l'autorité de conciliation (travail)",
+    short: "Votre employeur ne répond plus ? On prépare la requête que vous déposez vous-même, avec vos pièces dans l'ordre.",
     intro:
       "Votre employeur ne paie pas ou conteste vos droits malgré vos courriers ? La procédure devant le tribunal des prud'hommes commence en principe par une tentative de conciliation. Nous rédigeons votre requête, prête à déposer, et vous expliquons le déroulement de l'audience.",
     included: [
@@ -151,8 +151,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Particuliers · Logement
   "baisse-de-loyer": {
-    name: "Demande de baisse de loyer",
-    short: "Calcul de la baisse à laquelle vous avez droit et lettre au bailleur, prête à envoyer.",
+    name: "Demander une baisse de loyer",
+    short: "Quand le taux hypothécaire de référence baisse, votre loyer peut baisser aussi. On calcule le montant et on écrit au bailleur.",
     intro:
       "Quand le taux hypothécaire de référence baisse, votre loyer peut baisser aussi. Nous vérifions votre droit, calculons la baisse demandable et rédigeons la lettre à votre bailleur ou à la régie.",
     included: [
@@ -170,8 +170,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-loyer-initial": {
-    name: "Contestation du loyer initial",
-    short: "Loyer abusif à l'entrée ? Vous avez 30 jours : analyse et requête prête à déposer.",
+    name: "Contester le loyer d'entrée",
+    short: "Votre nouveau loyer vous paraît abusif ? Vous avez 30 jours après la remise des clés. On analyse et on prépare la requête.",
     intro:
       "Vous venez d'emménager et votre loyer est nettement plus élevé que celui du locataire précédent ? Vous pouvez peut-être le contester. Nous analysons vos chances et rédigeons la requête à l'autorité de conciliation.",
     included: [
@@ -189,8 +189,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "defaut-logement": {
-    name: "Défaut du logement : réduction de loyer",
-    short: "Moisissure, panne, bruit, travaux : avis de défaut et demande de réduction de loyer.",
+    name: "Réduction de loyer pour un défaut",
+    short: "Moisissure, chauffage en panne, chantier bruyant… On avertit le bailleur par écrit et on demande la réduction qui vous revient.",
     intro:
       "Moisissure, chauffage en panne, infiltration, chantier bruyant : un défaut qui dure vous donne droit à une réparation et à une réduction de loyer. Nous rédigeons l'avis de défaut et la demande de réduction, dans les formes.",
     included: [
@@ -208,8 +208,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-de-loyer": {
-    name: "Récupérer votre garantie de loyer",
-    short: "Frais de remise en état contestés, garantie bloquée : on rédige votre réclamation.",
+    name: "Récupérer sa garantie de loyer",
+    short: "Votre ancien bailleur bloque la garantie ou vous facture des frais contestables ? On rédige la réclamation.",
     intro:
       "Votre ancienne régie bloque la garantie ou vous facture des frais de remise en état ? Nous vérifions ce qui peut vraiment vous être demandé et rédigeons la contestation et la demande de libération.",
     included: [
@@ -226,8 +226,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "resiliation-anticipee-bail": {
-    name: "Résiliation anticipée du bail",
-    short: "Partir avant l'échéance sans payer des mois de loyer : lettre et locataire de remplacement.",
+    name: "Quitter son logement avant l'échéance",
+    short: "On rédige votre résiliation et la présentation d'un locataire de remplacement, pour ne pas payer le loyer jusqu'au terme.",
     intro:
       "Vous devez déménager avant l'échéance de votre bail ? En présentant un locataire de remplacement, vous pouvez vous libérer plus tôt. Nous rédigeons la lettre de résiliation et la présentation du candidat.",
     included: [
@@ -244,8 +244,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-conge": {
-    name: "Contester un congé ou prolonger le bail",
-    short: "Vous avez 30 jours : requête à l'autorité de conciliation pour annuler le congé ou obtenir du temps.",
+    name: "Contester un congé ou prolonger son bail",
+    short: "Vous avez 30 jours après avoir reçu la résiliation. On prépare la requête à l'autorité de conciliation.",
     intro:
       "Vous avez reçu votre congé ? Vous pouvez le contester s'il est abusif, ou demander une prolongation si le départ vous pose de graves difficultés. Nous rédigeons la requête à l'autorité de conciliation.",
     included: [
@@ -262,8 +262,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "decompte-de-charges": {
-    name: "Contester le décompte de charges",
-    short: "Vérification ligne par ligne de votre décompte et réclamation au bailleur.",
+    name: "Vérifier un décompte de charges",
+    short: "On relit votre décompte ligne par ligne et on écrit au bailleur pour chaque poste contestable.",
     intro:
       "Votre décompte de chauffage et de frais accessoires a explosé ? Nous vérifions chaque poste et rédigeons la réclamation à la régie, avec la demande de consulter les justificatifs.",
     included: [
@@ -280,8 +280,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-de-voisinage": {
-    name: "Litige de voisinage : courrier formel",
-    short: "Bruit, plantations, limites, nuisances : un courrier clair et juridiquement fondé.",
+    name: "Litige avec un voisin",
+    short: "Quand la discussion ne mène plus à rien, une lettre posée et fondée sur le droit, pour du bruit, une haie ou une limite de terrain.",
     intro:
       "Les discussions n'ont rien donné et la situation dure ? Un courrier formel, posé et juridiquement fondé, règle souvent le problème sans procès. Nous le rédigeons pour vous.",
     included: [
@@ -301,7 +301,7 @@ const services: Record<string, ServiceText> = {
   // ------------------------------------------------------------------ Particuliers · Consommation
   "resiliation-de-contrat": {
     name: "Résilier un abonnement ou un contrat",
-    short: "Fitness, téléphonie, assurance, abonnement : le bon délai, la bonne forme, la bonne date.",
+    short: "On vérifie à quelle date vous pouvez sortir de votre abonnement (fitness, téléphone, assurance…) et on rédige une résiliation valable.",
     intro:
       "Un abonnement qui se renouvelle tout seul, une assurance qui refuse votre résiliation, un fitness qui fait la sourde oreille : nous vérifions votre contrat et rédigeons une résiliation qui tient.",
     included: [
@@ -318,8 +318,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-achat-defectueux": {
-    name: "Achat défectueux : faire valoir la garantie",
-    short: "Mise en demeure au vendeur : réparation, échange ou remboursement, selon vos droits.",
+    name: "Faire jouer la garantie d'un achat",
+    short: "L'objet est en panne ou ne correspond pas à ce qu'on vous a vendu ? On écrit au vendeur pour obtenir ce à quoi vous avez droit.",
     intro:
       "Un appareil, un meuble ou un véhicule défectueux, et le vendeur se renvoie la balle ? Nous vérifions vos droits de garantie et rédigeons la mise en demeure.",
     included: [
@@ -336,8 +336,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-artisan": {
-    name: "Litige avec un artisan ou une entreprise",
-    short: "Travaux mal faits, retard, devis dépassé : avis des défauts et mise en demeure.",
+    name: "Litige avec un artisan",
+    short: "Les travaux sont mal faits, en retard ou plus chers que prévu ? On signale les défauts par écrit et on fixe un délai à l'entreprise.",
     intro:
       "Travaux bâclés, chantier qui s'éternise, facture bien au-delà du devis : nous analysons votre contrat et rédigeons l'avis des défauts et la mise en demeure à l'artisan.",
     included: [
@@ -355,7 +355,7 @@ const services: Record<string, ServiceText> = {
   },
   "contester-une-facture": {
     name: "Contester une facture",
-    short: "Facture injustifiée ou excessive : contestation écrite et motivée, prête à envoyer.",
+    short: "Une facture qui ne correspond pas à ce que vous avez commandé ? On rédige une contestation motivée.",
     intro:
       "Une facture pour une prestation jamais commandée, un montant gonflé, des frais surprises : nous rédigeons une contestation claire, qui expose pourquoi vous ne devez pas ce montant.",
     included: [
@@ -372,8 +372,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-particulier": {
-    name: "Relecture d'un contrat avant signature",
-    short: "Leasing, prêt, achat de véhicule, travaux : on relit et on vous signale les pièges.",
+    name: "Relire un contrat avant de signer",
+    short: "Leasing, crédit, achat de voiture ou devis de travaux : on le lit avant vous et on vous montre où sont les pièges.",
     intro:
       "Avant de signer un contrat important, faites-le relire. Nous vous signalons les clauses défavorables, les frais cachés et ce que vous pouvez négocier.",
     included: [
@@ -390,8 +390,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "vol-annule-retarde": {
-    name: "Vol annulé ou retardé : indemnisation",
-    short: "Réclamation à la compagnie aérienne, à prix fixe, sans commission sur votre indemnité.",
+    name: "Indemnisation pour un vol annulé ou retardé",
+    short: "On écrit à la compagnie aérienne à votre place. Vous payez un prix fixe et vous gardez toute l'indemnité.",
     intro:
       "Vol annulé, surréservation, retard important : vous avez peut-être droit à une indemnité de 250 à 600 euros par passager. Nous vérifions votre droit et rédigeons la réclamation, sans prélever de pourcentage.",
     included: [
@@ -408,8 +408,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "refus-assurance": {
-    name: "Refus d'une assurance : réclamation",
-    short: "Ménage, voyage, véhicule, protection juridique : réclamation motivée à l'assureur.",
+    name: "Contester un refus d'assurance",
+    short: "Votre assurance ménage, voyage ou véhicule refuse de payer ? On lui répond par écrit, contrat en main.",
     intro:
       "Votre assurance refuse de payer ou ne rembourse qu'une partie ? Nous analysons votre police et la décision, puis rédigeons une réclamation motivée.",
     included: [
@@ -429,8 +429,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Particuliers · Argent & poursuites
   "poursuite-injustifiee": {
-    name: "Poursuite injustifiée : opposition et radiation",
-    short: "Commandement de payer injustifié : opposition, puis demande de non-divulgation au registre.",
+    name: "Se défendre contre une poursuite injustifiée",
+    short: "Vous avez 10 jours pour faire opposition. On s'en occupe, puis on demande le moment venu que la poursuite disparaisse de votre extrait.",
     intro:
       "Vous avez reçu un commandement de payer pour une dette que vous contestez ? Nous vous expliquons comment faire opposition et rédigeons ensuite la demande de non-divulgation, pour que la poursuite n'apparaisse plus dans votre extrait.",
     included: [
@@ -447,8 +447,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recuperer-argent-prete": {
-    name: "Récupérer de l'argent prêté ou dû",
-    short: "Mise en demeure et réquisition de poursuite prête à déposer, pour un prêt ou une dette privée.",
+    name: "Récupérer de l'argent prêté",
+    short: "Quelqu'un ne vous rembourse pas ? D'abord une mise en demeure, puis la réquisition de poursuite, prête à déposer.",
     intro:
       "Vous avez prêté de l'argent à un proche, vendu un objet sans être payé ou avancé des frais ? Nous rédigeons la mise en demeure et préparons la réquisition de poursuite si rien ne bouge.",
     included: [
@@ -467,8 +467,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Particuliers · Administration
   "reclamation-taxation-impots": {
-    name: "Réclamation contre une taxation",
-    short: "Déduction refusée, revenu mal évalué : réclamation motivée dans le délai de 30 jours.",
+    name: "Contester sa taxation d'impôts",
+    short: "Une déduction refusée ou un revenu mal calculé ? Vous avez 30 jours pour réclamer. On rédige la réclamation.",
     intro:
       "Votre décision de taxation ne correspond pas à votre déclaration ? Déduction refusée, revenu estimé d'office, erreur de calcul : nous rédigeons une réclamation motivée.",
     included: [
@@ -485,8 +485,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "opposition-assurance-sociale": {
-    name: "Opposition à une décision d'assurance sociale",
-    short: "Chômage, AVS, caisse maladie, accident : opposition motivée dans les 30 jours.",
+    name: "S'opposer à une décision d'assurance sociale",
+    short: "Le chômage, l'AVS ou l'assurance maladie ou accident a rendu une décision qui vous semble fausse ? On rédige l'opposition dans les 30 jours.",
     intro:
       "Jours de suspension au chômage, prestation refusée par la caisse maladie, rente calculée trop bas : nous analysons la décision et rédigeons votre opposition.",
     included: [
@@ -505,8 +505,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Particuliers · Famille
   testament: {
-    name: "Testament : rédaction guidée",
-    short: "Un testament sur mesure, conforme au nouveau droit successoral, à recopier à la main.",
+    name: "Rédiger son testament",
+    short: "On prépare avec vous un testament adapté à votre famille et au droit actuel. Vous le recopiez ensuite à la main.",
     intro:
       "Avantager votre conjoint, protéger votre partenaire, léguer un bien précis : nous vous aidons à rédiger un testament clair, conforme au droit successoral entré en vigueur en 2023, que vous recopiez à la main.",
     included: [
@@ -524,7 +524,7 @@ const services: Record<string, ServiceText> = {
   },
   "mandat-pour-cause-d-inaptitude": {
     name: "Mandat pour cause d'inaptitude",
-    short: "Désignez qui décidera pour vous si vous ne pouvez plus le faire : patrimoine, santé, administratif.",
+    short: "Vous choisissez à l'avance qui s'occupera de votre argent, de vos papiers et de vos décisions de santé si vous n'en êtes plus capable.",
     intro:
       "Accident, maladie : si vous ne pouvez plus gérer vos affaires, l'autorité de protection désigne quelqu'un. Avec un mandat pour cause d'inaptitude, c'est vous qui choisissez. Nous le rédigeons avec vous.",
     included: [
@@ -542,7 +542,7 @@ const services: Record<string, ServiceText> = {
   },
   "directives-anticipees": {
     name: "Directives anticipées",
-    short: "Vos volontés médicales, claires et valables, et la personne qui les fera respecter.",
+    short: "Vous écrivez noir sur blanc les soins que vous voulez ou refusez, et vous désignez la personne qui parlera pour vous.",
     intro:
       "Quels traitements accepter ou refuser si vous ne pouvez plus vous exprimer ? Les directives anticipées le disent clairement et désignent la personne qui parlera pour vous.",
     included: [
@@ -560,7 +560,7 @@ const services: Record<string, ServiceText> = {
   },
   "convention-de-concubinage": {
     name: "Convention de concubinage",
-    short: "Logement, frais communs, biens, séparation : tout est prévu, noir sur blanc.",
+    short: "Vous vivez ensemble sans être mariés ? On met par écrit qui paie quoi, et qui garde quoi si vous vous séparez.",
     intro:
       "Les couples non mariés n'ont presque aucune règle légale qui les protège. Une convention de concubinage règle le logement, les dépenses, les biens achetés ensemble et ce qui se passe en cas de séparation.",
     included: [
@@ -578,7 +578,7 @@ const services: Record<string, ServiceText> = {
   },
   "separation-divorce-amiable": {
     name: "Divorce à l'amiable sans enfants mineurs",
-    short: "Convention et requête commune, pour les couples sans enfants mineurs d'accord sur l'essentiel.",
+    short: "Vous êtes d'accord sur l'essentiel ? On rédige la convention et la requête commune à déposer au tribunal.",
     intro:
       "Vous êtes d'accord sur l'essentiel, vous n'avez pas d'enfants mineurs et vous voulez éviter une procédure longue ? Nous rédigeons, de façon neutre et pour vous deux, la convention de divorce et la requête commune que vous déposez au tribunal.",
     included: [
@@ -597,8 +597,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Particuliers · Sur mesure
   "question-juridique": {
-    name: "Question juridique : réponse écrite",
-    short: "Une question précise, une réponse claire et écrite, avec les articles de loi utiles.",
+    name: "Poser une question juridique",
+    short: "Vous posez une question précise, on vous répond par écrit en citant les articles de loi qui s'appliquent.",
     intro:
       "Vous avez une question précise et voulez une réponse fiable, sans rendez-vous ? Posez-la : vous recevez une réponse écrite, claire, avec la marche à suivre.",
     included: [
@@ -615,8 +615,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "appel-juridique": {
-    name: "Appel juridique de 20 minutes",
-    short: "Vous expliquez votre situation, on vous dit quoi faire et dans quels délais.",
+    name: "Un appel de 20 minutes",
+    short: "Vous racontez votre situation au téléphone, on vous dit ce que vous pouvez faire et quels délais surveiller.",
     intro:
       "Vous préférez en parler ? Réservez un appel de 20 minutes : vous exposez votre situation, nous vous disons ce que vous pouvez faire, dans quels délais, et ce qu'il faut éviter.",
     included: [
@@ -633,8 +633,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "lettre-juridique-sur-mesure": {
-    name: "Lettre juridique sur mesure",
-    short: "Un courrier formel adapté à votre situation, juridiquement fondé, prêt à envoyer.",
+    name: "Lettre sur mesure",
+    short: "Pour un courrier formel qui n'entre dans aucune autre case. On le rédige pour votre cas précis.",
     intro:
       "Votre situation n'entre dans aucune case ? Nous rédigeons le courrier formel qu'il vous faut : réclamation, contestation, demande, mise en demeure.",
     included: [
@@ -654,7 +654,7 @@ const services: Record<string, ServiceText> = {
   // ------------------------------------------------------------------ Entreprises · Recouvrement
   "mise-en-demeure": {
     name: "Mise en demeure",
-    short: "Client, fournisseur, locataire, partenaire : lettre formelle avec délai et suite annoncée, le dernier avertissement avant la procédure.",
+    short: "Une lettre formelle qui rappelle ce qui vous est dû, fixe un délai et annonce clairement la suite si rien ne bouge.",
     intro:
       "Quelqu'un ne respecte pas ses engagements envers votre entreprise ? Client qui ne paie pas, fournisseur qui ne livre pas, locataire en retard, partenaire qui ne tient pas parole : une mise en demeure formelle, avec délai et suite annoncée, débloque souvent la situation.",
     included: [
@@ -671,8 +671,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recouvrement-facture-impayee": {
-    name: "Recouvrement de facture impayée",
-    short: "Mise en demeure, réquisition de poursuite préparée, suivi de l'opposition : on s'occupe de tout.",
+    name: "Recouvrer une facture impayée",
+    short: "On écrit au client, on prépare la réquisition de poursuite et on vous dit quoi faire s'il fait opposition.",
     intro:
       "Une facture impayée depuis des semaines ? Nous prenons en charge tout le parcours amiable puis la préparation de la poursuite, jusqu'à la requête de mainlevée si le débiteur fait opposition.",
     included: [
@@ -690,8 +690,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-de-mainlevee": {
-    name: "Requête de mainlevée",
-    short: "Après une opposition : requête de mainlevée prête à déposer, avec les pièces classées.",
+    name: "Requête de mainlevée d'opposition",
+    short: "Votre débiteur a fait opposition ? On prépare la requête au tribunal et on classe vos pièces.",
     intro:
       "Votre débiteur a fait opposition au commandement de payer ? Si vous avez une reconnaissance de dette ou un jugement, la mainlevée permet de continuer la poursuite. Nous rédigeons la requête.",
     included: [
@@ -708,8 +708,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-commercial": {
-    name: "Litige commercial : analyse et courrier",
-    short: "Client, fournisseur ou partenaire : votre position analysée et défendue par écrit.",
+    name: "Litige avec un client, un fournisseur ou un partenaire",
+    short: "On analyse le dossier, on vous dit où vous en êtes et on défend votre position par écrit.",
     intro:
       "Livraison non conforme, prestation contestée, rupture de contrat : nous analysons la situation et rédigeons le courrier qui défend votre position et ouvre la voie à une solution.",
     included: [
@@ -728,8 +728,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Entreprises · Contrats
   "cgv-sur-mesure": {
-    name: "CGV sur mesure",
-    short: "Conditions générales rédigées pour votre activité : paiement, responsabilité, garantie, for.",
+    name: "Conditions générales (CGV) sur mesure",
+    short: "Des CGV écrites pour votre activité réelle, qui règlent les retards de paiement, la responsabilité et le tribunal compétent.",
     intro:
       "Des CGV copiées d'un concurrent ne vous protègent pas. Nous rédigeons des conditions générales adaptées à votre activité, à vos clients (entreprises ou particuliers) et à votre façon de vendre.",
     included: [
@@ -748,7 +748,7 @@ const services: Record<string, ServiceText> = {
   },
   "contrat-commercial-sur-mesure": {
     name: "Contrat commercial sur mesure",
-    short: "Prestation, sous-traitance, distribution, partenariat : un contrat rédigé pour votre situation.",
+    short: "Un contrat de prestation, de sous-traitance, de distribution ou de partenariat, rédigé à partir de votre situation.",
     intro:
       "Un accord important mérite un vrai contrat. Nous rédigeons un contrat adapté à votre relation commerciale, avec les clauses qui protègent vos intérêts.",
     included: [
@@ -765,8 +765,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-commercial": {
-    name: "Relecture de contrat commercial",
-    short: "Risques signalés et corrections proposées, avant de signer (jusqu'à 20 pages).",
+    name: "Relire un contrat commercial",
+    short: "Avant de signer, on relit le contrat (jusqu'à 20 pages), on vous signale les risques et on propose des corrections.",
     intro:
       "Un client ou un fournisseur vous soumet son contrat ? Nous le relisons, signalons les clauses dangereuses et proposons des corrections à négocier.",
     included: [
@@ -784,7 +784,7 @@ const services: Record<string, ServiceText> = {
   },
   "accord-de-confidentialite": {
     name: "Accord de confidentialité (NDA)",
-    short: "Unilatéral ou réciproque, adapté à votre projet, avec une peine conventionnelle dissuasive.",
+    short: "Avant de partager un projet ou des chiffres, un accord simple ou réciproque, avec une pénalité en cas de fuite.",
     intro:
       "Avant de présenter un projet, un savoir-faire ou des chiffres, protégez-les. Nous rédigeons un accord de confidentialité adapté à votre situation.",
     included: [
@@ -801,8 +801,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-mandat-independant": {
-    name: "Contrat de mandat pour indépendant",
-    short: "Mission, honoraires, responsabilité, propriété intellectuelle : un contrat freelance solide.",
+    name: "Contrat pour indépendant (mandat)",
+    short: "Pour les freelances et consultants, un contrat qui fixe la mission, les honoraires et à qui appartient le travail livré.",
     intro:
       "Que vous soyez freelance ou que vous engagiez un indépendant, un contrat clair évite les malentendus et le risque de requalification en contrat de travail.",
     included: [
@@ -822,7 +822,7 @@ const services: Record<string, ServiceText> = {
   // ------------------------------------------------------------------ Entreprises · Employeurs
   "contrat-de-travail-sur-mesure": {
     name: "Contrat de travail sur mesure",
-    short: "Adapté au poste et à la convention collective, avec les clauses qui protègent l'entreprise.",
+    short: "Rédigé pour le poste et la convention collective qui s'applique, avec les clauses qui protègent l'entreprise.",
     intro:
       "Un contrat de travail bien rédigé évite la plupart des litiges : temps de travail, heures supplémentaires, vacances, non-concurrence, confidentialité. Nous le rédigeons pour le poste concerné.",
     included: [
@@ -840,8 +840,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "certificat-de-travail-employeur": {
-    name: "Rédaction de certificat de travail",
-    short: "Complet, exact et bienveillant, sans formule qui se retourne contre vous.",
+    name: "Rédiger un certificat de travail",
+    short: "Un certificat exact et bienveillant, comme la loi l'exige, sans formule maladroite qui pourrait vous être reprochée.",
     intro:
       "Rédiger un certificat de travail prend du temps et comporte des pièges : trop flatteur, il engage votre responsabilité ; trop sévère, il ouvre un litige. Nous le rédigeons à partir de vos indications.",
     included: [
@@ -858,8 +858,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-employeur": {
-    name: "Licenciement sécurisé",
-    short: "Délai vérifié, période de protection contrôlée, lettre de congé conforme.",
+    name: "Licencier un employé sans erreur",
+    short: "On vérifie le délai de congé et les périodes de protection, puis on rédige la lettre de licenciement.",
     intro:
       "Un licenciement mal préparé peut être nul ou abusif. Nous vérifions les délais et les périodes de protection, puis rédigeons la lettre de congé et la motivation écrite.",
     included: [
@@ -877,8 +877,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "avertissement-employe": {
-    name: "Avertissement écrit",
-    short: "Faits, attentes, conséquences : un avertissement qui tient en cas de litige.",
+    name: "Avertissement écrit à un employé",
+    short: "On décrit les faits, ce que vous attendez et la suite possible, pour que l'avertissement tienne en cas de litige.",
     intro:
       "Retards répétés, comportement inadéquat, consignes ignorées : un avertissement écrit, précis et proportionné protège l'entreprise si la situation doit aboutir à un licenciement.",
     included: [
@@ -896,7 +896,7 @@ const services: Record<string, ServiceText> = {
   },
   "reglement-du-personnel": {
     name: "Règlement du personnel",
-    short: "Horaires, vacances, frais, télétravail, données : les règles claires pour toute l'équipe.",
+    short: "Les règles de la maison écrites une fois pour toute l'équipe, des horaires au télétravail en passant par les frais.",
     intro:
       "Dès quelques employés, un règlement du personnel évite de renégocier chaque règle. Nous le rédigeons pour votre entreprise, en cohérence avec vos contrats et la convention collective.",
     included: [
@@ -916,8 +916,8 @@ const services: Record<string, ServiceText> = {
 
   // ------------------------------------------------------------------ Entreprises · Conformité
   "pack-conformite-nlpd": {
-    name: "Pack conformité nLPD",
-    short: "Politique de confidentialité, registre des traitements, clauses et mentions : votre mise en conformité.",
+    name: "Mise en conformité nLPD",
+    short: "Politique de confidentialité, registre des traitements et clauses à jour, pour respecter la loi sur la protection des données.",
     intro:
       "Depuis le 1er septembre 2023, la nouvelle loi sur la protection des données s'applique à toutes les entreprises. Nous faisons l'inventaire de vos traitements et rédigeons les documents essentiels.",
     included: [
@@ -935,8 +935,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "politique-de-confidentialite": {
-    name: "Politique de confidentialité du site",
-    short: "Conforme à la nLPD, adaptée à vos outils : formulaires, analytics, newsletter.",
+    name: "Politique de confidentialité de votre site",
+    short: "Rédigée à partir des outils que vous utilisez vraiment (formulaires, statistiques, newsletter), conforme à la nLPD.",
     intro:
       "Votre site collecte des données via un formulaire, des statistiques ou une newsletter ? Il lui faut une politique de confidentialité exacte, adaptée à vos outils réels.",
     included: [
@@ -953,8 +953,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-bail-commercial": {
-    name: "Relecture de bail commercial",
-    short: "Loyer, indexation, durée, remise en état : les points à négocier avant de signer.",
+    name: "Relire un bail commercial",
+    short: "Avant de signer, on repère ce qui mérite d'être négocié, comme l'indexation, la durée ou la remise en état à la sortie.",
     intro:
       "Un bail commercial vous engage souvent pour cinq ans ou plus. Nous le relisons et vous signalons les clauses défavorables et les points à négocier.",
     included: [
@@ -972,7 +972,7 @@ const services: Record<string, ServiceText> = {
   },
   "convention-d-actionnaires": {
     name: "Convention d'actionnaires ou d'associés",
-    short: "Gouvernance, sortie, préemption, non-concurrence : les règles entre associés.",
+    short: "Fixer les règles entre associés pendant que tout va bien, notamment les décisions, la sortie et le rachat des parts.",
     intro:
       "Les statuts ne règlent pas tout. Une convention d'actionnaires ou d'associés organise les décisions, l'arrivée et le départ d'un associé, et protège chacun en cas de désaccord.",
     included: [
@@ -991,7 +991,7 @@ const services: Record<string, ServiceText> = {
   },
   "statuts-d-association": {
     name: "Statuts d'association",
-    short: "Conformes au Code civil, adaptés à votre projet : but, organes, membres, finances.",
+    short: "Des statuts conformes au Code civil et adaptés à votre association, de son but à la gestion de ses finances.",
     intro:
       "Club, association culturelle, projet de quartier : nous rédigeons des statuts clairs, conformes au Code civil, et le procès-verbal de l'assemblée constitutive.",
     included: [

@@ -108,20 +108,19 @@ export function StepList({
   className?: string;
 }) {
   return (
-    <div className={`grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3 ${className}`}>
+    <ol className={`relative text-left ${className}`}>
       {steps.map((step, index) => (
-        <div key={step.title} className="bg-bg p-8">
-          <span className="text-sm font-medium text-text-muted">
-            {String(index + 1).padStart(2, "0")}
+        <li key={step.title} className="relative border-l border-border pb-9 pl-8 last:border-transparent last:pb-0">
+          <span
+            aria-hidden
+            className="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center rounded-full border border-border bg-surface text-xs font-semibold text-text"
+          >
+            {index + 1}
           </span>
-          <h3 className="mt-4 text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-            {step.title}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-text-muted">
-            {step.description}
-          </p>
-        </div>
+          <h3 className="text-[17px] font-semibold leading-snug text-text">{step.title}</h3>
+          <p className="mt-1.5 text-[15px] leading-relaxed text-text-muted">{step.description}</p>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }

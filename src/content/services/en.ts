@@ -17,8 +17,8 @@ const categories: Record<CategoryId, CategoryText> = {
 
 const services: Record<string, ServiceText> = {
   "analyse-certificat-de-travail": {
-    name: "Work reference analysis",
-    short: "Every phrase of your work reference decoded: what helps you, what hurts you, what is missing.",
+    name: "Review of your work reference",
+    short: "We read your reference the way a recruiter would and tell you honestly whether it helps you or holds you back.",
     intro: "A work reference can look positive and still contain coded phrases, omissions or nuances that hold back your applications. We analyse it sentence by sentence and tell you what it really says to recruiters.",
     included: [
       "Review of every sentence, including coded phrases and omissions",
@@ -34,8 +34,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "rectification-certificat-de-travail": {
-    name: "Work reference: correction request",
-    short: "Analysis of your reference and a letter to your employer with the rewording you can demand.",
+    name: "Getting your work reference corrected",
+    short: "We find the sentences that work against you and write to your employer to get a new version.",
     intro: "Your reference contains vague phrases, omissions or sentences that work against you? We analyse it sentence by sentence and write the letter to your employer with the rewording you are entitled to request.",
     included: [
       "Full analysis of the reference, coded phrases and omissions included",
@@ -51,8 +51,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-opposition": {
-    name: "Dismissal: review and objection",
-    short: "Notice periods, protection periods, abusive dismissal: we check your dismissal and write the objection.",
+    name: "Challenging a dismissal",
+    short: "We check whether notice and protection periods were respected, then write your letter of objection.",
     intro: "You have just been dismissed and something doesn't feel right? We check whether the notice respects the deadlines, falls within a protection period or may be abusive, then write your written objection.",
     included: [
       "Check of the notice period and end date",
@@ -68,8 +68,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-de-travail": {
-    name: "Employment contract review",
-    short: "Before you sign: probation, overtime, non-compete, holidays, all checked.",
+    name: "Checking an employment contract before you sign",
+    short: "We read the whole contract and point out what is worth negotiating, such as the probation period or a non-compete clause.",
     intro: "You've been offered a contract and want to know what you're signing? We review it and flag unfavourable, unusual or void clauses, with what you can negotiate.",
     included: [
       "Full review of the contract (up to 15 pages)",
@@ -85,8 +85,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "salaire-impaye": {
-    name: "Unpaid salary, overtime or holidays",
-    short: "Calculation of what you are owed and a formal notice to your employer with a payment deadline.",
+    name: "Recovering unpaid salary, overtime or holidays",
+    short: "We work out what your employer owes you and send a formal demand with a deadline to pay.",
     intro: "Late salary, overtime never paid, holiday balance ignored at the end of the contract: we calculate exactly what you are owed and write the formal notice to your employer.",
     included: [
       "Detailed calculation (salary, hours, holidays, 13th month)",
@@ -103,7 +103,7 @@ const services: Record<string, ServiceText> = {
   },
   "lettre-de-demission": {
     name: "Resignation letter",
-    short: "The right notice, the right end date, your holiday balance and the reference request.",
+    short: "A letter that respects your notice period and settles your remaining holidays and work reference in advance.",
     intro: "A wrongly dated resignation can cost you a month's salary or create needless conflict. We calculate your notice and write a clear letter that also settles remaining holidays and your work reference.",
     included: [
       "Calculation of the notice period and exact end date",
@@ -118,8 +118,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "requete-conciliation-travail": {
-    name: "Conciliation application (employment)",
-    short: "Your application, ready to file with the conciliation authority, with exhibits in order.",
+    name: "Going to the conciliation authority (employment)",
+    short: "Your employer has stopped answering? We prepare the application you file yourself, with your documents in order.",
     intro: "Your employer still doesn't pay or disputes your rights despite your letters? Proceedings before the labour court generally begin with a conciliation attempt. We draft your application and explain how the hearing works.",
     included: [
       "Conciliation application with quantified claims",
@@ -134,8 +134,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "baisse-de-loyer": {
-    name: "Rent reduction request",
-    short: "Calculation of the reduction you're entitled to and a letter to your landlord, ready to send.",
+    name: "Asking for a rent reduction",
+    short: "When the reference mortgage rate falls, your rent can fall too. We work out the amount and write to your landlord.",
     intro: "When the reference mortgage rate falls, your rent can fall too. We check your entitlement, calculate the reduction you can request and write the letter to your landlord or agency.",
     included: [
       "Check of the reference rate and your last rent adjustment",
@@ -151,8 +151,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-loyer-initial": {
-    name: "Challenging the initial rent",
-    short: "Abusive starting rent? You have 30 days: analysis and an application ready to file.",
+    name: "Challenging your initial rent",
+    short: "Does your new rent seem excessive? You have 30 days after moving in. We review it and prepare the application.",
     intro: "You've just moved in and your rent is much higher than the previous tenant's? You may be able to challenge it. We assess your chances and draft the application to the conciliation authority.",
     included: [
       "Analysis of the conditions for a challenge",
@@ -168,8 +168,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "defaut-logement": {
-    name: "Defect in your home: rent reduction",
-    short: "Mould, breakdown, noise, building works: defect notice and rent reduction request.",
+    name: "Rent reduction for a defect",
+    short: "Mould, broken heating, a noisy building site… We notify the landlord in writing and claim the reduction you are owed.",
     intro: "Mould, broken heating, leaks, a noisy building site: a lasting defect entitles you to repairs and a rent reduction. We write the defect notice and the reduction request, properly.",
     included: [
       "Assessment of the defect and the usual reduction",
@@ -186,7 +186,7 @@ const services: Record<string, ServiceText> = {
   },
   "garantie-de-loyer": {
     name: "Getting your rent deposit back",
-    short: "Disputed repair costs, blocked deposit: we write your claim.",
+    short: "Is your former landlord holding the deposit or charging questionable costs? We write the claim.",
     intro: "Your former agency is holding the deposit or charging you repair costs? We check what can really be claimed and write the challenge and the release request.",
     included: [
       "Analysis of the move-out report and the costs claimed",
@@ -201,8 +201,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "resiliation-anticipee-bail": {
-    name: "Early termination of your lease",
-    short: "Leave before the end date without paying months of rent: letter and replacement tenant.",
+    name: "Leaving your flat before the end of the lease",
+    short: "We write your termination and the proposal of a replacement tenant, so you don't pay rent until the end.",
     intro: "You need to move out before your lease ends? By presenting a replacement tenant, you can be released earlier. We write the termination letter and the presentation of the candidate.",
     included: [
       "Calculation of the ordinary end date and deadlines",
@@ -217,8 +217,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contestation-conge": {
-    name: "Challenge a notice or extend the lease",
-    short: "You have 30 days: application to the conciliation authority to cancel the notice or gain time.",
+    name: "Challenging a termination or extending your lease",
+    short: "You have 30 days after receiving the notice. We prepare the application to the conciliation authority.",
     intro: "You've received notice? You can challenge it if it is abusive, or request an extension if moving out causes serious hardship. We draft the application to the conciliation authority.",
     included: [
       "Check of the notice's formal validity",
@@ -233,8 +233,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "decompte-de-charges": {
-    name: "Challenging the service charge statement",
-    short: "Line-by-line check of your statement and a claim to the landlord.",
+    name: "Checking a service charge statement",
+    short: "We go through your statement line by line and write to the landlord about each questionable item.",
     intro: "Your heating and service charge statement has exploded? We check every item and write the claim to the agency, with a request to see the supporting documents.",
     included: [
       "Check of the items charged against the lease",
@@ -249,8 +249,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-de-voisinage": {
-    name: "Neighbour dispute: formal letter",
-    short: "Noise, plants, boundaries, nuisances: a clear, legally grounded letter.",
+    name: "Dispute with a neighbour",
+    short: "When talking no longer works, a calm, legally grounded letter about noise, a hedge or a boundary.",
     intro: "Talking hasn't worked and the situation drags on? A formal, calm and legally grounded letter often solves the problem without going to court. We write it for you.",
     included: [
       "Analysis of the situation and the applicable rules",
@@ -265,8 +265,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "resiliation-de-contrat": {
-    name: "Cancel a subscription or contract",
-    short: "Gym, phone, insurance, subscription: the right deadline, form and date.",
+    name: "Cancelling a subscription or contract",
+    short: "We check when you can leave your subscription (gym, phone, insurance…) and write a valid cancellation.",
     intro: "A subscription that renews automatically, an insurer refusing your cancellation, a gym that won't listen: we check your contract and write a cancellation that holds.",
     included: [
       "Check of the contract's cancellation terms",
@@ -281,8 +281,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "garantie-achat-defectueux": {
-    name: "Faulty purchase: claim under warranty",
-    short: "Formal notice to the seller: repair, replacement or refund, according to your rights.",
+    name: "Using the warranty on a purchase",
+    short: "Broken, or not what you were sold? We write to the seller so you get what you are entitled to.",
     intro: "A faulty appliance, piece of furniture or vehicle, and the seller passes the buck? We check your warranty rights and write the formal notice.",
     included: [
       "Analysis of the legal and contractual warranty",
@@ -297,8 +297,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-artisan": {
-    name: "Dispute with a tradesman or company",
-    short: "Poor work, delays, quote exceeded: defect notice and formal notice.",
+    name: "Dispute with a tradesperson",
+    short: "Work badly done, late or over budget? We report the defects in writing and set the company a deadline.",
     intro: "Sloppy work, endless building site, invoice far above the quote: we analyse your contract and write the defect notice and formal notice to the tradesman.",
     included: [
       "Analysis of contract, quote and invoices",
@@ -313,8 +313,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contester-une-facture": {
-    name: "Dispute an invoice",
-    short: "Unjustified or excessive invoice: a reasoned written dispute, ready to send.",
+    name: "Disputing an invoice",
+    short: "An invoice that doesn't match what you ordered? We write a reasoned dispute.",
     intro: "An invoice for a service never ordered, an inflated amount, surprise fees: we write a clear dispute explaining why you don't owe that amount.",
     included: [
       "Analysis of the invoice and what was agreed",
@@ -329,8 +329,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "relecture-contrat-particulier": {
-    name: "Contract review before signing",
-    short: "Leasing, loan, car purchase, building works: we review and flag the traps.",
+    name: "Checking a contract before you sign",
+    short: "Leasing, a loan, a car purchase or a builder's quote: we read it before you do and show you the traps.",
     intro: "Before signing an important contract, have it reviewed. We flag unfavourable clauses, hidden costs and what you can negotiate.",
     included: [
       "Full review (up to 15 pages)",
@@ -345,8 +345,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "vol-annule-retarde": {
-    name: "Cancelled or delayed flight: compensation",
-    short: "Claim to the airline at a fixed price, with no commission on your compensation.",
+    name: "Compensation for a cancelled or delayed flight",
+    short: "We write to the airline for you. You pay a fixed price and keep all of the compensation.",
     intro: "Cancellation, overbooking, long delay: you may be entitled to EUR 250 to 600 per passenger. We check your entitlement and write the claim, without taking a percentage.",
     included: [
       "Check of entitlement and amount",
@@ -361,8 +361,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "refus-assurance": {
-    name: "Insurance refusal: claim",
-    short: "Household, travel, vehicle, legal protection: a reasoned claim to the insurer.",
+    name: "Challenging an insurance refusal",
+    short: "Your home, travel or vehicle insurer refuses to pay? We reply in writing, with the policy in hand.",
     intro: "Your insurer refuses to pay or only reimburses part? We analyse your policy and the decision, then write a reasoned claim.",
     included: [
       "Analysis of the policy, general terms and refusal",
@@ -378,8 +378,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "poursuite-injustifiee": {
-    name: "Unjustified debt enforcement: objection and removal",
-    short: "Unjustified payment order: objection, then a request to stop disclosure in the register.",
+    name: "Fighting an unjustified debt collection",
+    short: "You have 10 days to object. We take care of it, then later ask for the case to be removed from your extract.",
     intro: "You've received a payment order for a debt you dispute? We explain how to object and then write the non-disclosure request, so the enforcement no longer appears on your extract.",
     included: [
       "Check of the payment order and deadlines",
@@ -394,8 +394,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recuperer-argent-prete": {
-    name: "Recover money lent or owed",
-    short: "Formal notice and a debt enforcement request ready to file, for a loan or private debt.",
+    name: "Getting back money you lent",
+    short: "Someone won't pay you back? First a formal demand, then the debt collection request, ready to file.",
     intro: "You lent money to someone close, sold something without being paid or advanced costs? We write the formal notice and prepare the debt enforcement request if nothing happens.",
     included: [
       "Analysis of the evidence of the claim",
@@ -410,8 +410,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "reclamation-taxation-impots": {
-    name: "Objection to a tax assessment",
-    short: "Deduction refused, income misjudged: a reasoned objection within 30 days.",
+    name: "Challenging your tax assessment",
+    short: "A deduction refused or income miscalculated? You have 30 days to object. We write the objection.",
     intro: "Your tax assessment doesn't match your return? Deduction refused, income estimated ex officio, calculation error: we write a reasoned objection.",
     included: [
       "Comparison between your return and the assessment",
@@ -426,8 +426,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "opposition-assurance-sociale": {
-    name: "Objection to a social insurance decision",
-    short: "Unemployment, AHV/AVS, health insurance, accident: a reasoned objection within 30 days.",
+    name: "Objecting to a social insurance decision",
+    short: "Unemployment, AHV/AVS, health or accident insurance made a decision that looks wrong? We write the objection within 30 days.",
     intro: "Suspension days from unemployment insurance, benefits refused by the health insurer, a pension calculated too low: we analyse the decision and write your objection.",
     included: [
       "Analysis of the decision and the applicable rules",
@@ -442,8 +442,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   testament: {
-    name: "Will: guided drafting",
-    short: "A tailor-made will under the new inheritance law, to copy out by hand.",
+    name: "Writing your will",
+    short: "We prepare with you a will that fits your family and current law. You then copy it out by hand.",
     intro: "Favour your spouse, protect your partner, leave a specific asset: we help you draft a clear will under the inheritance law in force since 2023, which you copy out by hand.",
     included: [
       "Calculation of compulsory shares and the freely disposable portion",
@@ -459,7 +459,7 @@ const services: Record<string, ServiceText> = {
   },
   "mandat-pour-cause-d-inaptitude": {
     name: "Advance care directive (incapacity mandate)",
-    short: "Choose who will decide for you if you no longer can: assets, health, admin.",
+    short: "You choose in advance who will handle your money, papers and health decisions if you no longer can.",
     intro: "Accident, illness: if you can no longer manage your affairs, the protection authority appoints someone. With an incapacity mandate, you choose. We draft it with you.",
     included: [
       "Choice of areas: personal care, assets, representation",
@@ -474,8 +474,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "directives-anticipees": {
-    name: "Living will (patient decree)",
-    short: "Your medical wishes, clear and valid, and the person who will enforce them.",
+    name: "Living will",
+    short: "You write down which treatments you want or refuse, and who will speak for you.",
     intro: "Which treatments to accept or refuse if you can no longer express yourself? A living will states it clearly and names the person who will speak for you.",
     included: [
       "Guided questionnaire on your wishes",
@@ -491,7 +491,7 @@ const services: Record<string, ServiceText> = {
   },
   "convention-de-concubinage": {
     name: "Cohabitation agreement",
-    short: "Home, shared costs, assets, separation: everything set out in black and white.",
+    short: "Living together without being married? We put in writing who pays for what, and who keeps what if you separate.",
     intro: "Unmarried couples have almost no legal rules protecting them. A cohabitation agreement covers the home, expenses, things bought together and what happens if you separate.",
     included: [
       "Analysis of your shared situation",
@@ -507,7 +507,7 @@ const services: Record<string, ServiceText> = {
   },
   "separation-divorce-amiable": {
     name: "Amicable divorce without minor children",
-    short: "Agreement and joint petition, for couples without minor children who agree on the essentials.",
+    short: "You agree on the essentials? We write the agreement and the joint petition to the court.",
     intro: "You agree on the essentials, have no minor children and want to avoid lengthy proceedings? We draft, neutrally and for both of you, the divorce agreement and the joint petition you file with the court.",
     included: [
       "Scoping meeting with both spouses",
@@ -522,8 +522,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "question-juridique": {
-    name: "Legal question: written answer",
-    short: "One precise question, a clear written answer with the relevant legal provisions.",
+    name: "Asking a legal question",
+    short: "You ask a precise question, we answer in writing and cite the articles of law that apply.",
     intro: "You have a precise question and want a reliable answer without an appointment? Ask it: you get a clear written answer with the next steps.",
     included: [
       "Legal research on your question",
@@ -538,8 +538,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "appel-juridique": {
-    name: "20-minute legal call",
-    short: "You explain your situation, we tell you what to do and by when.",
+    name: "A 20-minute call",
+    short: "You explain your situation on the phone, we tell you what you can do and which deadlines to watch.",
     intro: "Prefer to talk it through? Book a 20-minute call: you explain your situation and we tell you what you can do, the deadlines, and what to avoid.",
     included: [
       "20-minute phone or video call",
@@ -554,8 +554,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "lettre-juridique-sur-mesure": {
-    name: "Tailor-made legal letter",
-    short: "A formal letter adapted to your situation, legally grounded and ready to send.",
+    name: "Custom letter",
+    short: "For a formal letter that doesn't fit any other category. We write it for your specific case.",
     intro: "Your situation doesn't fit any box? We write the formal letter you need: complaint, dispute, request, formal notice.",
     included: [
       "Analysis of your situation",
@@ -570,8 +570,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Formal notice",
-    short: "Client, supplier, tenant, partner: a formal letter with deadline and announced consequences, the last warning before proceedings.",
+    name: "Formal demand letter",
+    short: "A formal letter stating what you are owed, setting a deadline and making clear what happens next.",
     intro: "Someone is not honouring their commitments to your business? A client who doesn't pay, a supplier who doesn't deliver, a tenant in arrears, a partner who breaks their word: a formal notice with a deadline and announced next steps often unblocks the situation.",
     included: [
       "Check of your rights and documents",
@@ -586,8 +586,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "recouvrement-facture-impayee": {
-    name: "Unpaid invoice collection",
-    short: "Formal notice, prepared debt enforcement request, follow-up on objections: we handle it all.",
+    name: "Recovering an unpaid invoice",
+    short: "We write to the client, prepare the debt collection request and tell you what to do if they object.",
     intro: "An invoice unpaid for weeks? We take care of the whole amicable process and the preparation of debt enforcement, up to the request to set aside an objection if the debtor objects.",
     included: [
       "Formal notice with interest",
@@ -604,7 +604,7 @@ const services: Record<string, ServiceText> = {
   },
   "requete-de-mainlevee": {
     name: "Application to set aside an objection",
-    short: "After an objection: application ready to file, with exhibits in order.",
+    short: "Your debtor has objected? We prepare the application to the court and organise your documents.",
     intro: "Your debtor has objected to the payment order? With an acknowledgement of debt or a judgment, you can continue enforcement by having the objection set aside. We draft the application.",
     included: [
       "Check of the title: acknowledgement of debt or judgment",
@@ -619,8 +619,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "litige-commercial": {
-    name: "Commercial dispute: analysis and letter",
-    short: "Client, supplier or partner: your position analysed and defended in writing.",
+    name: "Dispute with a client, supplier or partner",
+    short: "We analyse the case, tell you where you stand and set out your position in writing.",
     intro: "Non-conforming delivery, disputed service, breach of contract: we analyse the situation and write the letter that defends your position and opens the way to a solution.",
     included: [
       "Analysis of the contract and exchanges",
@@ -635,8 +635,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "cgv-sur-mesure": {
-    name: "Tailor-made T&Cs",
-    short: "Terms and conditions written for your business: payment, liability, warranty, jurisdiction.",
+    name: "Custom terms and conditions",
+    short: "Terms written for what your business actually does, covering late payment, liability and the competent court.",
     intro: "T&Cs copied from a competitor don't protect you. We draft terms adapted to your business, your customers (businesses or consumers) and how you sell.",
     included: [
       "Questionnaire on your business and risks",
@@ -652,8 +652,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-commercial-sur-mesure": {
-    name: "Tailor-made commercial contract",
-    short: "Services, subcontracting, distribution, partnership: a contract written for your situation.",
+    name: "Custom commercial contract",
+    short: "A services, subcontracting, distribution or partnership contract, written from your situation.",
     intro: "An important deal deserves a real contract. We draft a contract adapted to your business relationship, with the clauses that protect your interests.",
     included: [
       "Scoping of the deal and the risks",
@@ -669,7 +669,7 @@ const services: Record<string, ServiceText> = {
   },
   "relecture-contrat-commercial": {
     name: "Commercial contract review",
-    short: "Risks flagged and corrections proposed, before you sign (up to 20 pages).",
+    short: "Before you sign, we review the contract (up to 20 pages), flag the risks and suggest changes.",
     intro: "A client or supplier sends you their contract? We review it, flag dangerous clauses and propose corrections to negotiate.",
     included: [
       "Full review (up to 20 pages)",
@@ -685,7 +685,7 @@ const services: Record<string, ServiceText> = {
   },
   "accord-de-confidentialite": {
     name: "Non-disclosure agreement (NDA)",
-    short: "One-way or mutual, adapted to your project, with a deterrent contractual penalty.",
+    short: "Before you share a project or figures: a one-way or mutual agreement, with a penalty for leaks.",
     intro: "Before presenting a project, know-how or figures, protect them. We draft an NDA adapted to your situation.",
     included: [
       "Choice between one-way and mutual agreement",
@@ -700,8 +700,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-mandat-independant": {
-    name: "Freelance services agreement",
-    short: "Assignment, fees, liability, intellectual property: a solid freelance contract.",
+    name: "Contract for freelancers",
+    short: "For freelancers and consultants, a contract that sets the assignment, the fees and who owns the work delivered.",
     intro: "Whether you are a freelancer or hiring one, a clear contract avoids misunderstandings and the risk of being requalified as employment.",
     included: [
       "Mandate or contract for work depending on the assignment",
@@ -716,8 +716,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "contrat-de-travail-sur-mesure": {
-    name: "Tailor-made employment contract",
-    short: "Adapted to the role and collective agreement, with the clauses that protect the company.",
+    name: "Custom employment contract",
+    short: "Written for the role and the applicable collective agreement, with the clauses that protect the company.",
     intro: "A well-drafted employment contract prevents most disputes: working time, overtime, holidays, non-compete, confidentiality. We draft it for the role concerned.",
     included: [
       "Check of the applicable collective agreement",
@@ -733,8 +733,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "certificat-de-travail-employeur": {
-    name: "Work reference drafting",
-    short: "Complete, accurate and benevolent, with no wording that can backfire on you.",
+    name: "Writing a work reference",
+    short: "An accurate and fair reference, as the law requires, without awkward wording that could be held against you.",
     intro: "Writing a work reference takes time and has pitfalls: too flattering, it creates liability; too harsh, it invites a dispute. We draft it from your input.",
     included: [
       "Quick questionnaire about the employee",
@@ -749,8 +749,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "licenciement-employeur": {
-    name: "Safe dismissal",
-    short: "Notice checked, protection periods reviewed, compliant dismissal letter.",
+    name: "Dismissing an employee correctly",
+    short: "We check the notice period and protection periods, then write the dismissal letter.",
     intro: "A poorly prepared dismissal can be void or abusive. We check deadlines and protection periods, then draft the dismissal letter and written reasons.",
     included: [
       "Check of the notice period and end date",
@@ -766,8 +766,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "avertissement-employe": {
-    name: "Written warning",
-    short: "Facts, expectations, consequences: a warning that holds up in a dispute.",
+    name: "Written warning to an employee",
+    short: "We set out the facts, your expectations and the possible consequences, so the warning holds up in a dispute.",
     intro: "Repeated lateness, inappropriate behaviour, instructions ignored: a precise, proportionate written warning protects the company if the situation leads to dismissal.",
     included: [
       "Factual description of the shortcomings",
@@ -783,7 +783,7 @@ const services: Record<string, ServiceText> = {
   },
   "reglement-du-personnel": {
     name: "Staff regulations",
-    short: "Working hours, holidays, expenses, remote work, data: clear rules for the whole team.",
+    short: "The house rules, written once for the whole team, from working hours to expenses and remote work.",
     intro: "From just a few employees, staff regulations save you renegotiating every rule. We draft them for your company, consistent with your contracts and collective agreement.",
     included: [
       "Questionnaire on your practices",
@@ -799,8 +799,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "pack-conformite-nlpd": {
-    name: "FADP compliance pack",
-    short: "Privacy policy, record of processing activities, clauses and notices: your compliance.",
+    name: "nFADP compliance",
+    short: "Privacy policy, record of processing activities and up-to-date clauses, to comply with the Data Protection Act.",
     intro: "Since 1 September 2023, the new Data Protection Act applies to all companies. We inventory your processing and draft the essential documents.",
     included: [
       "Guided inventory of your processing and processors",
@@ -816,8 +816,8 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "politique-de-confidentialite": {
-    name: "Website privacy policy",
-    short: "FADP-compliant, adapted to your tools: forms, analytics, newsletter.",
+    name: "Privacy policy for your website",
+    short: "Written from the tools you actually use (forms, analytics, newsletter), compliant with the nFADP.",
     intro: "Your website collects data via a form, analytics or a newsletter? It needs an accurate privacy policy adapted to the tools you actually use.",
     included: [
       "Inventory of the website's tools",
@@ -833,7 +833,7 @@ const services: Record<string, ServiceText> = {
   },
   "relecture-bail-commercial": {
     name: "Commercial lease review",
-    short: "Rent, indexation, term, restoration: the points to negotiate before signing.",
+    short: "Before you sign, we show what is worth negotiating, such as indexation, term or restoration when you leave.",
     intro: "A commercial lease often binds you for five years or more. We review it and flag unfavourable clauses and points to negotiate.",
     included: [
       "Full review of the lease and annexes",
@@ -849,7 +849,7 @@ const services: Record<string, ServiceText> = {
   },
   "convention-d-actionnaires": {
     name: "Shareholders' or partners' agreement",
-    short: "Governance, exit, pre-emption, non-compete: the rules between partners.",
+    short: "Setting the rules between partners while things are going well, especially decisions, exit and buy-back of shares.",
     intro: "The articles don't cover everything. A shareholders' or partners' agreement organises decisions, the arrival and departure of a partner, and protects everyone in case of disagreement.",
     included: [
       "Scoping meeting",
@@ -866,7 +866,7 @@ const services: Record<string, ServiceText> = {
   },
   "statuts-d-association": {
     name: "Association articles",
-    short: "Compliant with the Civil Code, adapted to your project: purpose, bodies, members, finances.",
+    short: "Articles that comply with the Civil Code and fit your association, from its purpose to how its finances are run.",
     intro: "Sports club, cultural association, neighbourhood project: we draft clear articles compliant with the Civil Code and the minutes of the founding meeting.",
     included: [
       "Complete articles",

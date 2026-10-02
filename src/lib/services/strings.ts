@@ -31,7 +31,7 @@ export type ServicesUi = {
   };
   price: { vatIncl: string; vatExcl: string; from: string };
   days: (n: number) => string;
-  steps: { title: string; items: Step[] };
+  steps: { title: string; intro: string; items: Step[] };
   compare: { title: string; lawyer: [string, string, string]; alone: [string, string, string]; us: [string, string, string] };
   hubFaq: Record<Audience, Faq[]>;
   faqTitle: string;
@@ -100,16 +100,16 @@ const fr: ServicesUi = {
       metaTitle: "Aide juridique pour particuliers à prix fixe | Thrax Legal",
       metaDescription:
         "Certificat de travail, licenciement, loyer, garantie, assurance, poursuite, testament : votre lettre ou votre document à prix fixe, dès 49 CHF.",
-      eyebrow: "Particuliers · Suisse romande",
+      eyebrow: "Pour les particuliers en Suisse romande",
       title: "De quoi avez-vous besoin ?",
-      subtitle: "Choisissez votre situation. On rédige le document, vous l'envoyez. Le prix affiché est le prix final.",
+      subtitle: "Trouvez votre situation dans la liste. On rédige le document, vous l'envoyez vous-même, et le prix indiqué est celui que vous payez.",
       switchLabel: "Vous êtes une entreprise ?",
     },
     entreprises: {
       metaTitle: "Service juridique externalisé pour PME, à prix fixe | Thrax Legal",
       metaDescription:
         "Recouvrement, CGV, contrats, employés, nLPD : prestations à prix fixe pour indépendants et PME de Suisse romande, à l'acte ou en abonnement.",
-      eyebrow: "Indépendants & PME · Suisse romande",
+      eyebrow: "Pour les indépendants et les PME de Suisse romande",
       title: "Votre service juridique externalisé, à prix fixe.",
       subtitle: "Choisissez une prestation à l'acte, ou passez à l'abonnement si vos besoins sont réguliers.",
       switchLabel: "Vous êtes un particulier ?",
@@ -130,11 +130,13 @@ const fr: ServicesUi = {
   price: { vatIncl: "prix final", vatExcl: "HT", from: "dès" },
   days: (n) => (n === 1 ? "Livré sous 1 jour ouvré" : `Livré sous ${n} jours ouvrés`),
   steps: {
-    title: "Comment ça marche",
+    title: "Comment ça se passe",
+    intro: "Tout se fait par écrit, depuis chez vous. Vous connaissez le prix avant de commencer, et vous ne payez qu'une fois qu'on a confirmé pouvoir vous aider.",
     items: [
-      { title: "1. Choisissez", text: "Votre prestation et son prix fixe, affiché." },
-      { title: "2. Décrivez", text: "Votre situation en deux minutes. On confirme par écrit, puis vous payez par TWINT ou facture QR." },
-      { title: "3. Recevez", text: "Votre document prêt à envoyer, avec les explications. Un tour de corrections est inclus." },
+      { title: "Vous nous racontez ce qui se passe", text: "Choisissez une prestation et décrivez votre situation avec vos mots. Inutile de connaître le vocabulaire juridique." },
+      { title: "On vérifie avant que vous payiez", text: "On lit votre demande et on vous répond par email, en principe sous un jour ouvré. Si la prestation ne convient pas à votre cas, on vous le dit, et vous ne payez rien." },
+      { title: "Vous payez et vous envoyez vos pièces", text: "Par TWINT ou facture QR. Ensuite, vous répondez à notre email avec les documents utiles : le contrat, la lettre reçue, des photos." },
+      { title: "Vous recevez votre document", text: "Il est prêt à envoyer, avec une note qui explique quoi en faire et quel délai surveiller. Si quelque chose ne vous convient pas, on le corrige une fois sans frais." },
     ],
   },
   compare: {
@@ -245,16 +247,16 @@ const de: ServicesUi = {
       metaTitle: "Rechtshilfe für Privatpersonen zum Fixpreis | Thrax Legal",
       metaDescription:
         "Arbeitszeugnis, Kündigung, Miete, Kaution, Versicherung, Betreibung, Testament: Ihr Brief oder Dokument zum Fixpreis, ab CHF 49.",
-      eyebrow: "Privatpersonen · Westschweiz",
+      eyebrow: "Für Privatpersonen in der Westschweiz",
       title: "Was brauchen Sie?",
-      subtitle: "Wählen Sie Ihre Situation. Wir verfassen das Dokument, Sie versenden es. Der angegebene Preis ist der Endpreis.",
+      subtitle: "Suchen Sie Ihre Situation in der Liste. Wir verfassen das Dokument, Sie versenden es selbst, und der angegebene Preis ist der, den Sie zahlen.",
       switchLabel: "Sie sind ein Unternehmen?",
     },
     entreprises: {
       metaTitle: "Externer Rechtsdienst für KMU zum Fixpreis | Thrax Legal",
       metaDescription:
         "Inkasso, AGB, Verträge, Personal, DSG: Leistungen zum Fixpreis für Selbstständige und KMU in der Westschweiz, einzeln oder im Abo.",
-      eyebrow: "Selbstständige & KMU · Westschweiz",
+      eyebrow: "Für Selbstständige und KMU in der Westschweiz",
       title: "Ihr externer Rechtsdienst, zum Fixpreis.",
       subtitle: "Wählen Sie eine Einzelleistung oder das Abo, wenn Ihr Bedarf regelmässig ist.",
       switchLabel: "Sie sind Privatperson?",
@@ -275,11 +277,13 @@ const de: ServicesUi = {
   price: { vatIncl: "Endpreis", vatExcl: "exkl. MWST", from: "ab" },
   days: (n) => (n === 1 ? "Lieferung innert 1 Arbeitstag" : `Lieferung innert ${n} Arbeitstagen`),
   steps: {
-    title: "So funktioniert es",
+    title: "So läuft es ab",
+    intro: "Alles läuft schriftlich, bequem von zu Hause aus. Sie kennen den Preis vorher und zahlen erst, wenn wir bestätigt haben, dass wir Ihnen helfen können.",
     items: [
-      { title: "1. Wählen", text: "Ihre Leistung und ihr angegebener Fixpreis." },
-      { title: "2. Beschreiben", text: "Ihre Situation in zwei Minuten. Wir bestätigen schriftlich, dann zahlen Sie per TWINT oder QR-Rechnung." },
-      { title: "3. Erhalten", text: "Ihr versandbereites Dokument mit Erklärungen. Eine Korrekturrunde ist inbegriffen." },
+      { title: "Sie schildern uns, was passiert ist", text: "Wählen Sie eine Leistung und beschreiben Sie Ihre Situation in eigenen Worten. Juristische Fachbegriffe brauchen Sie nicht." },
+      { title: "Wir prüfen, bevor Sie zahlen", text: "Wir lesen Ihre Anfrage und antworten per E-Mail, in der Regel innert eines Arbeitstags. Passt die Leistung nicht zu Ihrem Fall, sagen wir es Ihnen, und Sie zahlen nichts." },
+      { title: "Sie zahlen und senden Ihre Unterlagen", text: "Per TWINT oder QR-Rechnung. Danach antworten Sie auf unsere E-Mail mit den nötigen Dokumenten: Vertrag, erhaltener Brief, Fotos." },
+      { title: "Sie erhalten Ihr Dokument", text: "Versandbereit, mit einer Notiz, was damit zu tun ist und welche Frist läuft. Passt etwas nicht, korrigieren wir es einmal kostenlos." },
     ],
   },
   compare: {
@@ -390,16 +394,16 @@ const en: ServicesUi = {
       metaTitle: "Fixed-price legal help for individuals | Thrax Legal",
       metaDescription:
         "Work reference, dismissal, rent, deposit, insurance, debt enforcement, will: your letter or document at a fixed price, from CHF 49.",
-      eyebrow: "Individuals · French-speaking Switzerland",
+      eyebrow: "For individuals in French-speaking Switzerland",
       title: "What do you need?",
-      subtitle: "Pick your situation. We draft the document, you send it. The displayed price is final.",
+      subtitle: "Find your situation in the list. We draft the document, you send it yourself, and the price shown is the price you pay.",
       switchLabel: "Are you a business?",
     },
     entreprises: {
       metaTitle: "Outsourced legal service for SMEs, fixed price | Thrax Legal",
       metaDescription:
         "Debt collection, T&Cs, contracts, staff, FADP: fixed-price services for freelancers and SMEs in French-speaking Switzerland, per service or by subscription.",
-      eyebrow: "Freelancers & SMEs · French-speaking Switzerland",
+      eyebrow: "For freelancers and SMEs in French-speaking Switzerland",
       title: "Your outsourced legal service, at a fixed price.",
       subtitle: "Pick a one-off service, or switch to the subscription if your needs are regular.",
       switchLabel: "Are you an individual?",
@@ -421,10 +425,12 @@ const en: ServicesUi = {
   days: (n) => (n === 1 ? "Delivered within 1 working day" : `Delivered within ${n} working days`),
   steps: {
     title: "How it works",
+    intro: "Everything happens in writing, from home. You know the price before we start, and you only pay once we have confirmed we can help.",
     items: [
-      { title: "1. Choose", text: "Your service and its displayed fixed price." },
-      { title: "2. Describe", text: "Your situation in two minutes. We confirm in writing, then you pay by TWINT or QR bill." },
-      { title: "3. Receive", text: "Your document ready to send, with explanations. One round of revisions included." },
+      { title: "You tell us what happened", text: "Choose a service and describe your situation in your own words. You don't need any legal vocabulary." },
+      { title: "We check before you pay", text: "We read your request and reply by email, usually within one working day. If the service doesn't fit your case, we tell you, and you pay nothing." },
+      { title: "You pay and send your documents", text: "By TWINT or QR bill. Then you reply to our email with the relevant documents: the contract, the letter you received, photos." },
+      { title: "You receive your document", text: "Ready to send, with a note explaining what to do with it and which deadline to watch. If something isn't right, we correct it once at no charge." },
     ],
   },
   compare: {
@@ -535,16 +541,16 @@ const it: ServicesUi = {
       metaTitle: "Assistenza giuridica per privati a prezzo fisso | Thrax Legal",
       metaDescription:
         "Certificato di lavoro, licenziamento, pigione, garanzia, assicurazione, esecuzione, testamento: la vostra lettera o documento a prezzo fisso, da CHF 49.",
-      eyebrow: "Privati · Svizzera romanda",
+      eyebrow: "Per i privati in Svizzera romanda",
       title: "Di cosa avete bisogno?",
-      subtitle: "Scegliete la vostra situazione. Redigiamo il documento, voi lo inviate. Il prezzo indicato è quello finale.",
+      subtitle: "Trovate la vostra situazione nella lista. Redigiamo il documento, lo inviate voi stessi, e il prezzo indicato è quello che pagate.",
       switchLabel: "Siete un'impresa?",
     },
     entreprises: {
       metaTitle: "Servizio giuridico esternalizzato per PMI, prezzo fisso | Thrax Legal",
       metaDescription:
         "Incasso, CG, contratti, personale, nLPD: prestazioni a prezzo fisso per indipendenti e PMI della Svizzera romanda, a prestazione o in abbonamento.",
-      eyebrow: "Indipendenti & PMI · Svizzera romanda",
+      eyebrow: "Per indipendenti e PMI in Svizzera romanda",
       title: "Il vostro servizio giuridico esternalizzato, a prezzo fisso.",
       subtitle: "Scegliete una prestazione singola o passate all'abbonamento se le vostre esigenze sono regolari.",
       switchLabel: "Siete un privato?",
@@ -566,10 +572,12 @@ const it: ServicesUi = {
   days: (n) => (n === 1 ? "Consegna entro 1 giorno lavorativo" : `Consegna entro ${n} giorni lavorativi`),
   steps: {
     title: "Come funziona",
+    intro: "Tutto avviene per iscritto, da casa vostra. Conoscete il prezzo prima di iniziare e pagate solo dopo che abbiamo confermato di potervi aiutare.",
     items: [
-      { title: "1. Scegliete", text: "La prestazione e il suo prezzo fisso, indicato." },
-      { title: "2. Descrivete", text: "La vostra situazione in due minuti. Confermiamo per scritto, poi pagate con TWINT o fattura QR." },
-      { title: "3. Ricevete", text: "Il documento pronto da inviare, con le spiegazioni. Un giro di correzioni incluso." },
+      { title: "Ci raccontate cosa succede", text: "Scegliete una prestazione e descrivete la vostra situazione con parole vostre. Non serve conoscere il linguaggio giuridico." },
+      { title: "Verifichiamo prima che paghiate", text: "Leggiamo la richiesta e vi rispondiamo per email, di regola entro un giorno lavorativo. Se la prestazione non fa al caso vostro, ve lo diciamo e non pagate nulla." },
+      { title: "Pagate e inviate i documenti", text: "Con TWINT o fattura QR. Poi rispondete alla nostra email con i documenti utili: il contratto, la lettera ricevuta, delle foto." },
+      { title: "Ricevete il vostro documento", text: "Pronto da inviare, con una nota che spiega cosa farne e quale termine tenere d'occhio. Se qualcosa non va, lo correggiamo una volta senza costi." },
     ],
   },
   compare: {

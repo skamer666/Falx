@@ -185,11 +185,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     extraQuestionNote: "Dossier supplémentaire : 79 CHF, prix fixe.",
     valueDisclaimer:
       "Valeur estimée sur la base des tarifs horaires usuels des avocats en Suisse (200 à 600 CHF/h selon expérience et canton).",
-    stepsHeading: "Comment ça marche",
+    stepsHeading: "Comment ça se passe avec l'abonnement",
     steps: [
-      { title: "Choisissez votre formule", description: "Essentiel ou Croissance, sans engagement, résiliable à tout moment." },
-      { title: "Décrivez votre besoin", description: "Contrat, litige, démarche : expliquez votre situation via le formulaire dédié." },
-      { title: "On s'en occupe", description: "Contrat rédigé, solution expliquée, avec une trace écrite en cas de litige ou de contrôle." },
+      { title: "Vous choisissez une formule", description: "Essentiel ou Croissance. Il n'y a pas d'engagement : vous résiliez quand vous voulez." },
+      { title: "Vous décrivez votre demande depuis votre espace", description: "Un contrat à relire, un client qui ne paie pas, un employé à avertir : vous expliquez la situation dans le formulaire et vous joignez vos documents." },
+      { title: "On vous dit ce qui sera décompté", description: "Avant de commencer, on vous confirme par écrit si la demande compte comme une question ou un dossier. Rien n'est décompté sans que vous l'ayez vu." },
+      { title: "Vous recevez la réponse par écrit", description: "Un contrat rédigé ou une réponse argumentée, qui reste dans votre espace. Utile le jour d'un litige ou d'un contrôle." },
     ],
     domainsHeading: "Ce que couvre l'abonnement",
     domains: [
@@ -345,11 +346,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     extraQuestionNote: "Zusätzliches Anliegen: CHF 79, Fixpreis.",
     valueDisclaimer:
       "Geschätzter Wert auf Basis üblicher Stundensätze von Anwälten in der Schweiz (CHF 200 bis 600/h je nach Erfahrung und Kanton).",
-    stepsHeading: "So funktioniert's",
+    stepsHeading: "So läuft es mit dem Abo",
     steps: [
-      { title: "Formel wählen", description: "Essentiel oder Croissance, ohne Vertragsbindung, jederzeit kündbar." },
-      { title: "Ihr Anliegen schildern", description: "Vertrag, Streitfall, Verfahren: schildern Sie Ihre Situation über das dafür vorgesehene Formular." },
-      { title: "Wir kümmern uns darum", description: "Vertrag erstellt, Lösung erklärt, mit einem schriftlichen Nachweis für Streitfälle oder Kontrollen." },
+      { title: "Sie wählen eine Formel", description: "Essentiel oder Croissance. Es gibt keine Mindestlaufzeit: Sie kündigen, wann Sie wollen." },
+      { title: "Sie beschreiben Ihr Anliegen in Ihrem Kundenbereich", description: "Ein Vertrag zum Prüfen, ein Kunde, der nicht zahlt, eine Verwarnung: Sie schildern die Situation im Formular und laden Ihre Unterlagen hoch." },
+      { title: "Wir sagen Ihnen, was angerechnet wird", description: "Bevor wir beginnen, bestätigen wir schriftlich, ob die Anfrage als Frage oder als Dossier zählt. Nichts wird angerechnet, ohne dass Sie es gesehen haben." },
+      { title: "Sie erhalten die Antwort schriftlich", description: "Ein fertiger Vertrag oder eine begründete Antwort, die in Ihrem Kundenbereich bleibt. Nützlich bei einem Streit oder einer Kontrolle." },
     ],
     domainsHeading: "Was das Abo abdeckt",
     domains: [
@@ -505,11 +507,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     extraQuestionNote: "Extra matter: CHF 79, fixed price.",
     valueDisclaimer:
       "Estimated value based on typical lawyer hourly rates in Switzerland (CHF 200 to 600/h depending on experience and canton).",
-    stepsHeading: "How it works",
+    stepsHeading: "How the subscription works",
     steps: [
-      { title: "Choose your plan", description: "Essential or Growth, no commitment, cancel anytime." },
-      { title: "Describe your need", description: "A contract, a dispute, a procedure: describe your situation via the dedicated form." },
-      { title: "We handle it", description: "Contract drafted, solution explained, with a written record for disputes or audits." },
+      { title: "You choose a plan", description: "Essential or Growth. There is no commitment: you cancel whenever you like." },
+      { title: "You describe your request from your account", description: "A contract to review, a client who won't pay, an employee to warn: you explain the situation in the form and attach your documents." },
+      { title: "We tell you what will be counted", description: "Before we start, we confirm in writing whether the request counts as a question or a case. Nothing is counted without you seeing it first." },
+      { title: "You receive the answer in writing", description: "A drafted contract or a reasoned answer that stays in your account. Useful if there is ever a dispute or an audit." },
     ],
     domainsHeading: "What the subscription covers",
     domains: [
@@ -665,11 +668,12 @@ const CONTENT: Record<Locale, HomeContent> = {
     extraQuestionNote: "Pratica supplementare: CHF 79, prezzo fisso.",
     valueDisclaimer:
       "Valore stimato sulla base delle tariffe orarie usuali degli avvocati in Svizzera (CHF 200-600/h secondo esperienza e cantone).",
-    stepsHeading: "Come funziona",
+    stepsHeading: "Come funziona l'abbonamento",
     steps: [
-      { title: "Scegliete la formula", description: "Essentiel o Croissance, senza impegno, disdicibile in qualsiasi momento." },
-      { title: "Descrivete l'esigenza", description: "Contratto, controversia, procedura: descrivete la vostra situazione tramite il modulo dedicato." },
-      { title: "Ce ne occupiamo noi", description: "Contratto redatto, soluzione spiegata, con una prova scritta in caso di controversia o controllo." },
+      { title: "Scegliete una formula", description: "Essentiel o Croissance. Non c'è vincolo: disdite quando volete." },
+      { title: "Descrivete la richiesta dal vostro spazio", description: "Un contratto da rileggere, un cliente che non paga, un collaboratore da ammonire: spiegate la situazione nel modulo e allegate i documenti." },
+      { title: "Vi diciamo cosa verrà conteggiato", description: "Prima di iniziare vi confermiamo per iscritto se la richiesta conta come domanda o come pratica. Nulla viene conteggiato senza che l'abbiate visto." },
+      { title: "Ricevete la risposta per iscritto", description: "Un contratto redatto o una risposta motivata, che resta nel vostro spazio. Utile in caso di controversia o di controllo." },
     ],
     domainsHeading: "Cosa copre l'abbonamento",
     domains: [
@@ -980,12 +984,14 @@ export default async function EntreprisesPage({
           </section>
 
           <section className="theme-light bg-surface py-16 md:py-20">
-            <Container className="mx-auto max-w-2xl">
+            <Container className="mx-auto max-w-4xl">
               <Reveal>
-                <h2 className="text-center text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-text">
-                  {t.stepsHeading}
-                </h2>
-                <StepList steps={t.steps} className="mt-8" />
+                <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-14">
+                  <h2 className="text-[26px] font-semibold leading-[1.2] tracking-[-0.02em] text-text md:text-3xl">
+                    {t.stepsHeading}
+                  </h2>
+                  <StepList steps={t.steps} />
+                </div>
               </Reveal>
             </Container>
           </section>
