@@ -1425,7 +1425,7 @@
    "category_name": "Sur mesure",
    "name": "Lettre juridique sur mesure",
    "priority": 40,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/lettre-juridique-sur-mesure",
    "guide": null,
    "content": {
@@ -1450,7 +1450,9 @@
     ]
    },
    "claimed_at": "2026-10-02T03:43:48Z",
-   "run": "20261002T0343Z-18667"
+   "run": "20261002T0343Z-18667",
+   "done_at": "2026-10-02T04:08:17Z",
+   "duration": 79.8
   },
   {
    "slug": "requete-de-mainlevee",
