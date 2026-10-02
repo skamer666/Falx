@@ -1750,7 +1750,7 @@
    "category_name": "Employeurs",
    "name": "Règlement du personnel",
    "priority": 49,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/reglement-du-personnel",
    "guide": null,
    "content": {
@@ -1776,7 +1776,9 @@
     ]
    },
    "claimed_at": "2026-10-02T05:45:07Z",
-   "run": "20261002T0545Z-14500"
+   "run": "20261002T0545Z-14500",
+   "done_at": "2026-10-02T06:05:27Z",
+   "duration": 82.5
   },
   {
    "slug": "politique-de-confidentialite",
