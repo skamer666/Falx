@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.83,
+   "slot": 8.13,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.83,
+   "dur": 9.27,
+   "slot": 9.57,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 17.1,
+   "dur": 10.55,
+   "slot": 10.85,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 27.65,
+   "dur": 9.52,
+   "slot": 9.82,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 37.17,
+   "dur": 10.47,
+   "slot": 10.77,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 47.64,
+   "dur": 11.62,
+   "slot": 11.92,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 59.26,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 72.52,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 79.46,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.83,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 27.65,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 72.52,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 79.46,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 84.46,
+ "chromeShow": 7.83,
+ "chromeHide": 79.46,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.13,
+   "text": "Convention d’actionnaires : vous fondez une société à plusieurs, ou un nouvel associé arrive ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.38,
+   "end": 16.4,
+   "text": "Les statuts ne règlent pas tout. Et le jour d’un désaccord, ou du départ d’un associé, c’est trop tard pour négocier.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 17.65,
+   "end": 26.95,
+   "text": "Bon à savoir : la convention lie les associés entre eux, pas la société. Ce sont les peines conventionnelles qui assurent son respect.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 28.2,
+   "end": 36.47,
+   "text": "Après un entretien de cadrage, on rédige une convention complète : gouvernance, transfert, préemption, sortie et non-concurrence.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 37.72,
+   "end": 46.94,
+   "text": "Avec des peines conventionnelles et des mécanismes de blocage, et un tour de corrections. Pas besoin de notaire pour la convention elle-même.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 48.19,
+   "end": 58.56,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre convention, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 59.81,
+   "end": 71.82,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 73.07,
+   "end": 78.76,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
