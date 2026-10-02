@@ -1677,7 +1677,7 @@
    "category_name": "Employeurs",
    "name": "Licenciement sécurisé",
    "priority": 47,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/licenciement-employeur",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -1701,7 +1701,9 @@
       "a": "Ce n'est pas obligatoire en général, mais recommandé. Nous vous donnons une trame."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T05:45:07Z",
+   "run": "20261002T0545Z-14500"
   },
   {
    "slug": "avertissement-employe",
@@ -1710,7 +1712,7 @@
    "category_name": "Employeurs",
    "name": "Avertissement écrit",
    "priority": 48,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/avertissement-employe",
    "guide": null,
    "content": {
@@ -1733,7 +1735,9 @@
       "a": "Il n'y a pas de durée fixe ; plus il est ancien, moins il pèse."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T05:45:07Z",
+   "run": "20261002T0545Z-14500"
   },
   {
    "slug": "reglement-du-personnel",
@@ -1742,7 +1746,7 @@
    "category_name": "Employeurs",
    "name": "Règlement du personnel",
    "priority": 49,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/reglement-du-personnel",
    "guide": null,
    "content": {
@@ -1766,7 +1770,9 @@
       "a": "Oui, en respectant les délais de modification des conditions de travail."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T05:45:07Z",
+   "run": "20261002T0545Z-14500"
   },
   {
    "slug": "politique-de-confidentialite",
@@ -1775,7 +1781,7 @@
    "category_name": "Conformité & société",
    "name": "Politique de confidentialité du site",
    "priority": 50,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/politique-de-confidentialite",
    "guide": "https://thrax-legal.ch/fr/guide/conformite-nlpd-pme",
    "content": {
@@ -1798,7 +1804,9 @@
       "a": "Traduction possible, prix confirmé avant de commencer."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T05:45:07Z",
+   "run": "20261002T0545Z-14500"
   },
   {
    "slug": "relecture-bail-commercial",
@@ -1807,7 +1815,7 @@
    "category_name": "Conformité & société",
    "name": "Relecture de bail commercial",
    "priority": 51,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/relecture-bail-commercial",
    "guide": "https://thrax-legal.ch/fr/guide/bail-commercial-suisse-guide",
    "content": {
@@ -1830,7 +1838,9 @@
       "a": "Indiquez-le : la reprise de bail et le pas-de-porte sont analysés."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T05:45:07Z",
+   "run": "20261002T0545Z-14500"
   },
   {
    "slug": "convention-d-actionnaires",
