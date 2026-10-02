@@ -1497,7 +1497,7 @@
    "category_name": "Recouvrement & litiges",
    "name": "Litige commercial : analyse et courrier",
    "priority": 42,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/litige-commercial",
    "guide": null,
    "content": {
@@ -1520,7 +1520,9 @@
       "a": "Nous préparons vos courriers et vos arguments ; vous restez l'interlocuteur."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T04:44:58Z",
+   "run": "20261002T0444Z-8230"
   },
   {
    "slug": "contrat-commercial-sur-mesure",
@@ -1529,7 +1531,7 @@
    "category_name": "Contrats & CGV",
    "name": "Contrat commercial sur mesure",
    "priority": 43,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-commercial-sur-mesure",
    "guide": null,
    "content": {
@@ -1552,7 +1554,9 @@
       "a": "Possible, prix confirmé avant de commencer."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T04:44:58Z",
+   "run": "20261002T0444Z-8230"
   },
   {
    "slug": "relecture-contrat-commercial",
@@ -1561,7 +1565,7 @@
    "category_name": "Contrats & CGV",
    "name": "Relecture de contrat commercial",
    "priority": 44,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/relecture-contrat-commercial",
    "guide": null,
    "content": {
@@ -1584,7 +1588,9 @@
       "a": "Oui, la relecture en anglais est possible."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T04:44:58Z",
+   "run": "20261002T0444Z-8230"
   },
   {
    "slug": "accord-de-confidentialite",
@@ -1593,7 +1599,7 @@
    "category_name": "Contrats & CGV",
    "name": "Accord de confidentialité (NDA)",
    "priority": 45,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/accord-de-confidentialite",
    "guide": null,
    "content": {
@@ -1616,7 +1622,9 @@
       "a": "Oui, sans supplément pour un NDA standard."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T04:44:58Z",
+   "run": "20261002T0444Z-8230"
   },
   {
    "slug": "contrat-de-mandat-independant",
@@ -1625,7 +1633,7 @@
    "category_name": "Contrats & CGV",
    "name": "Contrat de mandat pour indépendant",
    "priority": 46,
-   "status": "todo",
+   "status": "claimed",
    "url": "https://thrax-legal.ch/fr/entreprises/contrat-de-mandat-independant",
    "guide": null,
    "content": {
@@ -1648,7 +1656,9 @@
       "a": "Nous pouvons rédiger un modèle réutilisable ; précisez-le dans votre demande."
      }
     ]
-   }
+   },
+   "claimed_at": "2026-10-02T04:44:58Z",
+   "run": "20261002T0444Z-8230"
   },
   {
    "slug": "licenciement-employeur",
