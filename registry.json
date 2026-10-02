@@ -1317,7 +1317,7 @@
    "category_name": "Famille & avenir",
    "name": "Divorce à l'amiable sans enfants mineurs",
    "priority": 37,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/separation-divorce-amiable",
    "guide": null,
    "content": {
@@ -1342,7 +1342,9 @@
     ]
    },
    "claimed_at": "2026-10-02T03:43:48Z",
-   "run": "20261002T0343Z-18667"
+   "run": "20261002T0343Z-18667",
+   "done_at": "2026-10-02T03:52:14Z",
+   "duration": 93.6
   },
   {
    "slug": "question-juridique",
