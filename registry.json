@@ -1209,7 +1209,7 @@
    "category_name": "Famille & avenir",
    "name": "Mandat pour cause d'inaptitude",
    "priority": 34,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/particuliers/mandat-pour-cause-d-inaptitude",
    "guide": null,
    "content": {
@@ -1234,7 +1234,9 @@
     ]
    },
    "claimed_at": "2026-10-02T02:44:09Z",
-   "run": "20261002T0244Z-8025"
+   "run": "20261002T0244Z-8025",
+   "done_at": "2026-10-02T03:03:28Z",
+   "duration": 92.5
   },
   {
    "slug": "directives-anticipees",

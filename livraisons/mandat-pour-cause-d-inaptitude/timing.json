@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 10.03,
+   "slot": 10.33,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 10.03,
+   "dur": 8.79,
+   "slot": 9.09,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 18.82,
+   "dur": 12.94,
+   "slot": 13.24,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 31.76,
+   "dur": 11.26,
+   "slot": 11.56,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 43.02,
+   "dur": 12.79,
+   "slot": 13.09,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 55.81,
+   "dur": 11.43,
+   "slot": 11.73,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 67.24,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 80.5,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 87.44,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 10.03,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 31.76,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 80.5,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 87.44,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 92.44,
+ "chromeShow": 10.03,
+ "chromeHide": 87.44,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 9.33,
+   "text": "Mandat pour cause d’inaptitude : si un accident ou une maladie vous empêchait de gérer vos affaires, qui déciderait pour vous ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 10.58,
+   "end": 18.12,
+   "text": "Sans mandat, c’est l’autorité de protection qui désigne quelqu’un. Pas forcément la personne que vous auriez choisie.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 19.37,
+   "end": 31.06,
+   "text": "Le mandat doit être entièrement écrit à la main, daté et signé, ou passé en la forme authentique. Et votre conjoint ne peut vous représenter que pour les affaires courantes.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 32.31,
+   "end": 42.32,
+   "text": "Vous choisissez les domaines : votre personne, votre patrimoine, la représentation. Puis on rédige le texte du mandat, adapté à votre situation.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 43.57,
+   "end": 55.11,
+   "text": "Vous recevez aussi les instructions pour la forme et l’enregistrement à l’état civil. Et vous pouvez le modifier à tout moment, tant que vous êtes capable de discernement.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 56.36,
+   "end": 66.54,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre mandat, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 67.79,
+   "end": 79.8,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 81.05,
+   "end": 86.74,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
