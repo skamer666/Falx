@@ -1677,7 +1677,7 @@
    "category_name": "Employeurs",
    "name": "Licenciement sécurisé",
    "priority": 47,
-   "status": "claimed",
+   "status": "done",
    "url": "https://thrax-legal.ch/fr/entreprises/licenciement-employeur",
    "guide": "https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme",
    "content": {
@@ -1703,7 +1703,9 @@
     ]
    },
    "claimed_at": "2026-10-02T05:45:07Z",
-   "run": "20261002T0545Z-14500"
+   "run": "20261002T0545Z-14500",
+   "done_at": "2026-10-02T05:53:29Z",
+   "duration": 83.2
   },
   {
    "slug": "avertissement-employe",

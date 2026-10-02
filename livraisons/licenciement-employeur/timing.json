@@ -1,0 +1,147 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.97,
+   "slot": 8.27,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.97,
+   "dur": 8.15,
+   "slot": 8.45,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 16.12,
+   "dur": 8.1,
+   "slot": 8.4,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 24.22,
+   "dur": 11.97,
+   "slot": 12.27,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 36.19,
+   "dur": 10.55,
+   "slot": 10.85,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 46.74,
+   "dur": 11.24,
+   "slot": 11.54,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 57.98,
+   "dur": 13.26,
+   "slot": 13.56,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 71.24,
+   "dur": 6.94,
+   "slot": 7.24,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 78.18,
+   "dur": 5.0,
+   "slot": 5.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 7.97,
+   "label": "01 · Le problème"
+  },
+  {
+   "t": 24.22,
+   "label": "02 · La solution"
+  },
+  {
+   "t": 71.24,
+   "label": "03 · Commander"
+  },
+  {
+   "t": 78.18,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 83.18,
+ "chromeShow": 7.97,
+ "chromeHide": 78.18,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.55,
+   "end": 7.27,
+   "text": "Licenciement : vous devez vous séparer d’un employé, et vous voulez que le congé soit conforme ?",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 8.52,
+   "end": 15.42,
+   "text": "Un licenciement mal préparé peut être nul. Ou abusif, et coûter jusqu’à six mois de salaire.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc03",
+   "start": 16.67,
+   "end": 23.52,
+   "text": "Un congé donné pendant une période de protection est nul : maladie, accident, grossesse ou service.",
+   "section": "01 · Le problème"
+  },
+  {
+   "scene": "sc04",
+   "start": 24.77,
+   "end": 35.49,
+   "text": "On vérifie le délai de congé et la date de fin, on contrôle les périodes de protection, et on rédige la lettre de licenciement avec la motivation écrite.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc05",
+   "start": 36.74,
+   "end": 46.04,
+   "text": "Et les points d’attention : solde de vacances, certificat, assurances. Pour un licenciement immédiat, on évalue le risque avant tout.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc06",
+   "start": 47.29,
+   "end": 57.28,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc07",
+   "start": 58.53,
+   "end": 70.54,
+   "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
+   "section": "02 · La solution"
+  },
+  {
+   "scene": "sc08",
+   "start": 71.79,
+   "end": 77.48,
+   "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
+   "section": "03 · Commander"
+  }
+ ]
+}
