@@ -302,6 +302,35 @@
     "youtube",
     "tiktok"
    ]
+  },
+  {
+   "id": "r010-licencie-whatsapp-avatar",
+   "genome": {
+    "style": "avatar-detoure + typo-geante-derriere + fonds-animes",
+    "palette": "change-par-partie",
+    "hook": "situation choc + ville",
+    "format": "mythe-vs-regle + secret",
+    "topic": "travail/licenciement-forme",
+    "mascot": "avatar-ia-realiste (HeyGen)",
+    "voice": "heygen",
+    "captions": "surligneur-jaune",
+    "music": "drive",
+    "length": "~36s",
+    "ai_generated": true
+   },
+   "duration": 35.5,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r010-licencie-whatsapp-avatar.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-03T17:35 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387356113,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ],
+   "note": "avatar HeyGen (offre gratuite, filigrane visible), declare IA sur les 4 reseaux"
   }
  ]
 }
