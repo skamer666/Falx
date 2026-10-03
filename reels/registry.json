@@ -70,8 +70,23 @@
    "status": "published",
    "posted_at": "2026-10-02T10:34 Europe/Brussels",
    "stats": {
-    "2026-10-03": {
-     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    "2026-10-03 (~24h)": {
+     "instagram": {
+      "views": 196,
+      "reach": 169,
+      "likes": 0,
+      "shares": 0,
+      "saved": 0,
+      "avg_watch_s": 12.2
+     },
+     "facebook": {
+      "views": 146,
+      "likes": 1,
+      "avg_watch_s": 5
+     },
+     "tiktok": {
+      "views": 0
+     }
     }
    },
    "metricool_id": 386458004,
@@ -108,8 +123,23 @@
    "status": "published",
    "posted_at": "2026-10-02T18:30 Europe/Brussels",
    "stats": {
-    "2026-10-03": {
-     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    "2026-10-03 (~24h)": {
+     "instagram": {
+      "views": 119,
+      "reach": 109,
+      "likes": 0,
+      "shares": 0,
+      "saved": 0,
+      "avg_watch_s": 8.8
+     },
+     "facebook": {
+      "views": 71,
+      "likes": 0,
+      "avg_watch_s": 1
+     },
+     "tiktok": {
+      "views": 0
+     }
     }
    },
    "metricool_id": 386469715,
@@ -138,8 +168,23 @@
    "status": "published",
    "posted_at": "2026-10-02T20:45 Europe/Brussels",
    "stats": {
-    "2026-10-03": {
-     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    "2026-10-03 (~24h)": {
+     "instagram": {
+      "views": 32,
+      "reach": 31,
+      "likes": 0,
+      "shares": 0,
+      "saved": 0,
+      "avg_watch_s": 3.0
+     },
+     "facebook": {
+      "views": 203,
+      "likes": 0,
+      "avg_watch_s": 2
+     },
+     "tiktok": {
+      "views": 0
+     }
     }
    },
    "metricool_id": 386469783,
