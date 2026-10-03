@@ -13,7 +13,7 @@ cp "$HERE/../template/hyperframes.json" "$HERE/../template/package.json" "$WK/"
 python3 "$HERE/voice.py" "$WK" "$SPEC" || die voice
 python3 "$HERE/build.py" "$WK" "$SPEC" || die build
 python3 "$HERE/music.py" "$WK" || die music
-(cd "$WK" && $HF lint > lint.log 2>&1); grep -qE "(^|[^0-9])0 errors" "$WK/lint.log" || { tail -20 "$WK/lint.log"; die lint; }
+(cd "$WK" && $HF lint > lint.log 2>&1); grep -qE "(^|[^0-9])0 error" "$WK/lint.log" || { tail -20 "$WK/lint.log"; die lint; }
 ok=0
 for try in 1 2 3; do
   (cd "$WK" && $HF render --fps 30 --workers 4 --quality high --output renders/render.mp4 > render.log 2>&1)
