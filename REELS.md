@@ -29,6 +29,7 @@ Retour du propriétaire sur les 2 pilotes : « trop technique, c'est chiant ». 
   fr-CA-ThierryNeural, fr-CA-AntoineNeural, fr-CA-JeanNeural, fr-CA-SylvieNeural.
 - **Technique** : 2D, 3D (`USE_THREE = True` charge Three.js ; dessiner dans `R.on(t)` avec `preserveDrawingBuffer`),
   papier découpé, faux écran de téléphone, faux JT, jeu vidéo rétro, documentaire, ASMR, POV, sketch, quiz…
+- **Polices disponibles** : Schibsted Grotesk (défaut), Caveat (manuscrit, tableau blanc), Press Start 2P (pixel ; pas de majuscules accentuées É/È, écrire sans accent en capitales). Musiques : drive, tension, lofi, epic, bounce, chip (8 bits).
 - **Narration** : histoires de clients, sketchs, débats, « POV », compte à rebours, enquête.
   Une histoire de client est TOUJOURS fictive (Thrax Legal n'en publie pas de vraies) et l'écran le dit
   (« histoire fictive inspirée de situations courantes ») : pas de faux témoignage, pas de faux avis.

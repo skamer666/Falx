@@ -59,6 +59,8 @@ class Words:
 BASE_CSS = """
 @font-face { font-family: "Schibsted Grotesk"; font-weight: 400 900; src: url("assets/fonts/schibsted-grotesk-1789676e.woff2") format("woff2"); }
 @font-face { font-family: "Schibsted Grotesk"; font-weight: 400 900; src: url("assets/fonts/schibsted-grotesk-8ba7d713.woff2") format("woff2"); unicode-range: U+0100-02BA, U+1E00-1E9F, U+2020, U+20A0-20C0; }
+@font-face { font-family: "Caveat"; font-weight: 400 700; src: url("assets/fonts/caveat.ttf") format("truetype"); }
+@font-face { font-family: "Press Start 2P"; font-weight: 400; src: url("assets/fonts/pressstart2p.ttf") format("truetype"); }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0a0a0b; }
 #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Schibsted Grotesk", sans-serif; color: #f5f5f7; }

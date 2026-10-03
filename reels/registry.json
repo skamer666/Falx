@@ -69,7 +69,11 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r003-portefeuille-geneve.mp4",
    "status": "published",
    "posted_at": "2026-10-02T10:34 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-03": {
+     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    }
+   },
    "metricool_id": 386458004,
    "urls": {
     "instagram": "https://www.instagram.com/reel/Dd_ETgJDwYj/",
@@ -101,9 +105,13 @@
    },
    "duration": 35.7,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r004-heures-sup-lausanne.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-02T18:30 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-03": {
+     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    }
+   },
    "metricool_id": 386469715,
    "networks": [
     "instagram",
@@ -127,10 +135,122 @@
    },
    "duration": 31.4,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r005-achat-en-ligne.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-02T20:45 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-03": {
+     "note": "<24h, Metricool: 0 / pas encore de donnees (IG, FB, TikTok)"
+    }
+   },
    "metricool_id": 386469783,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r007-vacances-jt",
+   "genome": {
+    "style": "faux-journal-tele",
+    "palette": "bleu-nuit/rouge/blanc",
+    "hook": "flash-info + question",
+    "format": "mythe-vs-regle",
+    "topic": "travail/vacances",
+    "mascot": "presentateur-costume",
+    "voice": "fr-FR-HenriNeural",
+    "captions": "sous-titres-tv",
+    "music": "tension",
+    "length": "~35s"
+   },
+   "duration": 28.5,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r007-vacances-jt.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-03T14:00 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387158553,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r008-periode-essai-pixel",
+   "genome": {
+    "style": "jeu-video-pixel-8bits",
+    "palette": "nuit-violette/jaune/vert",
+    "hook": "question + ville",
+    "format": "niveaux-de-jeu (regles + boss final)",
+    "topic": "travail/periode-essai",
+    "mascot": "avatar-pixel + boss",
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "captions": "police-pixel",
+    "music": "chip",
+    "length": "~35s"
+   },
+   "duration": 34.6,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r008-periode-essai-pixel.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-03T17:15 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387158611,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r006-bailleur-cles-3d",
+   "genome": {
+    "style": "figurines-3d-toon",
+    "palette": "salon-chaud/bleu/rouge",
+    "hook": "situation choc + question",
+    "format": "scene-3d + cartes",
+    "topic": "logement/acces-bailleur",
+    "mascot": "bailleur-3d + locataire-3d",
+    "voice": "fr-CH-ArianeNeural",
+    "captions": "classique",
+    "music": "bounce",
+    "length": "~35s"
+   },
+   "duration": 30.4,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r006-bailleur-cles-3d.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-03T21:00 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387158627,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r009-maladie-tableau-blanc",
+   "genome": {
+    "style": "tableau-blanc-dessine",
+    "palette": "blanc/feutres noir-rouge-bleu",
+    "hook": "injustice-chiffree",
+    "format": "histoire-fictive-twist",
+    "topic": "travail/salaire-maladie",
+    "mascot": "bonhomme-baton-marc",
+    "voice": "fr-FR-DeniseNeural",
+    "captions": "feutre-noir",
+    "music": "lofi",
+    "length": "~35s"
+   },
+   "duration": 38.2,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r009-maladie-tableau-blanc.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T08:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387158644,
    "networks": [
     "instagram",
     "facebook",

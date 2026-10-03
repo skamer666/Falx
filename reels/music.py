@@ -77,7 +77,44 @@ PRESETS = {
 }
 
 
+def square(f, t, duty=0.5):
+    return np.where((t * f) % 1.0 < duty, 1.0, -1.0)
+
+
+def chip():
+    """Chiptune 8-bit : arpège en onde carrée, basse carrée, batterie de bruit blanc."""
+    bpm = 132; beat = 60 / bpm; step = beat / 4
+    prog = [(45, [57, 60, 64]), (41, [57, 60, 65]), (48, [55, 60, 64]), (43, [55, 59, 62])]
+    L = np.zeros((N + SR * 2, 2))
+    n = int(TOTAL / step) + 1
+    for i in range(n):
+        t0 = i * step; bar = int(t0 / (4 * beat)); root, notes = prog[bar % 4]
+        tq = tt(step * 0.95)
+        arp = square(mtof(notes[i % 3] + 12), tq, 0.25) * np.exp(-tq * 9) * 0.05
+        add(L, np.stack([arp, arp], 1), t0, pan=0.0)
+        if i % 2 == 0:
+            tb = tt(step * 1.8)
+            bass = square(mtof(root), tb, 0.5) * np.minimum(1, tb / 0.003) * np.exp(-tb * 4) * 0.06
+            add(L, np.stack([bass, bass], 1), t0)
+        if i % 8 == 0:
+            tk = tt(0.12); f = 120 * np.exp(-tk * 30) + 45
+            k = square(1, np.cumsum(f) / SR) * np.exp(-tk * 25) * 0.18
+            add(L, np.stack([k, k], 1), t0)
+        if i % 8 == 4:
+            ts = tt(0.12); sn = rng.standard_normal(len(ts)) * np.exp(-ts * 28) * 0.10
+            add(L, np.stack([sn, sn], 1), t0)
+        if i % 2 == 1:
+            th = tt(0.03); hh = hp(rng.standard_normal(len(th)), 7000) * np.exp(-th * 120) * 0.05
+            add(L, np.stack([hh, hh], 1), t0)
+    out = L[:N]
+    t = np.arange(N) / SR
+    fade = np.minimum(1, t / 0.2) * np.clip((TOTAL - t) / 1.0, 0, 1)
+    return out * fade[:, None]
+
+
 def music(preset):
+    if preset == "chip":
+        return chip()
     P = PRESETS[preset]
     beat = 60 / P["bpm"]; bar = 4 * beat
     L = np.zeros((N + SR * 2, 2)); D = np.zeros_like(L)
