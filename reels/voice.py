@@ -61,9 +61,32 @@ def attach_punct(words, text):
         pos = j
 
 
+
+def from_source(work, spec):
+    """Voice taken from an existing video (e.g. an avatar clip): keep its timing untouched, words from a transcript."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    src = os.path.join(here, spec.SOURCE_AUDIO)
+    os.makedirs(os.path.join(work, "assets"), exist_ok=True)
+    pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", src, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"],
+                         capture_output=True, check=True).stdout
+    y = np.frombuffer(pcm, dtype=np.float32).copy()
+    y = y / (np.abs(y).max() or 1) * 0.89
+    sf.write(os.path.join(work, "assets", "vo.wav"), y, SR, subtype="FLOAT")
+    words = json.load(open(os.path.join(here, spec.SOURCE_WORDS)))
+    hop = SR // 30
+    env = [float(np.sqrt(np.mean(y[i:i + hop] ** 2))) for i in range(0, len(y), hop)]
+    m = max(env) or 1
+    env = [round(min(1, v / m * 1.6), 3) for v in env]
+    dur = len(y) / SR
+    json.dump({"words": words, "vo_dur": round(dur, 3), "env": env}, open(os.path.join(work, "assets", "words.json"), "w"),
+              ensure_ascii=False)
+    print(f"voice: {len(words)} words from source, {dur:.2f}s")
+
 def main():
     work, spec_path = os.path.abspath(sys.argv[1]), sys.argv[2]
     spec = load_spec(spec_path)
+    if getattr(spec, "SOURCE_AUDIO", None):
+        return from_source(work, spec)
     text = " ".join(spec.VO.split())
     rate = getattr(spec, "RATE", "+12%")
     os.makedirs(os.path.join(work, "assets"), exist_ok=True)
