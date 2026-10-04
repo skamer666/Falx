@@ -9,6 +9,8 @@ import { Container } from "./ui";
 import { getRelatedArticles, type GuideArticle } from "@/lib/guide/articles";
 import type { Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
+import { GUIDE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
+import VideoEmbed from "./VideoEmbed";
 
 const STRINGS: Record<
   Locale,
@@ -191,6 +193,20 @@ export default function GuideLayout({
                     ))}
                   </ol>
                 </nav>
+              ) : null}
+              {GUIDE_VIDEOS[article.slug] ? (
+                <div className="mb-10">
+                  <VideoEmbed
+                    videoId={GUIDE_VIDEOS[article.slug].id}
+                    poster={GUIDE_VIDEOS[article.slug].poster}
+                    title={article.title[locale]}
+                    playLabel={VIDEO_STRINGS[locale].play}
+                    playPosition="corner"
+                  />
+                  {VIDEO_STRINGS[locale].note ? (
+                    <p className="mt-2 text-xs text-text-muted">{VIDEO_STRINGS[locale].note}</p>
+                  ) : null}
+                </div>
               ) : null}
               <div className="article-body">{children}</div>
               <GuideCta locale={locale} articleSlug={article.slug} className="mt-12" />

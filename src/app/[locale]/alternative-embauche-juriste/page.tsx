@@ -6,6 +6,8 @@ import LeadForm from "@/components/site/LeadForm";
 import { Container, PrimaryButton } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import VideoEmbed from "@/components/site/VideoEmbed";
+import { COMPARISON_VIDEO, VIDEO_STRINGS } from "@/lib/videos";
 
 // Page d'arrivée pour les annonces « embaucher un juriste » : comparaison chiffrée et honnête
 // entre un juriste salarié et l'abonnement. Les montants salariaux sont des ordres de grandeur
@@ -287,6 +289,20 @@ export default async function HiringAlternativePage({ params }: { params: Promis
                   {t.secondaryCta}
                 </a>
               </div>
+              {COMPARISON_VIDEO ? (
+                <div className="mt-10">
+                  <VideoEmbed
+                    videoId={COMPARISON_VIDEO.id}
+                    poster={COMPARISON_VIDEO.poster}
+                    title={t.heading}
+                    playLabel={VIDEO_STRINGS[locale].play}
+                    playPosition="corner"
+                  />
+                  {VIDEO_STRINGS[locale].note ? (
+                    <p className="mt-2 text-xs text-text-muted">{VIDEO_STRINGS[locale].note}</p>
+                  ) : null}
+                </div>
+              ) : null}
             </Reveal>
           </Container>
         </section>

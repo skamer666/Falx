@@ -11,6 +11,7 @@ export default function VideoEmbed({
   playLabel,
   aspect = "16/9",
   className = "",
+  playPosition = "bottom",
 }: {
   videoId: string;
   poster: string;
@@ -18,6 +19,8 @@ export default function VideoEmbed({
   playLabel: string;
   aspect?: "9/16" | "16/9";
   className?: string;
+  // "corner": white button bottom-right, the corner left empty on the designed Thrax thumbnails.
+  playPosition?: "bottom" | "corner";
 }) {
   const [playing, setPlaying] = useState(false);
   const params = new URLSearchParams({
@@ -56,8 +59,20 @@ export default function VideoEmbed({
             unoptimized
             className="object-cover"
           />
-          <span className="absolute inset-x-0 bottom-[6%] flex flex-col items-center gap-2 sm:bottom-[8%] sm:gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-bg transition-transform duration-200 group-hover:scale-105 sm:h-16 sm:w-16">
+          <span
+            className={
+              playPosition === "corner"
+                ? "absolute bottom-[3%] right-[3%]"
+                : "absolute inset-x-0 bottom-[6%] flex flex-col items-center gap-2 sm:bottom-[8%] sm:gap-3"
+            }
+          >
+            <span
+              className={`flex items-center justify-center rounded-full transition-transform duration-200 group-hover:scale-105 ${
+                playPosition === "corner"
+                  ? "h-9 w-9 bg-white text-black shadow-[0_8px_30px_rgba(0,0,0,0.55)] sm:h-14 sm:w-14"
+                  : "h-12 w-12 bg-accent text-bg sm:h-16 sm:w-16"
+              }`}
+            >
               <svg
                 viewBox="0 0 24 24"
                 className="ml-1 h-5 w-5 sm:h-6 sm:w-6"
@@ -67,9 +82,9 @@ export default function VideoEmbed({
                 <path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z" />
               </svg>
             </span>
-            <span className="hidden text-sm font-medium text-text sm:block">
-              {playLabel}
-            </span>
+            {playPosition === "bottom" ? (
+              <span className="hidden text-sm font-medium text-text sm:block">{playLabel}</span>
+            ) : null}
           </span>
         </button>
       )}

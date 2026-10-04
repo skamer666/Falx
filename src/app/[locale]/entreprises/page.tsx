@@ -7,6 +7,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FaqAccordion from "@/components/site/FaqAccordion";
 import VideoEmbed from "@/components/site/VideoEmbed";
+import { PRESENTATION_VIDEO } from "@/lib/videos";
 import JsonLd from "@/components/site/JsonLd";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
@@ -893,8 +894,8 @@ export default async function EntreprisesPage({
               </Reveal>
               <Reveal delay={120} className="mx-auto mt-10 max-w-4xl">
                 <VideoEmbed
-                  videoId="2A64ZshrWSQ"
-                  poster="/media/video/presentation-poster.webp"
+                  videoId={PRESENTATION_VIDEO.id}
+                  poster={PRESENTATION_VIDEO.poster}
                   title={t.videoHeading}
                   playLabel={t.videoPlayLabel}
                 />

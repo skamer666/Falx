@@ -9,6 +9,8 @@ import { SITE_URL } from "@/lib/site";
 import { categoryText, getService, servicePath, serviceText, type ServiceDef } from "@/lib/services/catalog";
 import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
+import VideoEmbed from "@/components/site/VideoEmbed";
+import { SERVICE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
 import OrderForm from "./OrderForm";
 
 function Check() {
@@ -30,6 +32,8 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
   const related = service.related.map(getService).filter((s): s is ServiceDef => Boolean(s));
   const guide = service.guide ? GUIDE_ARTICLES.find((a) => a.slug === service.guide) : undefined;
   const hubPath = `/${locale}/${service.audience}`;
+  const video = SERVICE_VIDEOS[`${service.audience}/${service.slug}`];
+  const vs = VIDEO_STRINGS[locale];
   const url = `${SITE_URL}${servicePath(locale, service)}`;
 
   const jsonLd = [
@@ -105,6 +109,13 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
                   </a>
 
                   <p className="mt-6 text-lg leading-relaxed text-text-muted">{t.intro}</p>
+
+                  {video ? (
+                    <div className="mt-8">
+                      <VideoEmbed videoId={video.id} poster={video.poster} title={`${t.name} — ${vs.heading}`} playLabel={vs.play} playPosition="corner" />
+                      {vs.note ? <p className="mt-2 text-xs text-text-muted">{vs.note}</p> : null}
+                    </div>
+                  ) : null}
 
                   <h2 className="mt-10 text-xl font-semibold">{ui.service.included}</h2>
                   <ul className="mt-4 flex flex-col gap-3">
