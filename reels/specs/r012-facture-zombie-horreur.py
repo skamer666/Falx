@@ -2,10 +2,10 @@
 facture-monstre qui parle (personnage jamais utilisé), pierre tombale, scintillement, voix grave."""
 import json
 
-VOICE = "fr-CA-AntoineNeural"
-RATE = "+6%"
+VOICE = "fr-CH-FabriceNeural"
+RATE = "+4%"
 
-VO = ("Sion, minuit. Une facture de dentiste de 2019 revient te hanter. Tu dois vraiment payer ? Pas forcément. "
+VO = ("Sion, minuit. Une facture de dentiste de deux mille dix-neuf revient te hanter. Tu dois vraiment payer ? Pas forcément. "
       "En Suisse, une facture de médecin ou de dentiste se prescrit par cinq ans. Après ça, elle est comme morte. "
       "Mais attention, elle peut ressusciter : une poursuite ou une reconnaissance de dette relance le compteur. "
       "Et voici le piège le plus vicieux : la prescription ne s'applique pas toute seule. "
@@ -30,7 +30,7 @@ META = {
     "tags": ["prescription", "facture", "art. 128 CO", "commandement de payer", "Sion"],
     "genome": {"style": "horreur-vhs", "palette": "noir/vert-toxique/rouge", "hook": "ville + minuit + menace",
                "format": "mythe-vs-regle + piege", "topic": "argent/prescription-dettes", "mascot": "facture-monstre-qui-parle",
-               "voice": "fr-CA-AntoineNeural", "captions": "blanc-vhs-vert", "music": "tension", "length": "~40s"},
+               "voice": "fr-CH-FabriceNeural", "captions": "blanc-vhs-vert", "music": "tension", "length": "~40s"},
     "cover_t": 1.8,
 }
 

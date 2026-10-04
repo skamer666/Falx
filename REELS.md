@@ -47,6 +47,12 @@ Retour du propriétaire sur les 2 pilotes : « trop technique, c'est chiant ». 
   (« histoire fictive inspirée de situations courantes ») : pas de faux témoignage, pas de faux avis.
 - Chaque jour : au moins 1 Reel avec une technique ou un personnage jamais utilisé avant.
 
+## Contrôle de la prononciation (incident du 4 oct.)
+
+- Ne jamais commencer par un nom de ville seul suivi d'un point (« Lausanne. ») : la voix multilingue l'a lu à l'anglaise. Écrire une phrase : « À Lausanne, tu… », « Sion, minuit » seulement avec une voix suisse (fr-CH).
+- Écrire les années et les nombres sensibles en toutes lettres si besoin (« deux mille dix-neuf »).
+- Après chaque rendu : transcrire les 4 premières secondes de `work/<id>/assets/vo.wav` (faster-whisper small, fr) et réécouter mentalement le hook ; corriger la phrase ou changer de voix si un mot est déformé.
+
 ## Vérité (non négociable)
 
 - Uniquement des règles de droit suisse vérifiées, article exact à l'écran et dans la légende ; nuances importantes dans la légende.

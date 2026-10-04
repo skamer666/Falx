@@ -6,7 +6,7 @@ VOICE = "fr-FR-VivienneMultilingualNeural"
 RATE = "+10%"
 USE_THREE = True
 
-VO = ("Lausanne. Tu rends ton appart après huit ans, et ton bailleur te réclame mille cinq cents francs pour tout repeindre. "
+VO = ("À Lausanne, tu rends ton appart après huit ans, et ton bailleur te réclame mille cinq cents francs pour tout repeindre. "
       "Tu dois payer ? Pas forcément. En Suisse, tu dois rendre l'appartement dans l'état qui résulte d'un usage normal. "
       "L'usure normale, comme une peinture qui a vieilli en huit ans, ce n'est pas à toi de la payer. Seuls les vrais dégâts sont pour toi. "
       "Et le détail que presque personne ne connaît : à la remise des clés, le bailleur doit vérifier l'appartement "
