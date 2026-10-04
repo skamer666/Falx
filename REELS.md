@@ -30,6 +30,17 @@ Retour du propriétaire sur les 2 pilotes : « trop technique, c'est chiant ». 
 - **Technique** : 2D, 3D (`USE_THREE = True` charge Three.js ; dessiner dans `R.on(t)` avec `preserveDrawingBuffer`),
   papier découpé, faux écran de téléphone, faux JT, jeu vidéo rétro, documentaire, ASMR, POV, sketch, quiz…
 - **Voix validée par le propriétaire** : fr-FR-VivienneMultilingualNeural (RATE +10 %), utilisée sur r011 (chat des colocs) : « excellente ». À utiliser en priorité, sur au moins 1 à 2 Reels par jour, tout en continuant à varier les styles visuels.
+- **3D (demande du propriétaire : « plus de styles 3D différents »)** : au moins 1 Reel 3D par jour, et jamais deux fois le même rendu 3D d'affilée. Menu à faire tourner (Three.js, `USE_THREE = True`) :
+  1. pâte à modeler / claymation (formes arrondies, MeshStandardMaterial rugueux, légers tremblements image par image) ;
+  2. low-poly (flatShading, couleurs pastel, ville suisse stylisée : Jet d'eau, cathédrale de Lausanne…) ;
+  3. diorama isométrique miniature (caméra orthographique, appartement/bureau en coupe, effet tilt-shift) ;
+  4. voxel / cubes façon jeu de construction ;
+  5. néon synthwave (fond nuit, grille au sol, émissifs, brouillard) ;
+  6. typographie 3D (mots extrudés qui tombent, se cassent, s'empilent) ;
+  7. papier 3D / origami (plans pliés, ombres douces) ;
+  8. verre et chrome « premium » (MeshPhysicalMaterial, reflets, objet héros : clé, facture, contrat) ;
+  9. figurines toon (déjà utilisé le 3 oct., r006) ;
+  10. caméra embarquée / travelling à travers une scène (POV qui avance dans un couloir d'immeuble, une rue).
 - **Polices disponibles** : Schibsted Grotesk (défaut), Caveat (manuscrit, tableau blanc), Press Start 2P (pixel ; pas de majuscules accentuées É/È, écrire sans accent en capitales). Musiques : drive, tension, lofi, epic, bounce, chip (8 bits).
 - **Narration** : histoires de clients, sketchs, débats, « POV », compte à rebours, enquête.
   Une histoire de client est TOUJOURS fictive (Thrax Legal n'en publie pas de vraies) et l'écran le dit
