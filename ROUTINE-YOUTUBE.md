@@ -6,7 +6,7 @@ Le registre `youtube-registry.json` fait foi. Statuts : `todo` → `rendered` �
 
 ## Production (automatique, en arrière-plan)
 
-- `bash queue-voix.sh` rend **5 vidéos à la fois** (`LANES=5`, `HF_WORKERS=1` : la machine a 4 cœurs) toutes les vidéos `todo`. Chaque voie (`lane.sh`) passe la sienne en `rendering` puis `rendered` ou `failed` ; le registre est écrit sous `flock work/registry.lock`. Journal : `work/queue-voix.log`, détail par vidéo : `work/lanes/<slug>.log`.
+- `bash queue-voix.sh` rend **2 vidéos à la fois** (`LANES=2`, `HF_WORKERS=2` ; à 5 en parallèle sur 4 cœurs, Chrome ne démarrait plus) toutes les vidéos `todo`. Chaque voie (`lane.sh`) passe la sienne en `rendering` puis `rendered` ou `failed` ; le registre est écrit sous `flock work/registry.lock`. Journal : `work/queue-voix.log`, détail par vidéo : `work/lanes/<slug>.log`.
 - Si la file ne tourne plus (`pgrep -f "lane.s[h]"` vide), les vidéos restées en `rendering` repassent en `todo` avant de relancer.
 - Prestations et guides : `bash produce.sh <slug> voix`.
   - `engine/voice.py` génère une prise par scène (fr-FR-VivienneMultilingualNeural, +10 %, edge-tts avec proxy) avec les temps réels de chaque mot.

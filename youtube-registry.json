@@ -19,31 +19,31 @@
   "appel-juridique": {
    "kind": "service",
    "site_key": "particuliers/appel-juridique",
-   "status": "rendering",
+   "status": "todo",
    "youtube_id": null
   },
   "avertissement-employe": {
    "kind": "service",
    "site_key": "entreprises/avertissement-employe",
-   "status": "rendering",
+   "status": "todo",
    "youtube_id": null
   },
   "baisse-de-loyer": {
    "kind": "service",
    "site_key": "particuliers/baisse-de-loyer",
-   "status": "rendering",
+   "status": "todo",
    "youtube_id": null
   },
   "certificat-de-travail-employeur": {
    "kind": "service",
    "site_key": "entreprises/certificat-de-travail-employeur",
-   "status": "rendering",
+   "status": "todo",
    "youtube_id": null
   },
   "cgv-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/cgv-sur-mesure",
-   "status": "rendering",
+   "status": "todo",
    "youtube_id": null
   },
   "contestation-conge": {

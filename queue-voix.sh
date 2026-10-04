@@ -1,9 +1,9 @@
 #!/bin/bash
-# File de production « voix » en parallèle (5 vidéos à la fois par défaut) : bash queue-voix.sh
+# File de production « voix » en parallèle (2 vidéos à la fois par défaut) : bash queue-voix.sh
 # Rend toutes les vidéos « todo » du registre ; chaque voie passe la sienne en rendering → rendered (ou failed).
 ST=$(cd "$(dirname "$0")" && pwd)
-N=${LANES:-5}
-export HF_WORKERS=${HF_WORKERS:-1}  # 4 cœurs : 1 navigateur de rendu par voie
+N=${LANES:-2}
+export HF_WORKERS=${HF_WORKERS:-2}  # 4 cœurs : 2 voies × 2 navigateurs
 mkdir -p $ST/work
 python3 -c "
 import json
