@@ -37,6 +37,8 @@ Pour chaque vidéo `rendered` :
    - Committer sur `claude/intelligent-knuth-4by8ds` et pousser aussi sur `claude/falx-landing-page-design-zvjcet` : Workers Builds déploie.
 5. Committer le registre sur `video-studio`.
 
+Uploads **un par un**, jamais en parallèle. Zapier a renvoyé « This action has been throttled without retry » dès le 2e upload simultané le 4 oct. `bash yt_prep.sh <slug>…` fait le contrôle, l'hébergement et sort les métadonnées.
+
 Si YouTube ou Zapier refuse un upload (quota journalier, limite de tâches), s'arrêter là et reprendre au passage suivant ; ne pas réessayer en boucle.
 
 ## Contenu
