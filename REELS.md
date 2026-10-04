@@ -18,6 +18,27 @@ Retour du propriétaire sur les 2 pilotes : « trop technique, c'est chiant ». 
 6. **Chiffres concrets** : francs, jours, années, pourcentages, un calcul simple.
 7. **CTA court** : partager à quelqu'un (« Envoie ça à… »), « Thrax Legal, lien en bio ».
 
+## Banque de hooks (recherche du 4 oct. + nos stats)
+
+Règles : la 1re phrase dure moins de 1,5 s, contient « tu » + un enjeu concret (argent, logement, boulot) + une ville suisse ;
+un seul point par Reel ; l'image de la 1re seconde doit déjà bouger (objet qui tombe, message qui arrive, tampon).
+Le signal le plus fort pour le contenu juridique est l'enregistrement : donner quelque chose à garder (phrase exacte à dire,
+check-list, délai) et alterner les CTA « Enregistre » / « Envoie ça à… ».
+
+Formules à faire tourner (une différente par Reel, noter la formule dans META.genome.hook) :
+1. Dilemme : « Tu trouves 2000 francs à Genève. Tu fais quoi ? » (notre meilleur Reel à ce jour).
+2. Perte chiffrée : « Tu offres peut-être 6000 francs par an à ton patron. »
+3. « Ils espèrent que tu ne sais pas ça » : « Ton bailleur à Lausanne espère que tu ne connais pas cette règle. »
+4. Phrase à dire (format Law by Mike / Erika Kullberg) : « Ton patron te dit X ? Réponds-lui exactement ça. »
+5. Ce qu'il ne faut jamais faire : « 3 choses à ne jamais signer quand tu loues un appart en Suisse. »
+6. Appel à une identité : « Si tu es frontalier / locataire à Genève / en période d'essai, écoute ça. »
+7. POV : « POV : ton patron te vire par WhatsApp. »
+8. Affirmation choc vraie : « Ton bailleur n'a pas le droit d'entrer chez toi, même avec ses clés. »
+9. « C'est légal ? » + verdict immédiat : « Payer tes vacances au lieu de te les laisser prendre ? Interdit. »
+10. Réaction à l'actu suisse (20 minutes, Watson, RTS) : « Tu as vu l'histoire de… ? Voilà ce que dit la loi. »
+À éviter : commencer par une citation de mythe entre guillemets (Reel « achat en ligne » : 3 s de visionnage moyen),
+un logo, du contexte avant l'enjeu, un nom de ville seul suivi d'un point.
+
 ## Créativité : tout peut changer (consigne du propriétaire)
 
 « Sois beaucoup plus créatif. Tu peux totalement tout refaire. » Rien n'est figé d'un Reel à l'autre :
