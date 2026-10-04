@@ -439,6 +439,33 @@
     "youtube",
     "tiktok"
    ]
+  },
+  {
+   "id": "r015-etat-des-lieux-diorama",
+   "genome": {
+    "style": "3d-diorama-isometrique-tilt-shift",
+    "palette": "pastel/bois/jaune",
+    "hook": "ville + somme réclamée",
+    "format": "situation + regle + secret",
+    "topic": "logement/etat-des-lieux",
+    "mascot": "figurines-miniatures",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "blanc-contour-jaune",
+    "music": "bounce",
+    "length": "~40s"
+   },
+   "duration": 30.8,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r015-etat-des-lieux-diorama.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T13:25 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387748280,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   }
  ]
 }
