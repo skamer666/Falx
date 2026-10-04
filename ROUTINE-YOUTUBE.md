@@ -6,7 +6,8 @@ Le registre `youtube-registry.json` fait foi. Statuts : `todo` → `rendered` �
 
 ## Production (automatique, en arrière-plan)
 
-- `bash queue-voix.sh` rend, l'une après l'autre, toutes les vidéos `todo` et les passe en `rendered`. Journal : `work/queue-voix.log` (`done`, `FAIL`, `QUEUE DONE`).
+- `bash queue-voix.sh` rend **5 vidéos à la fois** (`LANES=5`, `HF_WORKERS=1` : la machine a 4 cœurs) toutes les vidéos `todo`. Chaque voie (`lane.sh`) passe la sienne en `rendering` puis `rendered` ou `failed` ; le registre est écrit sous `flock work/registry.lock`. Journal : `work/queue-voix.log`, détail par vidéo : `work/lanes/<slug>.log`.
+- Si la file ne tourne plus (`pgrep -f "lane.s[h]"` vide), les vidéos restées en `rendering` repassent en `todo` avant de relancer.
 - Prestations et guides : `bash produce.sh <slug> voix`.
   - `engine/voice.py` génère une prise par scène (fr-FR-VivienneMultilingualNeural, +10 %, edge-tts avec proxy) avec les temps réels de chaque mot.
   - `kit.Ctx` utilise ces temps au lieu de l'estimation : chaque apparition tombe sur son mot, chaque scène dure sa phrase plus 0,42 s (0,28 s avant le premier mot).
@@ -15,7 +16,7 @@ Le registre `youtube-registry.json` fait foi. Statuts : `todo` → `rendered` �
 - Prononciation : les sigles sont épelés via la table `SAY` de `engine/voice.py` (CO, CC, LP, nLPD, CGV, AVS, AI, etc.) et `thrax-legal.ch` est lu « thrax tiret legal point c h ». Ajouter toute nouvelle abréviation à cette table.
 - Ne jamais modifier `produce.sh` ou `queue-voix.sh` pendant qu'ils tournent : bash relit le script en cours d'exécution.
 
-## Publication (à chaque passage de la routine)
+## Publication (à chaque passage de la routine, toutes les heures)
 
 Pour chaque vidéo `rendered` :
 

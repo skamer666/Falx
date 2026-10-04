@@ -1,39 +1,39 @@
 # Feuille de calage — « Accord de confidentialité (NDA) »
 
-Durée totale de la vidéo : 1:21.03
+Durée totale de la vidéo : 0:58.49
 
 Chaque passage commence au timecode indiqué. La « fin visée » est le moment où les animations
 du passage sont terminées ; tu peux finir un peu avant, mais évite de déborder sur le passage suivant.
 
-**0:00.55 → 0:07.13**  
+**0:00.31 → 0:04.50**  
 Accord de confidentialité : avant de présenter un projet, un savoir-faire ou des chiffres ?
 
 
 ## 01 · Le problème
 
-**0:08.38 → 0:15.88**  
+**0:05.23 → 0:10.75**  
 Un modèle gratuit, trouvé en ligne, protège souvent mal ce qui compte pour vous. Ou prévoit une peine inapplicable.
 
-**0:17.13 → 0:25.92**  
+**0:11.48 → 0:17.64**  
 Bon à savoir : une peine conventionnelle, bien rédigée, évite de devoir prouver le montant exact du dommage en cas de violation.
 
 
 ## 02 · La solution
 
-**0:27.17 → 0:35.08**  
+**0:18.37 → 0:24.33**  
 Accord unilatéral ou réciproque selon votre situation, informations protégées définies précisément, peine et durée adaptées.
 
-**0:36.33 → 0:43.70**  
+**0:25.06 → 0:31.16**  
 Et en anglais, c’est possible aussi. Vous présentez votre projet, vos chiffres et votre savoir-faire, l’esprit tranquille.
 
-**0:44.95 → 0:55.13**  
+**0:31.89 → 0:39.17**  
 Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre accord, par écrit.
 
-**0:56.38 → 1:08.39**  
+**0:39.91 → 0:48.23**  
 Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.
 
 
 ## 03 · Commander
 
-**1:09.64 → 1:15.33**  
+**0:48.95 → 0:53.08**  
 Commandez en ligne, sur la page de la prestation. Le lien est dans la description.

@@ -37,7 +37,7 @@ extra=$(ls "$WK/assets/audio" | grep -v -E "^($allow)\.wav$" || true)
 grep -qE "(^|[^0-9])0 errors" "$WK/lint.log" || { tail -20 "$WK/lint.log"; die "lint"; }
 ok=0
 for try in 1 2 3; do
-  (cd "$WK" && $HF render --skill=faceless-explainer --fps 60 --workers 4 --quality high --output renders/render.mp4 > renders/render.log 2>&1)
+  (cd "$WK" && $HF render --skill=faceless-explainer --fps 60 --workers ${HF_WORKERS:-4} --quality high --output renders/render.mp4 > renders/render.log 2>&1)
   grep -q "rendered in" "$WK/renders/render.log" && { ok=1; break; }
   echo "render échoué (essai $try)"; tail -5 "$WK/renders/render.log"; sleep 20
 done

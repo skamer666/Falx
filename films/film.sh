@@ -12,7 +12,7 @@ python3 "$ST/engine/voice.py" "$WK" "$WK/tools/scenes.py" > "$WK/voice.log" 2>&1
 (cd "$WK" && $HF lint > lint.log 2>&1); grep -qE "(^|[^0-9])0 errors" "$WK/lint.log" || die "lint"
 ok=0
 for try in 1 2 3; do
-  (cd "$WK" && $HF render --skill=faceless-explainer --fps 60 --workers 4 --quality high --output renders/render.mp4 > renders/render.log 2>&1)
+  (cd "$WK" && $HF render --skill=faceless-explainer --fps 60 --workers ${HF_WORKERS:-4} --quality high --output renders/render.mp4 > renders/render.log 2>&1)
   grep -q "rendered in" "$WK/renders/render.log" && { ok=1; break; }; sleep 20
 done
 [ $ok = 1 ] || die "render"
