@@ -8,17 +8,17 @@ Avocat ou service juridique externalisé : que choisir pour votre PME en Suisse 
 Avocat ou service juridique externalisé : qui contacter quand votre PME a une question juridique ? Ce que fait chacun, ce que chacun ne fait pas, comment ça se paie, et une règle simple pour choisir.
 
 👉 Être rappelé gratuitement : https://thrax-legal.ch/fr/contact
-👉 L’abonnement Thrax Legal : https://thrax-legal.ch/fr/#offre
+👉 L’abonnement Thrax Legal : https://thrax-legal.ch/fr/entreprises#abonnement
 
 Chapitres
 0:00 Le réflexe de l’avocat
-0:54 Ce que fait un avocat
-1:44 Le quotidien juridique d’une PME
-3:05 Le service juridique externalisé
-3:51 Comparaison
-4:45 Comment choisir
-5:26 L’abonnement
-5:47 Être rappelé gratuitement
+0:35 Ce que fait un avocat
+1:08 Le quotidien juridique d’une PME
+2:00 Le service juridique externalisé
+2:31 Comparaison
+3:09 Comment choisir
+3:35 L’abonnement
+3:51 Être rappelé gratuitement
 
 Les guides complets
 • Contrat de travail en Suisse : https://thrax-legal.ch/fr/guide/contrat-de-travail-suisse-pme
