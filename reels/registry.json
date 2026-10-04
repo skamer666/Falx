@@ -15,7 +15,7 @@
    },
    "duration": 28.5,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r001-maladie-licenciement.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T11:30 Europe/Brussels",
    "stats": {},
    "metricool_id": 386469858,
@@ -41,7 +41,7 @@
    },
    "duration": 34.0,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r002-garantie-loyer.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T19:00 Europe/Brussels",
    "stats": {},
    "metricool_id": 386469922,
@@ -211,7 +211,7 @@
    },
    "duration": 28.5,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r007-vacances-jt.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T14:00 Europe/Brussels",
    "stats": {},
    "metricool_id": 387158553,
@@ -238,7 +238,7 @@
    },
    "duration": 34.6,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r008-periode-essai-pixel.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T17:15 Europe/Brussels",
    "stats": {},
    "metricool_id": 387158611,
@@ -265,7 +265,7 @@
    },
    "duration": 30.4,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r006-bailleur-cles-3d.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T21:00 Europe/Brussels",
    "stats": {},
    "metricool_id": 387158627,
@@ -320,7 +320,7 @@
    },
    "duration": 35.5,
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r010-licencie-whatsapp-avatar.mp4",
-   "status": "scheduled",
+   "status": "published",
    "posted_at": "2026-10-03T17:35 Europe/Brussels",
    "stats": {},
    "metricool_id": 387356113,
@@ -331,6 +331,114 @@
     "tiktok"
    ],
    "note": "avatar HeyGen (offre gratuite, filigrane visible), declare IA sur les 4 reseaux"
+  },
+  {
+   "id": "r011-sous-location-chat",
+   "genome": {
+    "style": "pov-ecran-telephone-chat",
+    "palette": "whatsapp-sombre/vert/jaune",
+    "hook": "ville + message choc",
+    "format": "conversation-fictive + regle-3-cas",
+    "topic": "logement/sous-location",
+    "mascot": "aucun (chat)",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "blanc-contour",
+    "music": "lofi",
+    "length": "~40s"
+   },
+   "duration": 33.9,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r011-sous-location-chat.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T12:15 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387642007,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r013-certificat-documentaire",
+   "genome": {
+    "style": "documentaire-animalier-parodie",
+    "palette": "savane-orange/sepia",
+    "hook": "ville + voix documentaire",
+    "format": "narration-parodique + regle",
+    "topic": "travail/certificat",
+    "mascot": "salarie-warm + patron-charcoal (animaux)",
+    "voice": "fr-BE-GerardNeural",
+    "captions": "serif-documentaire",
+    "music": "epic",
+    "length": "~40s"
+   },
+   "duration": 34.8,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r013-certificat-documentaire.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T15:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387642012,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r014-quiz-bail",
+   "genome": {
+    "style": "jeu-tele-quiz",
+    "palette": "violet-plateau/or/neon",
+    "hook": "quiz + ville + defi 3 secondes",
+    "format": "vrai-ou-faux x3 + score",
+    "topic": "logement/bail-mix",
+    "mascot": "aucun (plateau)",
+    "voice": "fr-CA-ThierryNeural",
+    "captions": "or-gras",
+    "music": "bounce",
+    "length": "~45s"
+   },
+   "duration": 46.7,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r014-quiz-bail.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T18:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387642031,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r012-facture-zombie-horreur",
+   "genome": {
+    "style": "horreur-vhs",
+    "palette": "noir/vert-toxique/rouge",
+    "hook": "ville + minuit + menace",
+    "format": "mythe-vs-regle + piege",
+    "topic": "argent/prescription-dettes",
+    "mascot": "facture-monstre-qui-parle",
+    "voice": "fr-CA-AntoineNeural",
+    "captions": "blanc-vhs-vert",
+    "music": "tension",
+    "length": "~40s"
+   },
+   "duration": 36.0,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r012-facture-zombie-horreur.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T21:15 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387642060,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   }
  ]
 }
