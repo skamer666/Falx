@@ -39,6 +39,8 @@ Pour chaque vidéo `rendered` :
 
 Uploads **un par un**, jamais en parallèle. Zapier a renvoyé « This action has been throttled without retry » dès le 2e upload simultané le 4 oct. `bash yt_prep.sh <slug>…` fait le contrôle, l'hébergement et sort les métadonnées.
 
+Limite constatée le 4 oct. : après une dizaine de mises en ligne sur la chaîne dans la journée (Shorts Metricool compris), tous les uploads sont refusés (« throttled without retry »), alors que les lectures marchent. C'est probablement la limite journalière d'une chaîne non vérifiée par téléphone. Tenter **un seul** upload par passage ; s'il est refusé, s'arrêter jusqu'au passage suivant.
+
 Si YouTube ou Zapier refuse un upload (quota journalier, limite de tâches), s'arrêter là et reprendre au passage suivant ; ne pas réessayer en boucle.
 
 ## Contenu
