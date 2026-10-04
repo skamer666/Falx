@@ -466,6 +466,33 @@
     "youtube",
     "tiktok"
    ]
+  },
+  {
+   "id": "r016-virement-erreur-chrome",
+   "genome": {
+    "style": "3d-verre-chrome-premium",
+    "palette": "noir/or/rouge/vert",
+    "hook": "dilemme argent + ville",
+    "format": "dilemme + piege + bon reflexe",
+    "topic": "argent/banque",
+    "mascot": "objets 3D (telephone, pieces, menottes)",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "blanc-contour-or",
+    "music": "tension",
+    "length": "~28s"
+   },
+   "duration": 27.9,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r016-virement-erreur-chrome.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-04T20:45 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 387947982,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
   }
  ]
 }
