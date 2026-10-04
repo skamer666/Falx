@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 10.2,
-   "slot": 10.5,
+   "dur": 7.35,
+   "slot": 7.65,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 10.2,
-   "dur": 6.95,
-   "slot": 7.25,
+   "start": 7.35,
+   "dur": 5.259,
+   "slot": 5.559,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.15,
-   "dur": 8.79,
-   "slot": 9.09,
+   "start": 12.609,
+   "dur": 6.13,
+   "slot": 6.43,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.94,
-   "dur": 10.31,
-   "slot": 10.61,
+   "start": 18.739,
+   "dur": 7.68,
+   "slot": 7.98,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 36.25,
-   "dur": 9.86,
-   "slot": 10.16,
+   "start": 26.419,
+   "dur": 6.748,
+   "slot": 7.048,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 46.11,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 33.167,
+   "dur": 8.202,
+   "slot": 8.502,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 57.54,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.369,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 70.8,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.419,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 77.74,
+   "start": 55.269,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 10.2,
+   "t": 7.35,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.94,
+   "t": 18.739,
    "label": "02 · La solution"
   },
   {
-   "t": 70.8,
+   "t": 50.419,
    "label": "03 · Commander"
   },
   {
-   "t": 77.74,
+   "t": 55.269,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 82.74,
- "chromeShow": 10.2,
- "chromeHide": 77.74,
+ "total": 60.269,
+ "chromeShow": 7.35,
+ "chromeHide": 55.269,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.5,
+   "start": 0.31,
+   "end": 6.93,
    "text": "Contrat commercial sur mesure : prestation, sous-traitance, distribution, partenariat… un accord important à formaliser ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.75,
-   "end": 16.45,
+   "start": 7.66,
+   "end": 12.189,
    "text": "Une poignée de main, quelques e-mails… Et le jour du désaccord, chacun a sa version.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 17.7,
-   "end": 25.24,
+   "start": 12.919,
+   "end": 18.319,
    "text": "Un écrit clair évite l’essentiel des litiges. Pourtant, la plupart des contrats commerciaux ne requièrent aucune forme.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 26.49,
-   "end": 35.55,
+   "start": 19.049,
+   "end": 25.999,
    "text": "On cadre l’accord et les risques, puis on rédige un contrat complet : objet, prix, délais, responsabilité, résiliation et for.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 36.8,
-   "end": 45.41,
+   "start": 26.729,
+   "end": 32.747,
    "text": "Un tour de corrections est inclus. Et si l’autre partie propose son propre contrat, la relecture est plus adaptée : on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 46.66,
-   "end": 56.84,
+   "start": 33.477,
+   "end": 40.949,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre contrat, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 58.09,
-   "end": 70.1,
+   "start": 41.679,
+   "end": 49.999,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 71.35,
-   "end": 77.04,
+   "start": 50.729,
+   "end": 54.849,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

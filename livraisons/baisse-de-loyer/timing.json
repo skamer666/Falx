@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.39,
-   "slot": 9.69,
+   "dur": 6.411,
+   "slot": 6.711,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.39,
-   "dur": 5.83,
-   "slot": 6.13,
+   "start": 6.411,
+   "dur": 3.77,
+   "slot": 4.07,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.22,
-   "dur": 13.84,
-   "slot": 14.14,
+   "start": 10.181,
+   "dur": 9.297,
+   "slot": 9.597,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 29.06,
-   "dur": 9.26,
-   "slot": 9.56,
+   "start": 19.478,
+   "dur": 5.475,
+   "slot": 5.775,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 38.32,
-   "dur": 7.15,
-   "slot": 7.45,
+   "start": 24.953,
+   "dur": 4.861,
+   "slot": 5.161,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 45.47,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 29.814,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 56.71,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 37.837,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 69.97,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 46.887,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 76.91,
+   "start": 51.737,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.39,
+   "t": 6.411,
    "label": "01 · Le problème"
   },
   {
-   "t": 29.06,
+   "t": 19.478,
    "label": "02 · La solution"
   },
   {
-   "t": 69.97,
+   "t": 46.887,
    "label": "03 · Commander"
   },
   {
-   "t": 76.91,
+   "t": 51.737,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 81.91,
- "chromeShow": 9.39,
- "chromeHide": 76.91,
+ "total": 56.737,
+ "chromeShow": 6.411,
+ "chromeHide": 51.737,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.69,
+   "start": 0.31,
+   "end": 5.991,
    "text": "Baisse de loyer : quand le taux hypothécaire de référence baisse, votre loyer peut baisser aussi. Encore faut-il le demander.",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.94,
-   "end": 14.52,
+   "start": 6.721,
+   "end": 9.761,
    "text": "Beaucoup de locataires paient trop, simplement parce qu’ils ne demandent rien.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.77,
-   "end": 28.36,
+   "start": 10.491,
+   "end": 19.058,
    "text": "La demande se fait par écrit, pour le prochain terme de résiliation. Le bailleur a trente jours pour répondre. S’il refuse, vous pouvez saisir l’autorité de conciliation dans les trente jours.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 29.61,
-   "end": 37.62,
+   "start": 19.788,
+   "end": 24.533,
    "text": "On vérifie le taux de référence et le dernier ajustement de votre loyer, puis on calcule la baisse que vous pouvez demander.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 38.87,
-   "end": 44.77,
+   "start": 25.263,
+   "end": 29.394,
    "text": "Et on rédige la lettre à votre bailleur ou à votre régie, avec la marche à suivre s’il refuse.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 46.02,
-   "end": 56.01,
+   "start": 30.124,
+   "end": 37.417,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 57.26,
-   "end": 69.27,
+   "start": 38.147,
+   "end": 46.467,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 70.52,
-   "end": 76.21,
+   "start": 47.197,
+   "end": 51.317,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

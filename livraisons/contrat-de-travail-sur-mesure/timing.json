@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.15,
-   "slot": 8.45,
+   "dur": 5.157,
+   "slot": 5.457,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.15,
-   "dur": 8.87,
-   "slot": 9.17,
+   "start": 5.157,
+   "dur": 5.805,
+   "slot": 6.105,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.02,
-   "dur": 13.05,
-   "slot": 13.35,
+   "start": 10.962,
+   "dur": 9.111,
+   "slot": 9.411,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 30.07,
-   "dur": 13.75,
-   "slot": 14.05,
+   "start": 20.073,
+   "dur": 8.952,
+   "slot": 9.252,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 43.82,
-   "dur": 7.13,
-   "slot": 7.43,
+   "start": 29.025,
+   "dur": 4.645,
+   "slot": 4.945,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 50.95,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 33.67,
+   "dur": 8.202,
+   "slot": 8.502,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 62.38,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.872,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 75.64,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.922,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 82.58,
+   "start": 55.772,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.15,
+   "t": 5.157,
    "label": "01 · Le problème"
   },
   {
-   "t": 30.07,
+   "t": 20.073,
    "label": "02 · La solution"
   },
   {
-   "t": 75.64,
+   "t": 50.922,
    "label": "03 · Commander"
   },
   {
-   "t": 82.58,
+   "t": 55.772,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 87.58,
- "chromeShow": 8.15,
- "chromeHide": 82.58,
+ "total": 60.772,
+ "chromeShow": 5.157,
+ "chromeHide": 55.772,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.45,
+   "start": 0.31,
+   "end": 4.737,
    "text": "Contrat de travail : vous engagez quelqu’un et vous voulez un contrat qui protège vraiment l’entreprise ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.7,
-   "end": 16.32,
+   "start": 5.467,
+   "end": 10.542,
    "text": "Un contrat mal rédigé, et ce sont les heures supplémentaires, les vacances ou la concurrence qui deviennent des litiges.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 17.57,
-   "end": 29.37,
+   "start": 11.272,
+   "end": 19.653,
    "text": "Attention : certaines clauses ne valent que par écrit, comme l’exclusion des heures supplémentaires ou la non-concurrence. Et une convention collective étendue s’applique, même sans adhésion.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 30.62,
-   "end": 43.12,
+   "start": 20.383,
+   "end": 28.605,
    "text": "On vérifie la convention collective applicable, puis on rédige un contrat complet pour le poste, avec les clauses écrites indispensables : heures supplémentaires, non-concurrence et confidentialité.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 44.37,
-   "end": 50.25,
+   "start": 29.335,
+   "end": 33.25,
    "text": "Un tour de corrections est inclus, et on peut prévoir un modèle pour plusieurs postes similaires.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 51.5,
-   "end": 61.68,
+   "start": 33.98,
+   "end": 41.452,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre contrat, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 62.93,
-   "end": 74.94,
+   "start": 42.182,
+   "end": 50.502,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 76.19,
-   "end": 81.88,
+   "start": 51.232,
+   "end": 55.352,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.65,
-   "slot": 7.95,
+   "dur": 5.782,
+   "slot": 6.082,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.65,
-   "dur": 8.15,
-   "slot": 8.45,
+   "start": 5.782,
+   "dur": 5.99,
+   "slot": 6.29,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.8,
-   "dur": 12.18,
-   "slot": 12.48,
+   "start": 11.772,
+   "dur": 8.407,
+   "slot": 8.707,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 27.98,
-   "dur": 14.44,
-   "slot": 14.74,
+   "start": 20.179,
+   "dur": 8.452,
+   "slot": 8.752,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 42.42,
-   "dur": 6.55,
-   "slot": 6.85,
+   "start": 28.631,
+   "dur": 4.327,
+   "slot": 4.627,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 48.97,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 32.958,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 60.21,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 40.981,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 73.47,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.031,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 80.41,
+   "start": 54.881,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.65,
+   "t": 5.782,
    "label": "01 · Le problème"
   },
   {
-   "t": 27.98,
+   "t": 20.179,
    "label": "02 · La solution"
   },
   {
-   "t": 73.47,
+   "t": 50.031,
    "label": "03 · Commander"
   },
   {
-   "t": 80.41,
+   "t": 54.881,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 85.41,
- "chromeShow": 7.65,
- "chromeHide": 80.41,
+ "total": 59.881,
+ "chromeShow": 5.782,
+ "chromeHide": 54.881,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.95,
+   "start": 0.31,
+   "end": 5.362,
    "text": "Contester une facture : une prestation jamais commandée, un montant gonflé, des frais surprises ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.2,
-   "end": 15.1,
+   "start": 6.092,
+   "end": 11.352,
    "text": "Attention : payer « pour avoir la paix » vaut souvent reconnaissance. Réfléchissez avant de payer.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.35,
-   "end": 27.28,
+   "start": 12.082,
+   "end": 19.759,
    "text": "Et si l’entreprise vous met aux poursuites, vous avez dix jours dès le commandement de payer pour faire opposition. Payez la partie non contestée : cela montre votre bonne foi.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 28.53,
-   "end": 41.72,
+   "start": 20.489,
+   "end": 28.211,
    "text": "On analyse la facture et ce qui a été convenu, on rédige une lettre de contestation motivée, avec le montant reconnu, et on vous donne la marche à suivre en cas de rappel ou de poursuite.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 42.97,
-   "end": 48.27,
+   "start": 28.941,
+   "end": 32.538,
    "text": "Votre lettre explique pourquoi vous ne devez pas ce montant. Elle est prête à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 49.52,
-   "end": 59.51,
+   "start": 33.268,
+   "end": 40.561,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 60.76,
-   "end": 72.77,
+   "start": 41.291,
+   "end": 49.611,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 74.02,
-   "end": 79.71,
+   "start": 50.341,
+   "end": 54.461,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -32,73 +32,73 @@
   "baisse-de-loyer": {
    "kind": "service",
    "site_key": "particuliers/baisse-de-loyer",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "certificat-de-travail-employeur": {
    "kind": "service",
    "site_key": "entreprises/certificat-de-travail-employeur",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "cgv-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/cgv-sur-mesure",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contestation-conge": {
    "kind": "service",
    "site_key": "particuliers/contestation-conge",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contestation-loyer-initial": {
    "kind": "service",
    "site_key": "particuliers/contestation-loyer-initial",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contester-une-facture": {
    "kind": "service",
    "site_key": "particuliers/contester-une-facture",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contrat-commercial-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/contrat-commercial-sur-mesure",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contrat-de-mandat-independant": {
    "kind": "service",
    "site_key": "entreprises/contrat-de-mandat-independant",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contrat-de-travail-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/contrat-de-travail-sur-mesure",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "convention-d-actionnaires": {
    "kind": "service",
    "site_key": "entreprises/convention-d-actionnaires",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "convention-de-concubinage": {
    "kind": "service",
    "site_key": "particuliers/convention-de-concubinage",
-   "status": "todo",
+   "status": "rendering",
    "youtube_id": null
   },
   "decompte-de-charges": {
    "kind": "service",
    "site_key": "particuliers/decompte-de-charges",
-   "status": "todo",
+   "status": "rendering",
    "youtube_id": null
   },
   "defaut-logement": {

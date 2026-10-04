@@ -54,7 +54,7 @@ python3 engine/thumb.py "$WK" "$SPEC" >/dev/null || die "miniature html"
 node engine/shot.mjs "$WK/thumb.html" "$OUT/miniature.png" || die "miniature png"
 cp "$WK/feuille-de-calage.md" "$WK/youtube.md" "$WK/transcription-youtube.txt" "$OUT/"
 # Contrôles finaux
-ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$BIN/$slug.mp4" | grep -q video || die "MP4 sans image"
+streams=$(ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$BIN/$slug.mp4"); [[ "$streams" == *video* ]] || die "MP4 sans image"  # pas de grep -q : avec pipefail, il casse le tube (SIGPIPE)
 mp4dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$BIN/$slug.mp4")
 cp "$WK/assets/timing.json" "$OUT/timing.json"
 rm -rf "$WK"  # libère le disque (le rendu brut pèse plusieurs centaines de Mo)

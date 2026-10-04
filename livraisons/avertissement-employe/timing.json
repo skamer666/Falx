@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.49,
-   "slot": 7.79,
+   "dur": 5.43,
+   "slot": 5.73,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.49,
-   "dur": 7.9,
-   "slot": 8.2,
+   "start": 5.43,
+   "dur": 5.234,
+   "slot": 5.534,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.39,
-   "dur": 9.55,
-   "slot": 9.85,
+   "start": 10.664,
+   "dur": 6.157,
+   "slot": 6.457,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 24.94,
-   "dur": 7.58,
-   "slot": 7.88,
+   "start": 16.821,
+   "dur": 5.055,
+   "slot": 5.355,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 32.52,
-   "dur": 9.59,
-   "slot": 9.89,
+   "start": 21.876,
+   "dur": 6.891,
+   "slot": 7.191,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 42.11,
-   "dur": 12.0,
-   "slot": 12.3,
+   "start": 28.767,
+   "dur": 8.305,
+   "slot": 8.605,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 54.11,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 37.072,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 67.37,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 46.122,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 74.31,
+   "start": 50.972,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.49,
+   "t": 5.43,
    "label": "01 · Le problème"
   },
   {
-   "t": 24.94,
+   "t": 16.821,
    "label": "02 · La solution"
   },
   {
-   "t": 67.37,
+   "t": 46.122,
    "label": "03 · Commander"
   },
   {
-   "t": 74.31,
+   "t": 50.972,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 79.31,
- "chromeShow": 7.49,
- "chromeHide": 74.31,
+ "total": 55.972,
+ "chromeShow": 5.43,
+ "chromeHide": 50.972,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.79,
+   "start": 0.31,
+   "end": 5.01,
    "text": "Avertissement écrit : retards répétés, comportement inadéquat, consignes ignorées ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.04,
-   "end": 14.69,
+   "start": 5.74,
+   "end": 10.244,
    "text": "Un avertissement oral ne laisse aucune trace. Et un écrit vague ne tient pas en cas de litige.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.94,
-   "end": 24.24,
+   "start": 10.974,
+   "end": 16.401,
    "text": "Pour un manquement de gravité moyenne, un licenciement immédiat suppose en principe un avertissement préalable resté sans effet.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 25.49,
-   "end": 31.82,
+   "start": 17.131,
+   "end": 21.456,
    "text": "On décrit les manquements de façon factuelle, on fixe des attentes claires et on annonce les conséquences.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 33.07,
-   "end": 41.41,
+   "start": 22.186,
+   "end": 28.347,
    "text": "Il est prêt à remettre, à votre en-tête. Pour garder une preuve, faites-le signer pour réception, ou remettez-le devant témoin.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 42.66,
-   "end": 53.41,
+   "start": 29.077,
+   "end": 36.652,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre avertissement, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 54.66,
-   "end": 66.67,
+   "start": 37.382,
+   "end": 45.702,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 67.92,
-   "end": 73.61,
+   "start": 46.432,
+   "end": 50.552,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

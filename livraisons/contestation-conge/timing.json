@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.92,
-   "slot": 10.22,
+   "dur": 5.884,
+   "slot": 6.184,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.92,
-   "dur": 5.78,
-   "slot": 6.08,
+   "start": 5.884,
+   "dur": 4.272,
+   "slot": 4.572,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.7,
-   "dur": 13.0,
-   "slot": 13.3,
+   "start": 10.156,
+   "dur": 8.366,
+   "slot": 8.666,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 28.7,
-   "dur": 12.62,
-   "slot": 12.92,
+   "start": 18.522,
+   "dur": 7.941,
+   "slot": 8.241,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 41.32,
-   "dur": 13.56,
-   "slot": 13.86,
+   "start": 26.463,
+   "dur": 8.778,
+   "slot": 9.078,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 54.88,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 35.241,
+   "dur": 8.192,
+   "slot": 8.492,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 66.31,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 43.433,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 79.57,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 52.483,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 86.51,
+   "start": 57.333,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.92,
+   "t": 5.884,
    "label": "01 · Le problème"
   },
   {
-   "t": 28.7,
+   "t": 18.522,
    "label": "02 · La solution"
   },
   {
-   "t": 79.57,
+   "t": 52.483,
    "label": "03 · Commander"
   },
   {
-   "t": 86.51,
+   "t": 57.333,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 91.51,
- "chromeShow": 9.92,
- "chromeHide": 86.51,
+ "total": 62.333,
+ "chromeShow": 5.884,
+ "chromeHide": 57.333,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.22,
+   "start": 0.31,
+   "end": 5.464,
    "text": "Contester un congé : vous avez reçu la résiliation de votre bail, et vous voulez rester, ou au moins gagner du temps ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.47,
-   "end": 15.0,
+   "start": 6.194,
+   "end": 9.736,
    "text": "Attention : le délai pour agir est très court. Chaque jour compte.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.25,
-   "end": 28.0,
+   "start": 10.466,
+   "end": 18.102,
    "text": "Trois règles : vous avez trente jours dès la réception du congé. Un congé donné sans formule officielle est nul. Et la prolongation peut atteindre quatre ans pour un logement.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 29.25,
-   "end": 40.62,
+   "start": 18.832,
+   "end": 26.043,
    "text": "On vérifie la validité formelle du congé, on analyse ses motifs, et on rédige la requête en annulation, en prolongation, ou les deux, prête à déposer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 41.87,
-   "end": 54.18,
+   "start": 26.773,
+   "end": 34.821,
    "text": "Même si le congé est valable, une prolongation peut souvent être accordée si le départ entraîne des conséquences pénibles. Vous déposez la requête vous-même, à l’autorité de conciliation.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 55.43,
-   "end": 65.61,
+   "start": 35.551,
+   "end": 43.013,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre requête, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 66.86,
-   "end": 78.87,
+   "start": 43.743,
+   "end": 52.063,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 80.12,
-   "end": 85.81,
+   "start": 52.793,
+   "end": 56.913,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

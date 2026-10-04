@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 6.74,
-   "slot": 7.04,
+   "dur": 4.43,
+   "slot": 4.73,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 6.74,
-   "dur": 9.59,
-   "slot": 9.89,
+   "start": 4.43,
+   "dur": 6.747,
+   "slot": 7.047,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 16.33,
-   "dur": 9.01,
-   "slot": 9.31,
+   "start": 11.177,
+   "dur": 5.816,
+   "slot": 6.116,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.34,
-   "dur": 9.24,
-   "slot": 9.54,
+   "start": 16.993,
+   "dur": 5.748,
+   "slot": 6.048,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 34.58,
-   "dur": 7.26,
-   "slot": 7.56,
+   "start": 22.741,
+   "dur": 5.35,
+   "slot": 5.65,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 41.84,
-   "dur": 11.62,
-   "slot": 11.92,
+   "start": 28.091,
+   "dur": 8.202,
+   "slot": 8.502,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 53.46,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 36.293,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 66.72,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 45.343,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 73.66,
+   "start": 50.193,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 6.74,
+   "t": 4.43,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.34,
+   "t": 16.993,
    "label": "02 · La solution"
   },
   {
-   "t": 66.72,
+   "t": 45.343,
    "label": "03 · Commander"
   },
   {
-   "t": 73.66,
+   "t": 50.193,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 78.66,
- "chromeShow": 6.74,
- "chromeHide": 73.66,
+ "total": 55.193,
+ "chromeShow": 4.43,
+ "chromeHide": 50.193,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.04,
+   "start": 0.31,
+   "end": 4.01,
    "text": "Appel juridique : vous préférez en parler, par téléphone ou en visio ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 7.29,
-   "end": 15.63,
+   "start": 4.74,
+   "end": 10.757,
    "text": "Face à un problème juridique, le plus dur, c’est souvent de savoir par où commencer. Et surtout, quels délais respecter.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.88,
-   "end": 24.64,
+   "start": 11.487,
+   "end": 16.573,
    "text": "Vous exposez votre situation. On vous dit ce que vous pouvez faire, dans quels délais, et ce qu’il faut éviter.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 25.89,
-   "end": 33.88,
+   "start": 17.303,
+   "end": 22.321,
    "text": "L’appel est préparé à partir de votre description écrite, et vous recevez ensuite un résumé écrit des prochaines étapes.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 35.13,
-   "end": 41.14,
+   "start": 23.051,
+   "end": 27.671,
    "text": "Et si votre situation demande plus, le résumé indique la prestation adaptée, à prix fixe.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 42.39,
-   "end": 52.76,
+   "start": 28.401,
+   "end": 35.873,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre résumé, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 54.01,
-   "end": 66.02,
+   "start": 36.603,
+   "end": 44.923,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 67.27,
-   "end": 72.96,
+   "start": 45.653,
+   "end": 49.773,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }
