@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Schibsted Grotesk"; font-weight: 400 900; src: url("assets/fonts/schibsted-grotesk-1789676e.woff2") format("woff2"); }
+        #ch-root { position: absolute; inset: 0; pointer-events: none; font-family: "Schibsted Grotesk", sans-serif; color: #f5f5f7; }
+        #ch-brand { position: absolute; left: 120px; top: 62px; display: flex; align-items: center; gap: 14px; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+        #ch-brand img { width: 34px; height: 36px; object-fit: contain; }
+        #ch-brand span { color: rgba(245, 245, 247, 0.5); }
+        .ch-sec { position: absolute; right: 120px; top: 66px; font-size: 18px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245, 245, 247, 0.5); white-space: nowrap; }
+      </style>
+      <div id="root" data-composition-id="chrome" data-width="1920" data-height="1080">
+        <div id="ch-root">
+          <div id="ch-brand"><img src="assets/img/crest-alpha.png" alt=""><div>Thrax <span>Legal</span></div></div>
+          <div id="ch-secs"></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const T = window.TIMING;
+          const rootEl = document.getElementById("ch-root");
+          const holder = document.getElementById("ch-secs");
+          const secs = T.chrome.map((c, i) => {
+            const el = document.createElement("div");
+            el.className = "ch-sec";
+            el.textContent = c.label;
+            holder.appendChild(el);
+            const next = T.chrome[i + 1] ? T.chrome[i + 1].t : 1e9;
+            return { el, a: c.t, b: next };
+          });
+          const render = (t) => {
+            const vis = TX.p(t, T.chromeShow + 0.2, T.chromeShow + 0.8) * (1 - TX.p(t, T.chromeHide - 0.1, T.chromeHide + 0.3));
+            rootEl.style.opacity = vis;
+            secs.forEach((s) => {
+              const o = TX.p(t, s.a + 0.1, s.a + 0.5) * (1 - TX.p(t, s.b - 0.1, s.b + 0.2));
+              s.el.style.opacity = o;
+              s.el.style.transform = `translate3d(0, ${10 * (1 - TX.ease.outCubic(TX.p(t, s.a + 0.1, s.a + 0.6)))}px, 0)`;
+            });
+          };
+          const clock = { t: 0 };
+          const tl = gsap.timeline({ paused: true });
+          tl.to(clock, { t: T.total, duration: T.total, ease: "none" }, 0);
+          tl.eventCallback("onUpdate", () => render(clock.t));
+          render(0);
+          window.__timelines["chrome"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

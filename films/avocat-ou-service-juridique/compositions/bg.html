@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <template>
+      <style>
+        #bg-root { position: absolute; inset: 0; overflow: hidden; }
+        #bg-fill { position: absolute; inset: 0; background: #0a0a0b; }
+        #bg-grid {
+          position: absolute; left: -200px; top: -200px; width: 2320px; height: 1480px;
+          background-image:
+            linear-gradient(to right, rgba(245, 245, 247, 1) 0 1px, transparent 1px 100%),
+            linear-gradient(to bottom, rgba(245, 245, 247, 1) 0 1px, transparent 1px 100%);
+          background-size: 96px 96px; opacity: 0.045;
+        }
+        #bg-rings { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+        #bg-rings ellipse { fill: none; stroke: rgba(245, 245, 247, 0.07); stroke-width: 1.5; }
+        #bg-rings .beam { stroke: rgba(255, 255, 255, 0.5); stroke-width: 2; stroke-linecap: round; }
+        #bg-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse 75% 70% at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.62) 100%); }
+      </style>
+      <div id="root" data-composition-id="bg" data-width="1920" data-height="1080">
+        <div id="bg-root">
+          <div id="bg-fill"></div>
+          <div id="bg-grid"></div>
+          <svg id="bg-rings" viewBox="0 0 1920 1080">
+            <g id="bg-ringA">
+              <ellipse cx="0" cy="0" rx="560" ry="694" />
+              <ellipse cx="0" cy="0" rx="470" ry="582" />
+              <ellipse id="bg-a-beam" class="beam" cx="0" cy="0" rx="560" ry="694" pathLength="1" />
+            </g>
+            <g id="bg-ringB">
+              <ellipse cx="0" cy="0" rx="380" ry="471" />
+              <ellipse id="bg-b-beam" class="beam" cx="0" cy="0" rx="380" ry="471" pathLength="1" />
+            </g>
+          </svg>
+          <div id="bg-vignette"></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const T = window.TIMING;
+          const grid = document.getElementById("bg-grid");
+          const A = document.getElementById("bg-ringA");
+          const B = document.getElementById("bg-ringB");
+          const bA = document.getElementById("bg-a-beam");
+          const bB = document.getElementById("bg-b-beam");
+          // Each scene start nudges the grid one step: a slow parallax that marks every cut.
+          const starts = Object.values(T.scenes).map((s) => s.start);
+          const render = (t) => {
+            let shift = 0;
+            starts.forEach((s, i) => { shift += 96 * TX.ease.inOutCubic(TX.p(t, s - 0.25, s + 0.55)) * (i % 2 ? 1 : 0.5); });
+            grid.style.transform = `translate3d(${-(shift % 96) - 0}px, ${-((shift * 0.5) % 96)}px, 0)`;
+            A.setAttribute("transform", `translate(${1500 + 220 * Math.sin(t * 0.07)}, ${300 + 160 * Math.cos(t * 0.05)}) rotate(${t * 2.2})`);
+            B.setAttribute("transform", `translate(${360 + 180 * Math.cos(t * 0.06)}, ${860 + 120 * Math.sin(t * 0.08)}) rotate(${-t * 3})`);
+            TX.beam(bA, t * 0.045, 0.12);
+            TX.beam(bB, -t * 0.06 + 0.4, 0.1);
+          };
+          const clock = { t: 0 };
+          const tl = gsap.timeline({ paused: true });
+          tl.to(clock, { t: T.total, duration: T.total, ease: "none" }, 0);
+          tl.eventCallback("onUpdate", () => render(clock.t));
+          render(0);
+          window.__timelines["bg"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

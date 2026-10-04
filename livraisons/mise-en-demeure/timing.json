@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.61,
-   "slot": 9.91,
+   "dur": 6.202,
+   "slot": 6.502,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.61,
-   "dur": 5.84,
-   "slot": 6.14,
+   "start": 6.202,
+   "dur": 4.15,
+   "slot": 4.45,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.45,
-   "dur": 13.04,
-   "slot": 13.34,
+   "start": 10.352,
+   "dur": 8.27,
+   "slot": 8.57,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 28.49,
-   "dur": 8.77,
-   "slot": 9.07,
+   "start": 18.622,
+   "dur": 5.623,
+   "slot": 5.923,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 37.26,
-   "dur": 10.78,
-   "slot": 11.08,
+   "start": 24.245,
+   "dur": 7.157,
+   "slot": 7.457,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 48.04,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 31.402,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 59.28,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 39.425,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 72.54,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 48.475,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 79.48,
+   "start": 53.325,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.61,
+   "t": 6.202,
    "label": "01 · Le problème"
   },
   {
-   "t": 28.49,
+   "t": 18.622,
    "label": "02 · La solution"
   },
   {
-   "t": 72.54,
+   "t": 48.475,
    "label": "03 · Commander"
   },
   {
-   "t": 79.48,
+   "t": 53.325,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 84.48,
- "chromeShow": 9.61,
- "chromeHide": 79.48,
+ "total": 58.325,
+ "chromeShow": 6.202,
+ "chromeHide": 53.325,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.91,
+   "start": 0.31,
+   "end": 5.782,
    "text": "Un client qui ne paie pas, un fournisseur qui ne livre pas, un locataire en retard, un partenaire qui ne tient pas parole ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.16,
-   "end": 14.75,
+   "start": 6.512,
+   "end": 9.932,
    "text": "Les relances polies ne suffisent plus. Et chaque semaine qui passe vous coûte.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.0,
-   "end": 27.79,
+   "start": 10.662,
+   "end": 18.202,
    "text": "La mise en demeure est l’étape clé : pour une somme d’argent, elle fait courir un intérêt de cinq pour cent par an. Pour une prestation, elle ouvre le droit de résoudre le contrat.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 29.04,
-   "end": 36.56,
+   "start": 18.932,
+   "end": 23.825,
    "text": "Une bonne mise en demeure dit précisément ce qui est dû, fixe un délai clair, et annonce la suite si rien ne bouge.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 37.81,
-   "end": 47.34,
+   "start": 24.555,
+   "end": 30.982,
    "text": "Chez Thrax Legal, on vérifie vos droits et vos pièces, on calcule les intérêts, et on rédige la mise en demeure à votre en-tête, prête à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 48.59,
-   "end": 58.58,
+   "start": 31.712,
+   "end": 39.005,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 59.83,
-   "end": 71.84,
+   "start": 39.735,
+   "end": 48.055,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 73.09,
-   "end": 78.78,
+   "start": 48.785,
+   "end": 52.905,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

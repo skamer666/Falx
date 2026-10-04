@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("assets/fonts/schibsted-grotesk-1789676e.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 400 900;
+  src: url("assets/fonts/schibsted-grotesk-8ba7d713.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0a0a0b; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; font-family: "Schibsted Grotesk", sans-serif; color: #f5f5f7; background: #0a0a0b; }
+.txw { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.06em 0.02em 0.14em; margin: -0.06em -0.02em -0.14em; }
+.txwi, .txc { display: inline-block; will-change: transform; }
+
+.scn { position: absolute; inset: 0; font-family: "Schibsted Grotesk", sans-serif; color: #f5f5f7; }
+.cam { position: absolute; inset: 0; transform-origin: 50% 52%; }
+.ab { position: absolute; }
+.c { text-align: center; }
+
+.kick { font-size: 20px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(245, 245, 247, 0.5); }
+.h0 { font-size: 132px; font-weight: 600; letter-spacing: -0.045em; line-height: 0.98; }
+.h1 { font-size: 88px; font-weight: 600; letter-spacing: -0.035em; line-height: 1.04; }
+.h2 { font-size: 64px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; }
+.h3 { font-size: 44px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; }
+.h4 { font-size: 32px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+.p { font-size: 28px; font-weight: 400; line-height: 1.4; color: rgba(245, 245, 247, 0.62); }
+.sm { font-size: 22px; font-weight: 500; line-height: 1.35; color: rgba(245, 245, 247, 0.55); }
+.mute { color: rgba(245, 245, 247, 0.42); }
+.soft { color: rgba(245, 245, 247, 0.7); }
+
+.card {
+  border-radius: 26px;
+  background: linear-gradient(180deg, #17171a 0%, #111113 100%);
+  border: 1px solid rgba(245, 245, 247, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.card.hi { border-color: rgba(245, 245, 247, 0.55); box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(245, 245, 247, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+.inv { background: #f5f5f7; color: #0a0a0b; border-color: #f5f5f7; }
+.chip {
+  display: inline-flex; align-items: center; gap: 14px; white-space: nowrap;
+  padding: 14px 26px; border-radius: 999px; font-size: 26px; font-weight: 600;
+  border: 1px solid rgba(245, 245, 247, 0.22); background: rgba(23, 23, 26, 0.92);
+}
+.chip.inv { background: #f5f5f7; color: #0a0a0b; }
+.ico {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 72px; height: 72px; border-radius: 20px;
+  border: 1px solid rgba(245, 245, 247, 0.18); background: rgba(245, 245, 247, 0.05);
+}
+.ico svg, .ic { fill: none; stroke: #f5f5f7; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ico.inv { background: #f5f5f7; }
+.ico.inv svg { stroke: #0a0a0b; }
+.num { font-size: 22px; font-weight: 700; letter-spacing: 0.12em; color: rgba(245, 245, 247, 0.45); }
+.rule { height: 1px; background: rgba(245, 245, 247, 0.16); transform-origin: 0 50%; }
+.line { height: 14px; border-radius: 7px; background: rgba(245, 245, 247, 0.13); transform-origin: 0 50%; }
+.row { display: flex; align-items: center; gap: 22px; }
+.chk { width: 44px; height: 44px; flex: none; border-radius: 12px; border: 1.5px solid rgba(245, 245, 247, 0.35); display: flex; align-items: center; justify-content: center; }
+.chk svg { width: 30px; height: 30px; fill: none; stroke: #f5f5f7; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.stampbox {
+  display: inline-block; padding: 10px 22px; border: 3px solid #f5f5f7; border-radius: 10px;
+  font-size: 30px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #f5f5f7;
+}
+.big-outline { font-size: 300px; font-weight: 700; letter-spacing: -0.05em; line-height: 0.8; color: transparent; -webkit-text-stroke: 2px rgba(245, 245, 247, 0.28); }
+.cursor { width: 44px; height: 44px; }
+.cursor svg { width: 44px; height: 44px; fill: #f5f5f7; stroke: #0a0a0b; stroke-width: 1.5; }
+.field { height: 64px; border-radius: 14px; border: 1px solid rgba(245, 245, 247, 0.16); background: rgba(245, 245, 247, 0.03); display: flex; align-items: center; padding: 0 22px; font-size: 24px; color: rgba(245, 245, 247, 0.85); }
+.flabel { font-size: 18px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245, 245, 247, 0.45); margin-bottom: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 68px; padding: 0 36px; border-radius: 999px; background: #f5f5f7; color: #0a0a0b; font-size: 26px; font-weight: 700; }
+.tcell { position: absolute; display: flex; align-items: center; font-size: 30px; font-weight: 500; line-height: 1.25; }
+.price { font-size: 96px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }

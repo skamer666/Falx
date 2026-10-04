@@ -5,36 +5,16 @@ import os
 import re
 import sys
 
-import importlib.util
-import shutil
-
-SHARED = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, SHARED)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import kit  # noqa: E402
 from kit import Ctx  # noqa: E402
-import tpl  # noqa: E402
+from scenes import SCENES  # noqa: E402
 
-ROOT = os.path.abspath(sys.argv[1])
-_spec = importlib.util.spec_from_file_location("spec", os.path.abspath(sys.argv[2]))
-SPEC = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(SPEC)
-SCENES = tpl.SCENES
-META = SPEC.META
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VO_DIR = os.path.join(ROOT, "assets", "vo")
 if os.path.exists(os.path.join(VO_DIR, "times.json")):
     kit.VOICE.update(json.load(open(os.path.join(VO_DIR, "times.json"))))
-
-
-def sync_shared():
-    """Copy the shared runtime into the project (renders only read files inside it)."""
-    for d in ("fonts", "vendor", "img"):
-        shutil.copytree(os.path.join(SHARED, d), os.path.join(ROOT, "assets", d), dirs_exist_ok=True)
-    for f in ("lib.js", "engine.js"):
-        shutil.copy(os.path.join(SHARED, f), os.path.join(ROOT, "assets", f))
-    os.makedirs(os.path.join(ROOT, "compositions"), exist_ok=True)
-    for f in ("bg.html", "chrome.html"):
-        shutil.copy(os.path.join(SHARED, f), os.path.join(ROOT, "compositions", f))
-OV = 0.3  # crossfade overlap between consecutive scenes
+OV = 0.45  # crossfade overlap between consecutive scenes
 W, H = 1920, 1080
 
 
@@ -43,8 +23,24 @@ def tc(t):
     return f"{int(m)}:{s:05.2f}"
 
 
+def write_voice(built, total):
+    """Lay every scene's take at its scene start + VLEAD into one voice track."""
+    import numpy as np
+    import soundfile as sf
+    sr = 48000
+    track = np.zeros(int((total + 0.5) * sr), dtype=np.float32)
+    for sid, sc, c, html, start, dur, slot in built:
+        if not c.voiced:
+            continue
+        y, _ = sf.read(os.path.join(VO_DIR, kit.VOICE[sc["vo"]]["file"]), dtype="float32")
+        i = int(round((start + kit.VLEAD) * sr))
+        n = min(len(y), len(track) - i)
+        track[i:i + n] += y[:n]
+    os.makedirs(os.path.join(ROOT, "assets/audio"), exist_ok=True)
+    sf.write(os.path.join(ROOT, "assets/audio/vo.wav"), np.stack([track, track], 1), sr, subtype="PCM_16")
+
+
 def main():
-    sync_shared()
     timing = {"scenes": {}, "chrome": [], "overlap": OV}
     cursor = 0.0
     built = []
@@ -53,13 +49,6 @@ def main():
         c = Ctx(sc["vo"]) if sc["vo"] else Ctx("")
         dur = sc["dur"] or round(c.end + (kit.VTAIL if c.voiced else 0.7), 3)
         html = sc["build"](c)
-        # Never leave a scene empty while the voice reaches its first anchor: the earliest
-        # element(s) appear right away (text may lead the voice, never lag behind an empty frame).
-        ats = [float(x) for x in re.findall(r'data-at="([\d.]+)"', html)]
-        if ats and c.words:
-            first = min(ats)
-            if first > c.times[0] + 0.5:
-                html = html.replace(f'data-at="{first}"', f'data-at="{round(c.times[0] + 0.05, 3)}"')
         last = i == len(SCENES) - 1
         slot = dur if last else dur + OV
         timing["scenes"][sid] = {"index": i, "start": round(cursor, 4), "dur": dur, "slot": round(slot, 4), "last": last}
@@ -74,7 +63,7 @@ def main():
         if sc["section"] != sec:
             sec = sc["section"]
             timing["chrome"].append({"t": timing["scenes"][sid]["start"], "label": sec or ""})
-    timing["chromeShow"] = timing["scenes"][f"sc{META.get('chrome_from', 2):02d}"]["start"]
+    timing["chromeShow"] = timing["scenes"]["sc05"]["start"]
     timing["chromeHide"] = timing["scenes"][built[-1][0]]["start"]
 
     os.makedirs(os.path.join(ROOT, "compositions/scenes"), exist_ok=True)
@@ -125,7 +114,7 @@ def main():
     open(os.path.join(ROOT, "assets/timing.js"), "w").write("window.TIMING = " + json.dumps(timing, ensure_ascii=False) + ";\n")
 
     # Index.
-    css = open(os.path.join(SHARED, "engine.css")).read()
+    css = open(os.path.join(ROOT, "tools/engine.css")).read()
     hosts = []
     for sid, sc, c, html, start, dur, slot in built:
         tr = 1 + timing["scenes"][sid]["index"] % 2
@@ -170,7 +159,7 @@ def main():
     open(os.path.join(ROOT, "index.html"), "w").write(index)
 
     # Deliverables for the voice-over: cue sheet + plain transcript.
-    lines = [f"# Feuille de calage — « {META['title']} »", "",
+    lines = ["# Feuille de calage — « Avocat ou service juridique externalisé ? »", "",
              f"Durée totale de la vidéo : {tc(total)}", "",
              "Chaque passage commence au timecode indiqué. La « fin visée » est le moment où les animations",
              "du passage sont terminées ; tu peux finir un peu avant, mais évite de déborder sur le passage suivant.", ""]
@@ -184,59 +173,8 @@ def main():
         lines.append("")
     open(os.path.join(ROOT, "feuille-de-calage.md"), "w").write("\n".join(lines))
     open(os.path.join(ROOT, "transcription-youtube.txt"), "w").write("\n\n".join(v["text"] for v in vo) + "\n")
-    write_youtube(timing, total)
     words_n = sum(len(v["text"].split()) for v in vo)
     print(f"{len(built)} scenes, total {tc(total)} ({total:.1f}s), {words_n} words, {len(cues)} sfx cues")
-
-
-def write_voice(built, total):
-    """Lay every scene's take at its scene start + VLEAD into one voice track."""
-    import numpy as np
-    import soundfile as sf
-    sr = 48000
-    track = np.zeros(int((total + 0.5) * sr), dtype=np.float32)
-    for sid, sc, c, html, start, dur, slot in built:
-        if not c.voiced:
-            continue
-        y, _ = sf.read(os.path.join(VO_DIR, kit.VOICE[sc["vo"]]["file"]), dtype="float32")
-        i = int(round((start + kit.VLEAD) * sr))
-        n = min(len(y), len(track) - i)
-        track[i:i + n] += y[:n]
-    os.makedirs(os.path.join(ROOT, "assets/audio"), exist_ok=True)
-    sf.write(os.path.join(ROOT, "assets/audio/vo.wav"), np.stack([track, track], 1), sr, subtype="PCM_16")
-
-
-def write_youtube(timing, total):
-    # YouTube keeps chapters only if the first is 0:00, there are at least 3 and each lasts 10 s or more.
-    marks = [(0, META["chapter0"])]
-    for ch in timing["chrome"]:
-        if ch["label"] and ch["t"] > 1:
-            label = ch["label"].split("·", 1)[-1].strip()
-            if label == marks[-1][1]:
-                continue
-            if ch["t"] - marks[-1][0] < 10:
-                if len(marks) > 1:
-                    marks[-1] = (marks[-1][0], label)
-                continue
-            marks.append((ch["t"], label))
-    if marks and total - marks[-1][0] < 10:
-        marks.pop()
-    chapters = [f"{int(t) // 60}:{int(t) % 60:02d} {label}" for t, label in marks] if len(marks) >= 3 else []
-    links = META.get("links") or [("Le guide complet", META["guide_url"]),
-                                  ("Être rappelé gratuitement", "https://thrax-legal.ch/fr/contact")]
-    footer = META.get("footer") or ("Thrax Legal, service juridique externalisé à prix fixe pour les indépendants et les PME de Suisse romande. "
-                                    "Thrax Legal n’est pas une étude d’avocats et ne représente pas ses clients devant les tribunaux.")
-    md = [f"# YouTube — « {META['title']} »", "", "## Titre", META["yt_title"], "", "## Description", "",
-          META["yt_intro"], "",
-          *[f"👉 {label} : {url}" for label, url in links], "",
-          *(["Chapitres", *chapters, ""] if chapters else []),
-          footer,
-          "Informations générales : cette vidéo ne remplace pas un conseil adapté à votre situation.", "",
-          "## Tags", ", ".join(META["tags"]), "",
-          "## Réglages", "- Langue : français. Sous-titres : importer `transcription-youtube.txt` (synchronisation automatique).",
-          "- Écran de fin (dernières secondes) : vidéo « Avocat ou service juridique externalisé ? » + bouton S’abonner.",
-          f"- Fiche info : ajouter le lien « {links[0][0]} ».", f"- Durée : {tc(total)}"]
-    open(os.path.join(ROOT, "youtube.md"), "w").write("\n".join(md) + "\n")
 
 
 if __name__ == "__main__":

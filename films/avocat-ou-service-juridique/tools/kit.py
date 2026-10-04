@@ -5,7 +5,7 @@ LEAD = 0.55  # silence before the first word of a scene
 TAIL = 0.7  # breathing room after the last word
 VLEAD = 0.28  # with a recorded voice: silence before the first word of a scene
 VTAIL = 0.42  # with a recorded voice: breathing room after the last word
-VOICE = {}  # vo text -> real word times (engine/voice.py), filled by build.py when a voice exists
+VOICE = {}  # vo text -> real word times (voice.py), filled by build.py when a voice exists
 VOWELS = re.compile(r"[aeiouyàâäéèêëîïôöùûüœæ]+", re.I)
 
 
@@ -91,7 +91,7 @@ def box(inner, x, y, w=None, h=None, cls="", fx="rise", at=-1, style="", **kw):
     return f'<div class="ab {cls}" style="{st}{style}" {a}>{inner}</div>'
 
 
-def words(text, x, y, w=None, cls="h1", at=0.0, st=0.035, align="left", style="", **kw):
+def words(text, x, y, w=None, cls="h1", at=0.0, st=0.055, align="left", style="", **kw):
     s = f"left:{x}px;top:{y}px;" + (f"width:{w}px;" if w else "") + f"text-align:{align};" + style
     return f'<div class="ab {cls}" style="{s}" {attrs(fx="words", at=at, st=st, **kw)}>{text}</div>'
 
