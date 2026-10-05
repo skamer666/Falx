@@ -25,33 +25,38 @@
   "avertissement-employe": {
    "kind": "service",
    "site_key": "entreprises/avertissement-employe",
-   "status": "rendered",
-   "youtube_id": null,
-   "note": "upload refusé par Zapier (throttled) le 4 oct. 18:40 UTC ; MP4 déjà sur reels-media"
+   "status": "on_site",
+   "youtube_id": "YHjeUrZcBbo",
+   "note": "uploadé via Metricool le 5 oct. (Zapier throttled)"
   },
   "baisse-de-loyer": {
    "kind": "service",
    "site_key": "particuliers/baisse-de-loyer",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "W7QPmAKYhV4",
+   "metricool_post": 388366278,
+   "note": "uploadé via Metricool le 5 oct."
   },
   "certificat-de-travail-employeur": {
    "kind": "service",
    "site_key": "entreprises/certificat-de-travail-employeur",
    "status": "rendered",
-   "youtube_id": null
+   "youtube_id": null,
+   "note": "Metricool 5 oct. 11:52/11:56 : « You have reached your Metricool account limit. »"
   },
   "cgv-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/cgv-sur-mesure",
    "status": "rendered",
-   "youtube_id": null
+   "youtube_id": null,
+   "note": "Metricool 5 oct. 11:52/11:56 : « You have reached your Metricool account limit. »"
   },
   "contestation-conge": {
    "kind": "service",
    "site_key": "particuliers/contestation-conge",
    "status": "rendered",
-   "youtube_id": null
+   "youtube_id": null,
+   "metricool_post": 388366503
   },
   "contestation-loyer-initial": {
    "kind": "service",
