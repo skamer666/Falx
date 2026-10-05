@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.68,
-   "slot": 8.98,
+   "dur": 5.85,
+   "slot": 6.15,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.68,
-   "dur": 7.25,
-   "slot": 7.55,
+   "start": 5.85,
+   "dur": 5.355,
+   "slot": 5.655,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.93,
-   "dur": 10.61,
-   "slot": 10.91,
+   "start": 11.205,
+   "dur": 6.918,
+   "slot": 7.218,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 26.54,
-   "dur": 10.41,
-   "slot": 10.71,
+   "start": 18.123,
+   "dur": 6.77,
+   "slot": 7.07,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 36.95,
-   "dur": 13.0,
-   "slot": 13.3,
+   "start": 24.893,
+   "dur": 8.259,
+   "slot": 8.559,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 49.95,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 33.152,
+   "dur": 7.93,
+   "slot": 8.23,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 61.19,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.082,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 74.45,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.132,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 81.39,
+   "start": 54.982,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.68,
+   "t": 5.85,
    "label": "01 · Le problème"
   },
   {
-   "t": 26.54,
+   "t": 18.123,
    "label": "02 · La solution"
   },
   {
-   "t": 74.45,
+   "t": 50.132,
    "label": "03 · Commander"
   },
   {
-   "t": 81.39,
+   "t": 54.982,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 86.39,
- "chromeShow": 8.68,
- "chromeHide": 81.39,
+ "total": 59.982,
+ "chromeShow": 5.85,
+ "chromeHide": 54.982,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.98,
+   "start": 0.31,
+   "end": 5.43,
    "text": "Résiliation anticipée du bail : vous devez déménager avant l’échéance, sans payer des mois de loyer pour rien ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.23,
-   "end": 15.23,
+   "start": 6.16,
+   "end": 10.785,
    "text": "Sans démarche correcte, le loyer continue de courir jusqu’à l’échéance. Parfois pendant des mois.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.48,
-   "end": 25.84,
+   "start": 11.515,
+   "end": 17.703,
    "text": "La solution : présenter un locataire de remplacement solvable, acceptable pour le bailleur, et prêt à reprendre le bail aux mêmes conditions.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 27.09,
-   "end": 36.25,
+   "start": 18.433,
+   "end": 24.473,
    "text": "On calcule l’échéance ordinaire et les délais, on rédige la lettre de résiliation anticipée, et la lettre de présentation de votre candidat.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 37.5,
-   "end": 49.25,
+   "start": 25.203,
+   "end": 32.732,
    "text": "Un seul candidat suffit s’il remplit les conditions. Le bailleur ne peut le refuser que pour de justes motifs. Et pour le logement de la famille, les deux époux signent.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 50.5,
-   "end": 60.49,
+   "start": 33.462,
+   "end": 40.662,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos lettres, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 61.74,
-   "end": 73.75,
+   "start": 41.392,
+   "end": 49.712,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 75.0,
-   "end": 80.69,
+   "start": 50.442,
+   "end": 54.562,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

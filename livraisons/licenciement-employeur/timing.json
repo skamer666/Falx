@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.97,
-   "slot": 8.27,
+   "dur": 5.123,
+   "slot": 5.423,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.97,
-   "dur": 8.15,
-   "slot": 8.45,
+   "start": 5.123,
+   "dur": 5.516,
+   "slot": 5.816,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 16.12,
-   "dur": 8.1,
-   "slot": 8.4,
+   "start": 10.639,
+   "dur": 5.748,
+   "slot": 6.048,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 24.22,
-   "dur": 11.97,
-   "slot": 12.27,
+   "start": 16.387,
+   "dur": 7.259,
+   "slot": 7.559,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 36.19,
-   "dur": 10.55,
-   "slot": 10.85,
+   "start": 23.646,
+   "dur": 7.597,
+   "slot": 7.897,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 46.74,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 31.243,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 57.98,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 39.266,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 71.24,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 48.316,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 78.18,
+   "start": 53.166,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.97,
+   "t": 5.123,
    "label": "01 · Le problème"
   },
   {
-   "t": 24.22,
+   "t": 16.387,
    "label": "02 · La solution"
   },
   {
-   "t": 71.24,
+   "t": 48.316,
    "label": "03 · Commander"
   },
   {
-   "t": 78.18,
+   "t": 53.166,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 83.18,
- "chromeShow": 7.97,
- "chromeHide": 78.18,
+ "total": 58.166,
+ "chromeShow": 5.123,
+ "chromeHide": 53.166,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.27,
+   "start": 0.31,
+   "end": 4.703,
    "text": "Licenciement : vous devez vous séparer d’un employé, et vous voulez que le congé soit conforme ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.52,
-   "end": 15.42,
+   "start": 5.433,
+   "end": 10.219,
    "text": "Un licenciement mal préparé peut être nul. Ou abusif, et coûter jusqu’à six mois de salaire.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.67,
-   "end": 23.52,
+   "start": 10.949,
+   "end": 15.967,
    "text": "Un congé donné pendant une période de protection est nul : maladie, accident, grossesse ou service.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 24.77,
-   "end": 35.49,
+   "start": 16.697,
+   "end": 23.226,
    "text": "On vérifie le délai de congé et la date de fin, on contrôle les périodes de protection, et on rédige la lettre de licenciement avec la motivation écrite.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 36.74,
-   "end": 46.04,
+   "start": 23.956,
+   "end": 30.823,
    "text": "Et les points d’attention : solde de vacances, certificat, assurances. Pour un licenciement immédiat, on évalue le risque avant tout.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 47.29,
-   "end": 57.28,
+   "start": 31.553,
+   "end": 38.846,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 58.53,
-   "end": 70.54,
+   "start": 39.576,
+   "end": 47.896,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 71.79,
-   "end": 77.48,
+   "start": 48.626,
+   "end": 52.746,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

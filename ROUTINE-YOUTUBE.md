@@ -17,6 +17,10 @@ Le registre `youtube-registry.json` fait foi. Statuts : `todo` → `rendered` �
 - Prononciation : les sigles sont épelés via la table `SAY` de `engine/voice.py` (CO, CC, LP, nLPD, CGV, AVS, AI, etc.) et `thrax-legal.ch` est lu « thrax tiret legal point c h ». Ajouter toute nouvelle abréviation à cette table.
 - Ne jamais modifier `produce.sh` ou `queue-voix.sh` pendant qu'ils tournent : bash relit le script en cours d'exécution.
 
+## Mise à l'abri (à chaque passage, même si YouTube bloque)
+
+`bash stash_media.sh` pousse sur la branche `reels-media` (par lots de 8) tous les MP4 `rendered` pas encore hébergés. Les vidéos survivent ainsi à un recyclage du conteneur. Les textes (livraisons/) et le registre sont committés sur `video-studio`. Consigne du propriétaire (5 oct.) : continuer à fabriquer et garder les vidéos de côté, même quand l'upload est bloqué.
+
 ## Publication (à chaque passage de la routine, toutes les heures)
 
 Pour chaque vidéo `rendered` :

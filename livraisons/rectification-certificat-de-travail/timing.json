@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.49,
-   "slot": 8.79,
+   "dur": 5.759,
+   "slot": 6.059,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.49,
-   "dur": 7.44,
-   "slot": 7.74,
+   "start": 5.759,
+   "dur": 4.714,
+   "slot": 5.014,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.93,
-   "dur": 13.78,
-   "slot": 14.08,
+   "start": 10.473,
+   "dur": 9.352,
+   "slot": 9.652,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 29.71,
-   "dur": 10.24,
-   "slot": 10.54,
+   "start": 19.825,
+   "dur": 6.952,
+   "slot": 7.252,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 39.95,
-   "dur": 9.86,
-   "slot": 10.16,
+   "start": 26.777,
+   "dur": 7.014,
+   "slot": 7.314,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 49.81,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 33.791,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 61.05,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.814,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 74.31,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.864,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 81.25,
+   "start": 55.714,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.49,
+   "t": 5.759,
    "label": "01 · Le problème"
   },
   {
-   "t": 29.71,
+   "t": 19.825,
    "label": "02 · La solution"
   },
   {
-   "t": 74.31,
+   "t": 50.864,
    "label": "03 · Commander"
   },
   {
-   "t": 81.25,
+   "t": 55.714,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 86.25,
- "chromeShow": 8.49,
- "chromeHide": 81.25,
+ "total": 60.714,
+ "chromeShow": 5.759,
+ "chromeHide": 55.714,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.79,
+   "start": 0.31,
+   "end": 5.339,
    "text": "Certificat de travail : le vôtre contient des formules floues, des omissions ou des phrases qui vous desservent ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.04,
-   "end": 15.23,
+   "start": 6.069,
+   "end": 10.053,
    "text": "Un certificat mal formulé peut freiner chacune de vos candidatures, sans que vous le sachiez.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.48,
-   "end": 29.01,
+   "start": 10.783,
+   "end": 19.405,
    "text": "La loi est claire : votre employeur doit vous remettre un certificat complet, exact et formulé avec bienveillance. Et en cas de refus, la procédure est gratuite jusqu’à trente mille francs.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 30.26,
-   "end": 39.25,
+   "start": 20.135,
+   "end": 26.357,
    "text": "On analyse votre certificat phrase par phrase : les formules codées, les omissions, le ton général, et ce que vous pouvez exiger.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 40.5,
-   "end": 49.11,
+   "start": 27.087,
+   "end": 33.371,
    "text": "Ensuite, on propose un texte corrigé et on rédige la lettre à votre employeur, à votre nom. Avec la marche à suivre s’il refuse.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 50.36,
-   "end": 60.35,
+   "start": 34.101,
+   "end": 41.394,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 61.6,
-   "end": 73.61,
+   "start": 42.124,
+   "end": 50.444,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 74.86,
-   "end": 80.55,
+   "start": 51.174,
+   "end": 55.294,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

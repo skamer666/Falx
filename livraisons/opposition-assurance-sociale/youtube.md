@@ -10,12 +10,6 @@ Opposition à une décision d'assurance sociale : jours de suspension au chômag
 👉 Commander cette prestation : https://thrax-legal.ch/fr/particuliers/opposition-assurance-sociale
 👉 Toutes nos prestations pour particuliers : https://thrax-legal.ch/fr/particuliers
 
-Chapitres
-0:00 Le problème
-0:07 Le problème
-0:28 La solution
-1:14 Commander
-
 Thrax Legal, le juridique à prix fixe pour les particuliers de Suisse romande. Thrax Legal n’est pas un cabinet d’avocats et ne représente pas ses clients devant les tribunaux.
 Informations générales : cette vidéo ne remplace pas un conseil adapté à votre situation.
 
@@ -26,4 +20,4 @@ opposition assurance sociale, art. 52 LPGA, suspension chômage, caisse maladie 
 - Langue : français. Sous-titres : importer `transcription-youtube.txt` (synchronisation automatique).
 - Écran de fin (dernières secondes) : vidéo « Avocat ou service juridique externalisé ? » + bouton S’abonner.
 - Fiche info : ajouter le lien « Commander cette prestation ».
-- Durée : 1:26.29
+- Durée : 1:01.68

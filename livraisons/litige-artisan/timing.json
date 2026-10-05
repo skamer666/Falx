@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.48,
-   "slot": 8.78,
+   "dur": 5.759,
+   "slot": 6.059,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.48,
-   "dur": 9.06,
-   "slot": 9.36,
+   "start": 5.759,
+   "dur": 5.941,
+   "slot": 6.241,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.54,
-   "dur": 13.96,
-   "slot": 14.26,
+   "start": 11.7,
+   "dur": 8.998,
+   "slot": 9.298,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 31.5,
-   "dur": 12.45,
-   "slot": 12.75,
+   "start": 20.698,
+   "dur": 7.964,
+   "slot": 8.264,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 43.95,
-   "dur": 7.35,
-   "slot": 7.65,
+   "start": 28.662,
+   "dur": 4.93,
+   "slot": 5.23,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 51.3,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 33.592,
+   "dur": 7.93,
+   "slot": 8.23,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 62.54,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.522,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 75.8,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.572,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 82.74,
+   "start": 55.422,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.48,
+   "t": 5.759,
    "label": "01 · Le problème"
   },
   {
-   "t": 31.5,
+   "t": 20.698,
    "label": "02 · La solution"
   },
   {
-   "t": 75.8,
+   "t": 50.572,
    "label": "03 · Commander"
   },
   {
-   "t": 82.74,
+   "t": 55.422,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 87.74,
- "chromeShow": 8.48,
- "chromeHide": 82.74,
+ "total": 60.422,
+ "chromeShow": 5.759,
+ "chromeHide": 55.422,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.78,
+   "start": 0.31,
+   "end": 5.339,
    "text": "Litige avec un artisan : travaux bâclés, chantier qui s’éternise, facture bien au-delà du devis ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.03,
-   "end": 16.84,
+   "start": 6.069,
+   "end": 11.28,
    "text": "Attention : attendre peut vous faire perdre vos droits, car les défauts doivent être signalés rapidement après leur découverte.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 18.09,
-   "end": 30.8,
+   "start": 12.01,
+   "end": 20.278,
    "text": "Et si un devis approximatif est dépassé de manière excessive, vous pouvez demander une réduction ou vous départir du contrat. Si la norme SIA cent dix-huit s’applique, on en tient compte.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 32.05,
-   "end": 43.25,
+   "start": 21.008,
+   "end": 28.242,
    "text": "On analyse le contrat, le devis et les factures, on rédige l’avis des défauts dans les formes, puis la mise en demeure : réfection, délai ou réduction du prix.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 44.5,
-   "end": 50.6,
+   "start": 28.972,
+   "end": 33.172,
    "text": "Et on vous indique quelle partie de la facture payer, et quelle partie retenir, sans vous mettre en tort.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 51.85,
-   "end": 61.84,
+   "start": 33.902,
+   "end": 41.102,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos lettres, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 63.09,
-   "end": 75.1,
+   "start": 41.832,
+   "end": 50.152,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 76.35,
-   "end": 82.04,
+   "start": 50.882,
+   "end": 55.002,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -11,12 +11,6 @@ Relecture de bail commercial : un bail commercial vous engage souvent pour plusi
 👉 Toutes nos prestations pour entreprises : https://thrax-legal.ch/fr/entreprises
 👉 Le guide complet : https://thrax-legal.ch/fr/guide/bail-commercial-suisse-guide
 
-Chapitres
-0:00 Le problème
-0:06 Le problème
-0:25 La solution
-1:11 Commander
-
 Thrax Legal, service juridique externalisé à prix fixe pour les indépendants et les PME de Suisse romande. Thrax Legal n’est pas un cabinet d’avocats et ne représente pas ses clients devant les tribunaux.
 Informations générales : cette vidéo ne remplace pas un conseil adapté à votre situation.
 
@@ -27,4 +21,4 @@ bail commercial, relecture bail commercial, local commercial, loyer commercial, 
 - Langue : français. Sous-titres : importer `transcription-youtube.txt` (synchronisation automatique).
 - Écran de fin (dernières secondes) : vidéo « Avocat ou service juridique externalisé ? » + bouton S’abonner.
 - Fiche info : ajouter le lien « Commander cette prestation ».
-- Durée : 1:23.78
+- Durée : 0:58.77

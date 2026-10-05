@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.85,
-   "slot": 10.15,
+   "dur": 6.945,
+   "slot": 7.245,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.85,
-   "dur": 7.32,
-   "slot": 7.62,
+   "start": 6.945,
+   "dur": 5.07,
+   "slot": 5.37,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.17,
-   "dur": 10.87,
-   "slot": 11.17,
+   "start": 12.015,
+   "dur": 6.634,
+   "slot": 6.934,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 28.04,
-   "dur": 9.72,
-   "slot": 10.02,
+   "start": 18.649,
+   "dur": 6.305,
+   "slot": 6.605,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 37.76,
-   "dur": 9.9,
-   "slot": 10.2,
+   "start": 24.954,
+   "dur": 5.93,
+   "slot": 6.23,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 47.66,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 30.884,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 58.9,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 38.907,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 72.16,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 47.957,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 79.1,
+   "start": 52.807,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.85,
+   "t": 6.945,
    "label": "01 · Le problème"
   },
   {
-   "t": 28.04,
+   "t": 18.649,
    "label": "02 · La solution"
   },
   {
-   "t": 72.16,
+   "t": 47.957,
    "label": "03 · Commander"
   },
   {
-   "t": 79.1,
+   "t": 52.807,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 84.1,
- "chromeShow": 9.85,
- "chromeHide": 79.1,
+ "total": 57.807,
+ "chromeShow": 6.945,
+ "chromeHide": 52.807,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.15,
+   "start": 0.31,
+   "end": 6.525,
    "text": "Défaut du logement : moisissure, chauffage en panne, infiltration ou chantier bruyant ? Un défaut qui dure vous donne des droits.",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.4,
-   "end": 16.47,
+   "start": 7.255,
+   "end": 11.595,
    "text": "Mais attention : ne cessez jamais de payer votre loyer. C’est un motif de résiliation.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 17.72,
-   "end": 27.34,
+   "start": 12.325,
+   "end": 18.229,
    "text": "La bonne méthode : un avis écrit avec un délai de réparation. La réduction de loyer est due dès que le bailleur connaît le défaut.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 28.59,
-   "end": 37.06,
+   "start": 18.959,
+   "end": 24.534,
    "text": "On qualifie le défaut, on fixe un délai de réparation, et on demande la réduction de loyer. Tout est prêt à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 38.31,
-   "end": 46.96,
+   "start": 25.264,
+   "end": 30.464,
    "text": "On vous indique aussi la réduction usuelle selon la gravité du défaut, et comment consigner le loyer si la régie ne réagit pas.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 48.21,
-   "end": 58.2,
+   "start": 31.194,
+   "end": 38.487,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 59.45,
-   "end": 71.46,
+   "start": 39.217,
+   "end": 47.537,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 72.71,
-   "end": 78.4,
+   "start": 48.267,
+   "end": 52.387,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

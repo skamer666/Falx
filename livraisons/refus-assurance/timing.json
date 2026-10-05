@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.13,
-   "slot": 9.43,
+   "dur": 6.884,
+   "slot": 7.184,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.13,
-   "dur": 9.7,
-   "slot": 10.0,
+   "start": 6.884,
+   "dur": 6.555,
+   "slot": 6.855,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 18.83,
-   "dur": 10.88,
-   "slot": 11.18,
+   "start": 13.439,
+   "dur": 7.52,
+   "slot": 7.82,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 29.71,
-   "dur": 12.8,
-   "slot": 13.1,
+   "start": 20.959,
+   "dur": 8.373,
+   "slot": 8.673,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 42.51,
-   "dur": 10.81,
-   "slot": 11.11,
+   "start": 29.332,
+   "dur": 7.35,
+   "slot": 7.65,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 53.32,
-   "dur": 11.81,
-   "slot": 12.11,
+   "start": 36.682,
+   "dur": 8.464,
+   "slot": 8.764,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 65.13,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 45.146,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 78.39,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 54.196,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 85.33,
+   "start": 59.046,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.13,
+   "t": 6.884,
    "label": "01 · Le problème"
   },
   {
-   "t": 29.71,
+   "t": 20.959,
    "label": "02 · La solution"
   },
   {
-   "t": 78.39,
+   "t": 54.196,
    "label": "03 · Commander"
   },
   {
-   "t": 85.33,
+   "t": 59.046,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 90.33,
- "chromeShow": 9.13,
- "chromeHide": 85.33,
+ "total": 64.046,
+ "chromeShow": 6.884,
+ "chromeHide": 59.046,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.43,
+   "start": 0.31,
+   "end": 6.464,
    "text": "Refus d’une assurance : ménage, voyage, véhicule, protection juridique… et votre assureur refuse de payer ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.68,
-   "end": 18.13,
+   "start": 7.194,
+   "end": 13.019,
    "text": "Ou elle ne rembourse qu’une partie. Pourtant, un refus n’est pas forcément définitif, même quand l’assureur invoque une exclusion.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 19.38,
-   "end": 29.01,
+   "start": 13.749,
+   "end": 20.539,
    "text": "Une exclusion doit être claire, et en cas de doute, elle s’interprète en faveur de l’assuré. Les prétentions se prescrivent en principe par cinq ans.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 30.26,
-   "end": 41.81,
+   "start": 21.269,
+   "end": 28.912,
    "text": "On analyse la police, les conditions générales et le refus, on construit les arguments juridiques et contractuels, et on rédige une réclamation motivée, prête à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 43.06,
-   "end": 52.62,
+   "start": 29.642,
+   "end": 36.262,
    "text": "Et si l’assureur maintient son refus, on vous indique la suite : l’ombudsman de l’assurance privée, qui intervient gratuitement, ou la procédure.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 53.87,
-   "end": 64.43,
+   "start": 36.992,
+   "end": 44.726,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réclamation, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 65.68,
-   "end": 77.69,
+   "start": 45.456,
+   "end": 53.776,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 78.94,
-   "end": 84.63,
+   "start": 54.506,
+   "end": 58.626,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

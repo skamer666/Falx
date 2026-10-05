@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.59,
-   "slot": 7.89,
+   "dur": 5.339,
+   "slot": 5.639,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.59,
-   "dur": 9.94,
-   "slot": 10.24,
+   "start": 5.339,
+   "dur": 6.437,
+   "slot": 6.737,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.53,
-   "dur": 10.55,
-   "slot": 10.85,
+   "start": 11.776,
+   "dur": 7.327,
+   "slot": 7.627,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 28.08,
-   "dur": 9.08,
-   "slot": 9.38,
+   "start": 19.103,
+   "dur": 6.236,
+   "slot": 6.536,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 37.16,
-   "dur": 14.03,
-   "slot": 14.33,
+   "start": 25.339,
+   "dur": 8.694,
+   "slot": 8.994,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 51.19,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 34.033,
+   "dur": 8.192,
+   "slot": 8.492,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 62.62,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 42.225,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 75.88,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 51.275,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 82.82,
+   "start": 56.125,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.59,
+   "t": 5.339,
    "label": "01 · Le problème"
   },
   {
-   "t": 28.08,
+   "t": 19.103,
    "label": "02 · La solution"
   },
   {
-   "t": 75.88,
+   "t": 51.275,
    "label": "03 · Commander"
   },
   {
-   "t": 82.82,
+   "t": 56.125,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 87.82,
- "chromeShow": 7.59,
- "chromeHide": 82.82,
+ "total": 61.125,
+ "chromeShow": 5.339,
+ "chromeHide": 56.125,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.89,
+   "start": 0.31,
+   "end": 4.919,
    "text": "Requête de conciliation : votre employeur ne paie pas ou conteste vos droits, malgré vos courriers ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.14,
-   "end": 16.83,
+   "start": 5.649,
+   "end": 11.356,
    "text": "Les courriers ne suffisent plus. La procédure devant le tribunal des prud’hommes commence en principe par une tentative de conciliation.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 18.08,
-   "end": 27.38,
+   "start": 12.086,
+   "end": 18.683,
    "text": "Bonne nouvelle : pour les litiges de travail jusqu’à trente mille francs, la procédure est simplifiée et gratuite. Vous déposez la requête vous-même.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 28.63,
-   "end": 36.46,
+   "start": 19.413,
+   "end": 24.919,
    "text": "On rédige votre requête avec vos conclusions chiffrées, on classe les pièces à joindre, et vous avez une fiche pour préparer l’audience.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 37.71,
-   "end": 50.49,
+   "start": 25.649,
+   "end": 33.613,
    "text": "La comparution personnelle est en principe obligatoire : la fiche vous aide à présenter votre position calmement. Et si votre cas exige un avocat, on vous le dit avant que vous payiez.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 51.74,
-   "end": 61.92,
+   "start": 34.343,
+   "end": 41.805,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre requête, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 63.17,
-   "end": 75.18,
+   "start": 42.535,
+   "end": 50.855,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 76.43,
-   "end": 82.12,
+   "start": 51.585,
+   "end": 55.705,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -1,0 +1,633 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 6.65,
+   "slot": 6.95,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 6.65,
+   "dur": 3.736,
+   "slot": 4.036,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 10.386,
+   "dur": 8.907,
+   "slot": 9.207,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 19.293,
+   "dur": 4.464,
+   "slot": 4.764,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 23.757,
+   "dur": 2.907,
+   "slot": 3.207,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 26.664,
+   "dur": 8.772,
+   "slot": 9.072,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 35.436,
+   "dur": 7.305,
+   "slot": 7.605,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 42.741,
+   "dur": 4.873,
+   "slot": 5.173,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 47.614,
+   "dur": 4.839,
+   "slot": 5.139,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 52.453,
+   "dur": 8.016,
+   "slot": 8.316,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 60.469,
+   "dur": 9.0,
+   "slot": 9.3,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 69.469,
+   "dur": 3.27,
+   "slot": 3.57,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 72.739,
+   "dur": 9.255,
+   "slot": 9.555,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 81.994,
+   "dur": 7.116,
+   "slot": 7.416,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 89.11,
+   "dur": 3.6,
+   "slot": 3.9,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 92.71,
+   "dur": 6.918,
+   "slot": 7.218,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 99.628,
+   "dur": 10.078,
+   "slot": 10.378,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 109.706,
+   "dur": 6.611,
+   "slot": 6.911,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 116.317,
+   "dur": 4.191,
+   "slot": 4.491,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 120.508,
+   "dur": 6.87,
+   "slot": 7.17,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 127.378,
+   "dur": 4.089,
+   "slot": 4.389,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 131.467,
+   "dur": 11.319,
+   "slot": 11.619,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 142.786,
+   "dur": 10.74,
+   "slot": 11.04,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 153.526,
+   "dur": 9.445,
+   "slot": 9.745,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 162.971,
+   "dur": 9.241,
+   "slot": 9.541,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 172.212,
+   "dur": 3.725,
+   "slot": 4.025,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 175.937,
+   "dur": 13.72,
+   "slot": 14.02,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 189.657,
+   "dur": 4.225,
+   "slot": 4.525,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 193.882,
+   "dur": 6.872,
+   "slot": 7.172,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 200.754,
+   "dur": 8.795,
+   "slot": 9.095,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 209.549,
+   "dur": 2.816,
+   "slot": 3.116,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 212.365,
+   "dur": 9.755,
+   "slot": 10.055,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 222.12,
+   "dur": 5.523,
+   "slot": 5.823,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 227.643,
+   "dur": 6.941,
+   "slot": 7.241,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 234.584,
+   "dur": 6.986,
+   "slot": 7.286,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 241.57,
+   "dur": 7.805,
+   "slot": 8.105,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 249.375,
+   "dur": 8.316,
+   "slot": 8.616,
+   "last": false
+  },
+  "sc38": {
+   "index": 37,
+   "start": 257.691,
+   "dur": 6.264,
+   "slot": 6.564,
+   "last": false
+  },
+  "sc39": {
+   "index": 38,
+   "start": 263.955,
+   "dur": 5.759,
+   "slot": 6.059,
+   "last": false
+  },
+  "sc40": {
+   "index": 39,
+   "start": 269.714,
+   "dur": 9.134,
+   "slot": 9.434,
+   "last": false
+  },
+  "sc41": {
+   "index": 40,
+   "start": 278.848,
+   "dur": 6.327,
+   "slot": 6.627,
+   "last": false
+  },
+  "sc42": {
+   "index": 41,
+   "start": 285.175,
+   "dur": 6.0,
+   "slot": 6.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 23.757,
+   "label": "01 · Faut-il des CGV ?"
+  },
+  {
+   "t": 42.741,
+   "label": "02 · Acceptées avant la conclusion"
+  },
+  {
+   "t": 69.469,
+   "label": "03 · La règle de l’insolite"
+  },
+  {
+   "t": 89.11,
+   "label": "04 · Clients particuliers"
+  },
+  {
+   "t": 127.378,
+   "label": "05 · Les clauses indispensables"
+  },
+  {
+   "t": 172.212,
+   "label": "06 · La réserve de propriété"
+  },
+  {
+   "t": 189.657,
+   "label": "07 · Prestataires de services"
+  },
+  {
+   "t": 209.549,
+   "label": "08 · Les erreurs qui coûtent cher"
+  },
+  {
+   "t": 227.643,
+   "label": "09 · Se faire accompagner"
+  },
+  {
+   "t": 285.175,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 291.175,
+ "chromeShow": 23.757,
+ "chromeHide": 285.175,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 6.23,
+   "text": "CGV en Suisse : vos conditions générales sont sur votre site, ou au dos de vos factures. Vous pensez être protégé.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 6.96,
+   "end": 9.966,
+   "text": "Mais le jour d’un litige, il y a de bonnes chances qu’elles ne s’appliquent pas du tout.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 10.696,
+   "end": 18.873,
+   "text": "Dans cette vidéo : quand vos CGV lient vraiment vos clients, les clauses indispensables, la différence entre clients professionnels et consommateurs, et les erreurs qui rendent des CGV inutiles.",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 19.603,
+   "end": 23.337,
+   "text": "Et à la fin, je vous dis comment obtenir des CGV solides sans y passer des semaines.",
+   "section": null
+  },
+  {
+   "scene": "sc05",
+   "start": 24.067,
+   "end": 26.244,
+   "text": "Première question : faut-il des CGV ?",
+   "section": "01 · Faut-il des CGV ?"
+  },
+  {
+   "scene": "sc06",
+   "start": 26.974,
+   "end": 35.016,
+   "text": "Aucune loi n’oblige une entreprise suisse à avoir des CGV. Mais sans elles, c’est le Code des obligations qui s’applique, avec des règles générales, rarement à votre avantage.",
+   "section": "01 · Faut-il des CGV ?"
+  },
+  {
+   "scene": "sc07",
+   "start": 35.746,
+   "end": 42.321,
+   "text": "Pas de frais de rappel. Une garantie qui peut s’étendre. Pas de limite de responsabilité. Un for qui n’est pas forcément chez vous.",
+   "section": "01 · Faut-il des CGV ?"
+  },
+  {
+   "scene": "sc08",
+   "start": 43.051,
+   "end": 47.194,
+   "text": "Règle numéro un : vos CGV doivent être acceptées avant la conclusion du contrat.",
+   "section": "02 · Acceptées avant la conclusion"
+  },
+  {
+   "scene": "sc09",
+   "start": 47.924,
+   "end": 52.033,
+   "text": "Vos CGV ne lient votre client que s’il a pu les lire avant de conclure, et qu’il les a acceptées.",
+   "section": "02 · Acceptées avant la conclusion"
+  },
+  {
+   "scene": "sc10",
+   "start": 52.763,
+   "end": 60.049,
+   "text": "En ligne, un lien et une case à cocher avant la commande : ça fonctionne. Des CGV jointes au devis signé, avec une mention claire : ça fonctionne.",
+   "section": "02 · Acceptées avant la conclusion"
+  },
+  {
+   "scene": "sc11",
+   "start": 60.779,
+   "end": 69.049,
+   "text": "Imprimées au dos d’une facture envoyée après la prestation : en principe, non. Et des CGV jamais mentionnées, disponibles « sur demande » : non plus.",
+   "section": "02 · Acceptées avant la conclusion"
+  },
+  {
+   "scene": "sc12",
+   "start": 69.779,
+   "end": 72.319,
+   "text": "Règle numéro deux : la règle de l’insolite.",
+   "section": "03 · La règle de l’insolite"
+  },
+  {
+   "scene": "sc13",
+   "start": 73.049,
+   "end": 81.574,
+   "text": "Une clause surprenante et défavorable, que le client ne pouvait pas raisonnablement attendre, ne s’applique pas si vous ne l’avez pas signalée clairement. Mettez-la en gras, ou faites-la accepter séparément.",
+   "section": "03 · La règle de l’insolite"
+  },
+  {
+   "scene": "sc14",
+   "start": 82.304,
+   "end": 88.69,
+   "text": "Et en cas de doute sur le sens d’une clause, elle s’interprète contre celui qui l’a rédigée, donc contre vous. Une formulation vague vous coûte.",
+   "section": "03 · La règle de l’insolite"
+  },
+  {
+   "scene": "sc15",
+   "start": 89.42,
+   "end": 92.29,
+   "text": "Règle numéro trois : les consommateurs sont mieux protégés.",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc16",
+   "start": 93.02,
+   "end": 99.208,
+   "text": "Face à des particuliers, la loi contre la concurrence déloyale interdit les clauses qui créent un déséquilibre important et injustifié à leur détriment.",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc17",
+   "start": 99.938,
+   "end": 109.286,
+   "text": "Les prix affichés doivent être les prix finaux, TVA comprise. Pour les biens neufs, la garantie ne peut pas descendre sous deux ans. Et un consommateur peut toujours agir devant le tribunal de son domicile.",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc18",
+   "start": 110.016,
+   "end": 115.897,
+   "text": "Une bonne nouvelle au passage : contrairement à l’Union européenne, la Suisse ne prévoit pas de droit de rétractation général pour la vente en ligne.",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc19",
+   "start": 116.627,
+   "end": 120.088,
+   "text": "Vous vous rendez compte que vos CGV datent, ou qu’elles ont été copiées d’un modèle étranger ?",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc20",
+   "start": 120.818,
+   "end": 126.958,
+   "text": "Chez Thrax Legal, on rédige des CGV adaptées à votre activité et conformes au droit suisse. Le lien est dans la description.",
+   "section": "04 · Clients particuliers"
+  },
+  {
+   "scene": "sc21",
+   "start": 127.688,
+   "end": 131.047,
+   "text": "Au minimum, vos CGV doivent régler quelques points essentiels.",
+   "section": "05 · Les clauses indispensables"
+  },
+  {
+   "scene": "sc22",
+   "start": 131.777,
+   "end": 142.366,
+   "text": "Le paiement : un délai précis, qui vaut terme convenu. Votre client sera alors en demeure automatiquement à l’échéance. Ajoutez les intérêts de retard et les frais de rappel. Sans clause, vous ne pouvez pas les réclamer.",
+   "section": "05 · Les clauses indispensables"
+  },
+  {
+   "scene": "sc23",
+   "start": 143.096,
+   "end": 153.106,
+   "text": "La livraison et le transfert des risques : qui supporte la perte si la marchandise est abîmée en route ? La garantie : entre entreprises, vous pouvez la limiter. Et rappelez que les défauts doivent vous être signalés rapidement.",
+   "section": "05 · Les clauses indispensables"
+  },
+  {
+   "scene": "sc24",
+   "start": 153.836,
+   "end": 162.551,
+   "text": "La responsabilité : vous pouvez la limiter, mais pas l’exclure totalement. Une exclusion en cas de faute grave ou d’intention est nulle. Une clause trop large risque de tomber en entier.",
+   "section": "05 · Les clauses indispensables"
+  },
+  {
+   "scene": "sc25",
+   "start": 163.281,
+   "end": 171.792,
+   "text": "La propriété intellectuelle : qui possède ce que vous créez ? Le droit applicable et le for : droit suisse, tribunaux de votre siège, au moins avec les clients professionnels.",
+   "section": "05 · Les clauses indispensables"
+  },
+  {
+   "scene": "sc26",
+   "start": 172.522,
+   "end": 175.517,
+   "text": "Attention à un piège classique : la réserve de propriété.",
+   "section": "06 · La réserve de propriété"
+  },
+  {
+   "scene": "sc27",
+   "start": 176.247,
+   "end": 189.237,
+   "text": "Beaucoup de CGV prévoient que la marchandise reste votre propriété jusqu’au paiement complet. Mais en Suisse, cette clause n’a d’effet que si elle est inscrite au registre des pactes de réserve de propriété, à l’office des poursuites du domicile de l’acheteur. Sans inscription, elle ne vous protège pas.",
+   "section": "06 · La réserve de propriété"
+  },
+  {
+   "scene": "sc28",
+   "start": 189.967,
+   "end": 193.462,
+   "text": "Si vous vendez des services, attention : votre contrat est souvent un mandat.",
+   "section": "07 · Prestataires de services"
+  },
+  {
+   "scene": "sc29",
+   "start": 194.192,
+   "end": 200.334,
+   "text": "Et dans un mandat, chaque partie peut résilier à tout moment. C’est une règle impérative : vos CGV ne peuvent pas l’empêcher.",
+   "section": "07 · Prestataires de services"
+  },
+  {
+   "scene": "sc30",
+   "start": 201.064,
+   "end": 209.129,
+   "text": "En revanche, elles peuvent prévoir clairement la facturation du travail déjà effectué. Beaucoup de prestataires l’ignorent, et le découvrent quand un client s’en va au milieu d’un projet.",
+   "section": "07 · Prestataires de services"
+  },
+  {
+   "scene": "sc31",
+   "start": 209.859,
+   "end": 211.945,
+   "text": "Pour finir, les erreurs qui coûtent cher.",
+   "section": "08 · Les erreurs qui coûtent cher"
+  },
+  {
+   "scene": "sc32",
+   "start": 212.675,
+   "end": 221.7,
+   "text": "Copier les CGV d’un concurrent, ou un modèle étranger qui cite le droit français ou le RGPD hors contexte. Exclure toute responsabilité. Ne rien prévoir sur les retards de paiement.",
+   "section": "08 · Les erreurs qui coûtent cher"
+  },
+  {
+   "scene": "sc33",
+   "start": 222.43,
+   "end": 227.223,
+   "text": "Oublier d’inscrire la réserve de propriété. Et ne jamais faire accepter ses CGV avant la commande.",
+   "section": "08 · Les erreurs qui coûtent cher"
+  },
+  {
+   "scene": "sc34",
+   "start": 227.953,
+   "end": 234.164,
+   "text": "Des CGV mal rédigées, c’est pire que pas de CGV : vous croyez être protégé, et vous découvrez le contraire le jour du litige.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc35",
+   "start": 234.894,
+   "end": 241.15,
+   "text": "C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc36",
+   "start": 241.88,
+   "end": 248.955,
+   "text": "Concrètement : on rédige vos CGV sur mesure, on relit vos devis et contrats, et on vous aide à les intégrer correctement, sur votre site comme dans vos offres.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc37",
+   "start": 249.685,
+   "end": 257.271,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc38",
+   "start": 258.001,
+   "end": 263.535,
+   "text": "Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc39",
+   "start": 264.265,
+   "end": 269.294,
+   "text": "Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc40",
+   "start": 270.024,
+   "end": 278.428,
+   "text": "Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc41",
+   "start": 279.158,
+   "end": 284.755,
+   "text": "Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.",
+   "section": "09 · Se faire accompagner"
+  }
+ ]
+}

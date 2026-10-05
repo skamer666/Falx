@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.58,
-   "slot": 7.88,
+   "dur": 4.873,
+   "slot": 5.173,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.58,
-   "dur": 6.63,
-   "slot": 6.93,
+   "start": 4.873,
+   "dur": 4.702,
+   "slot": 5.002,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 14.21,
-   "dur": 11.58,
-   "slot": 11.88,
+   "start": 9.575,
+   "dur": 7.241,
+   "slot": 7.541,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.79,
-   "dur": 12.28,
-   "slot": 12.58,
+   "start": 16.816,
+   "dur": 7.748,
+   "slot": 8.048,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 38.07,
-   "dur": 7.2,
-   "slot": 7.5,
+   "start": 24.564,
+   "dur": 4.952,
+   "slot": 5.252,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 45.27,
-   "dur": 11.81,
-   "slot": 12.11,
+   "start": 29.516,
+   "dur": 8.464,
+   "slot": 8.764,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 57.08,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 37.98,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 70.34,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 47.03,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 77.28,
+   "start": 51.88,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.58,
+   "t": 4.873,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.79,
+   "t": 16.816,
    "label": "02 · La solution"
   },
   {
-   "t": 70.34,
+   "t": 47.03,
    "label": "03 · Commander"
   },
   {
-   "t": 77.28,
+   "t": 51.88,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 82.28,
- "chromeShow": 7.58,
- "chromeHide": 77.28,
+ "total": 56.88,
+ "chromeShow": 4.873,
+ "chromeHide": 51.88,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.88,
+   "start": 0.31,
+   "end": 4.453,
    "text": "Contester le décompte de charges : votre décompte de chauffage et de frais accessoires a explosé ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.13,
-   "end": 13.51,
+   "start": 5.183,
+   "end": 9.155,
    "text": "Payer sans vérifier, c’est peut-être payer des frais qui ne sont même pas prévus dans votre bail.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 14.76,
-   "end": 25.09,
+   "start": 9.885,
+   "end": 16.396,
    "text": "La règle est simple : vous ne devez que les frais accessoires expressément prévus dans le bail. Et vous avez le droit de consulter les pièces justificatives.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 26.34,
-   "end": 37.37,
+   "start": 17.126,
+   "end": 24.144,
    "text": "On contrôle chaque poste facturé par rapport au bail, on repère les frais non convenus ou excessifs, et on rédige la réclamation avec la demande de justificatifs.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 38.62,
-   "end": 44.57,
+   "start": 24.874,
+   "end": 29.096,
    "text": "Et on vous indique quelle partie payer et quelle partie contester, pour éviter tout reproche de retard.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 45.82,
-   "end": 56.38,
+   "start": 29.826,
+   "end": 37.56,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réclamation, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 57.63,
-   "end": 69.64,
+   "start": 38.29,
+   "end": 46.61,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 70.89,
-   "end": 76.58,
+   "start": 47.34,
+   "end": 51.46,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -1,0 +1,595 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 5.179,
+   "slot": 5.479,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 5.179,
+   "dur": 8.94,
+   "slot": 9.24,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 14.119,
+   "dur": 8.339,
+   "slot": 8.639,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 22.458,
+   "dur": 3.577,
+   "slot": 3.877,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 26.035,
+   "dur": 2.986,
+   "slot": 3.286,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 29.021,
+   "dur": 10.759,
+   "slot": 11.059,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 39.78,
+   "dur": 10.168,
+   "slot": 10.468,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 49.948,
+   "dur": 3.225,
+   "slot": 3.525,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 53.173,
+   "dur": 3.486,
+   "slot": 3.786,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 56.659,
+   "dur": 7.183,
+   "slot": 7.483,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 63.842,
+   "dur": 9.794,
+   "slot": 10.094,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 73.636,
+   "dur": 11.462,
+   "slot": 11.762,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 85.098,
+   "dur": 3.941,
+   "slot": 4.241,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 89.039,
+   "dur": 6.616,
+   "slot": 6.916,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 95.655,
+   "dur": 5.056,
+   "slot": 5.356,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 100.711,
+   "dur": 4.077,
+   "slot": 4.377,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 104.788,
+   "dur": 8.307,
+   "slot": 8.607,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 113.095,
+   "dur": 7.848,
+   "slot": 8.148,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 120.943,
+   "dur": 5.236,
+   "slot": 5.536,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 126.179,
+   "dur": 10.407,
+   "slot": 10.707,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 136.586,
+   "dur": 2.702,
+   "slot": 3.002,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 139.288,
+   "dur": 5.707,
+   "slot": 6.007,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 144.995,
+   "dur": 7.941,
+   "slot": 8.241,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 152.936,
+   "dur": 12.38,
+   "slot": 12.68,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 165.316,
+   "dur": 2.805,
+   "slot": 3.105,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 168.121,
+   "dur": 12.272,
+   "slot": 12.572,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 180.393,
+   "dur": 2.998,
+   "slot": 3.298,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 183.391,
+   "dur": 11.366,
+   "slot": 11.666,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 194.757,
+   "dur": 2.225,
+   "slot": 2.525,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 196.982,
+   "dur": 11.584,
+   "slot": 11.884,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 208.566,
+   "dur": 7.777,
+   "slot": 8.077,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 216.343,
+   "dur": 6.986,
+   "slot": 7.286,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 223.329,
+   "dur": 7.93,
+   "slot": 8.23,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 231.259,
+   "dur": 8.316,
+   "slot": 8.616,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 239.575,
+   "dur": 6.264,
+   "slot": 6.564,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 245.839,
+   "dur": 5.759,
+   "slot": 6.059,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 251.598,
+   "dur": 9.134,
+   "slot": 9.434,
+   "last": false
+  },
+  "sc38": {
+   "index": 37,
+   "start": 260.732,
+   "dur": 6.327,
+   "slot": 6.627,
+   "last": false
+  },
+  "sc39": {
+   "index": 38,
+   "start": 267.059,
+   "dur": 6.0,
+   "slot": 6.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 26.035,
+   "label": "01 · Oral ou écrit ?"
+  },
+  {
+   "t": 53.173,
+   "label": "02 · Essai et délais de congé"
+  },
+  {
+   "t": 73.636,
+   "label": "03 · Salaire et vacances"
+  },
+  {
+   "t": 100.711,
+   "label": "04 · Maladie et accident"
+  },
+  {
+   "t": 136.586,
+   "label": "05 · Licenciement"
+  },
+  {
+   "t": 152.936,
+   "label": "06 · Non-concurrence"
+  },
+  {
+   "t": 165.316,
+   "label": "07 · CCT et salaire minimum"
+  },
+  {
+   "t": 180.393,
+   "label": "08 · Assurances sociales"
+  },
+  {
+   "t": 194.757,
+   "label": "09 · Les erreurs classiques"
+  },
+  {
+   "t": 208.566,
+   "label": "10 · Se faire accompagner"
+  },
+  {
+   "t": 267.059,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 273.059,
+ "chromeShow": 26.035,
+ "chromeHide": 267.059,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 4.759,
+   "text": "Contrat de travail en Suisse : engager quelqu’un, c’est une excellente nouvelle pour votre entreprise.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 5.489,
+   "end": 13.699,
+   "text": "Mais un contrat mal rédigé peut vous coûter des mois de salaire. Un licenciement nul, des heures supplémentaires à payer avec vingt-cinq pour cent de supplément, une clause de non-concurrence qui ne vaut rien.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 14.429,
+   "end": 22.038,
+   "text": "Dans cette vidéo : ce qui doit être écrit, la période d’essai, les délais de congé, la maladie, les salaires minimums, les assurances sociales et les erreurs classiques.",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 22.768,
+   "end": 25.615,
+   "text": "Et à la fin, comment avoir des contrats solides sans vous y perdre.",
+   "section": null
+  },
+  {
+   "scene": "sc05",
+   "start": 26.345,
+   "end": 28.601,
+   "text": "Première question : faut-il un contrat écrit ?",
+   "section": "01 · Oral ou écrit ?"
+  },
+  {
+   "scene": "sc06",
+   "start": 29.331,
+   "end": 39.36,
+   "text": "En Suisse, un contrat de travail est valable même oral. Mais dès un mois d’engagement, vous devez remettre par écrit les informations de base : les parties, le début, la fonction, le salaire, le temps de travail.",
+   "section": "01 · Oral ou écrit ?"
+  },
+  {
+   "scene": "sc07",
+   "start": 40.09,
+   "end": 49.528,
+   "text": "Et surtout, plusieurs clauses n’ont d’effet que par écrit : une période d’essai différente d’un mois, des délais de congé différents de la loi, des heures supplémentaires sans supplément de vingt-cinq pour cent, et une clause de non-concurrence.",
+   "section": "01 · Oral ou écrit ?"
+  },
+  {
+   "scene": "sc08",
+   "start": 50.258,
+   "end": 52.753,
+   "text": "Sans écrit, c’est la règle légale qui s’applique.",
+   "section": "01 · Oral ou écrit ?"
+  },
+  {
+   "scene": "sc09",
+   "start": 53.483,
+   "end": 56.239,
+   "text": "Deuxième point : la période d’essai et les délais de congé.",
+   "section": "02 · Essai et délais de congé"
+  },
+  {
+   "scene": "sc10",
+   "start": 56.969,
+   "end": 63.422,
+   "text": "La période d’essai dure un mois par défaut, trois mois au maximum, par écrit. Pendant l’essai, le délai de congé est de sept jours.",
+   "section": "02 · Essai et délais de congé"
+  },
+  {
+   "scene": "sc11",
+   "start": 64.152,
+   "end": 73.216,
+   "text": "Après l’essai : un mois pendant la première année de service. Deux mois de la deuxième à la neuvième année. Trois mois ensuite. À chaque fois pour la fin d’un mois, sauf accord écrit différent.",
+   "section": "02 · Essai et délais de congé"
+  },
+  {
+   "scene": "sc12",
+   "start": 73.946,
+   "end": 84.678,
+   "text": "Le treizième salaire n’est pas obligatoire. Mais s’il est prévu, ou s’il est d’usage dans l’entreprise, il est dû, au prorata en cas de départ en cours d’année. Écrivez clairement ce qui est un salaire, et ce qui est un bonus discrétionnaire.",
+   "section": "03 · Salaire et vacances"
+  },
+  {
+   "scene": "sc13",
+   "start": 85.408,
+   "end": 88.619,
+   "text": "Les vacances : quatre semaines au minimum, cinq jusqu’à vingt ans.",
+   "section": "03 · Salaire et vacances"
+  },
+  {
+   "scene": "sc14",
+   "start": 89.349,
+   "end": 95.235,
+   "text": "Vous préférez ne pas rédiger ce contrat vous-même ? Chez Thrax Legal, c’est exactement le type de dossier qu’on traite pour nos abonnés.",
+   "section": "03 · Salaire et vacances"
+  },
+  {
+   "scene": "sc15",
+   "start": 95.965,
+   "end": 100.291,
+   "text": "Vous nous décrivez le poste, on rédige le contrat de travail. Le lien est dans la description.",
+   "section": "03 · Salaire et vacances"
+  },
+  {
+   "scene": "sc16",
+   "start": 101.021,
+   "end": 104.368,
+   "text": "Quatrième point, souvent mal connu : la maladie et l’accident.",
+   "section": "04 · Maladie et accident"
+  },
+  {
+   "scene": "sc17",
+   "start": 105.098,
+   "end": 112.675,
+   "text": "Un : si votre employé est malade, vous devez continuer à verser son salaire pendant un temps limité. Au moins trois semaines la première année, puis plus longtemps selon l’ancienneté.",
+   "section": "04 · Maladie et accident"
+  },
+  {
+   "scene": "sc18",
+   "start": 113.405,
+   "end": 120.523,
+   "text": "Sauf si vous avez une assurance perte de gain au moins équivalente, prévue par écrit. Cette assurance n’est pas obligatoire, mais elle est fortement recommandée.",
+   "section": "04 · Maladie et accident"
+  },
+  {
+   "scene": "sc19",
+   "start": 121.253,
+   "end": 125.759,
+   "text": "Deux : après la période d’essai, un licenciement donné pendant une maladie ou un accident est nul.",
+   "section": "04 · Maladie et accident"
+  },
+  {
+   "scene": "sc20",
+   "start": 126.489,
+   "end": 136.166,
+   "text": "La protection dure trente jours la première année de service, quatre-vingt-dix jours de la deuxième à la cinquième, et cent quatre-vingts jours ensuite. La grossesse est protégée pendant toute sa durée, et seize semaines après l’accouchement.",
+   "section": "04 · Maladie et accident"
+  },
+  {
+   "scene": "sc21",
+   "start": 136.896,
+   "end": 138.868,
+   "text": "Cinquième point : le licenciement.",
+   "section": "05 · Licenciement"
+  },
+  {
+   "scene": "sc22",
+   "start": 139.598,
+   "end": 144.575,
+   "text": "Licencier quelqu’un parce qu’il fait valoir ses droits est abusif. L’indemnité peut aller jusqu’à six mois de salaire.",
+   "section": "05 · Licenciement"
+  },
+  {
+   "scene": "sc23",
+   "start": 145.305,
+   "end": 152.516,
+   "text": "Et le licenciement immédiat n’est possible que pour de justes motifs graves. Mal utilisé, il coûte le salaire de tout le délai de congé, plus une indemnité.",
+   "section": "05 · Licenciement"
+  },
+  {
+   "scene": "sc24",
+   "start": 153.246,
+   "end": 164.896,
+   "text": "La clause de non-concurrence doit être écrite, et l’employé doit avoir eu accès à votre clientèle ou à des secrets d’affaires. Elle doit être limitée dans le lieu, le temps et l’activité, en principe trois ans au maximum. Trop large, le juge peut la réduire.",
+   "section": "06 · Non-concurrence"
+  },
+  {
+   "scene": "sc25",
+   "start": 165.626,
+   "end": 167.701,
+   "text": "Avant de signer, vérifiez deux choses.",
+   "section": "07 · CCT et salaire minimum"
+  },
+  {
+   "scene": "sc26",
+   "start": 168.431,
+   "end": 179.973,
+   "text": "Une convention collective de travail s’applique-t-elle à votre branche ? Et votre canton impose-t-il un salaire minimum ? C’est le cas de Genève, Neuchâtel et du Jura, avec des montants supérieurs à vingt francs de l’heure. Ces règles priment sur votre contrat.",
+   "section": "07 · CCT et salaire minimum"
+  },
+  {
+   "scene": "sc27",
+   "start": 180.703,
+   "end": 182.971,
+   "text": "Enfin, n’oubliez pas les assurances sociales.",
+   "section": "08 · Assurances sociales"
+  },
+  {
+   "scene": "sc28",
+   "start": 183.701,
+   "end": 194.337,
+   "text": "AVS, AI et APG dès le premier franc. L’assurance-chômage. L’assurance-accidents. Les allocations familiales. Et la prévoyance professionnelle dès un salaire annuel d’environ vingt-deux mille francs.",
+   "section": "08 · Assurances sociales"
+  },
+  {
+   "scene": "sc29",
+   "start": 195.067,
+   "end": 196.562,
+   "text": "Et les erreurs classiques à éviter.",
+   "section": "09 · Les erreurs classiques"
+  },
+  {
+   "scene": "sc30",
+   "start": 197.292,
+   "end": 208.146,
+   "text": "Pas de contrat écrit. Une période d’essai de trois mois jamais écrite. Les heures supplémentaires jamais réglées. Une clause de non-concurrence copiée d’un modèle. Et un salaire sous le minimum cantonal, sans le savoir.",
+   "section": "09 · Les erreurs classiques"
+  },
+  {
+   "scene": "sc31",
+   "start": 208.876,
+   "end": 215.923,
+   "text": "Un contrat de travail se signe en dix minutes. Mais s’il est mal rédigé, l’erreur peut vous coûter des mois de salaire, et c’est vous, l’employeur, qui paierez.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc32",
+   "start": 216.653,
+   "end": 222.909,
+   "text": "C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc33",
+   "start": 223.639,
+   "end": 230.839,
+   "text": "Concrètement : on rédige vos contrats de travail, on relit ceux que vous avez déjà, et on vous accompagne en cas de licenciement, d’absence ou de conflit avec un employé.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc34",
+   "start": 231.569,
+   "end": 239.155,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc35",
+   "start": 239.885,
+   "end": 245.419,
+   "text": "Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc36",
+   "start": 246.149,
+   "end": 251.178,
+   "text": "Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc37",
+   "start": 251.908,
+   "end": 260.312,
+   "text": "Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc38",
+   "start": 261.042,
+   "end": 266.639,
+   "text": "Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.",
+   "section": "10 · Se faire accompagner"
+  }
+ ]
+}

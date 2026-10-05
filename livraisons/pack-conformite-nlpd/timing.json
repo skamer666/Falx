@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 10.3,
-   "slot": 10.6,
+   "dur": 7.907,
+   "slot": 8.207,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 10.3,
-   "dur": 7.51,
-   "slot": 7.81,
+   "start": 7.907,
+   "dur": 5.587,
+   "slot": 5.887,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 17.81,
-   "dur": 14.02,
-   "slot": 14.32,
+   "start": 13.494,
+   "dur": 8.343,
+   "slot": 8.643,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 31.83,
-   "dur": 13.63,
-   "slot": 13.93,
+   "start": 21.837,
+   "dur": 7.975,
+   "slot": 8.275,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 45.46,
-   "dur": 11.18,
-   "slot": 11.48,
+   "start": 29.812,
+   "dur": 9.581,
+   "slot": 9.881,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 56.64,
-   "dur": 11.62,
-   "slot": 11.92,
+   "start": 39.393,
+   "dur": 8.123,
+   "slot": 8.423,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 68.26,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 47.516,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 81.52,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 56.566,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 88.46,
+   "start": 61.416,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 10.3,
+   "t": 7.907,
    "label": "01 · Le problème"
   },
   {
-   "t": 31.83,
+   "t": 21.837,
    "label": "02 · La solution"
   },
   {
-   "t": 81.52,
+   "t": 56.566,
    "label": "03 · Commander"
   },
   {
-   "t": 88.46,
+   "t": 61.416,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 93.46,
- "chromeShow": 10.3,
- "chromeHide": 88.46,
+ "total": 66.416,
+ "chromeShow": 7.907,
+ "chromeHide": 61.416,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.6,
+   "start": 0.31,
+   "end": 7.487,
    "text": "Pack conformité nLPD : votre site, vos clients, vos outils… votre entreprise respecte-t-elle la nouvelle loi sur la protection des données ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.85,
-   "end": 17.11,
+   "start": 8.217,
+   "end": 13.074,
    "text": "Depuis le premier septembre 2023, elle s’applique à toutes les entreprises. Même aux plus petites.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 18.36,
-   "end": 31.13,
+   "start": 13.804,
+   "end": 21.417,
    "text": "La sanction est lourde : certaines violations intentionnelles exposent les responsables à une amende jusqu’à deux cent cinquante mille francs. Et vous devez informer les personnes de la collecte de leurs données.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 32.38,
-   "end": 44.76,
+   "start": 22.147,
+   "end": 29.392,
    "text": "On fait l’inventaire guidé de vos traitements et de vos sous-traitants, puis on rédige la politique de confidentialité, le registre des activités de traitement et les clauses pour vos contrats.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 46.01,
-   "end": 55.94,
+   "start": 30.122,
+   "end": 38.973,
    "text": "Votre site, vos outils, votre CRM, votre newsletter, votre cloud : tout est passé en revue. Et si le RGPD européen s’applique à vous, on l’intègre.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 57.19,
-   "end": 67.56,
+   "start": 39.703,
+   "end": 47.096,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos documents, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 68.81,
-   "end": 80.82,
+   "start": 47.826,
+   "end": 56.146,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 82.07,
-   "end": 87.76,
+   "start": 56.876,
+   "end": 60.996,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

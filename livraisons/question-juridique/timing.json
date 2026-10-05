@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.97,
-   "slot": 8.27,
+   "dur": 5.248,
+   "slot": 5.548,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.97,
-   "dur": 6.8,
-   "slot": 7.1,
+   "start": 5.248,
+   "dur": 4.748,
+   "slot": 5.048,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 14.77,
-   "dur": 11.44,
-   "slot": 11.74,
+   "start": 9.996,
+   "dur": 7.842,
+   "slot": 8.142,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 26.21,
-   "dur": 10.13,
-   "slot": 10.43,
+   "start": 17.838,
+   "dur": 8.6,
+   "slot": 8.9,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 36.34,
-   "dur": 10.09,
-   "slot": 10.39,
+   "start": 26.438,
+   "dur": 6.502,
+   "slot": 6.802,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 46.43,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 32.94,
+   "dur": 8.251,
+   "slot": 8.551,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 57.86,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.191,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 71.12,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.241,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 78.06,
+   "start": 55.091,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.97,
+   "t": 5.248,
    "label": "01 · Le problème"
   },
   {
-   "t": 26.21,
+   "t": 17.838,
    "label": "02 · La solution"
   },
   {
-   "t": 71.12,
+   "t": 50.241,
    "label": "03 · Commander"
   },
   {
-   "t": 78.06,
+   "t": 55.091,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 83.06,
- "chromeShow": 7.97,
- "chromeHide": 78.06,
+ "total": 60.091,
+ "chromeShow": 5.248,
+ "chromeHide": 55.091,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.27,
+   "start": 0.31,
+   "end": 4.828,
    "text": "Question juridique : vous avez une question précise et vous voulez une réponse fiable, sans rendez-vous ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.52,
-   "end": 14.07,
+   "start": 5.558,
+   "end": 9.576,
    "text": "Sur internet, les réponses se contredisent. Et beaucoup ne valent pas en Suisse.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.32,
-   "end": 25.51,
+   "start": 10.306,
+   "end": 17.418,
    "text": "Une question rapide porte sur un point précis. Et si votre situation demande une analyse complète, on vous propose la prestation adaptée avant de commencer.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 26.76,
-   "end": 35.64,
+   "start": 18.148,
+   "end": 26.018,
    "text": "Droit du travail, bail, consommation, contrats, poursuites, famille simple : posez votre question. Pour le pénal, on vous oriente.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 36.89,
-   "end": 45.73,
+   "start": 26.748,
+   "end": 32.52,
    "text": "Vous recevez une réponse écrite, avec les bases légales et la prochaine étape conseillée. Et une précision sur la réponse est incluse.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 46.98,
-   "end": 57.16,
+   "start": 33.25,
+   "end": 40.771,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réponse, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 58.41,
-   "end": 70.42,
+   "start": 41.501,
+   "end": 49.821,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 71.67,
-   "end": 77.36,
+   "start": 50.551,
+   "end": 54.671,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

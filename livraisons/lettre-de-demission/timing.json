@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.78,
-   "slot": 8.08,
+   "dur": 5.236,
+   "slot": 5.536,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.78,
-   "dur": 7.19,
-   "slot": 7.49,
+   "start": 5.236,
+   "dur": 4.705,
+   "slot": 5.005,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 14.97,
-   "dur": 14.4,
-   "slot": 14.7,
+   "start": 9.941,
+   "dur": 9.225,
+   "slot": 9.525,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 29.37,
-   "dur": 12.37,
-   "slot": 12.67,
+   "start": 19.166,
+   "dur": 7.464,
+   "slot": 7.764,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 41.74,
-   "dur": 12.1,
-   "slot": 12.4,
+   "start": 26.63,
+   "dur": 7.751,
+   "slot": 8.051,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 53.84,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 34.381,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 65.08,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 42.404,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 78.34,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 51.454,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 85.28,
+   "start": 56.304,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.78,
+   "t": 5.236,
    "label": "01 · Le problème"
   },
   {
-   "t": 29.37,
+   "t": 19.166,
    "label": "02 · La solution"
   },
   {
-   "t": 78.34,
+   "t": 51.454,
    "label": "03 · Commander"
   },
   {
-   "t": 85.28,
+   "t": 56.304,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 90.28,
- "chromeShow": 7.78,
- "chromeHide": 85.28,
+ "total": 61.304,
+ "chromeShow": 5.236,
+ "chromeHide": 56.304,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.08,
+   "start": 0.31,
+   "end": 4.816,
    "text": "Lettre de démission : vous voulez quitter votre emploi, sans erreur de date ni conflit inutile ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.33,
-   "end": 14.27,
+   "start": 5.546,
+   "end": 9.521,
    "text": "Une démission mal datée peut vous coûter un mois de salaire. Ou créer un conflit inutile.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.52,
-   "end": 28.67,
+   "start": 10.251,
+   "end": 18.746,
    "text": "Sauf contrat contraire, le délai est d’un mois la première année, deux mois de la deuxième à la neuvième, trois mois ensuite, pour la fin d’un mois. Et la lettre doit arriver avant le début du délai.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 29.92,
-   "end": 41.04,
+   "start": 19.476,
+   "end": 26.21,
    "text": "On calcule votre délai et la date de fin exacte, on rédige une lettre personnalisée, et on y ajoute la demande de certificat de travail et le point sur vos vacances.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 42.29,
-   "end": 53.14,
+   "start": 26.94,
+   "end": 33.961,
    "text": "Vous voulez partir plus tôt ? La lettre peut proposer une date anticipée, en respectant le délai légal. Et on vous dit comment l’envoyer pour prouver la date.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 54.39,
-   "end": 64.38,
+   "start": 34.691,
+   "end": 41.984,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 65.63,
-   "end": 77.64,
+   "start": 42.714,
+   "end": 51.034,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 78.89,
-   "end": 84.58,
+   "start": 51.764,
+   "end": 55.884,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 6.29,
-   "slot": 6.59,
+   "dur": 4.657,
+   "slot": 4.957,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 6.29,
-   "dur": 6.48,
-   "slot": 6.78,
+   "start": 4.657,
+   "dur": 5.181,
+   "slot": 5.481,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 12.77,
-   "dur": 9.59,
-   "slot": 9.89,
+   "start": 9.838,
+   "dur": 6.709,
+   "slot": 7.009,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 22.36,
-   "dur": 12.82,
-   "slot": 13.12,
+   "start": 16.547,
+   "dur": 8.02,
+   "slot": 8.32,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 35.18,
-   "dur": 13.76,
-   "slot": 14.06,
+   "start": 24.567,
+   "dur": 9.022,
+   "slot": 9.322,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 48.94,
-   "dur": 11.62,
-   "slot": 11.92,
+   "start": 33.589,
+   "dur": 8.123,
+   "slot": 8.423,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 60.56,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.712,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 73.82,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.762,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 80.76,
+   "start": 55.612,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 6.29,
+   "t": 4.657,
    "label": "01 · Le problème"
   },
   {
-   "t": 22.36,
+   "t": 16.547,
    "label": "02 · La solution"
   },
   {
-   "t": 73.82,
+   "t": 50.762,
    "label": "03 · Commander"
   },
   {
-   "t": 80.76,
+   "t": 55.612,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 85.76,
- "chromeShow": 6.29,
- "chromeHide": 80.76,
+ "total": 60.612,
+ "chromeShow": 4.657,
+ "chromeHide": 55.612,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 5.59,
+   "start": 0.31,
+   "end": 4.237,
    "text": "Recouvrement : une facture impayée depuis des semaines, malgré vos rappels ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 6.84,
-   "end": 12.07,
+   "start": 4.967,
+   "end": 9.418,
    "text": "Chaque semaine d’attente pèse sur votre trésorerie. Et une créance finit par se prescrire.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 13.32,
-   "end": 21.66,
+   "start": 10.148,
+   "end": 16.127,
    "text": "Les créances se prescrivent par dix ans en règle générale, mais par cinq ans pour de nombreuses prestations courantes. Mieux vaut agir tôt.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 22.91,
-   "end": 34.48,
+   "start": 16.857,
+   "end": 24.147,
    "text": "On prend en charge tout le parcours : la mise en demeure avec intérêts, la réquisition de poursuite préparée, et si le débiteur fait opposition, l’analyse de la suite.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 35.73,
-   "end": 48.24,
+   "start": 24.877,
+   "end": 33.169,
    "text": "Contrairement à une société de recouvrement, on ne prend aucun pourcentage, et on préserve la relation client quand c’est possible. Vous déposez vous-même la réquisition, prête à l’emploi.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 49.49,
-   "end": 59.86,
+   "start": 33.899,
+   "end": 41.292,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez vos documents, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 61.11,
-   "end": 73.12,
+   "start": 42.022,
+   "end": 50.342,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 74.37,
-   "end": 80.06,
+   "start": 51.072,
+   "end": 55.192,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

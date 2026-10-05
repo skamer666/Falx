@@ -11,12 +11,6 @@ Conformité nLPD : depuis le 1er septembre 2023, la nouvelle loi sur la protecti
 👉 Toutes nos prestations pour entreprises : https://thrax-legal.ch/fr/entreprises
 👉 Le guide complet : https://thrax-legal.ch/fr/guide/conformite-nlpd-pme
 
-Chapitres
-0:00 Le problème
-0:10 Le problème
-0:31 La solution
-1:21 Commander
-
 Thrax Legal, service juridique externalisé à prix fixe pour les indépendants et les PME de Suisse romande. Thrax Legal n’est pas un cabinet d’avocats et ne représente pas ses clients devant les tribunaux.
 Informations générales : cette vidéo ne remplace pas un conseil adapté à votre situation.
 
@@ -27,4 +21,4 @@ nLPD, conformité nLPD, protection des données Suisse, politique de confidentia
 - Langue : français. Sous-titres : importer `transcription-youtube.txt` (synchronisation automatique).
 - Écran de fin (dernières secondes) : vidéo « Avocat ou service juridique externalisé ? » + bouton S’abonner.
 - Fiche info : ajouter le lien « Commander cette prestation ».
-- Durée : 1:33.46
+- Durée : 1:06.42

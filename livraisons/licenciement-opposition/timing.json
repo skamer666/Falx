@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 10.18,
-   "slot": 10.48,
+   "dur": 7.342,
+   "slot": 7.642,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 10.18,
-   "dur": 6.24,
-   "slot": 6.54,
+   "start": 7.342,
+   "dur": 3.998,
+   "slot": 4.298,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 16.42,
-   "dur": 13.95,
-   "slot": 14.25,
+   "start": 11.34,
+   "dur": 8.286,
+   "slot": 8.586,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 30.37,
-   "dur": 10.57,
-   "slot": 10.87,
+   "start": 19.626,
+   "dur": 7.077,
+   "slot": 7.377,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 40.94,
-   "dur": 8.23,
-   "slot": 8.53,
+   "start": 26.703,
+   "dur": 5.498,
+   "slot": 5.798,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 49.17,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 32.201,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 60.41,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 40.224,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 73.67,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 49.274,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 80.61,
+   "start": 54.124,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 10.18,
+   "t": 7.342,
    "label": "01 · Le problème"
   },
   {
-   "t": 30.37,
+   "t": 19.626,
    "label": "02 · La solution"
   },
   {
-   "t": 73.67,
+   "t": 49.274,
    "label": "03 · Commander"
   },
   {
-   "t": 80.61,
+   "t": 54.124,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 85.61,
- "chromeShow": 10.18,
- "chromeHide": 80.61,
+ "total": 59.124,
+ "chromeShow": 7.342,
+ "chromeHide": 54.124,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.48,
+   "start": 0.31,
+   "end": 6.922,
    "text": "Licenciement : vous venez d’être licencié et quelque chose ne vous semble pas juste ? Un délai, une maladie, un motif douteux ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.73,
-   "end": 15.72,
+   "start": 7.652,
+   "end": 10.92,
    "text": "Attention : si vous ne réagissez pas à temps, vous pouvez perdre vos droits.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.97,
-   "end": 29.67,
+   "start": 11.65,
+   "end": 19.206,
    "text": "Pour obtenir une indemnité pour congé abusif, il faut faire opposition par écrit avant la fin du délai de congé. Et un congé donné pendant une période de protection est nul.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 30.92,
-   "end": 40.24,
+   "start": 19.936,
+   "end": 26.283,
    "text": "On vérifie le délai de congé et la date de fin, les périodes de protection, maladie, accident ou grossesse, et le motif du congé.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 41.49,
-   "end": 48.47,
+   "start": 27.013,
+   "end": 31.781,
    "text": "Puis on rédige votre lettre d’opposition et la demande de motivation écrite, à votre nom, prêtes à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 49.72,
-   "end": 59.71,
+   "start": 32.511,
+   "end": 39.804,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 60.96,
-   "end": 72.97,
+   "start": 40.534,
+   "end": 48.854,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 74.22,
-   "end": 79.91,
+   "start": 49.584,
+   "end": 53.704,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

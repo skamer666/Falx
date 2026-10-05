@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.34,
-   "slot": 8.64,
+   "dur": 6.089,
+   "slot": 6.389,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.34,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 6.089,
+   "dur": 4.533,
+   "slot": 4.833,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.28,
-   "dur": 11.89,
-   "slot": 12.19,
+   "start": 10.622,
+   "dur": 7.842,
+   "slot": 8.142,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 27.17,
-   "dur": 10.75,
-   "slot": 11.05,
+   "start": 18.464,
+   "dur": 7.043,
+   "slot": 7.343,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 37.92,
-   "dur": 8.6,
-   "slot": 8.9,
+   "start": 25.507,
+   "dur": 6.055,
+   "slot": 6.355,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 46.52,
-   "dur": 11.81,
-   "slot": 12.11,
+   "start": 31.562,
+   "dur": 8.464,
+   "slot": 8.764,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 58.33,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 40.026,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 71.59,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 49.076,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 78.53,
+   "start": 53.926,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.34,
+   "t": 6.089,
    "label": "01 · Le problème"
   },
   {
-   "t": 27.17,
+   "t": 18.464,
    "label": "02 · La solution"
   },
   {
-   "t": 71.59,
+   "t": 49.076,
    "label": "03 · Commander"
   },
   {
-   "t": 78.53,
+   "t": 53.926,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 83.53,
- "chromeShow": 8.34,
- "chromeHide": 78.53,
+ "total": 58.926,
+ "chromeShow": 6.089,
+ "chromeHide": 53.926,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.64,
+   "start": 0.31,
+   "end": 5.669,
    "text": "Réclamation contre une taxation : déduction refusée, revenu estimé d’office, erreur de calcul ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.89,
-   "end": 14.58,
+   "start": 6.399,
+   "end": 10.202,
    "text": "Attention : le délai ne peut pas être prolongé. Il est fixé par la loi.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.83,
-   "end": 26.47,
+   "start": 10.932,
+   "end": 18.044,
    "text": "La réclamation doit être déposée dans les trente jours dès la notification de la décision, par écrit et motivée. Des règles similaires s’appliquent dans les cantons.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 27.72,
-   "end": 37.22,
+   "start": 18.774,
+   "end": 25.087,
    "text": "On compare votre déclaration et la décision, on rassemble les arguments et les pièces à joindre, et on rédige la réclamation, prête à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 38.47,
-   "end": 45.82,
+   "start": 25.817,
+   "end": 31.142,
    "text": "Bon à savoir : l’autorité réexamine toute la taxation. On vérifie donc ce risque avant de déposer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 47.07,
-   "end": 57.63,
+   "start": 31.872,
+   "end": 39.606,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réclamation, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 58.88,
-   "end": 70.89,
+   "start": 40.336,
+   "end": 48.656,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 72.14,
-   "end": 77.83,
+   "start": 49.386,
+   "end": 53.506,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

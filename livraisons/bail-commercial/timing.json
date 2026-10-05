@@ -1,0 +1,577 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 6.464,
+   "slot": 6.764,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 6.464,
+   "dur": 3.043,
+   "slot": 3.343,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 9.507,
+   "dur": 8.486,
+   "slot": 8.786,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 17.993,
+   "dur": 2.998,
+   "slot": 3.298,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 20.991,
+   "dur": 7.902,
+   "slot": 8.202,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 28.893,
+   "dur": 9.422,
+   "slot": 9.722,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 38.315,
+   "dur": 3.452,
+   "slot": 3.752,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 41.767,
+   "dur": 8.318,
+   "slot": 8.618,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 50.085,
+   "dur": 9.714,
+   "slot": 10.014,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 59.799,
+   "dur": 3.6,
+   "slot": 3.9,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 63.399,
+   "dur": 7.918,
+   "slot": 8.218,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 71.317,
+   "dur": 6.702,
+   "slot": 7.002,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 78.019,
+   "dur": 6.73,
+   "slot": 7.03,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 84.749,
+   "dur": 5.695,
+   "slot": 5.995,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 90.444,
+   "dur": 3.645,
+   "slot": 3.945,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 94.089,
+   "dur": 8.759,
+   "slot": 9.059,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 102.848,
+   "dur": 9.519,
+   "slot": 9.819,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 112.367,
+   "dur": 3.089,
+   "slot": 3.389,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 115.456,
+   "dur": 5.498,
+   "slot": 5.798,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 120.954,
+   "dur": 4.566,
+   "slot": 4.866,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 125.52,
+   "dur": 9.339,
+   "slot": 9.639,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 134.859,
+   "dur": 3.077,
+   "slot": 3.377,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 137.936,
+   "dur": 14.43,
+   "slot": 14.73,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 152.366,
+   "dur": 3.316,
+   "slot": 3.616,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 155.682,
+   "dur": 11.649,
+   "slot": 11.949,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 167.331,
+   "dur": 7.643,
+   "slot": 7.943,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 174.974,
+   "dur": 9.339,
+   "slot": 9.639,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 184.313,
+   "dur": 2.168,
+   "slot": 2.468,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 186.481,
+   "dur": 10.931,
+   "slot": 11.231,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 197.412,
+   "dur": 8.566,
+   "slot": 8.866,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 205.978,
+   "dur": 6.986,
+   "slot": 7.286,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 212.964,
+   "dur": 7.475,
+   "slot": 7.775,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 220.439,
+   "dur": 8.316,
+   "slot": 8.616,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 228.755,
+   "dur": 6.264,
+   "slot": 6.564,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 235.019,
+   "dur": 5.759,
+   "slot": 6.059,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 240.778,
+   "dur": 9.134,
+   "slot": 9.434,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 249.912,
+   "dur": 6.327,
+   "slot": 6.627,
+   "last": false
+  },
+  "sc38": {
+   "index": 37,
+   "start": 256.239,
+   "dur": 6.0,
+   "slot": 6.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 17.993,
+   "label": "01 · Commercial ou habitation ?"
+  },
+  {
+   "t": 38.315,
+   "label": "02 · Les clauses à vérifier"
+  },
+  {
+   "t": 90.444,
+   "label": "03 · Travaux et remise en état"
+  },
+  {
+   "t": 112.367,
+   "label": "04 · Entretien et défauts"
+  },
+  {
+   "t": 134.859,
+   "label": "05 · Partir avant la fin"
+  },
+  {
+   "t": 152.366,
+   "label": "06 · Contester"
+  },
+  {
+   "t": 174.974,
+   "label": "07 · Fin de bail"
+  },
+  {
+   "t": 184.313,
+   "label": "08 · Les erreurs fréquentes"
+  },
+  {
+   "t": 197.412,
+   "label": "09 · Se faire accompagner"
+  },
+  {
+   "t": 256.239,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 262.239,
+ "chromeShow": 17.993,
+ "chromeHide": 256.239,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 6.044,
+   "text": "Bail commercial en Suisse : c’est souvent cinq ans ou plus d’engagement, et des dizaines, parfois des centaines de milliers de francs de loyers.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 6.774,
+   "end": 9.087,
+   "text": "Et la plupart des locataires signent sans le faire relire.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 9.817,
+   "end": 17.573,
+   "text": "Dans cette vidéo : les différences avec un bail d’habitation, les clauses à vérifier ligne par ligne, comment contester un loyer ou un congé, et le piège numéro un en fin de bail.",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 18.303,
+   "end": 20.571,
+   "text": "D’abord : ce qui change par rapport à un logement.",
+   "section": "01 · Commercial ou habitation ?"
+  },
+  {
+   "scene": "sc05",
+   "start": 21.301,
+   "end": 28.473,
+   "text": "Pour des locaux commerciaux, le délai de résiliation légal est de six mois, au lieu de trois. Le juge peut prolonger le bail jusqu’à six ans, au lieu de quatre.",
+   "section": "01 · Commercial ou habitation ?"
+  },
+  {
+   "scene": "sc06",
+   "start": 29.203,
+   "end": 37.895,
+   "text": "La garantie de loyer n’a pas de plafond légal, alors qu’elle est limitée à trois mois pour un logement. Et vous pouvez transférer votre bail à un repreneur : le bailleur ne peut refuser que pour de justes motifs.",
+   "section": "01 · Commercial ou habitation ?"
+  },
+  {
+   "scene": "sc07",
+   "start": 38.625,
+   "end": 41.347,
+   "text": "Ensuite, les clauses à vérifier, ligne par ligne.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc08",
+   "start": 42.077,
+   "end": 49.665,
+   "text": "La durée, avec ses options de renouvellement : c’est la clause la plus importante. Un bail de dix ans sans option de sortie peut devenir un boulet si votre activité change.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc09",
+   "start": 50.395,
+   "end": 59.379,
+   "text": "Le loyer : un loyer indexé sur l’indice des prix n’est valable que si le bail est conclu pour cinq ans au moins. Un loyer échelonné exige trois ans au moins, avec une seule hausse par an, fixée en francs.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc10",
+   "start": 60.109,
+   "end": 62.979,
+   "text": "Si ces conditions ne sont pas remplies, la clause n’est pas valable.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc11",
+   "start": 63.709,
+   "end": 70.897,
+   "text": "Les frais accessoires : seuls ceux expressément mentionnés dans le contrat peuvent vous être facturés en plus du loyer. Tout ce qui n’est pas listé est compris dans le loyer.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc12",
+   "start": 71.627,
+   "end": 77.599,
+   "text": "La garantie : elle doit être déposée sur un compte bancaire à votre nom. Pour des locaux commerciaux, son montant se négocie.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc13",
+   "start": 78.329,
+   "end": 84.329,
+   "text": "Vous avez un bail sur la table et vous hésitez à signer ? Chez Thrax Legal, c’est exactement le type de dossier qu’on traite pour nos abonnés.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc14",
+   "start": 85.059,
+   "end": 90.024,
+   "text": "Vous nous envoyez le bail, on vous signale chaque clause à risque avant la signature. Le lien est dans la description.",
+   "section": "02 · Les clauses à vérifier"
+  },
+  {
+   "scene": "sc15",
+   "start": 90.754,
+   "end": 93.669,
+   "text": "Le piège numéro un : les travaux, et la remise en état.",
+   "section": "03 · Travaux et remise en état"
+  },
+  {
+   "scene": "sc16",
+   "start": 94.399,
+   "end": 102.428,
+   "text": "Vous aménagez les locaux : cuisine, cloisons, vitrine. Mais à la fin du bail, le bailleur peut exiger la remise en état, sauf accord écrit contraire.",
+   "section": "03 · Travaux et remise en état"
+  },
+  {
+   "scene": "sc17",
+   "start": 103.158,
+   "end": 111.947,
+   "text": "Et une indemnité pour la plus-value n’est possible que si le bailleur a donné son accord écrit aux travaux. Réglez par écrit, avant de signer, qui paie quoi, ce qui reste, et ce qui doit être démonté.",
+   "section": "03 · Travaux et remise en état"
+  },
+  {
+   "scene": "sc18",
+   "start": 112.677,
+   "end": 115.036,
+   "text": "Quatrième point : l’entretien et les défauts.",
+   "section": "04 · Entretien et défauts"
+  },
+  {
+   "scene": "sc19",
+   "start": 115.766,
+   "end": 120.534,
+   "text": "Les menus travaux d’entretien sont à votre charge. Les défauts plus importants sont à la charge du bailleur.",
+   "section": "04 · Entretien et défauts"
+  },
+  {
+   "scene": "sc20",
+   "start": 121.264,
+   "end": 125.1,
+   "text": "S’il ne répare pas, vous pouvez demander une baisse de loyer, voire consigner le loyer.",
+   "section": "04 · Entretien et défauts"
+  },
+  {
+   "scene": "sc21",
+   "start": 125.83,
+   "end": 134.439,
+   "text": "Mais en respectant une procédure précise : un délai écrit d’abord, puis une annonce, puis un dépôt auprès de l’office désigné par le canton. Une erreur, et vous risquez d’être en retard de paiement.",
+   "section": "04 · Entretien et défauts"
+  },
+  {
+   "scene": "sc22",
+   "start": 135.169,
+   "end": 137.516,
+   "text": "Cinquième point : partir avant la fin du bail.",
+   "section": "05 · Partir avant la fin"
+  },
+  {
+   "scene": "sc23",
+   "start": 138.246,
+   "end": 151.946,
+   "text": "Sous-location : le bailleur ne peut la refuser que pour des motifs précis. Transfert du bail à un repreneur : possible, avec l’accord du bailleur, qui ne peut refuser que pour de justes motifs. Restitution anticipée : présentez un nouveau locataire solvable et acceptable, et vous êtes libéré.",
+   "section": "05 · Partir avant la fin"
+  },
+  {
+   "scene": "sc24",
+   "start": 152.676,
+   "end": 155.262,
+   "text": "Sixième point : contester un loyer ou un congé.",
+   "section": "06 · Contester"
+  },
+  {
+   "scene": "sc25",
+   "start": 155.992,
+   "end": 166.911,
+   "text": "Le loyer initial vous semble abusif ? Sous certaines conditions, vous pouvez le contester dans les trente jours après la remise des locaux. Une hausse en cours de bail doit être notifiée sur formule officielle, et elle se conteste aussi dans les trente jours.",
+   "section": "06 · Contester"
+  },
+  {
+   "scene": "sc26",
+   "start": 167.641,
+   "end": 174.554,
+   "text": "Un congé du bailleur doit être donné sur formule officielle, sinon il est nul. Vous avez trente jours pour le contester, ou demander une prolongation.",
+   "section": "06 · Contester"
+  },
+  {
+   "scene": "sc27",
+   "start": 175.284,
+   "end": 183.893,
+   "text": "En fin de bail, faites un état des lieux de sortie précis. Le bailleur doit signaler les défauts immédiatement. S’il ne le fait pas, il ne peut plus les invoquer plus tard, sauf défauts cachés.",
+   "section": "07 · Fin de bail"
+  },
+  {
+   "scene": "sc28",
+   "start": 184.623,
+   "end": 186.061,
+   "text": "Et les erreurs les plus fréquentes.",
+   "section": "08 · Les erreurs fréquentes"
+  },
+  {
+   "scene": "sc29",
+   "start": 186.791,
+   "end": 196.992,
+   "text": "Signer sans option de sortie. Accepter une indexation sur un bail de moins de cinq ans. Ne rien écrire sur les travaux. Laisser passer le délai de trente jours pour contester. Et ne pas faire d’état des lieux d’entrée.",
+   "section": "08 · Les erreurs fréquentes"
+  },
+  {
+   "scene": "sc30",
+   "start": 197.722,
+   "end": 205.558,
+   "text": "Un bail commercial, c’est souvent le plus gros engagement financier d’une PME après les salaires. Le faire relire avant de signer coûte peu. Ne pas le faire peut coûter des années.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc31",
+   "start": 206.288,
+   "end": 212.544,
+   "text": "C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc32",
+   "start": 213.274,
+   "end": 220.019,
+   "text": "Concrètement : on relit votre bail avant signature, on vous aide à négocier les clauses à risque, et on vous accompagne en cas de hausse, de défaut ou de congé.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc33",
+   "start": 220.749,
+   "end": 228.335,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc34",
+   "start": 229.065,
+   "end": 234.599,
+   "text": "Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc35",
+   "start": 235.329,
+   "end": 240.358,
+   "text": "Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc36",
+   "start": 241.088,
+   "end": 249.492,
+   "text": "Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.",
+   "section": "09 · Se faire accompagner"
+  },
+  {
+   "scene": "sc37",
+   "start": 250.222,
+   "end": 255.819,
+   "text": "Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.",
+   "section": "09 · Se faire accompagner"
+  }
+ ]
+}

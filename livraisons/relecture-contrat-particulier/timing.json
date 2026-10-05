@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.89,
-   "slot": 9.19,
+   "dur": 6.055,
+   "slot": 6.355,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.89,
-   "dur": 9.21,
-   "slot": 9.51,
+   "start": 6.055,
+   "dur": 6.609,
+   "slot": 6.909,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 18.1,
-   "dur": 9.46,
-   "slot": 9.76,
+   "start": 12.664,
+   "dur": 5.816,
+   "slot": 6.116,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 27.56,
-   "dur": 9.91,
-   "slot": 10.21,
+   "start": 18.48,
+   "dur": 6.077,
+   "slot": 6.377,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 37.47,
-   "dur": 7.84,
-   "slot": 8.14,
+   "start": 24.557,
+   "dur": 5.464,
+   "slot": 5.764,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 45.31,
-   "dur": 11.62,
-   "slot": 11.92,
+   "start": 30.021,
+   "dur": 8.281,
+   "slot": 8.581,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 56.93,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 38.302,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 70.19,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 47.352,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 77.13,
+   "start": 52.202,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.89,
+   "t": 6.055,
    "label": "01 · Le problème"
   },
   {
-   "t": 27.56,
+   "t": 18.48,
    "label": "02 · La solution"
   },
   {
-   "t": 70.19,
+   "t": 47.352,
    "label": "03 · Commander"
   },
   {
-   "t": 77.13,
+   "t": 52.202,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 82.13,
- "chromeShow": 8.89,
- "chromeHide": 77.13,
+ "total": 57.202,
+ "chromeShow": 6.055,
+ "chromeHide": 52.202,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.19,
+   "start": 0.31,
+   "end": 5.635,
    "text": "Relecture de contrat : leasing, prêt, achat de véhicule, travaux… vous êtes sur le point de signer ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.44,
-   "end": 17.4,
+   "start": 6.365,
+   "end": 12.244,
    "text": "Une fois signé, il est souvent trop tard pour négocier. Clauses défavorables, frais cachés : mieux vaut les voir avant.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 18.65,
-   "end": 26.86,
+   "start": 12.974,
+   "end": 18.06,
    "text": "Bon à savoir : pour un leasing ou un crédit à la consommation, vous pouvez révoquer votre accord dans les quatorze jours.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 28.11,
-   "end": 36.77,
+   "start": 18.79,
+   "end": 24.137,
    "text": "On relit tout le contrat, on dresse la liste des risques et des clauses inhabituelles, et on vous propose des modifications à demander.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 38.02,
-   "end": 44.61,
+   "start": 24.867,
+   "end": 29.601,
    "text": "Clauses défavorables, frais cachés, points à négocier : vous savez exactement ce que vous signez.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 45.86,
-   "end": 56.23,
+   "start": 30.331,
+   "end": 37.882,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre relecture, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 57.48,
-   "end": 69.49,
+   "start": 38.612,
+   "end": 46.932,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 70.74,
-   "end": 76.43,
+   "start": 47.662,
+   "end": 51.782,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

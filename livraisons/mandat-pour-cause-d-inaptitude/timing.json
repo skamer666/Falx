@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 10.03,
-   "slot": 10.33,
+   "dur": 5.986,
+   "slot": 6.286,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 10.03,
-   "dur": 8.79,
-   "slot": 9.09,
+   "start": 5.986,
+   "dur": 6.048,
+   "slot": 6.348,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 18.82,
-   "dur": 12.94,
-   "slot": 13.24,
+   "start": 12.034,
+   "dur": 8.15,
+   "slot": 8.45,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 31.76,
-   "dur": 11.26,
-   "slot": 11.56,
+   "start": 20.184,
+   "dur": 8.373,
+   "slot": 8.673,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 43.02,
-   "dur": 12.79,
-   "slot": 13.09,
+   "start": 28.557,
+   "dur": 7.524,
+   "slot": 7.824,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 55.81,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 36.081,
+   "dur": 8.18,
+   "slot": 8.48,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 67.24,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 44.261,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 80.5,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 53.311,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 87.44,
+   "start": 58.161,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 10.03,
+   "t": 5.986,
    "label": "01 · Le problème"
   },
   {
-   "t": 31.76,
+   "t": 20.184,
    "label": "02 · La solution"
   },
   {
-   "t": 80.5,
+   "t": 53.311,
    "label": "03 · Commander"
   },
   {
-   "t": 87.44,
+   "t": 58.161,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 92.44,
- "chromeShow": 10.03,
- "chromeHide": 87.44,
+ "total": 63.161,
+ "chromeShow": 5.986,
+ "chromeHide": 58.161,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 9.33,
+   "start": 0.31,
+   "end": 5.566,
    "text": "Mandat pour cause d’inaptitude : si un accident ou une maladie vous empêchait de gérer vos affaires, qui déciderait pour vous ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 10.58,
-   "end": 18.12,
+   "start": 6.296,
+   "end": 11.614,
    "text": "Sans mandat, c’est l’autorité de protection qui désigne quelqu’un. Pas forcément la personne que vous auriez choisie.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 19.37,
-   "end": 31.06,
+   "start": 12.344,
+   "end": 19.764,
    "text": "Le mandat doit être entièrement écrit à la main, daté et signé, ou passé en la forme authentique. Et votre conjoint ne peut vous représenter que pour les affaires courantes.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 32.31,
-   "end": 42.32,
+   "start": 20.494,
+   "end": 28.137,
    "text": "Vous choisissez les domaines : votre personne, votre patrimoine, la représentation. Puis on rédige le texte du mandat, adapté à votre situation.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 43.57,
-   "end": 55.11,
+   "start": 28.867,
+   "end": 35.661,
    "text": "Vous recevez aussi les instructions pour la forme et l’enregistrement à l’état civil. Et vous pouvez le modifier à tout moment, tant que vous êtes capable de discernement.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 56.36,
-   "end": 66.54,
+   "start": 36.391,
+   "end": 43.841,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre mandat, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 67.79,
-   "end": 79.8,
+   "start": 44.571,
+   "end": 52.891,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 81.05,
-   "end": 86.74,
+   "start": 53.621,
+   "end": 57.741,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

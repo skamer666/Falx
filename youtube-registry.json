@@ -92,85 +92,85 @@
   "convention-de-concubinage": {
    "kind": "service",
    "site_key": "particuliers/convention-de-concubinage",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "decompte-de-charges": {
    "kind": "service",
    "site_key": "particuliers/decompte-de-charges",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "defaut-logement": {
    "kind": "service",
    "site_key": "particuliers/defaut-logement",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "directives-anticipees": {
    "kind": "service",
    "site_key": "particuliers/directives-anticipees",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "garantie-achat-defectueux": {
    "kind": "service",
    "site_key": "particuliers/garantie-achat-defectueux",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "garantie-de-loyer": {
    "kind": "service",
    "site_key": "particuliers/garantie-de-loyer",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "lettre-de-demission": {
    "kind": "service",
    "site_key": "particuliers/lettre-de-demission",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "lettre-juridique-sur-mesure": {
    "kind": "service",
    "site_key": "particuliers/lettre-juridique-sur-mesure",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "licenciement-employeur": {
    "kind": "service",
    "site_key": "entreprises/licenciement-employeur",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "licenciement-opposition": {
    "kind": "service",
    "site_key": "particuliers/licenciement-opposition",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "litige-artisan": {
    "kind": "service",
    "site_key": "particuliers/litige-artisan",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "litige-commercial": {
    "kind": "service",
    "site_key": "entreprises/litige-commercial",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "litige-de-voisinage": {
    "kind": "service",
    "site_key": "particuliers/litige-de-voisinage",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "mandat-pour-cause-d-inaptitude": {
    "kind": "service",
    "site_key": "particuliers/mandat-pour-cause-d-inaptitude",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "mise-en-demeure": {
@@ -182,181 +182,181 @@
   "opposition-assurance-sociale": {
    "kind": "service",
    "site_key": "particuliers/opposition-assurance-sociale",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "pack-conformite-nlpd": {
    "kind": "service",
    "site_key": "entreprises/pack-conformite-nlpd",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "politique-de-confidentialite": {
    "kind": "service",
    "site_key": "entreprises/politique-de-confidentialite",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "poursuite-injustifiee": {
    "kind": "service",
    "site_key": "particuliers/poursuite-injustifiee",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "question-juridique": {
    "kind": "service",
    "site_key": "particuliers/question-juridique",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "reclamation-taxation-impots": {
    "kind": "service",
    "site_key": "particuliers/reclamation-taxation-impots",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "recouvrement-facture-impayee": {
    "kind": "service",
    "site_key": "entreprises/recouvrement-facture-impayee",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "rectification-certificat-de-travail": {
    "kind": "service",
    "site_key": "particuliers/rectification-certificat-de-travail",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "recuperer-argent-prete": {
    "kind": "service",
    "site_key": "particuliers/recuperer-argent-prete",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "refus-assurance": {
    "kind": "service",
    "site_key": "particuliers/refus-assurance",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "reglement-du-personnel": {
    "kind": "service",
    "site_key": "entreprises/reglement-du-personnel",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "relecture-bail-commercial": {
    "kind": "service",
    "site_key": "entreprises/relecture-bail-commercial",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "relecture-contrat-commercial": {
    "kind": "service",
    "site_key": "entreprises/relecture-contrat-commercial",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "relecture-contrat-de-travail": {
    "kind": "service",
    "site_key": "particuliers/relecture-contrat-de-travail",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "relecture-contrat-particulier": {
    "kind": "service",
    "site_key": "particuliers/relecture-contrat-particulier",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "requete-conciliation-travail": {
    "kind": "service",
    "site_key": "particuliers/requete-conciliation-travail",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "requete-de-mainlevee": {
    "kind": "service",
    "site_key": "entreprises/requete-de-mainlevee",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "resiliation-anticipee-bail": {
    "kind": "service",
    "site_key": "particuliers/resiliation-anticipee-bail",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "resiliation-de-contrat": {
    "kind": "service",
    "site_key": "particuliers/resiliation-de-contrat",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "salaire-impaye": {
    "kind": "service",
    "site_key": "particuliers/salaire-impaye",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "separation-divorce-amiable": {
    "kind": "service",
    "site_key": "particuliers/separation-divorce-amiable",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "statuts-d-association": {
    "kind": "service",
    "site_key": "entreprises/statuts-d-association",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "testament": {
    "kind": "service",
    "site_key": "particuliers/testament",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "vol-annule-retarde": {
    "kind": "service",
    "site_key": "particuliers/vol-annule-retarde",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "bail-commercial": {
    "kind": "guide",
    "site_key": "bail-commercial-suisse-guide",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "cgv-suisse": {
    "kind": "guide",
    "site_key": "cgv-suisses-guide",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "contrat-de-travail": {
    "kind": "guide",
    "site_key": "contrat-de-travail-suisse-pme",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "facture-impayee": {
    "kind": "guide",
    "site_key": "mise-en-demeure-recouvrement-suisse",
-   "status": "todo",
+   "status": "rendered",
    "youtube_id": null
   },
   "nlpd-pme": {
    "kind": "guide",
    "site_key": "conformite-nlpd-pme",
-   "status": "todo",
+   "status": "rendering",
    "youtube_id": null
   },
   "avocat-ou-service-juridique": {
    "kind": "comparison",
    "site_key": "alternative-embauche-juriste",
-   "status": "todo",
+   "status": "rendering",
    "youtube_id": null
   },
   "presentation-thrax-legal": {

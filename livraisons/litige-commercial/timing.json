@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.06,
-   "slot": 7.36,
+   "dur": 5.668,
+   "slot": 5.968,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.06,
-   "dur": 8.02,
-   "slot": 8.32,
+   "start": 5.668,
+   "dur": 6.284,
+   "slot": 6.584,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.08,
-   "dur": 7.91,
-   "slot": 8.21,
+   "start": 11.952,
+   "dur": 5.759,
+   "slot": 6.059,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 22.99,
-   "dur": 9.98,
-   "slot": 10.28,
+   "start": 17.711,
+   "dur": 6.395,
+   "slot": 6.695,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 32.97,
-   "dur": 11.77,
-   "slot": 12.07,
+   "start": 24.106,
+   "dur": 7.716,
+   "slot": 8.016,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 44.74,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 31.822,
+   "dur": 8.08,
+   "slot": 8.38,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 56.17,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 39.902,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 69.43,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 48.952,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 76.37,
+   "start": 53.802,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.06,
+   "t": 5.668,
    "label": "01 · Le problème"
   },
   {
-   "t": 22.99,
+   "t": 17.711,
    "label": "02 · La solution"
   },
   {
-   "t": 69.43,
+   "t": 48.952,
    "label": "03 · Commander"
   },
   {
-   "t": 76.37,
+   "t": 53.802,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 81.37,
- "chromeShow": 7.06,
- "chromeHide": 76.37,
+ "total": 58.802,
+ "chromeShow": 5.668,
+ "chromeHide": 53.802,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.36,
+   "start": 0.31,
+   "end": 5.248,
    "text": "Litige commercial : livraison non conforme, prestation contestée, rupture de contrat ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 7.61,
-   "end": 14.38,
+   "start": 5.978,
+   "end": 11.532,
    "text": "Sans écrit précis, votre position s’affaiblit. Et les échanges informels s’accumulent, sans trace claire.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.63,
-   "end": 22.29,
+   "start": 12.262,
+   "end": 17.291,
    "text": "Les écrits comptent : un courrier précis, envoyé tôt, renforce votre position en cas de procédure.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 23.54,
-   "end": 32.27,
+   "start": 18.021,
+   "end": 23.686,
    "text": "On analyse le contrat et les échanges, on évalue votre position et les risques, puis on rédige le courrier formel à la partie adverse.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 33.52,
-   "end": 44.04,
+   "start": 24.416,
+   "end": 31.402,
    "text": "Vous restez l’interlocuteur, avec des arguments solides. Et si le litige va au tribunal, on vous oriente vers un avocat, avec un dossier propre.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 45.29,
-   "end": 55.47,
+   "start": 32.132,
+   "end": 39.482,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre courrier, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 56.72,
-   "end": 68.73,
+   "start": 40.212,
+   "end": 48.532,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 69.98,
-   "end": 75.67,
+   "start": 49.262,
+   "end": 53.382,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

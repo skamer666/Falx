@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.0,
-   "slot": 9.3,
+   "dur": 6.032,
+   "slot": 6.332,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.0,
-   "dur": 7.43,
-   "slot": 7.73,
+   "start": 6.032,
+   "dur": 5.223,
+   "slot": 5.523,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 16.43,
-   "dur": 14.19,
-   "slot": 14.49,
+   "start": 11.255,
+   "dur": 9.961,
+   "slot": 10.261,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 30.62,
-   "dur": 10.1,
-   "slot": 10.4,
+   "start": 21.216,
+   "dur": 6.452,
+   "slot": 6.752,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 40.72,
-   "dur": 11.18,
-   "slot": 11.48,
+   "start": 27.668,
+   "dur": 7.714,
+   "slot": 8.014,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 51.9,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 35.382,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 63.14,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 43.405,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 76.4,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 52.455,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 83.34,
+   "start": 57.305,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.0,
+   "t": 6.032,
    "label": "01 · Le problème"
   },
   {
-   "t": 30.62,
+   "t": 21.216,
    "label": "02 · La solution"
   },
   {
-   "t": 76.4,
+   "t": 52.455,
    "label": "03 · Commander"
   },
   {
-   "t": 83.34,
+   "t": 57.305,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 88.34,
- "chromeShow": 9.0,
- "chromeHide": 83.34,
+ "total": 62.305,
+ "chromeShow": 6.032,
+ "chromeHide": 57.305,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.3,
+   "start": 0.31,
+   "end": 5.612,
    "text": "Résilier un abonnement ou un contrat : fitness, téléphonie, assurance… et on fait la sourde oreille ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.55,
-   "end": 15.73,
+   "start": 6.342,
+   "end": 10.835,
    "text": "Une résiliation envoyée trop tard ne prend effet qu’à l’échéance suivante. Et l’abonnement continue.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.98,
-   "end": 29.92,
+   "start": 11.565,
+   "end": 20.796,
    "text": "Pour une assurance, le contrat peut en principe être résilié pour la fin de la troisième année, puis chaque année. Et si votre résiliation respecte le contrat, elle produit ses effets, même sans accord.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 31.17,
-   "end": 40.02,
+   "start": 21.526,
+   "end": 27.248,
    "text": "On vérifie les conditions de résiliation, on calcule la date de fin possible, et on rédige une lettre de résiliation prête à envoyer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 41.27,
-   "end": 51.2,
+   "start": 27.978,
+   "end": 34.962,
    "text": "Le fournisseur refuse ? La lettre le rappelle clairement. Et s’il existe un juste motif, on vérifie si une résiliation immédiate est possible.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 52.45,
-   "end": 62.44,
+   "start": 35.692,
+   "end": 42.985,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 63.69,
-   "end": 75.7,
+   "start": 43.715,
+   "end": 52.035,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 76.95,
-   "end": 82.64,
+   "start": 52.765,
+   "end": 56.885,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

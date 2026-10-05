@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 6.99,
-   "slot": 7.29,
+   "dur": 4.566,
+   "slot": 4.866,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 6.99,
-   "dur": 5.33,
-   "slot": 5.63,
+   "start": 4.566,
+   "dur": 4.635,
+   "slot": 4.935,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 12.32,
-   "dur": 12.86,
-   "slot": 13.16,
+   "start": 9.201,
+   "dur": 9.248,
+   "slot": 9.548,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.18,
-   "dur": 9.33,
-   "slot": 9.63,
+   "start": 18.449,
+   "dur": 6.327,
+   "slot": 6.627,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 34.51,
-   "dur": 11.12,
-   "slot": 11.42,
+   "start": 24.776,
+   "dur": 7.314,
+   "slot": 7.614,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 45.63,
-   "dur": 11.43,
-   "slot": 11.73,
+   "start": 32.09,
+   "dur": 8.192,
+   "slot": 8.492,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 57.06,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 40.282,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 70.32,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 49.332,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 77.26,
+   "start": 54.182,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 6.99,
+   "t": 4.566,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.18,
+   "t": 18.449,
    "label": "02 · La solution"
   },
   {
-   "t": 70.32,
+   "t": 49.332,
    "label": "03 · Commander"
   },
   {
-   "t": 77.26,
+   "t": 54.182,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 82.26,
- "chromeShow": 6.99,
- "chromeHide": 77.26,
+ "total": 59.182,
+ "chromeShow": 4.566,
+ "chromeHide": 54.182,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.29,
+   "start": 0.31,
+   "end": 4.146,
    "text": "Requête de mainlevée : votre débiteur a fait opposition au commandement de payer ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 7.54,
-   "end": 11.62,
+   "start": 4.876,
+   "end": 8.781,
    "text": "Sans mainlevée, la poursuite s’arrête là. Et votre créance reste impayée.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 12.87,
-   "end": 24.48,
+   "start": 9.511,
+   "end": 18.029,
    "text": "Avec une reconnaissance de dette signée, c’est la mainlevée provisoire. Avec un jugement exécutoire, la mainlevée définitive. Sans titre, il faut agir devant le juge.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 25.73,
-   "end": 33.81,
+   "start": 18.759,
+   "end": 24.356,
    "text": "On vérifie votre titre, on rédige la requête de mainlevée, provisoire ou définitive, et on prépare le bordereau de pièces.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 35.06,
-   "end": 44.93,
+   "start": 25.086,
+   "end": 31.67,
    "text": "Un contrat signé suffit souvent, si la prestation a été fournie. Vous déposez la requête vous-même, et on vous indique le tribunal compétent.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 46.18,
-   "end": 56.36,
+   "start": 32.4,
+   "end": 39.862,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre requête, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 57.61,
-   "end": 69.62,
+   "start": 40.592,
+   "end": 48.912,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 70.87,
-   "end": 76.56,
+   "start": 49.642,
+   "end": 53.762,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

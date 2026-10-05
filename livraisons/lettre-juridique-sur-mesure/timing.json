@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 8.67,
-   "slot": 8.97,
+   "dur": 6.759,
+   "slot": 7.059,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 8.67,
-   "dur": 7.07,
-   "slot": 7.37,
+   "start": 6.759,
+   "dur": 4.748,
+   "slot": 5.048,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 15.74,
-   "dur": 10.25,
-   "slot": 10.55,
+   "start": 11.507,
+   "dur": 6.991,
+   "slot": 7.291,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.99,
-   "dur": 9.52,
-   "slot": 9.82,
+   "start": 18.498,
+   "dur": 6.464,
+   "slot": 6.764,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 35.51,
-   "dur": 7.84,
-   "slot": 8.14,
+   "start": 24.962,
+   "dur": 5.036,
+   "slot": 5.336,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 43.35,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 29.998,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 54.59,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 38.021,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 67.85,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 47.071,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 74.79,
+   "start": 51.921,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 8.67,
+   "t": 6.759,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.99,
+   "t": 18.498,
    "label": "02 · La solution"
   },
   {
-   "t": 67.85,
+   "t": 47.071,
    "label": "03 · Commander"
   },
   {
-   "t": 74.79,
+   "t": 51.921,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 79.79,
- "chromeShow": 8.67,
- "chromeHide": 74.79,
+ "total": 56.921,
+ "chromeShow": 6.759,
+ "chromeHide": 51.921,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.97,
+   "start": 0.31,
+   "end": 6.339,
    "text": "Lettre juridique sur mesure : réclamation, contestation, demande… votre situation n’entre dans aucune case ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.22,
-   "end": 15.04,
+   "start": 7.069,
+   "end": 11.087,
    "text": "Un courrier vague reste souvent sans effet. Et ne vous sert à rien en cas de procédure.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 16.29,
-   "end": 25.29,
+   "start": 11.817,
+   "end": 18.078,
    "text": "Une lettre bien rédigée fixe un délai, cite les bonnes règles et laisse une trace écrite utile en cas de procédure. Elle est rédigée à votre nom.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 26.54,
-   "end": 34.81,
+   "start": 18.808,
+   "end": 24.542,
    "text": "On analyse votre situation, on rédige une lettre juridiquement fondée, prête à envoyer, et un tour de corrections est inclus.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 36.06,
-   "end": 42.65,
+   "start": 25.272,
+   "end": 29.578,
    "text": "Vous l’envoyez vous-même. Et si la situation est plus complexe, on vous le dit avant de commencer.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 43.9,
-   "end": 53.89,
+   "start": 30.308,
+   "end": 37.601,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 55.14,
-   "end": 67.15,
+   "start": 38.331,
+   "end": 46.651,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 68.4,
-   "end": 74.09,
+   "start": 47.381,
+   "end": 51.501,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

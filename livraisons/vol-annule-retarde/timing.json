@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.11,
-   "slot": 7.41,
+   "dur": 5.373,
+   "slot": 5.673,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.11,
-   "dur": 7.51,
-   "slot": 7.81,
+   "start": 5.373,
+   "dur": 4.93,
+   "slot": 5.23,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 14.62,
-   "dur": 13.57,
-   "slot": 13.87,
+   "start": 10.303,
+   "dur": 8.411,
+   "slot": 8.711,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 28.19,
-   "dur": 12.5,
-   "slot": 12.8,
+   "start": 18.714,
+   "dur": 8.1,
+   "slot": 8.4,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 40.69,
-   "dur": 9.05,
-   "slot": 9.35,
+   "start": 26.814,
+   "dur": 6.044,
+   "slot": 6.344,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 49.74,
-   "dur": 11.81,
-   "slot": 12.11,
+   "start": 32.858,
+   "dur": 8.464,
+   "slot": 8.764,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 61.55,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 41.322,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 74.81,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 50.372,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 81.75,
+   "start": 55.222,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.11,
+   "t": 5.373,
    "label": "01 · Le problème"
   },
   {
-   "t": 28.19,
+   "t": 18.714,
    "label": "02 · La solution"
   },
   {
-   "t": 74.81,
+   "t": 50.372,
    "label": "03 · Commander"
   },
   {
-   "t": 81.75,
+   "t": 55.222,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 86.75,
- "chromeShow": 7.11,
- "chromeHide": 81.75,
+ "total": 60.222,
+ "chromeShow": 5.373,
+ "chromeHide": 55.222,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 6.41,
+   "start": 0.31,
+   "end": 4.953,
    "text": "Vol annulé ou retardé : annulation, surréservation, retard important ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 7.66,
-   "end": 13.92,
+   "start": 5.683,
+   "end": 9.883,
    "text": "Et si vous passez par une plateforme, elle prélève souvent un pourcentage sur votre propre indemnité.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 15.17,
-   "end": 27.49,
+   "start": 10.613,
+   "end": 18.294,
    "text": "Pourtant, vous avez peut-être droit à une indemnité de deux cent cinquante à six cents euros par passager. Et le règlement européen s’applique aussi aux vols au départ d’un aéroport suisse.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 28.74,
-   "end": 39.99,
+   "start": 19.024,
+   "end": 26.394,
    "text": "On vérifie votre droit et le montant, en tenant compte des circonstances extraordinaires comme la météo, puis on rédige la réclamation, avec la marche à suivre en cas de refus.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 41.24,
-   "end": 49.04,
+   "start": 27.124,
+   "end": 32.438,
    "text": "Pas de pourcentage prélevé : vous gardez votre indemnité. Et une seule commande suffit pour toute la réservation.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 50.29,
-   "end": 60.85,
+   "start": 33.168,
+   "end": 40.902,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre réclamation, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 62.1,
-   "end": 74.11,
+   "start": 41.632,
+   "end": 49.952,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 75.36,
-   "end": 81.05,
+   "start": 50.682,
+   "end": 54.802,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

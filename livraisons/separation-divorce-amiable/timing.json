@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 9.33,
-   "slot": 9.63,
+   "dur": 6.168,
+   "slot": 6.468,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 9.33,
-   "dur": 7.26,
-   "slot": 7.56,
+   "start": 6.168,
+   "dur": 5.77,
+   "slot": 6.07,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 16.59,
-   "dur": 10.28,
-   "slot": 10.58,
+   "start": 11.938,
+   "dur": 6.639,
+   "slot": 6.939,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 26.87,
-   "dur": 16.7,
-   "slot": 17.0,
+   "start": 18.577,
+   "dur": 11.24,
+   "slot": 11.54,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 43.57,
-   "dur": 13.19,
-   "slot": 13.49,
+   "start": 29.817,
+   "dur": 8.366,
+   "slot": 8.666,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 56.76,
-   "dur": 11.62,
-   "slot": 11.92,
+   "start": 38.183,
+   "dur": 8.35,
+   "slot": 8.65,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 68.38,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 46.533,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 81.64,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 55.583,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 88.58,
+   "start": 60.433,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 9.33,
+   "t": 6.168,
    "label": "01 · Le problème"
   },
   {
-   "t": 26.87,
+   "t": 18.577,
    "label": "02 · La solution"
   },
   {
-   "t": 81.64,
+   "t": 55.583,
    "label": "03 · Commander"
   },
   {
-   "t": 88.58,
+   "t": 60.433,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 93.58,
- "chromeShow": 9.33,
- "chromeHide": 88.58,
+ "total": 65.433,
+ "chromeShow": 6.168,
+ "chromeHide": 60.433,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 8.63,
+   "start": 0.31,
+   "end": 5.748,
    "text": "Divorce à l’amiable : vous êtes d’accord sur l’essentiel, sans enfants mineurs, et vous voulez éviter une procédure longue ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 9.88,
-   "end": 15.89,
+   "start": 6.478,
+   "end": 11.518,
    "text": "Attention : le juge vérifie la convention. Elle doit être claire, complète et équitable.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 17.14,
-   "end": 26.17,
+   "start": 12.248,
+   "end": 18.157,
    "text": "Bon à savoir : le divorce sur requête commune ne requiert pas d’avocat. Les époux déposent eux-mêmes la requête et la convention.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 27.42,
-   "end": 42.87,
+   "start": 18.887,
+   "end": 29.397,
    "text": "On commence par un entretien de cadrage avec vous deux, puis on rédige la convention : logement, entretien, biens et partage de la prévoyance professionnelle. Et la requête commune, prête à déposer, avec la liste des pièces.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 44.12,
-   "end": 56.06,
+   "start": 30.127,
+   "end": 37.763,
    "text": "Nous intervenons de façon neutre, pour les deux époux, et uniquement s’ils sont d’accord. Avec des enfants mineurs, on vous oriente vers un médiateur familial ou un avocat.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 57.31,
-   "end": 67.68,
+   "start": 38.493,
+   "end": 46.113,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre convention, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 68.93,
-   "end": 80.94,
+   "start": 46.843,
+   "end": 55.163,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 82.19,
-   "end": 87.88,
+   "start": 55.893,
+   "end": 60.013,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

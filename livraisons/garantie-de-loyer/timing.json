@@ -3,62 +3,62 @@
   "sc01": {
    "index": 0,
    "start": 0.0,
-   "dur": 7.79,
-   "slot": 8.09,
+   "dur": 5.35,
+   "slot": 5.65,
    "last": false
   },
   "sc02": {
    "index": 1,
-   "start": 7.79,
-   "dur": 4.8,
-   "slot": 5.1,
+   "start": 5.35,
+   "dur": 2.85,
+   "slot": 3.15,
    "last": false
   },
   "sc03": {
    "index": 2,
-   "start": 12.59,
-   "dur": 12.83,
-   "slot": 13.13,
+   "start": 8.2,
+   "dur": 7.816,
+   "slot": 8.116,
    "last": false
   },
   "sc04": {
    "index": 3,
-   "start": 25.42,
-   "dur": 10.53,
-   "slot": 10.83,
+   "start": 16.016,
+   "dur": 7.275,
+   "slot": 7.575,
    "last": false
   },
   "sc05": {
    "index": 4,
-   "start": 35.95,
-   "dur": 7.69,
-   "slot": 7.99,
+   "start": 23.291,
+   "dur": 4.782,
+   "slot": 5.082,
    "last": false
   },
   "sc06": {
    "index": 5,
-   "start": 43.64,
-   "dur": 11.24,
-   "slot": 11.54,
+   "start": 28.073,
+   "dur": 8.023,
+   "slot": 8.323,
    "last": false
   },
   "sc07": {
    "index": 6,
-   "start": 54.88,
-   "dur": 13.26,
-   "slot": 13.56,
+   "start": 36.096,
+   "dur": 9.05,
+   "slot": 9.35,
    "last": false
   },
   "sc08": {
    "index": 7,
-   "start": 68.14,
-   "dur": 6.94,
-   "slot": 7.24,
+   "start": 45.146,
+   "dur": 4.85,
+   "slot": 5.15,
    "last": false
   },
   "sc09": {
    "index": 8,
-   "start": 75.08,
+   "start": 49.996,
    "dur": 5.0,
    "slot": 5.0,
    "last": true
@@ -66,80 +66,80 @@
  },
  "chrome": [
   {
-   "t": 7.79,
+   "t": 5.35,
    "label": "01 · Le problème"
   },
   {
-   "t": 25.42,
+   "t": 16.016,
    "label": "02 · La solution"
   },
   {
-   "t": 68.14,
+   "t": 45.146,
    "label": "03 · Commander"
   },
   {
-   "t": 75.08,
+   "t": 49.996,
    "label": ""
   }
  ],
  "overlap": 0.3,
- "total": 80.08,
- "chromeShow": 7.79,
- "chromeHide": 75.08,
+ "total": 54.996,
+ "chromeShow": 5.35,
+ "chromeHide": 49.996,
  "vo": [
   {
    "scene": "sc01",
-   "start": 0.55,
-   "end": 7.09,
+   "start": 0.31,
+   "end": 4.93,
    "text": "Garantie de loyer : votre ancienne régie bloque votre garantie ou vous facture des frais de remise en état ?",
    "section": null
   },
   {
    "scene": "sc02",
-   "start": 8.34,
-   "end": 11.89,
+   "start": 5.66,
+   "end": 7.78,
    "text": "Beaucoup de locataires paient des frais qu’ils ne doivent pas.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc03",
-   "start": 13.14,
-   "end": 24.72,
+   "start": 8.51,
+   "end": 15.596,
    "text": "L’usure normale est à la charge du bailleur. Et si le bailleur n’a rien fait valoir dans l’année qui suit la fin du bail, vous pouvez demander à la banque de libérer la garantie.",
    "section": "01 · Le problème"
   },
   {
    "scene": "sc04",
-   "start": 25.97,
-   "end": 35.25,
+   "start": 16.326,
+   "end": 22.871,
    "text": "On trie entre l’usure normale, à la charge du bailleur, et les vrais dégâts, à votre charge. Et la durée de vie des peintures est prise en compte.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc05",
-   "start": 36.5,
-   "end": 42.94,
+   "start": 23.601,
+   "end": 27.653,
    "text": "Puis on rédige la contestation des frais injustifiés et la demande de libération de votre garantie.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc06",
-   "start": 44.19,
-   "end": 54.18,
+   "start": 28.383,
+   "end": 35.676,
    "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez votre lettre, par écrit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc07",
-   "start": 55.43,
-   "end": 67.44,
+   "start": 36.406,
+   "end": 44.726,
    "text": "Un prix fixe, annoncé avant de commencer. Tout se fait par écrit. Tout est recherché, jamais improvisé. Et si un avocat est nécessaire, on vous le dit.",
    "section": "02 · La solution"
   },
   {
    "scene": "sc08",
-   "start": 68.69,
-   "end": 74.38,
+   "start": 45.456,
+   "end": 49.576,
    "text": "Commandez en ligne, sur la page de la prestation. Le lien est dans la description.",
    "section": "03 · Commander"
   }

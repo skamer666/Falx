@@ -1,0 +1,685 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 5.748,
+   "slot": 6.048,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 5.748,
+   "dur": 4.02,
+   "slot": 4.32,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 9.768,
+   "dur": 6.895,
+   "slot": 7.195,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 16.663,
+   "dur": 8.589,
+   "slot": 8.889,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 25.252,
+   "dur": 3.748,
+   "slot": 4.048,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 29.0,
+   "dur": 14.773,
+   "slot": 15.073,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 43.773,
+   "dur": 9.102,
+   "slot": 9.402,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 52.875,
+   "dur": 2.373,
+   "slot": 2.673,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 55.248,
+   "dur": 10.702,
+   "slot": 11.002,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 65.95,
+   "dur": 7.23,
+   "slot": 7.53,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 73.18,
+   "dur": 13.177,
+   "slot": 13.477,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 86.357,
+   "dur": 13.353,
+   "slot": 13.653,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 99.71,
+   "dur": 5.861,
+   "slot": 6.161,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 105.571,
+   "dur": 3.77,
+   "slot": 4.07,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 109.341,
+   "dur": 4.145,
+   "slot": 4.445,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 113.486,
+   "dur": 6.259,
+   "slot": 6.559,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 119.745,
+   "dur": 6.793,
+   "slot": 7.093,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 126.538,
+   "dur": 4.999,
+   "slot": 5.299,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 131.537,
+   "dur": 4.543,
+   "slot": 4.843,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 136.08,
+   "dur": 12.395,
+   "slot": 12.695,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 148.475,
+   "dur": 8.226,
+   "slot": 8.526,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 156.701,
+   "dur": 4.033,
+   "slot": 4.333,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 160.734,
+   "dur": 8.639,
+   "slot": 8.939,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 169.373,
+   "dur": 11.803,
+   "slot": 12.103,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 181.176,
+   "dur": 6.18,
+   "slot": 6.48,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 187.356,
+   "dur": 9.307,
+   "slot": 9.607,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 196.663,
+   "dur": 6.832,
+   "slot": 7.132,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 203.495,
+   "dur": 11.178,
+   "slot": 11.478,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 214.673,
+   "dur": 5.702,
+   "slot": 6.002,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 220.375,
+   "dur": 3.702,
+   "slot": 4.002,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 224.077,
+   "dur": 7.452,
+   "slot": 7.752,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 231.529,
+   "dur": 7.124,
+   "slot": 7.424,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 238.653,
+   "dur": 8.384,
+   "slot": 8.684,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 247.037,
+   "dur": 7.567,
+   "slot": 7.867,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 254.604,
+   "dur": 3.702,
+   "slot": 4.002,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 258.306,
+   "dur": 9.306,
+   "slot": 9.606,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 267.612,
+   "dur": 6.043,
+   "slot": 6.343,
+   "last": false
+  },
+  "sc38": {
+   "index": 37,
+   "start": 273.655,
+   "dur": 8.966,
+   "slot": 9.266,
+   "last": false
+  },
+  "sc39": {
+   "index": 38,
+   "start": 282.621,
+   "dur": 6.986,
+   "slot": 7.286,
+   "last": false
+  },
+  "sc40": {
+   "index": 39,
+   "start": 289.607,
+   "dur": 8.293,
+   "slot": 8.593,
+   "last": false
+  },
+  "sc41": {
+   "index": 40,
+   "start": 297.9,
+   "dur": 8.316,
+   "slot": 8.616,
+   "last": false
+  },
+  "sc42": {
+   "index": 41,
+   "start": 306.216,
+   "dur": 6.264,
+   "slot": 6.564,
+   "last": false
+  },
+  "sc43": {
+   "index": 42,
+   "start": 312.48,
+   "dur": 5.759,
+   "slot": 6.059,
+   "last": false
+  },
+  "sc44": {
+   "index": 43,
+   "start": 318.239,
+   "dur": 9.134,
+   "slot": 9.434,
+   "last": false
+  },
+  "sc45": {
+   "index": 44,
+   "start": 327.373,
+   "dur": 6.327,
+   "slot": 6.627,
+   "last": false
+  },
+  "sc46": {
+   "index": 45,
+   "start": 333.7,
+   "dur": 6.0,
+   "slot": 6.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 25.252,
+   "label": "01 · Avant de relancer"
+  },
+  {
+   "t": 52.875,
+   "label": "02 · Le rappel"
+  },
+  {
+   "t": 65.95,
+   "label": "03 · La mise en demeure"
+  },
+  {
+   "t": 131.537,
+   "label": "04 · La poursuite"
+  },
+  {
+   "t": 156.701,
+   "label": "05 · L’opposition"
+  },
+  {
+   "t": 220.375,
+   "label": "06 · La prescription"
+  },
+  {
+   "t": 254.604,
+   "label": "07 · Prévenir les impayés"
+  },
+  {
+   "t": 273.655,
+   "label": "08 · Se faire accompagner"
+  },
+  {
+   "t": 333.7,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 339.7,
+ "chromeShow": 25.252,
+ "chromeHide": 333.7,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 5.328,
+   "text": "Facture impayée en Suisse : vous avez fait le travail, envoyé la facture… et depuis deux mois, plus rien.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 6.058,
+   "end": 9.348,
+   "text": "Cinq mille francs qui manquent dans votre trésorerie, et un client qui ne répond plus.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 10.078,
+   "end": 16.243,
+   "text": "Dans cette vidéo, je vous montre comment récupérer cet argent en Suisse : le rappel, la mise en demeure, la poursuite et l’opposition.",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 16.973,
+   "end": 24.832,
+   "text": "Et surtout, les erreurs qui font perdre des semaines, voire la créance entière. Restez jusqu’au bout : à la fin, je vous explique comment ne plus jamais gérer ça seul.",
+   "section": null
+  },
+  {
+   "scene": "sc05",
+   "start": 25.562,
+   "end": 28.58,
+   "text": "Première chose, avant de relancer : vérifiez votre dossier.",
+   "section": "01 · Avant de relancer"
+  },
+  {
+   "scene": "sc06",
+   "start": 29.31,
+   "end": 43.353,
+   "text": "Un : avez-vous une base écrite, un devis accepté, un contrat, une commande par e-mail ? Deux : pouvez-vous prouver que le travail a été livré ? Trois : quelle était la date d’échéance ? Quatre : le client conteste-t-il la qualité ? Si oui, réglez ce point d’abord.",
+   "section": "01 · Avant de relancer"
+  },
+  {
+   "scene": "sc07",
+   "start": 44.083,
+   "end": 52.455,
+   "text": "Et un réflexe simple : commandez l’extrait du registre des poursuites de votre client, auprès de l’office de son domicile ou de son siège. Pour une vingtaine de francs, vous saurez s’il a déjà des dettes.",
+   "section": "01 · Avant de relancer"
+  },
+  {
+   "scene": "sc08",
+   "start": 53.185,
+   "end": 54.828,
+   "text": "Étape un : le rappel.",
+   "section": "02 · Le rappel"
+  },
+  {
+   "scene": "sc09",
+   "start": 55.558,
+   "end": 65.53,
+   "text": "Commencez par un rappel aimable : « Sauf erreur de notre part, la facture numéro tant, échue le 15 septembre, n’a pas encore été réglée. » Beaucoup de retards sont de simples oublis, et ce message suffit souvent.",
+   "section": "02 · Le rappel"
+  },
+  {
+   "scene": "sc10",
+   "start": 66.26,
+   "end": 72.76,
+   "text": "Si rien ne bouge, passez à l’étape deux : la mise en demeure. C’est la sommation formelle de payer, et elle a des effets juridiques précis.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc11",
+   "start": 73.49,
+   "end": 85.937,
+   "text": "Si une date de paiement a été convenue, dans un contrat, un devis signé ou des CGV acceptées, le client est en demeure automatiquement à cette date. En revanche, si seule votre facture indique « payable à trente jours », c’est en principe la mise en demeure qui le place en demeure.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc12",
+   "start": 86.667,
+   "end": 99.29,
+   "text": "Une bonne mise en demeure indique la facture, sa date, le montant, l’échéance dépassée et vos rappels précédents. Elle donne un dernier délai précis, par exemple dix jours dès réception, et annonce clairement la suite : à défaut de paiement, une poursuite sera introduite sans autre avis.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc13",
+   "start": 100.02,
+   "end": 105.151,
+   "text": "Envoyez-la en recommandé, idéalement doublée d’un e-mail. Le recommandé prouve la date de réception.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc14",
+   "start": 105.881,
+   "end": 108.921,
+   "text": "Dès la demeure, vous avez droit à un intérêt de cinq pour cent par an.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc15",
+   "start": 109.651,
+   "end": 113.066,
+   "text": "Mais attention : les frais de rappel ne sont dus que s’ils ont été convenus d’avance.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc16",
+   "start": 113.796,
+   "end": 119.325,
+   "text": "Et évitez les menaces disproportionnées, comme une plainte pénale ou la publication du nom du client : elles peuvent se retourner contre vous.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc17",
+   "start": 120.055,
+   "end": 126.118,
+   "text": "Si vous n’avez ni le temps ni l’envie de rédiger ces lettres vous-même : chez Thrax Legal, c’est exactement le type de dossier qu’on traite pour nos abonnés.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc18",
+   "start": 126.848,
+   "end": 131.117,
+   "text": "Vous nous envoyez la facture, on rédige la mise en demeure. Le lien est dans la description.",
+   "section": "03 · La mise en demeure"
+  },
+  {
+   "scene": "sc19",
+   "start": 131.847,
+   "end": 135.66,
+   "text": "Le délai est passé, toujours rien ? Étape trois : la poursuite.",
+   "section": "04 · La poursuite"
+  },
+  {
+   "scene": "sc20",
+   "start": 136.39,
+   "end": 148.055,
+   "text": "Vous déposez une réquisition de poursuite auprès de l’office des poursuites du domicile ou du siège du débiteur, pas du vôtre. C’est une erreur fréquente. Vous avancez les frais, quelques dizaines de francs pour une créance de quelques milliers de francs, mais ils sont mis à la charge du débiteur.",
+   "section": "04 · La poursuite"
+  },
+  {
+   "scene": "sc21",
+   "start": 148.785,
+   "end": 156.281,
+   "text": "L’office lui notifie un commandement de payer. Il a alors vingt jours pour payer. Et la poursuite apparaît dans son registre, ce qui suffit souvent à le faire réagir.",
+   "section": "04 · La poursuite"
+  },
+  {
+   "scene": "sc22",
+   "start": 157.011,
+   "end": 160.314,
+   "text": "Étape quatre : l’opposition. C’est le moment où tout se joue.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc23",
+   "start": 161.044,
+   "end": 168.953,
+   "text": "Le débiteur peut faire opposition dans les dix jours, sans se justifier et sans frais. C’est donc très fréquent. Et c’est là que la qualité de votre dossier fait toute la différence.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc24",
+   "start": 169.683,
+   "end": 180.756,
+   "text": "Si vous avez un jugement, vous obtenez la mainlevée définitive. Si vous avez une reconnaissance de dette, par exemple un contrat signé avec la preuve que vous avez fait le travail, vous pouvez demander la mainlevée provisoire : une procédure écrite et rapide.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc25",
+   "start": 181.486,
+   "end": 186.936,
+   "text": "Mais sans document signé, il faut passer par une procédure au fond, qui commence en général devant l’autorité de conciliation.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc26",
+   "start": 187.666,
+   "end": 196.243,
+   "text": "Jusqu’à deux mille francs, celle-ci peut trancher elle-même si vous le demandez. Jusqu’à cinq mille francs, elle peut proposer un jugement. Et jusqu’à trente mille francs, c’est la procédure simplifiée.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc27",
+   "start": 196.973,
+   "end": 203.075,
+   "text": "Vous voyez le point clé : ce qui décide de la vitesse de votre recouvrement, ce n’est pas la poursuite. C’est ce que vous avez fait signer avant.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc28",
+   "start": 203.805,
+   "end": 214.253,
+   "text": "Une fois l’opposition levée, ou si le débiteur n’a pas réagi, vous requérez la continuation de la poursuite : au plus tôt vingt jours après le commandement de payer, au plus tard un an après. Ratez ce délai d’un an, et vous recommencez tout.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc29",
+   "start": 214.983,
+   "end": 219.955,
+   "text": "Ensuite, c’est la saisie. Ou la faillite, si le débiteur est inscrit au registre du commerce.",
+   "section": "05 · L’opposition"
+  },
+  {
+   "scene": "sc30",
+   "start": 220.685,
+   "end": 223.657,
+   "text": "Attention aussi à la prescription : c’est le piège silencieux.",
+   "section": "06 · La prescription"
+  },
+  {
+   "scene": "sc31",
+   "start": 224.387,
+   "end": 231.109,
+   "text": "En règle générale, une créance se prescrit par dix ans. Mais pour les services, les travaux d’artisans ou les ventes au détail, c’est souvent cinq ans.",
+   "section": "06 · La prescription"
+  },
+  {
+   "scene": "sc32",
+   "start": 231.839,
+   "end": 238.233,
+   "text": "Et une simple lettre de rappel n’interrompt pas la prescription. Une poursuite, une action en justice ou une reconnaissance de dette, oui.",
+   "section": "06 · La prescription"
+  },
+  {
+   "scene": "sc33",
+   "start": 238.963,
+   "end": 246.617,
+   "text": "Le client veut payer en plusieurs fois ? Acceptez, mais par écrit : une reconnaissance de dette du montant total, un échéancier précis et une clause de déchéance.",
+   "section": "06 · La prescription"
+  },
+  {
+   "scene": "sc34",
+   "start": 247.347,
+   "end": 254.184,
+   "text": "Au premier retard, tout devient exigible. Avec ce document, en cas de nouveau défaut, vous obtenez directement la mainlevée provisoire.",
+   "section": "06 · La prescription"
+  },
+  {
+   "scene": "sc35",
+   "start": 254.914,
+   "end": 257.886,
+   "text": "Et pour l’avenir : comment ne plus jamais courir après une facture ?",
+   "section": "07 · Prévenir les impayés"
+  },
+  {
+   "scene": "sc36",
+   "start": 258.616,
+   "end": 267.192,
+   "text": "Des CGV qui fixent l’échéance, les intérêts et les frais de rappel. Un acompte pour les nouveaux clients. Une facturation par étapes. Et une relance systématique.",
+   "section": "07 · Prévenir les impayés"
+  },
+  {
+   "scene": "sc37",
+   "start": 267.922,
+   "end": 273.235,
+   "text": "Par exemple : un rappel à J plus cinq, une mise en demeure à J plus vingt, une poursuite à J plus trente-cinq.",
+   "section": "07 · Prévenir les impayés"
+  },
+  {
+   "scene": "sc38",
+   "start": 273.965,
+   "end": 282.201,
+   "text": "Tout ça, vous pouvez le faire seul. Mais un mauvais office, un délai raté, une lettre trop vague ou un contrat jamais signé, et vous perdez des semaines, parfois la créance entière.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc39",
+   "start": 282.931,
+   "end": 289.187,
+   "text": "C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc40",
+   "start": 289.917,
+   "end": 297.48,
+   "text": "Concrètement : on rédige vos mises en demeure, on prépare vos réquisitions de poursuite, on vous guide en cas d’opposition, et on met en place des CGV qui évitent les impayés.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc41",
+   "start": 298.21,
+   "end": 305.796,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc42",
+   "start": 306.526,
+   "end": 312.06,
+   "text": "Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc43",
+   "start": 312.79,
+   "end": 317.819,
+   "text": "Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc44",
+   "start": 318.549,
+   "end": 326.953,
+   "text": "Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.",
+   "section": "08 · Se faire accompagner"
+  },
+  {
+   "scene": "sc45",
+   "start": 327.683,
+   "end": 333.28,
+   "text": "Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.",
+   "section": "08 · Se faire accompagner"
+  }
+ ]
+}
