@@ -7,6 +7,11 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/appel-juridique": { id: "nB-SdXaKJwU", poster: "/media/video/services/appel-juridique.webp" },
   "entreprises/avertissement-employe": { id: "YHjeUrZcBbo", poster: "/media/video/services/avertissement-employe.webp" },
   "particuliers/baisse-de-loyer": { id: "W7QPmAKYhV4", poster: "/media/video/services/baisse-de-loyer.webp" },
+  "entreprises/certificat-de-travail-employeur": { id: "K4HjER9472Q", poster: "/media/video/services/certificat-de-travail-employeur.webp" },
+  "entreprises/cgv-sur-mesure": { id: "NKfRFzzvmdo", poster: "/media/video/services/cgv-sur-mesure.webp" },
+  "particuliers/contestation-conge": { id: "0yz4Xkb9_H4", poster: "/media/video/services/contestation-conge.webp" },
+  "particuliers/contestation-loyer-initial": { id: "oclVRPDe5Mc", poster: "/media/video/services/contestation-loyer-initial.webp" },
+  "particuliers/contester-une-facture": { id: "0RpnbuwgsKE", poster: "/media/video/services/contester-une-facture.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
