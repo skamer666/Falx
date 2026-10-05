@@ -75,14 +75,16 @@
   "contrat-commercial-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/contrat-commercial-sur-mesure",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "uOOJcCmv_Lo",
+   "note": "uploadé via treg le 5 oct."
   },
   "contrat-de-mandat-independant": {
    "kind": "service",
    "site_key": "entreprises/contrat-de-mandat-independant",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "bZFr5xzTkrU",
+   "note": "uploadé via treg le 5 oct."
   },
   "contrat-de-travail-sur-mesure": {
    "kind": "service",

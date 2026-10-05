@@ -53,6 +53,13 @@ Le 5 oct., 2 vidéos (avertissement-employe, baisse-de-loyer) ont été publiée
 Dès la 3e, Metricool a répondu « You have reached your Metricool account limit », et cette limite a aussi fait échouer le Reel r018 de 12h15 sur les 4 réseaux.
 Le quota Metricool est réservé aux Reels : passer uniquement par Zapier pour les vidéos de prestations.
 
+## treg (depuis le 5 oct.) : voie d'upload principale
+
+Le compte YouTube Thrax Legal est relié à treg (équipe thrax-legal, CLI `treg` installée dans ~/.local/bin, identifiants dans ~/.treg/config.json).
+`python3 yt_treg.py <n>` envoie jusqu'à n vidéos « rendered » (MP4 local ou repris de reels-media), note l'id et s'arrête au premier refus.
+YouTube plafonne la chaîne (non vérifiée par téléphone) : le 5 oct., refus `uploadLimitExceeded` après 2 envois via treg (plus les envois du matin).
+Tenter `python3 yt_treg.py 3` à chaque passage ; si treg n'est plus connecté (conteneur neuf), réinstaller la CLI et se reconnecter, sinon garder Zapier en secours.
+
 ## Contenu
 
 Les textes des vidéos ne changent pas : ce sont ceux des specs déjà validées (aucun prix, délai ni volume ; jamais « juriste » ni « avocat » pour Thrax ; vouvoiement). Les vidéos sont en français. Sur les pages DE, EN et IT, une mention « vidéo en français » s'affiche sous le lecteur.
