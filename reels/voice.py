@@ -157,7 +157,7 @@ def main():
     if lead > 0:
         cuts.append((0.0, lead))
     for a, b in zip(words, words[1:]):
-        keep = GAP_SENT if a["w"][-1:] in ".!?…" or text_after_is_sentence_end(text, a) else GAP_WORD
+        keep = getattr(spec, "GAP_SENT", GAP_SENT) if a["w"][-1:] in ".!?…" or text_after_is_sentence_end(text, a) else GAP_WORD
         gap = b["t0"] - a["t1"]
         if gap > keep + 0.02:
             s, e = a["t1"] + keep / 2, b["t0"] - keep / 2
