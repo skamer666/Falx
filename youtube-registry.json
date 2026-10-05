@@ -350,13 +350,13 @@
   "nlpd-pme": {
    "kind": "guide",
    "site_key": "conformite-nlpd-pme",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "avocat-ou-service-juridique": {
    "kind": "comparison",
    "site_key": "alternative-embauche-juriste",
-   "status": "rendering",
+   "status": "rendered",
    "youtube_id": null
   },
   "presentation-thrax-legal": {

@@ -1,0 +1,555 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 6.609,
+   "slot": 7.059,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 6.609,
+   "dur": 2.975,
+   "slot": 3.425,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 9.584,
+   "dur": 5.183,
+   "slot": 5.633,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 14.767,
+   "dur": 5.812,
+   "slot": 6.262,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 20.579,
+   "dur": 9.889,
+   "slot": 10.339,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 30.468,
+   "dur": 4.668,
+   "slot": 5.118,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 35.136,
+   "dur": 5.033,
+   "slot": 5.483,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 40.169,
+   "dur": 11.691,
+   "slot": 12.141,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 51.86,
+   "dur": 7.236,
+   "slot": 7.686,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 59.096,
+   "dur": 9.051,
+   "slot": 9.501,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 68.147,
+   "dur": 3.43,
+   "slot": 3.88,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 71.577,
+   "dur": 14.782,
+   "slot": 15.232,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 86.359,
+   "dur": 7.465,
+   "slot": 7.915,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 93.824,
+   "dur": 5.782,
+   "slot": 6.232,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 99.606,
+   "dur": 6.285,
+   "slot": 6.735,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 105.891,
+   "dur": 3.452,
+   "slot": 3.902,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 109.343,
+   "dur": 6.657,
+   "slot": 7.107,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 116.0,
+   "dur": 4.339,
+   "slot": 4.789,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 120.339,
+   "dur": 8.535,
+   "slot": 8.985,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 128.874,
+   "dur": 9.691,
+   "slot": 10.141,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 138.565,
+   "dur": 9.077,
+   "slot": 9.527,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 147.642,
+   "dur": 4.18,
+   "slot": 4.63,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 151.822,
+   "dur": 2.18,
+   "slot": 2.63,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 154.002,
+   "dur": 17.227,
+   "slot": 17.677,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 171.229,
+   "dur": 13.202,
+   "slot": 13.652,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 184.431,
+   "dur": 4.782,
+   "slot": 5.232,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 189.213,
+   "dur": 3.49,
+   "slot": 3.94,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 192.703,
+   "dur": 6.907,
+   "slot": 7.357,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 199.61,
+   "dur": 9.418,
+   "slot": 9.868,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 209.028,
+   "dur": 6.176,
+   "slot": 6.626,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 215.204,
+   "dur": 10.102,
+   "slot": 10.552,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 225.306,
+   "dur": 5.857,
+   "slot": 6.307,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 231.163,
+   "dur": 5.975,
+   "slot": 6.425,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 237.138,
+   "dur": 6.725,
+   "slot": 7.175,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 243.863,
+   "dur": 2.236,
+   "slot": 2.686,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 246.099,
+   "dur": 9.998,
+   "slot": 10.448,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 256.097,
+   "dur": 7.0,
+   "slot": 7.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 35.136,
+   "label": "01 · L’avocat"
+  },
+  {
+   "t": 68.147,
+   "label": "02 · Le quotidien d’une PME"
+  },
+  {
+   "t": 120.339,
+   "label": "03 · Le service juridique externalisé"
+  },
+  {
+   "t": 151.822,
+   "label": "04 · Comparaison"
+  },
+  {
+   "t": 189.213,
+   "label": "05 · Comment choisir"
+  },
+  {
+   "t": 215.204,
+   "label": "06 · L’abonnement"
+  },
+  {
+   "t": 231.163,
+   "label": "07 · Être rappelé"
+  },
+  {
+   "t": 256.097,
+   "label": ""
+  }
+ ],
+ "overlap": 0.45,
+ "total": 263.097,
+ "chromeShow": 20.579,
+ "chromeHide": 256.097,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 6.189,
+   "text": "Vous avez une question juridique. Un contrat à signer, un client qui ne paie pas, un employé qui conteste son licenciement.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 6.919,
+   "end": 9.164,
+   "text": "Votre premier réflexe : appeler un avocat.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 9.894,
+   "end": 14.347,
+   "text": "Puis vous hésitez. Combien ça va coûter ? Est-ce que ça vaut vraiment le coup pour une simple question ?",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 15.077,
+   "end": 20.159,
+   "text": "Et finalement, vous n’appelez personne. Vous signez quand même, vous attendez, vous improvisez.",
+   "section": null
+  },
+  {
+   "scene": "sc05",
+   "start": 20.889,
+   "end": 30.048,
+   "text": "Dans cette vidéo, je vous explique la différence entre un avocat et un service juridique externalisé. Ce que chacun fait, ce que chacun ne fait pas, combien ça coûte, et comment savoir lequel il vous faut.",
+   "section": null
+  },
+  {
+   "scene": "sc06",
+   "start": 30.778,
+   "end": 34.716,
+   "text": "Et je vais être honnête : il y a des situations où il vous faut un avocat, et je vais vous dire lesquelles.",
+   "section": null
+  },
+  {
+   "scene": "sc07",
+   "start": 35.446,
+   "end": 39.749,
+   "text": "Commençons par l’avocat. Un avocat inscrit au barreau a trois atouts que personne d’autre n’a.",
+   "section": "01 · L’avocat"
+  },
+  {
+   "scene": "sc08",
+   "start": 40.479,
+   "end": 51.44,
+   "text": "Un : il peut vous représenter et plaider devant les tribunaux. Deux : il est soumis au secret professionnel prévu par la loi, l’un des plus forts du droit suisse. Trois : il est soumis à une surveillance et à des règles professionnelles strictes.",
+   "section": "01 · L’avocat"
+  },
+  {
+   "scene": "sc09",
+   "start": 52.17,
+   "end": 58.676,
+   "text": "Pour un procès, une affaire pénale, un litige à fort enjeu ou une négociation très conflictuelle, c’est l’avocat qu’il vous faut. Point.",
+   "section": "01 · L’avocat"
+  },
+  {
+   "scene": "sc10",
+   "start": 59.406,
+   "end": 67.727,
+   "text": "Son travail est généralement facturé au temps passé, avec un taux horaire qui se compte le plus souvent en centaines de francs. C’est logique : c’est un travail sur mesure, souvent complexe.",
+   "section": "01 · L’avocat"
+  },
+  {
+   "scene": "sc11",
+   "start": 68.457,
+   "end": 71.157,
+   "text": "Mais regardez les besoins juridiques d’une PME au quotidien.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc12",
+   "start": 71.887,
+   "end": 85.939,
+   "text": "Relire un contrat avant de le signer. Rédiger des conditions générales. Envoyer une mise en demeure. Préparer un contrat de travail. Vérifier une clause de bail. Se mettre en conformité avec la loi sur la protection des données. Répondre à la question : « est-ce que j’ai le droit de faire ça ? »",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc13",
+   "start": 86.669,
+   "end": 93.404,
+   "text": "La plupart de ces besoins ne finiront jamais devant un juge. Ils demandent de la rigueur, de la recherche et une réponse claire. Pas une plaidoirie.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc14",
+   "start": 94.134,
+   "end": 99.186,
+   "text": "Et c’est là que la facturation à l’heure pose un problème. Pas parce qu’elle serait injuste, mais parce qu’elle vous fait hésiter.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc15",
+   "start": 99.916,
+   "end": 105.471,
+   "text": "Quand chaque question a un coût que vous ne connaissez pas d’avance, vous posez moins de questions. Vous attendez que le problème grossisse.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc16",
+   "start": 106.201,
+   "end": 108.923,
+   "text": "Et une erreur évitée coûte toujours moins cher qu’une erreur réparée.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc17",
+   "start": 109.653,
+   "end": 115.58,
+   "text": "Une clause de non-concurrence mal rédigée. Une mise en demeure envoyée au mauvais moment. Des CGV qui ne s’appliquent pas.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc18",
+   "start": 116.31,
+   "end": 119.919,
+   "text": "Ce sont des erreurs qui coûtent des milliers de francs, et qui se seraient réglées en une question.",
+   "section": "02 · Le quotidien d’une PME"
+  },
+  {
+   "scene": "sc19",
+   "start": 120.649,
+   "end": 128.454,
+   "text": "Un service juridique externalisé, c’est un service qui s’occupe des questions juridiques de votre entreprise, sans que vous ayez à embaucher. Vous y faites appel quand vous en avez besoin.",
+   "section": "03 · Le service juridique externalisé"
+  },
+  {
+   "scene": "sc20",
+   "start": 129.184,
+   "end": 138.145,
+   "text": "Chez Thrax Legal, on s’occupe exactement de ce quotidien juridique : contrats, conditions générales, droit du travail, recouvrement de factures, protection des données, baux commerciaux.",
+   "section": "03 · Le service juridique externalisé"
+  },
+  {
+   "scene": "sc21",
+   "start": 138.875,
+   "end": 147.222,
+   "text": "Concrètement, vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Puis vous recevez une réponse claire, par écrit.",
+   "section": "03 · Le service juridique externalisé"
+  },
+  {
+   "scene": "sc22",
+   "start": 147.952,
+   "end": 151.402,
+   "text": "Et tout reste par écrit : vous savez exactement ce qui a été dit et pourquoi.",
+   "section": "03 · Le service juridique externalisé"
+  },
+  {
+   "scene": "sc23",
+   "start": 152.132,
+   "end": 153.582,
+   "text": "Mettons les deux côte à côte.",
+   "section": "04 · Comparaison"
+  },
+  {
+   "scene": "sc24",
+   "start": 154.312,
+   "end": 170.809,
+   "text": "La facturation : l’avocat facture en général au temps passé. Thrax Legal fonctionne par abonnement à prix fixe. Le coût : chez l’avocat, il dépend du temps nécessaire. Chez Thrax Legal, vous le connaissez à l’avance, chaque mois. Le contact : rendez-vous d’un côté. En ligne de l’autre, avec une réponse écrite.",
+   "section": "04 · Comparaison"
+  },
+  {
+   "scene": "sc25",
+   "start": 171.539,
+   "end": 184.011,
+   "text": "Les tribunaux : l’avocat vous représente. Thrax Legal ne plaide pas. La confidentialité : l’avocat est soumis au secret professionnel légal. Chez Thrax Legal, vos informations sont protégées par une obligation de confidentialité contractuelle.",
+   "section": "04 · Comparaison"
+  },
+  {
+   "scene": "sc26",
+   "start": 184.741,
+   "end": 188.793,
+   "text": "Vous le voyez : ce ne sont pas des concurrents. Ce sont deux outils pour deux besoins différents.",
+   "section": "04 · Comparaison"
+  },
+  {
+   "scene": "sc27",
+   "start": 189.523,
+   "end": 192.283,
+   "text": "Alors, comment choisir ? Une règle simple.",
+   "section": "05 · Comment choisir"
+  },
+  {
+   "scene": "sc28",
+   "start": 193.013,
+   "end": 199.19,
+   "text": "Prenez un avocat si vous allez au tribunal, si vous êtes visé par une procédure pénale, ou si l’enjeu est très important et le conflit déjà ouvert.",
+   "section": "05 · Comment choisir"
+  },
+  {
+   "scene": "sc29",
+   "start": 199.92,
+   "end": 208.608,
+   "text": "Faites appel à un service juridique externalisé pour tout le reste : prévenir les problèmes, rédiger, relire, envoyer les bonnes lettres au bon moment et obtenir des réponses claires sans regarder le compteur.",
+   "section": "05 · Comment choisir"
+  },
+  {
+   "scene": "sc30",
+   "start": 209.338,
+   "end": 214.784,
+   "text": "Et si votre dossier dépasse ce qu’on peut faire, on vous le dit clairement et on vous oriente vers un avocat. Sans vous faire perdre de temps.",
+   "section": "05 · Comment choisir"
+  },
+  {
+   "scene": "sc31",
+   "start": 215.514,
+   "end": 224.886,
+   "text": "Thrax Legal fonctionne par abonnement mensuel, à prix fixe. Il existe plusieurs formules, selon le volume de votre entreprise. Vous trouverez le détail sur thrax-legal.ch.",
+   "section": "06 · L’abonnement"
+  },
+  {
+   "scene": "sc32",
+   "start": 225.616,
+   "end": 230.743,
+   "text": "Pas de facture surprise. Juste un interlocuteur à qui poser vos questions, avant qu’elles deviennent des problèmes.",
+   "section": "06 · L’abonnement"
+  },
+  {
+   "scene": "sc33",
+   "start": 231.473,
+   "end": 236.718,
+   "text": "Vous ne savez pas encore si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch.",
+   "section": "07 · Être rappelé"
+  },
+  {
+   "scene": "sc34",
+   "start": 237.448,
+   "end": 243.443,
+   "text": "C’est sans engagement : on regarde ensemble vos besoins, et on vous dit honnêtement si Thrax Legal vous convient, ou s’il vous faut plutôt un avocat.",
+   "section": "07 · Être rappelé"
+  },
+  {
+   "scene": "sc35",
+   "start": 244.173,
+   "end": 245.679,
+   "text": "Le lien est dans la description.",
+   "section": "07 · Être rappelé"
+  },
+  {
+   "scene": "sc36",
+   "start": 246.409,
+   "end": 255.677,
+   "text": "Et si vous voulez aller plus loin, on a préparé des guides complets sur les contrats de travail, les CGV, les factures impayées, la protection des données et les baux commerciaux. Ils sont aussi en lien sous la vidéo.",
+   "section": "07 · Être rappelé"
+  }
+ ]
+}

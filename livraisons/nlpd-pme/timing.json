@@ -1,0 +1,595 @@
+{
+ "scenes": {
+  "sc01": {
+   "index": 0,
+   "start": 0.0,
+   "dur": 7.634,
+   "slot": 7.934,
+   "last": false
+  },
+  "sc02": {
+   "index": 1,
+   "start": 7.634,
+   "dur": 6.167,
+   "slot": 6.467,
+   "last": false
+  },
+  "sc03": {
+   "index": 2,
+   "start": 13.801,
+   "dur": 9.884,
+   "slot": 10.184,
+   "last": false
+  },
+  "sc04": {
+   "index": 3,
+   "start": 23.685,
+   "dur": 2.645,
+   "slot": 2.945,
+   "last": false
+  },
+  "sc05": {
+   "index": 4,
+   "start": 26.33,
+   "dur": 10.757,
+   "slot": 11.057,
+   "last": false
+  },
+  "sc06": {
+   "index": 5,
+   "start": 37.087,
+   "dur": 9.159,
+   "slot": 9.459,
+   "last": false
+  },
+  "sc07": {
+   "index": 6,
+   "start": 46.246,
+   "dur": 2.941,
+   "slot": 3.241,
+   "last": false
+  },
+  "sc08": {
+   "index": 7,
+   "start": 49.187,
+   "dur": 10.416,
+   "slot": 10.716,
+   "last": false
+  },
+  "sc09": {
+   "index": 8,
+   "start": 59.603,
+   "dur": 3.327,
+   "slot": 3.627,
+   "last": false
+  },
+  "sc10": {
+   "index": 9,
+   "start": 62.93,
+   "dur": 9.803,
+   "slot": 10.103,
+   "last": false
+  },
+  "sc11": {
+   "index": 10,
+   "start": 72.733,
+   "dur": 8.389,
+   "slot": 8.689,
+   "last": false
+  },
+  "sc12": {
+   "index": 11,
+   "start": 81.122,
+   "dur": 6.241,
+   "slot": 6.541,
+   "last": false
+  },
+  "sc13": {
+   "index": 12,
+   "start": 87.363,
+   "dur": 3.43,
+   "slot": 3.73,
+   "last": false
+  },
+  "sc14": {
+   "index": 13,
+   "start": 90.793,
+   "dur": 6.72,
+   "slot": 7.02,
+   "last": false
+  },
+  "sc15": {
+   "index": 14,
+   "start": 97.513,
+   "dur": 8.466,
+   "slot": 8.766,
+   "last": false
+  },
+  "sc16": {
+   "index": 15,
+   "start": 105.979,
+   "dur": 4.214,
+   "slot": 4.514,
+   "last": false
+  },
+  "sc17": {
+   "index": 16,
+   "start": 110.193,
+   "dur": 5.611,
+   "slot": 5.911,
+   "last": false
+  },
+  "sc18": {
+   "index": 17,
+   "start": 115.804,
+   "dur": 5.6,
+   "slot": 5.9,
+   "last": false
+  },
+  "sc19": {
+   "index": 18,
+   "start": 121.404,
+   "dur": 6.372,
+   "slot": 6.672,
+   "last": false
+  },
+  "sc20": {
+   "index": 19,
+   "start": 127.776,
+   "dur": 3.202,
+   "slot": 3.502,
+   "last": false
+  },
+  "sc21": {
+   "index": 20,
+   "start": 130.978,
+   "dur": 9.43,
+   "slot": 9.73,
+   "last": false
+  },
+  "sc22": {
+   "index": 21,
+   "start": 140.408,
+   "dur": 3.35,
+   "slot": 3.65,
+   "last": false
+  },
+  "sc23": {
+   "index": 22,
+   "start": 143.758,
+   "dur": 10.16,
+   "slot": 10.46,
+   "last": false
+  },
+  "sc24": {
+   "index": 23,
+   "start": 153.918,
+   "dur": 12.081,
+   "slot": 12.381,
+   "last": false
+  },
+  "sc25": {
+   "index": 24,
+   "start": 165.999,
+   "dur": 6.941,
+   "slot": 7.241,
+   "last": false
+  },
+  "sc26": {
+   "index": 25,
+   "start": 172.94,
+   "dur": 6.407,
+   "slot": 6.707,
+   "last": false
+  },
+  "sc27": {
+   "index": 26,
+   "start": 179.347,
+   "dur": 10.977,
+   "slot": 11.277,
+   "last": false
+  },
+  "sc28": {
+   "index": 27,
+   "start": 190.324,
+   "dur": 3.555,
+   "slot": 3.855,
+   "last": false
+  },
+  "sc29": {
+   "index": 28,
+   "start": 193.879,
+   "dur": 8.006,
+   "slot": 8.306,
+   "last": false
+  },
+  "sc30": {
+   "index": 29,
+   "start": 201.885,
+   "dur": 8.598,
+   "slot": 8.898,
+   "last": false
+  },
+  "sc31": {
+   "index": 30,
+   "start": 210.483,
+   "dur": 8.94,
+   "slot": 9.24,
+   "last": false
+  },
+  "sc32": {
+   "index": 31,
+   "start": 219.423,
+   "dur": 6.986,
+   "slot": 7.286,
+   "last": false
+  },
+  "sc33": {
+   "index": 32,
+   "start": 226.409,
+   "dur": 9.055,
+   "slot": 9.355,
+   "last": false
+  },
+  "sc34": {
+   "index": 33,
+   "start": 235.464,
+   "dur": 8.316,
+   "slot": 8.616,
+   "last": false
+  },
+  "sc35": {
+   "index": 34,
+   "start": 243.78,
+   "dur": 6.264,
+   "slot": 6.564,
+   "last": false
+  },
+  "sc36": {
+   "index": 35,
+   "start": 250.044,
+   "dur": 5.759,
+   "slot": 6.059,
+   "last": false
+  },
+  "sc37": {
+   "index": 36,
+   "start": 255.803,
+   "dur": 9.134,
+   "slot": 9.434,
+   "last": false
+  },
+  "sc38": {
+   "index": 37,
+   "start": 264.937,
+   "dur": 6.327,
+   "slot": 6.627,
+   "last": false
+  },
+  "sc39": {
+   "index": 38,
+   "start": 271.264,
+   "dur": 6.0,
+   "slot": 6.0,
+   "last": true
+  }
+ },
+ "chrome": [
+  {
+   "t": 23.685,
+   "label": "01 · Qui est concerné ?"
+  },
+  {
+   "t": 46.246,
+   "label": "02 · Informer"
+  },
+  {
+   "t": 59.603,
+   "label": "03 · Vos sous-traitants"
+  },
+  {
+   "t": 87.363,
+   "label": "04 · Transferts à l’étranger"
+  },
+  {
+   "t": 105.979,
+   "label": "05 · Sécurité et fuites"
+  },
+  {
+   "t": 127.776,
+   "label": "06 · Ce dont vous êtes dispensé"
+  },
+  {
+   "t": 143.758,
+   "label": "07 · Cas particuliers"
+  },
+  {
+   "t": 179.347,
+   "label": "08 · Sanctions"
+  },
+  {
+   "t": 190.324,
+   "label": "09 · La méthode en 10 étapes"
+  },
+  {
+   "t": 210.483,
+   "label": "10 · Se faire accompagner"
+  },
+  {
+   "t": 271.264,
+   "label": ""
+  }
+ ],
+ "overlap": 0.3,
+ "total": 277.264,
+ "chromeShow": 23.685,
+ "chromeHide": 271.264,
+ "vo": [
+  {
+   "scene": "sc01",
+   "start": 0.31,
+   "end": 7.214,
+   "text": "nLPD : depuis le 1er septembre 2023, la nouvelle loi suisse sur la protection des données s’applique à toutes les entreprises, même aux indépendants.",
+   "section": null
+  },
+  {
+   "scene": "sc02",
+   "start": 7.944,
+   "end": 13.381,
+   "text": "Et les amendes peuvent atteindre deux cent cinquante mille francs. Elles visent personnellement les responsables, souvent la direction.",
+   "section": null
+  },
+  {
+   "scene": "sc03",
+   "start": 14.111,
+   "end": 23.265,
+   "text": "Dans cette vidéo : ce que la loi exige concrètement d’une PME, ce dont vous êtes dispensé, ce qu’il faut faire avec vos outils, y compris l’intelligence artificielle, et une méthode simple pour vous mettre en conformité.",
+   "section": null
+  },
+  {
+   "scene": "sc04",
+   "start": 23.995,
+   "end": 25.91,
+   "text": "Première question : qui est concerné ?",
+   "section": "01 · Qui est concerné ?"
+  },
+  {
+   "scene": "sc05",
+   "start": 26.64,
+   "end": 36.667,
+   "text": "Tout le monde. Dès que vous traitez des données personnelles, c’est-à-dire des noms, des e-mails, des numéros de téléphone, des dossiers clients ou employés, vous êtes concerné. Un simple fichier Excel de clients suffit.",
+   "section": "01 · Qui est concerné ?"
+  },
+  {
+   "scene": "sc06",
+   "start": 37.397,
+   "end": 45.826,
+   "text": "Les principes : collecter de façon transparente, seulement ce qui est nécessaire, pour un but précis. Garder les données exactes. Et ne pas les conserver plus longtemps qu’utile.",
+   "section": "01 · Qui est concerné ?"
+  },
+  {
+   "scene": "sc07",
+   "start": 46.556,
+   "end": 48.767,
+   "text": "Obligation numéro un : informer.",
+   "section": "02 · Informer"
+  },
+  {
+   "scene": "sc08",
+   "start": 49.497,
+   "end": 59.183,
+   "text": "Toute personne dont vous collectez les données doit savoir qui vous êtes, ce que vous en faites, à qui vous les transmettez, et dans quels pays. En pratique : une politique de confidentialité à jour, sur votre site et dans vos documents.",
+   "section": "02 · Informer"
+  },
+  {
+   "scene": "sc09",
+   "start": 59.913,
+   "end": 62.51,
+   "text": "Obligation numéro deux : encadrer vos sous-traitants.",
+   "section": "03 · Vos sous-traitants"
+  },
+  {
+   "scene": "sc10",
+   "start": 63.24,
+   "end": 72.313,
+   "text": "Votre hébergeur, votre logiciel de comptabilité, votre outil d’e-mailing, votre CRM traitent des données pour vous. Vous devez vous assurer, par contrat, qu’ils les protègent.",
+   "section": "03 · Vos sous-traitants"
+  },
+  {
+   "scene": "sc11",
+   "start": 73.043,
+   "end": 80.702,
+   "text": "Vous n’avez pas de politique de confidentialité, ou elle a été copiée d’un site européen ? Chez Thrax Legal, on met les PME en conformité avec la nLPD.",
+   "section": "03 · Vos sous-traitants"
+  },
+  {
+   "scene": "sc12",
+   "start": 81.432,
+   "end": 86.943,
+   "text": "Vous nous décrivez votre activité, on rédige votre politique de confidentialité. Le lien est dans la description.",
+   "section": "03 · Vos sous-traitants"
+  },
+  {
+   "scene": "sc13",
+   "start": 87.673,
+   "end": 90.373,
+   "text": "Obligation numéro trois : les transferts à l’étranger.",
+   "section": "04 · Transferts à l’étranger"
+  },
+  {
+   "scene": "sc14",
+   "start": 91.103,
+   "end": 97.093,
+   "text": "Vos données partent sur des serveurs aux États-Unis ou ailleurs ? Le Conseil fédéral tient une liste des pays qui offrent une protection adéquate.",
+   "section": "04 · Transferts à l’étranger"
+  },
+  {
+   "scene": "sc15",
+   "start": 97.823,
+   "end": 105.559,
+   "text": "L’Union européenne en fait partie. Pour les autres pays, il faut des garanties, par exemple des clauses contractuelles types, ou une certification de votre fournisseur.",
+   "section": "04 · Transferts à l’étranger"
+  },
+  {
+   "scene": "sc16",
+   "start": 106.289,
+   "end": 109.773,
+   "text": "Obligation numéro quatre : la sécurité, et les fuites de données.",
+   "section": "05 · Sécurité et fuites"
+  },
+  {
+   "scene": "sc17",
+   "start": 110.503,
+   "end": 115.384,
+   "text": "Vous devez protéger les données de façon adaptée : accès limités, mots de passe solides, sauvegardes.",
+   "section": "05 · Sécurité et fuites"
+  },
+  {
+   "scene": "sc18",
+   "start": 116.114,
+   "end": 120.984,
+   "text": "En cas de fuite présentant un risque élevé pour les personnes, vous devez l’annoncer au Préposé fédéral dans les meilleurs délais.",
+   "section": "05 · Sécurité et fuites"
+  },
+  {
+   "scene": "sc19",
+   "start": 121.714,
+   "end": 127.356,
+   "text": "Toute personne peut aussi vous demander quelles données vous avez sur elle. Vous devez en principe répondre dans les trente jours, gratuitement.",
+   "section": "05 · Sécurité et fuites"
+  },
+  {
+   "scene": "sc20",
+   "start": 128.086,
+   "end": 130.558,
+   "text": "Bonne nouvelle : il y a aussi ce dont vous êtes dispensé.",
+   "section": "06 · Ce dont vous êtes dispensé"
+  },
+  {
+   "scene": "sc21",
+   "start": 131.288,
+   "end": 139.988,
+   "text": "Le registre des activités de traitement : les entreprises de moins de deux cent cinquante collaborateurs en sont en principe dispensées, sauf si elles traitent des données sensibles à grande échelle, ou font du profilage à risque élevé.",
+   "section": "06 · Ce dont vous êtes dispensé"
+  },
+  {
+   "scene": "sc22",
+   "start": 140.718,
+   "end": 143.338,
+   "text": "Et le conseiller à la protection des données n’est pas obligatoire.",
+   "section": "06 · Ce dont vous êtes dispensé"
+  },
+  {
+   "scene": "sc23",
+   "start": 144.068,
+   "end": 153.498,
+   "text": "Attention aux données sensibles : santé, religion, opinions politiques, données biométriques. Dans un cabinet de santé, une fiduciaire ou une agence RH, les exigences augmentent.",
+   "section": "07 · Cas particuliers"
+  },
+  {
+   "scene": "sc24",
+   "start": 154.228,
+   "end": 165.579,
+   "text": "Votre site web : la loi suisse n’impose pas un bandeau de cookies avec consentement préalable pour tous les cookies. Mais vous devez informer, et permettre de refuser. Et si vous ciblez des clients dans l’Union européenne, le RGPD peut aussi s’appliquer.",
+   "section": "07 · Cas particuliers"
+  },
+  {
+   "scene": "sc25",
+   "start": 166.309,
+   "end": 172.52,
+   "text": "Et l’intelligence artificielle : copier les données d’un client dans un outil d’IA, c’est un traitement de données, et souvent un transfert à l’étranger.",
+   "section": "07 · Cas particuliers"
+  },
+  {
+   "scene": "sc26",
+   "start": 173.25,
+   "end": 178.927,
+   "text": "Avant de le faire, vérifiez les conditions de l’outil, l’endroit où les données sont stockées, et si elles servent à entraîner le modèle.",
+   "section": "07 · Cas particuliers"
+  },
+  {
+   "scene": "sc27",
+   "start": 179.657,
+   "end": 189.904,
+   "text": "Les sanctions visent surtout certaines violations intentionnelles : ne pas informer, ne pas répondre à une demande d’accès, confier des données à un sous-traitant sans garanties. Elles frappent personnellement les responsables, souvent la direction.",
+   "section": "08 · Sanctions"
+  },
+  {
+   "scene": "sc28",
+   "start": 190.634,
+   "end": 193.459,
+   "text": "Pour vous mettre en conformité, voici une méthode en dix étapes.",
+   "section": "09 · La méthode en 10 étapes"
+  },
+  {
+   "scene": "sc29",
+   "start": 194.189,
+   "end": 201.465,
+   "text": "Lister vos données. Mettre à jour la politique de confidentialité. Vérifier les sous-traitants. Contrôler les transferts. Sécuriser.",
+   "section": "09 · La méthode en 10 étapes"
+  },
+  {
+   "scene": "sc30",
+   "start": 202.195,
+   "end": 210.063,
+   "text": "Prévoir la procédure en cas de fuite. Savoir répondre aux demandes. Fixer des durées de conservation. Former l’équipe. Puis réviser chaque année.",
+   "section": "09 · La méthode en 10 étapes"
+  },
+  {
+   "scene": "sc31",
+   "start": 210.793,
+   "end": 219.003,
+   "text": "La conformité nLPD, ce n’est pas un projet de six mois. Pour une PME, c’est quelques documents bien faits et quelques bons réflexes. Encore faut-il savoir lesquels.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc32",
+   "start": 219.733,
+   "end": 225.989,
+   "text": "C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc33",
+   "start": 226.719,
+   "end": 235.044,
+   "text": "Concrètement : on fait l’état des lieux de vos données, on rédige votre politique de confidentialité, on vérifie vos contrats de sous-traitance et vos outils, et on vous aide en cas de fuite ou de demande d’accès.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc34",
+   "start": 235.774,
+   "end": 243.36,
+   "text": "Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc35",
+   "start": 244.09,
+   "end": 249.624,
+   "text": "Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc36",
+   "start": 250.354,
+   "end": 255.383,
+   "text": "Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc37",
+   "start": 256.113,
+   "end": 264.517,
+   "text": "Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.",
+   "section": "10 · Se faire accompagner"
+  },
+  {
+   "scene": "sc38",
+   "start": 265.247,
+   "end": 270.844,
+   "text": "Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.",
+   "section": "10 · Se faire accompagner"
+  }
+ ]
+}

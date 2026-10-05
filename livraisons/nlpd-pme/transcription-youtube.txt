@@ -1,0 +1,75 @@
+nLPD : depuis le 1er septembre 2023, la nouvelle loi suisse sur la protection des données s’applique à toutes les entreprises, même aux indépendants.
+
+Et les amendes peuvent atteindre deux cent cinquante mille francs. Elles visent personnellement les responsables, souvent la direction.
+
+Dans cette vidéo : ce que la loi exige concrètement d’une PME, ce dont vous êtes dispensé, ce qu’il faut faire avec vos outils, y compris l’intelligence artificielle, et une méthode simple pour vous mettre en conformité.
+
+Première question : qui est concerné ?
+
+Tout le monde. Dès que vous traitez des données personnelles, c’est-à-dire des noms, des e-mails, des numéros de téléphone, des dossiers clients ou employés, vous êtes concerné. Un simple fichier Excel de clients suffit.
+
+Les principes : collecter de façon transparente, seulement ce qui est nécessaire, pour un but précis. Garder les données exactes. Et ne pas les conserver plus longtemps qu’utile.
+
+Obligation numéro un : informer.
+
+Toute personne dont vous collectez les données doit savoir qui vous êtes, ce que vous en faites, à qui vous les transmettez, et dans quels pays. En pratique : une politique de confidentialité à jour, sur votre site et dans vos documents.
+
+Obligation numéro deux : encadrer vos sous-traitants.
+
+Votre hébergeur, votre logiciel de comptabilité, votre outil d’e-mailing, votre CRM traitent des données pour vous. Vous devez vous assurer, par contrat, qu’ils les protègent.
+
+Vous n’avez pas de politique de confidentialité, ou elle a été copiée d’un site européen ? Chez Thrax Legal, on met les PME en conformité avec la nLPD.
+
+Vous nous décrivez votre activité, on rédige votre politique de confidentialité. Le lien est dans la description.
+
+Obligation numéro trois : les transferts à l’étranger.
+
+Vos données partent sur des serveurs aux États-Unis ou ailleurs ? Le Conseil fédéral tient une liste des pays qui offrent une protection adéquate.
+
+L’Union européenne en fait partie. Pour les autres pays, il faut des garanties, par exemple des clauses contractuelles types, ou une certification de votre fournisseur.
+
+Obligation numéro quatre : la sécurité, et les fuites de données.
+
+Vous devez protéger les données de façon adaptée : accès limités, mots de passe solides, sauvegardes.
+
+En cas de fuite présentant un risque élevé pour les personnes, vous devez l’annoncer au Préposé fédéral dans les meilleurs délais.
+
+Toute personne peut aussi vous demander quelles données vous avez sur elle. Vous devez en principe répondre dans les trente jours, gratuitement.
+
+Bonne nouvelle : il y a aussi ce dont vous êtes dispensé.
+
+Le registre des activités de traitement : les entreprises de moins de deux cent cinquante collaborateurs en sont en principe dispensées, sauf si elles traitent des données sensibles à grande échelle, ou font du profilage à risque élevé.
+
+Et le conseiller à la protection des données n’est pas obligatoire.
+
+Attention aux données sensibles : santé, religion, opinions politiques, données biométriques. Dans un cabinet de santé, une fiduciaire ou une agence RH, les exigences augmentent.
+
+Votre site web : la loi suisse n’impose pas un bandeau de cookies avec consentement préalable pour tous les cookies. Mais vous devez informer, et permettre de refuser. Et si vous ciblez des clients dans l’Union européenne, le RGPD peut aussi s’appliquer.
+
+Et l’intelligence artificielle : copier les données d’un client dans un outil d’IA, c’est un traitement de données, et souvent un transfert à l’étranger.
+
+Avant de le faire, vérifiez les conditions de l’outil, l’endroit où les données sont stockées, et si elles servent à entraîner le modèle.
+
+Les sanctions visent surtout certaines violations intentionnelles : ne pas informer, ne pas répondre à une demande d’accès, confier des données à un sous-traitant sans garanties. Elles frappent personnellement les responsables, souvent la direction.
+
+Pour vous mettre en conformité, voici une méthode en dix étapes.
+
+Lister vos données. Mettre à jour la politique de confidentialité. Vérifier les sous-traitants. Contrôler les transferts. Sécuriser.
+
+Prévoir la procédure en cas de fuite. Savoir répondre aux demandes. Fixer des durées de conservation. Former l’équipe. Puis réviser chaque année.
+
+La conformité nLPD, ce n’est pas un projet de six mois. Pour une PME, c’est quelques documents bien faits et quelques bons réflexes. Encore faut-il savoir lesquels.
+
+C’est exactement pour ça que Thrax Legal existe : un service juridique externalisé, pour les indépendants et les PME de Suisse romande.
+
+Concrètement : on fait l’état des lieux de vos données, on rédige votre politique de confidentialité, on vérifie vos contrats de sous-traitance et vos outils, et on vous aide en cas de fuite ou de demande d’accès.
+
+Vous décrivez votre situation en ligne. Chaque dossier est analysé et recherché, jamais improvisé. Et vous recevez une réponse claire, par écrit.
+
+Pas de facture à l’heure qui grimpe : c’est un abonnement mensuel, à prix fixe. Le détail des formules est sur le site.
+
+Et si votre dossier exige un avocat, par exemple pour aller au tribunal, on vous le dit clairement et on vous oriente.
+
+Vous voulez savoir si c’est fait pour vous ? Demandez à être rappelé gratuitement sur thrax-legal.ch. Le lien est dans la description, avec le guide complet de cette vidéo.
+
+Et si cette vidéo vous a été utile, abonnez-vous : on publie régulièrement des guides juridiques pour les entrepreneurs de Suisse romande.
