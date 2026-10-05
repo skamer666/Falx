@@ -761,6 +761,28 @@
     "youtube",
     "tiktok"
    ]
+  },
+  {
+   "id": "r021-facture-impayee-notes",
+   "date": "2026-10-05",
+   "genome": {
+    "style": "appli-notes-checklist-sombre",
+    "palette": "noir/jaune Notes/gris",
+    "hook": "incroyable c'est faisable + promesse (sans avocat)",
+    "format": "full value 4 étapes + CTA commente mot-clé",
+    "topic": "argent/recouvrement",
+    "mascot": "aucun (appli Notes)",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "blanc-contour-noir",
+    "music": "drive",
+    "length": "~42s"
+   },
+   "metricool_id": 388330535,
+   "scheduled": "2026-10-05T19:30 Europe/Brussels",
+   "networks": [
+    "tiktok"
+   ],
+   "note": "Test TikTok « full value » + CTA mot-clé FACTURE (guide /fr/guide/mise-en-demeure-recouvrement-suisse à envoyer en réponse)"
   }
  ]
 }
