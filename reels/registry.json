@@ -777,10 +777,13 @@
     "music": "drive",
     "length": "~42s"
    },
-   "metricool_id": 388330535,
-   "scheduled": "2026-10-05T19:30 Europe/Brussels",
+   "metricool_id": 388340506,
+   "scheduled": "2026-10-05T11:06 Europe/Brussels",
    "networks": [
-    "tiktok"
+    "tiktok",
+    "instagram",
+    "facebook",
+    "youtube"
    ],
    "note": "Test TikTok « full value » + CTA mot-clé FACTURE (guide /fr/guide/mise-en-demeure-recouvrement-suisse à envoyer en réponse)"
   }
