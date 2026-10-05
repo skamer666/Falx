@@ -5,6 +5,8 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "entreprises/accord-de-confidentialite": { id: "zNIIMn_ZIsw", poster: "/media/video/services/accord-de-confidentialite.webp" },
   "particuliers/analyse-certificat-de-travail": { id: "la5WPReL6Vk", poster: "/media/video/services/analyse-certificat-de-travail.webp" },
   "particuliers/appel-juridique": { id: "nB-SdXaKJwU", poster: "/media/video/services/appel-juridique.webp" },
+  "entreprises/avertissement-employe": { id: "YHjeUrZcBbo", poster: "/media/video/services/avertissement-employe.webp" },
+  "particuliers/baisse-de-loyer": { id: "W7QPmAKYhV4", poster: "/media/video/services/baisse-de-loyer.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
