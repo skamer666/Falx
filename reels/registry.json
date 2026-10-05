@@ -17,7 +17,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r001-maladie-licenciement.mp4",
    "status": "published",
    "posted_at": "2026-10-03T11:30 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 128,
+      "reach": 113,
+      "avg_watch_s": 3.3
+     },
+     "facebook": {
+      "views": 204
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 386469858,
    "networks": [
     "instagram",
@@ -43,7 +58,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r002-garantie-loyer.mp4",
    "status": "published",
    "posted_at": "2026-10-03T19:00 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 103,
+      "reach": 91,
+      "avg_watch_s": 4.2
+     },
+     "facebook": {
+      "views": 181
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 386469922,
    "networks": [
     "instagram",
@@ -86,6 +116,20 @@
      },
      "tiktok": {
       "views": 0
+     }
+    },
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 231,
+      "reach": 197,
+      "avg_watch_s": 12.5
+     },
+     "facebook": {
+      "views": 148
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
      }
     }
    },
@@ -140,6 +184,20 @@
      "tiktok": {
       "views": 0
      }
+    },
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 124,
+      "reach": 109,
+      "avg_watch_s": 8.5
+     },
+     "facebook": {
+      "views": 74
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
     }
    },
    "metricool_id": 386469715,
@@ -185,6 +243,20 @@
      "tiktok": {
       "views": 0
      }
+    },
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 57,
+      "reach": 47,
+      "avg_watch_s": 3.8
+     },
+     "facebook": {
+      "views": 204
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
     }
    },
    "metricool_id": 386469783,
@@ -213,7 +285,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r007-vacances-jt.mp4",
    "status": "published",
    "posted_at": "2026-10-03T14:00 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 100,
+      "reach": 90,
+      "avg_watch_s": 4.5
+     },
+     "facebook": {
+      "views": 204
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387158553,
    "networks": [
     "instagram",
@@ -240,7 +327,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r008-periode-essai-pixel.mp4",
    "status": "published",
    "posted_at": "2026-10-03T17:15 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 157,
+      "reach": 138,
+      "avg_watch_s": 5.6
+     },
+     "facebook": {
+      "views": 148
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387158611,
    "networks": [
     "instagram",
@@ -267,7 +369,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r006-bailleur-cles-3d.mp4",
    "status": "published",
    "posted_at": "2026-10-03T21:00 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 170,
+      "reach": 159,
+      "avg_watch_s": 5.4
+     },
+     "facebook": {
+      "views": 205
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387158627,
    "networks": [
     "instagram",
@@ -294,7 +411,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r009-maladie-tableau-blanc.mp4",
    "status": "scheduled",
    "posted_at": "2026-10-04T08:30 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 119,
+      "reach": 102,
+      "avg_watch_s": 2.9
+     },
+     "facebook": {
+      "views": 2
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387158644,
    "networks": [
     "instagram",
@@ -322,7 +454,22 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r010-licencie-whatsapp-avatar.mp4",
    "status": "published",
    "posted_at": "2026-10-03T17:35 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 141,
+      "reach": 117,
+      "avg_watch_s": 6.5
+     },
+     "facebook": {
+      "views": 15
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387356113,
    "networks": [
     "instagram",
@@ -350,7 +497,19 @@
    "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r011-sous-location-chat.mp4",
    "status": "scheduled",
    "posted_at": "2026-10-04T12:15 Europe/Brussels",
-   "stats": {},
+   "stats": {
+    "2026-10-05 07:30": {
+     "instagram": {
+      "views": 14,
+      "reach": 6,
+      "avg_watch_s": 13.9
+     },
+     "tiktok": {
+      "views": 0,
+      "note": "Metricool ne remonte rien pour TikTok"
+     }
+    }
+   },
    "metricool_id": 387642007,
    "networks": [
     "instagram",
@@ -438,7 +597,8 @@
     "facebook",
     "youtube",
     "tiktok"
-   ]
+   ],
+   "note": "YouTube refusé : « The user has exceeded the number of videos they may upload » (limite journalière de la chaîne)"
   },
   {
    "id": "r015-etat-des-lieux-diorama",
@@ -487,6 +647,114 @@
    "posted_at": "2026-10-04T20:45 Europe/Brussels",
    "stats": {},
    "metricool_id": 387947982,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r018-garantie-chat-sav",
+   "genome": {
+    "style": "pov-chat-imessage-clair",
+    "palette": "blanc/bleu iMessage/rouge",
+    "hook": "ville + objet cassé + réponse du magasin",
+    "format": "conversation-fictive + piege + check-list",
+    "topic": "consommation/garantie",
+    "mascot": "aucun (chat)",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "noir-contour-blanc",
+    "music": "lofi",
+    "length": "~33s"
+   },
+   "duration": 30.7,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r018-garantie-chat-sav.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-05T12:15 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 388214004,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r019-resilier-bail-google",
+   "genome": {
+    "style": "recherche-google-en-direct",
+    "palette": "blanc/bleu Google/jaune",
+    "hook": "identité (tu veux quitter ton appart) + ville",
+    "format": "recherche + 3 règles + piège",
+    "topic": "logement/résiliation",
+    "mascot": "aucun (UI de recherche)",
+    "voice": "fr-BE-CharlineNeural",
+    "captions": "noir-contour-blanc",
+    "music": "bounce",
+    "length": "~32s"
+   },
+   "duration": 30.2,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r019-resilier-bail-google.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-05T15:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 388214048,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r020-grossesse-calendrier",
+   "genome": {
+    "style": "calendrier-pages-arrachees-3d-css",
+    "palette": "crème/rose/rouge",
+    "hook": "affirmation choc vraie + ville",
+    "format": "regle + compteur + exception",
+    "topic": "travail/grossesse",
+    "mascot": "aucun (calendrier)",
+    "voice": "fr-CA-SylvieNeural",
+    "captions": "blanc-contour-bordeaux",
+    "music": "lofi",
+    "length": "~30s"
+   },
+   "duration": 29.8,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r020-grossesse-calendrier.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-05T18:30 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 388214087,
+   "networks": [
+    "instagram",
+    "facebook",
+    "youtube",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r017-vol-annule-synthwave",
+   "genome": {
+    "style": "3d-neon-synthwave",
+    "palette": "violet/magenta/cyan/orange",
+    "hook": "ville + offre piège (bon 50 CHF)",
+    "format": "dilemme + montant + exception",
+    "topic": "voyage/vol-annule",
+    "mascot": "avion filaire 3D",
+    "voice": "fr-FR-HenriNeural",
+    "captions": "blanc-contour-magenta",
+    "music": "drive",
+    "length": "~33s"
+   },
+   "duration": 34.0,
+   "media": "https://raw.githubusercontent.com/skamer666/Falx/reels-media/r017-vol-annule-synthwave.mp4",
+   "status": "scheduled",
+   "posted_at": "2026-10-05T20:45 Europe/Brussels",
+   "stats": {},
+   "metricool_id": 388214119,
    "networks": [
     "instagram",
     "facebook",
