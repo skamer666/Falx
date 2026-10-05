@@ -82,11 +82,57 @@ def from_source(work, spec):
               ensure_ascii=False)
     print(f"voice: {len(words)} words from source, {dur:.2f}s")
 
+
+def dialogue(work, spec):
+    """Two-voice dialogue: LINES = [(speaker, text) or (speaker, text, gap_before)], VOICES = {speaker: (voice, rate)}.
+    Each line is synthesised on its own, trimmed, and placed after a short gap; words carry their speaker."""
+    os.makedirs(os.path.join(work, "assets"), exist_ok=True)
+    y, words, lines, t = np.zeros(0, dtype=np.float32), [], [], 0.0
+    for k, ln in enumerate(spec.LINES):
+        spk, text = ln[0], " ".join(ln[1].split())
+        gap = ln[2] if len(ln) > 2 else getattr(spec, "GAP", 0.28)
+        voice, rate = spec.VOICES[spk]
+        raw = os.path.join(work, "assets", f"line{k:02d}.mp3")
+        for attempt in range(4):
+            try:
+                ws = asyncio.run(tts(text, rate, raw, voice))
+                if ws:
+                    break
+            except Exception as e:
+                print("tts retry", attempt, repr(e)[:120])
+        else:
+            sys.exit("TTS FAILED")
+        attach_punct(ws, text)
+        pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", raw, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"],
+                             capture_output=True, check=True).stdout
+        x = np.frombuffer(pcm, dtype=np.float32).copy()
+        a, b = max(0.0, ws[0]["t0"] - 0.04), min(len(x) / SR, ws[-1]["t1"] + 0.12)
+        seg = x[int(a * SR):int(b * SR)]
+        seg = seg / (np.abs(seg).max() or 1) * 0.89
+        if k:
+            t += gap
+            y = np.concatenate([y, np.zeros(int(gap * SR), dtype=np.float32)])
+        for w in ws:
+            words.append({"w": w["w"], "t0": round(t + w["t0"] - a, 3), "t1": round(t + w["t1"] - a, 3), "spk": spk, "ln": k})
+        lines.append({"spk": spk, "text": text, "t0": round(t, 3), "t1": round(t + len(seg) / SR, 3)})
+        y = np.concatenate([y, seg]); t += len(seg) / SR
+    sf.write(os.path.join(work, "assets", "vo.wav"), y, SR, subtype="FLOAT")
+    hop = SR // 30
+    env = [float(np.sqrt(np.mean(y[i:i + hop] ** 2))) for i in range(0, len(y), hop)]
+    m = max(env) or 1
+    env = [round(min(1, v / m * 1.6), 3) for v in env]
+    json.dump({"words": words, "lines": lines, "vo_dur": round(t, 3), "env": env},
+              open(os.path.join(work, "assets", "words.json"), "w"), ensure_ascii=False)
+    print(f"voice: dialogue {len(lines)} lines, {len(words)} words, {t:.2f}s")
+
+
 def main():
     work, spec_path = os.path.abspath(sys.argv[1]), sys.argv[2]
     spec = load_spec(spec_path)
     if getattr(spec, "SOURCE_AUDIO", None):
         return from_source(work, spec)
+    if getattr(spec, "LINES", None):
+        return dialogue(work, spec)
     text = " ".join(spec.VO.split())
     rate = getattr(spec, "RATE", "+12%")
     os.makedirs(os.path.join(work, "assets"), exist_ok=True)

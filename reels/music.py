@@ -5,6 +5,7 @@ Writes assets/mix.wav (voice + music + sfx, mastered around -14 LUFS).
 """
 import json
 import os
+import subprocess
 import sys
 
 import numpy as np
@@ -198,8 +199,26 @@ def sfx_make(kind):
     raise ValueError(kind)
 
 
+def vo_chain(path):
+    """Dialogue polish (opt-in): band-limit, gentle compression, a small room send mixed back in."""
+    out = path.replace(".wav", "-chain.wav")
+    fc = ("[0:a]highpass=f=85,lowpass=f=9500,acompressor=threshold=0.045:ratio=2.6:attack=8:release=140:makeup=2,asplit[d][w];"
+          "[w]aecho=0.8:0.5:41|79|133:0.26|0.18|0.1,lowpass=f=3400,volume=0.6[r];[d][r]amix=inputs=2:weights=1 0.6:normalize=0[o]")
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-filter_complex", fc, "-map", "[o]", "-ar", str(SR), "-ac", "1",
+                    "-c:a", "pcm_f32le", out], check=True)
+    return out
+
+
+def uniform_filter_1d_safe(x):
+    from scipy.ndimage import uniform_filter1d
+    return uniform_filter1d(x, size=SR // 2, axis=0)
+
+
 def main():
-    vo, sr = sf.read(os.path.join(WORK, "assets/vo.wav"), dtype="float32")
+    src = os.path.join(WORK, "assets/vo.wav")
+    if CFG.get("vo_chain"):
+        src = vo_chain(src)
+    vo, sr = sf.read(src, dtype="float32")
     assert sr == SR
     vo2 = np.zeros((N, 2)); off = int(CFG.get("vo_start", 0) * SR)
     n = min(len(vo), N - off); vo2[off:off + n, 0] = vo[:n]; vo2[off:off + n, 1] = vo[:n]
@@ -219,6 +238,10 @@ def main():
         l = meter.integrated_loudness(x)
         return x * 10 ** ((lufs - l) / 20) if np.isfinite(l) else x
     mix = norm(vo2, -15) + norm(m, -27 + CFG.get("music_gain", 0)) * duck[:, None] + norm(fx, -26)
+    if CFG.get("room"):  # room tone: soft pink-ish noise, band-limited, far under the voices
+        n = rng.standard_normal((N, 2)); n = np.cumsum(n, axis=0) * 0.02; n -= uniform_filter_1d_safe(n)
+        n = np.stack([bp(n[:, 0], 60, 5000), bp(n[:, 1], 60, 5000)], 1)
+        mix = mix + norm(n, -15 + CFG["room"])
     from scipy.ndimage import maximum_filter1d, uniform_filter1d
     thr = 10 ** (-1.5 / 20)
     for _ in range(4):  # normalise, then lookahead peak limiter, repeat until both hold

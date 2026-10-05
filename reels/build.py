@@ -31,6 +31,7 @@ class Words:
     def __init__(self, data):
         self.words = data["words"]
         self.vo_dur = data["vo_dur"]
+        self.lines = data.get("lines", [])
         self.normed = [norm(w["w"]) for w in self.words]
         self.cursor = 0
 
@@ -114,7 +115,7 @@ def main():
     cues.sort(key=lambda c: c["t"])
     META = spec.META
     json.dump({"total": total, "music": META.get("music", "drive"), "music_gain": META.get("music_gain", 0),
-               "sfx": cues, "seed": abs(hash(META["id"])) % 1000},
+               "sfx": cues, "seed": abs(hash(META["id"])) % 1000, "room": META.get("room", 0), "vo_chain": META.get("vo_chain", False)},
               open(os.path.join(work, "assets/reel.json"), "w"))
 
     css = BASE_CSS + mascot.CSS + getattr(spec, "CSS", "")
