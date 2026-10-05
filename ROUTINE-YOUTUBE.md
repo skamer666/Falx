@@ -47,6 +47,12 @@ Limite constatée le 4 oct. : après une dizaine de mises en ligne sur la chaîn
 
 Si YouTube ou Zapier refuse un upload (quota journalier, limite de tâches), s'arrêter là et reprendre au passage suivant ; ne pas réessayer en boucle.
 
+## Metricool : ne pas l'utiliser pour ces vidéos
+
+Le 5 oct., 2 vidéos (avertissement-employe, baisse-de-loyer) ont été publiées via Metricool alors que Zapier restait bloqué.
+Dès la 3e, Metricool a répondu « You have reached your Metricool account limit », et cette limite a aussi fait échouer le Reel r018 de 12h15 sur les 4 réseaux.
+Le quota Metricool est réservé aux Reels : passer uniquement par Zapier pour les vidéos de prestations.
+
 ## Contenu
 
 Les textes des vidéos ne changent pas : ce sont ceux des specs déjà validées (aucun prix, délai ni volume ; jamais « juriste » ni « avocat » pour Thrax ; vouvoiement). Les vidéos sont en français. Sur les pages DE, EN et IT, une mention « vidéo en français » s'affiche sous le lecteur.
