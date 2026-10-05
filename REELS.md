@@ -95,6 +95,7 @@ consigné dans `reels/registry.json` avec les stats Metricool.
 
 Médias sur la branche orpheline `reels-media` (commits « [skip ci] », jamais Cloudflare) :
 `https://raw.githubusercontent.com/skamer666/Falx/reels-media/<id>.mp4`. Garder seulement les médias récents.
-Metricool : blogId 7198804, fuseau Europe/Brussels ; Instagram REEL (showReelOnFeed), Facebook REEL, YouTube short
+**Consigne du propriétaire (5 oct.) : plus de Reels sur YouTube tant que toutes les vidéos YouTube de prestations/guides ne sont pas en ligne** (youtube-registry.json sans « rendered » ni « todo ») : le quota d'upload de la chaîne leur est réservé.
+Metricool : blogId 7198804, fuseau Europe/Brussels ; Instagram REEL (showReelOnFeed), Facebook REEL, [YouTube short : suspendu, voir consigne]
 (public, madeForKids false, catégorie EDUCATION) ; TikTok (tiktokData.title OBLIGATOIRE, ≤ 90 car., PUBLIC_TO_EVERYONE, isAigc false) ;
 isAiGenerated false ; une seule publication Metricool avec les 4 réseaux ; meilleurs horaires via getBestTimeToPostByNetwork.
