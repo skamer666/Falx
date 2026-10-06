@@ -33,9 +33,9 @@ Règles d'écriture :
 | « Ces trucs normaux sont illégaux » | [Petite herbe 小草律师](https://www.douyin.com/video/7202585092760407336) | 379 k partages, 316 k commentaires | photo de quelqu'un postée sans accord, sac non taxé (VD), quotas de champignons ; + 1 mythe à démonter |
 | Codes secrets / arnaques, 1 décor par code | [Wei, codes de Xianyu](https://www.douyin.com/video/7645230411362077952) | 278 k partages, 39 k enregistrements | « 4 signaux d'un faux bailleur sur Anibis / Facebook à Genève » |
 | Phrase magique | [Li, enfant harcelé](https://www.douyin.com/video/7063427935386029343) ; [Li, insulté dans un groupe](https://www.douyin.com/video/7093511574492548365) ; [Ge, salaire impayé](https://www.douyin.com/video/7087519500492410126) | 209 k / 72 k / 73 k enregistrements | « La phrase à dire à ton patron pour tes heures sup », « … à ta régie pour ta caution » |
-| Tes droits en liste | [Li, quand la police vient te chercher : 8 points](https://www.douyin.com/video/7093511574492548365) | très enregistré | « Convoqué par la police en Suisse : 6 droits » |
+| Tes droits en liste | [Li, quand la police vient te chercher : 8 points](https://www.douyin.com/video/7095731999079468296) | très enregistré | « Convoqué par la police en Suisse : 6 droits » |
 | Humour du métier | [Guo, « je croyais qu'il suffisait de plaider »](https://www.douyin.com/video/7678904172921514481) | 1,6 M likes, 920 k partages, 21 s | sketch « les 5 phrases qu'on entend après un commandement de payer » (sans se dire avocat) |
-| Curiosité | [enchères du tribunal](https://www.douyin.com/video/7116510954933718309) | — | objets bizarres vendus aux enchères par les offices des poursuites romands (vraies annonces) |
+| Curiosité | [Petite herbe, enchères du tribunal](https://www.douyin.com/video/7181032032988843298) | — | objets bizarres vendus aux enchères par les offices des poursuites romands (vraies annonces) |
 
 Structure type « phrase magique » (Li) : « Tout le monde fait X, ça ne marche pas. Enregistre cette vidéo, regarde jusqu'au
 bout. Fais ceci, puis dis exactement : "…". À cette phrase, il comprend que tu connais la loi. » + « Suis-nous pour moins te faire avoir. »

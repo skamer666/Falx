@@ -44,7 +44,7 @@ def tiktok(mp4, title, cover_ms):
     else:
         chunk = 10 * 1024 * 1024; n = size // chunk
     d = call("tiktok.tiktok.video.publish.init", "POST", body={
-        "post_info": {"title": title[:2200], "privacy_level": "PUBLIC_TO_EVERYONE", "disable_comment": False, "disable_duet": False,
+        "post_info": {"title": title[:2200], "privacy_level": os.environ.get("TT_PRIVACY", "PUBLIC_TO_EVERYONE"), "disable_comment": False, "disable_duet": False,
                       "disable_stitch": False, "video_cover_timestamp_ms": cover_ms, "is_aigc": False,
                       "brand_content_toggle": False, "brand_organic_toggle": False},
         "source_info": {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": chunk, "total_chunk_count": n}})
