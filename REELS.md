@@ -4,6 +4,8 @@ Moteur : `reels/` (voix Edge TTS fr-CH-FabriceNeural +12 %, blancs coupés ; per
 sous-titres mot à mot ; musique et bruitages procéduraux). Produire un Reel : `bash reels/produce.sh reels/specs/<id>.py`.
 Un spec = `VO`, `META` (légende, titre YouTube, tags, génome, cover_t), `CSS`, `body(w)`, éventuellement `SCRIPT`.
 
+**À lire avant d'écrire un Reel : `VIRAL.md`** (ce qui rend viral : ressorts de script, formats prouvés, styles visuels, charte avatar, carrousels).
+
 ## Public
 
 Le spectateur type ne connaît RIEN au droit. Il scrolle. Il reste seulement si c'est passionnant.
