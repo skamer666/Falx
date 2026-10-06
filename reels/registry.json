@@ -1023,6 +1023,28 @@
     "facebook",
     "tiktok"
    ]
+  },
+  {
+   "id": "r032-regie-4-regles-avatar",
+   "date": "2026-10-06",
+   "genome": {
+    "style": "avatar HeyGen détouré + texte derrière la tête + b-roll photo IA (montage récap d'actu)",
+    "palette": "blanc / lilas / photo chaude",
+    "hook": "« ils espèrent que tu ne sais pas » + ville",
+    "format": "liste 4 règles",
+    "topic": "logement/régie",
+    "mascot": "avatar IA HeyGen (homme en costume)",
+    "voice": "heygen",
+    "captions": "pastille grise",
+    "music": "bounce",
+    "length": "~27s",
+    "ai_generated": true
+   },
+   "ig_media_id": "18117739819971317",
+   "published": "2026-10-06 (direct, treg)",
+   "networks": [
+    "instagram"
+   ]
   }
  ],
  "notes": {
