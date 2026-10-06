@@ -1049,5 +1049,18 @@
  ],
  "notes": {
   "2026-10-06": "Deux Reels sans légende publiés à la main le 5 oct. (DeHTuT8qiMu : 223 vues, 14,3 s de visionnage moyen, 56 % > 3 s ; DeHcCIGKHmI : 185 vues, 6,5 s). Médiane IG ≈ 128 vues : aucun Reel ≥ 3× la médiane, on reste en exploration."
- }
+ },
+ "carousels": [
+  {
+   "id": "c001-regie-7-regles",
+   "date": "2026-10-06",
+   "canva_design": "DAHXOgBNJOY",
+   "ig_media_id": "18078341549446622",
+   "slides": 10,
+   "format": "1080x1350",
+   "topic": "logement/régie",
+   "hook": "7 règles que ta régie espère que tu ignores + Lausanne/Genève",
+   "media": "reels-media:carousels/c001-regie-7-regles/"
+  }
+ ]
 }
