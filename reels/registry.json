@@ -792,7 +792,240 @@
     "facebook": "https://facebook.com/reel/1514393027164081",
     "youtube": "https://www.youtube.com/shorts/IgWg1k7r8lQ",
     "tiktok": "7693107678121478166 (awaiting confirmation)"
+   },
+   "stats": {
+    "2026-10-06 07:40": {
+     "instagram": {
+      "views": 123,
+      "reach": 108,
+      "shares": 0,
+      "saved": 0,
+      "likes": 0,
+      "avg_watch_s": 3.3,
+      "view_rate_3s_pct": 26.4
+     }
+    }
    }
+  },
+  {
+   "id": "r022-tresor-jardin-3d",
+   "genome": {
+    "style": "3d-aventure-cinema-coupe-de-terrain",
+    "palette": "noir terre/or fondu/vert vaudois/rouge-bleu gyrophare",
+    "hook": "triple : pelle qui frappe + « ta pelle tape sur ça » + 100'000 CHF « il est à qui ? »",
+    "format": "chasse au trésor + 4 retournements + histoire vraie + relance toutes les 2-3 s",
+    "topic": "propriété/trésor",
+    "mascot": "coffre 3D + pions toi/propriétaire",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "blanc-contour-brun",
+    "music": "epic",
+    "length": "~45s"
+   },
+   "date": "2026-10-05",
+   "note": "Livré au propriétaire, non publié par nous"
+  },
+  {
+   "id": "r024-commandement-thriller",
+   "genome": {
+    "style": "3d-thriller-nuit-montage-alterne (personnages lisses, DOF, bloom, grain)",
+    "palette": "cuisine ambre / bureau bleu nuit / rouge alerte",
+    "hook": "23:47 + 8'400 CHF + société inconnue",
+    "format": "appel téléphonique, 3 révélations, chute",
+    "topic": "argent/poursuite",
+    "mascot": "Léa (indépendante) + Marc (Thrax Legal)",
+    "voice": "Vivienne + Fabrice",
+    "captions": "phrase, bande 31-43 %",
+    "music": "tension (bas) + ambiance",
+    "length": "~45s"
+   },
+   "date": "2026-10-05",
+   "published": {
+    "instagram": "https://www.instagram.com/reel/DeHhH54kWso/"
+   },
+   "networks": [
+    "instagram"
+   ],
+   "note": "treg (Metricool à la limite) ; TikTok refusé (app treg non auditée)",
+   "stats": {
+    "2026-10-06 07:40": {
+     "instagram": {
+      "views": 188,
+      "reach": 171,
+      "shares": 1,
+      "saved": 0,
+      "likes": 0,
+      "avg_watch_s": 11.4,
+      "view_rate_3s_pct": 51.5
+     }
+    }
+   }
+  },
+  {
+   "id": "r026-course-des-amendes",
+   "genome": {
+    "style": "course-stick-figures-data + voix (codes Stick Odds)",
+    "palette": "beige / couloirs verts / rouge prison",
+    "hook": "pari : choisis ton couloir + ville",
+    "format": "course + compteur CHF + twist prison + un mot en commentaire",
+    "topic": "route/amendes",
+    "mascot": "bonshommes en bâton",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "mot à mot bas",
+    "music": "drive",
+    "length": "~25s"
+   },
+   "date": "2026-10-05",
+   "published": {
+    "instagram": "https://www.instagram.com/reel/DeHdsxTjhgM/"
+   },
+   "networks": [
+    "instagram"
+   ],
+   "note": "treg",
+   "stats": {
+    "2026-10-06 07:40": {
+     "instagram": {
+      "views": 204,
+      "reach": 177,
+      "shares": 0,
+      "saved": 0,
+      "likes": 0,
+      "avg_watch_s": 9.0,
+      "view_rate_3s_pct": 53.1
+     }
+    }
+   }
+  },
+  {
+   "id": "r027-concubins-sans-testament",
+   "genome": {
+    "style": "storytelling illustré crayon (codes Élan Finance), dessins faits main",
+    "palette": "gris clair / encre / rouge suisse",
+    "hook": "SANS TESTAMENT ? + 0 CHF + ville",
+    "format": "histoire + 3 règles + partage",
+    "topic": "couple/succession",
+    "mascot": "bonhomme à casquette suisse",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "3 mots, bas",
+    "music": "lofi",
+    "length": "~70s"
+   },
+   "date": "2026-10-05",
+   "published": {
+    "instagram": "https://www.instagram.com/reel/DeHkOvKEtfh/"
+   },
+   "networks": [
+    "instagram"
+   ],
+   "note": "images dessinées par le propriétaire ; treg",
+   "stats": {
+    "2026-10-06 07:40": {
+     "instagram": {
+      "views": 114,
+      "reach": 105,
+      "shares": 0,
+      "saved": 0,
+      "likes": 0,
+      "avg_watch_s": 7.5,
+      "view_rate_3s_pct": 33.3
+     }
+    }
+   }
+  },
+  {
+   "id": "r028-lamal-30-novembre",
+   "genome": {
+    "style": "bureau-papier-kraft + lettre tapée à la machine (2D)",
+    "palette": "kraft / crème / rouge suisse",
+    "hook": "perte chiffrée implicite + délai + ville",
+    "format": "délai à garder + piège + phrase exacte",
+    "topic": "assurance-maladie",
+    "mascot": "aucun (objets : enveloppe, calendrier, lettre)",
+    "voice": "fr-CH-ArianeNeural",
+    "captions": "noir sur crème, mot actif rouge",
+    "music": "bounce",
+    "length": "~45s"
+   },
+   "date": "2026-10-06",
+   "metricool_id": 389203945,
+   "scheduled": "2026-10-06T12:15 Europe/Brussels",
+   "networks": [
+    "instagram",
+    "facebook",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r029-heritage-dettes-pate",
+   "genome": {
+    "style": "3d-pate-a-modeler-claymation",
+    "palette": "pastel menthe / argile corail / ocre",
+    "hook": "perte chiffrée familiale + ville (80'000 CHF de dettes)",
+    "format": "histoire + délai + piège + règle d'or",
+    "topic": "succession/dettes",
+    "mascot": "personnage en pâte à modeler",
+    "voice": "fr-FR-VivienneMultilingualNeural",
+    "captions": "noir contour crème, mot actif corail",
+    "music": "lofi",
+    "length": "~45s"
+   },
+   "date": "2026-10-06",
+   "metricool_id": 389204228,
+   "scheduled": "2026-10-06T15:30 Europe/Brussels",
+   "networks": [
+    "instagram",
+    "facebook",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r030-occasion-sans-garantie",
+   "date": "2026-10-06",
+   "genome": {
+    "style": "fausse-annonce-en-ligne + dossier de preuve (2D)",
+    "palette": "blanc appli / orange annonce / rouge alerte",
+    "hook": "histoire + perte chiffrée + ville (6000 CHF, moteur mort)",
+    "format": "histoire + verdict + 3 réflexes",
+    "topic": "achat/voiture-occasion",
+    "mascot": "aucun (UI d'annonce, rapport de garage)",
+    "voice": "fr-CH-FabriceNeural",
+    "captions": "blanc contour noir, mot actif orange",
+    "music": "drive",
+    "length": "~38s"
+   },
+   "metricool_id": 389205089,
+   "scheduled": "2026-10-06T18:30 Europe/Brussels",
+   "networks": [
+    "instagram",
+    "facebook",
+    "tiktok"
+   ]
+  },
+  {
+   "id": "r031-chauffage-regie-appel",
+   "date": "2026-10-06",
+   "genome": {
+    "style": "split-screen appel téléphonique + thermomètre + givre (2D)",
+    "palette": "bleu glacier / gris régie / rouge alerte",
+    "hook": "phrase à dire (format répartie) + ville + chiffre (15 degrés)",
+    "format": "dialogue fictif 2 voix + règle d'or",
+    "topic": "logement/defaut-chauffage",
+    "mascot": "aucun (écrans d'appel)",
+    "voice": "Vivienne + fr-FR-HenriNeural",
+    "captions": "blanc contour bleu nuit, mot actif cyan",
+    "music": "tension",
+    "length": "~35s"
+   },
+   "metricool_id": 389207775,
+   "scheduled": "2026-10-06T20:45 Europe/Brussels",
+   "networks": [
+    "instagram",
+    "facebook",
+    "tiktok"
+   ]
   }
- ]
+ ],
+ "notes": {
+  "2026-10-06": "Deux Reels sans légende publiés à la main le 5 oct. (DeHTuT8qiMu : 223 vues, 14,3 s de visionnage moyen, 56 % > 3 s ; DeHcCIGKHmI : 185 vues, 6,5 s). Médiane IG ≈ 128 vues : aucun Reel ≥ 3× la médiane, on reste en exploration."
+ }
 }
