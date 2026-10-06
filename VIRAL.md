@@ -107,3 +107,27 @@ petit zoom, gros sous-titres. Variante sans lipsync : portraits fixes + zoom (fo
   HeyGen Photo Avatar 4 10 ¢/s, Omnihuman 16 ¢/s, upscaler FLUX.3 14 ¢/s, ElevenLabs v3 10 ¢/1 000 car.
   Abonnements (hedra.com) : Basic 20 $/2 000 crédits, Pro 50 $/7 200, Ultra 100 $/18 000. La clé n'a pas le scope `usage:read`.
 - Ne jamais lancer une génération payante sans accord : le propriétaire veut parfois la faire lui-même (6 oct. : avatar).
+
+## 8. Le Reel parfait (modèle théorique, 6 oct.)
+
+Une idée, une émotion, une promesse tenue. 25-40 s. Le spectateur ne connaît rien au droit et peut partir à chaque seconde :
+chaque seconde doit soit **promettre**, soit **payer**.
+
+| Temps | Rôle | Ce qu'on voit | Ce qu'on entend | Ce qui est écrit |
+|---|---|---|---|---|
+| 0-1,5 s | Accroche triple | Avatar en buste, regard caméra, déjà en mouvement (geste, zoom) ; ou situation de conflit | Question / phrase choc avec « tu » + ville + enjeu | Bandeau jaune 3-6 mots, le même sens que la voix |
+| 1,5-4 s | Enjeu + boucle ouverte | Coupe, nouveau cadre | « Si tu bosses à Lausanne… » + « la 3e phrase, il ne l'attend pas » | Sous-titres ; chiffre en jaune |
+| 4-22 s | Paiement en paliers | Un changement toutes les 2-3 s ; un décor/costume par point ; preuve en pop-up | Une info par phrase, phrases courtes, montée | Mots clés en jaune/rouge |
+| ~50 % | Relance | Changement visuel fort | « Mais attention… » / « Et là, ça devient fou » | — |
+| 22-30 s | Chute juridique | Plan serré, 0,3 s de silence avant | La règle en une phrase + l'article | Article en pastille, durée/montant en gros |
+| 30-34 s | Action + boucle | Retour au cadre du début | « Envoie ça à… » ; dernière phrase qui renvoie à la première | « Thrax Legal » discret |
+
+Son : voix énergique (Vivienne +10 %), musique à -18 dB sous la voix, un bruitage à chaque coupe, silence avant la chute.
+Légende : 1re ligne = mots que les gens cherchent + ville ; la règle et l'article ; nuance ; question pour les commentaires ;
+3-5 hashtags locaux. Couverture = l'image de l'accroche avec le bandeau. Après publication : répondre aux commentaires dans
+la 1re heure, épingler un commentaire-question.
+Objectifs à mesurer : > 60 % encore là à 3 s, durée moyenne > 50 %, partages et enregistrements / portée.
+
+Test avant de produire (10 oui) : 1. compréhensible sans le son ? 2. ville + « tu » + enjeu en 1,5 s ? 3. une seule idée ?
+4. une boucle ouverte ? 5. une émotion (colère, peur, rire, surprise) ? 6. un changement visuel ≤ 3 s partout ? 7. un truc à garder
+ou à envoyer ? 8. la loi en chute, vérifiée, article exact ? 9. fin qui renvoie au début ? 10. rien qui présente Thrax comme avocat/juriste ?
