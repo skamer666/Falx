@@ -1045,6 +1045,28 @@
    "networks": [
     "instagram"
    ]
+  },
+  {
+   "id": "r033-fausse-annonce-geneve",
+   "date": "2026-10-07",
+   "genome": {
+    "style": "avatar IA face cam + b-roll réels libres de droits + cartes preuves (montage Douyin)",
+    "palette": "blanc / jaune / rouge alerte",
+    "hook": "triple : Jet d'eau + fausse annonce tamponnée + bandeau + « surtout, paie rien »",
+    "format": "histoire en « tu » + 3 alarmes + révélation",
+    "topic": "logement/arnaque",
+    "mascot": "Léa (avatar IA HeyGen)",
+    "voice": "ElevenLabs (via HeyGen), ralentie 95 % + pauses",
+    "captions": "blanc contour noir, mots clés jaunes",
+    "music": "tension + coupures",
+    "length": "~51s",
+    "ai_generated": true
+   },
+   "ig_media_id": "18069673046768100",
+   "published": "2026-10-07 (direct, treg)",
+   "networks": [
+    "instagram"
+   ]
   }
  ],
  "notes": {
