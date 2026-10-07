@@ -110,20 +110,23 @@
   "decompte-de-charges": {
    "kind": "service",
    "site_key": "particuliers/decompte-de-charges",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "NcyvKHJJCIY",
+   "note": "uploadé via treg le 5 oct."
   },
   "defaut-logement": {
    "kind": "service",
    "site_key": "particuliers/defaut-logement",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "_lvaqMqWaJ4",
+   "note": "uploadé via treg le 5 oct."
   },
   "directives-anticipees": {
    "kind": "service",
    "site_key": "particuliers/directives-anticipees",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "NfvXVDsbovM",
+   "note": "uploadé via treg le 5 oct."
   },
   "garantie-achat-defectueux": {
    "kind": "service",
