@@ -3,7 +3,8 @@ propriétaire), montage façon Douyin : triple accroche (Jet d'eau + fausse anno
 b-roll réels libres de droits toutes les 2-4 s (Mixkit, licence gratuite ; Jet d'eau : Wikimedia Commons CC0), cartes
 « preuves » (annonce, messages, virement, alarmes, garantie, photos copiées), zooms en jump cut, sous-titres blancs à contour
 avec mots clés en jaune, arrêt sur image + disque rayé sur « Attends », musique coupée sur les temps forts.
-Voix ralentie à 95 % et pauses entre les phrases (media/r033/prep.py), lèvres et voix restent synchronisées.
+Voix ralentie à 95 % en continu, sans aucune coupure ni pause ajoutée (v2, demande du propriétaire : les pauses saccadaient).
+Les temps du montage v1 (avec pauses) sont recalés automatiquement sur la nouvelle voix (fonction M).
 Faits : signaux d'alerte des polices cantonales (FR, VD) ; garantie de loyer sur un compte au nom du locataire (art. 257e CO).
 Histoire fictive (« tu », Marc) : marquée « exemple fictif » à l'écran et dans la légende."""
 import json
@@ -29,11 +30,32 @@ SHOTS = [(0.0, 1.18), (1.3, 1.18), (3.0, 1.0), (8.66, 1.0), (9.19, 1.12), (11.8,
 PUSH = (38.32, 39.6, 1.04, 1.34)
 GRAY = (24.83, 25.96)
 
+# v2 : les temps ci-dessus ont été écrits sur la v1 (avec pauses) ; M() les recale mot à mot sur la voix continue.
+import os as _os
+_D = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "media", "r033")
+_W1, _W2 = json.load(open(_os.path.join(_D, "words_v1.json"))), json.load(open(_os.path.join(_D, "words.json")))
+_PTS = sorted({(a["t0"], b["t0"]) for a, b in zip(_W1, _W2)} | {(a["t1"], b["t1"]) for a, b in zip(_W1, _W2)})
+
+
+def M(t):
+    if t <= _PTS[0][0]: return round(t, 3)
+    for (x0, y0), (x1, y1) in zip(_PTS, _PTS[1:]):
+        if t <= x1: return round(y0 + (t - x0) * (y1 - y0) / max(x1 - x0, 1e-6), 3)
+    return round(_PTS[-1][1] + (t - _PTS[-1][0]), 3)
+
+
+BROLL = [(n, M(a), M(b), txt) for n, a, b, txt in BROLL]
+SHOTS = [(M(a), z) for a, z in SHOTS]
+PUSH = (M(PUSH[0]), M(PUSH[1]), PUSH[2], PUSH[3])
+GRAY = (M(GRAY[0]), M(GRAY[1]))
+HL = [["h1", M(3.03), M(3.75)], ["h2", M(3.79), M(4.58)], ["h3", M(4.61), M(5.6)]]
+FLASH = [M(1.30), M(24.83), M(40.9)]
+
 META = {
     "id": "r033-fausse-annonce-geneve",
     "music": "tension",
     "music_gain": -3,
-    "mute": [[24.8, 25.95], [39.0, 39.85]],
+    "mute": [[24.8, 25.95], [39.0, 39.85]],  # recalé plus bas
     "caption": ("🏠 Fausse annonce d'appart à Genève ou Lausanne : les signaux à connaître avant de payer quoi que ce soit.\n\n"
                 "🚨 Loyer trop beau pour le quartier\n🚨 « Propriétaire » à l'étranger, pas de visite possible\n"
                 "🚨 Argent demandé avant la visite (virement, carte prépayée, lien de « réservation »)\n"
@@ -51,7 +73,7 @@ META = {
                "palette": "blanc / jaune / rouge alerte", "hook": "triple : Jet d'eau + fausse annonce tamponnée + bandeau + « surtout, paie rien »",
                "format": "histoire en « tu » + 3 alarmes + révélation", "topic": "logement/arnaque", "mascot": "Léa (avatar IA HeyGen)",
                "voice": "ElevenLabs (via HeyGen), ralentie 95 % + pauses", "captions": "blanc contour noir, mots clés jaunes",
-               "music": "tension + coupures", "length": "~51s", "ai_generated": True},
+               "music": "tension + coupures", "length": "~44s", "ai_generated": True},
 }
 
 CSS = """
@@ -125,11 +147,20 @@ CSS = """
 """
 
 
+META["mute"] = [[M(a), M(b)] for a, b in META["mute"]]
+
+
+def _remap_html(h):
+    import re as _re
+    h = _re.sub(r'data-(at|out)="(-?[\d.]+)"', lambda m: f'data-{m.group(1)}="{M(float(m.group(2))):.3f}"', h)
+    return h
+
+
 def body(w):
     V = lambda a, b: f'data-fx="none" data-at="{a:.3f}" data-out="{b - 0.2:.3f}"'
     P = lambda a, b, fx="pop": f'data-fx="{fx}" data-at="{a:.3f}" data-out="{b - 0.2:.3f}"'
     T = lambda a: f'data-fx="none" data-at="{a:.3f}"'
-    globals()["SCRIPT"] = SCRIPT_T.replace("__CFG__", json.dumps({"broll": BROLL, "shots": SHOTS, "push": PUSH, "gray": GRAY}))
+    globals()["SCRIPT"] = SCRIPT_T.replace("__CFG__", json.dumps({"broll": BROLL, "shots": SHOTS, "push": PUSH, "gray": GRAY, "hl": HL, "flash": FLASH}))
     sfx = []
     for n, a, b, txt in BROLL[1:]:
         sfx.append({"t": max(0.0, a - 0.12), "k": "whoosh"})
@@ -138,16 +169,16 @@ def body(w):
             {"t": 23.92, "k": "cash"}, {"t": 24.83, "k": "scratch", "g": 1.3}, {"t": 26.25, "k": "alarm"},
             {"t": 28.55, "k": "alarm"}, {"t": 29.3, "k": "alarm"}, {"t": 30.87, "k": "alarm"}, {"t": 38.6, "k": "riser"},
             {"t": 43.76, "k": "stamp"}, {"t": 45.3, "k": "stamp"}, {"t": 48.05, "k": "pop"}]
-    globals()["SFX"] = sfx
+    globals()["SFX"] = [dict(c, t=M(c["t"])) for c in sfx]
     META["cover_t"] = 0.75
     tracks = "\n".join(
         f'<div class="br" id="br_{n}"><video id="v_{n}" class="clip" src="assets/b_{n}.mp4" data-start="{a:.3f}" data-duration="{b - a + 0.05:.3f}" '
         f'data-track-index="{2 + i}" muted playsinline></video></div>'
         + (f'<div class="big{" y" if i % 2 else ""}" {P(a + 0.12, b + 0.2, "stamp")} data-rot="-3">{txt}</div>' if txt else "")
         for i, (n, a, b, txt) in enumerate(BROLL))
-    return f"""
+    return _remap_html(f"""
 <div id="avw"><video id="av" class="clip" src="assets/avatar-rt.mp4" data-start="0" data-duration="{w.total:.3f}" data-track-index="1" muted playsinline></video></div>
-{tracks}
+__TRACKS__
 <div class="flash" id="flash"></div>
 <div class="lbl">Personnage IA</div>
 
@@ -215,7 +246,7 @@ def body(w):
 
 <!-- 47.7 s → fin : partage -->
 <div class="share" data-fx="pop" data-at="48.05"><i>➤</i>Envoie ça à ton pote qui cherche</div>
-"""
+""").replace("__TRACKS__", tracks)
 
 
 SCRIPT_T = r"""
@@ -224,7 +255,7 @@ SCRIPT_T = r"""
   function cl(v){ return Math.max(0, Math.min(1, v)); }
   var av = document.getElementById('av'), flash = document.getElementById('flash');
   var br = C.broll.map(function(b){ var el = document.getElementById('br_' + b[0]); return {el: el, v: el.querySelector('video'), a: b[1], b: b[2]}; });
-  var hl = [['h1', 3.03, 3.75], ['h2', 3.79, 4.58], ['h3', 4.61, 5.6]].map(function(h){ return {el: document.getElementById(h[0]), a: h[1], b: h[2]}; });
+  var hl = C.hl.map(function(h){ return {el: document.getElementById(h[0]), a: h[1], b: h[2]}; });
   R.on(function(t){
     // b-roll : coupes franches + petit coup de zoom à l'entrée
     var cut = -9;
@@ -242,7 +273,7 @@ SCRIPT_T = r"""
     var g = C.gray, gr = (t >= g[0] && t < g[1]) ? 1 : 0;
     av.style.filter = gr ? 'grayscale(1) contrast(1.15)' : 'none';
     // flash blanc très bref sur les coupes fortes
-    var fl = 0; [1.30, 24.83, 40.9].forEach(function(h){ if (t >= h && t < h + 0.12) fl = 0.55 * (1 - (t - h) / 0.12); });
+    var fl = 0; C.flash.forEach(function(h){ if (t >= h && t < h + 0.12) fl = 0.55 * (1 - (t - h) / 0.12); });
     flash.style.opacity = fl.toFixed(3);
     // surligneur jaune sur l'annonce
     hl.forEach(function(h){ if (h.el) h.el.style.background = (t >= h.a) ? 'rgba(255,214,10,' + (t < h.b ? 1 : 0.45) + ')' : 'transparent'; });
