@@ -131,20 +131,23 @@
   "garantie-achat-defectueux": {
    "kind": "service",
    "site_key": "particuliers/garantie-achat-defectueux",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Q6XTVogL_Qk",
+   "note": "uploadé via treg le 5 oct."
   },
   "garantie-de-loyer": {
    "kind": "service",
    "site_key": "particuliers/garantie-de-loyer",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "pvocxZDu4R0",
+   "note": "uploadé via treg le 5 oct."
   },
   "lettre-de-demission": {
    "kind": "service",
    "site_key": "particuliers/lettre-de-demission",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "kgLCzwxu7So",
+   "note": "uploadé via treg le 5 oct."
   },
   "lettre-juridique-sur-mesure": {
    "kind": "service",
