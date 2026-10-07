@@ -20,6 +20,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/decompte-de-charges": { id: "NcyvKHJJCIY", poster: "/media/video/services/decompte-de-charges.webp" },
   "particuliers/defaut-logement": { id: "_lvaqMqWaJ4", poster: "/media/video/services/defaut-logement.webp" },
   "particuliers/directives-anticipees": { id: "NfvXVDsbovM", poster: "/media/video/services/directives-anticipees.webp" },
+  "particuliers/garantie-achat-defectueux": { id: "Q6XTVogL_Qk", poster: "/media/video/services/garantie-achat-defectueux.webp" },
+  "particuliers/garantie-de-loyer": { id: "pvocxZDu4R0", poster: "/media/video/services/garantie-de-loyer.webp" },
+  "particuliers/lettre-de-demission": { id: "kgLCzwxu7So", poster: "/media/video/services/lettre-de-demission.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
