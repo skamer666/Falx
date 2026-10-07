@@ -17,6 +17,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "entreprises/contrat-de-travail-sur-mesure": { id: "Ktnvxi6o6_c", poster: "/media/video/services/contrat-de-travail-sur-mesure.webp" },
   "entreprises/convention-d-actionnaires": { id: "Eay6QXQXiSA", poster: "/media/video/services/convention-d-actionnaires.webp" },
   "particuliers/convention-de-concubinage": { id: "Om-z0S8qlQw", poster: "/media/video/services/convention-de-concubinage.webp" },
+  "particuliers/decompte-de-charges": { id: "NcyvKHJJCIY", poster: "/media/video/services/decompte-de-charges.webp" },
+  "particuliers/defaut-logement": { id: "_lvaqMqWaJ4", poster: "/media/video/services/defaut-logement.webp" },
+  "particuliers/directives-anticipees": { id: "NfvXVDsbovM", poster: "/media/video/services/directives-anticipees.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
