@@ -14,6 +14,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/contester-une-facture": { id: "0RpnbuwgsKE", poster: "/media/video/services/contester-une-facture.webp" },
   "entreprises/contrat-commercial-sur-mesure": { id: "uOOJcCmv_Lo", poster: "/media/video/services/contrat-commercial-sur-mesure.webp" },
   "entreprises/contrat-de-mandat-independant": { id: "bZFr5xzTkrU", poster: "/media/video/services/contrat-de-mandat-independant.webp" },
+  "entreprises/contrat-de-travail-sur-mesure": { id: "Ktnvxi6o6_c", poster: "/media/video/services/contrat-de-travail-sur-mesure.webp" },
+  "entreprises/convention-d-actionnaires": { id: "Eay6QXQXiSA", poster: "/media/video/services/convention-d-actionnaires.webp" },
+  "particuliers/convention-de-concubinage": { id: "Om-z0S8qlQw", poster: "/media/video/services/convention-de-concubinage.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
