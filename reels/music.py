@@ -196,6 +196,13 @@ def sfx_make(kind):
         t = tt(0.4); return np.sign(np.sin(2 * np.pi * 110 * t)) * np.exp(-t * 6) * 0.18
     if kind == "cash":
         t = tt(0.5); return (np.sin(2 * np.pi * 2093 * t) + np.sin(2 * np.pi * 2637 * t)) * np.exp(-t * 9) * 0.25
+    if kind == "scratch":  # disque rayé : glissando descendant bruité
+        t = tt(0.5); f = 900 * np.exp(-t * 6) + 80
+        s = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.25 + bp(r.standard_normal(len(t)), 300, 4000) * 0.35
+        return s * np.exp(-t * 5) * 0.7
+    if kind == "alarm":  # deux bips d'alerte
+        t = tt(0.42); s = np.sin(2 * np.pi * 1760 * t) * ((t % 0.21) < 0.13)
+        return s * 0.28
     raise ValueError(kind)
 
 
@@ -237,6 +244,10 @@ def main():
     def norm(x, lufs):
         l = meter.integrated_loudness(x)
         return x * 10 ** ((lufs - l) / 20) if np.isfinite(l) else x
+    for a_, b_ in CFG.get("mute", []):  # coupures de musique (effet « stop »), fondu court
+        i0, i1 = int(a_ * SR), int(b_ * SR); r_ = int(0.04 * SR)
+        g_ = np.ones(N); g_[i0:i1] = 0.0
+        g_ = np.convolve(g_, np.ones(r_) / r_, mode="same"); m = m * g_[:, None]
     mix = norm(vo2, -15) + norm(m, -27 + CFG.get("music_gain", 0)) * duck[:, None] + norm(fx, -26)
     if CFG.get("room"):  # room tone: soft pink-ish noise, band-limited, far under the voices
         n = rng.standard_normal((N, 2)); n = np.cumsum(n, axis=0) * 0.02; n -= uniform_filter_1d_safe(n)

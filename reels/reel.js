@@ -75,7 +75,7 @@
     const hidden = c.hide.some(([a, b]) => t >= a && t < b);
     if (k !== c.last) {
       c.last = k;
-      c.el.innerHTML = k < 0 ? "" : c.chunks[k].idx.map((i) => `<span class="cw" data-i="${i}">${RE.words[i].w.replace(/([^\s])([?!:;»])$/, "$1 $2")}</span>`).join(" ");
+      c.el.innerHTML = k < 0 ? "" : c.chunks[k].idx.map((i) => `<span class="cw${RE.words[i].k ? " k" : ""}" data-i="${i}">${RE.words[i].w.replace(/([^\s])([?!:;»])$/, "$1 $2")}</span>`).join(" ");
       c.spans = Array.from(c.el.querySelectorAll(".cw"));
     }
     c.el.style.opacity = hidden ? 0 : 1;
