@@ -89,20 +89,23 @@
   "contrat-de-travail-sur-mesure": {
    "kind": "service",
    "site_key": "entreprises/contrat-de-travail-sur-mesure",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Ktnvxi6o6_c",
+   "note": "uploadé via treg le 5 oct."
   },
   "convention-d-actionnaires": {
    "kind": "service",
    "site_key": "entreprises/convention-d-actionnaires",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Eay6QXQXiSA",
+   "note": "uploadé via treg le 5 oct."
   },
   "convention-de-concubinage": {
    "kind": "service",
    "site_key": "particuliers/convention-de-concubinage",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Om-z0S8qlQw",
+   "note": "uploadé via treg le 5 oct."
   },
   "decompte-de-charges": {
    "kind": "service",
