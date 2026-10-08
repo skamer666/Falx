@@ -63,3 +63,9 @@ Tenter `python3 yt_treg.py 3` à chaque passage ; si treg n'est plus connecté (
 ## Contenu
 
 Les textes des vidéos ne changent pas : ce sont ceux des specs déjà validées (aucun prix, délai ni volume ; jamais « juriste » ni « avocat » pour Thrax ; vouvoiement). Les vidéos sont en français. Sur les pages DE, EN et IT, une mention « vidéo en français » s'affiche sous le lecteur.
+
+## Rythme des envois (consigne du propriétaire, 8 oct.)
+
+- **Quand YouTube bloque** (`uploadLimitExceeded`) : **un seul essai par jour**. `yt_treg.py` note le refus dans `work/yt_block.json`. Pendant 23 h 30, les passages horaires sortent tout de suite (« BLOCKED … »), sans appeler l'API ; le passage suivant tente un envoi.
+- **Quand ça repasse** : le fichier est effacé dès qu'un envoi réussit. On reprend alors **toutes les heures** (jusqu'à 3 vidéos par passage) jusqu'au prochain refus.
+- Un passage « BLOCKED » ne m'écrit rien.

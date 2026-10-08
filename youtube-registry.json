@@ -152,8 +152,9 @@
   "lettre-juridique-sur-mesure": {
    "kind": "service",
    "site_key": "particuliers/lettre-juridique-sur-mesure",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "k5D0Pz4auTM",
+   "note": "uploadé via treg le 5 oct."
   },
   "licenciement-employeur": {
    "kind": "service",
