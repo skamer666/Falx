@@ -23,6 +23,7 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/garantie-achat-defectueux": { id: "Q6XTVogL_Qk", poster: "/media/video/services/garantie-achat-defectueux.webp" },
   "particuliers/garantie-de-loyer": { id: "pvocxZDu4R0", poster: "/media/video/services/garantie-de-loyer.webp" },
   "particuliers/lettre-de-demission": { id: "kgLCzwxu7So", poster: "/media/video/services/lettre-de-demission.webp" },
+  "particuliers/lettre-juridique-sur-mesure": { id: "k5D0Pz4auTM", poster: "/media/video/services/lettre-juridique-sur-mesure.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
