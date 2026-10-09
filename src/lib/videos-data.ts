@@ -31,6 +31,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/litige-de-voisinage": { id: "5_xoAJZ4m3E", poster: "/media/video/services/litige-de-voisinage.webp" },
   "particuliers/mandat-pour-cause-d-inaptitude": { id: "svDt-zbGwXQ", poster: "/media/video/services/mandat-pour-cause-d-inaptitude.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
+  "particuliers/opposition-assurance-sociale": { id: "xhHsCJaA72E", poster: "/media/video/services/opposition-assurance-sociale.webp" },
+  "entreprises/pack-conformite-nlpd": { id: "GRSe3Al3DFc", poster: "/media/video/services/pack-conformite-nlpd.webp" },
+  "entreprises/politique-de-confidentialite": { id: "ssV-GCw72C0", poster: "/media/video/services/politique-de-confidentialite.webp" },
 };
 
 export const GUIDE_VIDEO_DATA: Record<string, SiteVideo> = {
