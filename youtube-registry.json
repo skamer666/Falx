@@ -180,20 +180,23 @@
   "litige-commercial": {
    "kind": "service",
    "site_key": "entreprises/litige-commercial",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "E7xSFfhzGyc",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "litige-de-voisinage": {
    "kind": "service",
    "site_key": "particuliers/litige-de-voisinage",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "5_xoAJZ4m3E",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "mandat-pour-cause-d-inaptitude": {
    "kind": "service",
    "site_key": "particuliers/mandat-pour-cause-d-inaptitude",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "svDt-zbGwXQ",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "mise-en-demeure": {
    "kind": "service",
