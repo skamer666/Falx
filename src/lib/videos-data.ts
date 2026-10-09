@@ -27,6 +27,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "entreprises/licenciement-employeur": { id: "Ohqgq6UdzvQ", poster: "/media/video/services/licenciement-employeur.webp" },
   "particuliers/licenciement-opposition": { id: "GTwOxWLKjzg", poster: "/media/video/services/licenciement-opposition.webp" },
   "particuliers/litige-artisan": { id: "ZeZ5jhkczMg", poster: "/media/video/services/litige-artisan.webp" },
+  "entreprises/litige-commercial": { id: "E7xSFfhzGyc", poster: "/media/video/services/litige-commercial.webp" },
+  "particuliers/litige-de-voisinage": { id: "5_xoAJZ4m3E", poster: "/media/video/services/litige-de-voisinage.webp" },
+  "particuliers/mandat-pour-cause-d-inaptitude": { id: "svDt-zbGwXQ", poster: "/media/video/services/mandat-pour-cause-d-inaptitude.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
