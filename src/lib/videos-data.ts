@@ -34,6 +34,7 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/opposition-assurance-sociale": { id: "xhHsCJaA72E", poster: "/media/video/services/opposition-assurance-sociale.webp" },
   "entreprises/pack-conformite-nlpd": { id: "GRSe3Al3DFc", poster: "/media/video/services/pack-conformite-nlpd.webp" },
   "entreprises/politique-de-confidentialite": { id: "ssV-GCw72C0", poster: "/media/video/services/politique-de-confidentialite.webp" },
+  "particuliers/poursuite-injustifiee": { id: "EejEdIvpDN0", poster: "/media/video/services/poursuite-injustifiee.webp" },
 };
 
 export const GUIDE_VIDEO_DATA: Record<string, SiteVideo> = {
