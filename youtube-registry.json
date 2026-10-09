@@ -159,20 +159,23 @@
   "licenciement-employeur": {
    "kind": "service",
    "site_key": "entreprises/licenciement-employeur",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Ohqgq6UdzvQ",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "licenciement-opposition": {
    "kind": "service",
    "site_key": "particuliers/licenciement-opposition",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "GTwOxWLKjzg",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "litige-artisan": {
    "kind": "service",
    "site_key": "particuliers/litige-artisan",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "ZeZ5jhkczMg",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "litige-commercial": {
    "kind": "service",
