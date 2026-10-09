@@ -207,20 +207,23 @@
   "opposition-assurance-sociale": {
    "kind": "service",
    "site_key": "particuliers/opposition-assurance-sociale",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "xhHsCJaA72E",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "pack-conformite-nlpd": {
    "kind": "service",
    "site_key": "entreprises/pack-conformite-nlpd",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "GRSe3Al3DFc",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "politique-de-confidentialite": {
    "kind": "service",
    "site_key": "entreprises/politique-de-confidentialite",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "ssV-GCw72C0",
+   "note": "uploadé via treg le 09.10.2026"
   },
   "poursuite-injustifiee": {
    "kind": "service",
