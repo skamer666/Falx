@@ -24,6 +24,9 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "particuliers/garantie-de-loyer": { id: "pvocxZDu4R0", poster: "/media/video/services/garantie-de-loyer.webp" },
   "particuliers/lettre-de-demission": { id: "kgLCzwxu7So", poster: "/media/video/services/lettre-de-demission.webp" },
   "particuliers/lettre-juridique-sur-mesure": { id: "k5D0Pz4auTM", poster: "/media/video/services/lettre-juridique-sur-mesure.webp" },
+  "entreprises/licenciement-employeur": { id: "Ohqgq6UdzvQ", poster: "/media/video/services/licenciement-employeur.webp" },
+  "particuliers/licenciement-opposition": { id: "GTwOxWLKjzg", poster: "/media/video/services/licenciement-opposition.webp" },
+  "particuliers/litige-artisan": { id: "ZeZ5jhkczMg", poster: "/media/video/services/litige-artisan.webp" },
   "entreprises/mise-en-demeure": { id: "A6joF0VtN78", poster: "/media/video/services/mise-en-demeure.webp" },
 };
 
