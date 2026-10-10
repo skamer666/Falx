@@ -58,14 +58,15 @@ Le quota Metricool est réservé aux Reels : passer uniquement par Zapier pour l
 Le compte YouTube Thrax Legal est relié à treg (équipe thrax-legal, CLI `treg` installée dans ~/.local/bin, identifiants dans ~/.treg/config.json).
 `python3 yt_treg.py <n>` envoie jusqu'à n vidéos « rendered » (MP4 local ou repris de reels-media), note l'id et s'arrête au premier refus.
 YouTube plafonne la chaîne (non vérifiée par téléphone) : le 5 oct., refus `uploadLimitExceeded` après 2 envois via treg (plus les envois du matin).
-Tenter `python3 yt_treg.py 3` à chaque passage ; si treg n'est plus connecté (conteneur neuf), réinstaller la CLI et se reconnecter, sinon garder Zapier en secours.
+Tenter `python3 yt_treg.py 10` à chaque passage ; si treg n'est plus connecté (conteneur neuf), réinstaller la CLI et se reconnecter, sinon garder Zapier en secours.
 
 ## Contenu
 
 Les textes des vidéos ne changent pas : ce sont ceux des specs déjà validées (aucun prix, délai ni volume ; jamais « juriste » ni « avocat » pour Thrax ; vouvoiement). Les vidéos sont en français. Sur les pages DE, EN et IT, une mention « vidéo en français » s'affiche sous le lecteur.
 
-## Rythme des envois (consigne du propriétaire, 8 oct.)
+## Rythme des envois (consignes du propriétaire, 8 et 10 oct.)
 
-- **Quand YouTube bloque** (`uploadLimitExceeded`) : **un seul essai par jour**. `yt_treg.py` note le refus dans `work/yt_block.json`. Pendant 23 h 30, les passages horaires sortent tout de suite (« BLOCKED … »), sans appeler l'API ; le passage suivant tente un envoi.
-- **Quand ça repasse** : le fichier est effacé dès qu'un envoi réussit. On reprend alors **toutes les heures** (jusqu'à 3 vidéos par passage) jusqu'au prochain refus.
-- Un passage « BLOCKED » ne m'écrit rien.
+- **La routine ne tourne qu'une fois par jour** (cron `29 8 * * *` UTC, soit 10 h 29 heure suisse en été). Un seul passage, donc `python3 yt_treg.py 10` pour utiliser tout le quota quotidien de la chaîne (≈ 10 envois).
+- **Quand YouTube bloque** (`uploadLimitExceeded`) : `yt_treg.py` note le refus dans `work/yt_block.json` et s'arrête. Garde-fou : pendant 23 h 30, un lancement manuel sort tout de suite (« BLOCKED … ») sans appeler l'API.
+- Un envoi réussi efface le fichier de blocage.
+- Un passage « BLOCKED » ou sans nouveauté ne m'écrit rien.
