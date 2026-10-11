@@ -235,62 +235,72 @@
   "question-juridique": {
    "kind": "service",
    "site_key": "particuliers/question-juridique",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "r3fPiClJb_M",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "reclamation-taxation-impots": {
    "kind": "service",
    "site_key": "particuliers/reclamation-taxation-impots",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "IzXppoECIP0",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "recouvrement-facture-impayee": {
    "kind": "service",
    "site_key": "entreprises/recouvrement-facture-impayee",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "xxvv57kCW3E",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "rectification-certificat-de-travail": {
    "kind": "service",
    "site_key": "particuliers/rectification-certificat-de-travail",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "C3e2B0r9mYM",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "recuperer-argent-prete": {
    "kind": "service",
    "site_key": "particuliers/recuperer-argent-prete",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "hdUgz9m5Bg0",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "refus-assurance": {
    "kind": "service",
    "site_key": "particuliers/refus-assurance",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Kzpw7GB4qYg",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "reglement-du-personnel": {
    "kind": "service",
    "site_key": "entreprises/reglement-du-personnel",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "3RII_HVjW70",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "relecture-bail-commercial": {
    "kind": "service",
    "site_key": "entreprises/relecture-bail-commercial",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "tifAI5nBUv8",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "relecture-contrat-commercial": {
    "kind": "service",
    "site_key": "entreprises/relecture-contrat-commercial",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "-vfUs2qFebI",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "relecture-contrat-de-travail": {
    "kind": "service",
    "site_key": "particuliers/relecture-contrat-de-travail",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "apv8NGquc3s",
+   "note": "uploadé via treg le 11.10.2026"
   },
   "relecture-contrat-particulier": {
    "kind": "service",

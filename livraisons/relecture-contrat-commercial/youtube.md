@@ -1,7 +1,7 @@
 # YouTube — « Relecture de contrat commercial »
 
 ## Titre
-Relecture de contrat commercial : les clauses à risque avant de signer (responsabilité, pénalités, for)
+Relecture de contrat commercial : les clauses à risque à vérifier avant de signer
 
 ## Description
 
