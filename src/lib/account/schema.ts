@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 8;
+export const SCHEMA_VERSION = 9;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -204,11 +204,25 @@ async function migrate(db: D1Database): Promise<void> {
     .prepare("UPDATE dossiers SET admin_unread = 0 WHERE updated_at IS NULL AND status != 'nouveau'")
     .run();
 
-  await db
-    .prepare("INSERT INTO schema_meta (key, value) VALUES ('version', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value")
-    .bind(String(SCHEMA_VERSION))
-    .run();
+  const upsert = "INSERT INTO schema_meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value";
+  await db.batch([
+    db.prepare(upsert).bind("version", String(SCHEMA_VERSION)),
+    db.prepare(upsert).bind("fingerprint", SCHEMA_FINGERPRINT),
+  ]);
 }
+
+// Empreinte du schéma déclaré ci-dessus : si on ajoute une table, une colonne ou un index
+// sans penser à incrémenter SCHEMA_VERSION, l'empreinte change et la migration se relance
+// quand même (oubli du 1er oct. : colonnes leads.service/express/deadline jamais créées).
+const SCHEMA_FINGERPRINT = (() => {
+  const text = JSON.stringify([TABLES, COLUMNS, INDEXES]);
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return (hash >>> 0).toString(16);
+})();
 
 let ready: Promise<void> | null = null;
 
@@ -217,10 +231,11 @@ export function ensureSchema(db: D1Database): Promise<void> {
   if (!ready) {
     ready = (async () => {
       try {
-        const row = await db
-          .prepare("SELECT value FROM schema_meta WHERE key = 'version'")
-          .first<{ value: string }>();
-        if (row && Number(row.value) >= SCHEMA_VERSION) return;
+        const { results } = await db
+          .prepare("SELECT key, value FROM schema_meta WHERE key IN ('version', 'fingerprint')")
+          .all<{ key: string; value: string }>();
+        const meta = new Map((results ?? []).map((row) => [row.key, row.value]));
+        if (Number(meta.get("version") ?? 0) >= SCHEMA_VERSION && meta.get("fingerprint") === SCHEMA_FINGERPRINT) return;
       } catch {
         // schema_meta n'existe pas encore : première migration.
       }
