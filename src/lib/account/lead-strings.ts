@@ -24,6 +24,10 @@ export type LeadStrings = {
   errorGeneric: string;
   errorConsent: string;
   errorThrottled: string;
+  errorName: string;
+  errorEmail: string;
+  errorPhone: string;
+  errorSummary: string;
   linkLabel: string;
   alternative: string;
   alternativeCta: string;
@@ -58,9 +62,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     sentHeading: "Merci, nous vous rappelons",
     sentBody: "Votre demande est bien reçue. Nous vous recontactons dans les meilleurs délais (en principe sous 1 jour ouvré).",
     backHome: "Retour à l’accueil",
-    errorGeneric: "Vérifiez votre nom et votre adresse email.",
+    errorGeneric: "Vérifiez votre nom, votre adresse email et votre téléphone.",
     errorConsent: "Merci d’accepter l’utilisation de vos informations pour être rappelé.",
     errorThrottled: "Trop de demandes depuis votre connexion. Réessayez dans une heure.",
+    errorName: "Indiquez votre nom et prénom (au moins 2 caractères).",
+    errorEmail: "Indiquez une adresse email valide, par exemple nom@entreprise.ch.",
+    errorPhone: "Ce numéro ne semble pas valide. Exemple : +41 79 000 00 00 (ou laissez vide).",
+    errorSummary: "Corrigez ce qui est signalé en rouge pour envoyer votre demande.",
     linkLabel: "Pas encore décidé ? Laissez vos coordonnées, nous vous rappelons.",
     alternative: "Vous savez déjà ce qu’il vous faut ?",
     alternativeCta: "S’inscrire directement",
@@ -93,9 +101,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     sentHeading: "Danke, wir rufen Sie zurück",
     sentBody: "Ihre Anfrage ist eingegangen. Wir melden uns so rasch wie möglich (in der Regel innert 1 Arbeitstag).",
     backHome: "Zurück zur Startseite",
-    errorGeneric: "Prüfen Sie Ihren Namen und Ihre E-Mail-Adresse.",
+    errorGeneric: "Prüfen Sie Ihren Namen, Ihre E-Mail-Adresse und Ihre Telefonnummer.",
     errorConsent: "Bitte stimmen Sie der Verwendung Ihrer Angaben für den Rückruf zu.",
     errorThrottled: "Zu viele Anfragen von Ihrer Verbindung. Versuchen Sie es in einer Stunde erneut.",
+    errorName: "Geben Sie Ihren Vor- und Nachnamen an (mindestens 2 Zeichen).",
+    errorEmail: "Geben Sie eine gültige E-Mail-Adresse an, z. B. name@firma.ch.",
+    errorPhone: "Diese Nummer scheint ungültig. Beispiel: +41 79 000 00 00 (oder leer lassen).",
+    errorSummary: "Korrigieren Sie die rot markierten Angaben, um Ihre Anfrage zu senden.",
     linkLabel: "Noch unentschlossen? Hinterlassen Sie Ihre Kontaktdaten, wir rufen Sie zurück.",
     alternative: "Sie wissen schon, was Sie brauchen?",
     alternativeCta: "Direkt anmelden",
@@ -128,9 +140,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     sentHeading: "Thank you, we'll call you back",
     sentBody: "Your request has been received. We'll get back to you as soon as possible (in principle within 1 business day).",
     backHome: "Back to home",
-    errorGeneric: "Check your name and email address.",
+    errorGeneric: "Check your name, email address and phone number.",
     errorConsent: "Please agree to the use of your information so we can contact you.",
     errorThrottled: "Too many requests from your connection. Try again in an hour.",
+    errorName: "Enter your full name (at least 2 characters).",
+    errorEmail: "Enter a valid email address, e.g. name@company.ch.",
+    errorPhone: "This number doesn’t look valid. Example: +41 79 000 00 00 (or leave it empty).",
+    errorSummary: "Fix what is marked in red to send your request.",
     linkLabel: "Not decided yet? Leave your details and we'll call you back.",
     alternative: "Already know what you need?",
     alternativeCta: "Sign up directly",
@@ -163,9 +179,13 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     sentHeading: "Grazie, vi richiamiamo",
     sentBody: "La vostra richiesta è stata ricevuta. Vi ricontattiamo il prima possibile (in linea di principio entro 1 giorno lavorativo).",
     backHome: "Torna alla home",
-    errorGeneric: "Controllate nome e indirizzo email.",
+    errorGeneric: "Controllate nome, indirizzo email e telefono.",
     errorConsent: "Vi preghiamo di accettare l’uso delle vostre informazioni per essere richiamati.",
     errorThrottled: "Troppe richieste dalla vostra connessione. Riprovate tra un’ora.",
+    errorName: "Indicate nome e cognome (almeno 2 caratteri).",
+    errorEmail: "Indicate un indirizzo email valido, ad esempio nome@azienda.ch.",
+    errorPhone: "Questo numero non sembra valido. Esempio: +41 79 000 00 00 (o lasciate vuoto).",
+    errorSummary: "Correggete quanto segnalato in rosso per inviare la richiesta.",
     linkLabel: "Non avete ancora deciso? Lasciate i vostri recapiti e vi richiamiamo.",
     alternative: "Sapete già di cosa avete bisogno?",
     alternativeCta: "Iscrivetevi direttamente",
