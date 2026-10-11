@@ -35,6 +35,16 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "entreprises/pack-conformite-nlpd": { id: "GRSe3Al3DFc", poster: "/media/video/services/pack-conformite-nlpd.webp" },
   "entreprises/politique-de-confidentialite": { id: "ssV-GCw72C0", poster: "/media/video/services/politique-de-confidentialite.webp" },
   "particuliers/poursuite-injustifiee": { id: "EejEdIvpDN0", poster: "/media/video/services/poursuite-injustifiee.webp" },
+  "particuliers/question-juridique": { id: "r3fPiClJb_M", poster: "/media/video/services/question-juridique.webp" },
+  "particuliers/reclamation-taxation-impots": { id: "IzXppoECIP0", poster: "/media/video/services/reclamation-taxation-impots.webp" },
+  "entreprises/recouvrement-facture-impayee": { id: "xxvv57kCW3E", poster: "/media/video/services/recouvrement-facture-impayee.webp" },
+  "particuliers/rectification-certificat-de-travail": { id: "C3e2B0r9mYM", poster: "/media/video/services/rectification-certificat-de-travail.webp" },
+  "particuliers/recuperer-argent-prete": { id: "hdUgz9m5Bg0", poster: "/media/video/services/recuperer-argent-prete.webp" },
+  "particuliers/refus-assurance": { id: "Kzpw7GB4qYg", poster: "/media/video/services/refus-assurance.webp" },
+  "entreprises/reglement-du-personnel": { id: "3RII_HVjW70", poster: "/media/video/services/reglement-du-personnel.webp" },
+  "entreprises/relecture-bail-commercial": { id: "tifAI5nBUv8", poster: "/media/video/services/relecture-bail-commercial.webp" },
+  "entreprises/relecture-contrat-commercial": { id: "-vfUs2qFebI", poster: "/media/video/services/relecture-contrat-commercial.webp" },
+  "particuliers/relecture-contrat-de-travail": { id: "apv8NGquc3s", poster: "/media/video/services/relecture-contrat-de-travail.webp" },
 };
 
 export const GUIDE_VIDEO_DATA: Record<string, SiteVideo> = {
