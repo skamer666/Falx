@@ -570,7 +570,7 @@ const services: Record<string, ServiceText> = {
     ],
   },
   "mise-en-demeure": {
-    name: "Diffida",
+    name: "Diffida e messa in mora",
     short: "Una lettera formale che ricorda quanto vi è dovuto, fissa un termine e annuncia chiaramente cosa succederà dopo.",
     intro: "Qualcuno non rispetta i propri impegni verso la vostra impresa? Un cliente che non paga, un fornitore che non consegna, un conduttore in ritardo, un partner che non mantiene la parola: una diffida formale, con termine e seguito annunciato, sblocca spesso la situazione.",
     included: [

@@ -4,11 +4,13 @@ import { SERVICES } from "@/lib/services/catalog";
 import { LOCALES, LOCALE_TAGS } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 
+/** Versions linguistiques de la page, plus x-default (français), comme dans les balises hreflang des pages. */
 function alternates(path: string) {
   return {
-    languages: Object.fromEntries(
-      LOCALES.map((locale) => [LOCALE_TAGS[locale], `${SITE_URL}/${locale}${path}`]),
-    ),
+    languages: {
+      ...Object.fromEntries(LOCALES.map((locale) => [LOCALE_TAGS[locale], `${SITE_URL}/${locale}${path}`])),
+      "x-default": `${SITE_URL}/fr${path}`,
+    },
   };
 }
 

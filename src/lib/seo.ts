@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/site";
 
 const OG_LOCALE: Record<Locale, string> = { fr: "fr_CH", de: "de_CH", en: "en_CH", it: "it_CH" };
 const BRAND = " | Thrax Legal";
-const MAX_TITLE = 65;
+const MAX_TITLE = 60;
 
 /** URL canonique + versions linguistiques (hreflang), avec le français comme version par défaut. */
 export function localeAlternates(locale: Locale, path = ""): NonNullable<Metadata["alternates"]> {
@@ -17,7 +17,7 @@ export function localeAlternates(locale: Locale, path = ""): NonNullable<Metadat
   };
 }
 
-/** Titre de page limité à ~65 caractères pour ne pas être tronqué dans Google. */
+/** Titre de page limité à ~60 caractères pour ne pas être tronqué dans Google. */
 export function seoTitle(title: string): string {
   if ((title + BRAND).length <= MAX_TITLE) return title + BRAND;
   if (title.length <= MAX_TITLE) return title;
@@ -27,7 +27,9 @@ export function seoTitle(title: string): string {
 
 /** Métadonnées complètes d'une page indexable : titre, description, hreflang, Open Graph, Twitter. */
 export function pageMetadata(input: { locale: Locale; path: string; title: string; description: string }): Metadata {
-  const { locale, path, title, description } = input;
+  const { locale, path, description } = input;
+  // Au-delà de 60 caractères, Google tronque : on sacrifie la marque plutôt que le sujet de la page.
+  const title = input.title.length > MAX_TITLE && input.title.endsWith(BRAND) ? input.title.slice(0, -BRAND.length) : input.title;
   return {
     title: { absolute: title },
     description,

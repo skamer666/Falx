@@ -81,7 +81,7 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     points: ["Gratuit et sans engagement", "Nous vous rappelons en principe sous 1 jour ouvré", "Vos informations ne servent qu’à vous recontacter"],
   },
   de: {
-    metaTitle: "Rückruf | Thrax Legal",
+    metaTitle: "Rückruf anfordern | Thrax Legal",
     heading: "Rückruf anfordern",
     subheading: "Hinterlassen Sie Ihre Kontaktdaten: Wir rufen Sie zurück, um Ihre Fragen zu beantworten, unverbindlich.",
     nameLabel: "Vor- und Nachname",
