@@ -7,10 +7,10 @@ import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
-import { TERMS_VERSION } from "@/lib/account/legal";
+import { BCE_NUMBER, TERMS_VERSION } from "@/lib/account/legal";
 
-// À compléter avant le premier client : numéro d'entreprise BCE (art. 14) une
-// fois l'inscription comme indépendant faite (retiré du texte tant qu'il n'existe pas) (identité et adresse de contact
+// Numéro d'entreprise BCE (art. 14) : renseigner BCE_NUMBER dans lib/account/legal.ts dès réception
+// (affiché automatiquement dans les 4 langues). Identité et adresse de contact
 // exigées par l'art. 3 al. 1 let. s LCD : renseignées), puis faire relire l'ensemble par un avocat suisse. Droit suisse
 // et for à Lausanne choisis par défaut (art. 18) : à confirmer.
 const LAST_UPDATED = TERMS_VERSION;
@@ -289,9 +289,10 @@ function Fr() {
       <p>
         L’abonnement se compose de périodes mensuelles payées d’avance. Il
         n’y a <strong>aucun engagement de durée minimale</strong>. Le paiement
-        s’effectue pour l’instant par virement bancaire ou par un autre moyen
-        convenu avec le client&nbsp;; Thrax Legal informera le client avant
-        l’introduction d’un paiement en ligne ou d’un prélèvement
+        s’effectue en ligne, de façon sécurisée, via le lien de paiement
+        transmis par Thrax Legal (carte bancaire et, lorsqu’il est proposé,
+        TWINT), ou, sur demande, par virement bancaire en euros. Thrax Legal
+        informera le client avant l’introduction d’un prélèvement
         automatique. La période payée ouvre l’accès à l’espace client et aux
         volumes de la formule. L’abonnement est renouvelé pour une nouvelle
         période mensuelle à réception du paiement de celle-ci&nbsp;; à défaut de
@@ -326,8 +327,9 @@ function Fr() {
       </p>
       <p>
         Le prix d’une prestation à l’acte est payable d’avance, après la
-        confirmation visée à l’article 5, par TWINT, facture QR ou un autre
-        moyen convenu.
+        confirmation visée à l’article 5, par paiement en ligne sécurisé
+        (carte bancaire et, lorsqu’il est proposé, TWINT) ou, sur demande,
+        par virement bancaire en euros.
       </p>
 
       <h2>7. Délais de traitement</h2>
@@ -491,6 +493,7 @@ function Fr() {
         domiciliée en Belgique (adresse de contact&nbsp;: Avenue Floréal 20, 1410
         Waterloo, Belgique), propose les services
         décrits sur ce site. Il ne s’agit pas d’une société distincte.
+        {BCE_NUMBER ? <> Numéro d’entreprise (BCE)&nbsp;: {BCE_NUMBER}.</> : null}{" "}
         Contact&nbsp;: <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
@@ -739,9 +742,10 @@ function De() {
       <p>
         Das Abonnement besteht aus im Voraus bezahlten Monatsperioden. Es
         besteht <strong>keine Mindestvertragsdauer</strong>. Die Zahlung
-        erfolgt derzeit per Banküberweisung oder auf anderem mit dem Kunden
-        vereinbarten Weg; Thrax Legal informiert den Kunden vor der
-        Einführung einer Online-Zahlung oder einer automatischen Abbuchung.
+        erfolgt sicher online über den von Thrax Legal übermittelten
+        Zahlungslink (Kreditkarte und, sofern angeboten, TWINT) oder auf
+        Wunsch per Banküberweisung in Euro. Thrax Legal informiert den Kunden
+        vor der Einführung einer automatischen Abbuchung.
         Die bezahlte Periode öffnet den Zugang zum Kundenbereich und zu den
         Volumen der Formel. Das Abonnement wird mit Eingang der Zahlung für
         eine weitere Monatsperiode verlängert; bleibt die Zahlung bei
@@ -776,8 +780,9 @@ function De() {
       </p>
       <p>
         Der Preis einer Einzelleistung ist nach der Bestätigung gemäss
-        Artikel 5 im Voraus zahlbar, per TWINT, QR-Rechnung oder einem
-        anderen vereinbarten Zahlungsmittel.
+        Artikel 5 im Voraus zahlbar, per sicherer Online-Zahlung (Kreditkarte
+        und, sofern angeboten, TWINT) oder auf Wunsch per Banküberweisung in
+        Euro.
       </p>
 
       <h2>7. Bearbeitungsfristen</h2>
@@ -944,7 +949,9 @@ function De() {
         <strong>Grégoire Giuliano</strong>, natürliche Person mit
         Wohnsitz in Belgien (Kontaktadresse&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgien), die auf dieser
         Website beschriebenen Leistungen anbietet. Es handelt sich nicht um
-        eine eigenständige Gesellschaft. Kontakt&nbsp;:{" "}
+        eine eigenständige Gesellschaft.
+        {BCE_NUMBER ? <> Unternehmensnummer (belgische ZDU/BCE)&nbsp;: {BCE_NUMBER}.</> : null}{" "}
+        Kontakt&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
@@ -1180,10 +1187,10 @@ function En() {
       <h2>6. Term, payment and locked price</h2>
       <p>
         The subscription consists of monthly periods paid in advance. There is{" "}
-        <strong>no minimum commitment</strong>. Payment is currently made by bank
-        transfer or by another means agreed with the customer; Thrax Legal will
-        inform the customer before introducing online payment or automatic
-        debit. The paid period gives access to the client area and to the
+        <strong>no minimum commitment</strong>. Payment is made securely online
+        through the payment link sent by Thrax Legal (bank card and, where
+        offered, TWINT) or, on request, by bank transfer in euros. Thrax Legal
+        will inform the customer before introducing automatic debit. The paid period gives access to the client area and to the
         volumes of the plan. The subscription is renewed for a further monthly
         period when payment for it is received; if payment is not received by
         the due date, it ends when the paid period expires and access to the
@@ -1213,8 +1220,9 @@ function En() {
       </p>
       <p>
         The price of a one-off service is payable in advance, after the
-        confirmation referred to in section 5, by TWINT, QR bill or another
-        agreed means.
+        confirmation referred to in section 5, by secure online payment (bank
+        card and, where offered, TWINT) or, on request, by bank transfer in
+        euros.
       </p>
 
       <h2>7. Turnaround times</h2>
@@ -1367,7 +1375,9 @@ function En() {
         <strong>Grégoire Giuliano</strong>, an individual resident in
         Belgium (contact address: Avenue
         Floréal 20, 1410 Waterloo, Belgium), provides the services described
-        on this site. It is not a separate company. Contact:{" "}
+        on this site. It is not a separate company.
+        {BCE_NUMBER ? <> Belgian company number (BCE/KBO): {BCE_NUMBER}.</> : null}{" "}
+        Contact:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 
@@ -1605,9 +1615,10 @@ function It() {
       <p>
         L&rsquo;abbonamento si compone di periodi mensili pagati in anticipo. Non
         esiste <strong>alcun impegno di durata minima</strong>. Il pagamento
-        avviene per ora tramite bonifico bancario o altro mezzo concordato con il
-        cliente; Thrax Legal informerà il cliente prima di introdurre un
-        pagamento online o un addebito automatico. Il periodo pagato apre
+        avviene online, in modo sicuro, tramite il link di pagamento inviato da
+        Thrax Legal (carta bancaria e, se proposto, TWINT) oppure, su
+        richiesta, tramite bonifico bancario in euro. Thrax Legal informerà il
+        cliente prima di introdurre un addebito automatico. Il periodo pagato apre
         l&rsquo;accesso all&rsquo;area clienti e ai volumi della formula. L&rsquo;abbonamento è
         rinnovato per un nuovo periodo mensile alla ricezione del relativo
         pagamento; in mancanza di pagamento alla scadenza, termina allo
@@ -1639,8 +1650,9 @@ function It() {
       </p>
       <p>
         Il prezzo di una prestazione singola è pagabile in anticipo, dopo la
-        conferma di cui all&rsquo;articolo 5, tramite TWINT, fattura QR o un
-        altro mezzo convenuto.
+        conferma di cui all&rsquo;articolo 5, tramite pagamento online sicuro
+        (carta bancaria e, se proposto, TWINT) oppure, su richiesta, tramite
+        bonifico bancario in euro.
       </p>
 
       <h2>7. Termini di trattamento</h2>
@@ -1799,7 +1811,9 @@ function It() {
         <strong>Grégoire Giuliano</strong>, persona fisica domiciliata
         in Belgio (indirizzo di contatto&nbsp;: Avenue Floréal 20, 1410 Waterloo, Belgio),
         offre i servizi descritti su questo sito. Non si tratta di
-        una società distinta. Contatto&nbsp;:{" "}
+        una società distinta.
+        {BCE_NUMBER ? <> Numero d&rsquo;impresa (BCE belga)&nbsp;: {BCE_NUMBER}.</> : null}{" "}
+        Contatto&nbsp;:{" "}
         <a href="mailto:hey@thrax-legal.ch">hey@thrax-legal.ch</a>.
       </p>
 

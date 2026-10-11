@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-10-01";
+const LAST_UPDATED = "2026-10-11";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -107,11 +107,9 @@ function Fr() {
         <li>
           Les <strong>informations de paiement</strong> que nous enregistrons
           pour gérer votre abonnement&nbsp;: montant, date, période couverte,
-          mode de paiement et référence. Nous ne traitons aucune donnée de
-          carte bancaire&nbsp;: le module de paiement en ligne n’est pas encore
-          en production, le règlement se fait pour l’instant par virement ou
-          autre moyen convenu avec vous. Cette politique sera complétée à
-          l’activation d’un prestataire de paiement.
+          mode de paiement et référence. Les paiements en ligne sont traités
+          par notre prestataire de paiement Stripe&nbsp;: nous ne recevons ni ne
+          conservons vos données de carte bancaire.
         </li>
         <li>
           Des <strong>notes internes</strong> que nous prenons sur votre dossier
@@ -203,6 +201,15 @@ function Fr() {
           confirmations, liens de mot de passe, notifications de réponse), qui
           reçoit votre adresse email et le contenu de ces messages, dans le
           cadre de clauses contractuelles types.
+        </li>
+        <li>
+          <strong>Stripe Payments Europe, Ltd.</strong> (Irlande), prestataire
+          de paiement en ligne, qui reçoit les données nécessaires au paiement
+          (nom, adresse email, montant, données de carte saisies directement
+          chez Stripe) et les traite aussi pour ses propres obligations légales
+          (lutte contre la fraude et le blanchiment). Certaines données peuvent
+          être transférées à Stripe, Inc. (États-Unis) dans le cadre de
+          clauses contractuelles types.
         </li>
         <li>
           <strong>Anthropic, PBC</strong> (États-Unis), éditeur de l’assistant
@@ -337,11 +344,9 @@ function De() {
         <li>
           Die <strong>Zahlungsangaben</strong>, die wir zur Verwaltung Ihres
           Abonnements erfassen: Betrag, Datum, abgedeckte Periode,
-          Zahlungsart und Referenz. Wir bearbeiten keine Kreditkartendaten:
-          Das Online-Zahlungsmodul ist noch nicht in Betrieb, die Zahlung
-          erfolgt derzeit per Überweisung oder auf anderem mit Ihnen
-          vereinbarten Weg. Diese Erklärung wird bei Aktivierung eines
-          Zahlungsdienstleisters ergänzt.
+          Zahlungsart und Referenz. Online-Zahlungen werden von unserem
+          Zahlungsdienstleister Stripe abgewickelt: Wir erhalten und speichern
+          keine Kreditkartendaten.
         </li>
         <li>
           <strong>Interne Notizen</strong>, die wir zu Ihrem Anliegen für die
@@ -433,6 +438,15 @@ function De() {
           Bestätigungen, Passwort-Links, Antwortbenachrichtigungen), das Ihre
           E-Mail-Adresse und den Inhalt dieser Nachrichten erhält, im Rahmen
           von Standardvertragsklauseln.
+        </li>
+        <li>
+          <strong>Stripe Payments Europe, Ltd.</strong> (Irland),
+          Online-Zahlungsdienstleister, der die für die Zahlung nötigen Daten
+          erhält (Name, E-Mail-Adresse, Betrag, direkt bei Stripe eingegebene
+          Kartendaten) und sie auch für eigene gesetzliche Pflichten bearbeitet
+          (Betrugs- und Geldwäschereibekämpfung). Einzelne Daten können im
+          Rahmen von Standardvertragsklauseln an Stripe, Inc. (USA)
+          übermittelt werden.
         </li>
         <li>
           <strong>Anthropic, PBC</strong> (USA), Herausgeberin des
@@ -557,10 +571,8 @@ function En() {
         <li>
           The <strong>payment information</strong> we record to manage your
           subscription: amount, date, period covered, payment method and
-          reference. We do not process any bank card data: the online payment
-          module is not yet live, and payment is currently made by bank
-          transfer or another means agreed with you. This policy will be
-          updated when a payment provider is activated.
+          reference. Online payments are processed by our payment provider
+          Stripe: we do not receive or store your bank card data.
         </li>
         <li>
           <strong>Internal notes</strong> we take on your matter for
@@ -642,6 +654,14 @@ function En() {
           confirmations, password links, reply notifications), which receives
           your email address and the content of these messages, under standard
           contractual clauses.
+        </li>
+        <li>
+          <strong>Stripe Payments Europe, Ltd.</strong> (Ireland), online
+          payment provider, which receives the data needed for payment (name,
+          email address, amount, card details entered directly with Stripe)
+          and also processes it for its own legal obligations (fraud and
+          anti-money-laundering checks). Some data may be transferred to
+          Stripe, Inc. (United States) under standard contractual clauses.
         </li>
         <li>
           <strong>Anthropic, PBC</strong> (United States), publisher of the
@@ -764,11 +784,9 @@ function It() {
         <li>
           Le <strong>informazioni di pagamento</strong> che registriamo per
           gestire il vostro abbonamento: importo, data, periodo coperto,
-          modalità di pagamento e riferimento. Non trattiamo alcun dato di
-          carta bancaria: il modulo di pagamento online non è ancora in
-          produzione e il pagamento avviene per ora tramite bonifico o altro
-          mezzo concordato con voi. Questa informativa sarà completata con
-          l’attivazione di un fornitore di pagamento.
+          modalità di pagamento e riferimento. I pagamenti online sono gestiti
+          dal nostro fornitore di pagamento Stripe: non riceviamo né
+          conserviamo i dati della vostra carta bancaria.
         </li>
         <li>
           Le <strong>note interne</strong> che prendiamo sulla vostra pratica
@@ -860,6 +878,14 @@ function It() {
           conferme, link per la password, notifiche di risposta), che riceve il
           vostro indirizzo email e il contenuto di questi messaggi,
           nell’ambito di clausole contrattuali tipo.
+        </li>
+        <li>
+          <strong>Stripe Payments Europe, Ltd.</strong> (Irlanda), fornitore di
+          pagamento online, che riceve i dati necessari al pagamento (nome,
+          indirizzo email, importo, dati della carta inseriti direttamente
+          presso Stripe) e li tratta anche per i propri obblighi legali (lotta
+          contro frodi e riciclaggio). Alcuni dati possono essere trasferiti a
+          Stripe, Inc. (Stati Uniti) nell’ambito di clausole contrattuali tipo.
         </li>
         <li>
           <strong>Anthropic, PBC</strong> (Stati Uniti), editore dell’assistente

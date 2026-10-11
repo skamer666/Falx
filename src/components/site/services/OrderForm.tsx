@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import SubmitButton from "@/components/account/SubmitButton";
 import SourceField from "@/components/site/SourceField";
@@ -6,6 +8,12 @@ import type { ServiceDef } from "@/lib/services/catalog";
 import { SERVICES_UI } from "@/lib/services/strings";
 import { ACCOUNT_STRINGS } from "@/lib/account/strings";
 import { submitOrder } from "@/app/[locale]/commande/actions";
+import { validateOrder, type OrderField } from "@/lib/account/lead-validation";
+import { useInlineValidation } from "@/components/site/useInlineValidation";
+
+const ORDER: OrderField[] = ["name", "email", "phone", "company", "situation", "terms", "ai"];
+const INVALID = "!border-danger";
+const INVALID_BOX = "outline outline-2 outline-offset-2 outline-danger";
 
 const INPUT =
   "mt-1.5 w-full rounded-xl border border-border bg-bg px-4 py-3 text-base text-text placeholder:text-text-muted/70 focus:border-text focus:outline-none";
@@ -27,9 +35,24 @@ export default function OrderForm({
   const ai = ACCOUNT_STRINGS[locale].signup;
   const errorMessage = error === "generic" || error === "consent" || error === "throttled" ? t.errors[error] : null;
   const id = (name: string) => `order-${name}`;
+  const companyRequired = service.audience === "entreprises";
+  const { errors, hasErrors, onSubmit, onChange } = useInlineValidation(ORDER, (data) => validateOrder(data, { companyRequired }));
+  const err = (name: OrderField) =>
+    errors[name] ? (
+      <p id={id(`${name}-error`)} className="mt-1.5 text-sm leading-snug text-danger">
+        {t.fieldErrors[name]}
+      </p>
+    ) : null;
+  const aria = (name: OrderField) => (errors[name] ? { "aria-invalid": true as const, "aria-describedby": id(`${name}-error`) } : {});
 
   return (
-    <form action={submitOrder.bind(null, locale, service.slug)} className="relative flex flex-col gap-4">
+    <form
+      action={submitOrder.bind(null, locale, service.slug)}
+      onSubmit={onSubmit}
+      onChange={onChange}
+      noValidate
+      className="relative flex flex-col gap-4"
+    >
       <SourceField />
       <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
         <label htmlFor={id("website")}>Website</label>
@@ -46,26 +69,30 @@ export default function OrderForm({
         <label htmlFor={id("name")} className={LABEL}>
           {t.name}
         </label>
-        <input id={id("name")} name="name" required minLength={2} autoComplete="name" className={INPUT} />
+        <input id={id("name")} name="name" required minLength={2} autoComplete="name" className={`${INPUT} ${errors.name ? INVALID : ""}`} {...aria("name")} />
+        {err("name")}
       </div>
       <div>
         <label htmlFor={id("email")} className={LABEL}>
           {t.email}
         </label>
-        <input id={id("email")} name="email" type="email" required autoComplete="email" className={INPUT} />
+        <input id={id("email")} name="email" type="email" required autoComplete="email" inputMode="email" className={`${INPUT} ${errors.email ? INVALID : ""}`} {...aria("email")} />
+        {err("email")}
       </div>
       <div>
         <label htmlFor={id("phone")} className={LABEL}>
           {t.phone}
         </label>
-        <input id={id("phone")} name="phone" type="tel" autoComplete="tel" placeholder="+41 79 000 00 00" className={INPUT} />
+        <input id={id("phone")} name="phone" type="tel" autoComplete="tel" placeholder="+41 79 000 00 00" className={`${INPUT} ${errors.phone ? INVALID : ""}`} {...aria("phone")} />
+        {err("phone")}
       </div>
       {service.audience === "entreprises" ? (
         <div>
           <label htmlFor={id("company")} className={LABEL}>
             {t.company}
           </label>
-          <input id={id("company")} name="company" required autoComplete="organization" className={INPUT} />
+          <input id={id("company")} name="company" required autoComplete="organization" className={`${INPUT} ${errors.company ? INVALID : ""}`} {...aria("company")} />
+          {err("company")}
         </div>
       ) : null}
       <div>
@@ -80,8 +107,10 @@ export default function OrderForm({
           rows={4}
           maxLength={4000}
           placeholder={t.situationPlaceholder}
-          className={`${INPUT} resize-y leading-relaxed`}
+          className={`${INPUT} resize-y leading-relaxed ${errors.situation ? INVALID : ""}`}
+          {...aria("situation")}
         />
+        {err("situation")}
       </div>
       <div>
         <label htmlFor={id("deadline")} className={LABEL}>
@@ -102,24 +131,36 @@ export default function OrderForm({
 
       <p className="text-xs leading-relaxed text-text-muted">{t.filesNote}</p>
 
-      <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
-        <input type="checkbox" name="terms" required className="mt-0.5 h-5 w-5 shrink-0 accent-text" />
-        <span>
-          {t.termsBefore}
-          <Link href={`/${locale}/conditions-generales`} target="_blank" className="text-text underline underline-offset-4">
-            {t.termsLink}
-          </Link>
-          {t.termsAnd}
-          <Link href={`/${locale}/confidentialite`} target="_blank" className="text-text underline underline-offset-4">
-            {t.consentLink}
-          </Link>
-          .
-        </span>
-      </label>
-      <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
-        <input type="checkbox" name="ai" required className="mt-0.5 h-5 w-5 shrink-0 accent-text" />
-        <span>{ai.aiLabel}</span>
-      </label>
+      <div>
+        <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
+          <input type="checkbox" name="terms" required className={`mt-0.5 h-5 w-5 shrink-0 accent-text ${errors.terms ? INVALID_BOX : ""}`} {...aria("terms")} />
+          <span>
+            {t.termsBefore}
+            <Link href={`/${locale}/conditions-generales`} target="_blank" className="text-text underline underline-offset-4">
+              {t.termsLink}
+            </Link>
+            {t.termsAnd}
+            <Link href={`/${locale}/confidentialite`} target="_blank" className="text-text underline underline-offset-4">
+              {t.consentLink}
+            </Link>
+            .
+          </span>
+        </label>
+        {err("terms")}
+      </div>
+      <div>
+        <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
+          <input type="checkbox" name="ai" required className={`mt-0.5 h-5 w-5 shrink-0 accent-text ${errors.ai ? INVALID_BOX : ""}`} {...aria("ai")} />
+          <span>{ai.aiLabel}</span>
+        </label>
+        {err("ai")}
+      </div>
+
+      {hasErrors ? (
+        <p role="alert" className="text-sm font-medium text-danger">
+          {t.fieldErrors.summary}
+        </p>
+      ) : null}
 
       <SubmitButton className="mt-1 min-h-14 w-full text-base font-semibold">{submitLabel}</SubmitButton>
     </form>

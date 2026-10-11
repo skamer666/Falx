@@ -7,9 +7,17 @@ import { createLead, isLeadThrottled, recordAttempt } from "@/lib/account/db";
 import { notifyAdminOfOrder, safeSend, sendOrderReceivedEmail } from "@/lib/account/email";
 import { cleanSource } from "@/lib/source";
 import { getService, servicePath, type Audience } from "@/lib/services/catalog";
+import { validateOrder, type OrderFieldErrors } from "@/lib/account/lead-validation";
 
 function field(formData: FormData, name: string, max = 500): string {
   return String(formData.get(name) ?? "").trim().slice(0, max);
+}
+
+/** Erreur à afficher en haut du formulaire (le navigateur affiche déjà le détail champ par champ). */
+function errorKind(errors: OrderFieldErrors): "consent" | "generic" | null {
+  const keys = Object.keys(errors);
+  if (keys.length === 0) return null;
+  return keys.every((key) => key === "terms" || key === "ai") ? "consent" : "generic";
 }
 
 /** Commande d'une prestation à l'acte : enregistrée comme prospect avec la prestation, puis confirmée à la main. */
@@ -28,10 +36,8 @@ export async function submitOrder(locale: Locale, slug: string, formData: FormDa
   const name = field(formData, "name", 120);
   const email = field(formData, "email", 254).toLowerCase();
   const situation = field(formData, "situation", 4000);
-  if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || situation.length < 10) {
-    redirect(`${back}?error=generic#commander`);
-  }
-  if (formData.get("terms") !== "on" || formData.get("ai") !== "on") redirect(`${back}?error=consent#commander`);
+  const invalid = errorKind(validateOrder(formData, { companyRequired: service.audience === "entreprises" }));
+  if (invalid) redirect(`${back}?error=${invalid}#commander`);
 
   const deadline = field(formData, "deadline", 20);
   await recordAttempt("lead", email, ip, true);
@@ -66,10 +72,8 @@ export async function submitQuote(locale: Locale, audience: Audience, formData: 
   const name = field(formData, "name", 120);
   const email = field(formData, "email", 254).toLowerCase();
   const situation = field(formData, "situation", 4000);
-  if (name.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || situation.length < 10) {
-    redirect(`${back}?devis=generic#devis`);
-  }
-  if (formData.get("terms") !== "on" || formData.get("ai") !== "on") redirect(`${back}?devis=consent#devis`);
+  const invalid = errorKind(validateOrder(formData, { companyRequired: false }));
+  if (invalid) redirect(`${back}?devis=${invalid}#devis`);
 
   await recordAttempt("lead", email, ip, true);
   const lead = await createLead({

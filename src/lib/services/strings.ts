@@ -68,6 +68,7 @@ export type ServicesUi = {
     termsLink: string;
     submit: string;
     errors: { generic: string; consent: string; throttled: string };
+    fieldErrors: { situation: string; name: string; email: string; phone: string; company: string; terms: string; ai: string; summary: string };
   };
   thanks: { metaTitle: string; heading: string; body: string; next: string[]; back: string; quoteHeading: string; quoteBody: string };
   quote: {
@@ -135,7 +136,7 @@ const fr: ServicesUi = {
     items: [
       { title: "Vous nous racontez ce qui se passe", text: "Choisissez une prestation et décrivez votre situation avec vos mots. Inutile de connaître le vocabulaire juridique." },
       { title: "On vérifie avant que vous payiez", text: "On lit votre demande et on vous répond par email, en principe sous un jour ouvré. Si la prestation ne convient pas à votre cas, on vous le dit, et vous ne payez rien." },
-      { title: "Vous payez et vous envoyez vos pièces", text: "Par TWINT ou facture QR. Ensuite, vous répondez à notre email avec les documents utiles : le contrat, la lettre reçue, des photos." },
+      { title: "Vous payez et vous envoyez vos pièces", text: "En ligne, par carte bancaire (ou TWINT lorsqu'il est proposé), via un lien de paiement sécurisé. Ensuite, vous répondez à notre email avec les documents utiles : le contrat, la lettre reçue, des photos." },
       { title: "Vous recevez votre document", text: "Il est prêt à envoyer, avec une note qui explique quoi en faire et quel délai surveiller. Si quelque chose ne vous convient pas, on le corrige une fois sans frais." },
     ],
   },
@@ -174,7 +175,7 @@ const fr: ServicesUi = {
     guide: "Lire le guide gratuit sur ce sujet",
     delivery: (n) => (n === 1 ? "Livré sous 1 jour ouvré" : `Livré sous ${n} jours ouvrés`),
     revision: "Un tour de corrections inclus",
-    payAfter: "Vous ne payez qu'après notre confirmation écrite. TWINT ou facture QR.",
+    payAfter: "Vous ne payez qu'après notre confirmation écrite, en ligne et de façon sécurisée.",
     orderTitle: "Commander",
     mobileCta: "Commander",
     notLawyer: "Thrax Legal n'est pas un cabinet d'avocats et ne vous représente pas devant les tribunaux.",
@@ -200,13 +201,23 @@ const fr: ServicesUi = {
       consent: "Merci de cocher les deux cases d'acceptation.",
       throttled: "Trop de demandes depuis cette connexion. Réessayez dans une heure ou écrivez-nous à hey@thrax-legal.ch.",
     },
+    fieldErrors: {
+      situation: "Décrivez votre situation en quelques phrases (au moins 10 caractères).",
+      name: "Indiquez votre nom et prénom (au moins 2 caractères).",
+      email: "Indiquez une adresse email valide, par exemple nom@entreprise.ch.",
+      phone: "Ce numéro ne semble pas valide. Exemple : +41 79 000 00 00 (ou laissez vide).",
+      company: "Indiquez le nom de votre entreprise.",
+      terms: "Merci d’accepter les conditions générales et la politique de confidentialité.",
+      ai: "Merci d’accepter le traitement de vos informations par l’intelligence artificielle.",
+      summary: "Corrigez ce qui est signalé en rouge pour envoyer votre demande.",
+    },
   },
   thanks: {
     metaTitle: "Commande reçue | Thrax Legal",
     heading: "Merci, votre demande est bien reçue",
     body: "Nous vérifions que la prestation convient à votre situation et vous confirmons par email le prix et le délai, en principe sous 1 jour ouvré.",
     next: [
-      "Vous recevez notre confirmation et les instructions de paiement (TWINT ou facture QR).",
+      "Vous recevez notre confirmation et un lien de paiement sécurisé (carte bancaire, ou TWINT lorsqu'il est proposé).",
       "Vous nous envoyez vos documents en répondant à l'email.",
       "Nous livrons votre document dans le délai annoncé.",
     ],
@@ -282,7 +293,7 @@ const de: ServicesUi = {
     items: [
       { title: "Sie schildern uns, was passiert ist", text: "Wählen Sie eine Leistung und beschreiben Sie Ihre Situation in eigenen Worten. Juristische Fachbegriffe brauchen Sie nicht." },
       { title: "Wir prüfen, bevor Sie zahlen", text: "Wir lesen Ihre Anfrage und antworten per E-Mail, in der Regel innert eines Arbeitstags. Passt die Leistung nicht zu Ihrem Fall, sagen wir es Ihnen, und Sie zahlen nichts." },
-      { title: "Sie zahlen und senden Ihre Unterlagen", text: "Per TWINT oder QR-Rechnung. Danach antworten Sie auf unsere E-Mail mit den nötigen Dokumenten: Vertrag, erhaltener Brief, Fotos." },
+      { title: "Sie zahlen und senden Ihre Unterlagen", text: "Online per Kreditkarte (oder TWINT, sofern angeboten) über einen sicheren Zahlungslink. Danach antworten Sie auf unsere E-Mail mit den nötigen Dokumenten: Vertrag, erhaltener Brief, Fotos." },
       { title: "Sie erhalten Ihr Dokument", text: "Versandbereit, mit einer Notiz, was damit zu tun ist und welche Frist läuft. Passt etwas nicht, korrigieren wir es einmal kostenlos." },
     ],
   },
@@ -321,7 +332,7 @@ const de: ServicesUi = {
     guide: "Den kostenlosen Ratgeber zum Thema lesen",
     delivery: (n) => (n === 1 ? "Lieferung innert 1 Arbeitstag" : `Lieferung innert ${n} Arbeitstagen`),
     revision: "Eine Korrekturrunde inbegriffen",
-    payAfter: "Sie zahlen erst nach unserer schriftlichen Bestätigung. TWINT oder QR-Rechnung.",
+    payAfter: "Sie zahlen erst nach unserer schriftlichen Bestätigung, sicher online.",
     orderTitle: "Bestellen",
     mobileCta: "Bestellen",
     notLawyer: "Thrax Legal ist keine Anwaltskanzlei und vertritt Sie nicht vor Gericht.",
@@ -347,13 +358,23 @@ const de: ServicesUi = {
       consent: "Bitte kreuzen Sie beide Zustimmungsfelder an.",
       throttled: "Zu viele Anfragen von dieser Verbindung. Versuchen Sie es in einer Stunde erneut oder schreiben Sie an hey@thrax-legal.ch.",
     },
+    fieldErrors: {
+      situation: "Beschreiben Sie Ihre Situation in einigen Sätzen (mindestens 10 Zeichen).",
+      name: "Geben Sie Ihren Vor- und Nachnamen an (mindestens 2 Zeichen).",
+      email: "Geben Sie eine gültige E-Mail-Adresse an, z. B. name@firma.ch.",
+      phone: "Diese Nummer scheint ungültig. Beispiel: +41 79 000 00 00 (oder leer lassen).",
+      company: "Geben Sie den Namen Ihres Unternehmens an.",
+      terms: "Bitte akzeptieren Sie die AGB und die Datenschutzerklärung.",
+      ai: "Bitte stimmen Sie der Verarbeitung Ihrer Angaben durch künstliche Intelligenz zu.",
+      summary: "Korrigieren Sie die rot markierten Angaben, um Ihre Anfrage zu senden.",
+    },
   },
   thanks: {
     metaTitle: "Bestellung erhalten | Thrax Legal",
     heading: "Danke, Ihre Anfrage ist eingegangen",
     body: "Wir prüfen, ob die Leistung zu Ihrer Situation passt, und bestätigen Ihnen Preis und Frist per E-Mail, in der Regel innert 1 Arbeitstag.",
     next: [
-      "Sie erhalten unsere Bestätigung und die Zahlungsangaben (TWINT oder QR-Rechnung).",
+      "Sie erhalten unsere Bestätigung und einen sicheren Zahlungslink (Kreditkarte oder TWINT, sofern angeboten).",
       "Sie senden uns Ihre Unterlagen als Antwort auf die E-Mail.",
       "Wir liefern Ihr Dokument in der angegebenen Frist.",
     ],
@@ -429,7 +450,7 @@ const en: ServicesUi = {
     items: [
       { title: "You tell us what happened", text: "Choose a service and describe your situation in your own words. You don't need any legal vocabulary." },
       { title: "We check before you pay", text: "We read your request and reply by email, usually within one working day. If the service doesn't fit your case, we tell you, and you pay nothing." },
-      { title: "You pay and send your documents", text: "By TWINT or QR bill. Then you reply to our email with the relevant documents: the contract, the letter you received, photos." },
+      { title: "You pay and send your documents", text: "Online by bank card (or TWINT where offered), via a secure payment link. Then you reply to our email with the relevant documents: the contract, the letter you received, photos." },
       { title: "You receive your document", text: "Ready to send, with a note explaining what to do with it and which deadline to watch. If something isn't right, we correct it once at no charge." },
     ],
   },
@@ -468,7 +489,7 @@ const en: ServicesUi = {
     guide: "Read the free guide on this topic",
     delivery: (n) => (n === 1 ? "Delivered within 1 working day" : `Delivered within ${n} working days`),
     revision: "One round of revisions included",
-    payAfter: "You only pay after our written confirmation. TWINT or QR bill.",
+    payAfter: "You only pay after our written confirmation, securely online.",
     orderTitle: "Order",
     mobileCta: "Order",
     notLawyer: "Thrax Legal is not a law firm and does not represent you in court.",
@@ -494,13 +515,23 @@ const en: ServicesUi = {
       consent: "Please tick both acceptance boxes.",
       throttled: "Too many requests from this connection. Try again in an hour or write to hey@thrax-legal.ch.",
     },
+    fieldErrors: {
+      situation: "Describe your situation in a few sentences (at least 10 characters).",
+      name: "Enter your full name (at least 2 characters).",
+      email: "Enter a valid email address, e.g. name@company.ch.",
+      phone: "This number doesn’t look valid. Example: +41 79 000 00 00 (or leave it empty).",
+      company: "Enter the name of your company.",
+      terms: "Please accept the terms and conditions and the privacy policy.",
+      ai: "Please agree to the processing of your information by artificial intelligence.",
+      summary: "Fix what is marked in red to send your request.",
+    },
   },
   thanks: {
     metaTitle: "Order received | Thrax Legal",
     heading: "Thank you, your request has been received",
     body: "We check that the service fits your situation and confirm the price and timing by email, usually within 1 working day.",
     next: [
-      "You receive our confirmation and payment details (TWINT or QR bill).",
+      "You receive our confirmation and a secure payment link (bank card, or TWINT where offered).",
       "You send us your documents by replying to the email.",
       "We deliver your document within the announced time.",
     ],
@@ -576,7 +607,7 @@ const it: ServicesUi = {
     items: [
       { title: "Ci raccontate cosa succede", text: "Scegliete una prestazione e descrivete la vostra situazione con parole vostre. Non serve conoscere il linguaggio giuridico." },
       { title: "Verifichiamo prima che paghiate", text: "Leggiamo la richiesta e vi rispondiamo per email, di regola entro un giorno lavorativo. Se la prestazione non fa al caso vostro, ve lo diciamo e non pagate nulla." },
-      { title: "Pagate e inviate i documenti", text: "Con TWINT o fattura QR. Poi rispondete alla nostra email con i documenti utili: il contratto, la lettera ricevuta, delle foto." },
+      { title: "Pagate e inviate i documenti", text: "Online con carta bancaria (o TWINT se proposto), tramite un link di pagamento sicuro. Poi rispondete alla nostra email con i documenti utili: il contratto, la lettera ricevuta, delle foto." },
       { title: "Ricevete il vostro documento", text: "Pronto da inviare, con una nota che spiega cosa farne e quale termine tenere d'occhio. Se qualcosa non va, lo correggiamo una volta senza costi." },
     ],
   },
@@ -615,7 +646,7 @@ const it: ServicesUi = {
     guide: "Leggere la guida gratuita sul tema",
     delivery: (n) => (n === 1 ? "Consegna entro 1 giorno lavorativo" : `Consegna entro ${n} giorni lavorativi`),
     revision: "Un giro di correzioni incluso",
-    payAfter: "Pagate solo dopo la nostra conferma scritta. TWINT o fattura QR.",
+    payAfter: "Pagate solo dopo la nostra conferma scritta, online e in modo sicuro.",
     orderTitle: "Ordinare",
     mobileCta: "Ordinare",
     notLawyer: "Thrax Legal non è uno studio legale e non vi rappresenta in tribunale.",
@@ -641,13 +672,23 @@ const it: ServicesUi = {
       consent: "Spuntate entrambe le caselle di accettazione.",
       throttled: "Troppe richieste da questa connessione. Riprovate tra un'ora o scriveteci a hey@thrax-legal.ch.",
     },
+    fieldErrors: {
+      situation: "Descrivete la vostra situazione in qualche frase (almeno 10 caratteri).",
+      name: "Indicate nome e cognome (almeno 2 caratteri).",
+      email: "Indicate un indirizzo email valido, ad esempio nome@azienda.ch.",
+      phone: "Questo numero non sembra valido. Esempio: +41 79 000 00 00 (o lasciate vuoto).",
+      company: "Indicate il nome della vostra azienda.",
+      terms: "Accettate le condizioni generali e l’informativa sulla privacy.",
+      ai: "Accettate il trattamento delle vostre informazioni tramite intelligenza artificiale.",
+      summary: "Correggete quanto segnalato in rosso per inviare la richiesta.",
+    },
   },
   thanks: {
     metaTitle: "Ordine ricevuto | Thrax Legal",
     heading: "Grazie, la vostra richiesta è stata ricevuta",
     body: "Verifichiamo che la prestazione sia adatta alla vostra situazione e vi confermiamo prezzo e termine per email, di regola entro 1 giorno lavorativo.",
     next: [
-      "Ricevete la nostra conferma e le istruzioni di pagamento (TWINT o fattura QR).",
+      "Ricevete la nostra conferma e un link di pagamento sicuro (carta bancaria o TWINT se proposto).",
       "Ci inviate i documenti rispondendo all'email.",
       "Consegniamo il documento nel termine annunciato.",
     ],
