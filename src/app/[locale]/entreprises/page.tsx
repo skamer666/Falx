@@ -9,6 +9,7 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import VideoEmbed from "@/components/site/VideoEmbed";
 import { PRESENTATION_VIDEO } from "@/lib/videos";
 import JsonLd from "@/components/site/JsonLd";
+import { SITE_URL } from "@/lib/site";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
@@ -853,26 +854,30 @@ export default async function EntreprisesPage({
     })),
   };
 
-  const productJsonLd = {
+  // Abonnement juridique = un service, pas un produit : le type Product faisait réclamer
+  // à Google des avis (review / aggregateRating) que nous n'avons pas et n'inventerons pas.
+  const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Thrax Legal",
     description: t.metaDescription,
-    brand: { "@type": "Brand", name: "Thrax Legal" },
+    serviceType: "Legal services",
+    areaServed: { "@type": "AdministrativeArea", name: "Suisse romande" },
+    provider: { "@type": "LegalService", name: "Thrax Legal", url: `${SITE_URL}/${locale}` },
     offers: t.tiers.map((tier) => ({
       "@type": "Offer",
       name: tier.name,
       price: tier.price.replace(/\D/g, ""),
       priceCurrency: "CHF",
       availability: "https://schema.org/InStock",
-      url: `/${locale}/compte/inscription?plan=${tier.slug.replace("abonnement-", "")}`,
+      url: `${SITE_URL}/${locale}/compte/inscription?plan=${tier.slug.replace("abonnement-", "")}`,
     })),
   };
 
   return (
     <>
       <JsonLd data={faqJsonLd} />
-      <JsonLd data={productJsonLd} />
+      <JsonLd data={serviceJsonLd} />
       <div className="pb-24">
         <Nav />
         <main className="bg-bg text-text">
