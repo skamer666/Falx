@@ -45,6 +45,16 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
   "entreprises/relecture-bail-commercial": { id: "tifAI5nBUv8", poster: "/media/video/services/relecture-bail-commercial.webp" },
   "entreprises/relecture-contrat-commercial": { id: "-vfUs2qFebI", poster: "/media/video/services/relecture-contrat-commercial.webp" },
   "particuliers/relecture-contrat-de-travail": { id: "apv8NGquc3s", poster: "/media/video/services/relecture-contrat-de-travail.webp" },
+  "particuliers/relecture-contrat-particulier": { id: "y5vxWbFmxLQ", poster: "/media/video/services/relecture-contrat-particulier.webp" },
+  "particuliers/requete-conciliation-travail": { id: "BO6deX3veL4", poster: "/media/video/services/requete-conciliation-travail.webp" },
+  "entreprises/requete-de-mainlevee": { id: "A5OwaKIC_Sg", poster: "/media/video/services/requete-de-mainlevee.webp" },
+  "particuliers/resiliation-anticipee-bail": { id: "VWUQ7AkHpoA", poster: "/media/video/services/resiliation-anticipee-bail.webp" },
+  "particuliers/resiliation-de-contrat": { id: "MkU3lLQCOT8", poster: "/media/video/services/resiliation-de-contrat.webp" },
+  "particuliers/salaire-impaye": { id: "gi4knQst2xE", poster: "/media/video/services/salaire-impaye.webp" },
+  "particuliers/separation-divorce-amiable": { id: "Q87jPQsUYOw", poster: "/media/video/services/separation-divorce-amiable.webp" },
+  "entreprises/statuts-d-association": { id: "HU4PL6fVchg", poster: "/media/video/services/statuts-d-association.webp" },
+  "particuliers/testament": { id: "m8823OJUrAE", poster: "/media/video/services/testament.webp" },
+  "particuliers/vol-annule-retarde": { id: "iLdavIPtf4c", poster: "/media/video/services/vol-annule-retarde.webp" },
 };
 
 export const GUIDE_VIDEO_DATA: Record<string, SiteVideo> = {
