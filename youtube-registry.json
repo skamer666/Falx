@@ -305,62 +305,72 @@
   "relecture-contrat-particulier": {
    "kind": "service",
    "site_key": "particuliers/relecture-contrat-particulier",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "y5vxWbFmxLQ",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "requete-conciliation-travail": {
    "kind": "service",
    "site_key": "particuliers/requete-conciliation-travail",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "BO6deX3veL4",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "requete-de-mainlevee": {
    "kind": "service",
    "site_key": "entreprises/requete-de-mainlevee",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "A5OwaKIC_Sg",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "resiliation-anticipee-bail": {
    "kind": "service",
    "site_key": "particuliers/resiliation-anticipee-bail",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "VWUQ7AkHpoA",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "resiliation-de-contrat": {
    "kind": "service",
    "site_key": "particuliers/resiliation-de-contrat",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "MkU3lLQCOT8",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "salaire-impaye": {
    "kind": "service",
    "site_key": "particuliers/salaire-impaye",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "gi4knQst2xE",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "separation-divorce-amiable": {
    "kind": "service",
    "site_key": "particuliers/separation-divorce-amiable",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "Q87jPQsUYOw",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "statuts-d-association": {
    "kind": "service",
    "site_key": "entreprises/statuts-d-association",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "HU4PL6fVchg",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "testament": {
    "kind": "service",
    "site_key": "particuliers/testament",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "m8823OJUrAE",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "vol-annule-retarde": {
    "kind": "service",
    "site_key": "particuliers/vol-annule-retarde",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "iLdavIPtf4c",
+   "note": "uploadé via treg le 12.10.2026"
   },
   "bail-commercial": {
    "kind": "guide",
