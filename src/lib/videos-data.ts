@@ -58,8 +58,13 @@ export const SERVICE_VIDEO_DATA: Record<string, SiteVideo> = {
 };
 
 export const GUIDE_VIDEO_DATA: Record<string, SiteVideo> = {
+  "bail-commercial-suisse-guide": { id: "F9xuBpzXVFA", poster: "/media/video/guides/bail-commercial.webp" },
+  "cgv-suisses-guide": { id: "XIrnnKekMec", poster: "/media/video/guides/cgv-suisse.webp" },
+  "contrat-de-travail-suisse-pme": { id: "6ajR3Zx9uA8", poster: "/media/video/guides/contrat-de-travail.webp" },
+  "mise-en-demeure-recouvrement-suisse": { id: "6WGnI5gajMo", poster: "/media/video/guides/facture-impayee.webp" },
+  "conformite-nlpd-pme": { id: "_tjpLZSN3hc", poster: "/media/video/guides/nlpd-pme.webp" },
 };
 
-export const COMPARISON_VIDEO_DATA: SiteVideo | null = null;
+export const COMPARISON_VIDEO_DATA: SiteVideo | null = { id: "oMeX5fVbwJU", poster: "/media/video/guides/avocat-ou-service-juridique.webp" };
 
 export const PRESENTATION_VIDEO_ID = "Dc1ohAbT9tQ";
