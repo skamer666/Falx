@@ -375,38 +375,44 @@
   "bail-commercial": {
    "kind": "guide",
    "site_key": "bail-commercial-suisse-guide",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "F9xuBpzXVFA",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "cgv-suisse": {
    "kind": "guide",
    "site_key": "cgv-suisses-guide",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "XIrnnKekMec",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "contrat-de-travail": {
    "kind": "guide",
    "site_key": "contrat-de-travail-suisse-pme",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "6ajR3Zx9uA8",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "facture-impayee": {
    "kind": "guide",
    "site_key": "mise-en-demeure-recouvrement-suisse",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "6WGnI5gajMo",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "nlpd-pme": {
    "kind": "guide",
    "site_key": "conformite-nlpd-pme",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "_tjpLZSN3hc",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "avocat-ou-service-juridique": {
    "kind": "comparison",
    "site_key": "alternative-embauche-juriste",
-   "status": "rendered",
-   "youtube_id": null
+   "status": "on_site",
+   "youtube_id": "oMeX5fVbwJU",
+   "note": "uploadé via treg le 13.10.2026"
   },
   "presentation-thrax-legal": {
    "kind": "presentation",
