@@ -6,7 +6,7 @@ import JsonLd from "@/components/site/JsonLd";
 import { Container } from "@/components/site/ui";
 import type { Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
-import { categoryText, getService, servicePath, serviceText, type ServiceDef } from "@/lib/services/catalog";
+import { categoryText, EXPRESS_PRICE, getService, servicePath, serviceText, type ServiceDef } from "@/lib/services/catalog";
 import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import VideoEmbed from "@/components/site/VideoEmbed";
@@ -29,6 +29,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
   const price = priceLabel(locale, service.price, service.from);
   const vat = vatLabel(locale, service.audience);
   const orderLabel = `${ui.form.submit} · ${price}`;
+  const orderLabelExpress = service.express ? `${ui.form.submit} · ${priceLabel(locale, service.price + EXPRESS_PRICE, service.from)}` : undefined;
   const related = service.related.map(getService).filter((s): s is ServiceDef => Boolean(s));
   const guide = service.guide ? GUIDE_ARTICLES.find((a) => a.slug === service.guide) : undefined;
   const hubPath = `/${locale}/${service.audience}`;
@@ -160,7 +161,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
                       <li>{ui.service.revision}</li>
                     </ul>
                     <div className="mt-6">
-                      <OrderForm locale={locale} service={service} submitLabel={orderLabel} error={error} />
+                      <OrderForm locale={locale} service={service} submitLabel={orderLabel} submitLabelExpress={orderLabelExpress} error={error} />
                     </div>
                     <p className="mt-4 text-center text-xs leading-relaxed text-text-muted">{service.from ? ui.service.payAfter : ui.service.payNow}</p>
                   </div>

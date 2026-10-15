@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import SubmitButton from "@/components/account/SubmitButton";
 import SourceField from "@/components/site/SourceField";
@@ -24,13 +25,17 @@ export default function OrderForm({
   locale,
   service,
   submitLabel,
+  submitLabelExpress,
   error,
 }: {
   locale: Locale;
   service: ServiceDef;
   submitLabel: string;
+  /** Libellé du bouton quand l'option express est cochée (prix de base + supplément). */
+  submitLabelExpress?: string;
   error?: string;
 }) {
+  const [express, setExpress] = useState(false);
   const t = SERVICES_UI[locale].form;
   const ai = ACCOUNT_STRINGS[locale].signup;
   const errorMessage = error === "generic" || error === "consent" || error === "throttled" ? t.errors[error] : null;
@@ -125,7 +130,7 @@ export default function OrderForm({
             <span className="block text-sm font-semibold text-text">{t.express}</span>
             <span className="block text-xs text-text-muted">{t.expressHint}</span>
           </span>
-          <input type="checkbox" name="express" className="h-5 w-5 shrink-0 accent-text" />
+          <input type="checkbox" name="express" checked={express} onChange={(event) => setExpress(event.currentTarget.checked)} className="h-5 w-5 shrink-0 accent-text" />
         </label>
       ) : null}
 
@@ -162,7 +167,7 @@ export default function OrderForm({
         </p>
       ) : null}
 
-      <SubmitButton className="mt-1 min-h-14 w-full text-base font-semibold">{submitLabel}</SubmitButton>
+      <SubmitButton className="mt-1 min-h-14 w-full text-base font-semibold">{express && submitLabelExpress ? submitLabelExpress : submitLabel}</SubmitButton>
     </form>
   );
 }
