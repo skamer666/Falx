@@ -16,7 +16,7 @@ const INPUT =
 const LABEL = "text-sm font-medium text-text";
 const INVALID = "!border-danger";
 const INVALID_BOX = "outline outline-2 outline-offset-2 outline-danger";
-const ORDER: OrderField[] = ["situation", "name", "email", "phone", "terms", "ai"];
+const ORDER: OrderField[] = ["situation", "name", "email", "phone", "terms"];
 
 /** Formulaire de demande de devis (section « Votre problème n'est pas dans la liste ? »). */
 export default function QuoteForm({ locale, audience, error }: { locale: Locale; audience: Audience; error?: string }) {
@@ -116,16 +116,10 @@ export default function QuoteForm({ locale, audience, error }: { locale: Locale;
               {form.consentLink}
             </Link>
             .
+            <span className="mt-1.5 block text-xs text-text-muted/90">{ai.aiNote}</span>
           </span>
         </label>
         {err("terms")}
-      </div>
-      <div>
-        <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
-          <input type="checkbox" name="ai" required className={`mt-0.5 h-5 w-5 shrink-0 accent-text ${errors.ai ? INVALID_BOX : ""}`} {...aria("ai")} />
-          <span>{ai.aiLabel}</span>
-        </label>
-        {err("ai")}
       </div>
       {hasErrors ? (
         <p role="alert" className="text-sm font-medium text-danger">

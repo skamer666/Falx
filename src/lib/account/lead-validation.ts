@@ -21,7 +21,7 @@ export function validateLead(input: { name: string; email: string; phone: string
   return errors;
 }
 
-/** Devis et commande : description de la situation, deux cases d'acceptation, entreprise parfois obligatoire. */
+/** Devis et commande : description de la situation, case d'acceptation (CGV, confidentialité et recours à l'IA), entreprise parfois obligatoire. */
 export type OrderField = "situation" | "name" | "email" | "phone" | "company" | "terms" | "ai";
 export type OrderFieldErrors = Partial<Record<OrderField, true>>;
 
@@ -34,6 +34,5 @@ export function validateOrder(data: FormData, opts: { companyRequired: boolean }
   if (!isValidPhone(text("phone"))) errors.phone = true;
   if (opts.companyRequired && text("company").trim().length < 2) errors.company = true;
   if (data.get("terms") !== "on") errors.terms = true;
-  if (data.get("ai") !== "on") errors.ai = true;
   return errors;
 }

@@ -12,7 +12,7 @@ import { submitOrder } from "@/app/[locale]/commande/actions";
 import { validateOrder, type OrderField } from "@/lib/account/lead-validation";
 import { useInlineValidation } from "@/components/site/useInlineValidation";
 
-const ORDER: OrderField[] = ["name", "email", "phone", "company", "situation", "terms", "ai"];
+const ORDER: OrderField[] = ["name", "email", "phone", "company", "situation", "terms"];
 const INVALID = "!border-danger";
 const INVALID_BOX = "outline outline-2 outline-offset-2 outline-danger";
 
@@ -149,16 +149,10 @@ export default function OrderForm({
               {t.consentLink}
             </Link>
             .
+            <span className="mt-1.5 block text-xs text-text-muted/90">{ai.aiNote}</span>
           </span>
         </label>
         {err("terms")}
-      </div>
-      <div>
-        <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-text-muted">
-          <input type="checkbox" name="ai" required className={`mt-0.5 h-5 w-5 shrink-0 accent-text ${errors.ai ? INVALID_BOX : ""}`} {...aria("ai")} />
-          <span>{ai.aiLabel}</span>
-        </label>
-        {err("ai")}
       </div>
 
       {hasErrors ? (

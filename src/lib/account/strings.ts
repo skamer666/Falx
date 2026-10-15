@@ -51,6 +51,7 @@ export type AccountStrings = {
     termsPrivacy: string;
     termsAfter: string;
     aiLabel: string;
+    aiNote: string;
     aiHelp: string;
     activationNote: string;
     cta: string;
@@ -245,7 +246,8 @@ const fr: AccountStrings = {
     termsMiddle: " et la ",
     termsPrivacy: "politique de confidentialité",
     termsAfter: ", et je confirme souscrire à des fins professionnelles.",
-    aiLabel: "J’accepte que mes informations et documents soient traités par un outil d’intelligence artificielle (Claude, édité par Anthropic, aux États-Unis) pour préparer les réponses de Thrax Legal, qui les relit et en reste responsable.",
+    aiLabel: "J’accepte que mes informations et documents soient traités avec des outils d’intelligence artificielle de prestataires externes (notamment aux États-Unis) pour préparer les réponses de Thrax Legal, qui les relit et en reste responsable.",
+    aiNote: "Votre demande est traitée avec l’aide d’outils d’intelligence artificielle de prestataires externes (notamment aux États-Unis) ; Thrax Legal relit chaque livrable.",
     aiHelp: "Ce traitement est nécessaire au service. Thrax Legal désactive l’usage de ces données pour l’entraînement des modèles. Évitez d’envoyer des données sensibles inutiles. Détails dans la politique de confidentialité.",
     activationNote: "Sans paiement à ce stade. Nous vous contactons dans les meilleurs délais (en principe sous 1 jour ouvré) pour finaliser votre abonnement. Votre espace s’ouvre à réception du premier paiement : vous choisissez alors votre mot de passe.",
     cta: "Envoyer ma demande d’abonnement",
@@ -486,7 +488,8 @@ const de: AccountStrings = {
     termsMiddle: " und die ",
     termsPrivacy: "Datenschutzerklärung",
     termsAfter: " gelesen, akzeptiere sie und bestätige, dass ich zu beruflichen Zwecken abschliesse.",
-    aiLabel: "Ich akzeptiere, dass meine Angaben und Dokumente von einem KI-Tool (Claude, herausgegeben von Anthropic, USA) verarbeitet werden, um die Antworten von Thrax Legal vorzubereiten, das sie überprüft und dafür verantwortlich bleibt.",
+    aiLabel: "Ich akzeptiere, dass meine Angaben und Dokumente mit KI-Tools externer Dienstleister (insbesondere in den USA) verarbeitet werden, um die Antworten von Thrax Legal vorzubereiten, das sie überprüft und dafür verantwortlich bleibt.",
+    aiNote: "Ihre Anfrage wird mit Hilfe von KI-Tools externer Dienstleister (insbesondere in den USA) bearbeitet; Thrax Legal überprüft jedes Ergebnis.",
     aiHelp: "Diese Verarbeitung ist für den Dienst erforderlich. Thrax Legal deaktiviert die Nutzung dieser Daten für das Training der Modelle. Senden Sie keine unnötigen sensiblen Daten. Einzelheiten in der Datenschutzerklärung.",
     activationNote: "Zu diesem Zeitpunkt ohne Zahlung. Wir melden uns so rasch wie möglich (in der Regel innert 1 Arbeitstag), um Ihr Abonnement abzuschliessen. Ihr Bereich wird mit Eingang der ersten Zahlung freigeschaltet: Dann wählen Sie Ihr Passwort.",
     cta: "Abonnementsanfrage senden",
@@ -727,7 +730,8 @@ const en: AccountStrings = {
     termsMiddle: " and the ",
     termsPrivacy: "privacy policy",
     termsAfter: ", and I confirm that I am subscribing for professional purposes.",
-    aiLabel: "I agree that my information and documents may be processed by an artificial intelligence tool (Claude, published by Anthropic, in the United States) to prepare Thrax Legal’s answers, which Thrax Legal reviews and remains responsible for.",
+    aiLabel: "I agree that my information and documents may be processed with artificial intelligence tools from external providers (notably in the United States) to prepare Thrax Legal’s answers, which Thrax Legal reviews and remains responsible for.",
+    aiNote: "Your request is handled with the help of artificial intelligence tools from external providers (notably in the United States); Thrax Legal reviews every deliverable.",
     aiHelp: "This processing is necessary for the service. Thrax Legal turns off the use of this data for model training. Avoid sending unnecessary sensitive data. Details in the privacy policy.",
     activationNote: "No payment at this stage. We will contact you as soon as possible (in principle within 1 business day) to finalise your subscription. Your account opens when the first payment is received: you then choose your password.",
     cta: "Send my subscription request",
@@ -967,7 +971,8 @@ const it: AccountStrings = {
     termsMiddle: " e l'",
     termsPrivacy: "informativa sulla privacy",
     termsAfter: ", e confermo di sottoscrivere per fini professionali.",
-    aiLabel: "Accetto che le mie informazioni e i miei documenti siano trattati da uno strumento di intelligenza artificiale (Claude, di Anthropic, negli Stati Uniti) per preparare le risposte di Thrax Legal, che le rivede e ne resta responsabile.",
+    aiLabel: "Accetto che le mie informazioni e i miei documenti siano trattati con strumenti di intelligenza artificiale di prestatori esterni (in particolare negli Stati Uniti) per preparare le risposte di Thrax Legal, che le rivede e ne resta responsabile.",
+    aiNote: "La vostra richiesta è trattata con l’aiuto di strumenti di intelligenza artificiale di prestatori esterni (in particolare negli Stati Uniti); Thrax Legal rivede ogni risultato.",
     aiHelp: "Questo trattamento è necessario al servizio. Thrax Legal disattiva l’uso di questi dati per l’addestramento dei modelli. Evitate di inviare dati sensibili non necessari. Dettagli nell’informativa sulla privacy.",
     activationNote: "Nessun pagamento in questa fase. Vi contattiamo il prima possibile (in linea di principio entro 1 giorno lavorativo) per finalizzare il vostro abbonamento. Il vostro spazio si apre alla ricezione del primo pagamento: sceglierete allora la password.",
     cta: "Invia la richiesta di abbonamento",

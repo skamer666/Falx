@@ -19,22 +19,22 @@ const META: Record<Locale, { title: string; description: string }> = {
   fr: {
     title: "Conditions générales de vente | Thrax Legal",
     description:
-      "Conditions générales applicables à l'abonnement juridique PME de Thrax Legal.",
+      "Conditions générales applicables aux abonnements et aux prestations à l'acte de Thrax Legal.",
   },
   de: {
     title: "Allgemeine Geschäftsbedingungen | Thrax Legal",
     description:
-      "Allgemeine Geschäftsbedingungen für das KMU-Rechtsabo von Thrax Legal.",
+      "Allgemeine Geschäftsbedingungen für die Abonnemente und Einzelleistungen von Thrax Legal.",
   },
   en: {
     title: "Terms & Conditions | Thrax Legal",
     description:
-      "Terms and conditions applicable to Thrax Legal's SME legal subscription.",
+      "Terms and conditions applicable to Thrax Legal's subscriptions and one-off services.",
   },
   it: {
     title: "Termini e condizioni | Thrax Legal",
     description:
-      "Termini e condizioni applicabili all'abbonamento legale per PMI di Thrax Legal.",
+      "Termini e condizioni applicabili agli abbonamenti e alle prestazioni singole di Thrax Legal.",
   },
 };
 
@@ -103,7 +103,7 @@ function Fr() {
       <p>
         Thrax Legal fournit à ses clients, par écrit et par oral, des
         informations et une assistance juridiques sur des questions courantes
-        de la vie d’une entreprise en droit suisse (voir l’article 4). Les
+        de la vie d’une entreprise et, pour les particuliers, de la vie privée en droit suisse (voir l’article 4). Les
         relations entre les parties sont soumises aux règles du{" "}
         <strong>mandat</strong> (art. 394 ss du Code des obligations, «&nbsp;CO&nbsp;»)&nbsp;:
         Thrax Legal s’engage à exécuter sa mission avec diligence et
@@ -136,21 +136,22 @@ function Fr() {
       </p>
       <p>
         <strong>Recours à l’intelligence artificielle.</strong> Thrax Legal utilise
-        des outils d’intelligence artificielle, actuellement l’assistant Claude
-        de la société Anthropic, PBC (États-Unis), pour analyser les
+        des outils d’intelligence artificielle fournis par des prestataires
+        externes, notamment établis aux États-Unis, pour analyser les
         informations et documents du client et préparer les réponses et
         livrables, que Thrax Legal relit et dont il reste seul responsable
-        envers le client. En acceptant les CGV et en cochant la case dédiée à la
-        création de son compte, le client <strong>consent expressément</strong> à
+        envers le client. En acceptant les CGV, à la commande comme à la
+        création du compte (l’avertissement correspondant figure à côté de la
+        case d’acceptation), le client <strong>consent expressément</strong> à
         ce que ses informations et documents (y compris les données
-        personnelles de tiers qu’ils contiennent) soient transmis à ce
-        prestataire dans ce but. Ce traitement est nécessaire au service&nbsp;: le
-        client qui n’y consent pas ne peut pas souscrire, et celui qui retire
+        personnelles de tiers qu’ils contiennent) soient transmis à ces
+        prestataires dans ce but. Ce traitement est nécessaire au service&nbsp;: le
+        client qui n’y consent pas ne peut ni commander ni souscrire, et celui qui retire
         son consentement en cours de contrat met fin à l’abonnement, selon
         l’article 10. Thrax Legal configure ses outils pour que les données du client ne servent pas à entraîner les modèles et ne soient conservées par le fournisseur que pour une durée limitée&nbsp;; le transfert vers les États-Unis repose sur le consentement exprès du client et, selon l’offre utilisée, sur les clauses contractuelles types du fournisseur. Le client évite de transmettre des
         données inutiles, en particulier des données sensibles (santé,
         opinions, procédures pénales ou administratives), sauf si sa demande
-        l’exige. Les détails figurent dans la politique de confidentialité.
+        l’exige. L’identité des prestataires et les détails figurent dans la politique de confidentialité.
       </p>
       <p>
         Les informations générales sur le droit suisse figurant sur ce site
@@ -158,11 +159,6 @@ function Fr() {
         jurisprudentielles) sont fournies à titre informatif, sans garantie
         d’exhaustivité, d’actualité ou d’applicabilité à un cas particulier,
         et ne constituent pas un conseil juridique personnalisé.
-      </p>
-      <p>
-        Pour une prestation à l’acte, le consentement à ce recours à
-        l’intelligence artificielle est donné en cochant la case prévue dans
-        le formulaire de commande, aux mêmes conditions.
       </p>
 
       <h2>4. Formules, volumes et prix</h2>
@@ -470,7 +466,7 @@ function Fr() {
       <h2>12. Propriété des documents livrés</h2>
       <p>
         Les réponses écrites et documents livrés dans le cadre de
-        l’abonnement, une fois la période correspondante payée, peuvent être
+        l’abonnement ou d’une prestation à l’acte, une fois la période ou la prestation correspondante payée, peuvent être
         utilisés librement par le client pour les besoins de sa propre
         activité. Ils ne peuvent être revendus ou redistribués à des tiers en
         tant que modèles commerciaux. Thrax Legal conserve ses droits sur
@@ -592,7 +588,7 @@ function De() {
       <p>
         Thrax Legal erbringt für seine Kunden schriftlich und mündlich
         rechtliche Informationen und Unterstützung zu alltäglichen Fragen
-        eines Unternehmens nach Schweizer Recht (siehe Artikel 4). Das
+        eines Unternehmens und, für Privatpersonen, des Privatlebens nach Schweizer Recht (siehe Artikel 4). Das
         Verhältnis der Parteien untersteht den Regeln des{" "}
         <strong>Auftrags</strong> (Art. 394 ff. des Obligationenrechts,
         «&nbsp;OR&nbsp;»): Thrax Legal verpflichtet sich, den Auftrag sorgfältig
@@ -626,22 +622,23 @@ function De() {
       </p>
       <p>
         <strong>Einsatz künstlicher Intelligenz.</strong> Thrax Legal verwendet
-        Tools der künstlichen Intelligenz, derzeit den Assistenten Claude der
-        Anthropic, PBC (USA), um die Angaben und Dokumente des Kunden zu
-        analysieren und die Antworten und Ergebnisse vorzubereiten, die Thrax
-        Legal überprüft und für die es dem Kunden allein verantwortlich
-        bleibt. Mit der Annahme der AGB und dem Anklicken des dafür
-        vorgesehenen Felds bei der Kontoerstellung <strong>willigt der Kunde
-        ausdrücklich ein</strong>, dass seine Angaben und Dokumente (einschliesslich
-        der darin enthaltenen Personendaten Dritter) zu diesem Zweck an diesen
+        Tools der künstlichen Intelligenz externer Dienstleister, die
+        insbesondere in den USA ansässig sind, um die Angaben und Dokumente
+        des Kunden zu analysieren und die Antworten und Ergebnisse
+        vorzubereiten, die Thrax Legal überprüft und für die es dem Kunden
+        allein verantwortlich bleibt. Mit der Annahme der AGB, bei der
+        Bestellung wie bei der Kontoerstellung (der entsprechende Hinweis
+        steht neben dem Annahmefeld), <strong>willigt der Kunde ausdrücklich
+        ein</strong>, dass seine Angaben und Dokumente (einschliesslich der
+        darin enthaltenen Personendaten Dritter) zu diesem Zweck an diese
         Dienstleister übermittelt werden. Diese Verarbeitung ist für den
-        Dienst erforderlich: Wer nicht einwilligt, kann nicht abschliessen, und
-        wer seine Einwilligung während des Vertrags widerruft, beendet das
-        Abonnement gemäss Artikel 10. Thrax Legal konfiguriert seine Tools so, dass die Daten des Kunden nicht zum Training der Modelle verwendet und vom Anbieter nur für begrenzte Zeit aufbewahrt werden; die Übermittlung in die USA beruht auf der ausdrücklichen Einwilligung des Kunden und, je nach genutztem Angebot, auf den Standardvertragsklauseln des Anbieters. Der Kunde vermeidet die
+        Dienst erforderlich: Wer nicht einwilligt, kann weder bestellen noch
+        abschliessen, und wer seine Einwilligung während des Vertrags
+        widerruft, beendet das Abonnement gemäss Artikel 10. Thrax Legal konfiguriert seine Tools so, dass die Daten des Kunden nicht zum Training der Modelle verwendet und vom Anbieter nur für begrenzte Zeit aufbewahrt werden; die Übermittlung in die USA beruht auf der ausdrücklichen Einwilligung des Kunden und, je nach genutztem Angebot, auf den Standardvertragsklauseln des Anbieters. Der Kunde vermeidet die
         Übermittlung unnötiger Daten, insbesondere sensibler Daten
         (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser wenn
-        seine Anfrage dies erfordert. Einzelheiten stehen in der
-        Datenschutzerklärung.
+        seine Anfrage dies erfordert. Die Identität der Dienstleister und
+        Einzelheiten stehen in der Datenschutzerklärung.
       </p>
       <p>
         Die allgemeinen Informationen zum Schweizer Recht auf dieser Website
@@ -649,11 +646,6 @@ function De() {
         dienen nur der Information, ohne Gewähr für Vollständigkeit,
         Aktualität oder Anwendbarkeit auf einen Einzelfall, und stellen keine
         persönliche Rechtsberatung dar.
-      </p>
-      <p>
-        Bei einer Einzelleistung wird die Einwilligung in diesen Einsatz
-        künstlicher Intelligenz durch Anklicken des entsprechenden Feldes im
-        Bestellformular erteilt, zu denselben Bedingungen.
       </p>
 
       <h2>4. Formeln, Volumen und Preise</h2>
@@ -931,8 +923,8 @@ function De() {
 
       <h2>12. Eigentum an den gelieferten Dokumenten</h2>
       <p>
-        Die im Rahmen des Abonnements gelieferten schriftlichen Antworten und
-        Dokumente dürfen vom Kunden, sobald die entsprechende Periode bezahlt
+        Die im Rahmen des Abonnements oder einer Einzelleistung gelieferten schriftlichen Antworten und
+        Dokumente dürfen vom Kunden, sobald die entsprechende Periode oder Leistung bezahlt
         ist, frei für die Bedürfnisse seiner eigenen Tätigkeit verwendet
         werden. Sie dürfen nicht als kommerzielle Vorlagen an Dritte
         weiterverkauft oder weitergegeben werden. Thrax Legal behält seine
@@ -1054,7 +1046,7 @@ function En() {
       <h2>3. Nature of the service and limits</h2>
       <p>
         Thrax Legal provides its customers, in writing and orally, with legal
-        information and assistance on everyday business questions under Swiss
+        information and assistance on everyday business questions and, for individuals, everyday private-life questions under Swiss
         law (see section 4). The relationship between the parties is governed
         by the rules on the <strong>mandate</strong> (Art. 394 et seq. of the
         Swiss Code of Obligations, &ldquo;CO&rdquo;): Thrax Legal undertakes to
@@ -1086,21 +1078,23 @@ function En() {
       </p>
       <p>
         <strong>Use of artificial intelligence.</strong> Thrax Legal uses
-        artificial intelligence tools, currently the Claude assistant from
-        Anthropic, PBC (United States), to analyse the customer&rsquo;s
-        information and documents and to prepare answers and deliverables,
-        which Thrax Legal reviews and for which it remains solely responsible
-        towards the customer. By accepting the Terms and ticking the dedicated
-        box when creating their account, the customer{" "}
+        artificial intelligence tools provided by external providers, in
+        particular established in the United States, to analyse the
+        customer&rsquo;s information and documents and to prepare answers and
+        deliverables, which Thrax Legal reviews and for which it remains solely
+        responsible towards the customer. By accepting the Terms, whether when
+        ordering or when creating an account (the corresponding notice appears
+        next to the acceptance box), the customer{" "}
         <strong>expressly consents</strong> to their information and documents
         (including any third-party personal data they contain) being sent to
-        this provider for that purpose. This processing is necessary for the
-        service: a customer who does not consent cannot subscribe, and one who
-        withdraws consent during the contract ends the subscription under
-        section 10. Thrax Legal configures its tools so that customer data is not used to train the models and is kept by the provider only for a limited period; the transfer to the United States relies on the customer&rsquo;s express consent and, depending on the plan used, on the provider&rsquo;s standard contractual clauses. The customer avoids sending
+        these providers for that purpose. This processing is necessary for the
+        service: a customer who does not consent can neither order nor
+        subscribe, and one who withdraws consent during the contract ends the
+        subscription under section 10. Thrax Legal configures its tools so that customer data is not used to train the models and is kept by the provider only for a limited period; the transfer to the United States relies on the customer&rsquo;s express consent and, depending on the plan used, on the provider&rsquo;s standard contractual clauses. The customer avoids sending
         unnecessary data, in particular sensitive data (health, opinions,
         criminal or administrative proceedings), unless their request requires
-        it. Details are in the privacy policy.
+        it. The providers&rsquo; identity and further details are in the
+        privacy policy.
       </p>
       <p>
         The general information on Swiss law on this site (guide, frequently
@@ -1108,11 +1102,6 @@ function En() {
         information only, without any guarantee of completeness, currency or
         applicability to a particular case, and does not constitute
         personalised legal advice.
-      </p>
-      <p>
-        For a one-off service, consent to this use of artificial intelligence
-        is given by ticking the box provided in the order form, on the same
-        terms.
       </p>
 
       <h2>4. Plans, volumes and prices</h2>
@@ -1367,8 +1356,8 @@ function En() {
 
       <h2>12. Ownership of delivered documents</h2>
       <p>
-        The written answers and documents delivered under the subscription, once
-        the corresponding period has been paid, may be freely used by the
+        The written answers and documents delivered under the subscription or a one-off service, once
+        the corresponding period or service has been paid, may be freely used by the
         customer for the needs of their own business. They may not be resold or
         redistributed to third parties as commercial templates. Thrax Legal
         keeps its rights in its methods, models, templates and general
@@ -1514,21 +1503,24 @@ function It() {
       </p>
       <p>
         <strong>Ricorso all&rsquo;intelligenza artificiale.</strong> Thrax Legal
-        utilizza strumenti di intelligenza artificiale, attualmente
-        l&rsquo;assistente Claude della società Anthropic, PBC (Stati Uniti), per
-        analizzare le informazioni e i documenti del cliente e preparare le
-        risposte e i risultati, che Thrax Legal rivede e di cui resta
-        l&rsquo;unico responsabile nei confronti del cliente. Accettando le CG e
-        spuntando la casella dedicata alla creazione dell&rsquo;account, il cliente{" "}
+        utilizza strumenti di intelligenza artificiale forniti da prestatori
+        esterni, in particolare con sede negli Stati Uniti, per analizzare le
+        informazioni e i documenti del cliente e preparare le risposte e i
+        risultati, che Thrax Legal rivede e di cui resta l&rsquo;unico
+        responsabile nei confronti del cliente. Accettando le CG, sia al
+        momento dell&rsquo;ordine sia alla creazione dell&rsquo;account
+        (l&rsquo;avviso corrispondente figura accanto alla casella di
+        accettazione), il cliente{" "}
         <strong>acconsente espressamente</strong> a che le sue informazioni e i
         suoi documenti (compresi i dati personali di terzi in essi contenuti)
-        siano trasmessi a questo fornitore a tale scopo. Questo trattamento è
-        necessario al servizio: il cliente che non acconsente non può
-        sottoscrivere, e chi ritira il consenso nel corso del contratto pone
-        fine all&rsquo;abbonamento, secondo l&rsquo;articolo 10. Thrax Legal configura i propri strumenti in modo che i dati del cliente non servano ad addestrare i modelli e siano conservati dal fornitore solo per una durata limitata; il trasferimento verso gli Stati Uniti si basa sul consenso espresso del cliente e, a seconda dell&rsquo;offerta utilizzata, sulle clausole contrattuali tipo del fornitore. Il cliente evita di trasmettere
+        siano trasmessi a questi prestatori a tale scopo. Questo trattamento è
+        necessario al servizio: il cliente che non acconsente non può né
+        ordinare né sottoscrivere, e chi ritira il consenso nel corso del
+        contratto pone fine all&rsquo;abbonamento, secondo l&rsquo;articolo 10. Thrax Legal configura i propri strumenti in modo che i dati del cliente non servano ad addestrare i modelli e siano conservati dal fornitore solo per una durata limitata; il trasferimento verso gli Stati Uniti si basa sul consenso espresso del cliente e, a seconda dell&rsquo;offerta utilizzata, sulle clausole contrattuali tipo del fornitore. Il cliente evita di trasmettere
         dati non necessari, in particolare dati sensibili (salute, opinioni,
         procedimenti penali o amministrativi), salvo che la sua richiesta lo
-        richieda. I dettagli figurano nell&rsquo;informativa sulla privacy.
+        richieda. L&rsquo;identità dei prestatori e i dettagli figurano
+        nell&rsquo;informativa sulla privacy.
       </p>
       <p>
         Le informazioni generali sul diritto svizzero presenti su questo sito
@@ -1536,11 +1528,6 @@ function It() {
         fornite a titolo meramente informativo, senza garanzia di completezza,
         attualità o applicabilità a un caso particolare, e non costituiscono una
         consulenza giuridica personalizzata.
-      </p>
-      <p>
-        Per una prestazione singola, il consenso a questo ricorso
-        all&rsquo;intelligenza artificiale è dato spuntando l&rsquo;apposita
-        casella del modulo d&rsquo;ordine, alle stesse condizioni.
       </p>
 
       <h2>4. Formule, volumi e prezzi</h2>
@@ -1808,7 +1795,7 @@ function It() {
       <h2>12. Proprietà dei documenti consegnati</h2>
       <p>
         Le risposte scritte e i documenti consegnati nell&rsquo;ambito
-        dell&rsquo;abbonamento, una volta pagato il periodo corrispondente, possono
+        dell&rsquo;abbonamento o di una prestazione singola, una volta pagato il periodo o la prestazione corrispondente, possono
         essere utilizzati liberamente dal cliente per le esigenze della propria
         attività. Non possono essere rivenduti o ridistribuiti a terzi come
         modelli commerciali. Thrax Legal conserva i propri diritti sui suoi

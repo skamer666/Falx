@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-10-11";
+const LAST_UPDATED = "2026-10-16";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -106,7 +106,7 @@ function Fr() {
         </li>
         <li>
           Les <strong>informations de paiement</strong> que nous enregistrons
-          pour gérer votre abonnement&nbsp;: montant, date, période couverte,
+          pour gérer votre abonnement ou votre commande&nbsp;: montant, date, période couverte,
           mode de paiement et référence. Les paiements en ligne sont traités
           par notre prestataire de paiement Stripe&nbsp;: nous ne recevons ni ne
           conservons vos données de carte bancaire.
@@ -216,8 +216,8 @@ function Fr() {
           d’intelligence artificielle Claude, auquel Thrax Legal a recours pour
           analyser les informations et documents que vous lui confiez et
           préparer les réponses, que Thrax Legal relit et dont il reste
-          responsable. Vous y consentez expressément en cochant la case dédiée à
-          la création de votre compte&nbsp;; ce traitement est nécessaire au
+          responsable. Vous y consentez expressément en acceptant les conditions générales (l’avertissement figure à côté de la case
+          d’acceptation), à la commande comme à la création de votre compte&nbsp;; ce traitement est nécessaire au
           service. Thrax Legal configure ses outils de sorte que vos données ne servent pas à entraîner les modèles d’Anthropic (réglage d’exclusion activé ou offre professionnelle dont les conditions l’interdisent)&nbsp;; Anthropic les conserve pour une durée limitée (en principe 30 jours) à des fins de sécurité et de conformité, puis les supprime. Le transfert vers les États-Unis repose sur votre consentement exprès et, selon l’offre utilisée, sur les clauses contractuelles types de l’addendum de traitement des données d’Anthropic (prévu pour les offres professionnelles). Évitez de transmettre des données
           inutiles, en particulier des données sensibles (santé, opinions,
           procédures pénales ou administratives), sauf si votre demande
@@ -293,10 +293,25 @@ function Fr() {
         .
       </p>
 
+      <p>
+        Le responsable du traitement étant établi en Belgique, le règlement
+        général sur la protection des données (RGPD) s&rsquo;applique aussi à
+        ce traitement. Nous traitons vos données pour exécuter le contrat que
+        vous concluez avec nous (commande, abonnement) ou les mesures
+        précontractuelles que vous demandez, pour respecter nos obligations
+        légales (notamment comptables), sur la base de notre intérêt légitime
+        (sécurité du site, prévention de la fraude, suivi des demandes) et,
+        pour la transmission à des prestataires situés aux États-Unis, sur la
+        base de votre consentement. Vous disposez aussi du droit à la
+        limitation du traitement et à la portabilité de vos données, et vous
+        pouvez retirer votre consentement à tout moment, sans effet sur les
+        traitements antérieurs. Vous pouvez enfin saisir l&rsquo;<a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">Autorité de protection des données</a> (Belgique).
+      </p>
+
       <h2>Modifications</h2>
       <p>
         Cette politique peut être mise à jour, notamment lors de
-        l&rsquo;activation du module de paiement ou de l&rsquo;ajout de
+        l&rsquo;ajout de
         nouveaux outils sur le site. La date de dernière mise à jour figure
         en haut de cette page.
       </p>
@@ -343,7 +358,7 @@ function De() {
         </li>
         <li>
           Die <strong>Zahlungsangaben</strong>, die wir zur Verwaltung Ihres
-          Abonnements erfassen: Betrag, Datum, abgedeckte Periode,
+          Abonnements oder Ihrer Bestellung erfassen: Betrag, Datum, abgedeckte Periode,
           Zahlungsart und Referenz. Online-Zahlungen werden von unserem
           Zahlungsdienstleister Stripe abgewickelt: Wir erhalten und speichern
           keine Kreditkartendaten.
@@ -453,8 +468,8 @@ function De() {
           KI-Assistenten Claude, auf den Thrax Legal zurückgreift, um die
           Angaben und Dokumente, die Sie anvertrauen, zu analysieren und die
           Antworten vorzubereiten, die Thrax Legal überprüft und für die es
-          verantwortlich bleibt. Sie willigen ausdrücklich ein, indem Sie bei
-          der Kontoerstellung das dafür vorgesehene Feld anklicken; diese
+          verantwortlich bleibt. Sie willigen ausdrücklich ein, indem Sie die AGB annehmen (der Hinweis steht neben dem Annahmefeld), bei
+          der Bestellung wie bei der Kontoerstellung; diese
           Verarbeitung ist für den Dienst erforderlich. Thrax Legal konfiguriert seine Tools so, dass Ihre Daten nicht zum Training der Modelle von Anthropic verwendet werden (aktivierte Ausschlusseinstellung oder professionelles Angebot, dessen Bedingungen dies untersagen); Anthropic bewahrt sie für begrenzte Zeit (in der Regel 30 Tage) zu Sicherheits- und Compliance-Zwecken auf und löscht sie danach. Die Übermittlung in die USA beruht auf Ihrer ausdrücklichen Einwilligung und, je nach genutztem Angebot, auf den Standardvertragsklauseln des Datenverarbeitungszusatzes von Anthropic (für professionelle Angebote vorgesehen). Vermeiden Sie
           die Übermittlung unnötiger Daten, insbesondere sensibler Daten
           (Gesundheit, Meinungen, Straf- oder Verwaltungsverfahren), ausser
@@ -527,10 +542,25 @@ function De() {
         einreichen.
       </p>
 
+      <p>
+        Da der Verantwortliche in Belgien niedergelassen ist, gilt für diese
+        Bearbeitung auch die Datenschutz-Grundverordnung (DSGVO). Wir
+        bearbeiten Ihre Daten zur Erfüllung des mit uns geschlossenen Vertrags
+        (Bestellung, Abonnement) oder vorvertraglicher Massnahmen auf Ihre
+        Anfrage, zur Erfüllung unserer gesetzlichen Pflichten (insbesondere
+        der Buchführung), gestützt auf unser berechtigtes Interesse
+        (Sicherheit der Website, Betrugsprävention, Bearbeitung der Anfragen)
+        und, für die Übermittlung an Dienstleister in den USA, gestützt auf
+        Ihre Einwilligung. Sie haben ausserdem das Recht auf Einschränkung der
+        Bearbeitung und auf Datenübertragbarkeit und können Ihre Einwilligung
+        jederzeit widerrufen, ohne dass frühere Bearbeitungen betroffen sind.
+        Schliesslich können Sie sich an die belgische <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">Datenschutzbehörde</a> wenden.
+      </p>
+
       <h2>Änderungen</h2>
       <p>
         Diese Erklärung kann aktualisiert werden, insbesondere bei
-        Aktivierung des Zahlungsmoduls oder bei neuen Tools auf der
+        neuen Tools auf der
         Website. Das Datum der letzten Aktualisierung finden Sie oben auf
         dieser Seite.
       </p>
@@ -570,7 +600,7 @@ function En() {
         </li>
         <li>
           The <strong>payment information</strong> we record to manage your
-          subscription: amount, date, period covered, payment method and
+          subscription or order: amount, date, period covered, payment method and
           reference. Online payments are processed by our payment provider
           Stripe: we do not receive or store your bank card data.
         </li>
@@ -668,7 +698,8 @@ function En() {
           Claude AI assistant, which Thrax Legal uses to analyse the
           information and documents you entrust to it and to prepare answers,
           which Thrax Legal reviews and remains responsible for. You expressly
-          consent by ticking the dedicated box when creating your account; this
+          consent by accepting the terms and conditions (the notice appears next to the
+          acceptance box), when ordering as well as when creating your account; this
           processing is necessary for the service. Thrax Legal configures its tools so that your data is not used to train Anthropic&rsquo;s models (opt-out setting enabled, or a professional plan whose terms prohibit it); Anthropic keeps it for a limited period (in principle 30 days) for security and compliance purposes, then deletes it. The transfer to the United States relies on your express consent and, depending on the plan used, on the standard contractual clauses in Anthropic&rsquo;s data processing addendum (provided for professional plans). Avoid sending unnecessary data, in particular sensitive data
           (health, opinions, criminal or administrative proceedings), unless
           your request requires it.
@@ -738,10 +769,24 @@ function En() {
         .
       </p>
 
+      <p>
+        As the controller is established in Belgium, the General Data
+        Protection Regulation (GDPR) also applies to this processing. We
+        process your data to perform the contract you enter into with us
+        (order, subscription) or pre-contractual steps you request, to comply
+        with our legal obligations (in particular accounting), on the basis of
+        our legitimate interest (site security, fraud prevention, handling of
+        requests) and, for transmission to providers in the United States, on
+        the basis of your consent. You also have the right to restriction of
+        processing and to data portability, and you may withdraw your consent
+        at any time, without affecting earlier processing. Finally, you may
+        lodge a complaint with the Belgian <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">Data Protection Authority</a>.
+      </p>
+
       <h2>Changes</h2>
       <p>
-        This policy may be updated, in particular when the payment module
-        is activated or new tools are added to the site. The date of the
+        This policy may be updated, in particular when new tools
+        are added to the site. The date of the
         last update appears at the top of this page.
       </p>
     </>
@@ -783,7 +828,7 @@ function It() {
         </li>
         <li>
           Le <strong>informazioni di pagamento</strong> che registriamo per
-          gestire il vostro abbonamento: importo, data, periodo coperto,
+          gestire il vostro abbonamento o ordine: importo, data, periodo coperto,
           modalità di pagamento e riferimento. I pagamenti online sono gestiti
           dal nostro fornitore di pagamento Stripe: non riceviamo né
           conserviamo i dati della vostra carta bancaria.
@@ -892,8 +937,8 @@ function It() {
           di intelligenza artificiale Claude, al quale Thrax Legal ricorre per
           analizzare le informazioni e i documenti che gli affidate e preparare
           le risposte, che Thrax Legal rivede e di cui resta responsabile.
-          Acconsentite espressamente spuntando la casella dedicata alla
-          creazione del vostro account; questo trattamento è necessario al
+          Acconsentite espressamente accettando le condizioni generali (l’avviso figura accanto alla casella di
+          accettazione), sia all’ordine sia alla creazione del vostro account; questo trattamento è necessario al
           servizio. Thrax Legal configura i propri strumenti in modo che i vostri dati non servano ad addestrare i modelli di Anthropic (impostazione di esclusione attiva o offerta professionale le cui condizioni lo vietano); Anthropic li conserva per una durata limitata (in linea di principio 30 giorni) a fini di sicurezza e conformità, poi li elimina. Il trasferimento verso gli Stati Uniti si basa sul vostro consenso espresso e, a seconda dell&rsquo;offerta utilizzata, sulle clausole contrattuali tipo dell’addendum sul trattamento dei dati di Anthropic (previsto per le offerte professionali). Evitate di trasmettere dati non
           necessari, in particolare dati sensibili (salute, opinioni,
           procedimenti penali o amministrativi), salvo che la vostra richiesta
@@ -967,10 +1012,25 @@ function It() {
         .
       </p>
 
+      <p>
+        Poiché il titolare del trattamento ha sede in Belgio, a questo
+        trattamento si applica anche il regolamento generale sulla protezione
+        dei dati (RGPD). Trattiamo i vostri dati per eseguire il contratto che
+        concludete con noi (ordine, abbonamento) o le misure precontrattuali da
+        voi richieste, per rispettare i nostri obblighi legali (in particolare
+        contabili), sulla base del nostro legittimo interesse (sicurezza del
+        sito, prevenzione delle frodi, gestione delle richieste) e, per la
+        trasmissione a prestatori situati negli Stati Uniti, sulla base del
+        vostro consenso. Avete inoltre diritto alla limitazione del
+        trattamento e alla portabilità dei dati e potete revocare il consenso
+        in qualsiasi momento, senza effetto sui trattamenti anteriori. Potete
+        infine rivolgervi all&rsquo;<a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">Autorità per la protezione dei dati</a> belga.
+      </p>
+
       <h2>Modifiche</h2>
       <p>
         Questa informativa può essere aggiornata, in particolare
-        all&rsquo;attivazione del modulo di pagamento o all&rsquo;aggiunta
+        all&rsquo;aggiunta
         di nuovi strumenti sul sito. La data dell&rsquo;ultimo aggiornamento
         figura in cima a questa pagina.
       </p>
