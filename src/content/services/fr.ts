@@ -163,7 +163,7 @@ const services: Record<string, ServiceText> = {
     ],
     needs: "Votre bail et la dernière notification de loyer (ou de hausse) reçue.",
     note:
-      "La demande se fait par écrit pour le prochain terme de résiliation. Le bailleur a 30 jours pour répondre ; s'il refuse ou ne répond pas, vous pouvez saisir l'autorité de conciliation dans les 30 jours (art. 270a CO).",
+      "Une baisse n'est possible que si votre loyer repose sur un taux hypothécaire de référence de 1,5 % ou plus (le taux actuel est de 1,25 % depuis septembre 2025) : indiquez-nous la date de votre dernier ajustement. La demande se fait par écrit pour le prochain terme de résiliation. Le bailleur a 30 jours pour répondre ; s'il refuse ou ne répond pas, vous pouvez saisir l'autorité de conciliation dans les 30 jours (art. 270a CO).",
     faq: [
       { q: "Le bailleur peut-il me résilier parce que j'ai demandé une baisse ?", a: "Non. Un congé donné parce que le locataire fait valoir ses droits est annulable (art. 271a CO)." },
       { q: "Combien puis-je économiser ?", a: "Cela dépend de votre dernier ajustement. Le calcul vous indique le montant exact avant d'envoyer quoi que ce soit." },

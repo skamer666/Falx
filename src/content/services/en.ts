@@ -144,7 +144,7 @@ const services: Record<string, ServiceText> = {
       "Next steps if the landlord refuses",
     ],
     needs: "Your lease and the last rent notification you received.",
-    note: "The request is made in writing for the next termination date. The landlord has 30 days to reply; if they refuse or don't respond, you can apply to the conciliation authority within 30 days (art. 270a CO).",
+    note: "A reduction is only possible if your rent is based on a mortgage reference rate of 1.5% or more (the current rate has been 1.25% since September 2025): tell us the date of your last adjustment. The request is made in writing for the next termination date. The landlord has 30 days to reply; if they refuse or don't respond, you can apply to the conciliation authority within 30 days (art. 270a CO).",
     faq: [
       { q: "Can my landlord terminate my lease because I asked?", a: "No. Notice given because a tenant asserts their rights can be challenged (art. 271a CO)." },
       { q: "How much can I save?", a: "It depends on your last adjustment. The calculation shows the exact amount before you send anything." },

@@ -144,7 +144,7 @@ const services: Record<string, ServiceText> = {
       "Vorgehen bei Ablehnung",
     ],
     needs: "Ihren Mietvertrag und die letzte Mietzinsmitteilung.",
-    note: "Das Begehren erfolgt schriftlich auf den nächsten Kündigungstermin. Der Vermieter hat 30 Tage Zeit; lehnt er ab oder schweigt er, können Sie innert 30 Tagen die Schlichtungsbehörde anrufen (Art. 270a OR).",
+    note: "Eine Senkung ist nur möglich, wenn Ihre Miete auf einem hypothekarischen Referenzzinssatz von 1,5 % oder mehr beruht (der aktuelle Satz beträgt seit September 2025 1,25 %): Teilen Sie uns das Datum der letzten Anpassung mit. Das Begehren erfolgt schriftlich auf den nächsten Kündigungstermin. Der Vermieter hat 30 Tage Zeit; lehnt er ab oder schweigt er, können Sie innert 30 Tagen die Schlichtungsbehörde anrufen (Art. 270a OR).",
     faq: [
       { q: "Darf mir der Vermieter deswegen kündigen?", a: "Nein. Eine Kündigung, weil der Mieter seine Rechte geltend macht, ist anfechtbar (Art. 271a OR)." },
       { q: "Wie viel kann ich sparen?", a: "Das hängt von der letzten Anpassung ab. Die Berechnung zeigt den genauen Betrag, bevor Sie etwas senden." },

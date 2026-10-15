@@ -144,7 +144,7 @@ const services: Record<string, ServiceText> = {
       "Come procedere in caso di rifiuto",
     ],
     needs: "Il contratto di locazione e l'ultima notifica della pigione.",
-    note: "La richiesta si fa per scritto per la prossima scadenza di disdetta. Il locatore ha 30 giorni per rispondere; in caso di rifiuto o silenzio potete adire l'autorità di conciliazione entro 30 giorni (art. 270a CO).",
+    note: "Una riduzione è possibile solo se la pigione si fonda su un tasso ipotecario di riferimento dell'1,5 % o più (il tasso attuale è dell'1,25 % da settembre 2025): indicateci la data dell'ultimo adeguamento. La richiesta si fa per scritto per la prossima scadenza di disdetta. Il locatore ha 30 giorni per rispondere; in caso di rifiuto o silenzio potete adire l'autorità di conciliazione entro 30 giorni (art. 270a CO).",
     faq: [
       { q: "Il locatore può disdire perché ho chiesto una riduzione?", a: "No. Una disdetta data perché il conduttore fa valere i suoi diritti è annullabile (art. 271a CO)." },
       { q: "Quanto posso risparmiare?", a: "Dipende dall'ultimo adeguamento. Il calcolo vi indica l'importo esatto prima di inviare qualsiasi cosa." },
