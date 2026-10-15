@@ -35,6 +35,8 @@ export async function createCheckoutSession(input: CheckoutInput): Promise<Check
 
   const body = new URLSearchParams();
   body.set("mode", "payment");
+  // Thrax Legal est le vendeur (franchise de TVA, prestations juridiques) : jamais Managed Payments (Stripe vendeur officiel, +3,5 %).
+  body.set("managed_payments[enabled]", "false");
   body.set("line_items[0][quantity]", "1");
   body.set("line_items[0][price_data][currency]", "chf");
   body.set("line_items[0][price_data][unit_amount]", String(input.amountRappen));

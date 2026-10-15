@@ -41,6 +41,6 @@ Configuration (secrets du Worker Cloudflare, jamais dans le code ni dans le chat
 - `STRIPE_SECRET_KEY` : clé restreinte (`rk_…`) avec Checkout Sessions en écriture et PaymentIntents en lecture.
 - `STRIPE_WEBHOOK_SECRET` : clé de signature (`whsec_…`) du point d'accès webhook `https://thrax-legal.ch/api/stripe/webhook`, événements `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.expired`.
 - Sans `STRIPE_SECRET_KEY`, l'admin affiche « Pas encore activé » et rien d'autre ne change.
-- Dans Stripe : ne pas activer Managed Payments, Stripe Tax ni Invoicing (franchise de TVA, frais inutiles). Moyens de paiement (carte, TWINT) réglés dans le tableau de bord, jamais dans le code.
+- Dans Stripe : ne pas activer Managed Payments (le code envoie `managed_payments[enabled]=false` à chaque session ; réglage du compte : dashboard.stripe.com/settings/managed-payments), Stripe Tax ni Invoicing (franchise de TVA, frais inutiles). Moyens de paiement (carte, TWINT) réglés dans le tableau de bord, jamais dans le code.
 - Montants : toujours fixés côté serveur (admin), en CHF, entre 5 et 5 000. Stripe verse en EUR sur l'IBAN ING (jamais d'IBAN ING affiché au client).
 - Le courriel de confirmation sert de preuve de paiement avec la mention de franchise de TVA ; une vraie facture (numérotée) reste à produire pour les entreprises qui en demandent une.
