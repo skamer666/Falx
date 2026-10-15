@@ -47,6 +47,7 @@ export type ServicesUi = {
     delivery: (n: number) => string;
     revision: string;
     payAfter: string;
+    payNow: string;
     orderTitle: string;
     mobileCta: string;
     notLawyer: string;
@@ -135,8 +136,8 @@ const fr: ServicesUi = {
     intro: "Tout se fait par écrit, depuis chez vous. Vous connaissez le prix avant de commencer, et vous ne payez qu'une fois qu'on a confirmé pouvoir vous aider.",
     items: [
       { title: "Vous nous racontez ce qui se passe", text: "Choisissez une prestation et décrivez votre situation avec vos mots. Inutile de connaître le vocabulaire juridique." },
-      { title: "On vérifie avant que vous payiez", text: "On lit votre demande et on vous répond par email, en principe sous un jour ouvré. Si la prestation ne convient pas à votre cas, on vous le dit, et vous ne payez rien." },
-      { title: "Vous payez et vous envoyez vos pièces", text: "En ligne, par carte bancaire (ou TWINT lorsqu'il est proposé), via un lien de paiement sécurisé. Ensuite, vous répondez à notre email avec les documents utiles : le contrat, la lettre reçue, des photos." },
+      { title: "Vous commandez et payez en ligne", text: "Au prix fixe affiché, par carte bancaire (ou TWINT lorsqu'il est proposé), sur une page de paiement sécurisée. Si la prestation ne convient pas à votre cas, on vous le dit et vous êtes remboursé intégralement." },
+      { title: "On vérifie et vous envoyez vos pièces", text: "On lit votre demande et on vous confirme par email, en principe sous un jour ouvré. Vous répondez à cet email avec les documents utiles : le contrat, la lettre reçue, des photos." },
       { title: "Vous recevez votre document", text: "Il est prêt à envoyer, avec une note qui explique quoi en faire et quel délai surveiller. Si quelque chose ne vous convient pas, on le corrige une fois sans frais." },
     ],
   },
@@ -176,6 +177,7 @@ const fr: ServicesUi = {
     delivery: (n) => (n === 1 ? "Livré sous 1 jour ouvré" : `Livré sous ${n} jours ouvrés`),
     revision: "Un tour de corrections inclus",
     payAfter: "Vous ne payez qu'après notre confirmation écrite, en ligne et de façon sécurisée.",
+    payNow: "Paiement en ligne sécurisé à la fin de la commande. Si nous ne pouvons pas traiter votre demande, vous êtes remboursé intégralement.",
     orderTitle: "Commander",
     mobileCta: "Commander",
     notLawyer: "Thrax Legal n'est pas un cabinet d'avocats et ne vous représente pas devant les tribunaux.",
@@ -190,7 +192,7 @@ const fr: ServicesUi = {
     deadline: "Date limite éventuelle (facultatif)",
     express: "Option express : livré en 24 h ouvrées",
     expressHint: "+49 CHF, si un délai court bientôt",
-    filesNote: "Vos documents : vous pourrez nous les envoyer après notre confirmation.",
+    filesNote: "Vos documents : vous pourrez nous les envoyer après votre commande.",
     consentLink: "politique de confidentialité",
     termsAnd: " et la ",
     termsBefore: "J'accepte les ",
@@ -294,8 +296,8 @@ const de: ServicesUi = {
     intro: "Alles läuft schriftlich, bequem von zu Hause aus. Sie kennen den Preis vorher und zahlen erst, wenn wir bestätigt haben, dass wir Ihnen helfen können.",
     items: [
       { title: "Sie schildern uns, was passiert ist", text: "Wählen Sie eine Leistung und beschreiben Sie Ihre Situation in eigenen Worten. Juristische Fachbegriffe brauchen Sie nicht." },
-      { title: "Wir prüfen, bevor Sie zahlen", text: "Wir lesen Ihre Anfrage und antworten per E-Mail, in der Regel innert eines Arbeitstags. Passt die Leistung nicht zu Ihrem Fall, sagen wir es Ihnen, und Sie zahlen nichts." },
-      { title: "Sie zahlen und senden Ihre Unterlagen", text: "Online per Kreditkarte (oder TWINT, sofern angeboten) über einen sicheren Zahlungslink. Danach antworten Sie auf unsere E-Mail mit den nötigen Dokumenten: Vertrag, erhaltener Brief, Fotos." },
+      { title: "Sie bestellen und zahlen online", text: "Zum angezeigten Festpreis, per Karte (oder TWINT, sofern angeboten), auf einer sicheren Zahlungsseite. Passt die Leistung nicht zu Ihrem Fall, sagen wir es Ihnen, und Sie erhalten den vollen Betrag zurück." },
+      { title: "Wir prüfen und Sie senden Ihre Unterlagen", text: "Wir lesen Ihre Anfrage und bestätigen per E-Mail, in der Regel innert eines Arbeitstags. Sie antworten auf diese E-Mail mit den nötigen Unterlagen: Vertrag, erhaltenes Schreiben, Fotos." },
       { title: "Sie erhalten Ihr Dokument", text: "Versandbereit, mit einer Notiz, was damit zu tun ist und welche Frist läuft. Passt etwas nicht, korrigieren wir es einmal kostenlos." },
     ],
   },
@@ -335,6 +337,7 @@ const de: ServicesUi = {
     delivery: (n) => (n === 1 ? "Lieferung innert 1 Arbeitstag" : `Lieferung innert ${n} Arbeitstagen`),
     revision: "Eine Korrekturrunde inbegriffen",
     payAfter: "Sie zahlen erst nach unserer schriftlichen Bestätigung, sicher online.",
+    payNow: "Sichere Online-Zahlung am Ende der Bestellung. Können wir Ihre Anfrage nicht bearbeiten, erhalten Sie den vollen Betrag zurück.",
     orderTitle: "Bestellen",
     mobileCta: "Bestellen",
     notLawyer: "Thrax Legal ist keine Anwaltskanzlei und vertritt Sie nicht vor Gericht.",
@@ -349,7 +352,7 @@ const de: ServicesUi = {
     deadline: "Allfällige Frist (freiwillig)",
     express: "Express-Option: Lieferung innert 24 Arbeitsstunden",
     expressHint: "+CHF 49, wenn eine Frist bald abläuft",
-    filesNote: "Ihre Unterlagen können Sie nach unserer Bestätigung senden.",
+    filesNote: "Ihre Unterlagen können Sie nach Ihrer Bestellung senden.",
     consentLink: "Datenschutzerklärung",
     termsAnd: " und die ",
     termsBefore: "Ich akzeptiere die ",
@@ -453,8 +456,8 @@ const en: ServicesUi = {
     intro: "Everything happens in writing, from home. You know the price before we start, and you only pay once we have confirmed we can help.",
     items: [
       { title: "You tell us what happened", text: "Choose a service and describe your situation in your own words. You don't need any legal vocabulary." },
-      { title: "We check before you pay", text: "We read your request and reply by email, usually within one working day. If the service doesn't fit your case, we tell you, and you pay nothing." },
-      { title: "You pay and send your documents", text: "Online by bank card (or TWINT where offered), via a secure payment link. Then you reply to our email with the relevant documents: the contract, the letter you received, photos." },
+      { title: "You order and pay online", text: "At the fixed price shown, by bank card (or TWINT where offered), on a secure payment page. If the service doesn't fit your case, we tell you and you are refunded in full." },
+      { title: "We check and you send your documents", text: "We read your request and confirm by email, usually within one working day. You reply to that email with the relevant documents: the contract, the letter you received, photos." },
       { title: "You receive your document", text: "Ready to send, with a note explaining what to do with it and which deadline to watch. If something isn't right, we correct it once at no charge." },
     ],
   },
@@ -494,6 +497,7 @@ const en: ServicesUi = {
     delivery: (n) => (n === 1 ? "Delivered within 1 working day" : `Delivered within ${n} working days`),
     revision: "One round of revisions included",
     payAfter: "You only pay after our written confirmation, securely online.",
+    payNow: "Secure online payment at the end of the order. If we cannot handle your request, you are refunded in full.",
     orderTitle: "Order",
     mobileCta: "Order",
     notLawyer: "Thrax Legal is not a law firm and does not represent you in court.",
@@ -508,7 +512,7 @@ const en: ServicesUi = {
     deadline: "Any deadline (optional)",
     express: "Express option: delivered within 24 working hours",
     expressHint: "+CHF 49, if a deadline is close",
-    filesNote: "You can send us your documents after our confirmation.",
+    filesNote: "You can send us your documents after your order.",
     consentLink: "privacy policy",
     termsAnd: " and the ",
     termsBefore: "I accept the ",
@@ -612,8 +616,8 @@ const it: ServicesUi = {
     intro: "Tutto avviene per iscritto, da casa vostra. Conoscete il prezzo prima di iniziare e pagate solo dopo che abbiamo confermato di potervi aiutare.",
     items: [
       { title: "Ci raccontate cosa succede", text: "Scegliete una prestazione e descrivete la vostra situazione con parole vostre. Non serve conoscere il linguaggio giuridico." },
-      { title: "Verifichiamo prima che paghiate", text: "Leggiamo la richiesta e vi rispondiamo per email, di regola entro un giorno lavorativo. Se la prestazione non fa al caso vostro, ve lo diciamo e non pagate nulla." },
-      { title: "Pagate e inviate i documenti", text: "Online con carta bancaria (o TWINT se proposto), tramite un link di pagamento sicuro. Poi rispondete alla nostra email con i documenti utili: il contratto, la lettera ricevuta, delle foto." },
+      { title: "Ordinate e pagate online", text: "Al prezzo fisso indicato, con carta bancaria (o TWINT se proposto), su una pagina di pagamento sicura. Se la prestazione non fa al caso vostro, ve lo diciamo e siete rimborsati integralmente." },
+      { title: "Verifichiamo e inviate i documenti", text: "Leggiamo la richiesta e vi confermiamo per email, di regola entro un giorno lavorativo. Rispondete a quell'email con i documenti utili: il contratto, la lettera ricevuta, delle foto." },
       { title: "Ricevete il vostro documento", text: "Pronto da inviare, con una nota che spiega cosa farne e quale termine tenere d'occhio. Se qualcosa non va, lo correggiamo una volta senza costi." },
     ],
   },
@@ -653,6 +657,7 @@ const it: ServicesUi = {
     delivery: (n) => (n === 1 ? "Consegna entro 1 giorno lavorativo" : `Consegna entro ${n} giorni lavorativi`),
     revision: "Un giro di correzioni incluso",
     payAfter: "Pagate solo dopo la nostra conferma scritta, online e in modo sicuro.",
+    payNow: "Pagamento online sicuro al termine dell'ordine. Se non possiamo trattare la vostra richiesta, siete rimborsati integralmente.",
     orderTitle: "Ordinare",
     mobileCta: "Ordinare",
     notLawyer: "Thrax Legal non è uno studio legale e non vi rappresenta in tribunale.",
@@ -667,7 +672,7 @@ const it: ServicesUi = {
     deadline: "Eventuale scadenza (facoltativo)",
     express: "Opzione express: consegna entro 24 ore lavorative",
     expressHint: "+CHF 49, se un termine scade presto",
-    filesNote: "Potrete inviarci i documenti dopo la nostra conferma.",
+    filesNote: "Potrete inviarci i documenti dopo l'ordine.",
     consentLink: "informativa sulla privacy",
     termsAnd: " e l'",
     termsBefore: "Accetto le ",

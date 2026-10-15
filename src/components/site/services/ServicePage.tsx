@@ -162,7 +162,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
                     <div className="mt-6">
                       <OrderForm locale={locale} service={service} submitLabel={orderLabel} error={error} />
                     </div>
-                    <p className="mt-4 text-center text-xs leading-relaxed text-text-muted">{ui.service.payAfter}</p>
+                    <p className="mt-4 text-center text-xs leading-relaxed text-text-muted">{service.from ? ui.service.payAfter : ui.service.payNow}</p>
                   </div>
                   <p className="mt-4 text-xs leading-relaxed text-text-muted">{ui.service.notLawyer}</p>
                 </aside>

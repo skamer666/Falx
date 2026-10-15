@@ -276,13 +276,18 @@ function Fr() {
       <p>
         <strong>Prestations à l’acte.</strong> Pour une prestation à l’acte,
         le contrat se conclut par étapes&nbsp;: (1) le client remplit le
-        formulaire de commande de la prestation et accepte les CGV&nbsp;; (2) Thrax
-        Legal lui confirme sans délai la réception de sa demande par email&nbsp;;
-        (3) après avoir vérifié que la prestation convient à la situation et
-        l’absence de conflit d’intérêts, Thrax Legal confirme par écrit le
-        prix et le délai, ou décline la demande&nbsp;; (4) le contrat est conclu à
-        la réception du paiement du prix confirmé. L’envoi du formulaire
-        n’engage le client à aucun paiement.
+        formulaire de commande de la prestation et accepte les CGV&nbsp;; (2)
+        lorsque le prix affiché est fixe, le client le règle en ligne à
+        l’issue de la commande&nbsp;; lorsque le prix doit d’abord être
+        confirmé (devis, prix «&nbsp;dès&nbsp;»), Thrax Legal le lui confirme
+        par écrit et le client paie ensuite&nbsp;; (3) Thrax Legal confirme la
+        réception de la commande par email, vérifie que la prestation convient
+        à la situation et l’absence de conflit d’intérêts, puis confirme
+        l’acceptation de la commande ou la décline, auquel cas le prix déjà
+        payé est intégralement remboursé&nbsp;; (4) le contrat est conclu lorsque
+        Thrax Legal confirme l’acceptation de la commande. Pour un devis ou un
+        prix à confirmer, l’envoi du formulaire n’engage le client à aucun
+        paiement.
       </p>
 
       <h2>6. Durée, paiement et prix bloqué</h2>
@@ -326,10 +331,11 @@ function Fr() {
         suivante.
       </p>
       <p>
-        Le prix d’une prestation à l’acte est payable d’avance, après la
-        confirmation visée à l’article 5, par paiement en ligne sécurisé
-        (carte bancaire et, lorsqu’il est proposé, TWINT) ou, sur demande,
-        par virement bancaire en euros.
+        Le prix d’une prestation à l’acte est payable d’avance, en ligne,
+        dès la commande lorsque le prix affiché est fixe, ou après la
+        confirmation écrite du prix visée à l’article 5 dans les autres cas,
+        par paiement en ligne sécurisé (carte bancaire et, lorsqu’il est
+        proposé, TWINT) ou, sur demande, par virement bancaire en euros.
       </p>
 
       <h2>7. Délais de traitement</h2>
@@ -729,13 +735,18 @@ function De() {
       <p>
         <strong>Einzelleistungen.</strong> Bei einer Einzelleistung kommt der
         Vertrag in Schritten zustande: (1) Der Kunde füllt das
-        Bestellformular aus und akzeptiert die AGB; (2) Thrax Legal bestätigt
-        den Eingang umgehend per E-Mail; (3) nach Prüfung, ob die Leistung
-        zur Situation passt und kein Interessenkonflikt besteht, bestätigt
-        Thrax Legal Preis und Frist schriftlich oder lehnt die Anfrage ab;
-        (4) der Vertrag kommt mit Eingang der Zahlung des bestätigten Preises
-        zustande. Das Absenden des Formulars verpflichtet den Kunden zu
-        keiner Zahlung.
+        Bestellformular aus und akzeptiert die AGB; (2) ist der angezeigte
+        Preis ein Festpreis, bezahlt ihn der Kunde im Anschluss an die
+        Bestellung online; muss der Preis zuerst bestätigt werden (Offerte,
+        Preis «ab»), bestätigt ihn Thrax Legal schriftlich und der Kunde zahlt
+        danach; (3) Thrax Legal bestätigt den Eingang der Bestellung per
+        E-Mail, prüft, ob die Leistung zur Situation passt und kein
+        Interessenkonflikt besteht, und bestätigt dann die Annahme der
+        Bestellung oder lehnt sie ab; in diesem Fall wird der bereits bezahlte
+        Preis vollständig zurückerstattet; (4) der Vertrag kommt zustande, wenn
+        Thrax Legal die Annahme der Bestellung bestätigt. Bei einer Offerte
+        oder einem zu bestätigenden Preis verpflichtet das Absenden des
+        Formulars den Kunden zu keiner Zahlung.
       </p>
 
       <h2>6. Dauer, Zahlung und Preisbindung</h2>
@@ -779,10 +790,11 @@ function De() {
         Periode weiter.
       </p>
       <p>
-        Der Preis einer Einzelleistung ist nach der Bestätigung gemäss
-        Artikel 5 im Voraus zahlbar, per sicherer Online-Zahlung (Kreditkarte
-        und, sofern angeboten, TWINT) oder auf Wunsch per Banküberweisung in
-        Euro.
+        Der Preis einer Einzelleistung ist im Voraus online zahlbar, sofort bei
+        der Bestellung, wenn der angezeigte Preis ein Festpreis ist, oder nach
+        der schriftlichen Preisbestätigung gemäss Artikel 5 in den übrigen
+        Fällen, per sicherer Online-Zahlung (Kreditkarte und, sofern
+        angeboten, TWINT) oder auf Wunsch per Banküberweisung in Euro.
       </p>
 
       <h2>7. Bearbeitungsfristen</h2>
@@ -1176,12 +1188,17 @@ function En() {
       <p>
         <strong>One-off services.</strong> For a one-off service, the contract
         is concluded in steps: (1) the customer completes the order form and
-        accepts the Terms; (2) Thrax Legal promptly confirms receipt by email;
-        (3) after checking that the service fits the situation and that there
-        is no conflict of interest, Thrax Legal confirms the price and timing
-        in writing, or declines the request; (4) the contract is concluded upon
-        receipt of payment of the confirmed price. Sending the form does not
-        commit the customer to any payment.
+        accepts the Terms; (2) where the displayed price is fixed, the
+        customer pays it online at the end of the order; where the price must
+        first be confirmed (quote, &ldquo;from&rdquo; price), Thrax Legal
+        confirms it in writing and the customer then pays; (3) Thrax Legal
+        confirms receipt of the order by email, checks that the service fits
+        the situation and that there is no conflict of interest, then confirms
+        acceptance of the order or declines it, in which case the price
+        already paid is refunded in full; (4) the contract is concluded when
+        Thrax Legal confirms acceptance of the order. For a quote or a price
+        to be confirmed, sending the form does not commit the customer to any
+        payment.
       </p>
 
       <h2>6. Term, payment and locked price</h2>
@@ -1219,10 +1236,11 @@ function En() {
         the following period.
       </p>
       <p>
-        The price of a one-off service is payable in advance, after the
-        confirmation referred to in section 5, by secure online payment (bank
-        card and, where offered, TWINT) or, on request, by bank transfer in
-        euros.
+        The price of a one-off service is payable in advance online, at the time
+        of the order where the displayed price is fixed, or after the written
+        price confirmation referred to in section 5 in other cases, by secure
+        online payment (bank card and, where offered, TWINT) or, on request,
+        by bank transfer in euros.
       </p>
 
       <h2>7. Turnaround times</h2>
@@ -1602,13 +1620,18 @@ function It() {
       <p>
         <strong>Prestazioni singole.</strong> Per una prestazione singola il
         contratto si conclude per fasi: (1) il cliente compila il modulo
-        d&rsquo;ordine e accetta le CG; (2) Thrax Legal conferma senza indugio
-        la ricezione per email; (3) dopo aver verificato che la prestazione
-        sia adatta alla situazione e l&rsquo;assenza di conflitti
-        d&rsquo;interesse, Thrax Legal conferma per scritto prezzo e termine,
-        o declina la richiesta; (4) il contratto è concluso alla ricezione del
-        pagamento del prezzo confermato. L&rsquo;invio del modulo non obbliga
-        il cliente ad alcun pagamento.
+        d&rsquo;ordine e accetta le CG; (2) se il prezzo indicato è fisso, il
+        cliente lo paga online al termine dell&rsquo;ordine; se il prezzo deve
+        prima essere confermato (preventivo, prezzo &laquo;da&raquo;), Thrax
+        Legal lo conferma per scritto e il cliente paga in seguito; (3) Thrax
+        Legal conferma la ricezione dell&rsquo;ordine per email, verifica che
+        la prestazione sia adatta alla situazione e l&rsquo;assenza di
+        conflitti d&rsquo;interesse, poi conferma l&rsquo;accettazione
+        dell&rsquo;ordine o lo declina; in tal caso il prezzo già pagato è
+        rimborsato integralmente; (4) il contratto è concluso quando Thrax
+        Legal conferma l&rsquo;accettazione dell&rsquo;ordine. Per un
+        preventivo o un prezzo da confermare, l&rsquo;invio del modulo non
+        obbliga il cliente ad alcun pagamento.
       </p>
 
       <h2>6. Durata, pagamento e prezzo bloccato</h2>
@@ -1649,10 +1672,11 @@ function It() {
         alla fine del periodo richiesto, con il pagamento del periodo successivo.
       </p>
       <p>
-        Il prezzo di una prestazione singola è pagabile in anticipo, dopo la
-        conferma di cui all&rsquo;articolo 5, tramite pagamento online sicuro
-        (carta bancaria e, se proposto, TWINT) oppure, su richiesta, tramite
-        bonifico bancario in euro.
+        Il prezzo di una prestazione singola è pagabile in anticipo online,
+        al momento dell&rsquo;ordine se il prezzo indicato è fisso, oppure dopo
+        la conferma scritta del prezzo di cui all&rsquo;articolo 5 negli altri
+        casi, tramite pagamento online sicuro (carta bancaria e, se proposto,
+        TWINT) oppure, su richiesta, tramite bonifico bancario in euro.
       </p>
 
       <h2>7. Termini di trattamento</h2>

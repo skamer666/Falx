@@ -7,25 +7,25 @@ import { priceLabel, vatLabel } from "@/lib/services/strings";
 const STRINGS: Record<Locale, { title: string; body: string; cta: string; subscription: string }> = {
   fr: {
     title: "On s'en occupe pour vous",
-    body: "Un prix fixe, annoncé avant de commencer. Vous ne payez qu'après notre confirmation.",
+    body: "Un prix fixe, annoncé avant de commencer. Vous payez en ligne, et vous êtes remboursé si nous ne pouvons pas vous aider.",
     cta: "Voir toutes les prestations",
     subscription: "Des besoins réguliers ? Voir l'abonnement",
   },
   de: {
     title: "Wir übernehmen das für Sie",
-    body: "Ein Fixpreis, vor Beginn bekannt. Sie zahlen erst nach unserer Bestätigung.",
+    body: "Ein Fixpreis, vor Beginn bekannt. Sie zahlen online und erhalten den Betrag zurück, falls wir nicht helfen können.",
     cta: "Alle Leistungen ansehen",
     subscription: "Regelmässiger Bedarf? Das Abo ansehen",
   },
   en: {
     title: "We'll handle it for you",
-    body: "A fixed price, announced before we start. You only pay after our confirmation.",
+    body: "A fixed price, announced before we start. You pay online, and you are refunded if we cannot help.",
     cta: "See all services",
     subscription: "Regular needs? See the subscription",
   },
   it: {
     title: "Ce ne occupiamo noi",
-    body: "Un prezzo fisso, annunciato prima di iniziare. Pagate solo dopo la nostra conferma.",
+    body: "Un prezzo fisso, annunciato prima di iniziare. Pagate online e siete rimborsati se non possiamo aiutarvi.",
     cta: "Vedere tutte le prestazioni",
     subscription: "Esigenze regolari? Vedere l'abbonamento",
   },

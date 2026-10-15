@@ -29,11 +29,12 @@ Conséquences pour le code et les documents :
 
 ## Paiement en ligne (Stripe Checkout) — implémenté le 15 oct. 2026
 
-Flux « paiement après accord » :
+Flux (décision du propriétaire du 16 oct. : payer tout de suite, pas après confirmation) :
 
-1. Le client commande (formulaire) : il devient un prospect avec la prestation, rien n'est encaissé. L'email lui dit « vous ne payez rien avant notre confirmation ».
-2. Dans l'admin → Prospects, la fiche affiche « Paiement en ligne (Stripe, CHF) » : le montant est pré-rempli (prix du catalogue + express), modifiable (devis, prix « dès »). Le bouton « Confirmer et envoyer le lien de paiement » crée une session Stripe Checkout en CHF et envoie le lien au client (4 langues).
-3. Le webhook `POST /api/stripe/webhook` est la seule source de vérité : il vérifie la signature, marque `order_payments` « paid » (une seule fois, même si Stripe renvoie l'événement), passe le prospect à « Converti », et envoie la confirmation au client + une notification à l'admin. La page de retour (`/commande/merci?paid=1`) ne confirme rien.
+1. Prestation à **prix fixe** : le client remplit le formulaire, puis est redirigé directement vers Stripe Checkout (CHF, montant calculé côté serveur : prix du catalogue + express). Rien n'est « confirmé » tant que le webhook n'a pas reçu le paiement. Remboursement intégral si Thrax Legal décline la commande (CGV art. 5 et 12).
+2. **Devis** et prix « dès » (`from: true`), ou Stripe non configuré/en panne : parcours manuel. Le client reçoit l'accusé de réception ; dans l'admin → Prospects, « Confirmer et envoyer le lien de paiement » (montant modifiable) crée la session et envoie le lien par email (4 langues).
+3. Le webhook `POST /api/stripe/webhook` est la seule source de vérité : il vérifie la signature, marque `order_payments` « paid » (une seule fois, même si Stripe renvoie l'événement), passe le prospect à « Converti », envoie la confirmation au client et une notification à l'admin. La page de retour (`/commande/merci?paid=1`) ne confirme rien.
+4. Une commande abandonnée avant paiement reste « En attente » dans Prospects (la session expire après 24 h) : l'admin peut renvoyer un lien.
 
 Configuration (secrets du Worker Cloudflare, jamais dans le code ni dans le chat) :
 

@@ -1,5 +1,5 @@
 /** Version des conditions générales (date de dernière mise à jour). Enregistrée à l'acceptation. */
-export const TERMS_VERSION = "2026-10-15";
+export const TERMS_VERSION = "2026-10-16";
 
 /**
  * Numéro d'entreprise BCE de Thrax Legal (personne physique), par ex. "1012.345.678".

@@ -7,6 +7,7 @@ import { createLead, isLeadThrottled, recordAttempt } from "@/lib/account/db";
 import { notifyAdminOfOrder, safeSend, sendOrderReceivedEmail } from "@/lib/account/email";
 import { cleanSource } from "@/lib/source";
 import { getService, servicePath, type Audience } from "@/lib/services/catalog";
+import { openDirectCheckout } from "@/lib/payments/checkout";
 import { validateOrder, type OrderFieldErrors } from "@/lib/account/lead-validation";
 
 function field(formData: FormData, name: string, max = 500): string {
@@ -55,7 +56,11 @@ export async function submitOrder(locale: Locale, slug: string, formData: FormDa
     express: service.express && formData.get("express") === "on",
     deadline: /^\d{4}-\d{2}-\d{2}$/.test(deadline) ? deadline : null,
   });
-  await safeSend(() => notifyAdminOfOrder(lead), `notification commande ${lead.email}`);
+  // Prix fixe : le client est envoyé directement payer sur Stripe. Sinon (prix « dès », Stripe non configuré ou en panne),
+  // on garde le parcours manuel : accusé de réception, puis lien de paiement envoyé depuis l'admin.
+  const checkoutUrl = await openDirectCheckout(lead);
+  await safeSend(() => notifyAdminOfOrder(lead, { awaitingPayment: Boolean(checkoutUrl) }), `notification commande ${lead.email}`);
+  if (checkoutUrl) redirect(checkoutUrl);
   await safeSend(() => sendOrderReceivedEmail(lead), `accusé commande ${lead.email}`);
   redirect(`/${locale}/commande/merci?service=${service.slug}`);
 }

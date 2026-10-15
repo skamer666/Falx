@@ -49,6 +49,24 @@ function wrapEmailHtml(input: {
 </html>`;
 }
 
+/** Version texte du message : un email HTML seul, sans partie texte, est un signal de spam pour Hotmail/Gmail. */
+function htmlToText(html: string): string {
+  return html
+    .replace(/<a [^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (_m, href: string, label: string) => `${label.replace(/<[^>]+>/g, "").trim()} : ${href}`)
+    .replace(/<\/(p|tr|td|h1|div)>/g, "\n\n")
+    .replace(/<br\s*\/?>/g, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&rsquo;/g, "’")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 async function sendEmail(to: string | string[], subject: string, html: string, replyTo?: string) {
   const apiKey = await readEnv("RESEND_API_KEY");
   if (!apiKey) {
@@ -62,7 +80,7 @@ async function sendEmail(to: string | string[], subject: string, html: string, r
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ from: FROM, to, subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
+    body: JSON.stringify({ from: FROM, to, subject, html, text: htmlToText(html), ...(replyTo ? { reply_to: replyTo } : {}) }),
   });
   if (!res.ok) {
     const text = await res.text();
@@ -548,7 +566,7 @@ export async function sendOrderReceivedEmail(lead: Lead) {
   await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
 }
 
-export async function notifyAdminOfOrder(lead: Lead) {
+export async function notifyAdminOfOrder(lead: Lead, opts: { awaitingPayment?: boolean } = {}) {
   const summary = orderSummary(lead, "fr");
   const service = lead.service ? getService(lead.service) : undefined;
   const lines = [
@@ -561,7 +579,9 @@ export async function notifyAdminOfOrder(lead: Lead) {
     lead.phone ? `Tél. ${escapeHtml(lead.phone)}` : "Pas de téléphone",
     `Langue : ${lead.locale.toUpperCase()} · Provenance : ${lead.source ? escapeHtml(lead.source) : "inconnue"}`,
     lead.message ? `<br/>${escapeHtml(lead.message).replace(/\n/g, "<br/>")}` : null,
-    "<br/>À faire : vérifier les conflits d’intérêts, confirmer le prix et le délai, envoyer les instructions de paiement.",
+    opts.awaitingPayment
+      ? "<br/>Le client est redirigé vers le paiement en ligne (Stripe). Tu reçois un email dès qu’il a payé ; sinon la commande reste « en attente » dans Prospects. À faire après paiement : vérifier les conflits d’intérêts et lancer le travail."
+      : "<br/>À faire : vérifier les conflits d’intérêts, confirmer le prix et le délai, envoyer le lien de paiement depuis l’admin.",
   ].filter(Boolean);
   const html = wrapEmailHtml({
     heading: quoteAudience(lead) ? "Nouvelle demande de devis" : lead.express ? "Nouvelle commande EXPRESS" : "Nouvelle commande",
