@@ -20,6 +20,7 @@ Conséquences pour le code et les documents :
 
 ## Cadre (octobre 2026)
 
+- Numéro d’entreprise (BCE) : 1043.879.554 (reçu le 15 oct. 2026), affiché à l’art. 14 des CGV via `BCE_NUMBER`. Le n° de TVA BE 1043.879.554 existe mais l’activité reste en franchise : ne jamais facturer de TVA ni afficher ce n° comme assujetti.
 - Statut : étudiant-indépendant en Belgique (personne physique), code NACE-BEL 69100 « Activités juridiques », franchise TVA.
 - Banque : Compte à vue Professionnel ING (Starters Package : gratuit 12 mois, puis 8 € HTVA/mois ≈ 8,63 € TVAC). Clôture possible à tout moment sans frais (Règlement général, art. 59).
 - Cashback ING : 111,50 € d'inscription BCE remboursés si le compte est utilisé 3 mois de suite avec au moins une opération par mois ; demande manuelle via ing.be/starters-cashback (action jusqu'au 31 décembre 2026).
