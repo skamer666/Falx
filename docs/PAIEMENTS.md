@@ -44,3 +44,9 @@ Configuration (secrets du Worker Cloudflare, jamais dans le code ni dans le chat
 - Dans Stripe : ne pas activer Managed Payments (le code envoie `managed_payments[enabled]=false` à chaque session ; réglage du compte : dashboard.stripe.com/settings/managed-payments), Stripe Tax ni Invoicing (franchise de TVA, frais inutiles). Moyens de paiement (carte, TWINT) réglés dans le tableau de bord, jamais dans le code.
 - Montants : toujours fixés côté serveur (admin), en CHF, entre 5 et 5 000. Stripe verse en EUR sur l'IBAN ING (jamais d'IBAN ING affiché au client).
 - Le courriel de confirmation sert de preuve de paiement avec la mention de franchise de TVA ; une vraie facture (numérotée) reste à produire pour les entreprises qui en demandent une.
+
+## État (16 oct. 2026)
+
+- Stripe en **production** : paiement direct à la commande (prix fixe), carte + TWINT, webhook de production, Radar Lite, Managed Payments et Stripe Tax désactivés, versements en EUR sur l'IBAN ING. Test réel de bout en bout validé par le propriétaire (confirmation client, notification admin, « Payé » dans l'admin, webhook 200).
+- Secrets Cloudflare : `STRIPE_SECRET_KEY` (clé restreinte `rk_live_…`), `STRIPE_WEBHOOK_SECRET` (signature du webhook de production). Diagnostic : Admin → Paramètres → « Tester Stripe ».
+- Reste à faire : facture numérotée pour les entreprises (franchise de TVA), relecture des CGV par un juriste suisse, suppression des commandes « TEST » dans Prospects.
