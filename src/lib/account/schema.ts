@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 10;
+export const SCHEMA_VERSION = 11;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -88,6 +88,29 @@ const TABLES: string[] = [
     note TEXT,
     created_by TEXT,
     created_at INTEGER NOT NULL
+  )`,
+  /** Mesure d'audience anonyme : une ligne par page vue, sans cookie. « visitor » = empreinte quotidienne (sel jeté chaque jour). */
+  `CREATE TABLE IF NOT EXISTS page_views (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ts INTEGER NOT NULL,
+    day TEXT NOT NULL,
+    hour INTEGER NOT NULL,
+    dow INTEGER NOT NULL,
+    path TEXT NOT NULL,
+    locale TEXT,
+    visitor TEXT NOT NULL,
+    entry INTEGER NOT NULL DEFAULT 0,
+    channel TEXT,
+    ref_host TEXT,
+    campaign TEXT,
+    content TEXT,
+    device TEXT,
+    country TEXT
+  )`,
+  /** Dépense publicitaire saisie à la main (en centimes d'euro), pour calculer le coût par commande. */
+  `CREATE TABLE IF NOT EXISTS ad_spend (
+    day TEXT PRIMARY KEY,
+    amount_cents INTEGER NOT NULL
   )`,
   /** Paiements en ligne (Stripe Checkout) d'une commande à l'acte ; la ligne passe à « paid » via le webhook. */
   `CREATE TABLE IF NOT EXISTS order_payments (
@@ -181,6 +204,8 @@ const INDEXES: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_dossiers_user ON dossiers(user_id)`,
   `CREATE INDEX IF NOT EXISTS idx_dossiers_status ON dossiers(status, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_page_views_day ON page_views(day)`,
+  `CREATE INDEX IF NOT EXISTS idx_page_views_visitor ON page_views(visitor, day)`,
   `CREATE INDEX IF NOT EXISTS idx_order_payments_lead ON order_payments(lead_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_payments_user ON payments(user_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_payments_created ON payments(created_at)`,

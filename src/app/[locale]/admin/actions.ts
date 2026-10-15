@@ -44,6 +44,7 @@ import {
   setPlan,
   updateClientFields,
 } from "@/lib/account/admin-db";
+import { saveAdSpend } from "@/lib/analytics/stats";
 import { createCheckoutSession, stripeConfigured } from "@/lib/payments/stripe";
 import { getService, serviceText } from "@/lib/services/catalog";
 import { SITE_URL } from "@/lib/site";
@@ -473,4 +474,16 @@ export async function testStripeAction() {
     redirect(`/fr/admin/parametres?stripe=fail&reason=${encodeURIComponent(reason.slice(0, 300))}`);
   }
   redirect("/fr/admin/parametres?stripe=ok");
+}
+
+/** Saisie de la dépense Google Ads d'un jour (pour le coût par commande et le rendement publicitaire). */
+export async function saveAdSpendAction(formData: FormData) {
+  const admin = await requireAdmin();
+  const day = String(formData.get("day") ?? "");
+  const euros = Number(String(formData.get("amount") ?? "").replace(",", "."));
+  const back = "/fr/admin/statistiques";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !Number.isFinite(euros) || euros < 0 || euros > 100_000) redirect(`${back}?ok=spend_invalid#pub`);
+  await saveAdSpend(day, euros);
+  await logAudit({ actor: admin, action: "ad_spend_saved", detail: `${day} : ${euros.toFixed(2)} EUR` });
+  redirect(`${back}?ok=spend#pub`);
 }

@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-10-16";
+const LAST_UPDATED = "2026-10-17";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -155,6 +155,9 @@ function Fr() {
         de réseau social. Il n’installe aucun traceur tiers. Si cela change
         (par exemple avec l’ajout d’un outil de mesure d’audience), cette
         politique sera mise à jour en conséquence, avant toute activation.
+      </p>
+      <p>
+        <strong>Mesure d&rsquo;audience anonyme.</strong> Pour savoir combien de personnes visitent le site, d&rsquo;où elles viennent et quelles pages les intéressent, nous comptons nous-mêmes les pages vues, sans cookie et sans outil tiers. Chaque visite est rattachée à une empreinte calculée à partir de votre adresse IP et de votre navigateur avec une clé aléatoire qui change chaque jour et que nous effaçons : l&rsquo;empreinte ne permet donc pas de vous reconnaître d&rsquo;un jour à l&rsquo;autre ni de remonter jusqu&rsquo;à vous. Nous conservons la page visitée, la provenance (par exemple «&nbsp;annonce Google&nbsp;»), le type d&rsquo;appareil, le pays et l&rsquo;heure, pendant 13 mois au plus. Les robots, les visiteurs qui activent «&nbsp;Ne pas suivre&nbsp;» et l&rsquo;administrateur du site ne sont pas comptés.
       </p>
       <p>
         Lorsque vous vous connectez à votre espace client, nous déposons un
@@ -410,6 +413,9 @@ function De() {
         entsprechend aktualisiert.
       </p>
       <p>
+        <strong>Anonyme Reichweitenmessung.</strong> Um zu wissen, wie viele Personen die Website besuchen, woher sie kommen und welche Seiten sie interessieren, zählen wir die Seitenaufrufe selbst, ohne Cookie und ohne Drittanbieter-Tool. Jeder Besuch wird einem Fingerabdruck zugeordnet, der aus Ihrer IP-Adresse und Ihrem Browser mit einem zufälligen Schlüssel berechnet wird, der sich täglich ändert und den wir löschen: Der Fingerabdruck erlaubt es daher nicht, Sie von einem Tag zum anderen wiederzuerkennen oder auf Sie zurückzuschliessen. Wir speichern die besuchte Seite, die Herkunft (zum Beispiel «&nbsp;Google-Anzeige&nbsp;»), die Geräteart, das Land und die Uhrzeit, höchstens 13 Monate lang. Roboter, Besuchende mit aktiviertem «&nbsp;Do Not Track&nbsp;» und der Administrator der Website werden nicht gezählt.
+      </p>
+      <p>
         Wenn Sie sich in Ihrem Kundenbereich anmelden, setzen wir genau ein
         Cookie, das für den Betrieb des Dienstes <strong>unbedingt
         erforderlich</strong> ist (Sitzungs-Cookie «thrax_session»): Es hält
@@ -645,6 +651,9 @@ function En() {
         will be updated accordingly before activation.
       </p>
       <p>
+        <strong>Anonymous audience measurement.</strong> To know how many people visit the site, where they come from and which pages interest them, we count page views ourselves, without cookies and without any third-party tool. Each visit is linked to a fingerprint computed from your IP address and browser with a random key that changes every day and that we delete: the fingerprint therefore cannot recognise you from one day to the next or be traced back to you. We keep the page visited, the origin (for example “Google ad”), the device type, the country and the time, for 13 months at most. Robots, visitors who enable “Do Not Track” and the site administrator are not counted.
+      </p>
+      <p>
         When you sign in to your client account, we set a single cookie that
         is <strong>strictly necessary</strong> for the service to work (the
         &ldquo;thrax_session&rdquo; session cookie): it keeps you signed in,
@@ -878,6 +887,9 @@ function It() {
         terzi. Se ciò dovesse cambiare (ad esempio con l’aggiunta di uno
         strumento di misurazione dell’audience), questa informativa sarà
         aggiornata di conseguenza, prima di qualsiasi attivazione.
+      </p>
+      <p>
+        <strong>Misurazione anonima del pubblico.</strong> Per sapere quante persone visitano il sito, da dove arrivano e quali pagine le interessano, contiamo noi stessi le pagine viste, senza cookie e senza strumenti di terzi. Ogni visita è associata a un&rsquo;impronta calcolata a partire dal vostro indirizzo IP e dal vostro browser con una chiave casuale che cambia ogni giorno e che cancelliamo: l&rsquo;impronta non permette quindi di riconoscervi da un giorno all&rsquo;altro né di risalire a voi. Conserviamo la pagina visitata, la provenienza (ad esempio «&nbsp;annuncio Google&nbsp;»), il tipo di dispositivo, il paese e l&rsquo;ora, per al massimo 13 mesi. I robot, i visitatori che attivano «&nbsp;Do Not Track&nbsp;» e l&rsquo;amministratore del sito non sono conteggiati.
       </p>
       <p>
         Quando accedete al vostro spazio cliente, depositiamo un solo cookie,

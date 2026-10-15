@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Schibsted_Grotesk } from "next/font/google";
 import JsonLd from "@/components/site/JsonLd";
 import SourceTracker from "@/components/site/SourceTracker";
+import PageViewTracker from "@/components/site/PageViewTracker";
 import { LOCALES, LOCALE_TAGS, isLocale, type Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 import { localeAlternates } from "@/lib/seo";
@@ -109,6 +110,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col bg-bg text-text">
         <JsonLd data={organizationJsonLd(locale)} />
         <SourceTracker />
+          <PageViewTracker />
         {children}
       </body>
     </html>
