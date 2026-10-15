@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AdminDenied, AdminShell, Card, PageHeader } from "@/components/admin/parts";
 import SubmitButton from "@/components/account/SubmitButton";
 import { Notice } from "@/components/account/ui";
-import { sendTestEmailAction } from "../actions";
+import { sendTestEmailAction, testStripeAction } from "../actions";
 import { getAdminBadges } from "@/lib/account/admin-db";
 import { adminEmails, db, readEnv } from "@/lib/account/db";
 import { SCHEMA_VERSION } from "@/lib/account/schema";
@@ -32,12 +32,13 @@ function Row({ label, ok, children }: { label: string; ok: boolean; children: Re
 export default async function AdminSettingsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ test?: string; reason?: string }>;
+  searchParams: Promise<{ test?: string; reason?: string; stripe?: string }>;
 }) {
-  const { test, reason } = await searchParams;
+  const { test, reason, stripe } = await searchParams;
   const admin = await getSessionUserRaw();
   if (!admin?.is_admin) return <AdminDenied signedIn={Boolean(admin)} />;
 
+  const [stripeKey, stripeWebhook] = await Promise.all([readEnv("STRIPE_SECRET_KEY"), readEnv("STRIPE_WEBHOOK_SECRET")]);
   const [badges, admins, resendKey, adminEnv] = await Promise.all([
     getAdminBadges(),
     adminEmails(),
@@ -51,6 +52,8 @@ export default async function AdminSettingsPage({
     <AdminShell active="parametres" adminEmail={admin.email} badges={badges}>
       <PageHeader title="Paramètres" subtitle="État de la configuration du site." />
       {test === "ok" ? <Notice tone="success">Email de test envoyé à {admins.join(", ")}. Vérifiez votre boîte (et les indésirables).</Notice> : null}
+      {stripe === "ok" ? <Notice tone="success">Stripe répond : la clé fonctionne et une session de paiement a pu être créée (rien n&apos;a été facturé).</Notice> : null}
+      {stripe === "fail" ? <Notice tone="error">Stripe a refusé : {reason ?? "erreur inconnue"}</Notice> : null}
       {test === "fail" ? <Notice tone="error">L&apos;envoi a échoué : {reason ?? "erreur inconnue"}</Notice> : null}
       <Card title="Diagnostic">
         <ul className="divide-y divide-border">
@@ -80,6 +83,22 @@ export default async function AdminSettingsPage({
         </p>
         <form action={sendTestEmailAction} className="mt-4">
           <SubmitButton>Envoyer un email de test</SubmitButton>
+        </form>
+      </Card>
+
+      <Card title="Paiement en ligne (Stripe)" className="mt-6">
+        <ul className="divide-y divide-border">
+          <Row label="Clé secrète (STRIPE_SECRET_KEY)" ok={Boolean(stripeKey)}>
+            {stripeKey
+              ? `Présente, type « ${stripeKey.slice(0, stripeKey.indexOf("_", 3) + 1 || 3)}… »${stripeKey.startsWith("rk_test") || stripeKey.startsWith("sk_test") ? " (mode test)" : stripeKey.startsWith("rk_live") || stripeKey.startsWith("sk_live") ? " (mode production)" : stripeKey.startsWith("pk_") ? " : c'est une clé PUBLIABLE, il faut la clé restreinte rk_…" : ""}.`
+              : "Absente : le paiement direct est désactivé, les commandes suivent le parcours manuel."}
+          </Row>
+          <Row label="Signature des webhooks (STRIPE_WEBHOOK_SECRET)" ok={Boolean(stripeWebhook)}>
+            {stripeWebhook ? "Présente." : "Absente : les paiements ne seront pas reconnus."}
+          </Row>
+        </ul>
+        <form action={testStripeAction} className="mt-4">
+          <SubmitButton>Tester Stripe</SubmitButton>
         </form>
       </Card>
 

@@ -451,3 +451,26 @@ export async function sendPaymentLinkAction(leadId: string, formData: FormData) 
   await logAudit({ actor: admin, action: "payment_link_sent", targetType: "lead", targetId: leadId, detail: `CHF ${amountChf.toFixed(2)}` });
   redirect(`${back}?ok=payment_link#lead-${leadId}`);
 }
+
+/** Diagnostic Stripe : ouvre une session Checkout de 5 CHF (rien n'est enregistré ni envoyé) et remonte l'erreur exacte de Stripe. */
+export async function testStripeAction() {
+  const admin = await requireAdmin();
+  try {
+    await createCheckoutSession({
+      amountRappen: 500,
+      productName: "Test Thrax Legal (ne pas payer)",
+      customerEmail: admin.email,
+      leadId: "diagnostic",
+      locale: "fr",
+      successUrl: `${SITE_URL}/fr/admin/parametres`,
+      cancelUrl: `${SITE_URL}/fr/admin/parametres`,
+      idempotencyKey: `diag-${Date.now()}`,
+    });
+    await logAudit({ actor: admin, action: "stripe_test", detail: "ok" });
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error);
+    await logAudit({ actor: admin, action: "stripe_test", detail: reason.slice(0, 300) });
+    redirect(`/fr/admin/parametres?stripe=fail&reason=${encodeURIComponent(reason.slice(0, 300))}`);
+  }
+  redirect("/fr/admin/parametres?stripe=ok");
+}

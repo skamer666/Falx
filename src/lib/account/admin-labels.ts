@@ -54,6 +54,7 @@ export const AUDIT_LABEL: Record<string, string> = {
   payment_link_sent: "Lien de paiement Stripe envoyé",
   payment_link_failed: "Création du lien de paiement refusée par Stripe",
   order_paid: "Commande payée en ligne (Stripe)",
+  stripe_test: "Test de la connexion Stripe",
   lead_note: "Note sur un prospect",
   lead_deleted: "Prospect supprimé",
   quota_adjustment_deleted: "Ajustement de quota supprimé",
