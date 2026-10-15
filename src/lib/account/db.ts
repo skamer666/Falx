@@ -15,6 +15,7 @@ import {
   type DossierStatus,
   type Lead,
   type LeadStatus,
+  type OrderPayment,
   type Plan,
   type QuotaAdjustment,
   type QuotaField,
@@ -706,4 +707,43 @@ export async function getSourceSummary(days: number): Promise<SourceSummaryRow[]
     if (user.paid_until) entry.paying += 1;
   }
   return [...rows.values()].sort((a, b) => b.leads + b.signups - (a.leads + a.signups));
+}
+
+// ---------------------------------------------------------------------------
+// Paiements en ligne des commandes à l'acte (Stripe Checkout)
+// ---------------------------------------------------------------------------
+
+export async function createOrderPayment(input: { leadId: string; sessionId: string; amountRappen: number; createdBy: string | null }): Promise<void> {
+  await (await db())
+    .prepare("INSERT INTO order_payments (id, lead_id, stripe_session_id, amount_rappen, currency, status, created_by, created_at) VALUES (?, ?, ?, ?, 'chf', 'pending', ?, ?)")
+    .bind(newId(), input.leadId, input.sessionId, input.amountRappen, input.createdBy, Date.now())
+    .run();
+}
+
+export async function listOrderPayments(leadIds: string[]): Promise<OrderPayment[]> {
+  if (leadIds.length === 0) return [];
+  const marks = leadIds.map(() => "?").join(",");
+  const { results } = await (await db())
+    .prepare(`SELECT * FROM order_payments WHERE lead_id IN (${marks}) ORDER BY created_at DESC`)
+    .bind(...leadIds)
+    .all<OrderPayment>();
+  return results ?? [];
+}
+
+/**
+ * Marque la session payée (idempotent : Stripe peut renvoyer le même webhook plusieurs fois).
+ * Renvoie la ligne si CE appel vient de la passer à « paid », sinon null (déjà payée ou inconnue).
+ */
+export async function markOrderPaid(sessionId: string, details: { method: string | null; paymentIntent: string | null; amountRappen: number }): Promise<OrderPayment | null> {
+  const database = await db();
+  const result = await database
+    .prepare("UPDATE order_payments SET status = 'paid', paid_at = ?, method = ?, payment_intent = ?, amount_rappen = ? WHERE stripe_session_id = ? AND status != 'paid'")
+    .bind(Date.now(), details.method, details.paymentIntent, details.amountRappen, sessionId)
+    .run();
+  if (!result.meta.changes) return null;
+  return (await database.prepare("SELECT * FROM order_payments WHERE stripe_session_id = ?").bind(sessionId).first<OrderPayment>()) ?? null;
+}
+
+export async function markOrderExpired(sessionId: string): Promise<void> {
+  await (await db()).prepare("UPDATE order_payments SET status = 'expired' WHERE stripe_session_id = ? AND status = 'pending'").bind(sessionId).run();
 }

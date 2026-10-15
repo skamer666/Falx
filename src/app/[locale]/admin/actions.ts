@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import {
   addMessage,
   addQuotaAdjustment,
+  createOrderPayment,
   deleteLead,
   getLead,
   LEAD_STATUSES,
@@ -43,7 +44,10 @@ import {
   setPlan,
   updateClientFields,
 } from "@/lib/account/admin-db";
-import { safeSend, sendAccountActiveEmail, sendAdminTestEmail, sendPasswordLinkEmail, sendReplyEmail, sendSignupInviteEmail } from "@/lib/account/email";
+import { createCheckoutSession, stripeConfigured } from "@/lib/payments/stripe";
+import { getService, serviceText } from "@/lib/services/catalog";
+import { SITE_URL } from "@/lib/site";
+import { safeSend, sendAccountActiveEmail, sendPaymentLinkEmail, sendAdminTestEmail, sendPasswordLinkEmail, sendReplyEmail, sendSignupInviteEmail } from "@/lib/account/email";
 import { randomToken, sha256Hex } from "@/lib/account/password";
 import { getCurrentAdmin } from "@/lib/account/session";
 import { storeUploads } from "@/lib/account/uploads";
@@ -404,4 +408,46 @@ export async function sendTestEmailAction() {
     redirect(`/fr/admin/parametres?test=fail&reason=${encodeURIComponent(reason.slice(0, 200))}`);
   }
   redirect("/fr/admin/parametres?test=ok");
+}
+
+/**
+ * Confirme une commande et envoie au client un lien de paiement Stripe (CHF).
+ * Le montant est saisi par l'admin (prix du catalogue, express ou devis) : jamais envoyé par le navigateur du client.
+ */
+export async function sendPaymentLinkAction(leadId: string, formData: FormData) {
+  const admin = await requireAdmin();
+  const back = `/fr/admin/prospects`;
+  const lead = await getLead(leadId);
+  if (!lead || !lead.service) redirect(back);
+  if (!(await stripeConfigured())) redirect(`${back}?ok=stripe_off#lead-${leadId}`);
+
+  const amountChf = Number(String(formData.get("amount") ?? "").replace(",", "."));
+  const amountRappen = Math.round(amountChf * 100);
+  if (!Number.isFinite(amountChf) || amountRappen < 500 || amountRappen > 500_000) redirect(`${back}?ok=amount#lead-${leadId}`);
+
+  const service = getService(lead.service);
+  const productName = service ? serviceText(lead.locale, service.slug).name : "Thrax Legal";
+  let url: string;
+  try {
+    const session = await createCheckoutSession({
+      amountRappen,
+      productName,
+      customerEmail: lead.email,
+      leadId: lead.id,
+      locale: lead.locale,
+      successUrl: `${SITE_URL}/${lead.locale}/commande/merci?paid=1`,
+      cancelUrl: `${SITE_URL}/${lead.locale}`,
+      idempotencyKey: `lead-${lead.id}-${amountRappen}-${Math.floor(Date.now() / 60_000)}`,
+    });
+    await createOrderPayment({ leadId: lead.id, sessionId: session.id, amountRappen, createdBy: admin.id });
+    url = session.url;
+  } catch (error) {
+    console.error("[stripe] session refusée", error);
+    await logAudit({ actor: admin, action: "payment_link_failed", targetType: "lead", targetId: leadId, detail: String(error instanceof Error ? error.message : error).slice(0, 300) });
+    redirect(`${back}?ok=stripe_error#lead-${leadId}`);
+  }
+  await safeSend(() => sendPaymentLinkEmail(lead, url, amountRappen), `lien de paiement ${lead.email}`);
+  if (lead.status === "nouveau") await setLeadStatus(leadId, "contacte");
+  await logAudit({ actor: admin, action: "payment_link_sent", targetType: "lead", targetId: leadId, detail: `CHF ${amountChf.toFixed(2)}` });
+  redirect(`${back}?ok=payment_link#lead-${leadId}`);
 }

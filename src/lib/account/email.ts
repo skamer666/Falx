@@ -624,3 +624,116 @@ export async function sendSignupInviteEmail(lead: Lead) {
   });
   await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
 }
+
+// ---------------------------------------------------------------------------
+// Paiement en ligne d'une commande (Stripe Checkout)
+// ---------------------------------------------------------------------------
+
+const PAYMENT_LINK: Record<Locale, { subject: string; heading: string; body: (name: string, service: string, amount: string) => string; cta: string; footer: string }> = {
+  fr: {
+    subject: "Votre commande est confirmée : lien de paiement",
+    heading: "Votre commande est confirmée",
+    body: (name, service, amount) =>
+      `Bonjour ${name},<br/><br/>Nous avons examiné votre demande pour <strong>${service}</strong> : la prestation convient à votre situation.<br/><br/>Prix à prix fixe : <strong>CHF ${amount}</strong>. Pour la lancer, vous pouvez régler en ligne par carte bancaire (ou TWINT lorsqu’il est proposé) sur la page sécurisée de notre prestataire de paiement, Stripe.<br/><br/>Le travail démarre dès la réception du paiement. Vous pouvez répondre à cet email pour nous envoyer vos documents.`,
+    cta: "Payer en ligne",
+    footer: "Thrax Legal n’est pas un cabinet d’avocats. TVA non applicable (franchise des petites entreprises).",
+  },
+  de: {
+    subject: "Ihre Bestellung ist bestätigt: Zahlungslink",
+    heading: "Ihre Bestellung ist bestätigt",
+    body: (name, service, amount) =>
+      `Guten Tag ${name}<br/><br/>Wir haben Ihre Anfrage für <strong>${service}</strong> geprüft: Die Leistung passt zu Ihrer Situation.<br/><br/>Festpreis: <strong>CHF ${amount}</strong>. Zum Start können Sie online mit Karte (oder TWINT, sofern angeboten) auf der sicheren Seite unseres Zahlungsdienstleisters Stripe bezahlen.<br/><br/>Die Arbeit beginnt nach Zahlungseingang. Sie können Ihre Unterlagen als Antwort auf diese E-Mail senden.`,
+    cta: "Online bezahlen",
+    footer: "Thrax Legal ist keine Anwaltskanzlei. Keine MWST (Kleinunternehmerregelung).",
+  },
+  en: {
+    subject: "Your order is confirmed: payment link",
+    heading: "Your order is confirmed",
+    body: (name, service, amount) =>
+      `Hello ${name},<br/><br/>We have reviewed your request for <strong>${service}</strong>: the service fits your situation.<br/><br/>Fixed price: <strong>CHF ${amount}</strong>. To start, you can pay online by card (or TWINT where offered) on the secure page of our payment provider, Stripe.<br/><br/>Work starts as soon as payment is received. You can reply to this email to send us your documents.`,
+    cta: "Pay online",
+    footer: "Thrax Legal is not a law firm. VAT not applicable (small-business exemption).",
+  },
+  it: {
+    subject: "Il vostro ordine è confermato: link di pagamento",
+    heading: "Il vostro ordine è confermato",
+    body: (name, service, amount) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo esaminato la vostra richiesta per <strong>${service}</strong>: la prestazione è adatta alla vostra situazione.<br/><br/>Prezzo fisso: <strong>CHF ${amount}</strong>. Per iniziare potete pagare online con carta (o TWINT, se proposto) sulla pagina sicura del nostro fornitore di pagamenti, Stripe.<br/><br/>Il lavoro inizia alla ricezione del pagamento. Potete rispondere a questa email per inviarci i documenti.`,
+    cta: "Paga online",
+    footer: "Thrax Legal non è uno studio legale. IVA non applicabile (franchigia per piccole imprese).",
+  },
+};
+
+export async function sendPaymentLinkEmail(lead: Lead, url: string, amountRappen: number) {
+  const t = PAYMENT_LINK[lead.locale];
+  const summary = orderSummary(lead, lead.locale);
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name), escapeHtml(summary?.name ?? lead.service ?? ""), formatChf(amountRappen)),
+    ctaLabel: t.cta,
+    ctaUrl: url,
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
+}
+
+const PAYMENT_CONFIRMED: Record<Locale, { subject: string; heading: string; body: (name: string, service: string, amount: string) => string; footer: string }> = {
+  fr: {
+    subject: "Paiement reçu : merci",
+    heading: "Paiement reçu, merci",
+    body: (name, service, amount) =>
+      `Bonjour ${name},<br/><br/>Nous avons bien reçu votre paiement de <strong>CHF ${amount}</strong> pour <strong>${service}</strong>.<br/><br/>Le travail démarre. Si ce n’est pas déjà fait, répondez à cet email avec vos documents. Ce message sert de confirmation de paiement ; Stripe peut vous envoyer un reçu séparé.`,
+    footer: "Thrax Legal, Grégoire Giuliano, entreprise belge n° 1043.879.554. TVA non applicable (franchise des petites entreprises). Thrax Legal n’est pas un cabinet d’avocats.",
+  },
+  de: {
+    subject: "Zahlung erhalten: danke",
+    heading: "Zahlung erhalten, danke",
+    body: (name, service, amount) =>
+      `Guten Tag ${name}<br/><br/>Wir haben Ihre Zahlung von <strong>CHF ${amount}</strong> für <strong>${service}</strong> erhalten.<br/><br/>Die Arbeit beginnt. Falls noch nicht geschehen, antworten Sie auf diese E-Mail mit Ihren Unterlagen. Diese Nachricht dient als Zahlungsbestätigung; Stripe kann Ihnen eine separate Quittung senden.`,
+    footer: "Thrax Legal, Grégoire Giuliano, belgisches Unternehmen Nr. 1043.879.554. Keine MWST (Kleinunternehmerregelung). Thrax Legal ist keine Anwaltskanzlei.",
+  },
+  en: {
+    subject: "Payment received: thank you",
+    heading: "Payment received, thank you",
+    body: (name, service, amount) =>
+      `Hello ${name},<br/><br/>We have received your payment of <strong>CHF ${amount}</strong> for <strong>${service}</strong>.<br/><br/>Work is starting. If you have not done so yet, reply to this email with your documents. This message serves as payment confirmation; Stripe may send you a separate receipt.`,
+    footer: "Thrax Legal, Grégoire Giuliano, Belgian business no. 1043.879.554. VAT not applicable (small-business exemption). Thrax Legal is not a law firm.",
+  },
+  it: {
+    subject: "Pagamento ricevuto: grazie",
+    heading: "Pagamento ricevuto, grazie",
+    body: (name, service, amount) =>
+      `Buongiorno ${name},<br/><br/>Abbiamo ricevuto il vostro pagamento di <strong>CHF ${amount}</strong> per <strong>${service}</strong>.<br/><br/>Il lavoro inizia. Se non l’avete ancora fatto, rispondete a questa email con i documenti. Questo messaggio vale come conferma di pagamento; Stripe può inviarvi una ricevuta separata.`,
+    footer: "Thrax Legal, Grégoire Giuliano, impresa belga n. 1043.879.554. IVA non applicabile (franchigia per piccole imprese). Thrax Legal non è uno studio legale.",
+  },
+};
+
+export async function sendPaymentConfirmedEmail(lead: Lead, amountRappen: number) {
+  const t = PAYMENT_CONFIRMED[lead.locale];
+  const summary = orderSummary(lead, lead.locale);
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name), escapeHtml(summary?.name ?? lead.service ?? ""), formatChf(amountRappen)),
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
+}
+
+export async function notifyAdminOfPayment(lead: Lead, amountRappen: number, method: string | null) {
+  const summary = orderSummary(lead, "fr");
+  const html = wrapEmailHtml({
+    heading: `Paiement reçu : CHF ${formatChf(amountRappen)}`,
+    bodyHtml: [
+      summary ? `<strong>${escapeHtml(summary.name)}</strong>${lead.express ? " · EXPRESS 24 h" : ""}` : null,
+      `<strong>${escapeHtml(lead.name)}</strong> · ${escapeHtml(lead.email)}`,
+      `Moyen : ${escapeHtml(method ?? "inconnu")} · Stripe verse en euros sur ton compte ING après quelques jours.`,
+      lead.deadline ? `Date limite signalée : ${escapeHtml(lead.deadline)}` : null,
+    ]
+      .filter(Boolean)
+      .join("<br/>"),
+    ctaLabel: "Ouvrir les prospects",
+    ctaUrl: `${SITE_URL}/fr/admin/prospects#lead-${lead.id}`,
+    footer: "Notification automatique Thrax Legal.",
+  });
+  await sendEmail(await adminEmails(), `Paiement reçu : ${summary?.name ?? lead.service} · CHF ${formatChf(amountRappen)}`, html, lead.email);
+}

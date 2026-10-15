@@ -70,7 +70,7 @@ export type ServicesUi = {
     errors: { generic: string; consent: string; throttled: string };
     fieldErrors: { situation: string; name: string; email: string; phone: string; company: string; terms: string; ai: string; summary: string };
   };
-  thanks: { metaTitle: string; heading: string; body: string; next: string[]; back: string; quoteHeading: string; quoteBody: string };
+  thanks: { metaTitle: string; heading: string; body: string; next: string[]; back: string; quoteHeading: string; quoteBody: string; paidHeading: string; paidBody: string };
   quote: {
     title: string;
     body: string;
@@ -224,6 +224,8 @@ const fr: ServicesUi = {
     back: "Retour à l'accueil",
     quoteHeading: "Merci, nous préparons votre devis",
     quoteBody: "Nous étudions votre situation et vous envoyons un devis à prix fixe par email, en principe sous 1 jour ouvré. Il est gratuit et sans engagement.",
+    paidHeading: "Merci, votre paiement est en cours de confirmation",
+    paidBody: "Vous recevez un email de confirmation dès que le paiement est enregistré. Le travail démarre ensuite : répondez à cet email avec vos documents si ce n’est pas déjà fait.",
   },
   quote: {
     title: "Votre problème n'est pas dans la liste ?",
@@ -381,6 +383,8 @@ const de: ServicesUi = {
     back: "Zur Startseite",
     quoteHeading: "Danke, wir erstellen Ihre Offerte",
     quoteBody: "Wir prüfen Ihre Situation und senden Ihnen eine Fixpreis-Offerte per E-Mail, in der Regel innert 1 Arbeitstag. Sie ist kostenlos und unverbindlich.",
+    paidHeading: "Danke, Ihre Zahlung wird bestätigt",
+    paidBody: "Sie erhalten eine Bestätigungs-E-Mail, sobald die Zahlung verbucht ist. Danach beginnt die Arbeit: Antworten Sie auf diese E-Mail mit Ihren Unterlagen, falls noch nicht geschehen.",
   },
   quote: {
     title: "Ihr Problem ist nicht in der Liste?",
@@ -538,6 +542,8 @@ const en: ServicesUi = {
     back: "Back to home",
     quoteHeading: "Thank you, we're preparing your quote",
     quoteBody: "We review your situation and email you a fixed-price quote, usually within 1 working day. It is free and without obligation.",
+    paidHeading: "Thank you, your payment is being confirmed",
+    paidBody: "You will receive a confirmation email as soon as the payment is recorded. Work then starts: reply to that email with your documents if you have not already.",
   },
   quote: {
     title: "Your problem isn't on the list?",
@@ -695,6 +701,8 @@ const it: ServicesUi = {
     back: "Torna alla home",
     quoteHeading: "Grazie, prepariamo il vostro preventivo",
     quoteBody: "Esaminiamo la vostra situazione e vi inviamo un preventivo a prezzo fisso per email, di regola entro 1 giorno lavorativo. È gratuito e senza impegno.",
+    paidHeading: "Grazie, il vostro pagamento è in fase di conferma",
+    paidBody: "Riceverete un’email di conferma non appena il pagamento sarà registrato. Poi il lavoro inizia: rispondete a quell’email con i documenti, se non l’avete già fatto.",
   },
   quote: {
     title: "Il vostro problema non è nell'elenco?",

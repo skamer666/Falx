@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 9;
+export const SCHEMA_VERSION = 10;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -89,6 +89,20 @@ const TABLES: string[] = [
     created_by TEXT,
     created_at INTEGER NOT NULL
   )`,
+  /** Paiements en ligne (Stripe Checkout) d'une commande à l'acte ; la ligne passe à « paid » via le webhook. */
+  `CREATE TABLE IF NOT EXISTS order_payments (
+    id TEXT PRIMARY KEY,
+    lead_id TEXT NOT NULL,
+    stripe_session_id TEXT NOT NULL UNIQUE,
+    amount_rappen INTEGER NOT NULL,
+    currency TEXT NOT NULL DEFAULT 'chf',
+    status TEXT NOT NULL DEFAULT 'pending',
+    method TEXT,
+    payment_intent TEXT,
+    created_by TEXT,
+    created_at INTEGER NOT NULL,
+    paid_at INTEGER
+  )`,
   `CREATE TABLE IF NOT EXISTS leads (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
@@ -167,6 +181,7 @@ const INDEXES: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_dossiers_user ON dossiers(user_id)`,
   `CREATE INDEX IF NOT EXISTS idx_dossiers_status ON dossiers(status, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_order_payments_lead ON order_payments(lead_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_payments_user ON payments(user_id, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_payments_created ON payments(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_messages_dossier ON dossier_messages(dossier_id, created_at)`,

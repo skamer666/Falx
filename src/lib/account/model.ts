@@ -231,3 +231,19 @@ export function sanitizeFilename(name: string): string {
 export function currentTime(): number {
   return Date.now();
 }
+
+export type OrderPaymentStatus = "pending" | "paid" | "expired";
+/** Paiement en ligne (Stripe Checkout) d'une commande à l'acte. */
+export type OrderPayment = {
+  id: string;
+  lead_id: string;
+  stripe_session_id: string;
+  amount_rappen: number;
+  currency: string;
+  status: OrderPaymentStatus;
+  method: string | null;
+  payment_intent: string | null;
+  created_by: string | null;
+  created_at: number;
+  paid_at: number | null;
+};

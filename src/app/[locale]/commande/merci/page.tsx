@@ -18,11 +18,12 @@ export default async function OrderThanksPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ service?: string }>;
+  searchParams: Promise<{ service?: string; paid?: string }>;
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  const { service: slug } = await searchParams;
+  const { service: slug, paid } = await searchParams;
+  const isPaid = paid === "1";
   const service = slug ? getService(slug) : undefined;
   const t = SERVICES_UI[locale].thanks;
   const isQuote = slug === "devis-particuliers" || slug === "devis-entreprises";
@@ -37,9 +38,10 @@ export default async function OrderThanksPage({
                 <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <h1 className="mt-6 text-[2rem] font-semibold leading-tight tracking-[-0.02em]">{isQuote ? t.quoteHeading : t.heading}</h1>
+            <h1 className="mt-6 text-[2rem] font-semibold leading-tight tracking-[-0.02em]">{isPaid ? t.paidHeading : isQuote ? t.quoteHeading : t.heading}</h1>
             {service ? <p className="mt-3 text-lg font-medium">{serviceText(locale, service.slug).name}</p> : null}
-            <p className="mt-4 text-base leading-relaxed text-text-muted">{isQuote ? t.quoteBody : t.body}</p>
+            <p className="mt-4 text-base leading-relaxed text-text-muted">{isPaid ? t.paidBody : isQuote ? t.quoteBody : t.body}</p>
+            {isPaid ? null : (
             <ol className="mt-8 space-y-3">
               {t.next.map((step, index) => (
                 <li key={step} className="flex gap-4 rounded-2xl border border-border bg-surface p-4 text-[15px] leading-relaxed">
@@ -50,6 +52,7 @@ export default async function OrderThanksPage({
                 </li>
               ))}
             </ol>
+            )}
             <Link href={`/${locale}`} className="mt-10 inline-block text-sm font-semibold underline underline-offset-4">
               {t.back}
             </Link>

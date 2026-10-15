@@ -5,11 +5,13 @@ import type { Lead } from "@/lib/account/model";
 import SubmitButton from "@/components/account/SubmitButton";
 import { ActionButton, AdminDenied, AdminShell, Card, Empty, FIELD, FIELD_LABEL, Flash, PageHeader } from "@/components/admin/parts";
 import { getAdminBadges } from "@/lib/account/admin-db";
-import { getSourceSummary, listLeads, LEAD_STATUSES, currentTime, type LeadStatus } from "@/lib/account/db";
+import { getSourceSummary, listLeads, listOrderPayments, LEAD_STATUSES, currentTime, type LeadStatus } from "@/lib/account/db";
 import { PLAN_LABEL_FR } from "@/lib/account/admin-labels";
 import { formatDateTime } from "@/lib/account/format";
 import { getSessionUserRaw } from "@/lib/account/session";
-import { deleteLeadAction, saveLeadNotesAction, sendLeadInviteAction, setLeadStatusAction } from "../actions";
+import { deleteLeadAction, saveLeadNotesAction, sendLeadInviteAction, sendPaymentLinkAction, setLeadStatusAction } from "../actions";
+import { stripeConfigured } from "@/lib/payments/stripe";
+import { formatChf, type OrderPayment } from "@/lib/account/model";
 
 export const dynamic = "force-dynamic";
 
@@ -19,6 +21,10 @@ const FLASH: Record<string, string> = {
   note: "Note enregistrée.",
   invite: "Lien d'inscription envoyé par email.",
   deleted: "Prospect supprimé.",
+  payment_link: "Lien de paiement envoyé au client par email.",
+  stripe_off: "Le paiement en ligne n'est pas encore activé (STRIPE_SECRET_KEY absente).",
+  stripe_error: "Stripe a refusé la création du lien. Détail dans le journal.",
+  amount: "Montant invalide (entre CHF 5 et CHF 5 000).",
 };
 
 export default async function AdminProspectsPage({
@@ -36,6 +42,7 @@ export default async function AdminProspectsPage({
     getAdminBadges(),
     getSourceSummary(90),
   ]);
+  const [payments, stripeOn] = await Promise.all([listOrderPayments(leads.map((l) => l.id)), stripeConfigured()]);
   const now = currentTime();
   const tabs: { key: string; label: string }[] = [{ key: "", label: "Tous" }, ...LEAD_STATUSES.map((s) => ({ key: s, label: STATUS_LABEL[s] }))];
 
@@ -136,6 +143,8 @@ export default async function AdminProspectsPage({
                       {ageDays >= 300 ? <span className="font-medium text-danger"> · à supprimer bientôt (12 mois)</span> : null}
                     </p>
 
+                    {lead.service ? <PaymentBox lead={lead} payments={payments.filter((p) => p.lead_id === lead.id)} stripeOn={stripeOn} /> : null}
+
                     <div className="mt-4 flex flex-wrap gap-2">
                       <ActionButton action={sendLeadInviteAction.bind(null, lead.id)} variant="primary" confirm="Envoyer à ce prospect un email avec le lien d'inscription en ligne ?" className="!py-1.5 !text-xs">
                         Envoyer le lien d&apos;inscription
@@ -191,5 +200,52 @@ function OrderBadge({ lead }: { lead: Lead }) {
       {lead.express ? <span className="rounded-full bg-danger-soft px-2.5 py-0.5 text-xs font-semibold text-danger">EXPRESS 24 h</span> : null}
       {lead.deadline ? <span className="text-xs font-medium text-danger">Date limite : {lead.deadline}</span> : null}
     </p>
+  );
+}
+
+const PAYMENT_STATUS_LABEL: Record<OrderPayment["status"], string> = { pending: "En attente", paid: "Payé", expired: "Expiré" };
+
+/** Montant par défaut : prix du catalogue (+ express). Pour un devis ou un prix « dès », l'admin saisit le montant. */
+function defaultAmount(lead: Lead): string {
+  const service = lead.service ? getService(lead.service) : undefined;
+  if (!service) return "";
+  return String(service.price + (lead.express && service.express ? EXPRESS_PRICE : 0));
+}
+
+function PaymentBox({ lead, payments, stripeOn }: { lead: Lead; payments: OrderPayment[]; stripeOn: boolean }) {
+  const paid = payments.find((p) => p.status === "paid");
+  return (
+    <div className="mt-4 rounded-xl border border-border bg-surface px-4 py-3 text-sm">
+      <p className="text-xs font-medium uppercase tracking-[0.14em] text-text-muted">Paiement en ligne (Stripe, CHF)</p>
+      {payments.length > 0 ? (
+        <ul className="mt-2 space-y-1">
+          {payments.map((p) => (
+            <li key={p.id} className="flex flex-wrap items-center gap-2">
+              <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${p.status === "paid" ? "bg-text text-bg" : "border border-border text-text-muted"}`}>
+                {PAYMENT_STATUS_LABEL[p.status]}
+              </span>
+              <span className="tabular-nums">CHF {formatChf(p.amount_rappen)}</span>
+              <span className="text-xs text-text-muted">
+                {formatDateTime(p.paid_at ?? p.created_at, "fr")}
+                {p.method ? ` · ${p.method}` : ""}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {paid ? null : stripeOn ? (
+        <form action={sendPaymentLinkAction.bind(null, lead.id)} className="mt-3 flex flex-wrap items-end gap-3">
+          <div>
+            <label className={FIELD_LABEL} htmlFor={`amount-${lead.id}`}>
+              Montant (CHF)
+            </label>
+            <input id={`amount-${lead.id}`} name="amount" type="number" min="5" max="5000" step="0.05" required defaultValue={defaultAmount(lead)} className={`${FIELD} mt-1 w-32`} />
+          </div>
+          <SubmitButton className="!px-4 !py-1.5 !text-xs">Confirmer et envoyer le lien de paiement</SubmitButton>
+        </form>
+      ) : (
+        <p className="mt-2 text-xs text-text-muted">Pas encore activé : ajouter STRIPE_SECRET_KEY et STRIPE_WEBHOOK_SECRET dans les secrets Cloudflare.</p>
+      )}
+    </div>
   );
 }
