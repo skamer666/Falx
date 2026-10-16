@@ -9,7 +9,8 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import VideoEmbed from "@/components/site/VideoEmbed";
 import { PRESENTATION_VIDEO } from "@/lib/videos";
 import JsonLd from "@/components/site/JsonLd";
-import { SITE_URL } from "@/lib/site";
+import { ORG_ID, SITE_URL } from "@/lib/site";
+import { videoJsonLd } from "@/lib/videos-meta";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
@@ -863,7 +864,7 @@ export default async function EntreprisesPage({
     description: t.metaDescription,
     serviceType: "Legal services",
     areaServed: { "@type": "AdministrativeArea", name: "Suisse romande" },
-    provider: { "@type": "LegalService", name: "Thrax Legal", url: `${SITE_URL}/${locale}` },
+    provider: { "@type": "LegalService", "@id": ORG_ID, name: "Thrax Legal", url: `${SITE_URL}/${locale}` },
     offers: t.tiers.map((tier) => ({
       "@type": "Offer",
       name: tier.name,
@@ -878,6 +879,7 @@ export default async function EntreprisesPage({
     <>
       <JsonLd data={faqJsonLd} />
       <JsonLd data={serviceJsonLd} />
+      <JsonLd data={videoJsonLd({ id: PRESENTATION_VIDEO.id, poster: PRESENTATION_VIDEO.poster, description: t.metaDescription, fallbackName: t.videoHeading })} />
       <div className="pb-24">
         <Nav />
         <main className="bg-bg text-text">

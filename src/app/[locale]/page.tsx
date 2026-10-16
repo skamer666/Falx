@@ -5,7 +5,11 @@ import Footer from "@/components/site/Footer";
 import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { pageMetadata } from "@/lib/seo";
-import { SERVICES_UI } from "@/lib/services/strings";
+import { SERVICES_UI, priceLabel } from "@/lib/services/strings";
+import { SERVICES, serviceText, servicePath } from "@/lib/services/catalog";
+import { HOME_SEO } from "@/lib/services/home-seo";
+import FaqAccordion from "@/components/site/FaqAccordion";
+import JsonLd from "@/components/site/JsonLd";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -45,6 +49,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const t = SERVICES_UI[locale].home;
+  const seo = HOME_SEO[locale];
+  const popular = SERVICES.filter((service) => service.popular).slice(0, 12);
 
   const choices = [
     { href: `/${locale}/particuliers`, data: t.b2c, icon: <PersonIcon />, light: true },
@@ -99,7 +105,49 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </p>
           </Container>
         </section>
+        <section className="theme-light border-t border-border bg-bg py-16 md:py-24" aria-labelledby="home-seo-heading">
+          <Container className="mx-auto max-w-5xl">
+            <h2 id="home-seo-heading" className="text-[1.75rem] font-semibold leading-tight tracking-[-0.02em] text-text md:text-4xl">
+              {seo.heading}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted md:text-lg">{seo.intro}</p>
+
+            <h3 className="mt-12 text-xl font-semibold text-text">{seo.popular}</h3>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {popular.map((service) => {
+                const text = serviceText(locale, service.slug);
+                return (
+                  <li key={service.slug}>
+                    <Link href={servicePath(locale, service)} className="flex h-full flex-col rounded-2xl border border-border bg-surface p-5 transition-colors hover:bg-surface-hover">
+                      <span className="text-base font-semibold text-text">{text.name}</span>
+                      <span className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-text-muted">{text.short}</span>
+                      <span className="mt-3 text-sm font-semibold text-text">{priceLabel(locale, service.price, service.from)}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+              <Link href={`/${locale}/particuliers`} className="text-text underline underline-offset-4">
+                {seo.all} · {t.b2c.label}
+              </Link>
+              <Link href={`/${locale}/entreprises`} className="text-text underline underline-offset-4">
+                {seo.all} · {t.b2b.label}
+              </Link>
+            </p>
+
+            <h3 className="mt-14 text-xl font-semibold text-text">{seo.faqHeading}</h3>
+            <FaqAccordion items={seo.faq} className="mt-4" />
+          </Container>
+        </section>
       </main>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: seo.faq.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })),
+        }}
+      />
       <Footer locale={locale} />
     </>
   );

@@ -53,7 +53,7 @@ export default function VideoEmbed({
         >
           <Image
             src={poster}
-            alt=""
+            alt={title}
             fill
             sizes="(min-width: 1024px) 900px, 100vw"
             unoptimized

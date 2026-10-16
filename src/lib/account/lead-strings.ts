@@ -42,7 +42,7 @@ export type LeadStrings = {
 
 export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
   fr: {
-    metaTitle: "Être rappelé | Thrax Legal",
+    metaTitle: "Contact : être rappelé | Thrax Legal",
     heading: "Être rappelé",
     subheading: "Laissez vos coordonnées : nous vous rappelons pour répondre à vos questions, sans engagement.",
     nameLabel: "Nom et prénom",
@@ -81,7 +81,7 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     points: ["Gratuit et sans engagement", "Nous vous rappelons en principe sous 1 jour ouvré", "Vos informations ne servent qu’à vous recontacter"],
   },
   de: {
-    metaTitle: "Rückruf anfordern | Thrax Legal",
+    metaTitle: "Kontakt: Rückruf anfordern | Thrax Legal",
     heading: "Rückruf anfordern",
     subheading: "Hinterlassen Sie Ihre Kontaktdaten: Wir rufen Sie zurück, um Ihre Fragen zu beantworten, unverbindlich.",
     nameLabel: "Vor- und Nachname",
@@ -120,7 +120,7 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     points: ["Kostenlos und unverbindlich", "Wir rufen Sie in der Regel innert 1 Arbeitstag zurück", "Ihre Angaben dienen nur dazu, Sie zu kontaktieren"],
   },
   en: {
-    metaTitle: "Request a call back | Thrax Legal",
+    metaTitle: "Contact: request a call back | Thrax Legal",
     heading: "Request a call back",
     subheading: "Leave your details: we'll call you back to answer your questions, with no commitment.",
     nameLabel: "Full name",
@@ -159,7 +159,7 @@ export const LEAD_STRINGS: Record<Locale, LeadStrings> = {
     points: ["Free and no commitment", "We call you back, in principle within 1 business day", "Your details are only used to contact you"],
   },
   it: {
-    metaTitle: "Essere richiamati | Thrax Legal",
+    metaTitle: "Contatti: essere richiamati | Thrax Legal",
     heading: "Essere richiamati",
     subheading: "Lasciate i vostri recapiti: vi richiamiamo per rispondere alle vostre domande, senza impegno.",
     nameLabel: "Nome e cognome",

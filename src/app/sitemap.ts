@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import { SERVICES } from "@/lib/services/catalog";
 import { LOCALES, LOCALE_TAGS } from "@/i18n/config";
-import { SITE_URL } from "@/lib/site";
+import { CONTENT_UPDATED, SITE_URL } from "@/lib/site";
+import { TERMS_VERSION } from "@/lib/account/legal";
 
 /** Versions linguistiques de la page, plus x-default (français), comme dans les balises hreflang des pages. */
 function alternates(path: string) {
@@ -15,56 +16,57 @@ function alternates(path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Dates réelles de modification du contenu (pas « maintenant » à chaque génération : Google ignorerait le champ).
+  const updated = new Date(CONTENT_UPDATED);
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of LOCALES) {
     entries.push(
       {
         url: `${SITE_URL}/${locale}`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "weekly",
         priority: 1,
         alternates: alternates(""),
       },
       {
         url: `${SITE_URL}/${locale}/particuliers`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "weekly",
         priority: 0.9,
         alternates: alternates("/particuliers"),
       },
       {
         url: `${SITE_URL}/${locale}/entreprises`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "weekly",
         priority: 0.9,
         alternates: alternates("/entreprises"),
       },
       ...SERVICES.map((service) => ({
         url: `${SITE_URL}/${locale}/${service.audience}/${service.slug}`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "monthly" as const,
         priority: 0.8,
         alternates: alternates(`/${service.audience}/${service.slug}`),
       })),
       {
         url: `${SITE_URL}/${locale}/contact`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "yearly",
         priority: 0.5,
         alternates: alternates("/contact"),
       },
       {
         url: `${SITE_URL}/${locale}/alternative-embauche-juriste`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "monthly",
         priority: 0.7,
         alternates: alternates("/alternative-embauche-juriste"),
       },
       {
         url: `${SITE_URL}/${locale}/guide`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "weekly",
         priority: 0.7,
         alternates: alternates("/guide"),
@@ -78,14 +80,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })),
       {
         url: `${SITE_URL}/${locale}/confidentialite`,
-        lastModified: now,
+        lastModified: updated,
         changeFrequency: "yearly",
         priority: 0.3,
         alternates: alternates("/confidentialite"),
       },
       {
         url: `${SITE_URL}/${locale}/conditions-generales`,
-        lastModified: now,
+        lastModified: new Date(TERMS_VERSION),
         changeFrequency: "yearly",
         priority: 0.3,
         alternates: alternates("/conditions-generales"),

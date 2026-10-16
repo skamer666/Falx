@@ -6,7 +6,7 @@ import JsonLd from "@/components/site/JsonLd";
 import SourceTracker from "@/components/site/SourceTracker";
 import PageViewTracker from "@/components/site/PageViewTracker";
 import { LOCALES, LOCALE_TAGS, isLocale, type Locale } from "@/i18n/config";
-import { SITE_URL } from "@/lib/site";
+import { ORG_ID, SITE_URL, WEBSITE_ID, YOUTUBE_CHANNEL_URL } from "@/lib/site";
 import { localeAlternates } from "@/lib/seo";
 import "../globals.css";
 
@@ -19,8 +19,8 @@ const schibstedGrotesk = Schibsted_Grotesk({
 const TITLES: Record<Locale, string> = {
   fr: "Thrax Legal | Le juridique à prix fixe, Suisse romande",
   de: "Thrax Legal | Rechtliches zum Fixpreis, Westschweiz",
-  en: "Thrax Legal | Fixed-price legal help, French-speaking Switzerland",
-  it: "Thrax Legal | Il giuridico a prezzo fisso, Svizzera romanda",
+  en: "Thrax Legal | Fixed-price legal help in Switzerland",
+  it: "Thrax Legal | Il giuridico a prezzo fisso in Svizzera",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
@@ -78,17 +78,33 @@ function organizationJsonLd(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "LegalService",
+    "@id": ORG_ID,
     name: "Thrax Legal",
     url: `${SITE_URL}/${locale}`,
+    sameAs: [YOUTUBE_CHANNEL_URL],
     description: DESCRIPTIONS[locale],
     areaServed: {
       "@type": "AdministrativeArea",
       name: "Suisse romande",
     },
     email: "hey@thrax-legal.ch",
-    logo: `${SITE_URL}/icon.png`,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png`, width: 512, height: 512 },
+    image: `${SITE_URL}/opengraph-image.png`,
     availableLanguage: ["fr", "de", "en", "it"],
     priceRange: "CHF 49 - CHF 890",
+  };
+}
+
+function websiteJsonLd(locale: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    url: SITE_URL,
+    name: "Thrax Legal",
+    inLanguage: LOCALES.map((l) => LOCALE_TAGS[l]),
+    publisher: { "@id": ORG_ID },
+    description: DESCRIPTIONS[locale],
   };
 }
 
@@ -109,6 +125,7 @@ export default async function RootLayout({
     <html lang={LOCALE_TAGS[locale]} className={`${schibstedGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-text">
         <JsonLd data={organizationJsonLd(locale)} />
+        <JsonLd data={websiteJsonLd(locale)} />
         <SourceTracker />
           <PageViewTracker />
         {children}

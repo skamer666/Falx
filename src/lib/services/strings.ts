@@ -406,7 +406,7 @@ const de: ServicesUi = {
 
 const en: ServicesUi = {
   home: {
-    metaTitle: "Thrax Legal | Fixed-price legal help, French-speaking Switzerland",
+    metaTitle: "Thrax Legal | Fixed-price legal help in Switzerland",
     metaDescription:
       "Letters, contracts, disputes, procedures: for individuals and businesses in French-speaking Switzerland, a fixed price before we start. From CHF 49.",
     title: "Legal help at a fixed price, never by the hour.",
@@ -566,7 +566,7 @@ const en: ServicesUi = {
 
 const it: ServicesUi = {
   home: {
-    metaTitle: "Thrax Legal | Assistenza giuridica a prezzo fisso, Svizzera romanda",
+    metaTitle: "Thrax Legal | Assistenza legale a prezzo fisso in Svizzera",
     metaDescription:
       "Lettere, contratti, controversie, pratiche: per privati e imprese della Svizzera romanda, un prezzo fisso prima di iniziare. Da CHF 49.",
     title: "Il giuridico a prezzo fisso, mai a ore.",

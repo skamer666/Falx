@@ -8,7 +8,8 @@ import JsonLd from "./JsonLd";
 import { Container } from "./ui";
 import { getRelatedArticles, type GuideArticle } from "@/lib/guide/articles";
 import type { Locale } from "@/i18n/config";
-import { SITE_URL } from "@/lib/site";
+import { ORG_ID, SITE_URL } from "@/lib/site";
+import { videoJsonLd } from "@/lib/videos-meta";
 import { GUIDE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
 import VideoEmbed from "./VideoEmbed";
 
@@ -112,17 +113,14 @@ export default function GuideLayout({
     mainEntityOfPage: url,
     image: `${SITE_URL}/opengraph-image.png`,
     ...(wordCount ? { wordCount } : {}),
-    author: {
-      "@type": "Organization",
-      name: "Thrax Legal",
-      url: SITE_URL,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Thrax Legal",
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
-    },
+    author: { "@type": "Organization", "@id": ORG_ID, name: "Thrax Legal", url: SITE_URL },
+    publisher: { "@type": "Organization", "@id": ORG_ID, name: "Thrax Legal", logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` } },
+    ...(GUIDE_VIDEOS[article.slug] ? { video: { "@id": `${url}#video` } } : {}),
   };
+  const guideVideo = GUIDE_VIDEOS[article.slug];
+  const videoJson = guideVideo
+    ? { ...videoJsonLd({ id: guideVideo.id, poster: guideVideo.poster, description: article.description[locale], fallbackName: article.title[locale] }), "@id": `${url}#video` }
+    : null;
 
   const faqJsonLd = faq.length
     ? {
@@ -141,6 +139,7 @@ export default function GuideLayout({
     <>
       <JsonLd data={breadcrumbJsonLd} />
       <JsonLd data={articleJsonLd} />
+      {videoJson ? <JsonLd data={videoJson} /> : null}
       {faqJsonLd ? <JsonLd data={faqJsonLd} /> : null}
       <Nav />
       <main className="bg-bg text-text">

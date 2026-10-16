@@ -5,7 +5,8 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import JsonLd from "@/components/site/JsonLd";
 import { Container } from "@/components/site/ui";
 import type { Locale } from "@/i18n/config";
-import { SITE_URL } from "@/lib/site";
+import { ORG_ID, SITE_URL } from "@/lib/site";
+import { videoJsonLd } from "@/lib/videos-meta";
 import { categoryText, EXPRESS_PRICE, getService, servicePath, serviceText, type ServiceDef } from "@/lib/services/catalog";
 import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
@@ -45,7 +46,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
       description: t.short,
       serviceType: categoryText(locale, service.category).name,
       areaServed: { "@type": "AdministrativeArea", name: "Suisse romande" },
-      provider: { "@type": "LegalService", name: "Thrax Legal", url: `${SITE_URL}/${locale}` },
+      provider: { "@type": "LegalService", "@id": ORG_ID, name: "Thrax Legal", url: `${SITE_URL}/${locale}` },
       offers: {
         "@type": "Offer",
         price: String(service.price),
@@ -68,6 +69,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
         { "@type": "ListItem", position: 3, name: t.name, item: url },
       ],
     },
+    ...(video ? [videoJsonLd({ id: video.id, poster: video.poster, description: t.short, fallbackName: `${t.name} — ${vs.heading}` })] : []),
   ];
 
   return (

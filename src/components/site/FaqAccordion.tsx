@@ -41,11 +41,10 @@ export default function FaqAccordion({
                 </svg>
               </span>
             </button>
-            {isOpen ? (
-              <p className="max-w-2xl whitespace-pre-line pb-5 text-sm leading-relaxed text-text-muted">
-                {item.a}
-              </p>
-            ) : null}
+            {/* Toujours dans le HTML (indexable) ; simplement masquée tant que la question est fermée. */}
+            <p hidden={!isOpen} className="max-w-2xl whitespace-pre-line pb-5 text-sm leading-relaxed text-text-muted">
+              {item.a}
+            </p>
           </div>
         );
       })}
