@@ -5,6 +5,7 @@ import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 import { ConsentReopen } from "./ConsentBanner";
+import { ABOUT_PATH, ABOUT_STRINGS } from "@/lib/about";
 
 function ArrowIcon() {
   return (
@@ -28,6 +29,7 @@ export default function Footer({ locale }: { locale: Locale }) {
     { number: "002", label: t.particuliers, href: `/${locale}/particuliers` },
     { number: "003", label: t.entreprises, href: `/${locale}/entreprises` },
     { number: "004", label: t.guide, href: `/${locale}/guide` },
+    { number: "005", label: ABOUT_STRINGS[locale].menu, href: `/${locale}${ABOUT_PATH}` },
   ];
 
   return (

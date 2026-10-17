@@ -88,6 +88,7 @@ function organizationJsonLd(locale: Locale) {
       "@type": "AdministrativeArea",
       name: "Suisse romande",
     },
+    founder: { "@id": `${SITE_URL}/#founder` },
     email: "hey@thrax-legal.ch",
     logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png`, width: 512, height: 512 },
     image: `${SITE_URL}/opengraph-image.png`,

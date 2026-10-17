@@ -12,6 +12,7 @@ import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import VideoEmbed from "@/components/site/VideoEmbed";
 import { SERVICE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
+import FounderCard from "@/components/site/FounderCard";
 import OrderForm from "./OrderForm";
 
 function Check() {
@@ -166,6 +167,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
                       <OrderForm locale={locale} service={service} submitLabel={orderLabel} submitLabelExpress={orderLabelExpress} error={error} />
                     </div>
                     <p className="mt-4 text-center text-xs leading-relaxed text-text-muted">{service.from ? ui.service.payAfter : ui.service.payNow}</p>
+                    <FounderCard locale={locale} />
                   </div>
                   <p className="mt-4 text-xs leading-relaxed text-text-muted">{ui.service.notLawyer}</p>
                 </aside>

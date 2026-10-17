@@ -7,4 +7,4 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@ThraxLegal";
 
 /** Dates de dernière modification réelle du contenu (sitemap). À mettre à jour quand le contenu change vraiment. */
-export const CONTENT_UPDATED = "2026-10-17";
+export const CONTENT_UPDATED = "2026-10-18";
