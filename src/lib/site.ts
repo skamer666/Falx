@@ -8,3 +8,6 @@ export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@ThraxLegal";
 
 /** Dates de dernière modification réelle du contenu (sitemap). À mettre à jour quand le contenu change vraiment. */
 export const CONTENT_UPDATED = "2026-10-18";
+
+/** À passer à true seulement quand TWINT est actif dans Stripe (Paramètres → Moyens de paiement) : il apparaît alors sur la page de paiement. */
+export const TWINT_ENABLED = false;

@@ -5,7 +5,7 @@ import FaqAccordion from "@/components/site/FaqAccordion";
 import JsonLd from "@/components/site/JsonLd";
 import { Container } from "@/components/site/ui";
 import type { Locale } from "@/i18n/config";
-import { ORG_ID, SITE_URL } from "@/lib/site";
+import { ORG_ID, SITE_URL, TWINT_ENABLED } from "@/lib/site";
 import { videoJsonLd } from "@/lib/videos-meta";
 import { categoryText, EXPRESS_PRICE, getService, servicePath, serviceText, type ServiceDef } from "@/lib/services/catalog";
 import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
@@ -16,12 +16,19 @@ import FounderCard, { FounderMini } from "@/components/site/FounderCard";
 import { DEADLINE_LABEL, DEADLINE_NOTE, SERVICE_DEADLINES } from "@/lib/services/deadlines";
 import OrderForm from "./OrderForm";
 
-const PAY_METHODS: Record<Locale, string> = {
-  fr: "Paiement sécurisé par Stripe · carte bancaire ou TWINT",
-  de: "Sichere Zahlung über Stripe · Kreditkarte oder TWINT",
-  en: "Secure payment via Stripe · card or TWINT",
-  it: "Pagamento sicuro tramite Stripe · carta o TWINT",
-};
+const PAY_METHODS: Record<Locale, string> = TWINT_ENABLED
+  ? {
+      fr: "Paiement sécurisé par Stripe · carte bancaire ou TWINT",
+      de: "Sichere Zahlung über Stripe · Kreditkarte oder TWINT",
+      en: "Secure payment via Stripe · card or TWINT",
+      it: "Pagamento sicuro tramite Stripe · carta o TWINT",
+    }
+  : {
+      fr: "Paiement sécurisé par Stripe · carte bancaire",
+      de: "Sichere Zahlung über Stripe · Kreditkarte",
+      en: "Secure payment via Stripe · bank card",
+      it: "Pagamento sicuro tramite Stripe · carta di credito",
+    };
 
 function Check() {
   return (
