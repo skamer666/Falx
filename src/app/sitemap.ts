@@ -58,6 +58,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: alternates("/contact"),
       },
       {
+        url: `${SITE_URL}/${locale}/mentions-legales`,
+        lastModified: updated,
+        changeFrequency: "yearly",
+        priority: 0.3,
+        alternates: alternates("/mentions-legales"),
+      },
+      {
         url: `${SITE_URL}/${locale}/a-propos`,
         lastModified: updated,
         changeFrequency: "yearly",

@@ -6,6 +6,7 @@ import type { Locale } from "@/i18n/config";
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
 import { ConsentReopen } from "./ConsentBanner";
 import { ABOUT_PATH, ABOUT_STRINGS } from "@/lib/about";
+import { LEGAL_NOTICE, LEGAL_NOTICE_PATH } from "@/lib/legal-notice";
 
 function ArrowIcon() {
   return (
@@ -121,6 +122,9 @@ export default function Footer({ locale }: { locale: Locale }) {
             </Link>
             <Link href={`/${locale}/conditions-generales`} className="transition-colors hover:text-text">
               {t.terms}
+            </Link>
+            <Link href={`/${locale}${LEGAL_NOTICE_PATH}`} className="transition-colors hover:text-text">
+              {LEGAL_NOTICE[locale].menu}
             </Link>
           </div>
           <p>{t.region}</p>
