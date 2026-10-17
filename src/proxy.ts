@@ -16,6 +16,15 @@ function detectLocale(request: NextRequest): string {
   return DEFAULT_LOCALE;
 }
 
+const SECURITY_HEADERS: Record<string, string> = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+  // Volontairement limitée : une politique de scripts stricte casserait les balises en ligne de Next, YouTube et Google Ads.
+  "Content-Security-Policy": "frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+};
+
 const LOCAL_HOST = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/;
 
 /** Vrai si le visiteur est arrivé en http:// (non chiffré) sur le domaine public. */
@@ -45,6 +54,8 @@ export function proxy(request: NextRequest) {
   );
   if (hasLocale) {
     const response = NextResponse.next();
+    // Protection de base des pages : pas d'affichage du site dans le cadre d'un autre site (clickjacking), pas de devinette de type de fichier.
+    for (const [name, value] of Object.entries(SECURITY_HEADERS)) response.headers.set(name, value);
     if (!LOCAL_HOST.test(request.headers.get("host") ?? "")) {
       // Le navigateur retient d'utiliser HTTPS pour ce domaine (sans les sous-domaines).
       response.headers.set("Strict-Transport-Security", "max-age=31536000");
