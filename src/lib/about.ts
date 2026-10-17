@@ -25,6 +25,7 @@ type AboutStrings = {
   cardLine: string;
   cardCta: string;
   cardWrite: string;
+  miniReply: string;
 };
 
 export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
@@ -59,6 +60,7 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     cardLine: "Une question avant de commander ? Écrivez-moi : je réponds en principe sous un jour ouvré.",
     cardCta: "Qui sommes-nous",
     cardWrite: "Écrire à Grégoire",
+    miniReply: "je réponds en principe sous 1 jour ouvré",
   },
   de: {
     menu: "Über uns",
@@ -91,6 +93,7 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     cardLine: "Eine Frage vor der Bestellung? Schreiben Sie mir: Ich antworte in der Regel innert eines Arbeitstags.",
     cardCta: "Über uns",
     cardWrite: "Grégoire schreiben",
+    miniReply: "ich antworte in der Regel innert 1 Arbeitstag",
   },
   en: {
     menu: "About us",
@@ -123,6 +126,7 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     cardLine: "A question before you order? Write to me: I usually reply within one working day.",
     cardCta: "About us",
     cardWrite: "Write to Grégoire",
+    miniReply: "I usually reply within 1 working day",
   },
   it: {
     menu: "Chi siamo",
@@ -155,5 +159,6 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     cardLine: "Una domanda prima di ordinare? Scrivetemi: rispondo di regola entro un giorno lavorativo.",
     cardCta: "Chi siamo",
     cardWrite: "Scrivere a Grégoire",
+    miniReply: "rispondo di regola entro 1 giorno lavorativo",
   },
 };

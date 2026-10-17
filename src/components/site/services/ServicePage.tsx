@@ -12,7 +12,7 @@ import { priceLabel, SERVICES_UI, vatLabel } from "@/lib/services/strings";
 import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import VideoEmbed from "@/components/site/VideoEmbed";
 import { SERVICE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
-import FounderCard from "@/components/site/FounderCard";
+import FounderCard, { FounderMini } from "@/components/site/FounderCard";
 import OrderForm from "./OrderForm";
 
 function Check() {
@@ -98,6 +98,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
               <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-14">
                 <div className="min-w-0">
                   <h1 className="text-[2rem] font-semibold leading-[1.1] tracking-[-0.03em] sm:text-[2.6rem] md:text-5xl">{t.name}</h1>
+                  <FounderMini locale={locale} />
 
                   {/* Prix visible tout de suite sur mobile, avant le texte. */}
                   <div className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1 lg:hidden">
