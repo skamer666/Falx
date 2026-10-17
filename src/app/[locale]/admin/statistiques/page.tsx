@@ -102,6 +102,7 @@ export default async function AdminStatsPage({ searchParams }: { searchParams: P
                 <tr className="text-left text-xs text-text-muted">
                   <th className="pb-2 font-medium">Canal</th>
                   <th className="pb-2 text-right font-medium">Visites</th>
+                  <th className="pb-2 text-right font-medium">Visiteurs</th>
                   <th className="pb-2 text-right font-medium">Commandes</th>
                   <th className="pb-2 text-right font-medium">Payées</th>
                   <th className="pb-2 text-right font-medium">Conversion</th>
@@ -162,13 +163,14 @@ export default async function AdminStatsPage({ searchParams }: { searchParams: P
 
       <Card title="Prestations" className="mt-5">
         {b.services.length === 0 ? (
-          <p className="text-sm text-text-muted">Aucune commande sur la période.</p>
+          <p className="text-sm text-text-muted">Aucune visite de prestation ni commande sur la période.</p>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[520px] text-sm">
+            <table className="w-full min-w-[560px] text-sm">
               <thead>
                 <tr className="text-left text-xs text-text-muted">
                   <th className="pb-2 font-medium">Prestation</th>
+                  <th className="pb-2 text-right font-medium">Visiteurs</th>
                   <th className="pb-2 text-right font-medium">Commandes</th>
                   <th className="pb-2 text-right font-medium">Payées</th>
                   <th className="pb-2 text-right font-medium">Express</th>
@@ -179,7 +181,11 @@ export default async function AdminStatsPage({ searchParams }: { searchParams: P
                 {b.services.map((s) => (
                   <tr key={s.slug}>
                     <td className="py-2 font-medium">{s.name}</td>
-                    <td className="py-2 text-right tabular-nums">{s.orders}</td>
+                    <td className="py-2 text-right tabular-nums">{s.views || "–"}</td>
+                    <td className="py-2 text-right tabular-nums">
+                      {s.orders}
+                      {s.views ? <span className="ml-1 text-xs text-text-muted">({nf((s.orders / s.views) * 100, 1)} %)</span> : null}
+                    </td>
                     <td className="py-2 text-right tabular-nums">{s.paid}</td>
                     <td className="py-2 text-right tabular-nums">{s.express}</td>
                     <td className="py-2 text-right font-semibold tabular-nums">{s.revenue ? chf(s.revenue) : "–"}</td>

@@ -10,7 +10,7 @@ export type Period = 7 | 30 | 90;
 export type DayPoint = { day: string; visitors: number; pageviews: number; visits: number; revenue: number; orders: number; spend: number };
 export type Row = { label: string; value: number; extra?: number; hint?: string };
 export type ChannelRow = { channel: string; visits: number; orders: number; paid: number; revenue: number };
-export type ServiceRow = { slug: string; name: string; orders: number; paid: number; revenue: number; express: number };
+export type ServiceRow = { slug: string; name: string; views: number; orders: number; paid: number; revenue: number; express: number };
 
 export type Totals = { visitors: number; visits: number; pageviews: number };
 
@@ -84,7 +84,7 @@ export async function getStats(period: Period): Promise<Stats> {
 
   const q = <T>(sql: string, ...args: (string | number)[]) => database.prepare(sql).bind(...args).all<T>().then((r) => r.results ?? []);
 
-  const [daily, prevDaily, channelsRaw, pagesRaw, landingsRaw, campaignsRaw, devicesRaw, countriesRaw, localesRaw, heatRaw, liveRaw, serviceViewers, ordersRaw, paidRaw, pendingRaw, prevPaidRaw, spendRaw] = await Promise.all([
+  const [daily, prevDaily, channelsRaw, pagesRaw, landingsRaw, campaignsRaw, devicesRaw, countriesRaw, localesRaw, heatRaw, liveRaw, serviceViewers, ordersRaw, paidRaw, pendingRaw, prevPaidRaw, spendRaw, serviceViewsRaw] = await Promise.all([
     dailyAudience(database, from, today),
     dailyAudience(database, prevFrom, prevTo),
     q<{ channel: string | null; n: number }>("SELECT channel, COUNT(*) AS n FROM page_views WHERE entry = 1 AND day >= ? GROUP BY channel", from),
@@ -108,6 +108,10 @@ export async function getStats(period: Period): Promise<Stats> {
     q<{ amount_rappen: number }>("SELECT p.amount_rappen FROM order_payments p JOIN leads l ON l.id = p.lead_id WHERE p.status = 'pending' AND p.created_at >= ? AND p.created_at < ? AND l.name NOT LIKE 'TEST%'", fromMs, Date.now() - 3_600_000),
     q<{ amount_rappen: number }>("SELECT p.amount_rappen FROM order_payments p JOIN leads l ON l.id = p.lead_id WHERE p.status = 'paid' AND p.paid_at >= ? AND p.paid_at < ? AND l.name NOT LIKE 'TEST%'", prevFromMs, fromMs),
     q<{ day: string; amount_cents: number }>("SELECT day, amount_cents FROM ad_spend WHERE day >= ? AND day <= ?", from, today),
+    q<{ path: string; n: number }>(
+      "SELECT path, COUNT(DISTINCT visitor || day) AS n FROM page_views WHERE day >= ? AND (path LIKE '/__/particuliers/%' OR path LIKE '/__/entreprises/%') GROUP BY path",
+      from,
+    ),
   ]);
 
   // Séries journalières complètes (jours sans visite = 0).
@@ -166,7 +170,7 @@ export async function getStats(period: Period): Promise<Stats> {
     let e = serviceMap.get(slug);
     if (!e) {
       const def = getService(slug);
-      e = { slug, name: def ? serviceText("fr", slug).name : slug, orders: 0, paid: 0, revenue: 0, express: 0 };
+      e = { slug, name: def ? serviceText("fr", slug).name : slug, views: 0, orders: 0, paid: 0, revenue: 0, express: 0 };
       serviceMap.set(slug, e);
     }
     return e;
@@ -182,7 +186,12 @@ export async function getStats(period: Period): Promise<Stats> {
     e.paid += 1;
     e.revenue += p.amount_rappen / 100;
   }
-  const services = [...serviceMap.values()].sort((a, b) => b.revenue - a.revenue || b.orders - a.orders);
+  // Visiteurs par fiche de prestation (toutes langues confondues), pour voir quelle page convertit.
+  for (const v of serviceViewsRaw) {
+    const slug = v.path.split("/").pop() ?? "";
+    if (getService(slug)) sv(slug).views += v.n;
+  }
+  const services = [...serviceMap.values()].sort((a, b) => b.revenue - a.revenue || b.orders - a.orders || b.views - a.views);
 
   const methodMap = new Map<string, number>();
   for (const p of paidRaw) methodMap.set(p.method ?? "inconnu", (methodMap.get(p.method ?? "inconnu") ?? 0) + 1);
