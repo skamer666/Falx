@@ -5,7 +5,7 @@
 // façon idempotente (CREATE ... IF NOT EXISTS + ALTER TABLE seulement si la
 // colonne manque). `schema.sql` à la racine du dépôt documente le résultat.
 
-export const SCHEMA_VERSION = 11;
+export const SCHEMA_VERSION = 12;
 
 const TABLES: string[] = [
   `CREATE TABLE IF NOT EXISTS schema_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)`,
@@ -168,6 +168,7 @@ const TABLES: string[] = [
 
 // Colonnes ajoutées après la création initiale des tables.
 const COLUMNS: Record<string, [string, string][]> = {
+  order_payments: [["reminder_sent_at", "INTEGER"]],
   users: [
     ["password_hash", "TEXT"],
     ["status", "TEXT NOT NULL DEFAULT 'pending'"],

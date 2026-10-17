@@ -246,4 +246,6 @@ export type OrderPayment = {
   created_by: string | null;
   created_at: number;
   paid_at: number | null;
+  /** Date d'envoi de l'unique email de rappel pour cette commande (null : jamais relancée). */
+  reminder_sent_at?: number | null;
 };

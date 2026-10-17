@@ -2,6 +2,7 @@ import { getLead, markOrderExpired, markOrderPaid, setLeadStatus } from "@/lib/a
 import { logAudit } from "@/lib/account/admin-db";
 import { notifyAdminOfPayment, safeSend, sendPaymentConfirmedEmail } from "@/lib/account/email";
 import { paymentMethodType, verifyStripeSignature } from "@/lib/payments/stripe";
+import { sendAbandonedOrderReminder } from "@/lib/payments/checkout";
 import { readEnv } from "@/lib/account/db";
 
 export const dynamic = "force-dynamic";
@@ -42,7 +43,8 @@ export async function POST(request: Request) {
   if (!session?.id) return new Response("ok");
 
   if (event.type === "checkout.session.expired") {
-    await markOrderExpired(session.id);
+    // Rappel unique, seulement la première fois que Stripe nous signale l'expiration de ce lien.
+    if (await markOrderExpired(session.id)) await sendAbandonedOrderReminder(session.id);
     return new Response("ok");
   }
 

@@ -109,7 +109,11 @@ function Fr() {
           pour gérer votre abonnement ou votre commande&nbsp;: montant, date, période couverte,
           mode de paiement et référence. Les paiements en ligne sont traités
           par notre prestataire de paiement Stripe&nbsp;: nous ne recevons ni ne
-          conservons vos données de carte bancaire.
+          conservons vos données de carte bancaire. Si vous démarrez une
+          commande sans la payer, nous vous envoyons <strong>un seul email de
+          rappel</strong> avec un nouveau lien de paiement, à l’adresse que vous
+          avez indiquée pour cette commande&nbsp;; il ne contient ni publicité ni
+          offre, et nous ne vous écrivons plus à ce sujet ensuite.
         </li>
         <li>
           Des <strong>notes internes</strong> que nous prenons sur votre dossier
@@ -361,7 +365,11 @@ function De() {
           Abonnements oder Ihrer Bestellung erfassen: Betrag, Datum, abgedeckte Periode,
           Zahlungsart und Referenz. Online-Zahlungen werden von unserem
           Zahlungsdienstleister Stripe abgewickelt: Wir erhalten und speichern
-          keine Kreditkartendaten.
+          keine Kreditkartendaten. Wenn Sie eine Bestellung beginnen, ohne zu
+          bezahlen, senden wir Ihnen <strong>eine einzige Erinnerungs-E-Mail</strong>
+          mit einem neuen Zahlungslink an die für diese Bestellung angegebene
+          Adresse; sie enthält weder Werbung noch Angebote, und wir schreiben
+          Ihnen danach dazu nicht mehr.
         </li>
         <li>
           <strong>Interne Notizen</strong>, die wir zu Ihrem Anliegen für die
@@ -601,7 +609,11 @@ function En() {
           The <strong>payment information</strong> we record to manage your
           subscription or order: amount, date, period covered, payment method and
           reference. Online payments are processed by our payment provider
-          Stripe: we do not receive or store your bank card data.
+          Stripe: we do not receive or store your bank card data. If you start an
+          order without paying it, we send you <strong>a single reminder
+          email</strong> with a new payment link, at the address you gave for
+          that order; it contains no advertising or offer, and we do not write to
+          you about it again afterwards.
         </li>
         <li>
           <strong>Internal notes</strong> we take on your matter for
@@ -830,7 +842,11 @@ function It() {
           gestire il vostro abbonamento o ordine: importo, data, periodo coperto,
           modalità di pagamento e riferimento. I pagamenti online sono gestiti
           dal nostro fornitore di pagamento Stripe: non riceviamo né
-          conserviamo i dati della vostra carta bancaria.
+          conserviamo i dati della vostra carta bancaria. Se iniziate un ordine
+          senza pagarlo, vi inviamo <strong>una sola email di promemoria</strong>
+          con un nuovo link di pagamento, all’indirizzo indicato per quell’ordine;
+          non contiene pubblicità né offerte e in seguito non vi scriviamo più al
+          riguardo.
         </li>
         <li>
           Le <strong>note interne</strong> che prendiamo sulla vostra pratica

@@ -744,8 +744,32 @@ export async function markOrderPaid(sessionId: string, details: { method: string
   return (await database.prepare("SELECT * FROM order_payments WHERE stripe_session_id = ?").bind(sessionId).first<OrderPayment>()) ?? null;
 }
 
-export async function markOrderExpired(sessionId: string): Promise<void> {
-  await (await db()).prepare("UPDATE order_payments SET status = 'expired' WHERE stripe_session_id = ? AND status = 'pending'").bind(sessionId).run();
+/** Renvoie true si CE appel vient de faire passer la session de « pending » à « expired » (Stripe peut renvoyer le même webhook). */
+export async function markOrderExpired(sessionId: string): Promise<boolean> {
+  const result = await (await db()).prepare("UPDATE order_payments SET status = 'expired' WHERE stripe_session_id = ? AND status = 'pending'").bind(sessionId).run();
+  return Boolean(result.meta.changes);
+}
+
+/**
+ * Réserve l'unique rappel d'une commande : renvoie true si cet appel peut envoyer le rappel.
+ * Une commande n'est jamais relancée deux fois, ni si une de ses sessions a déjà été payée.
+ */
+export async function claimOrderReminder(paymentId: string, leadId: string): Promise<boolean> {
+  const database = await db();
+  const blocked = await database
+    .prepare("SELECT 1 AS x FROM order_payments WHERE lead_id = ? AND (reminder_sent_at IS NOT NULL OR status = 'paid') LIMIT 1")
+    .bind(leadId)
+    .first();
+  if (blocked) return false;
+  const result = await database
+    .prepare("UPDATE order_payments SET reminder_sent_at = ? WHERE id = ? AND reminder_sent_at IS NULL")
+    .bind(Date.now(), paymentId)
+    .run();
+  return Boolean(result.meta.changes);
+}
+
+export async function releaseOrderReminder(paymentId: string): Promise<void> {
+  await (await db()).prepare("UPDATE order_payments SET reminder_sent_at = NULL WHERE id = ?").bind(paymentId).run();
 }
 
 export async function getOrderPaymentBySession(sessionId: string): Promise<OrderPayment | null> {

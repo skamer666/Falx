@@ -50,3 +50,10 @@ Configuration (secrets du Worker Cloudflare, jamais dans le code ni dans le chat
 - Stripe en **production** : paiement direct à la commande (prix fixe), carte + TWINT, webhook de production, Radar Lite, Managed Payments et Stripe Tax désactivés, versements en EUR sur l'IBAN ING. Test réel de bout en bout validé par le propriétaire (confirmation client, notification admin, « Payé » dans l'admin, webhook 200).
 - Secrets Cloudflare : `STRIPE_SECRET_KEY` (clé restreinte `rk_live_…`), `STRIPE_WEBHOOK_SECRET` (signature du webhook de production). Diagnostic : Admin → Paramètres → « Tester Stripe ».
 - Reste à faire : facture numérotée pour les entreprises (franchise de TVA), relecture des CGV par un juriste suisse, suppression des commandes « TEST » dans Prospects.
+
+
+## Rappel automatique des paiements non finalisés
+- Le lien Stripe d'une commande directe reste valable **1 heure**. À l'expiration, Stripe envoie `checkout.session.expired` (l'événement doit être coché dans la destination webhook) et le site envoie **un seul email de rappel** avec un nouveau lien valable 24 h.
+- Message purement transactionnel : aucune offre, aucune réduction, aucune publicité. Mentionné dans la politique de confidentialité.
+- Jamais de rappel : si une session de la commande a été payée, si un rappel a déjà été envoyé (colonne `order_payments.reminder_sent_at`), ni pour un lien créé à la main depuis l'admin (devis).
+- Code : `sendAbandonedOrderReminder` (`src/lib/payments/checkout.ts`), appelé depuis le webhook. Les actions `order_reminder_sent` et `order_reminder_failed` sont dans le journal.

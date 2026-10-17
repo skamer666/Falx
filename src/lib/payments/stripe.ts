@@ -21,6 +21,8 @@ export type CheckoutInput = {
   cancelUrl: string;
   /** Clé d'idempotence : un double clic n'ouvre pas deux sessions. */
   idempotencyKey: string;
+  /** Durée de validité du lien, en secondes (Stripe : de 30 minutes à 24 heures ; 24 h par défaut). */
+  expiresInSeconds?: number;
 };
 
 export type CheckoutSession = { id: string; url: string };
@@ -49,6 +51,10 @@ export async function createCheckoutSession(input: CheckoutInput): Promise<Check
   body.set("success_url", input.successUrl);
   body.set("cancel_url", input.cancelUrl);
   if (STRIPE_LOCALES.has(input.locale)) body.set("locale", input.locale);
+  if (input.expiresInSeconds) {
+    const seconds = Math.min(Math.max(Math.round(input.expiresInSeconds), 1800), 86400);
+    body.set("expires_at", String(Math.floor(Date.now() / 1000) + seconds));
+  }
   // Pas de payment_method_types : les moyens (carte, TWINT…) se règlent dans le tableau de bord Stripe.
 
   const res = await fetch(`${API}/checkout/sessions`, {

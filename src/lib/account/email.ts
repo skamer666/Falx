@@ -697,6 +697,54 @@ export async function sendPaymentLinkEmail(lead: Lead, url: string, amountRappen
   await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
 }
 
+const PAYMENT_REMINDER: Record<Locale, { subject: string; heading: string; body: (name: string, service: string, amount: string) => string; cta: string; footer: string }> = {
+  fr: {
+    subject: "Votre demande chez Thrax Legal n’est pas encore finalisée",
+    heading: "Votre demande est en attente de paiement",
+    body: (name, service, amount) =>
+      `Bonjour ${name},<br/><br/>Vous avez demandé <strong>${service}</strong> sur Thrax Legal (CHF ${amount}), mais le paiement n’a pas été finalisé. Votre demande est enregistrée : il suffit de régler pour que nous commencions.<br/><br/>Le lien ci-dessous est valable 24 heures. Vous pouvez payer par carte bancaire (ou TWINT lorsqu’il est proposé) sur la page sécurisée de Stripe.<br/><br/>Une question avant de payer ? Répondez simplement à cet email.<br/><br/>Si vous ne souhaitez pas donner suite, ignorez ce message : nous ne vous écrirons plus à ce sujet.`,
+    cta: "Finaliser mon paiement",
+    footer: "Message unique lié à votre demande. Thrax Legal n’est pas un cabinet d’avocats.",
+  },
+  de: {
+    subject: "Ihre Anfrage bei Thrax Legal ist noch nicht abgeschlossen",
+    heading: "Ihre Anfrage wartet auf die Zahlung",
+    body: (name, service, amount) =>
+      `Guten Tag ${name}<br/><br/>Sie haben bei Thrax Legal <strong>${service}</strong> angefragt (CHF ${amount}), die Zahlung wurde jedoch nicht abgeschlossen. Ihre Anfrage ist gespeichert: Sobald Sie bezahlen, legen wir los.<br/><br/>Der Link unten ist 24 Stunden gültig. Sie können mit Karte (oder TWINT, sofern angeboten) auf der sicheren Seite von Stripe bezahlen.<br/><br/>Eine Frage vor der Zahlung? Antworten Sie einfach auf diese E-Mail.<br/><br/>Möchten Sie nicht fortfahren, ignorieren Sie diese Nachricht: Wir schreiben Ihnen dazu nicht mehr.`,
+    cta: "Zahlung abschliessen",
+    footer: "Einmalige Nachricht zu Ihrer Anfrage. Thrax Legal ist keine Anwaltskanzlei.",
+  },
+  en: {
+    subject: "Your request at Thrax Legal is not finalised yet",
+    heading: "Your request is waiting for payment",
+    body: (name, service, amount) =>
+      `Hello ${name},<br/><br/>You requested <strong>${service}</strong> at Thrax Legal (CHF ${amount}), but the payment was not completed. Your request is saved: as soon as you pay, we start.<br/><br/>The link below is valid for 24 hours. You can pay by card (or TWINT where offered) on Stripe’s secure page.<br/><br/>A question before paying? Just reply to this email.<br/><br/>If you do not wish to proceed, simply ignore this message: we will not write to you about it again.`,
+    cta: "Complete my payment",
+    footer: "One-off message about your request. Thrax Legal is not a law firm.",
+  },
+  it: {
+    subject: "La vostra richiesta presso Thrax Legal non è ancora finalizzata",
+    heading: "La vostra richiesta attende il pagamento",
+    body: (name, service, amount) =>
+      `Buongiorno ${name},<br/><br/>Avete richiesto <strong>${service}</strong> presso Thrax Legal (CHF ${amount}), ma il pagamento non è stato completato. La richiesta è registrata: appena pagate, iniziamo.<br/><br/>Il link qui sotto è valido 24 ore. Potete pagare con carta (o TWINT, se proposto) sulla pagina sicura di Stripe.<br/><br/>Una domanda prima di pagare? Rispondete semplicemente a questa email.<br/><br/>Se non desiderate procedere, ignorate questo messaggio: non vi scriveremo più al riguardo.`,
+    cta: "Completa il pagamento",
+    footer: "Messaggio unico legato alla vostra richiesta. Thrax Legal non è uno studio legale.",
+  },
+};
+
+export async function sendPaymentReminderEmail(lead: Lead, url: string, amountRappen: number) {
+  const t = PAYMENT_REMINDER[lead.locale];
+  const summary = orderSummary(lead, lead.locale);
+  const html = wrapEmailHtml({
+    heading: t.heading,
+    bodyHtml: t.body(escapeHtml(lead.name), escapeHtml(summary?.name ?? lead.service ?? ""), formatChf(amountRappen)),
+    ctaLabel: t.cta,
+    ctaUrl: url,
+    footer: t.footer,
+  });
+  await sendEmail(lead.email, t.subject, html, CONTACT_EMAIL);
+}
+
 const PAYMENT_CONFIRMED: Record<Locale, { subject: string; heading: string; body: (name: string, service: string, amount: string) => string; footer: string }> = {
   fr: {
     subject: "Paiement reçu : merci",
