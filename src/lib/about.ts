@@ -51,7 +51,6 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     idRows: [
       { label: "Exploitant", value: "Grégoire Giuliano" },
       { label: "Entreprise (BCE)", value: "n° {BCE}" },
-      { label: "Adresse", value: "Avenue Floréal 20, 1410 Waterloo, Belgique" },
       { label: "Email", value: "hey@thrax-legal.ch" },
       { label: "Réponse", value: "en principe sous un jour ouvré" },
     ],
@@ -84,7 +83,6 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     idRows: [
       { label: "Betreiber", value: "Grégoire Giuliano" },
       { label: "Unternehmen (ZUNB/BCE)", value: "Nr. {BCE}" },
-      { label: "Adresse", value: "Avenue Floréal 20, 1410 Waterloo, Belgien" },
       { label: "E-Mail", value: "hey@thrax-legal.ch" },
       { label: "Antwort", value: "in der Regel innert eines Arbeitstags" },
     ],
@@ -117,7 +115,6 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     idRows: [
       { label: "Operator", value: "Grégoire Giuliano" },
       { label: "Business (BCE)", value: "no. {BCE}" },
-      { label: "Address", value: "Avenue Floréal 20, 1410 Waterloo, Belgium" },
       { label: "Email", value: "hey@thrax-legal.ch" },
       { label: "Reply time", value: "usually within one working day" },
     ],
@@ -150,7 +147,6 @@ export const ABOUT_STRINGS: Record<Locale, AboutStrings> = {
     idRows: [
       { label: "Gestore", value: "Grégoire Giuliano" },
       { label: "Impresa (BCE)", value: "n. {BCE}" },
-      { label: "Indirizzo", value: "Avenue Floréal 20, 1410 Waterloo, Belgio" },
       { label: "Email", value: "hey@thrax-legal.ch" },
       { label: "Risposta", value: "di regola entro un giorno lavorativo" },
     ],
