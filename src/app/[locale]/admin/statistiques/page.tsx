@@ -14,6 +14,7 @@ const PERIODS: Period[] = [7, 30, 90];
 const FLASH: Record<string, string> = { spend: "Dépense enregistrée.", spend_invalid: "Date ou montant invalide." };
 const chf = (n: number) => `${nf(n, n % 1 ? 2 : 0)} CHF`;
 const eur = (n: number) => `${nf(n, 2)} €`;
+const shiftDayKey = (day: string, delta: number) => new Date(Date.parse(`${day}T00:00:00Z`) + delta * 86_400_000).toISOString().slice(0, 10);
 
 function Kpi({ label, value, delta, spark, color, hint }: { label: string; value: ReactNode; delta?: ReactNode; spark?: number[]; color?: string; hint?: ReactNode }) {
   return (
@@ -210,20 +211,26 @@ export default async function AdminStatsPage({ searchParams }: { searchParams: P
             <BarList rows={stats.campaigns.map((c) => ({ label: c.label, value: c.value, sub: c.hint ? `contenu : ${c.hint}` : undefined }))} color="#e5566d" empty="Aucune visite issue d'une annonce avec campagne sur la période." />
             <p className="mt-3 text-xs text-text-muted">Les annonces sont identifiées par le paramètre gclid ou utm_source=google&amp;utm_medium=cpc dans l&apos;adresse d&apos;arrivée.</p>
           </Card>
-          <Card title="Dépense par jour (saisie manuelle)">
+          <Card title="Dépense Google Ads">
             <BarsChart days={dayKeys} values={stats.days.map((d) => d.spend)} color="#e5566d" unit=" €" height={150} />
             <form action={saveAdSpendAction} className="mt-4 flex flex-wrap items-end gap-3">
               <div>
-                <label className={FIELD_LABEL} htmlFor="spend-day">Jour</label>
-                <input id="spend-day" name="day" type="date" required defaultValue={stats.to} className={`${FIELD} mt-1`} />
+                <label className={FIELD_LABEL} htmlFor="spend-from">Du</label>
+                <input id="spend-from" name="from" type="date" required defaultValue={shiftDayKey(stats.to, -6)} className={`${FIELD} mt-1`} />
               </div>
               <div>
-                <label className={FIELD_LABEL} htmlFor="spend-amount">Dépensé (€)</label>
+                <label className={FIELD_LABEL} htmlFor="spend-to">Au</label>
+                <input id="spend-to" name="to" type="date" required defaultValue={stats.to} className={`${FIELD} mt-1`} />
+              </div>
+              <div>
+                <label className={FIELD_LABEL} htmlFor="spend-amount">Total dépensé (€)</label>
                 <input id="spend-amount" name="amount" type="number" step="0.01" min="0" required className={`${FIELD} mt-1 w-32`} />
               </div>
               <SubmitButton className="!px-4 !py-1.5 !text-xs">Enregistrer</SubmitButton>
             </form>
-            <p className="mt-2 text-xs text-text-muted">Recopie la dépense du jour depuis Google Ads : le site calcule alors le coût par commande et le rendement.</p>
+            <p className="mt-2 text-xs text-text-muted">
+              Une fois par semaine suffit : dans Google Ads, choisis la période et recopie le <strong>Coût</strong> total. Il est réparti à parts égales sur les jours choisis (le coût par commande reste exact sur la période). Pour un seul jour, mets la même date dans « Du » et « Au ».
+            </p>
           </Card>
         </div>
       </div>

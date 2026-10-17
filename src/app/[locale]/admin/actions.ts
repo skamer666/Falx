@@ -44,7 +44,7 @@ import {
   setPlan,
   updateClientFields,
 } from "@/lib/account/admin-db";
-import { saveAdSpend } from "@/lib/analytics/stats";
+import { saveAdSpendRange } from "@/lib/analytics/stats";
 import { createCheckoutSession, stripeConfigured } from "@/lib/payments/stripe";
 import { getService, serviceText } from "@/lib/services/catalog";
 import { SITE_URL } from "@/lib/site";
@@ -476,14 +476,17 @@ export async function testStripeAction() {
   redirect("/fr/admin/parametres?stripe=ok");
 }
 
-/** Saisie de la dépense Google Ads d'un jour (pour le coût par commande et le rendement publicitaire). */
+/** Saisie de la dépense Google Ads sur une période (un jour ou plusieurs) : le total est réparti à parts égales sur les jours. */
 export async function saveAdSpendAction(formData: FormData) {
   const admin = await requireAdmin();
-  const day = String(formData.get("day") ?? "");
+  const from = String(formData.get("from") ?? "");
+  const to = String(formData.get("to") ?? "") || from;
   const euros = Number(String(formData.get("amount") ?? "").replace(",", "."));
   const back = "/fr/admin/statistiques";
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !Number.isFinite(euros) || euros < 0 || euros > 100_000) redirect(`${back}?ok=spend_invalid#pub`);
-  await saveAdSpend(day, euros);
-  await logAudit({ actor: admin, action: "ad_spend_saved", detail: `${day} : ${euros.toFixed(2)} EUR` });
+  const isDay = (value: string) => /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
+  const span = isDay(from) && isDay(to) ? (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000 + 1 : 0;
+  if (span < 1 || span > 92 || !Number.isFinite(euros) || euros < 0 || euros > 100_000) redirect(`${back}?ok=spend_invalid#pub`);
+  const days = await saveAdSpendRange(from, to, euros);
+  await logAudit({ actor: admin, action: "ad_spend_saved", detail: `${from} → ${to} (${days} j) : ${euros.toFixed(2)} EUR` });
   redirect(`${back}?ok=spend#pub`);
 }

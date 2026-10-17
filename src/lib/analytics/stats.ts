@@ -271,3 +271,22 @@ export async function saveAdSpend(day: string, euros: number): Promise<void> {
     .bind(day, cents)
     .run();
 }
+
+/** Répartit une dépense totale (en euros) à parts égales sur les jours de la période, au centime près. Renvoie le nombre de jours. */
+export async function saveAdSpendRange(from: string, to: string, totalEuros: number): Promise<number> {
+  const days: string[] = [];
+  for (let t = Date.parse(`${from}T00:00:00Z`); t <= Date.parse(`${to}T00:00:00Z`); t += 86_400_000) days.push(new Date(t).toISOString().slice(0, 10));
+  if (days.length === 0) return 0;
+  const totalCents = Math.round(totalEuros * 100);
+  const base = Math.floor(totalCents / days.length);
+  const extra = totalCents - base * days.length;
+  const database = await db();
+  await database.batch(
+    days.map((day, index) =>
+      database
+        .prepare("INSERT INTO ad_spend (day, amount_cents) VALUES (?, ?) ON CONFLICT(day) DO UPDATE SET amount_cents = excluded.amount_cents")
+        .bind(day, base + (index < extra ? 1 : 0)),
+    ),
+  );
+  return days.length;
+}
