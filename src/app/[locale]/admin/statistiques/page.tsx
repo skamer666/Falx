@@ -83,7 +83,7 @@ export default async function AdminStatsPage({ searchParams }: { searchParams: P
         <Card title="Du visiteur au paiement">
           <Funnel steps={stats.funnel} />
           <p className="mt-4 text-xs leading-relaxed text-text-muted">
-            {b.pending ? <>{b.pending} paiement{b.pending > 1 ? "s" : ""} ouvert{b.pending > 1 ? "s" : ""} depuis plus d&apos;une heure sans être payé{b.pending > 1 ? "s" : ""} ({chf(b.pendingValue)}) : un email de rappel unique part automatiquement à l'expiration du lien (1 h). </> : null}
+            {b.pending ? <>{b.pending} paiement{b.pending > 1 ? "s" : ""} ouvert{b.pending > 1 ? "s" : ""} depuis plus d&apos;une heure sans être payé{b.pending > 1 ? "s" : ""} ({chf(b.pendingValue)}) : un email de rappel unique part automatiquement à l&apos;expiration du lien (1 h). </> : null}
             {b.quotes} demande{b.quotes > 1 ? "s" : ""} de devis, {b.callbacks} demande{b.callbacks > 1 ? "s" : ""} de rappel sur la période.
           </p>
         </Card>
