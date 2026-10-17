@@ -6,6 +6,8 @@ import { Container } from "@/components/site/ui";
 import { isLocale, DEFAULT_LOCALE } from "@/i18n/config";
 import { getService, serviceText } from "@/lib/services/catalog";
 import { SERVICES_UI } from "@/lib/services/strings";
+import { getOrderPaymentBySession } from "@/lib/account/db";
+import PurchaseConversion from "@/components/site/PurchaseConversion";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
@@ -18,12 +20,14 @@ export default async function OrderThanksPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ service?: string; paid?: string }>;
+  searchParams: Promise<{ service?: string; paid?: string; sid?: string }>;
 }) {
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  const { service: slug, paid } = await searchParams;
+  const { service: slug, paid, sid } = await searchParams;
   const isPaid = paid === "1";
+  // Valeur réelle de la commande (lue en base, jamais dans l'adresse) pour déclarer la conversion à Google Ads.
+  const payment = isPaid && sid && /^cs_[A-Za-z0-9_]{10,}$/.test(sid) ? await getOrderPaymentBySession(sid) : null;
   const service = slug ? getService(slug) : undefined;
   const t = SERVICES_UI[locale].thanks;
   const isQuote = slug === "devis-particuliers" || slug === "devis-entreprises";
@@ -53,6 +57,7 @@ export default async function OrderThanksPage({
               ))}
             </ol>
             )}
+            {payment && payment.status !== "expired" ? <PurchaseConversion value={payment.amount_rappen / 100} transactionId={payment.id} /> : null}
             <Link href={`/${locale}`} className="mt-10 inline-block text-sm font-semibold underline underline-offset-4">
               {t.back}
             </Link>

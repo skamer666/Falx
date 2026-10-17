@@ -16,9 +16,14 @@ Fichier : `docs/ads/campagne-recherche-romandie.csv` (à importer dans **Google 
 3. Contrôle d'aperçu dans l'éditeur : chaque annonce affiche le bon prix et la bonne URL.
 4. Activer la campagne, puis regarder chaque jour pendant la première semaine : termes de recherche réellement tapés (ajouter des négatifs), clics, coût.
 
-## Mesure sans cookie
-La politique de confidentialité dit qu'aucun traceur n'est installé : pas de balise Google sur le site. Les ventes issues des annonces se lisent dans **Admin → Statistiques** (canal « Google Ads », commandes, chiffre d'affaires, coût par commande avec la dépense saisie chaque jour). Google Ads, lui, ne voit pas les conversions : c'est pourquoi la campagne enchérit au clic et non à la conversion.
-Importer les conversions dans Google Ads (conversions hors ligne) demanderait de conserver la valeur du `gclid` avec chaque commande : pas fait à ce jour, à ajouter plus tard si on veut des enchères à la conversion.
+## Suivi des conversions (balise Google, avec consentement)
+Décision du propriétaire (17 oct.) : on utilise la balise Google Ads.
+- Le site la charge **seulement si le visiteur accepte** le bandeau (aucun appel à Google sinon). Mode « mesure des ventes » : personnalisation des annonces et analyse désactivées.
+- La conversion « achat » part depuis la page de retour de paiement (`/commande/merci`), avec le **montant réel lu en base** (jamais dans l'adresse) et l'identifiant de la commande (pas de doublon).
+- Réglage : `src/lib/ads.ts` (`GOOGLE_ADS_ID` = `AW-…`, `GOOGLE_ADS_PURCHASE_LABEL`). Tant que ces deux valeurs sont vides, il n'y a ni balise ni bandeau.
+- Dans Google Ads : Objectifs → Conversions → Nouvelle action → Site web → configuration manuelle → catégorie « Achat », valeurs différentes pour chaque conversion, valeur par défaut 140 CHF. Récupérer l'ID `AW-…` et l'étiquette dans « Balise Google ».
+- Seuls les visiteurs qui acceptent sont comptés par Google Ads : il sous-estime les ventes. La page Admin → Statistiques compte tout.
+- Stratégie d'enchères : garder « Clics » (CPC max 2,50 €) tant qu'il y a moins de 15 à 30 conversions ; ensuite passer à « Maximiser les conversions » ou à un coût par action cible.
 
 ## Réalisme
 Chaque mot-clé a 10 à 100 recherches par mois : le budget de 15 €/jour ne sera sans doute pas dépensé en entier au début. Si les impressions sont très faibles après une semaine, ajouter des variantes (type de contrat, canton, « suisse ») plutôt que d'augmenter le CPC.

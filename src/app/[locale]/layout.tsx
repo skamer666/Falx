@@ -5,6 +5,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 import JsonLd from "@/components/site/JsonLd";
 import SourceTracker from "@/components/site/SourceTracker";
 import PageViewTracker from "@/components/site/PageViewTracker";
+import ConsentBanner from "@/components/site/ConsentBanner";
 import { LOCALES, LOCALE_TAGS, isLocale, type Locale } from "@/i18n/config";
 import { ORG_ID, SITE_URL, WEBSITE_ID, YOUTUBE_CHANNEL_URL } from "@/lib/site";
 import { localeAlternates } from "@/lib/seo";
@@ -128,6 +129,7 @@ export default async function RootLayout({
         <JsonLd data={websiteJsonLd(locale)} />
         <SourceTracker />
           <PageViewTracker />
+          <ConsentBanner locale={locale} />
         {children}
       </body>
     </html>

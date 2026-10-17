@@ -747,3 +747,7 @@ export async function markOrderPaid(sessionId: string, details: { method: string
 export async function markOrderExpired(sessionId: string): Promise<void> {
   await (await db()).prepare("UPDATE order_payments SET status = 'expired' WHERE stripe_session_id = ? AND status = 'pending'").bind(sessionId).run();
 }
+
+export async function getOrderPaymentBySession(sessionId: string): Promise<OrderPayment | null> {
+  return (await (await db()).prepare("SELECT * FROM order_payments WHERE stripe_session_id = ?").bind(sessionId).first<OrderPayment>()) ?? null;
+}

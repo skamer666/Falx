@@ -28,7 +28,7 @@ export async function openDirectCheckout(lead: Lead): Promise<string | null> {
       customerEmail: lead.email,
       leadId: lead.id,
       locale: lead.locale,
-      successUrl: `${SITE_URL}/${lead.locale}/commande/merci?paid=1&service=${service.slug}`,
+      successUrl: `${SITE_URL}/${lead.locale}/commande/merci?paid=1&service=${service.slug}&sid={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${SITE_URL}${servicePath(lead.locale, service)}`,
       idempotencyKey: `order-${lead.id}`,
     });

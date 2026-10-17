@@ -4,6 +4,7 @@ import { Container } from "./ui";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/config";
 import { LEAD_STRINGS } from "@/lib/account/lead-strings";
+import { ConsentReopen } from "./ConsentBanner";
 
 function ArrowIcon() {
   return (
@@ -99,6 +100,9 @@ export default function Footer({ locale }: { locale: Locale }) {
 
         <p className="mt-16 max-w-2xl text-xs leading-relaxed text-text-muted">
           {t.disclaimer}
+        </p>
+        <p className="mt-3 text-xs text-text-muted">
+          <ConsentReopen locale={locale} />
         </p>
 
         <p

@@ -436,7 +436,7 @@ export async function sendPaymentLinkAction(leadId: string, formData: FormData) 
       customerEmail: lead.email,
       leadId: lead.id,
       locale: lead.locale,
-      successUrl: `${SITE_URL}/${lead.locale}/commande/merci?paid=1`,
+      successUrl: `${SITE_URL}/${lead.locale}/commande/merci?paid=1&sid={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${SITE_URL}/${lead.locale}`,
       idempotencyKey: `lead-${lead.id}-${amountRappen}-${Math.floor(Date.now() / 60_000)}`,
     });

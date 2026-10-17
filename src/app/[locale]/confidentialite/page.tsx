@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 // siège social et, le cas échéant, numéro IDE de l'entité exploitant
 // Thrax Legal. Le contenu ci-dessous ne mentionne que ce qui est déjà
 // public sur le site (marque, email) pour ne rien inventer.
-const LAST_UPDATED = "2026-10-17";
+const LAST_UPDATED = "2026-10-18";
 
 const META: Record<Locale, { title: string; description: string }> = {
   fr: {
@@ -151,10 +151,7 @@ function Fr() {
 
       <h2>Cookies et traceurs</h2>
       <p>
-        Ce site n’utilise aucun cookie de mesure d’audience, de publicité ou
-        de réseau social. Il n’installe aucun traceur tiers. Si cela change
-        (par exemple avec l’ajout d’un outil de mesure d’audience), cette
-        politique sera mise à jour en conséquence, avant toute activation.
+        Ce site n’utilise aucun cookie de réseau social. Avec votre accord seulement (bandeau affiché à votre première visite), il charge la balise de mesure des conversions de Google Ads (Google Ireland Limited, ou Google LLC aux États-Unis) pour savoir quelles annonces mènent à une commande&nbsp;: Google dépose alors un cookie et reçoit votre adresse IP, la page consultée et, après un paiement, le montant de la commande. Cette balise ne sert qu’à mesurer les ventes (la personnalisation des annonces est désactivée). Si vous refusez, rien n’est chargé. Vous pouvez retirer votre accord à tout moment avec le lien «&nbsp;Cookies&nbsp;» en bas de chaque page.
       </p>
       <p>
         <strong>Mesure d&rsquo;audience anonyme.</strong> Pour savoir combien de personnes visitent le site, d&rsquo;où elles viennent et quelles pages les intéressent, nous comptons nous-mêmes les pages vues, sans cookie et sans outil tiers. Chaque visite est rattachée à une empreinte calculée à partir de votre adresse IP et de votre navigateur avec une clé aléatoire qui change chaque jour et que nous effaçons : l&rsquo;empreinte ne permet donc pas de vous reconnaître d&rsquo;un jour à l&rsquo;autre ni de remonter jusqu&rsquo;à vous. Nous conservons la page visitée, la provenance (par exemple «&nbsp;annonce Google&nbsp;»), le type d&rsquo;appareil, le pays et l&rsquo;heure, pendant 13 mois au plus. Les robots, les visiteurs qui activent «&nbsp;Ne pas suivre&nbsp;» et l&rsquo;administrateur du site ne sont pas comptés.
@@ -406,11 +403,7 @@ function De() {
 
       <h2>Cookies und Tracking-Tools</h2>
       <p>
-        Diese Website verwendet keine Cookies zur Reichweitenmessung, für
-        Werbung oder soziale Netzwerke. Es werden keine Tracking-Tools von
-        Drittanbietern installiert. Sollte sich dies ändern (z. B. durch ein
-        neues Analytics-Tool), wird diese Erklärung vor jeder Aktivierung
-        entsprechend aktualisiert.
+        Diese Website verwendet keine Cookies sozialer Netzwerke. Nur mit Ihrer Einwilligung (Banner beim ersten Besuch) lädt sie das Conversion-Messtag von Google Ads (Google Ireland Limited bzw. Google LLC in den USA), um zu wissen, welche Anzeigen zu einer Bestellung führen: Google setzt dann ein Cookie und erhält Ihre IP-Adresse, die aufgerufene Seite und nach einer Zahlung den Bestellbetrag. Das Tag dient nur der Messung von Verkäufen (die Anzeigenpersonalisierung ist deaktiviert). Bei Ablehnung wird nichts geladen. Sie können Ihre Einwilligung jederzeit über den Link «&nbsp;Cookies&nbsp;» am Seitenende widerrufen.
       </p>
       <p>
         <strong>Anonyme Reichweitenmessung.</strong> Um zu wissen, wie viele Personen die Website besuchen, woher sie kommen und welche Seiten sie interessieren, zählen wir die Seitenaufrufe selbst, ohne Cookie und ohne Drittanbieter-Tool. Jeder Besuch wird einem Fingerabdruck zugeordnet, der aus Ihrer IP-Adresse und Ihrem Browser mit einem zufälligen Schlüssel berechnet wird, der sich täglich ändert und den wir löschen: Der Fingerabdruck erlaubt es daher nicht, Sie von einem Tag zum anderen wiederzuerkennen oder auf Sie zurückzuschliessen. Wir speichern die besuchte Seite, die Herkunft (zum Beispiel «&nbsp;Google-Anzeige&nbsp;»), die Geräteart, das Land und die Uhrzeit, höchstens 13 Monate lang. Roboter, Besuchende mit aktiviertem «&nbsp;Do Not Track&nbsp;» und der Administrator der Website werden nicht gezählt.
@@ -645,10 +638,7 @@ function En() {
 
       <h2>Cookies and trackers</h2>
       <p>
-        This site does not use any audience-measurement, advertising or
-        social media cookies. It does not install any third-party trackers.
-        If this changes (for example by adding an analytics tool), this policy
-        will be updated accordingly before activation.
+        This site does not use any social media cookies. Only with your consent (banner shown on your first visit) does it load the Google Ads conversion-measurement tag (Google Ireland Limited, or Google LLC in the United States) to know which ads lead to an order: Google then sets a cookie and receives your IP address, the page viewed and, after a payment, the order amount. The tag is used only to measure sales (ad personalisation is disabled). If you decline, nothing is loaded. You can withdraw your consent at any time with the “Cookies” link at the bottom of each page.
       </p>
       <p>
         <strong>Anonymous audience measurement.</strong> To know how many people visit the site, where they come from and which pages interest them, we count page views ourselves, without cookies and without any third-party tool. Each visit is linked to a fingerprint computed from your IP address and browser with a random key that changes every day and that we delete: the fingerprint therefore cannot recognise you from one day to the next or be traced back to you. We keep the page visited, the origin (for example “Google ad”), the device type, the country and the time, for 13 months at most. Robots, visitors who enable “Do Not Track” and the site administrator are not counted.
@@ -882,11 +872,7 @@ function It() {
 
       <h2>Cookie e tracciatori</h2>
       <p>
-        Questo sito non utilizza alcun cookie di misurazione dell’audience,
-        pubblicitario o di social network. Non installa alcun tracciatore di
-        terzi. Se ciò dovesse cambiare (ad esempio con l’aggiunta di uno
-        strumento di misurazione dell’audience), questa informativa sarà
-        aggiornata di conseguenza, prima di qualsiasi attivazione.
+        Questo sito non utilizza alcun cookie di social network. Solo con il vostro consenso (banner mostrato alla prima visita) carica il tag di misurazione delle conversioni di Google Ads (Google Ireland Limited, o Google LLC negli Stati Uniti) per sapere quali annunci portano a un ordine: Google deposita allora un cookie e riceve il vostro indirizzo IP, la pagina consultata e, dopo un pagamento, l&rsquo;importo dell&rsquo;ordine. Il tag serve solo a misurare le vendite (la personalizzazione degli annunci è disattivata). Se rifiutate, non viene caricato nulla. Potete ritirare il consenso in qualsiasi momento con il link «&nbsp;Cookie&nbsp;» in fondo a ogni pagina.
       </p>
       <p>
         <strong>Misurazione anonima del pubblico.</strong> Per sapere quante persone visitano il sito, da dove arrivano e quali pagine le interessano, contiamo noi stessi le pagine viste, senza cookie e senza strumenti di terzi. Ogni visita è associata a un&rsquo;impronta calcolata a partire dal vostro indirizzo IP e dal vostro browser con una chiave casuale che cambia ogni giorno e che cancelliamo: l&rsquo;impronta non permette quindi di riconoscervi da un giorno all&rsquo;altro né di risalire a voi. Conserviamo la pagina visitata, la provenienza (ad esempio «&nbsp;annuncio Google&nbsp;»), il tipo di dispositivo, il paese e l&rsquo;ora, per al massimo 13 mesi. I robot, i visitatori che attivano «&nbsp;Do Not Track&nbsp;» e l&rsquo;amministratore del sito non sono conteggiati.
