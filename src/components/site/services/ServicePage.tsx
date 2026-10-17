@@ -13,7 +13,15 @@ import { GUIDE_ARTICLES } from "@/lib/guide/articles";
 import VideoEmbed from "@/components/site/VideoEmbed";
 import { SERVICE_VIDEOS, VIDEO_STRINGS } from "@/lib/videos";
 import FounderCard, { FounderMini } from "@/components/site/FounderCard";
+import { DEADLINE_LABEL, DEADLINE_NOTE, SERVICE_DEADLINES } from "@/lib/services/deadlines";
 import OrderForm from "./OrderForm";
+
+const PAY_METHODS: Record<Locale, string> = {
+  fr: "Paiement sécurisé par Stripe · carte bancaire ou TWINT",
+  de: "Sichere Zahlung über Stripe · Kreditkarte oder TWINT",
+  en: "Secure payment via Stripe · card or TWINT",
+  it: "Pagamento sicuro tramite Stripe · carta o TWINT",
+};
 
 function Check() {
   return (
@@ -37,6 +45,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
   const hubPath = `/${locale}/${service.audience}`;
   const video = SERVICE_VIDEOS[`${service.audience}/${service.slug}`];
   const vs = VIDEO_STRINGS[locale];
+  const deadline = SERVICE_DEADLINES[service.slug]?.[locale];
   const url = `${SITE_URL}${servicePath(locale, service)}`;
 
   const jsonLd = [
@@ -115,6 +124,14 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
 
                   <p className="mt-6 text-lg leading-relaxed text-text-muted">{t.intro}</p>
 
+                  {deadline ? (
+                    <div className="mt-6 rounded-2xl border-l-4 border-accent bg-surface p-5">
+                      <p className="text-sm font-semibold">{DEADLINE_LABEL[locale]}</p>
+                      <p className="mt-1 text-[15px] leading-relaxed">{deadline}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-text-muted">{DEADLINE_NOTE[locale]}</p>
+                    </div>
+                  ) : null}
+
                   {video ? (
                     <div className="mt-8">
                       <VideoEmbed videoId={video.id} poster={video.poster} title={`${t.name} — ${vs.heading}`} playLabel={vs.play} playPosition="corner" />
@@ -168,6 +185,7 @@ export default function ServicePage({ locale, service, error }: { locale: Locale
                       <OrderForm locale={locale} service={service} submitLabel={orderLabel} submitLabelExpress={orderLabelExpress} error={error} />
                     </div>
                     <p className="mt-4 text-center text-xs leading-relaxed text-text-muted">{service.from ? ui.service.payAfter : ui.service.payNow}</p>
+                    {service.from ? null : <p className="mt-2 text-center text-xs font-medium text-text">{PAY_METHODS[locale]}</p>}
                     <FounderCard locale={locale} />
                   </div>
                   <p className="mt-4 text-xs leading-relaxed text-text-muted">{ui.service.notLawyer}</p>

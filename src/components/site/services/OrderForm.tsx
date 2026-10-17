@@ -20,6 +20,13 @@ const INPUT =
   "mt-1.5 w-full rounded-xl border border-border bg-bg px-4 py-3 text-base text-text placeholder:text-text-muted/70 focus:border-text focus:outline-none";
 const LABEL = "text-sm font-medium text-text";
 
+const MORE: Record<Locale, string> = {
+  fr: "Ajouter un téléphone ou une date limite (facultatif)",
+  de: "Telefon oder Frist hinzufügen (freiwillig)",
+  en: "Add a phone number or a deadline (optional)",
+  it: "Aggiungere un telefono o una scadenza (facoltativo)",
+};
+
 /** Formulaire de commande d'une prestation à l'acte (aucun paiement à cette étape). */
 export default function OrderForm({
   locale,
@@ -84,13 +91,6 @@ export default function OrderForm({
         <input id={id("email")} name="email" type="email" required autoComplete="email" inputMode="email" className={`${INPUT} ${errors.email ? INVALID : ""}`} {...aria("email")} />
         {err("email")}
       </div>
-      <div>
-        <label htmlFor={id("phone")} className={LABEL}>
-          {t.phone}
-        </label>
-        <input id={id("phone")} name="phone" type="tel" autoComplete="tel" placeholder="+41 79 000 00 00" className={`${INPUT} ${errors.phone ? INVALID : ""}`} {...aria("phone")} />
-        {err("phone")}
-      </div>
       {service.audience === "entreprises" ? (
         <div>
           <label htmlFor={id("company")} className={LABEL}>
@@ -117,12 +117,27 @@ export default function OrderForm({
         />
         {err("situation")}
       </div>
+      <details open={Boolean(errors.phone)} className="group rounded-xl border border-border bg-bg px-4 py-3">
+        <summary className="cursor-pointer list-none text-sm font-medium text-text-muted marker:hidden hover:text-text [&::-webkit-details-marker]:hidden">
+          + {MORE[locale]}
+        </summary>
+        <div className="mt-3 flex flex-col gap-4">
+      <div>
+        <label htmlFor={id("phone")} className={LABEL}>
+          {t.phone}
+        </label>
+        <input id={id("phone")} name="phone" type="tel" autoComplete="tel" placeholder="+41 79 000 00 00" className={`${INPUT} ${errors.phone ? INVALID : ""}`} {...aria("phone")} />
+        {err("phone")}
+      </div>
       <div>
         <label htmlFor={id("deadline")} className={LABEL}>
           {t.deadline}
         </label>
         <input id={id("deadline")} name="deadline" type="date" className={INPUT} />
       </div>
+
+        </div>
+      </details>
 
       {service.express ? (
         <label className="flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-border bg-bg px-4 py-3.5 has-checked:border-text">
