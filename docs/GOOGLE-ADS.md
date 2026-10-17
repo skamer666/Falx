@@ -20,7 +20,7 @@ Fichier : `docs/ads/campagne-recherche-romandie.csv` (à importer dans **Google 
 Décision du propriétaire (17 oct.) : on utilise la balise Google Ads.
 - Le site la charge **seulement si le visiteur accepte** le bandeau (aucun appel à Google sinon). Mode « mesure des ventes » : personnalisation des annonces et analyse désactivées.
 - La conversion « achat » part depuis la page de retour de paiement (`/commande/merci`), avec le **montant réel lu en base** (jamais dans l'adresse) et l'identifiant de la commande (pas de doublon).
-- Réglage : `src/lib/ads.ts` (`GOOGLE_ADS_ID` = `AW-…`, `GOOGLE_ADS_PURCHASE_LABEL`). Tant que ces deux valeurs sont vides, il n'y a ni balise ni bandeau.
+- Réglage : `src/lib/ads.ts` (`GOOGLE_ADS_ID` = `AW-18486615417`, `GOOGLE_ADS_PURCHASE_LABEL` = étiquette de l'action « Achat »). Actif depuis le 17 oct. 2026 ; si l'une des valeurs est vide, il n'y a ni balise ni bandeau.
 - Dans Google Ads : Objectifs → Conversions → Nouvelle action → Site web → configuration manuelle → catégorie « Achat », valeurs différentes pour chaque conversion, valeur par défaut 140 CHF. Récupérer l'ID `AW-…` et l'étiquette dans « Balise Google ».
 - Seuls les visiteurs qui acceptent sont comptés par Google Ads : il sous-estime les ventes. La page Admin → Statistiques compte tout.
 - Stratégie d'enchères : garder « Clics » (CPC max 2,50 €) tant qu'il y a moins de 15 à 30 conversions ; ensuite passer à « Maximiser les conversions » ou à un coût par action cible.
